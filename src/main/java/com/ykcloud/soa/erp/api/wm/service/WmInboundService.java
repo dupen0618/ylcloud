@@ -3,16 +3,10 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.GoodsByBarcodeGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.GoodsByBarcodeGetResponse;
 
-/***
- * 通过条形码获取商品信息接口
- * @author bi.cai
- * @date 2018年01月12日 下午10:46:39
- */
+//入库服务
 public interface WmInboundService {
 
-	/**
-	 * 通过条码获取商品信息(先查缓存再查库)
-	 */
-	GoodsByBarcodeGetResponse getGoodsInfoByBarcode(GoodsByBarcodeGetRequest request);
+	//通过条码获取商品信息
+	public GoodsByBarcodeGetResponse getGoodsInfoByBarcode(GoodsByBarcodeGetRequest request);
 
 }

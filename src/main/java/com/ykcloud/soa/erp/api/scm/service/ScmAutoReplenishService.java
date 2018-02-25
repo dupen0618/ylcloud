@@ -5,7 +5,7 @@ import com.ykcloud.soa.erp.api.scm.response.GoodsByBarcodeGetResponse;
 
 public interface ScmAutoReplenishService {
 
-	
-	//GoodsByBarcodeGetResponse getGoodsInfoByBarcode(GoodsByBarcodeGetRequest request);
+	//按条码获取商品
+	public GoodsByBarcodeGetResponse getGoodsInfoByBarcode(GoodsByBarcodeGetRequest request);
 
 }

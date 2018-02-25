@@ -27,13 +27,11 @@
 		<dependency>
 			<groupId>com.gb.soa</groupId>
 			<artifactId>omp_cuser_api</artifactId>
-			<version>${omp_cuser_api.version}</version> 			
 		</dependency>
 		
 		<dependency>
 			<groupId>com.gb.soa</groupId>
 			<artifactId>omp_cexport_api</artifactId>
-			<version>${omp_cexport_api.version}</version>
 		</dependency>
 		
 		<dependency>
