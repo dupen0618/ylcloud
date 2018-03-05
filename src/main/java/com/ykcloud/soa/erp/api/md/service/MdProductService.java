@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.md.service;
 
+import com.ykcloud.soa.erp.api.md.request.ShopProductItemStatusGetRequest;
 import com.ykcloud.soa.erp.api.md.request.GoodsByBarcodeGetRequest;
+import com.ykcloud.soa.erp.api.md.response.ShopProductItemStatusGetRsponse;
 import com.ykcloud.soa.erp.api.md.response.GoodsByBarcodeGetResponse;
 
 /***
@@ -13,7 +15,9 @@ public interface MdProductService {
 	/**
 	 * 通过条码获取商品信息(先查缓存再查库)
 	 */
-	GoodsByBarcodeGetResponse getGoodsInfoByBarcode(GoodsByBarcodeGetRequest request);
+	public GoodsByBarcodeGetResponse getGoodsInfoByBarcode(GoodsByBarcodeGetRequest request);
+
+	public ShopProductItemStatusGetRsponse getShopProductItemStatus(ShopProductItemStatusGetRequest request);
 
 	
 }
