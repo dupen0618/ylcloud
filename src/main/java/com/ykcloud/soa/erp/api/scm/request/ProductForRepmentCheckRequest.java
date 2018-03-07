@@ -9,7 +9,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class HandRepmentProductCheckRequest extends AbstractRequest {
+public class ProductForRepmentCheckRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 1L;
 	@NotNull(message = "适用季节编号不能为空！")

@@ -14,6 +14,7 @@ public class SupplyStatusNumIdGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "供应商编号不能为空！")
 	private Long supplyUnitNumId;
+
 	public SupplyStatusNumIdGetRequest(Long id) {
 		this.supplyUnitNumId=id;
 	}

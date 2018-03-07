@@ -6,10 +6,8 @@ package com.ykcloud.soa.erp.api.md.service;
  *
  */
 
-import com.ykcloud.soa.erp.api.md.request.ItemStatusPermitActionGetRequest;
-import com.ykcloud.soa.erp.api.md.response.ItemStatusPermitActionCheckResponse;
 
 public interface MdTenantService {
-	public ItemStatusPermitActionCheckResponse checkItemStatusPermitAction(ItemStatusPermitActionGetRequest Request);
+
 
 }
