@@ -12,7 +12,6 @@ import com.ykcloud.soa.erp.api.scm.response.DirectWayEffectiveDayForMulitiShopGe
 */
 public interface ScmSupplyService {
    public DirectWayReplenishweeklyDayFlagGetResponse getDirectWayReplenishweeklyDayFlag(DirectWayReplenishweeklyDayFlagGetRequest Request);	
-   public DirectWayEffectiveDayForMulitiShopGetReponse getDirectWayEffectiveDayForMulitiShop(DirectWayEffectiveDayForMulitiShopGetRequest request);
 
 
 }
