@@ -5,7 +5,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 /**
  * Created by yiako on 2018/3/8
  */
-public class MdShopRespone extends MessagePack {
+public class HeadSubUnitNumIdGetRequestRespone extends MessagePack {
 
     private Long subUnitNumId;//总部门店编号
 
