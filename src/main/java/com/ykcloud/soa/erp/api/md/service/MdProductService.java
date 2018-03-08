@@ -1,9 +1,11 @@
 package com.ykcloud.soa.erp.api.md.service;
 
-import com.ykcloud.soa.erp.api.md.request.ShopProductItemStatusGetRequest;
 import com.ykcloud.soa.erp.api.md.request.GoodsByBarcodeGetRequest;
-import com.ykcloud.soa.erp.api.md.response.ShopProductItemStatusGetRsponse;
+import com.ykcloud.soa.erp.api.md.request.ItemStatusPermitActionGetRequest;
+import com.ykcloud.soa.erp.api.md.request.ShopProductItemStatusGetRequest;
 import com.ykcloud.soa.erp.api.md.response.GoodsByBarcodeGetResponse;
+import com.ykcloud.soa.erp.api.md.response.ItemStatusPermitActionCheckResponse;
+import com.ykcloud.soa.erp.api.md.response.ShopProductItemStatusGetRsponse;
 
 /***
  * 通过条形码获取商品信息接口
@@ -18,6 +20,8 @@ public interface MdProductService {
 	public GoodsByBarcodeGetResponse getGoodsInfoByBarcode(GoodsByBarcodeGetRequest request);
 
 	public ShopProductItemStatusGetRsponse getShopProductItemStatus(ShopProductItemStatusGetRequest request);
-
+	
+	//根据商品状态id判断某类操作{补货，自动补货，采购，销售，分销}是否被允许
+	public ItemStatusPermitActionCheckResponse checkItemStatusPermitAction(ItemStatusPermitActionGetRequest request);
 	
 }

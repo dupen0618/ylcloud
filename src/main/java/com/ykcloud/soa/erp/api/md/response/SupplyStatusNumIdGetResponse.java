@@ -10,6 +10,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 public class SupplyStatusNumIdGetResponse extends MessagePack {
 	private static final long serialVersionUID = 1L;
     private Long supplyStatusNumId;
+    
 	public Long getSupplyStatusNumId() {
 		return supplyStatusNumId;
 	}
