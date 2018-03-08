@@ -8,7 +8,9 @@ import com.ykcloud.soa.erp.api.md.response.ItemStatusPermitActionCheckResponse;
 import com.ykcloud.soa.erp.api.md.response.ShopProductItemStatusGetRsponse;
 
 import com.ykcloud.soa.erp.api.md.request.LatestPurchasePriceGetRequest;
+import com.ykcloud.soa.erp.api.md.request.ShopProductDefaultReceiptStorageGetRequest;
 import com.ykcloud.soa.erp.api.md.response.LatestPurchasePriceGetRespone;
+import com.ykcloud.soa.erp.api.md.response.ShopProductDefaultReceiptStorageGetResponse;
 
 /***
  * 通过条形码获取商品信息接口
@@ -31,4 +33,9 @@ public interface MdProductService {
 	*获取最新采购价
 	* */
 	public LatestPurchasePriceGetRespone getLatestPurchasePrice(LatestPurchasePriceGetRequest request);
+	
+	//获取门店某商品默认收货仓库(逻辑仓及物理仓)
+	public ShopProductDefaultReceiptStorageGetResponse getShopProductDefaultReceiptStorage(ShopProductDefaultReceiptStorageGetRequest request);
+	
+	
 }
