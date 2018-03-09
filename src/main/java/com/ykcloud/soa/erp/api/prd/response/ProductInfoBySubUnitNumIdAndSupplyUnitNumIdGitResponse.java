@@ -1,9 +1,11 @@
 package com.ykcloud.soa.erp.api.prd.response;
 
+import com.gb.soa.omp.ccommon.api.response.MessagePack;
+
 /**
  * Created by yiako on 2018/3/9
  */
-public class ProductInfoBySubUnitNumIdAndSupplyUnitNumIdGitResponse  {
+public class ProductInfoBySubUnitNumIdAndSupplyUnitNumIdGitResponse extends MessagePack {
     private Long settlementType;//结算方式1：购销，2：代销，3：联销
     private String  settlementTypeName;//结算方式名称
     private Long logisticsType;//物流方式
