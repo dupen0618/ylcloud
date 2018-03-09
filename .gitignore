@@ -8,10 +8,6 @@
 out
 gen
 /target/
-<<<<<<< HEAD
 .project
 .classpath
-.settings
-=======
-.project
->>>>>>> 更新api
+.settings/

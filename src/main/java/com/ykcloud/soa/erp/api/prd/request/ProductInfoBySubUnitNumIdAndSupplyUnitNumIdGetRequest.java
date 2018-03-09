@@ -12,7 +12,7 @@ public class ProductInfoBySubUnitNumIdAndSupplyUnitNumIdGetRequest extends Abstr
     private Long subUnitNumId;
     @NotNull(message = "供应商编码不能为空！")
     private Long supplyUnitNumId;
-    @NotNull(message = "商品主键不能为空！")
+    @NotNull(message = "商品编号不能为空！")
     private Long itemNumId;
 
     public Long getSubUnitNumId() {
