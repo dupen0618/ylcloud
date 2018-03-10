@@ -1,4 +1,8 @@
 package com.ykcloud.soa.erp.api.md.service;
+
+import com.ykcloud.soa.erp.api.md.request.ConfigValueGetRequest;
+import com.ykcloud.soa.erp.api.md.response.ConfigValueGetResponse;
+
 /***
  * 
  * @author hank.zhu
@@ -9,5 +13,5 @@ package com.ykcloud.soa.erp.api.md.service;
 
 public interface MdTenantService {
 
-
+	public ConfigValueGetResponse getConfigValue(ConfigValueGetRequest request);
 }
