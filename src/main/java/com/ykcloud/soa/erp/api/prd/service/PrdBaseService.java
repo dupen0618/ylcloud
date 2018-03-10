@@ -1,8 +1,10 @@
 package com.ykcloud.soa.erp.api.prd.service;
 
 import com.ykcloud.soa.erp.api.prd.request.ItemStatusPermitActionGetRequest;
+import com.ykcloud.soa.erp.api.prd.request.ProductInfoBySubUnitNumIdAndSupplyUnitNumIdGetRequest;
 import com.ykcloud.soa.erp.api.prd.request.ShopProductItemStatusGetRequest;
 import com.ykcloud.soa.erp.api.prd.response.ItemStatusPermitActionCheckResponse;
+import com.ykcloud.soa.erp.api.prd.response.ProductInfoBySubUnitNumIdAndSupplyUnitNumIdGetResponse;
 import com.ykcloud.soa.erp.api.prd.response.ShopProductItemStatusGetRsponse;
 
 //商品基础服务

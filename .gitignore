@@ -10,4 +10,4 @@ gen
 /target/
 .project
 .classpath
-.settings
+.settings/
