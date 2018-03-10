@@ -4,10 +4,12 @@ import com.ykcloud.soa.erp.api.md.request.DirectWayFirstReceiptStorageNumIdGetRe
 import com.ykcloud.soa.erp.api.md.request.FinalDistributionStorageNumIdGetRequest;
 import com.ykcloud.soa.erp.api.md.request.HeadSubUnitNumIdGetRequest;
 import com.ykcloud.soa.erp.api.md.request.ShopStorageListFroReplenishGetRequest;
+import com.ykcloud.soa.erp.api.md.request.UnitNumIdBySubUnitNumIdGetRequest;
 import com.ykcloud.soa.erp.api.md.response.DirectWayFirstReceiptStorageNumIdGetResponse;
 import com.ykcloud.soa.erp.api.md.response.FinalDistributionStorageNumIdGetResponse;
 import com.ykcloud.soa.erp.api.md.response.HeadSubUnitNumIdGetRequestRespone;
 import com.ykcloud.soa.erp.api.md.response.ShopStorageListFroReplenishGetResponse;
+import com.ykcloud.soa.erp.api.md.response.UnitNumIdBySubUnitNumIdGetResponse;
 
 /**
  * 
@@ -29,4 +31,7 @@ public interface MdShopService {
     
     //获取门店下参与补货的仓库列表
     public ShopStorageListFroReplenishGetResponse getShopStorageListFroReplenish(ShopStorageListFroReplenishGetRequest request);
+    
+   //获取门店的业务单元编号
+    public UnitNumIdBySubUnitNumIdGetResponse getUnitNumIdBySubUnitNumId(UnitNumIdBySubUnitNumIdGetRequest request);
 }
