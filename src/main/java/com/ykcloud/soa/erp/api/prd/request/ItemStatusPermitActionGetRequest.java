@@ -18,14 +18,15 @@ public class ItemStatusPermitActionGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 1L;
 	@NotNull(message = "商品状态Id不能为空！")
-	private Long itemStatusId;
+	private Long statusNumId;  
 	@NotEmpty(message = "商品动作不能那个为空！")
 	private String action;
-	public Long getItemStatusId() {
-		return itemStatusId;
+	
+	public Long getStatusNumId() {
+		return statusNumId;
 	}
-	public void setItemStatusId(Long itemStatusId) {
-		this.itemStatusId = itemStatusId;
+	public void setStatusNumId(Long statusNumId) {
+		this.statusNumId = statusNumId;
 	}
 	public String getAction() {
 		return action;
