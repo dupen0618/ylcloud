@@ -14,12 +14,14 @@ public interface ScmProductService {
 	//获取供应商品赠品数量
 	public GiftQtyByGiftRelationGetResponse getGiftQtyByGiftRelation(GiftQtyByGiftRelationGetRequest request);
 
-	// 商品可补货合法验证
+	//商品可补货合法性验证
 	public ProductForRepmentCheckResponse checkProductForRepment(ProductForRepmentCheckRequest Request);
 	
-	//根据供应商编号和商品小类来查询生鲜类型
+	//获得商品生鲜类型
 	public ProductFdcSignBySupplyNumIdAndPtyNum3GetResponse getProductFdcSignBySupplyNumIdAndPtyNum3(ProductFdcSignBySupplyNumIdAndPtyNum3GetRequest request);
 
-	//获取价格
+	//获取商品采购价
 	public ProductPurchasePriceGetResponse getProductPurchasePrice(ProductPurchasePriceGetRequest request);
+	
+	//获得每日门店、
 }
