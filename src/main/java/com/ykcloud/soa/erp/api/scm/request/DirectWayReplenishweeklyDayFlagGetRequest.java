@@ -12,7 +12,6 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 */
 //获得直通门店供应商周期  请求参数类
 public class DirectWayReplenishweeklyDayFlagGetRequest extends AbstractRequest {
-
 	private static final long serialVersionUID = 1L;
 	@NotNull(message="门店信息不能为空！")
 	private Long subUnitNumId;
