@@ -21,7 +21,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 * @author: fred.zhao
 * @date: 2018年3月12日 上午11:00:45 
 */
-public class GenerateApprovalOrderGetRequest extends AbstractRequest{
+public class ApprovalOrderGenerateRequest extends AbstractRequest{
 
 	private static final long serialVersionUID = 1L;
 	

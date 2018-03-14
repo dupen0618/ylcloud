@@ -1,7 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
-import com.ykcloud.soa.erp.api.scm.request.GenerateApprovalOrderGetRequest;
-import com.ykcloud.soa.erp.api.scm.response.GenerateApprovalOrderGetResponse;
+import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderGenerateRequest;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderGenerateResponse;
 
 /**
 * @ClassName: ScmReplenishService.java
@@ -13,7 +13,7 @@ import com.ykcloud.soa.erp.api.scm.response.GenerateApprovalOrderGetResponse;
 public interface ScmReplenishService {
 	
 	//补货申请单生成订货审批单
-	public GenerateApprovalOrderGetResponse generateApprovalOrder(GenerateApprovalOrderGetRequest request);
+	public ApprovalOrderGenerateResponse generateApprovalOrder(ApprovalOrderGenerateRequest request);
 	
 	
 }

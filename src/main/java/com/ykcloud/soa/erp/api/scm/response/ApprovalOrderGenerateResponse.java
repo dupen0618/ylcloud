@@ -15,7 +15,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 * @author: fred.zhao
 * @date: 2018年3月12日 上午11:02:14 
 */
-public class GenerateApprovalOrderGetResponse extends MessagePack{
+public class ApprovalOrderGenerateResponse extends MessagePack{
 
 	private static final long serialVersionUID = -9161274167518573922L;
 	
