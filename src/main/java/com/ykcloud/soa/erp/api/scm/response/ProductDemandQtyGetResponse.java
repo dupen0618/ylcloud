@@ -3,48 +3,50 @@ package com.ykcloud.soa.erp.api.scm.response;
 import java.util.Date;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
+
 /**
  * 获取商品补货参考数量的出参类
+ * 
  * @author 14540
  *
  */
 public class ProductDemandQtyGetResponse extends MessagePack {
-	
-	  private Date lastSaleDate;   //最近销售日期
-	  
-	  private Date lastReceiveDate; //最近收货日期
-	  
-	  private Double monthSaleQty;  //月销售量
-	  
-	  private Double  lastWeekSaleQty; //上周销售量
-	  
-	  private Double  dailySaleQty;    //日销售量
-	  
-	  private Double lastWeekDailySaleQty;//上周日均销售量
-	  
-	  private Double lastMonthSaleQty;//上月销量
-	  
-	  private Double thisMonthSaleQty;//本月销量
-	  
-	  private Double backwardOneWeekSaleQty; //倒推一周的销量
-	  
-	  private Double backwardTwoWeekSaleQty; //倒推二周的销量
-	  
-	  private Double backwardThreeWeekSaleQty; //倒推三周的销量
-	  
-	  private Double backwardFourWeekSaleQty;  //倒推四周的销量
-	  
-	  private Double openApplyQty;           //在途补货数量
-	  
-	  private Double openOrderQty;   //在途订货数量
-	  
-	  private Double openRationQty;   //在途配送数量
-	  
-	  private Double openDistDeliveryQty; //仓库配送数
-	  
-	  private Double openBranchDeliveryQty; //分仓在途数
-	  
-	  private Double returnQty;   //待退数
+
+	private Date lastSaleDate; // 最近销售日期
+
+	private Date lastReceiveDate; // 最近收货日期
+
+	private Double monthSaleQty; // 月销售量
+
+	private Double lastWeekSaleQty; // 上周销售量
+
+	private Double dailySaleQty; // 日销售量
+
+	private Double lastWeekDailySaleQty;// 上周日均销售量
+
+	private Double lastMonthSaleQty;// 上月销量
+
+	private Double thisMonthSaleQty;// 本月销量
+
+	private Double backwardOneWeekSaleQty; // 倒推一周的销量
+
+	private Double backwardTwoWeekSaleQty; // 倒推二周的销量
+
+	private Double backwardThreeWeekSaleQty; // 倒推三周的销量
+
+	private Double backwardFourWeekSaleQty; // 倒推四周的销量
+
+	private Double openApplyQty; // 在途补货数量
+
+	private Double openOrderQty; // 在途订货数量
+
+	private Double openRationQty; // 在途配送数量
+
+	private Double openDistDeliveryQty; // 仓库配送数
+
+	private Double openBranchDeliveryQty; // 分仓在途数
+
+	private Double returnQty; // 待退数
 
 	public Date getLastSaleDate() {
 		return lastSaleDate;
@@ -189,7 +191,5 @@ public class ProductDemandQtyGetResponse extends MessagePack {
 	public void setReturnQty(Double returnQty) {
 		this.returnQty = returnQty;
 	}
-	  
-	  
 
 }

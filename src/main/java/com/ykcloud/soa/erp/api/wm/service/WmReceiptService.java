@@ -8,7 +8,7 @@ import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse;
 
 public interface WmReceiptService {
-	
-	public   ShopProductLastReceiveDateGetResponse   getShopProductLastReceiveDate(ShopProductLastReceiveDateGetRequest request);
+	//查询商品最后收货日期
+	public ShopProductLastReceiveDateGetResponse getShopProductLastReceiveDate(ShopProductLastReceiveDateGetRequest request);
 
 }

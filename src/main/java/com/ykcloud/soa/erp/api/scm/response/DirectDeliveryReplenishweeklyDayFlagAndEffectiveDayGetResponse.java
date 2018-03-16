@@ -10,7 +10,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetResponse extends MessagePack {
     private String replenishWeeklyDayFlag; // '1234567'供应商商品可补货日周一至周日,'1004000'表示周一和周四补货)
-    
+   
     private Long effectiveDay;             //有效天数
 
 	public String getReplenishWeeklyDayFlag() {

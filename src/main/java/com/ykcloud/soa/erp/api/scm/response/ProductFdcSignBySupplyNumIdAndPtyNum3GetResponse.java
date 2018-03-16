@@ -22,11 +22,7 @@ public class ProductFdcSignBySupplyNumIdAndPtyNum3GetResponse extends MessagePac
 	}
 
 
-/**
- * 获取生鲜类型的出参
- * @author 14540
- *
- */
+
 
             
 

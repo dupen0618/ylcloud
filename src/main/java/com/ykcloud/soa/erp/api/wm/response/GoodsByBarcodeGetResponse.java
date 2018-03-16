@@ -4,64 +4,64 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 /***
  * 通过条形码获取商品信息相应参数
+ * 
  * @author bi.cai
  * @date 2018年01月11日 下午10:46:39
  */
 public class GoodsByBarcodeGetResponse extends MessagePack {
 
 	private static final long serialVersionUID = -3621634900229807547L;
-	
-	//商品id
+
+	// 商品id
 	private Long itemNumId;
-	
-	//条形码
+
+	// 条形码
 	private String barcode;
-	
-	//商品名称
+
+	// 商品名称
 	private String itemName;
-	
-	//原价
+
+	// 原价
 	private Double retailPrice;
-	
-	//销售价
+
+	// 销售价
 	private Double standardPrice;
-	
-	//折后单价
+
+	// 折后单价
 	private Double tradePrice;
-	
-	//会员价
+
+	// 会员价
 	private Double vipPrice;
-	
-	//数量
+
+	// 数量
 	private Double qty;
-	
-	//折让金额 retailPrice*qty-standardPrice*qty
+
+	// 折让金额 retailPrice*qty-standardPrice*qty
 	private Double deductAmount;
-	
-	//结算金额
+
+	// 结算金额
 	private Double tradeAmount;
-	
-	//条码类型
+
+	// 条码类型
 	private Long barcodeTypeNumId;
-	
-	//经营类型 1-买断 2代销 3-联营
+
+	// 经营类型 1-买断 2代销 3-联营
 	private Long sellTypeNumId;
-	
-	//事业部
+
+	// 事业部
 	private Long divNumId;
-	
-	//库存属性
-	private Long locPtyNumId=1l;
-	
-	//销售单位
+
+	// 库存属性
+	private Long locPtyNumId = 1l;
+
+	// 销售单位
 	private String unitsName;
-	
-	//来源单号
+
+	// 来源单号
 	private Long reservedNo;
-	
-	//临时调价单类型  501-永久调价,502-临时变价,503-DM调价,504-普惠会员价,505-等级会员
+
+	// 临时调价单类型 501-永久调价,502-临时变价,503-DM调价,504-普惠会员价,505-等级会员
 	private Long priceType;
-	
 
 	public Long getItemNumId() {
 		return itemNumId;
@@ -70,7 +70,7 @@ public class GoodsByBarcodeGetResponse extends MessagePack {
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}
-	
+
 	public String getBarcode() {
 		return barcode;
 	}
@@ -86,7 +86,7 @@ public class GoodsByBarcodeGetResponse extends MessagePack {
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
 	}
-	
+
 	public Double getRetailPrice() {
 		return retailPrice;
 	}
