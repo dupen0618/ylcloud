@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
+
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
@@ -33,5 +34,7 @@ public class ProductFdcSignBySupplyNumIdAndPtyNum3GetRequest extends AbstractReq
 	}
 	
 	
+
+
 
 }
