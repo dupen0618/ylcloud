@@ -12,26 +12,20 @@ public class GiftQtyByGiftRelationGetRequest extends AbstractRequest {
 
 	@NotNull(message = "供应商编号不能为空！")
 	private Long supplyUnitNumId;
-
 	@NotNull(message = "商品编号不能为空！")
 	private Long itemNumId;
-
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "日期不能为空！")
 	private Date orderDtme;
-
 	@DecimalMin(value = "0", message = "数量应大于零!")
 	@NotNull(message = "数量不能为空！")
 	private Double qty;
-
 	public Long getSupplyUnitNumId() {
 		return supplyUnitNumId;
 	}
-
 	public void setSupplyUnitNumId(Long supplyUnitNumId) {
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
-
 	public Long getItemNumId() {
 		return itemNumId;
 	}
@@ -39,7 +33,6 @@ public class GiftQtyByGiftRelationGetRequest extends AbstractRequest {
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}
-
 	public Date getOrderDtme() {
 		return orderDtme;
 	}
@@ -47,13 +40,10 @@ public class GiftQtyByGiftRelationGetRequest extends AbstractRequest {
 	public void setOrderDtme(Date orderDtme) {
 		this.orderDtme = orderDtme;
 	}
-
 	public Double getQty() {
 		return qty;
 	}
-
 	public void setQty(Double qty) {
 		this.qty = qty;
 	}
-
 }

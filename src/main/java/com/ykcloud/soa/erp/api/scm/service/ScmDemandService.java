@@ -1,6 +1,9 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
+
+import com.ykcloud.soa.erp.api.scm.request.ProductDemandQtyGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ShopProductDemandGenerateQtyRequest;
+import com.ykcloud.soa.erp.api.scm.response.ProductDemandQtyGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ShopProductDemandGenerateQtyResponse;
 
 /***
@@ -11,6 +14,7 @@ import com.ykcloud.soa.erp.api.scm.response.ShopProductDemandGenerateQtyResponse
 public interface ScmDemandService {
 	
 	//日结后产生门店、商品类别补货参考数量，插入门店日商品补货参考数量表
-	public ShopProductDemandGenerateQtyResponse generateShopProductDemandQty(ShopProductDemandGenerateQtyRequest request);
+public ShopProductDemandGenerateQtyResponse generateShopProductDemandQty(ShopProductDemandGenerateQtyRequest request);
 
+public ProductDemandQtyGetResponse getProductDemandQty(ProductDemandQtyGetRequest request);
 }

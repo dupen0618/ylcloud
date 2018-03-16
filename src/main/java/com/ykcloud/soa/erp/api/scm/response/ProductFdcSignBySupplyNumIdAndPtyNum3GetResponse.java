@@ -21,4 +21,9 @@ public class ProductFdcSignBySupplyNumIdAndPtyNum3GetResponse extends MessagePac
 		this.fdcSign = fdcSign;
 	}
 
+
+
+
+            
+
 }

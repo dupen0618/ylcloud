@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
+
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
@@ -15,11 +16,9 @@ public class ProductFdcSignBySupplyNumIdAndPtyNum3GetRequest extends AbstractReq
 	private Long supplyUnitNumId;   //供应商编号
 	@NotNull(message = "商品小类编号不能为空！")
 	private Long ptyNum3;           //商品小类
-
 	public Long getSupplyUnitNumId() {
 		return supplyUnitNumId;
 	}
-
 	public void setSupplyUnitNumId(Long supplyUnitNumId) {
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
@@ -27,11 +26,12 @@ public class ProductFdcSignBySupplyNumIdAndPtyNum3GetRequest extends AbstractReq
 	public Long getPtyNum3() {
 		return ptyNum3;
 	}
-
 	public void setPtyNum3(Long ptyNum3) {
 		this.ptyNum3 = ptyNum3;
 	}
 	
 	
+
+
 
 }

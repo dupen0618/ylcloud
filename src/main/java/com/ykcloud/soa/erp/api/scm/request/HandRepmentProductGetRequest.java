@@ -6,29 +6,27 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /***
-*
-@author hank.zhu
-@date 2018年3月9日 下午5:07:31 新建
-*/
+ *
+ * @author hank.zhu
+ * @date 2018年3月9日 下午5:07:31 新建
+ */
 public class HandRepmentProductGetRequest extends AbstractRequest {
 	private static final long serialVersionUID = 1L;
-
-
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 	
 	private Long supplyUnitNumId;
-	
+
 	private Long settlementType;
-	
+
 	private Long logisticsType;
-	
+
 	private Long itemNumId;
-	
+
 	private String barcode;
-	
+
 	@NotNull(message = "订单日期不能为空！")
-	@JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date order_date;
 
 	public Long getSubUnitNumId() {
@@ -90,6 +88,5 @@ public class HandRepmentProductGetRequest extends AbstractRequest {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
 
 }
