@@ -1,7 +1,9 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
+import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.wm.model.ReceiptDtlForGenerateDirectWayDistributionSo;
 
@@ -20,6 +22,9 @@ public class ReceiptForGenerateDirectWayDistributionSoGetResponse extends Messag
 
 	// 收货物理仓
 	private Long physicalNumId;
+
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+	private Date orderDate;
 
 	// 验收明细
 	private List<ReceiptDtlForGenerateDirectWayDistributionSo> receiptDtls;
@@ -62,6 +67,14 @@ public class ReceiptForGenerateDirectWayDistributionSoGetResponse extends Messag
 
 	public void setReceiptDtls(List<ReceiptDtlForGenerateDirectWayDistributionSo> receiptDtls) {
 		this.receiptDtls = receiptDtls;
+	}
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
 	}
 
 }
