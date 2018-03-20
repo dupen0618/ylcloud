@@ -12,5 +12,5 @@ import com.ykcloud.soa.erp.api.fi.response.LastMoveWeightingCostPriceGetResponse
 */
 public interface FiCostQueryService {
 	//获取
-	LastMoveWeightingCostPriceGetResponse getLastMoveWeightingCostPrice(LastMoveWeightingCostPriceGetRequest request);
+	public LastMoveWeightingCostPriceGetResponse getLastMoveWeightingCostPrice(LastMoveWeightingCostPriceGetRequest request);
 }
