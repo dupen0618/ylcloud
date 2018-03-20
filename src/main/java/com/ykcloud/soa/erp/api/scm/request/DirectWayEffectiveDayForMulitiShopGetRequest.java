@@ -1,19 +1,24 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
 import javax.validation.constraints.NotNull;
-
+  
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
- * 直通多门店供应商有效天数的入参类
- * 
- * @author 14540
- *
- */
-
+* 
+* @ClassName: DirectWayEffectiveDayForMulitiShopGetRequest.java
+* @Description: 
+* @version: v1.0.0
+* @author: fred.zhao
+* @date: 2018年3月14日 下午3:24:33
+*/
 public class DirectWayEffectiveDayForMulitiShopGetRequest extends AbstractRequest {
+
+	private static final long serialVersionUID = -7703346861219155669L;
+
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumIds; // 门店编号列表
+
 	@NotNull(message = "供应商编号不能为空！")
 	private Long supplyUnitNumId; // 供应商编号
 

@@ -33,7 +33,7 @@ public class ApprovalOrderGenerateRequest extends AbstractRequest{
 	private List<String> applyNumIds;//申请单编号列表，不限定传入空列表
 	
 	@NotNull
-	private Long onlyFd;//1:只集生鲜商品(16:00集生鲜商品用,0:不限定 1：限定生鲜)
+	private Long onlyFdc;//1:只集生鲜商品(16:00集生鲜商品用,0:不限定 1：限定生鲜)
 
 	public Date getOrderDate() {
 		return orderDate;
@@ -51,13 +51,16 @@ public class ApprovalOrderGenerateRequest extends AbstractRequest{
 		this.applyNumIds = applyNumIds;
 	}
 
-	public Long getOnlyFd() {
-		return onlyFd;
+	public Long getOnlyFdc() {
+		return onlyFdc;
 	}
 
-	public void setOnlyFd(Long onlyFd) {
-		this.onlyFd = onlyFd;
+	public void setOnlyFdc(Long onlyFdc) {
+		this.onlyFdc = onlyFdc;
 	}
+
+
+	
 	
 	
 }
