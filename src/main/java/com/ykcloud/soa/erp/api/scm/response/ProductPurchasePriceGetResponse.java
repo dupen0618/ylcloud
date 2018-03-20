@@ -5,12 +5,12 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import java.util.Date;
 
 public class ProductPurchasePriceGetResponse extends MessagePack {
-    private Long typeNumId;
-    private Double cost;
-    private Long costTaxRate;
-    private Date tempBeginDay;
-    private Date tempEndDay;
-    private Long promotionGrade;
+    private Long typeNumId;//501-永久 502-临时 503-DM 0-最新进价
+    private Double cost;//价格
+    private Long costTaxRate;//进项税率
+    private Date tempBeginDay;//DM/临时调价起始日期
+    private Date tempEndDay;//DM/临时调价结束日期
+    private Long promotionGrade;//促销档期（503DM促销时返回）
 
     public Long getTypeNumId() {
         return typeNumId;

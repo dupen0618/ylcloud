@@ -2,7 +2,9 @@ package com.ykcloud.soa.erp.api.scm.service;
 
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.CouponApprovalOrderGenerateRequest;
+import com.ykcloud.soa.erp.api.scm.request.HandReplenishProductGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderGenerateResponse;
+import com.ykcloud.soa.erp.api.scm.response.HandReplenishProductGetResponse;
 
 /**
 * @ClassName: ScmReplenishService.java
@@ -18,4 +20,9 @@ public interface ScmReplenishService {
 	//补货申请单生成订货审批单(团购单)
 	public ApprovalOrderGenerateResponse generateCouponApprovalOrder(CouponApprovalOrderGenerateRequest request);
 	
+
+    //前台根据商品编号获取补货商品相关信息
+    public HandReplenishProductGetResponse getHandRepmentProductInfo(HandReplenishProductGetRequest request);
+
+
 }

@@ -36,6 +36,4 @@ public interface ScmProductService {
 	
 	//获得每日门店、
 
-	
-
 }
