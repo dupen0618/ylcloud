@@ -7,7 +7,7 @@ public class ReceiptDtlForGenerateDirectWayDistributionSo implements Serializabl
 
 	private static final long serialVersionUID = 1L;
 
-	private String promotionGrade; // 商品编号
+	private String promotionGrade;
 
 	private Long itemNumId;
 
