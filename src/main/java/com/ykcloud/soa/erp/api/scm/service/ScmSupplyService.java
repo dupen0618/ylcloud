@@ -13,10 +13,11 @@ public interface ScmSupplyService {
 	
 
 
-
+	//待实现
 	//获得直通门店供货商订货周期
-	public DirectWayReplenishweeklyDayFlagGetResponse getDirectWayReplenishweeklyDayFlag(DirectWayReplenishweeklyDayFlagGetRequest Request);
+	//public DirectWayReplenishweeklyDayFlagGetResponse getDirectWayReplenishweeklyDayFlag(DirectWayReplenishweeklyDayFlagGetRequest Request);
 
+	//查询直送门店的供应商订货周期、有效天数
 	public DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetResponse  getDirectDeliveryReplenishweeklyDayFlagAndEffectiveDay(
 			DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetRequest request);
 
