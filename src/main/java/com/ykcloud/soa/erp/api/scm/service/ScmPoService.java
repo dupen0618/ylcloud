@@ -2,10 +2,10 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest;
-import com.ykcloud.soa.erp.api.scm.request.GeneratePoGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.PoGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDirectWayDistributionSoGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.GeneratePoGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.PoGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoForGenerateDirectWayDistributionSoGetResponse;
 
 public interface ScmPoService {
@@ -17,7 +17,7 @@ public interface ScmPoService {
 	 * @param 
 	 * @return
 	 */
-	public GeneratePoGetResponse generatePo(GeneratePoGetRequest request);
+	public PoGenerateResponse generatePo(PoGenerateRequest request);
 	
 	//为产生直送分拨单获取采购单信息
 	public PoForGenerateDirectWayDistributionSoGetResponse getPoForGenerateDirectWayDistributionSo(PoForGenerateDirectWayDistributionSoGetRequest request);

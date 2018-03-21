@@ -12,7 +12,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  *
  * @date 2018年3月21日下午3:30:02
  */
-public class GeneratePoGetRequest extends AbstractRequest {
+public class PoGenerateRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 5118059696054727934L;
 	
