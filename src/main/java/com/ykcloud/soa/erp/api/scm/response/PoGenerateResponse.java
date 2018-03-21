@@ -8,7 +8,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  *
  * @date 2018年3月21日下午3:30:59
  */
-public class GeneratePoGetResponse extends MessagePack {
+public class PoGenerateResponse extends MessagePack {
 
 	private static final long serialVersionUID = -6759216530682151348L;
 	
