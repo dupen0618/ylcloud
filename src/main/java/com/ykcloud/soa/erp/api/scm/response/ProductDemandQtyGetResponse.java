@@ -20,6 +20,8 @@ public class ProductDemandQtyGetResponse extends MessagePack {
 
 	private Double lastWeekSaleQty; // 上周销售量
 
+	private Double thisWeekSaleQty; // 本周销量
+
 	private Double dailySaleQty; // 日销售量
 
 	private Double lastWeekDailySaleQty;// 上周日均销售量
@@ -190,6 +192,14 @@ public class ProductDemandQtyGetResponse extends MessagePack {
 
 	public void setReturnQty(Double returnQty) {
 		this.returnQty = returnQty;
+	}
+
+	public Double getThisWeekSaleQty() {
+		return thisWeekSaleQty;
+	}
+
+	public void setThisWeekSaleQty(Double thisWeekSaleQty) {
+		this.thisWeekSaleQty = thisWeekSaleQty;
 	}
 
 }
