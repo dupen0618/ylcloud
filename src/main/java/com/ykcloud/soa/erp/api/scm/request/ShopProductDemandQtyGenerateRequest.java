@@ -11,13 +11,13 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 @author hank.zhu
 @date 2018年3月11日 上午3:49:17 新建
 **/
-public class ShopProductDemandGenerateQtyRequest extends AbstractRequest {
+public class ShopProductDemandQtyGenerateRequest extends AbstractRequest {
 	private static final long serialVersionUID = 1L;
 	
 	@NotNull(message="门店编号不能为空！")
 	private Long subUnitNumId;
 	
-	@NotNull(message="订单日期布恩那个为空！")
+	@NotNull(message="订单日期不能为空！")
 	private Date orderDate;
 
 	public Long getSubUnitNumId() {
