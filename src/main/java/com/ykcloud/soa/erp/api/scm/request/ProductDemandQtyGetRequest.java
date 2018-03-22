@@ -25,7 +25,7 @@ public class ProductDemandQtyGetRequest extends AbstractRequest {
 	@NotNull(message = "商品编号不能为空！")
 	private Long itemNumId; // 商品编号
 
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "日期不能为空！")
 	private Date orderDate; // 日期，格式：yyyy-mm-dd
 
