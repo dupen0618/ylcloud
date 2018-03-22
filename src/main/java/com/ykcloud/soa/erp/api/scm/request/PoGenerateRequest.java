@@ -29,10 +29,16 @@ public class PoGenerateRequest extends AbstractRequest {
 	private Date orderDate;
 	
 	/**
+	 * 审核日期 格式：yyyy-mm-dd
+	 */
+	@NotNull(message = "审核日期不能为空！")
+	private Date auditDate;
+	
+	/**
 	 * 订货审批单号
 	 */
 	@NotNull(message = "订货审批单号不能为空！")
-	private Long approvaNumId;
+	private String approvaNumId;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -50,12 +56,20 @@ public class PoGenerateRequest extends AbstractRequest {
 		this.orderDate = orderDate;
 	}
 
-	public Long getApprovaNumId() {
+	public String getApprovaNumId() {
 		return approvaNumId;
 	}
 
-	public void setApprovaNumId(Long approvaNumId) {
+	public void setApprovaNumId(String approvaNumId) {
 		this.approvaNumId = approvaNumId;
+	}
+
+	public Date getAuditDate() {
+		return auditDate;
+	}
+
+	public void setAuditDate(Date auditDate) {
+		this.auditDate = auditDate;
 	}
 
 
