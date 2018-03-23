@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 
-public class AuditApprovalOrderByBuyerGetRequest extends AbstractRequest{
+public class ApprovalOrderByBuyerAuditGetRequest extends AbstractRequest{
 
     private static final long serialVersionUID = -1L;
 
@@ -28,9 +28,6 @@ public class AuditApprovalOrderByBuyerGetRequest extends AbstractRequest{
     @NotNull(message = "审核标识不能为空！")
     private Long autoAuditSign;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public Long getSubUnitNumId() {
         return subUnitNumId;

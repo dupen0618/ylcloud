@@ -6,7 +6,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class GiftQtyForApprovalOrderCalcateGetRequest extends AbstractRequest {
+public class GiftQtyForApprovalOrderCalcateRequest extends AbstractRequest {
 
     private static final long serialVersionUID = 8735302686607911901L;
 
