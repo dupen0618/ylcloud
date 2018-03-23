@@ -23,6 +23,8 @@ public class ApprovalDtlForGenerateDirectWayDistributionSo implements Serializab
     private Long conversionUnitNumId;
     
     private String conversionStyleDesc;
+    
+    private Long pmtMaterial;
         
     private Double qty;
     
@@ -114,6 +116,14 @@ public class ApprovalDtlForGenerateDirectWayDistributionSo implements Serializab
 
 	public void setPmtQty(Double pmtQty) {
 		this.pmtQty = pmtQty;
+	}
+
+	public Long getPmtMaterial() {
+		return pmtMaterial;
+	}
+
+	public void setPmtMaterial(Long pmtMaterial) {
+		this.pmtMaterial = pmtMaterial;
 	}
   
     

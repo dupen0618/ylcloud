@@ -9,7 +9,7 @@ public class PoForGenerateDirectWayDistributionSoGetResponse extends MessagePack
 	private Double depositAmount;//定金
 	
 	private String approvalNumId;
-
+	
 	public Double getDepositAmount() {
 		return depositAmount;
 	}
@@ -25,7 +25,5 @@ public class PoForGenerateDirectWayDistributionSoGetResponse extends MessagePack
 	public void setApprovalNumId(String approvalNumId) {
 		this.approvalNumId = approvalNumId;
 	}
-
-	
 
 }

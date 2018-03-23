@@ -11,19 +11,7 @@ public class ReceiptDtlForGenerateDirectWayDistributionSo implements Serializabl
 
 	private Long itemNumId;
 
-	private Long divNumId;
-
-	private String barcode;
-
-	private String itemName;
-
 	private Long productOriginNumId;
-
-	private Double conversionQty;
-
-	private Long conversionUnitNumId;
-
-	private String conversionStyleDesc;
 
 	private Double qty;
 
@@ -44,9 +32,9 @@ public class ReceiptDtlForGenerateDirectWayDistributionSo implements Serializabl
 	private Double taxAmount;
 
 	private Long settlementType;
-
-	private Long logisticsType;
 	
+	private Long logisticsType;
+
 	private String supProduceDate;
 
 	public String getPromotionGrade() {
@@ -65,60 +53,12 @@ public class ReceiptDtlForGenerateDirectWayDistributionSo implements Serializabl
 		this.itemNumId = itemNumId;
 	}
 
-	public Long getDivNumId() {
-		return divNumId;
-	}
-
-	public void setDivNumId(Long divNumId) {
-		this.divNumId = divNumId;
-	}
-
-	public String getBarcode() {
-		return barcode;
-	}
-
-	public void setBarcode(String barcode) {
-		this.barcode = barcode;
-	}
-
-	public String getItemName() {
-		return itemName;
-	}
-
-	public void setItemName(String itemName) {
-		this.itemName = itemName;
-	}
-
 	public Long getProductOriginNumId() {
 		return productOriginNumId;
 	}
 
 	public void setProductOriginNumId(Long productOriginNumId) {
 		this.productOriginNumId = productOriginNumId;
-	}
-
-	public Double getConversionQty() {
-		return conversionQty;
-	}
-
-	public void setConversionQty(Double conversionQty) {
-		this.conversionQty = conversionQty;
-	}
-
-	public Long getConversionUnitNumId() {
-		return conversionUnitNumId;
-	}
-
-	public void setConversionUnitNumId(Long conversionUnitNumId) {
-		this.conversionUnitNumId = conversionUnitNumId;
-	}
-
-	public String getConversionStyleDesc() {
-		return conversionStyleDesc;
-	}
-
-	public void setConversionStyleDesc(String conversionStyleDesc) {
-		this.conversionStyleDesc = conversionStyleDesc;
 	}
 
 	public Double getQty() {
