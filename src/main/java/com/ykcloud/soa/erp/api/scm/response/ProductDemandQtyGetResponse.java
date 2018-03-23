@@ -48,6 +48,7 @@ public class ProductDemandQtyGetResponse extends MessagePack {
 
 	private Double openBranchDeliveryQty; // 分仓在途数
 
+
 	private Double returnQty; // 待退数
 
 	public Date getLastSaleDate() {
