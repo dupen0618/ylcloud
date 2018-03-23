@@ -27,45 +27,59 @@ public class ProductForRepmentCheckRequest extends AbstractRequest {
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "订单日期不能为空！")
 	private Date orderDate;
+
 	public String getSeasonMonthFlag() {
 		return seasonMonthFlag;
 	}
+
 	public void setSeasonMonthFlag(String seasonMonthFlag) {
 		this.seasonMonthFlag = seasonMonthFlag;
 	}
+
 	public Date getOrderDate() {
 		return orderDate;
 	}
+
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
+
 	public String getAction() {
 		return action;
 	}
+
 	public void setAction(String action) {
 		this.action = action;
 	}
+
 	public Long getItemStatusId() {
 		return itemStatusId;
 	}
+
 	public void setItemStatusId(Long itemStatusId) {
 		this.itemStatusId = itemStatusId;
 	}
+
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
+
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
+
 	public Long getSupplyUnitNumId() {
 		return supplyUnitNumId;
 	}
+
 	public void setSupplyUnitNumId(Long supplyUnitNumId) {
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
+
 	public Long getItemNumId() {
 		return itemNumId;
 	}
+
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}

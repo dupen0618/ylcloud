@@ -21,16 +21,16 @@ public class ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest extends Ab
 
 	@NotEmpty(message = "订货审批单编号不能为空！")
 	private String approvalNumId;
-	
+
 	@NotNull(message = "商品编号不能为空！")
-	private Long itemNumId;	
-	
+	private Long itemNumId;
+
 	@NotNull(message = "商品原产地编号不能为空！")
-	private Long productOriginNumId;	
+	private Long productOriginNumId;
 
 	@NotNull(message = "价格不能为空！")
 	private Double price;
-	
+
 	@NotNull(message = "税率不能为空！")
 	private Double taxRate;
 
@@ -89,7 +89,5 @@ public class ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest extends Ab
 	public void setTaxRate(Double taxRate) {
 		this.taxRate = taxRate;
 	}
-	
-	
 
 }
