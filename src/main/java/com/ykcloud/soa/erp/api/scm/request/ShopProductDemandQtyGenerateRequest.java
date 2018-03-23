@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
@@ -16,7 +17,7 @@ public class ShopProductDemandQtyGenerateRequest extends AbstractRequest {
 	
 	@NotNull(message="门店编号不能为空！")
 	private Long subUnitNumId;
-	
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message="订单日期不能为空！")
 	private Date orderDate;
 

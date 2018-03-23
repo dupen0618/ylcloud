@@ -20,12 +20,15 @@ public class GiftQtyByGiftRelationGetRequest extends AbstractRequest {
 	@DecimalMin(value = "0", message = "数量应大于零!")
 	@NotNull(message = "数量不能为空！")
 	private Double qty;
+
 	public Long getSupplyUnitNumId() {
 		return supplyUnitNumId;
 	}
+
 	public void setSupplyUnitNumId(Long supplyUnitNumId) {
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
+
 	public Long getItemNumId() {
 		return itemNumId;
 	}
@@ -33,6 +36,7 @@ public class GiftQtyByGiftRelationGetRequest extends AbstractRequest {
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}
+
 	public Date getOrderDtme() {
 		return orderDtme;
 	}
@@ -40,9 +44,11 @@ public class GiftQtyByGiftRelationGetRequest extends AbstractRequest {
 	public void setOrderDtme(Date orderDtme) {
 		this.orderDtme = orderDtme;
 	}
+
 	public Double getQty() {
 		return qty;
 	}
+
 	public void setQty(Double qty) {
 		this.qty = qty;
 	}

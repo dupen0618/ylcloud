@@ -14,7 +14,7 @@ public class HandRepmentProductGetRequest extends AbstractRequest {
 	private static final long serialVersionUID = 1L;
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
-	
+
 	private Long supplyUnitNumId;
 
 	private Long settlementType;
