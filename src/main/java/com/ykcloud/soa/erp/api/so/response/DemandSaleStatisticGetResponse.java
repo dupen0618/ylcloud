@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.so.response;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 /**
@@ -11,7 +12,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  *
  */
 public class DemandSaleStatisticGetResponse extends MessagePack {
-
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date lastSaleDate; // 最近销售日期,格式yyyy-mm-dd
 
 	private Double monthSaleQty; // 月销售量
