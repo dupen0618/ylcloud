@@ -27,6 +27,10 @@ public class ProductForRepmentCheckRequest extends AbstractRequest {
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "订单日期不能为空！")
 	private Date orderDate;
+	@NotNull(message = "物流方式不能为空")
+	private Long logisticsType;
+	@NotNull(message = "1:要检查合同,0：不检查合同")
+	private Long supplyContractCheckSign;
 
 	public String getSeasonMonthFlag() {
 		return seasonMonthFlag;
@@ -84,4 +88,19 @@ public class ProductForRepmentCheckRequest extends AbstractRequest {
 		this.itemNumId = itemNumId;
 	}
 
+	public Long getLogisticsType() {
+		return logisticsType;
+	}
+
+	public void setLogisticsType(Long logisticsType) {
+		this.logisticsType = logisticsType;
+	}
+
+	public Long getSupplyContractCheckSign() {
+		return supplyContractCheckSign;
+	}
+
+	public void setSupplyContractCheckSign(Long supplyContractCheckSign) {
+		this.supplyContractCheckSign = supplyContractCheckSign;
+	}
 }
