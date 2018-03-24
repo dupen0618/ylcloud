@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
@@ -25,12 +26,14 @@ public class PoGenerateRequest extends AbstractRequest {
 	/**
 	 * 订单日期 格式：yyyy-mm-dd
 	 */
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "订单日期不能为空！")
 	private Date orderDate;
 	
 	/**
 	 * 审核日期 格式：yyyy-mm-dd
 	 */
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "审核日期不能为空！")
 	private Date auditDate;
 	
