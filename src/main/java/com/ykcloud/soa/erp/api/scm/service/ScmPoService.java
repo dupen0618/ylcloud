@@ -4,7 +4,7 @@ package com.ykcloud.soa.erp.api.scm.service;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderByBuyerAuditGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.GiftQtyForApprovalOrderCalcateRequest;
-import com.ykcloud.soa.erp.api.scm.request.PoConfirmBySupplyRequest;
+import com.ykcloud.soa.erp.api.scm.request.PoBySupplyConfirmRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.response.*;
@@ -18,7 +18,7 @@ public interface ScmPoService {
 	 * @param 
 	 * @return
 	 */
-	public PoConfirmBySupplyResponse confirmPoBySupply(PoConfirmBySupplyRequest request);
+	public PoBySupplyConfirmResponse confirmPoBySupply(PoBySupplyConfirmRequest request);
 	
 	/**
 	 * 通过订货审批单获取采购单号

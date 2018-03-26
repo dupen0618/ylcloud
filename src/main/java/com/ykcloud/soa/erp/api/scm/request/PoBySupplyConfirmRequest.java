@@ -17,7 +17,7 @@ import com.ykcloud.soa.erp.api.scm.model.SupplyConfirmDtl;
  *
  * @date 2018年3月24日上午11:30:02
  */
-public class PoConfirmBySupplyRequest extends AbstractRequest {
+public class PoBySupplyConfirmRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 2626180051596876648L;
 	
