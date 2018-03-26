@@ -12,7 +12,7 @@ public class ApprovalOrderByBuyerAuditGetRequest extends AbstractRequest{
 
     private static final long serialVersionUID = -1L;
 
-    @NotNull(message = "门店编号不能为空！")
+    @NotNull(message = "订货门店编号不能为空！")
     private Long subUnitNumId;
 
     @NotNull(message = "订单日期不能为空！")
