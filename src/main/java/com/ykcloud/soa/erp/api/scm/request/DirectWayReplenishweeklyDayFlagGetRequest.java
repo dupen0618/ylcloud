@@ -13,7 +13,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 public class DirectWayReplenishweeklyDayFlagGetRequest extends AbstractRequest {
 	private static final long serialVersionUID = 1L;
 	@NotNull(message = "门店信息不能为空！")
-	private Long subUnitNumId;
+	private Long subUnitNumId;//注意是总部门店，不是补货门店
 	@NotNull(message = "供应商信息不能为空！")
 	private Long supplyUnitNumId;
 

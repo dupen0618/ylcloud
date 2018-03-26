@@ -7,22 +7,35 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 public class ProductPurchasePriceGetRequest extends AbstractRequest {
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-	@NotNull(message = "时间不能为空！")
-	private Date orderDat;
+	private static final long serialVersionUID = 1L;
+
+	@NotNull(message = "门店编码不能为空！")
+	private Long subUnitNumId;
+	
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+	@NotNull(message = "订单日期不能为空！")
+	private Date orderDate;
+	
 	@NotNull(message = "供应商编码不能为空！")
 	private Long supplyUnitNumId;
-	@NotNull(message = "门店编码不能为空！")
-	private Long subUnitUnmId;
+
 	@NotNull(message = "商品主键不能为空！")
 	private Long itemNumId;
 
-	public Date getOrderDat() {
-		return orderDat;
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
 	}
 
-	public void setOrderDat(Date orderDat) {
-		this.orderDat = orderDat;
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
 	}
 
 	public Long getSupplyUnitNumId() {
@@ -33,14 +46,6 @@ public class ProductPurchasePriceGetRequest extends AbstractRequest {
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
 
-	public Long getSubUnitUnmId() {
-		return subUnitUnmId;
-	}
-
-	public void setSubUnitUnmId(Long subUnitUnmId) {
-		this.subUnitUnmId = subUnitUnmId;
-	}
-
 	public Long getItemNumId() {
 		return itemNumId;
 	}
@@ -48,4 +53,7 @@ public class ProductPurchasePriceGetRequest extends AbstractRequest {
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}
+
+
+	
 }

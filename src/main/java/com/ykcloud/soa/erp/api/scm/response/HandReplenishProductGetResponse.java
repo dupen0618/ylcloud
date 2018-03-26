@@ -1,572 +1,569 @@
 package com.ykcloud.soa.erp.api.scm.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-
-import java.security.PrivateKey;
 import java.util.Date;
 
-/**
- * Created by yiako on 2018/3/15
- */
 public class HandReplenishProductGetResponse extends MessagePack {
 
-    private Long itemNumId;//商品编号
+	private static final long serialVersionUID = 1L;
 
-    private String itemName;//商品名称
+	private Long itemNumId;// 商品编号
 
-    private String barcode;//条码
+	private String itemName;// 商品名称
 
-    private Long divNumId;//部类
+	private String barcode;// 条码
 
-    private String divName;//部类名称
+	private Long divNumId;// 部类
 
-    private Long basicUnitNumId;//商品基本单位
+	private String divName;// 部类名称
 
-    private String basicUnitName;//商品基本单位名称
+	private Long basicUnitNumId;// 商品基本单位
 
-    private String styleDesc;//销售规格
+	private String basicUnitName;// 商品基本单位名称
 
-    private Long qualityDays;//保质期天数
+	private String styleDesc;// 销售规格
 
-    private Long gpItemNumId;//母商品
+	private Long qualityDays;// 保质期天数
 
-    private Long settlementType;//结算方式1：购销，2：代销，3：联销
+	private Long gpItemNumId;// 母商品
 
-    private String settlementTypeName;//结算方式名称
+	private Long settlementType;// 结算方式1：购销，2：代销，3：联销
 
-    private Long logisticsType;//物流方式
+	private String settlementTypeName;// 结算方式名称
 
-    private String logisticsTypeName;//物流方式名称
+	private Long logisticsType;// 物流方式
 
-    private Long productOriginNumId;//原产地
+	private String logisticsTypeName;// 物流方式名称
 
-    private String productOriginName;//原产地名称
+	private Long productOriginNumId;// 原产地
 
-    private Long storeType;//储存方式1：常温 2：冷藏 3：冷冻
+	private String productOriginName;// 原产地名称
 
-    private String storeTypeName;//储存方式名称
+	private Long storeType;// 储存方式1：常温 2：冷藏 3：冷冻
 
-    private Long storageNumId;//直送、直同收货仓库，配送无意义为0
+	private String storeTypeName;// 储存方式名称
 
-    private Long fdcSign;//生鲜标识 1: 生鲜 0:非生鲜
+	private Long storageNumId;// 直送、直同收货仓库，配送无意义为0
 
-    private Long supplyUnitNumId;//供应商编号
+	private Long fdcSign;// 生鲜标识 1: 生鲜 0:非生鲜
 
-    private String supplyUnitName;//供应商名称
+	private Long supplyUnitNumId;// 供应商编号
 
-    private Double cost;//价格
+	private String supplyUnitName;// 供应商名称
 
-    private Long costTaxRate;//进项税率
+	private Double cost;// 价格
 
-    private Long costTypeTemp;//临时调价类型(502:临时调价 503:DM促销)
+	private Double costTaxRate;// 进项税率
 
-    private Date tempBeginDay;//DM/临时调价起始日期
+	private Long costTypeTemp;// 临时调价类型(502:临时调价 503:DM促销)
 
-    private Date tempEndDay;//DM/临时调价结束日期
+	private Date tempBeginDay;// DM/临时调价起始日期
 
-    private Long promotionGrade;//促销档期（503DM促销时返回）
+	private Date tempEndDay;// DM/临时调价结束日期
 
-    private Double conversionQty;//件装数
+	private String promotionGrade;// 促销档期（503DM促销时返回）
 
-    private Long conversionUnitNumId;//件装单位
+	private Double conversionQty;// 件装数
 
-    private String conversionUnitName;//件装单位名称
+	private Long conversionUnitNumId;// 件装单位
 
-    private String conversionStyleDesc;//件装规格
+	private String conversionUnitName;// 件装单位名称
 
-    private Double salePrice;//销售价格
+	private String conversionStyleDesc;// 件装规格
 
-    private Double minQty;//最小配送数
+	private Double salePrice;// 销售价格
 
-    private Double stockQty;//库存数
+	private Double minQty;// 最小配送数
 
-    private Double balanceCost;//结存成本
+	private Double stockQty;// 库存数
 
-    private Long availbleSaleDays;//可销天数
+	private Double balanceCost;// 结存成本
 
-    private Date lastSaleDate;//最近销售日期
+	private Double availbleSaleDays;// 可销天数
 
-    private Date lastReceiveDate;//最近收货日期
+	private Date lastSaleDate;// 最近销售日期
 
-    private Double monthSaleQty;//月销售量
+	private Date lastReceiveDate;// 最近收货日期
 
-    private Double lastWeekSaleQty;//上周销量
+	private Double monthSaleQty;// 月销售量
 
-    private Double dailySaleQty;//日销量
+	private Double lastWeekSaleQty;// 上周销量
 
-    private Double thisWeekSaleQty;//本周销量
+	private Double dailySaleQty;// 日销量
 
-    private Double lastWeekDailySaleQty;//上周日均销售量
+	private Double thisWeekSaleQty;// 本周销量
 
-    private Double lastMonthSaleQty;//上月销量
+	private Double lastWeekDailySaleQty;// 上周日均销售量
 
-    private Double thisMonthSaleQty;//本月销量
+	private Double lastMonthSaleQty;// 上月销量
 
-    private Double backwardOneWeekSaleQty;//倒推第一周销售量
+	private Double thisMonthSaleQty;// 本月销量
 
-    private Double backwardTwoWeekSaleQty;//倒推第二周销售量
+	private Double backwardOneWeekSaleQty;// 倒推第一周销售量
 
-    private Double backwardThreeWeekSaleQty;//倒推第三周销售量
+	private Double backwardTwoWeekSaleQty;// 倒推第二周销售量
 
-    private Double backwardFourWeekSaleQty;//倒推第四周销售量
+	private Double backwardThreeWeekSaleQty;// 倒推第三周销售量
 
-    private Double openApplyQty;//在途补货数量
+	private Double backwardFourWeekSaleQty;// 倒推第四周销售量
 
-    private Double openOrderQty;//在途订货数量
+	private Double openApplyQty;// 在途补货数量
 
-    private Double openRationQty;//在途配送数量
+	private Double openOrderQty;// 在途订货数量
 
-    private Double openDistDeliveryQty;//仓库配送数
+	private Double openRationQty;// 在途配送数量
 
-    private Double openBranchDeliveryQty;//分仓在途数
+	private Double openDistDeliveryQty;// 仓库配送数
 
-    private Double returnQty;//return_qty
+	private Double openBranchDeliveryQty;// 分仓在途数
 
-    public Long getItemNumId() {
-        return itemNumId;
-    }
+	private Double returnQty;// return_qty
 
-    public void setItemNumId(Long itemNumId) {
-        this.itemNumId = itemNumId;
-    }
+	public Long getItemNumId() {
+		return itemNumId;
+	}
 
-    public String getItemName() {
-        return itemName;
-    }
+	public void setItemNumId(Long itemNumId) {
+		this.itemNumId = itemNumId;
+	}
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
+	public String getItemName() {
+		return itemName;
+	}
 
-    public String getBarcode() {
-        return barcode;
-    }
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
 
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
-    }
+	public String getBarcode() {
+		return barcode;
+	}
 
-    public Long getDivNumId() {
-        return divNumId;
-    }
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
+	}
 
-    public void setDivNumId(Long divNumId) {
-        this.divNumId = divNumId;
-    }
+	public Long getDivNumId() {
+		return divNumId;
+	}
 
-    public String getDivName() {
-        return divName;
-    }
+	public void setDivNumId(Long divNumId) {
+		this.divNumId = divNumId;
+	}
 
-    public void setDivName(String divName) {
-        this.divName = divName;
-    }
+	public String getDivName() {
+		return divName;
+	}
 
-    public Long getBasicUnitNumId() {
-        return basicUnitNumId;
-    }
+	public void setDivName(String divName) {
+		this.divName = divName;
+	}
 
-    public void setBasicUnitNumId(Long basicUnitNumId) {
-        this.basicUnitNumId = basicUnitNumId;
-    }
+	public Long getBasicUnitNumId() {
+		return basicUnitNumId;
+	}
 
-    public String getBasicUnitName() {
-        return basicUnitName;
-    }
+	public void setBasicUnitNumId(Long basicUnitNumId) {
+		this.basicUnitNumId = basicUnitNumId;
+	}
 
-    public void setBasicUnitName(String basicUnitName) {
-        this.basicUnitName = basicUnitName;
-    }
+	public String getBasicUnitName() {
+		return basicUnitName;
+	}
 
-    public String getStyleDesc() {
-        return styleDesc;
-    }
+	public void setBasicUnitName(String basicUnitName) {
+		this.basicUnitName = basicUnitName;
+	}
 
-    public void setStyleDesc(String styleDesc) {
-        this.styleDesc = styleDesc;
-    }
+	public String getStyleDesc() {
+		return styleDesc;
+	}
 
-    public Long getQualityDays() {
-        return qualityDays;
-    }
+	public void setStyleDesc(String styleDesc) {
+		this.styleDesc = styleDesc;
+	}
 
-    public void setQualityDays(Long qualityDays) {
-        this.qualityDays = qualityDays;
-    }
+	public Long getQualityDays() {
+		return qualityDays;
+	}
 
-    public Long getGpItemNumId() {
-        return gpItemNumId;
-    }
+	public void setQualityDays(Long qualityDays) {
+		this.qualityDays = qualityDays;
+	}
 
-    public void setGpItemNumId(Long gpItemNumId) {
-        this.gpItemNumId = gpItemNumId;
-    }
+	public String getPromotionGrade() {
+		return promotionGrade;
+	}
 
-    public Long getSettlementType() {
-        return settlementType;
-    }
+	public Long getGpItemNumId() {
+		return gpItemNumId;
+	}
 
-    public void setSettlementType(Long settlementType) {
-        this.settlementType = settlementType;
-    }
+	public void setGpItemNumId(Long gpItemNumId) {
+		this.gpItemNumId = gpItemNumId;
+	}
 
-    public String getSettlementTypeName() {
-        return settlementTypeName;
-    }
+	public Long getSettlementType() {
+		return settlementType;
+	}
 
-    public void setSettlementTypeName(String settlementTypeName) {
-        this.settlementTypeName = settlementTypeName;
-    }
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
+	}
 
-    public Long getLogisticsType() {
-        return logisticsType;
-    }
+	public String getSettlementTypeName() {
+		return settlementTypeName;
+	}
 
-    public void setLogisticsType(Long logisticsType) {
-        this.logisticsType = logisticsType;
-    }
+	public void setSettlementTypeName(String settlementTypeName) {
+		this.settlementTypeName = settlementTypeName;
+	}
 
-    public String getLogisticsTypeName() {
-        return logisticsTypeName;
-    }
+	public Long getLogisticsType() {
+		return logisticsType;
+	}
 
-    public void setLogisticsTypeName(String logisticsTypeName) {
-        this.logisticsTypeName = logisticsTypeName;
-    }
+	public void setLogisticsType(Long logisticsType) {
+		this.logisticsType = logisticsType;
+	}
 
-    public Long getProductOriginNumId() {
-        return productOriginNumId;
-    }
+	public String getLogisticsTypeName() {
+		return logisticsTypeName;
+	}
 
-    public void setProductOriginNumId(Long productOriginNumId) {
-        this.productOriginNumId = productOriginNumId;
-    }
+	public void setLogisticsTypeName(String logisticsTypeName) {
+		this.logisticsTypeName = logisticsTypeName;
+	}
 
-    public String getProductOriginName() {
-        return productOriginName;
-    }
+	public Long getProductOriginNumId() {
+		return productOriginNumId;
+	}
 
-    public void setProductOriginName(String productOriginName) {
-        this.productOriginName = productOriginName;
-    }
+	public void setProductOriginNumId(Long productOriginNumId) {
+		this.productOriginNumId = productOriginNumId;
+	}
 
-    public Long getStoreType() {
-        return storeType;
-    }
+	public String getProductOriginName() {
+		return productOriginName;
+	}
 
-    public void setStoreType(Long storeType) {
-        this.storeType = storeType;
-    }
+	public void setProductOriginName(String productOriginName) {
+		this.productOriginName = productOriginName;
+	}
 
-    public String getStoreTypeName() {
-        return storeTypeName;
-    }
+	public Long getStoreType() {
+		return storeType;
+	}
 
-    public void setStoreTypeName(String storeTypeName) {
-        this.storeTypeName = storeTypeName;
-    }
+	public void setStoreType(Long storeType) {
+		this.storeType = storeType;
+	}
 
-    public Long getStorageNumId() {
-        return storageNumId;
-    }
+	public String getStoreTypeName() {
+		return storeTypeName;
+	}
 
-    public void setStorageNumId(Long storageNumId) {
-        this.storageNumId = storageNumId;
-    }
+	public void setStoreTypeName(String storeTypeName) {
+		this.storeTypeName = storeTypeName;
+	}
 
-    public Long getFdcSign() {
-        return fdcSign;
-    }
+	public Long getStorageNumId() {
+		return storageNumId;
+	}
 
-    public void setFdcSign(Long fdcSign) {
-        this.fdcSign = fdcSign;
-    }
+	public void setStorageNumId(Long storageNumId) {
+		this.storageNumId = storageNumId;
+	}
 
-    public Long getSupplyUnitNumId() {
-        return supplyUnitNumId;
-    }
+	public Long getFdcSign() {
+		return fdcSign;
+	}
 
-    public void setSupplyUnitNumId(Long supplyUnitNumId) {
-        this.supplyUnitNumId = supplyUnitNumId;
-    }
+	public void setFdcSign(Long fdcSign) {
+		this.fdcSign = fdcSign;
+	}
 
-    public String getSupplyUnitName() {
-        return supplyUnitName;
-    }
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
 
-    public void setSupplyUnitName(String supplyUnitName) {
-        this.supplyUnitName = supplyUnitName;
-    }
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
+	}
 
-    public Double getCost() {
-        return cost;
-    }
+	public String getSupplyUnitName() {
+		return supplyUnitName;
+	}
 
-    public void setCost(Double cost) {
-        this.cost = cost;
-    }
+	public void setSupplyUnitName(String supplyUnitName) {
+		this.supplyUnitName = supplyUnitName;
+	}
 
-    public Long getCostTaxRate() {
-        return costTaxRate;
-    }
+	public Double getCost() {
+		return cost;
+	}
 
-    public void setCostTaxRate(Long costTaxRate) {
-        this.costTaxRate = costTaxRate;
-    }
+	public void setCost(Double cost) {
+		this.cost = cost;
+	}
 
-    public Long getCostTypeTemp() {
-        return costTypeTemp;
-    }
+	public Double getCostTaxRate() {
+		return costTaxRate;
+	}
 
-    public void setCostTypeTemp(Long costTypeTemp) {
-        this.costTypeTemp = costTypeTemp;
-    }
+	public void setCostTaxRate(Double costTaxRate) {
+		this.costTaxRate = costTaxRate;
+	}
 
-    public Date getTempBeginDay() {
-        return tempBeginDay;
-    }
+	public void setPromotionGrade(String promotionGrade) {
+		this.promotionGrade = promotionGrade;
+	}
 
-    public void setTempBeginDay(Date tempBeginDay) {
-        this.tempBeginDay = tempBeginDay;
-    }
+	public Long getCostTypeTemp() {
+		return costTypeTemp;
+	}
 
-    public Date getTempEndDay() {
-        return tempEndDay;
-    }
+	public void setCostTypeTemp(Long costTypeTemp) {
+		this.costTypeTemp = costTypeTemp;
+	}
 
-    public void setTempEndDay(Date tempEndDay) {
-        this.tempEndDay = tempEndDay;
-    }
+	public Date getTempBeginDay() {
+		return tempBeginDay;
+	}
 
-    public Long getPromotionGrade() {
-        return promotionGrade;
-    }
+	public void setTempBeginDay(Date tempBeginDay) {
+		this.tempBeginDay = tempBeginDay;
+	}
 
-    public void setPromotionGrade(Long promotionGrade) {
-        this.promotionGrade = promotionGrade;
-    }
+	public Date getTempEndDay() {
+		return tempEndDay;
+	}
 
-    public Double getConversionQty() {
-        return conversionQty;
-    }
+	public void setTempEndDay(Date tempEndDay) {
+		this.tempEndDay = tempEndDay;
+	}
 
-    public void setConversionQty(Double conversionQty) {
-        this.conversionQty = conversionQty;
-    }
+	public Double getConversionQty() {
+		return conversionQty;
+	}
 
-    public Long getConversionUnitNumId() {
-        return conversionUnitNumId;
-    }
+	public void setConversionQty(Double conversionQty) {
+		this.conversionQty = conversionQty;
+	}
 
-    public void setConversionUnitNumId(Long conversionUnitNumId) {
-        this.conversionUnitNumId = conversionUnitNumId;
-    }
+	public Long getConversionUnitNumId() {
+		return conversionUnitNumId;
+	}
 
-    public String getConversionUnitName() {
-        return conversionUnitName;
-    }
+	public void setConversionUnitNumId(Long conversionUnitNumId) {
+		this.conversionUnitNumId = conversionUnitNumId;
+	}
 
-    public void setConversionUnitName(String conversionUnitName) {
-        this.conversionUnitName = conversionUnitName;
-    }
+	public String getConversionUnitName() {
+		return conversionUnitName;
+	}
 
-    public String getConversionStyleDesc() {
-        return conversionStyleDesc;
-    }
+	public void setConversionUnitName(String conversionUnitName) {
+		this.conversionUnitName = conversionUnitName;
+	}
 
-    public void setConversionStyleDesc(String conversionStyleDesc) {
-        this.conversionStyleDesc = conversionStyleDesc;
-    }
+	public String getConversionStyleDesc() {
+		return conversionStyleDesc;
+	}
 
-    public Double getSalePrice() {
-        return salePrice;
-    }
+	public void setConversionStyleDesc(String conversionStyleDesc) {
+		this.conversionStyleDesc = conversionStyleDesc;
+	}
 
-    public void setSalePrice(Double salePrice) {
-        this.salePrice = salePrice;
-    }
+	public Double getSalePrice() {
+		return salePrice;
+	}
 
-    public Double getMinQty() {
-        return minQty;
-    }
+	public void setSalePrice(Double salePrice) {
+		this.salePrice = salePrice;
+	}
 
-    public void setMinQty(Double minQty) {
-        this.minQty = minQty;
-    }
+	public Double getMinQty() {
+		return minQty;
+	}
 
-    public Double getStockQty() {
-        return stockQty;
-    }
+	public void setMinQty(Double minQty) {
+		this.minQty = minQty;
+	}
 
-    public void setStockQty(Double stockQty) {
-        this.stockQty = stockQty;
-    }
+	public Double getStockQty() {
+		return stockQty;
+	}
 
-    public Double getBalanceCost() {
-        return balanceCost;
-    }
+	public void setStockQty(Double stockQty) {
+		this.stockQty = stockQty;
+	}
 
-    public void setBalanceCost(Double balanceCost) {
-        this.balanceCost = balanceCost;
-    }
+	public Double getBalanceCost() {
+		return balanceCost;
+	}
 
-    public Long getAvailbleSaleDays() {
-        return availbleSaleDays;
-    }
+	public void setBalanceCost(Double balanceCost) {
+		this.balanceCost = balanceCost;
+	}
 
-    public void setAvailbleSaleDays(Long availbleSaleDays) {
-        this.availbleSaleDays = availbleSaleDays;
-    }
+	public Double getAvailbleSaleDays() {
+		return availbleSaleDays;
+	}
 
-    public Date getLastSaleDate() {
-        return lastSaleDate;
-    }
+	public void setAvailbleSaleDays(Double availbleSaleDays) {
+		this.availbleSaleDays = availbleSaleDays;
+	}
 
-    public void setLastSaleDate(Date lastSaleDate) {
-        this.lastSaleDate = lastSaleDate;
-    }
+	public Date getLastSaleDate() {
+		return lastSaleDate;
+	}
 
-    public Date getLastReceiveDate() {
-        return lastReceiveDate;
-    }
+	public void setLastSaleDate(Date lastSaleDate) {
+		this.lastSaleDate = lastSaleDate;
+	}
 
-    public void setLastReceiveDate(Date lastReceiveDate) {
-        this.lastReceiveDate = lastReceiveDate;
-    }
+	public Date getLastReceiveDate() {
+		return lastReceiveDate;
+	}
 
-    public Double getMonthSaleQty() {
-        return monthSaleQty;
-    }
+	public void setLastReceiveDate(Date lastReceiveDate) {
+		this.lastReceiveDate = lastReceiveDate;
+	}
 
-    public void setMonthSaleQty(Double monthSaleQty) {
-        this.monthSaleQty = monthSaleQty;
-    }
+	public Double getMonthSaleQty() {
+		return monthSaleQty;
+	}
 
-    public Double getLastWeekSaleQty() {
-        return lastWeekSaleQty;
-    }
+	public void setMonthSaleQty(Double monthSaleQty) {
+		this.monthSaleQty = monthSaleQty;
+	}
 
-    public void setLastWeekSaleQty(Double lastWeekSaleQty) {
-        this.lastWeekSaleQty = lastWeekSaleQty;
-    }
+	public Double getLastWeekSaleQty() {
+		return lastWeekSaleQty;
+	}
 
-    public Double getDailySaleQty() {
-        return dailySaleQty;
-    }
+	public void setLastWeekSaleQty(Double lastWeekSaleQty) {
+		this.lastWeekSaleQty = lastWeekSaleQty;
+	}
 
-    public void setDailySaleQty(Double dailySaleQty) {
-        this.dailySaleQty = dailySaleQty;
-    }
+	public Double getDailySaleQty() {
+		return dailySaleQty;
+	}
 
-    public Double getLastWeekDailySaleQty() {
-        return lastWeekDailySaleQty;
-    }
+	public void setDailySaleQty(Double dailySaleQty) {
+		this.dailySaleQty = dailySaleQty;
+	}
 
-    public void setLastWeekDailySaleQty(Double lastWeekDailySaleQty) {
-        this.lastWeekDailySaleQty = lastWeekDailySaleQty;
-    }
+	public Double getLastWeekDailySaleQty() {
+		return lastWeekDailySaleQty;
+	}
 
-    public Double getLastMonthSaleQty() {
-        return lastMonthSaleQty;
-    }
+	public void setLastWeekDailySaleQty(Double lastWeekDailySaleQty) {
+		this.lastWeekDailySaleQty = lastWeekDailySaleQty;
+	}
 
-    public void setLastMonthSaleQty(Double lastMonthSaleQty) {
-        this.lastMonthSaleQty = lastMonthSaleQty;
-    }
+	public Double getLastMonthSaleQty() {
+		return lastMonthSaleQty;
+	}
 
-    public Double getThisMonthSaleQty() {
-        return thisMonthSaleQty;
-    }
+	public void setLastMonthSaleQty(Double lastMonthSaleQty) {
+		this.lastMonthSaleQty = lastMonthSaleQty;
+	}
 
-    public void setThisMonthSaleQty(Double thisMonthSaleQty) {
-        this.thisMonthSaleQty = thisMonthSaleQty;
-    }
+	public Double getThisMonthSaleQty() {
+		return thisMonthSaleQty;
+	}
 
-    public Double getBackwardOneWeekSaleQty() {
-        return backwardOneWeekSaleQty;
-    }
+	public void setThisMonthSaleQty(Double thisMonthSaleQty) {
+		this.thisMonthSaleQty = thisMonthSaleQty;
+	}
 
-    public void setBackwardOneWeekSaleQty(Double backwardOneWeekSaleQty) {
-        this.backwardOneWeekSaleQty = backwardOneWeekSaleQty;
-    }
+	public Double getBackwardOneWeekSaleQty() {
+		return backwardOneWeekSaleQty;
+	}
 
-    public Double getBackwardTwoWeekSaleQty() {
-        return backwardTwoWeekSaleQty;
-    }
+	public void setBackwardOneWeekSaleQty(Double backwardOneWeekSaleQty) {
+		this.backwardOneWeekSaleQty = backwardOneWeekSaleQty;
+	}
 
-    public void setBackwardTwoWeekSaleQty(Double backwardTwoWeekSaleQty) {
-        this.backwardTwoWeekSaleQty = backwardTwoWeekSaleQty;
-    }
+	public Double getBackwardTwoWeekSaleQty() {
+		return backwardTwoWeekSaleQty;
+	}
 
-    public Double getBackwardThreeWeekSaleQty() {
-        return backwardThreeWeekSaleQty;
-    }
+	public void setBackwardTwoWeekSaleQty(Double backwardTwoWeekSaleQty) {
+		this.backwardTwoWeekSaleQty = backwardTwoWeekSaleQty;
+	}
 
-    public void setBackwardThreeWeekSaleQty(Double backwardThreeWeekSaleQty) {
-        this.backwardThreeWeekSaleQty = backwardThreeWeekSaleQty;
-    }
+	public Double getBackwardThreeWeekSaleQty() {
+		return backwardThreeWeekSaleQty;
+	}
 
-    public Double getBackwardFourWeekSaleQty() {
-        return backwardFourWeekSaleQty;
-    }
+	public void setBackwardThreeWeekSaleQty(Double backwardThreeWeekSaleQty) {
+		this.backwardThreeWeekSaleQty = backwardThreeWeekSaleQty;
+	}
 
-    public void setBackwardFourWeekSaleQty(Double backwardFourWeekSaleQty) {
-        this.backwardFourWeekSaleQty = backwardFourWeekSaleQty;
-    }
+	public Double getBackwardFourWeekSaleQty() {
+		return backwardFourWeekSaleQty;
+	}
 
-    public Double getOpenApplyQty() {
-        return openApplyQty;
-    }
+	public void setBackwardFourWeekSaleQty(Double backwardFourWeekSaleQty) {
+		this.backwardFourWeekSaleQty = backwardFourWeekSaleQty;
+	}
 
-    public void setOpenApplyQty(Double openApplyQty) {
-        this.openApplyQty = openApplyQty;
-    }
+	public Double getOpenApplyQty() {
+		return openApplyQty;
+	}
 
-    public Double getOpenOrderQty() {
-        return openOrderQty;
-    }
+	public void setOpenApplyQty(Double openApplyQty) {
+		this.openApplyQty = openApplyQty;
+	}
 
-    public void setOpenOrderQty(Double openOrderQty) {
-        this.openOrderQty = openOrderQty;
-    }
+	public Double getOpenOrderQty() {
+		return openOrderQty;
+	}
 
-    public Double getOpenRationQty() {
-        return openRationQty;
-    }
+	public void setOpenOrderQty(Double openOrderQty) {
+		this.openOrderQty = openOrderQty;
+	}
 
-    public void setOpenRationQty(Double openRationQty) {
-        this.openRationQty = openRationQty;
-    }
+	public Double getOpenRationQty() {
+		return openRationQty;
+	}
 
-    public Double getOpenDistDeliveryQty() {
-        return openDistDeliveryQty;
-    }
+	public void setOpenRationQty(Double openRationQty) {
+		this.openRationQty = openRationQty;
+	}
 
-    public void setOpenDistDeliveryQty(Double openDistDeliveryQty) {
-        this.openDistDeliveryQty = openDistDeliveryQty;
-    }
+	public Double getOpenDistDeliveryQty() {
+		return openDistDeliveryQty;
+	}
 
-    public Double getOpenBranchDeliveryQty() {
-        return openBranchDeliveryQty;
-    }
+	public void setOpenDistDeliveryQty(Double openDistDeliveryQty) {
+		this.openDistDeliveryQty = openDistDeliveryQty;
+	}
 
-    public void setOpenBranchDeliveryQty(Double openBranchDeliveryQty) {
-        this.openBranchDeliveryQty = openBranchDeliveryQty;
-    }
+	public Double getOpenBranchDeliveryQty() {
+		return openBranchDeliveryQty;
+	}
 
-    public Double getReturnQty() {
-        return returnQty;
-    }
+	public void setOpenBranchDeliveryQty(Double openBranchDeliveryQty) {
+		this.openBranchDeliveryQty = openBranchDeliveryQty;
+	}
 
-    public void setReturnQty(Double returnQty) {
-        this.returnQty = returnQty;
-    }
+	public Double getReturnQty() {
+		return returnQty;
+	}
 
-    public Double getThisWeekSaleQty() {
-        return thisWeekSaleQty;
-    }
+	public void setReturnQty(Double returnQty) {
+		this.returnQty = returnQty;
+	}
 
-    public void setThisWeekSaleQty(Double thisWeekSaleQty) {
-        this.thisWeekSaleQty = thisWeekSaleQty;
-    }
+	public Double getThisWeekSaleQty() {
+		return thisWeekSaleQty;
+	}
+
+	public void setThisWeekSaleQty(Double thisWeekSaleQty) {
+		this.thisWeekSaleQty = thisWeekSaleQty;
+	}
 }

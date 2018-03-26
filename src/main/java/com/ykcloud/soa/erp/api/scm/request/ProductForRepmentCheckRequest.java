@@ -12,25 +12,37 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 public class ProductForRepmentCheckRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 1L;
+	
 	@NotNull(message = "适用季节编号不能为空！")
 	private String seasonMonthFlag;
+	
 	@NotEmpty(message = "补货动作不能为空！")
 	private String action;
-	@NotNull(message = "商品状态ID不能为空！")
+	
+	@NotNull(message = "商品状态 编号不能为空！")
 	private Long itemStatusId;
+	
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
+	
 	@NotNull(message = "供应编号不能为空！")
 	private Long supplyUnitNumId;
+	
 	@NotNull(message = "商品编号不能为空！")
 	private Long itemNumId;
+	
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "订单日期不能为空！")
 	private Date orderDate;
-	@NotNull(message = "物流方式不能为空")
+	
+	@NotNull(message = "物流方式不能为空！")
 	private Long logisticsType;
-	@NotNull(message = "1:要检查合同,0：不检查合同")
+	
+	@NotNull(message = "1:要检查合同,0：不检查合同！")
 	private Long supplyContractCheckSign;
+	
+	//@NotNull(message = "直通首次门店收货仓库的门店编号不能不空！")
+	private Long directWayFirstReceiptSubUnitNumId;
 
 	public String getSeasonMonthFlag() {
 		return seasonMonthFlag;
@@ -103,4 +115,14 @@ public class ProductForRepmentCheckRequest extends AbstractRequest {
 	public void setSupplyContractCheckSign(Long supplyContractCheckSign) {
 		this.supplyContractCheckSign = supplyContractCheckSign;
 	}
+
+	public Long getDirectWayFirstReceiptSubUnitNumId() {
+		return directWayFirstReceiptSubUnitNumId;
+	}
+
+	public void setDirectWayFirstReceiptSubUnitNumId(Long directWayFirstReceiptSubUnitNumId) {
+		this.directWayFirstReceiptSubUnitNumId = directWayFirstReceiptSubUnitNumId;
+	}
+	
+	
 }

@@ -10,14 +10,6 @@ import com.ykcloud.soa.erp.api.scm.response.ProductFdcSignBySupplyNumIdAndPtyNum
 import com.ykcloud.soa.erp.api.scm.request.ProductFdcSignBySupplyNumIdAndPtyNum3GetRequest;
 import com.ykcloud.soa.erp.api.scm.response.ProductPurchasePriceGetResponse;
 
-import com.ykcloud.soa.erp.api.scm.request.ProductFdcSignBySupplyNumIdAndPtyNum3GetRequest;
-import com.ykcloud.soa.erp.api.scm.response.ProductForRepmentCheckResponse;
-import com.ykcloud.soa.erp.api.scm.response.ProductPurchasePriceGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.GiftQtyByGiftRelationGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.ProductFdcSignBySupplyNumIdAndPtyNum3GetResponse;
-import com.ykcloud.soa.erp.api.scm.request.ProductForRepmentCheckRequest;
-import com.ykcloud.soa.erp.api.scm.request.ProductPurchasePriceGetRequest;
-
 
 public interface ScmProductService {
 
