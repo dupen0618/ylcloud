@@ -4,17 +4,19 @@ import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
- * 形成验收单入参
+ * 为产生验收单获取采购单头、单身、供应商协同单身信息入参
  * @author tz.x
  *
- * @date 2018年3月22日下午5:36:25
+ * @date 2018年3月27日下午2:13:24
+ * @see
  */
-public class GenerateReceiptRequest extends AbstractRequest {
+public class PoForGenerateReceiptGetRequest extends AbstractRequest {
 
-	private static final long serialVersionUID = -2262099624185318920L;
+	private static final long serialVersionUID = -5263386150358402518L;
 	
 	/**
 	 * 门店编号
@@ -25,6 +27,7 @@ public class GenerateReceiptRequest extends AbstractRequest {
 	/**
 	 * 订单日期 格式：yyyy-mm-dd
 	 */
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "订单日期不能为空！")
 	private Date orderDate;
 	
@@ -32,19 +35,12 @@ public class GenerateReceiptRequest extends AbstractRequest {
 	 * 采购单号
 	 */
 	@NotNull(message = "采购单号不能为空！")
-	private String pomNumId;
+	private String poNumId;
 	
 	/**
-	 * 产生类型
-	 * 1:直送自动产生 2:供应商确认
+	 * 产生类别
 	 */
-	@NotNull(message = "产生类型不能为空！")
 	private Long generateType;
-	
-	/**
-	 * 供应商确认送货日期,generate_type为2时必须传入
-	 */
-	private Date confirmDeliveryDate;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -62,12 +58,12 @@ public class GenerateReceiptRequest extends AbstractRequest {
 		this.orderDate = orderDate;
 	}
 
-	public String getPomNumId() {
-		return pomNumId;
+	public String getPoNumId() {
+		return poNumId;
 	}
 
-	public void setPomNumId(String pomNumId) {
-		this.pomNumId = pomNumId;
+	public void setPoNumId(String poNumId) {
+		this.poNumId = poNumId;
 	}
 
 	public Long getGenerateType() {
@@ -76,14 +72,6 @@ public class GenerateReceiptRequest extends AbstractRequest {
 
 	public void setGenerateType(Long generateType) {
 		this.generateType = generateType;
-	}
-
-	public Date getConfirmDeliveryDate() {
-		return confirmDeliveryDate;
-	}
-
-	public void setConfirmDeliveryDate(Date confirmDeliveryDate) {
-		this.confirmDeliveryDate = confirmDeliveryDate;
 	}
 
 }

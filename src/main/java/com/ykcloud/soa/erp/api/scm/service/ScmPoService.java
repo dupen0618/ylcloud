@@ -6,10 +6,20 @@ import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderByBuyerAuditGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.GiftQtyForApprovalOrderCalcateRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoBySupplyConfirmRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoForGenerateDirectWayDistributionSoGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.PoForGenerateReceiptGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.response.*;
 
 public interface ScmPoService {
+	
+	/**
+	 * 为产生验收单获取采购单头、单身、供应商协同单身信息
+	 * @author tz.x
+	 * @date 2018年3月27日下午2:44:30
+	 * @param 
+	 * @return
+	 */
+	public PoForGenerateReceiptGetResponse getPoForGenerateReceipt(PoForGenerateReceiptGetRequest request);
 	
 	/**
 	 * 供应商预约送货服务接口
