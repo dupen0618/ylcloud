@@ -6,6 +6,7 @@ import java.util.List;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Range;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
@@ -30,11 +31,9 @@ public class DirectWayDistributionSoGenerateRequest extends AbstractRequest {
 	@NotEmpty(message = "验收单编号不能为空！")
 	private String receiptNo; // 验收单编号
 
-	@ApiField(description = "0:第一次产生 1:直通实际收货前二次确认货或直送供应商品确认2:实际收货后部分调 说明：1,2要传入删除及调整相关行号")
-	private Long generateType;
-
-	// 二次调整要删除的分拨单相关的验收单到批次行号
-	private List<String> deleteReceiptBatchLines;
+	@ApiField(description = "产生类别不能为空！")
+	@Range(min=1,max=2)
+	private Long generateType;//1:直通供应商确认	2:实际收货后部分商品数量调整
 
 	// 二次调整要重新产生的分拨单相关的验收单到批次行号
 	private List<String> receiptDtlSeriesList;
@@ -45,14 +44,6 @@ public class DirectWayDistributionSoGenerateRequest extends AbstractRequest {
 
 	public void setGenerateType(Long generateType) {
 		this.generateType = generateType;
-	}
-
-	public List<String> getDeleteReceiptBatchLines() {
-		return deleteReceiptBatchLines;
-	}
-
-	public void setDeleteReceiptBatchLines(List<String> deleteReceiptBatchLines) {
-		this.deleteReceiptBatchLines = deleteReceiptBatchLines;
 	}
 
 	public List<String> getReceiptDtlSeriesList() {
