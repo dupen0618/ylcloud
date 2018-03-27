@@ -19,7 +19,7 @@ public class ProductPurchasePriceGetRequest extends AbstractRequest {
 	@NotNull(message = "供应商编码不能为空！")
 	private Long supplyUnitNumId;
 
-	@NotNull(message = "商品主键不能为空！")
+	@NotNull(message = "商品编号不能为空！")
 	private Long itemNumId;
 
 	public Long getSubUnitNumId() {

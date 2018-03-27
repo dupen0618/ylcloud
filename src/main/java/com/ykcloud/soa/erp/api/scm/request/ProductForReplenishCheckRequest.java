@@ -41,9 +41,6 @@ public class ProductForReplenishCheckRequest extends AbstractRequest {
 	@NotNull(message = "1:要检查合同,0：不检查合同！")
 	private Long supplyContractCheckSign;
 	
-	//@NotNull(message = "直通首次门店收货仓库的门店编号不能不空！")
-	private Long directWayFirstReceiptSubUnitNumId;
-
 	public String getSeasonMonthFlag() {
 		return seasonMonthFlag;
 	}
@@ -116,13 +113,4 @@ public class ProductForReplenishCheckRequest extends AbstractRequest {
 		this.supplyContractCheckSign = supplyContractCheckSign;
 	}
 
-	public Long getDirectWayFirstReceiptSubUnitNumId() {
-		return directWayFirstReceiptSubUnitNumId;
-	}
-
-	public void setDirectWayFirstReceiptSubUnitNumId(Long directWayFirstReceiptSubUnitNumId) {
-		this.directWayFirstReceiptSubUnitNumId = directWayFirstReceiptSubUnitNumId;
-	}
-	
-	
 }

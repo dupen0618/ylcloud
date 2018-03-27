@@ -24,11 +24,10 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
 
     private String  barcode;//商品编号、商品条码二选一
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     @NotNull(message = "日期不能为空")
     private Date orderDate;//日期，格式：yyyy-mm-dd
 
-    @NotNull(message = "是否要检查合同不能为空")
     private Long supplyContractCheckSign;//1:要检查合同0：不检查合同
 
     @Range(min = 0, max = 1)
