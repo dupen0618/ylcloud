@@ -566,4 +566,6 @@ public class HandReplenishProductGetResponse extends MessagePack {
 	public void setThisWeekSaleQty(Double thisWeekSaleQty) {
 		this.thisWeekSaleQty = thisWeekSaleQty;
 	}
+	
+	
 }
