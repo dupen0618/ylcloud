@@ -4,9 +4,11 @@ import com.ykcloud.soa.erp.api.scm.request.ReceiptGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.response.ReceiptGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
+import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
+import com.ykcloud.soa.erp.api.wm.response.ShopLastBatchPriceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse;
 
 public interface WmReceiptService {
@@ -26,6 +28,7 @@ public interface WmReceiptService {
 	 */
 	public ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse getReceiptSupConfirmDateAndStatusNumIdByPoNumId(
 			ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest request);
+
 	
 	/**
 	 * 产生验收单
@@ -35,5 +38,9 @@ public interface WmReceiptService {
 	 * @return
 	 */
 	public ReceiptGenerateResponse generateReceipt(ReceiptGenerateRequest request);
+
+
+    //查询门店最新批次库存价格，用于配送补货
+	public ShopLastBatchPriceGetResponse getShopLastBatchPrice(ShopLastBatchPriceGetRequest request);
 
 }
