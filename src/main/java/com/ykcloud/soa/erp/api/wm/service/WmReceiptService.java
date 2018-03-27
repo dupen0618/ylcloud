@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.scm.request.ReceiptGenerateRequest;
+import com.ykcloud.soa.erp.api.scm.response.ReceiptGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
@@ -24,5 +26,14 @@ public interface WmReceiptService {
 	 */
 	public ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse getReceiptSupConfirmDateAndStatusNumIdByPoNumId(
 			ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest request);
+	
+	/**
+	 * 产生验收单
+	 * @author tz.x
+	 * @date 2018年3月27日上午11:47:52
+	 * @param 
+	 * @return
+	 */
+	public ReceiptGenerateResponse generateReceipt(ReceiptGenerateRequest request);
 
 }
