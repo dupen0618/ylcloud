@@ -16,6 +16,11 @@ import com.ykcloud.soa.erp.api.scm.model.PoSupDtlForGenerateReceipt;
 public class PoForGenerateReceiptGetResponse extends MessagePack {
 	
 	private static final long serialVersionUID = 8560296643393530581L;
+	
+	/**
+	 * 供应商确认生产日期
+	 */
+	private String supProduceDate;
 
 	/**
 	 * 供应商编号
@@ -61,6 +66,14 @@ public class PoForGenerateReceiptGetResponse extends MessagePack {
 	 * 供应商协同明细列表
 	 */
 	private List<PoSupDtlForGenerateReceipt> poSupDtls;
+
+	public String getSupProduceDate() {
+		return supProduceDate;
+	}
+
+	public void setSupProduceDate(String supProduceDate) {
+		this.supProduceDate = supProduceDate;
+	}
 
 	public Long getSupplyUnitNumId() {
 		return supplyUnitNumId;
