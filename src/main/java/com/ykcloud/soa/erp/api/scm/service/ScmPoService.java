@@ -11,6 +11,7 @@ import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDirectWayDist
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderByBuyerAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoBySupplyConfirmResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoForGenerateDirectWayDistributionSoGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.PoForGenerateReceiptGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoGenerateResponse;
 
 public interface ScmPoService {
