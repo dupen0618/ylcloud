@@ -16,8 +16,6 @@ public class ReturnProductGetRequest extends AbstractRequest {
 	private Date orderDate; // 订单日期
 	@NotNull(message = "商品编号不能为空")
 	private Long itemNumId; // 商品编号
-	@NotNull(message = "条形码不能为空")
-	private String barcode; // 条形码
 	@NotNull(message = "出货仓库编号不能为空")
 	private Long storageNumId;// 出货仓库编号
 	@NotNull(message = "退货类别不能为空")
@@ -45,14 +43,6 @@ public class ReturnProductGetRequest extends AbstractRequest {
 
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
-	}
-
-	public String getBarcode() {
-		return barcode;
-	}
-
-	public void setBarcode(String barcode) {
-		this.barcode = barcode;
 	}
 
 	public Long getStorageNumId() {
