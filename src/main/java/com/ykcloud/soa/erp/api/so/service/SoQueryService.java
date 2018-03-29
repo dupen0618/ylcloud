@@ -3,17 +3,24 @@ package com.ykcloud.soa.erp.api.so.service;
 import com.ykcloud.soa.erp.api.so.request.DemandSaleStatisticGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayOpenDistDeliveryQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionOpenDistDeliveryQtyGetRequest;
+import com.ykcloud.soa.erp.api.so.request.GroupSdApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OpenBranchDeliveryQtyGetRequest;
+import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoByWlbcNumIdAndItemNumIdGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetBySoNumIdRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SupplyToReturnAmoutGetRequest;
 import com.ykcloud.soa.erp.api.so.response.DemandSaleStatisticGetResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayOpenDistDeliveryQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionOpenDistDeliveryQtyGetResponse;
+import com.ykcloud.soa.erp.api.so.response.GroupSdApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OpenBranchDeliveryQtyGetResponse;
+import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoByWlbcNumIdAndItemNumIdGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetBySoNumIdResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SupplyToReturnAmoutGetResponse;
+
 
 //查询分仓在途数的接口,以及查询销售的信息
 public interface SoQueryService {
@@ -34,5 +41,14 @@ public interface SoQueryService {
   	
   	//用订单好查询订单HDR
   	public SoHdrGetBySoNumIdResponse getSoHdrBySoNumId(SoHdrGetBySoNumIdRequest request);
-  	
+    //获取退货申请单分组数据
+    public GroupSdApplyDtlGetResponse getReturnApplyGroupList(GroupSdApplyDtlGetRequest request);
+    //已审未退金额
+    public SupplyToReturnAmoutGetResponse getSupplyToReturnAmout(SupplyToReturnAmoutGetRequest request);
+    /** 
+    * @Description: 获取退货申请单单身数据
+    * @Author: fred.zhao
+    * @Date: 2018/3/30 
+    */ 
+    ReturnApplyDtlGetResponse getReturnApplyDtlList(ReturnApplyDtlGetRequest request);
 }

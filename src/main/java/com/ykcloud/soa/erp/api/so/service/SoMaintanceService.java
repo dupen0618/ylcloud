@@ -1,10 +1,12 @@
 package com.ykcloud.soa.erp.api.so.service;
 
+import com.ykcloud.soa.erp.api.so.request.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayDistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.GoodsByBarcodeGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoPackingUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoWlbcAndSoBingingRequest;
+import com.ykcloud.soa.erp.api.so.response.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayDistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.GoodsByBarcodeGetResponse;
@@ -26,4 +28,7 @@ public interface SoMaintanceService {
 	public SoPackingUpdateResponse updateSoPackingDtl(SoPackingUpdateRequest request);
 	
 	public SoWlbcAndSoBingingResponse bingingWlbcAndSo(SoWlbcAndSoBingingRequest request);
+
+    public ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse updateApplyHdrStatusForGenerateApprovalReturnOrder
+            (ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest request);
 }

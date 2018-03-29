@@ -3,12 +3,13 @@ package com.ykcloud.soa.erp.api.scm.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 
-public class ApprovalOrderByBuyerAuditGetRequest extends AbstractRequest{
+public class ApprovalOrderByBuyerAuditGetRequest extends AbstractSessionRequest{
 
     private static final long serialVersionUID = -1L;
 
