@@ -4,7 +4,7 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class SoUpdatePackingRequest extends AbstractRequest {
+public class SoPackingUpdateRequest extends AbstractRequest {
 
 	/**
 	 * 
