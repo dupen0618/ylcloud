@@ -6,8 +6,10 @@ import java.util.List;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class ReceiptForGenerateDirectWayDistributionSoGetRequest extends AbstractRequest {
@@ -25,10 +27,11 @@ public class ReceiptForGenerateDirectWayDistributionSoGetRequest extends Abstrac
 	private String receiptNo;
 
 	@NotBlank(message = "产生类别不能为空！")
-	// 0:第一次产生 1:直通实际收货前二次确认货或直送供应商品确认 2:实际收货后部分调整
+	@Range(min=1,max=2,message="产生类别错误！应为1:直通供应商确认或2:实际收货后部分商品数量调整")
+	@ApiField(description="1:直通供应商确认	2:实际收货后部分商品数量调整")
 	private Long generateType;
 
-	// 二次调整要重新产生的分拨单相关的验收单到批次行号
+	@ApiField(description="实际收货后部分商品数量调整的明细行号(不是到批次行号)")
 	private List<String> receiptDtlSeriesList;
 
 	public Long getSubUnitNumId() {
