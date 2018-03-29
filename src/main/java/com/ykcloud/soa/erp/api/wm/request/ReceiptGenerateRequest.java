@@ -1,9 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import java.util.Date;
-
 import javax.validation.constraints.NotNull;
-
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
@@ -22,9 +21,7 @@ public class ReceiptGenerateRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 	
-	/**
-	 * 订单日期 格式：yyyy-mm-dd
-	 */
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "订单日期不能为空！")
 	private Date orderDate;
 	
