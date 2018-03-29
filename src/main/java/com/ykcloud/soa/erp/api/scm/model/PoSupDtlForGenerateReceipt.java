@@ -57,7 +57,7 @@ public class PoSupDtlForGenerateReceipt {
 	/**
 	 * 件数
 	 */
-	private Long packageQty;
+	private Double packageQty;
 	
 	/**
 	 * 数量
@@ -166,11 +166,11 @@ public class PoSupDtlForGenerateReceipt {
 		this.conversionStyleDesc = conversionStyleDesc;
 	}
 
-	public Long getPackageQty() {
+	public Double getPackageQty() {
 		return packageQty;
 	}
 
-	public void setPackageQty(Long packageQty) {
+	public void setPackageQty(Double packageQty) {
 		this.packageQty = packageQty;
 	}
 
