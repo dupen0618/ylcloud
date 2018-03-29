@@ -27,9 +27,7 @@ public class PoForGenerateReceiptGetRequest extends AbstractRequest {
 	/**
 	 * 订单日期 格式：yyyy-mm-dd
 	 */
-	//@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-	//@JsonFormat(pattern = "yyyy-MM-dd")
-	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+0")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "订单日期不能为空！")
 	private Date orderDate;
 	
