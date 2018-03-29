@@ -3,12 +3,15 @@ package com.ykcloud.soa.erp.api.scm.service;
 
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderByBuyerAuditGetRequest;
-import com.ykcloud.soa.erp.api.scm.request.GiftQtyForApprovalOrderCalcateRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoBySupplyConfirmRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoForGenerateReceiptGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoGenerateRequest;
-import com.ykcloud.soa.erp.api.scm.response.*;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDirectWayDistributionSoGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderByBuyerAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.PoBySupplyConfirmResponse;
+import com.ykcloud.soa.erp.api.scm.response.PoForGenerateDirectWayDistributionSoGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.PoGenerateResponse;
 
 public interface ScmPoService {
 	
@@ -46,8 +49,6 @@ public interface ScmPoService {
 	public ApprovalDtlsForGenerateDirectWayDistributionSoGetResponse getApprovalDtlsForGenerateDirectWayDistributionSo(ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest request);
     //直送、直通订货审批单采购审核
 	public ApprovalOrderByBuyerAuditResponse auditApprovalOrderByBuyer(ApprovalOrderByBuyerAuditGetRequest request);
-    //分配赠品
-    public GiftQtyForApprovalOrderCalcateResponse calcateGiftQtyForApprovalOrder(GiftQtyForApprovalOrderCalcateRequest request);
 	
 }
 
