@@ -13,8 +13,20 @@ import com.ykcloud.soa.erp.api.scm.response.PoBySupplyConfirmResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoForGenerateReceiptGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoGenerateResponse;
+import com.ykcloud.soa.erp.api.scm.response.PoStatusNumIdForConfirmPoBySupplyUpdateResponse;
+import com.ykcloud.soa.erp.api.scm.request.PoStatusNumIdForConfirmPoBySupplyUpdateRequest;
 
 public interface ScmPoService {
+	
+	/**
+	 * 更新采购单状态为供应商已确认（直送供应商确认生成验收单后或直通供应商确认生成验证单及分拨单后）
+	 * @author tz.x
+	 * @date 2018年3月28日下午5:44:28
+	 * @param 
+	 * @return
+	 */
+	public PoStatusNumIdForConfirmPoBySupplyUpdateResponse updatePoStatusNumIdForDirectSendGenerateReceipt(
+			PoStatusNumIdForConfirmPoBySupplyUpdateRequest request);
 	
 	/**
 	 * 为产生验收单获取采购单头、单身、供应商协同单身信息

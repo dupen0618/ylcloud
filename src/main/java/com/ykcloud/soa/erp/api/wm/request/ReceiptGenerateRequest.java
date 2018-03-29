@@ -1,10 +1,10 @@
-package com.ykcloud.soa.erp.api.scm.request;
+package com.ykcloud.soa.erp.api.wm.request;
 
 import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
  * 形成验收单入参
@@ -12,7 +12,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  *
  * @date 2018年3月22日下午5:36:25
  */
-public class ReceiptGenerateRequest extends AbstractRequest {
+public class ReceiptGenerateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = -2262099624185318920L;
 	
