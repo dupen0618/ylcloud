@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.scm.response;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 /**
@@ -11,9 +12,9 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  *
  */
 public class ProductDemandQtyGetResponse extends MessagePack {
-
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date lastSaleDate; // 最近销售日期
-
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date lastReceiveDate; // 最近收货日期
 
 	private Double monthSaleQty; // 月销售量
