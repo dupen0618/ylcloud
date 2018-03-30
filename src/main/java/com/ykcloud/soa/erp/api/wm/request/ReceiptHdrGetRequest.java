@@ -10,7 +10,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 public class ReceiptHdrGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 1L;
-	private String reservedNo;
+	private String reservedNo;//验收单号后6位
 	/**
 	 * @return the reservedNo
 	 */

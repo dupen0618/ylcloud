@@ -12,21 +12,29 @@ public class ReceiptTrayHdrCreateResponse extends MessagePack {
 	private static final long serialVersionUID = 4171963965175027903L;
 	
     //装箱单号
-	private Long traySerlno;
+	private String traySerlno;
 	
 	//实际装箱单号
-	private Long traySerlnoLabel;
-	public Long getTraySerlno() {
+	private String traySerlnoLabel;
+
+	public String getTraySerlno() {
 		return traySerlno;
 	}
-	public void setTraySerlno(Long traySerlno) {
+
+	public void setTraySerlno(String traySerlno) {
 		this.traySerlno = traySerlno;
 	}
-	public Long getTraySerlnoLabel() {
+
+	public String getTraySerlnoLabel() {
 		return traySerlnoLabel;
 	}
-	public void setTraySerlnoLabel(Long traySerlnoLabel) {
+
+	public void setTraySerlnoLabel(String traySerlnoLabel) {
 		this.traySerlnoLabel = traySerlnoLabel;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	
 }
