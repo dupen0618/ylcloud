@@ -4,33 +4,23 @@ import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gb.soa.omp.ccommon.api.annotation.ApiField;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-/**
- * 
- * @author tz.x
- *
- * @date 2018年3月21日下午3:30:02
- */
-public class InventoryForDistributionApprovalLockRequest extends AbstractRequest {
+public class InventoryForDistributionApprovalLockRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 5118059696054727934L;
 
-	/**
-	 * 门店编号
-	 */
+	@ApiField(description="门店编号")
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 
-	/**
-	 * 订单日期 格式：yyyy-mm-dd
-	 */
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "订单日期不能为空！")
 	private Date orderDate;
 
-	/**
-	 * 订货审批单号
-	 */
+	@ApiField(description="订货审批单号")
 	@NotNull(message = "订货审批单号不能为空！")
 	private String approvaNumId;
 
