@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.model;
 
+import java.io.Serializable;
+
 /**
  * 采购明细列表
  * @author tz.x
@@ -7,8 +9,10 @@ package com.ykcloud.soa.erp.api.scm.model;
  * @date 2018年3月27日下午2:36:44
  * @see
  */
-public class PoDtlForGenerateReceipt {
+public class PoDtlForGenerateReceipt implements Serializable {
 	
+	private static final long serialVersionUID = 277797115130619689L;
+
 	/**
 	 * 促销档期，来自采购单身，暂不用，扩展用
 	 */

@@ -19,6 +19,13 @@ public class PoStatusNumIdForConfirmPoBySupplyUpdateRequest extends AbstractRequ
 	private static final long serialVersionUID = 8657407766505135934L;
 	
 	/**
+	 * 产生类型
+	 * 1:直送自动产生 2:供应商确认
+	 */
+	@NotNull(message = "产生类型不能为空！")
+	private Long generateType;
+	
+	/**
 	 * 门店编号
 	 */
 	@NotNull(message = "门店编号不能为空！")
@@ -36,6 +43,14 @@ public class PoStatusNumIdForConfirmPoBySupplyUpdateRequest extends AbstractRequ
 	 */
 	@NotNull(message = "采购单号不能为空！")
 	private String poNumId;
+
+	public Long getGenerateType() {
+		return generateType;
+	}
+
+	public void setGenerateType(Long generateType) {
+		this.generateType = generateType;
+	}
 
 	public String getPoNumId() {
 		return poNumId;
