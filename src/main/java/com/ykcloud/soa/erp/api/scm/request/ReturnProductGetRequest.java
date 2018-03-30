@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Range;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
@@ -18,6 +20,7 @@ public class ReturnProductGetRequest extends AbstractRequest {
 	private Long itemNumId; // 商品编号
 	@NotNull(message = "出货仓库编号不能为空")
 	private Long storageNumId;// 出货仓库编号
+	@Range(min=4L,max=6L)
 	@NotNull(message = "退货类别不能为空")
 	private Long typeNumId; // 退货类别 4：直送退供应商，5：直通退供应商，6：配送退仓
 
