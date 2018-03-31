@@ -1,10 +1,11 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
-import java.util.Date;
-import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+
+import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 /**
  * @ClassName StockCheckPlanAuditRequest
@@ -12,7 +13,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  * @author henry.wang
  * @date 2018年3月27日 下午1:40:24
  */
-public class StockCheckPlanAuditRequest extends AbstractRequest {
+public class StockCheckPlanAuditRequest extends AbstractUserSessionRequest {
 
     private static final long serialVersionUID = -3101956261800131597L;
 
