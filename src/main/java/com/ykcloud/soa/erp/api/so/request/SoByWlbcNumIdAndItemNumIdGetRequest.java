@@ -24,6 +24,8 @@ public class SoByWlbcNumIdAndItemNumIdGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "订单日期不能为空!")
 	private Date orderDate;
+	
+	private String confirmType;
 
 	public Long getWlbcNumId() {
 		return wlbcNumId;
@@ -56,5 +58,16 @@ public class SoByWlbcNumIdAndItemNumIdGetRequest extends AbstractRequest {
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
+
+	public String getConfirmType() {
+		return confirmType;
+	}
+
+	public void setConfirmType(String confirmType) {
+		this.confirmType = confirmType;
+	}
+
+	
+	
 	
 }

@@ -4,12 +4,14 @@ import com.ykcloud.soa.erp.api.so.request.ApplyHdrStatusForGenerateApprovalRetur
 import com.ykcloud.soa.erp.api.so.request.DirectWayDistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.GoodsByBarcodeGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SoConfirmTypeRequest;
 import com.ykcloud.soa.erp.api.so.request.SoPackingUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoWlbcAndSoBingingRequest;
 import com.ykcloud.soa.erp.api.so.response.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayDistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.GoodsByBarcodeGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SoConfirmTypeResponse;
 import com.ykcloud.soa.erp.api.so.response.SoPackingUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoWlbcAndSoBingingResponse;
 
@@ -29,6 +31,11 @@ public interface SoMaintanceService {
 	
 	public SoWlbcAndSoBingingResponse bingingWlbcAndSo(SoWlbcAndSoBingingRequest request);
 
+
     public ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse updateApplyHdrStatusForGenerateApprovalReturnOrder
             (ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest request);
+
+	//跟新订单出库类型
+	public SoConfirmTypeResponse updateSoConFirmType(SoConfirmTypeRequest request);
+
 }

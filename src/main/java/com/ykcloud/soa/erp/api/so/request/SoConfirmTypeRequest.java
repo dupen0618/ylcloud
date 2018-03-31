@@ -2,21 +2,19 @@ package com.ykcloud.soa.erp.api.so.request;
 
 import java.util.Date;
 
-import javax.validation.constraints.NotNull;
-
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class SoHdrGetRequest extends AbstractRequest {
+public class SoConfirmTypeRequest extends AbstractRequest {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 8147686661977300539L;
+	private static final long serialVersionUID = 6020213655003704003L;
 	
-	@NotNull(message="订单号不能为空！")
 	private Long soNumId;
 	
-	@NotNull(message="门店Id不能为空！")
+	private Long confirmType;
+	
 	private Long subUnitNumId;
 	
 	private Date orderDate;
@@ -27,6 +25,14 @@ public class SoHdrGetRequest extends AbstractRequest {
 
 	public void setSoNumId(Long soNumId) {
 		this.soNumId = soNumId;
+	}
+
+	public Long getConfirmType() {
+		return confirmType;
+	}
+
+	public void setConfirmType(Long confirmType) {
+		this.confirmType = confirmType;
 	}
 
 	public Long getSubUnitNumId() {

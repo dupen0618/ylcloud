@@ -11,6 +11,10 @@ public class SoHdrGetResponse extends MessagePack {
 	private Long storageNumId;
 	
 	private Long physicalNumId;
+	
+	private Long recStorageNumId;
+	
+	private Long recPhysicalNumId;
 
 	public Long getSoNumId() {
 		return soNumId;
@@ -42,6 +46,22 @@ public class SoHdrGetResponse extends MessagePack {
 
 	public void setPhysicalNumId(Long physicalNumId) {
 		this.physicalNumId = physicalNumId;
+	}
+
+	public Long getRecStorageNumId() {
+		return recStorageNumId;
+	}
+
+	public void setRecStorageNumId(Long recStorageNumId) {
+		this.recStorageNumId = recStorageNumId;
+	}
+
+	public Long getRecPhysicalNumId() {
+		return recPhysicalNumId;
+	}
+
+	public void setRecPhysicalNumId(Long recPhysicalNumId) {
+		this.recPhysicalNumId = recPhysicalNumId;
 	}
 	
 	

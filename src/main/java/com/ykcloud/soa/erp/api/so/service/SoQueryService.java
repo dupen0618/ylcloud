@@ -34,8 +34,12 @@ public interface SoQueryService {
     public DistributionOpenDistDeliveryQtyGetResponse getDistributionOpenDistDeliveryQty(DistributionOpenDistDeliveryQtyGetRequest request);
     //获得商品销售方面的信息
     public DemandSaleStatisticGetResponse getDemandSaleStatistic(DemandSaleStatisticGetRequest request);
-    
-  //通过波次号与商品号，查询订单信息
+   
+    /**
+     * 通过波次号与商品号，查询订单信息
+     * @param request
+     * @return
+     */
   	public SoByWlbcNumIdAndItemNumIdGetResponse getSoDtlByWlbcAndItemNumId(SoByWlbcNumIdAndItemNumIdGetRequest request);
 
   	//根据模糊订单号查询订单号

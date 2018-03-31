@@ -5,6 +5,12 @@ import java.util.List;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.so.model.SoDtl;
 
+/**
+ * 
+ * @author Dan
+ * @date 2018年3月30日
+ * @description
+ */
 public class SoByWlbcNumIdAndItemNumIdGetResponse extends MessagePack {
 	
 	//订单明细集合
