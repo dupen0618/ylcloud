@@ -1,4 +1,0 @@
-job1:
-  tags:
-    - erp-internal
-  script: "autobuild.sh"
