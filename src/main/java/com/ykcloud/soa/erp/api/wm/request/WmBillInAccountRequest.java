@@ -1,8 +1,10 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.ykcloud.soa.erp.api.wm.model.scmAccInvOwnStkTsc;
 
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 /**
  * @Author Hewei
@@ -18,6 +20,9 @@ public class WmBillInAccountRequest extends AbstractUserSessionRequest {
     String type_num;
     @NotNull(message = "入账类型不能为空！")
     String accountName;
+
+    public List<scmAccInvOwnStkTsc> scmAccInvOwnStkTscs;
+
 
     public String getReservedNo() {
         return reservedNo;
@@ -49,5 +54,13 @@ public class WmBillInAccountRequest extends AbstractUserSessionRequest {
 
     public void setAccountName(String accountName) {
         this.accountName = accountName;
+    }
+
+    public List<scmAccInvOwnStkTsc> getScmAccInvOwnStkTscs() {
+        return scmAccInvOwnStkTscs;
+    }
+
+    public void setScmAccInvOwnStkTscs(List<scmAccInvOwnStkTsc> scmAccInvOwnStkTscs) {
+        this.scmAccInvOwnStkTscs = scmAccInvOwnStkTscs;
     }
 }
