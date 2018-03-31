@@ -15,7 +15,6 @@ public class ReturnProductGetRequest extends AbstractRequest {
 	@NotNull(message = "门店编号不能为空")
 	private Long subUnitNumId; // 门店编号
 	
-	@NotNull(message = "供应商编号不能为空")
 	private Long supplyUnitNumId; //供应商编号
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
