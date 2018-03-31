@@ -49,7 +49,7 @@ public class ReturnProductGetResponse extends MessagePack {
 
 	private Double cost; // 价格
 
-	private Long costTaxRate;// 进项税率
+	private Double costTaxRate;// 进项税率
 
 	private Double conversionQty;// 件装数
 
@@ -237,11 +237,11 @@ public class ReturnProductGetResponse extends MessagePack {
 		this.cost = cost;
 	}
 
-	public Long getCostTaxRate() {
+	public Double getCostTaxRate() {
 		return costTaxRate;
 	}
 
-	public void setCostTaxRate(Long costTaxRate) {
+	public void setCostTaxRate(Double costTaxRate) {
 		this.costTaxRate = costTaxRate;
 	}
 
