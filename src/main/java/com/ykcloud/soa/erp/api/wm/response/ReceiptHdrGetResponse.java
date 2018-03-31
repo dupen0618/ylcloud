@@ -10,16 +10,14 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 public class ReceiptHdrGetResponse extends MessagePack {
 
 	private static final long serialVersionUID = 1L;
-	private String reserved_no;
-	public String getReserved_no() {
-		return reserved_no;
+	private String reservedNo;
+	public String getReservedNo() {
+		return reservedNo;
 	}
-	public void setReserved_no(String reserved_no) {
-		this.reserved_no = reserved_no;
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+	
 	
 
 }
