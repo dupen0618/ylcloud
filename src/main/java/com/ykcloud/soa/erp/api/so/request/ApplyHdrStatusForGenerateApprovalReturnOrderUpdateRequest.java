@@ -6,6 +6,8 @@ import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: fred.zhao
@@ -24,6 +26,12 @@ public class ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest extends A
 
     @NotNull(message = "退货申请单号不能为空！")
     private String applyNumId;
+
+    @NotNull(message = "申请单序号不能为空！")
+    private Map<String,List<String>> approvalMap;
+
+    @NotNull(message = "退货审批单号不能为空！")
+    private String approvalNumId;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -47,5 +55,21 @@ public class ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest extends A
 
     public void setApplyNumId(String applyNumId) {
         this.applyNumId = applyNumId;
+    }
+
+    public Map<String, List<String>> getApprovalMap() {
+        return approvalMap;
+    }
+
+    public void setApprovalMap(Map<String, List<String>> approvalMap) {
+        this.approvalMap = approvalMap;
+    }
+
+    public String getApprovalNumId() {
+        return approvalNumId;
+    }
+
+    public void setApprovalNumId(String approvalNumId) {
+        this.approvalNumId = approvalNumId;
     }
 }
