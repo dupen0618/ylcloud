@@ -9,5 +9,5 @@ import java.util.List;
  * @Date 2018/4/2 16:17
  */
 public interface WmExArcBalanceFuncStkWbaService {
-    List<ExArcBalanceFuncStkWba> getExArcBalanceFuncStkWba(String billTypeNum);
+    List<ExArcBalanceFuncStkWba> getExArcBalanceFuncStkWba(String billTypeNum,String typeNum);
 }
