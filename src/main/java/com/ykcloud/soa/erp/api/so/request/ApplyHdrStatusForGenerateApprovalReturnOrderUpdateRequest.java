@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.scm.request;
+package com.ykcloud.soa.erp.api.so.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
@@ -6,14 +6,14 @@ import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
-import java.util.List;
 
 /**
- * @author fred.zhao
- * 根据退货申请产生退货审批单request
+ * @Author: fred.zhao
+ * @Description: 更新退货申请单单头状态
+ * @Date: Created in 20:05:2018/3/30
  */
-public class ApprovalReturnOrderGenerateRequest extends AbstractSessionRequest {
-    private static final long serialVersionUID = -2951967915214062535L;
+public class ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest extends AbstractSessionRequest {
+    private static final long serialVersionUID = 7408670469942211437L;
 
     @NotNull(message = "门店编号不能为空!")
     private Long subUnitNumId;
