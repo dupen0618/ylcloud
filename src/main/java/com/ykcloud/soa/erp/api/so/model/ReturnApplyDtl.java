@@ -11,6 +11,8 @@ public class ReturnApplyDtl implements Serializable {
 
     private static final long serialVersionUID = -2305750048515780399L;
 
+    private String series;//序号
+
     private String  applyNumId;//申请单号
 
     private Long itemNumId;//商品编号
@@ -55,6 +57,14 @@ public class ReturnApplyDtl implements Serializable {
 
     private String returnDesc;//退货描述
 
+
+    public String getSeries() {
+        return series;
+    }
+
+    public void setSeries(String series) {
+        this.series = series;
+    }
 
     public String getApplyNumId() {
         return applyNumId;
