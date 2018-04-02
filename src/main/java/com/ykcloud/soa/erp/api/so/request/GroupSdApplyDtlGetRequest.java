@@ -7,12 +7,13 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
- * 查询退货审批单状态
- * @author fred.zhao
+ * @Author: fred.zhao
+ * @Description: 获取退货申请单分组数据request
+ * @Date: Created in 16:33:2018/3/28
  */
-public class StatusNumIdGetRequest  extends AbstractRequest{
+public class GroupSdApplyDtlGetRequest extends AbstractRequest{
 
-    private static final long serialVersionUID = -1766194600343205361L;
+    private static final long serialVersionUID = -9131758755934434571L;
 
     @NotNull(message = "门店编号不能为空!")
     private Long subUnitNumId;
