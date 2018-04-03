@@ -2,8 +2,10 @@ package com.ykcloud.soa.erp.api.scm.service;
 
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.CouponApprovalOrderGenerateRequest;
+import com.ykcloud.soa.erp.api.scm.request.DmsForAutoReplenishCalcateRequest;
 import com.ykcloud.soa.erp.api.scm.request.HandReplenishProductGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderGenerateResponse;
+import com.ykcloud.soa.erp.api.scm.response.DmsForAutoReplenishCalcateResponse;
 import com.ykcloud.soa.erp.api.scm.response.HandReplenishProductGetResponse;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyByAuthorConfirmRequest;
@@ -31,5 +33,6 @@ public interface ScmReplenishService {
 	public ReplenishApplyByAuthorConfirmResponse confirmReplenishApplyByAuthor(ReplenishApplyByAuthorConfirmRequest request);
 	//补货单主管确认
 	public ReplenishApplyAuditResponse auditReplenishApply(ReplenishApplyAuditRequest request);
-
+    //计算ndms和pdms日销售量
+	public DmsForAutoReplenishCalcateResponse calcateDmsForAutoReplenish(DmsForAutoReplenishCalcateRequest request);
 }

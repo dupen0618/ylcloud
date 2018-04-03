@@ -12,14 +12,21 @@ public class GiftQtyByGiftRelationGetRequest extends AbstractRequest {
 
 	@NotNull(message = "供应商编号不能为空！")
 	private Long supplyUnitNumId;
+
 	@NotNull(message = "商品编号不能为空！")
 	private Long itemNumId;
+
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "日期不能为空！")
-	private Date orderDtme;
-	@DecimalMin(value = "0", message = "数量应大于零!")
-	@NotNull(message = "数量不能为空！")
+	private Date orderDate;
+
 	private Double qty;
+
+	private Double packageQty;
+
+	@DecimalMin(value = "0", message = "件装数应大于零!")
+	@NotNull(message = "件装数不能为空！")
+	private Double conversionQty;
 
 	public Long getSupplyUnitNumId() {
 		return supplyUnitNumId;
@@ -37,12 +44,12 @@ public class GiftQtyByGiftRelationGetRequest extends AbstractRequest {
 		this.itemNumId = itemNumId;
 	}
 
-	public Date getOrderDtme() {
-		return orderDtme;
+	public Date getOrderDate() {
+		return orderDate;
 	}
 
-	public void setOrderDtme(Date orderDtme) {
-		this.orderDtme = orderDtme;
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
 	}
 
 	public Double getQty() {
@@ -52,4 +59,21 @@ public class GiftQtyByGiftRelationGetRequest extends AbstractRequest {
 	public void setQty(Double qty) {
 		this.qty = qty;
 	}
+
+	public Double getPackageQty() {
+		return packageQty;
+	}
+
+	public void setPackageQty(Double packageQty) {
+		this.packageQty = packageQty;
+	}
+
+	public Double getConversionQty() {
+		return conversionQty;
+	}
+
+	public void setConversionQty(Double conversionQty) {
+		this.conversionQty = conversionQty;
+	}
+
 }
