@@ -9,9 +9,9 @@ import com.ykcloud.soa.erp.api.wm.response.WmBillInAccountResponse;
  */
 public interface WmBillInAccountService {
     //可用库存
-    WmBillInAccountResponse ReceiptInAccountTSCService(WmBillInAccountRequest wmBillInAccountRequest);
+    WmBillInAccountResponse setReceiptInAccountTSCService(WmBillInAccountRequest wmBillInAccountRequest);
 
     //物理仓
-    WmBillInAccountResponse ReceiptInAccountPhysicalWBAService(WmBillInAccountRequest wmBillInAccountRequest);
+    WmBillInAccountResponse setReceiptInAccountPhysicalWBAService(WmBillInAccountRequest wmBillInAccountRequest);
 
 }
