@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.fi;
+package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.model.ExArcAccountFieldconfig;
 
