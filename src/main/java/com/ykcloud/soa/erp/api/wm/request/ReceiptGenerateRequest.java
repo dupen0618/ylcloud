@@ -44,7 +44,7 @@ public class ReceiptGenerateRequest extends AbstractUserSessionRequest {
 	/**
 	 * 供应商确认送货日期,generate_type为2时必须传入
 	 */
-	private Date confirmDeliveryDate;
+	private Date supConfirmDate;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -78,12 +78,14 @@ public class ReceiptGenerateRequest extends AbstractUserSessionRequest {
 		this.generateType = generateType;
 	}
 
-	public Date getConfirmDeliveryDate() {
-		return confirmDeliveryDate;
+	public Date getSupConfirmDate() {
+		return supConfirmDate;
 	}
 
-	public void setConfirmDeliveryDate(Date confirmDeliveryDate) {
-		this.confirmDeliveryDate = confirmDeliveryDate;
+	public void setSupConfirmDate(Date supConfirmDate) {
+		this.supConfirmDate = supConfirmDate;
 	}
+
+
 
 }
