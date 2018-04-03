@@ -1,8 +1,0 @@
-.idea
-*.iml
-out
-gen
-/target/
-.project
-.classpath
-.settings/

@@ -8,14 +8,10 @@ import com.ykcloud.soa.erp.api.wm.response.WmBillInAccountResponse;
  * @Date 2018/3/26 18:51
  */
 public interface WmBillInAccountService {
-    //库存流水
+    //可用库存
     WmBillInAccountResponse ReceiptInAccountTSCService(WmBillInAccountRequest wmBillInAccountRequest);
-    //库存总账
-    WmBillInAccountResponse ReceiptInAccountSTKService(WmBillInAccountRequest wmBillInAccountRequest);
-    //物理仓流水
+
+    //物理仓
     WmBillInAccountResponse ReceiptInAccountPhysicalWBAService(WmBillInAccountRequest wmBillInAccountRequest);
-    //物理仓日进销存
-    WmBillInAccountResponse ReceiptInAccountPhysicalDailyGAService(WmBillInAccountRequest wmBillInAccountRequest);
-    //物理仓月进销存
-    WmBillInAccountResponse ReceiptInAccountPhysicalMonthGAService(WmBillInAccountRequest wmBillInAccountRequest);
+
 }
