@@ -16,6 +16,18 @@ public class ReceiptTrayHdrCreateRequest extends AbstractUserSessionRequest {
 	
 	//托盘实物标签号
 	private String traySerlnoLabel;
+	
+	//门店编号
+	@NotNull(message = "门店编号不能为空！")
+	private Long subUnitNumId;
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
 
 	public String getReservedNo() {
 		return reservedNo;

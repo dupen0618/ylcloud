@@ -1,7 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.wm.model.BasicProduct;
+import com.ykcloud.soa.erp.api.wm.model.Product;
+
 
 /**
 *
@@ -12,17 +13,17 @@ public class ReceiptDtlUpdateResponse extends MessagePack {
 
 	private static final long serialVersionUID = 3164909866702065868L;
 	//private Json product;
-	private BasicProduct product; //商品对象Json
+	private Product product; //商品对象Json
 	private Double qty;////托盘应商品已收数量
 	private Double trayConfirmQty;//托盘已收数量
 	private Double receiptProductQty;//订单商品应收数量
 	private Double receiptProductConfirmQty;//订单商品已收数量
 	private Double receiptQty;//订单应收数量
 	private Double receiptConfirmQty;//订单已收数量
-	public BasicProduct getProduct() {
+	public Product getProduct() {
 		return product;
 	}
-	public void setProduct(BasicProduct product) {
+	public void setProduct(Product product) {
 		this.product = product;
 	}
 	public Double getQty() {
