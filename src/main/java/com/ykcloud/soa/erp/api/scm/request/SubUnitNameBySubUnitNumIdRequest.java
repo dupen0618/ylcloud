@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.so.request;
+package com.ykcloud.soa.erp.api.scm.request;
 
 import java.util.Date;
 
@@ -6,28 +6,18 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class SoHdrGetRequest extends AbstractRequest {
+public class SubUnitNameBySubUnitNumIdRequest extends AbstractRequest {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 8147686661977300539L;
+	private static final long serialVersionUID = -7681111633108316052L;
 	
-	@NotNull(message="订单号不能为空！")
-	private Long soNumId;
-	
-	@NotNull(message="门店Id不能为空！")
+	@NotNull(message="门店编号不能为空！")
 	private Long subUnitNumId;
 	
+	@NotNull(message="orderDate不能为空！")
 	private Date orderDate;
-
-	public Long getSoNumId() {
-		return soNumId;
-	}
-
-	public void setSoNumId(Long soNumId) {
-		this.soNumId = soNumId;
-	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
