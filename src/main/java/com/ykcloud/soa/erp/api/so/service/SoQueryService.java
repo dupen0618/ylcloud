@@ -56,10 +56,6 @@ public interface SoQueryService {
      */
   	public SoBySoNumIdAndItemNumIdGetResponse getSoDtlBySoNumIdAndItemNumId(SoBySoNumIdAndItemNumIdGetRequest request);
 
-  	
-
-  	//用订单好查询订单HDR
-  	public SoHdrGetBySoNumIdResponse getSoHdrBySoNumId(SoHdrGetBySoNumIdRequest request);
     //获取退货申请单分组数据
     public GroupSdApplyDtlGetResponse getReturnApplyGroupList(GroupSdApplyDtlGetRequest request);
     //已审未退金额
