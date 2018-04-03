@@ -6,6 +6,7 @@ import com.ykcloud.soa.erp.api.so.request.DistributionOpenDistDeliveryQtyGetRequ
 import com.ykcloud.soa.erp.api.so.request.GroupSdApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OpenBranchDeliveryQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlGetRequest;
+import com.ykcloud.soa.erp.api.so.request.ShopProductDailySellQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoByWlbcNumIdAndItemNumIdGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetBySoNumIdRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
@@ -16,6 +17,7 @@ import com.ykcloud.soa.erp.api.so.response.DistributionOpenDistDeliveryQtyGetRes
 import com.ykcloud.soa.erp.api.so.response.GroupSdApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OpenBranchDeliveryQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlGetResponse;
+import com.ykcloud.soa.erp.api.so.response.ShopProductDailySellQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoByWlbcNumIdAndItemNumIdGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetBySoNumIdResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
@@ -51,4 +53,6 @@ public interface SoQueryService {
     * @Date: 2018/3/30 
     */ 
     ReturnApplyDtlGetResponse getReturnApplyDtlList(ReturnApplyDtlGetRequest request);
+    //日销售门店商品销售数量及促销销售数量统计
+    public ShopProductDailySellQtyGetResponse getShopProductDailySellQty(ShopProductDailySellQtyGetRequest request);
 }
