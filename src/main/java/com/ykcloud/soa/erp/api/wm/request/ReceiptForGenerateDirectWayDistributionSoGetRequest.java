@@ -6,7 +6,6 @@ import java.util.List;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
-import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Range;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -27,7 +26,7 @@ public class ReceiptForGenerateDirectWayDistributionSoGetRequest extends Abstrac
 	@NotBlank(message = "验收单编号不能为空！")
 	private String receiptNo;
 
-	@NotEmpty(message = "产生类别不能为空！")
+	@NotNull(message = "产生类别不能为空！")
 	@Range(min=1,max=2,message="产生类别错误！应为1:直通供应商确认或2:实际收货后部分商品数量调整")
 	@ApiField(description="1:直通供应商确认	2:实际收货后部分商品数量调整")
 	private Long generateType;
