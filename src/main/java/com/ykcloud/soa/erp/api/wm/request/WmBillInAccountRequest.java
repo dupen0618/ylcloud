@@ -15,9 +15,9 @@ public class WmBillInAccountRequest extends AbstractUserSessionRequest {
     @NotNull(message = "订单编号不能为空！")
     String reservedNo;
     @NotNull(message = "业务类型编号不能为空！")
-    String bill_type_num;
+    String billTypeNum;
     @NotNull(message = "单据类型不能为空！")
-    String type_num;
+    String typeNum;
     @NotNull(message = "入账类型不能为空！")
     String accountName;
 
@@ -32,20 +32,20 @@ public class WmBillInAccountRequest extends AbstractUserSessionRequest {
         this.reservedNo = reservedNo;
     }
 
-    public String getBill_type_num() {
-        return bill_type_num;
+    public String getBillTypeNum() {
+        return billTypeNum;
     }
 
-    public void setBill_type_num(String bill_type_num) {
-        this.bill_type_num = bill_type_num;
+    public void setBillTypeNum(String billTypeNum) {
+        this.billTypeNum = billTypeNum;
     }
 
-    public String getType_num() {
-        return type_num;
+    public String getTypeNum() {
+        return typeNum;
     }
 
-    public void setType_num(String type_num) {
-        this.type_num = type_num;
+    public void setTypeNum(String typeNum) {
+        this.typeNum = typeNum;
     }
 
     public String getAccountName() {
