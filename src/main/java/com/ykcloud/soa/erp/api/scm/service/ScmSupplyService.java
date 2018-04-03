@@ -2,8 +2,10 @@ package com.ykcloud.soa.erp.api.scm.service;
 
 import com.ykcloud.soa.erp.api.scm.request.DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.DirectWayReplenishweeklyDayFlagGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.SubUnitNameBySubUnitNumIdRequest;
 import com.ykcloud.soa.erp.api.scm.response.DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.DirectWayReplenishweeklyDayFlagGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.SubUnitNameBySubUnitNumIdRespose;
 
 public interface ScmSupplyService {
   
@@ -14,5 +16,5 @@ public interface ScmSupplyService {
   	public DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetResponse  getDirectDeliveryReplenishweeklyDayFlagAndEffectiveDay(
   			DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetRequest request);
 
-  	
+  	public SubUnitNameBySubUnitNumIdRespose GetSubUnitNameBuSubUnitNumId(SubUnitNameBySubUnitNumIdRequest request);
 }

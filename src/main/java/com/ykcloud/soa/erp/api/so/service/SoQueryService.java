@@ -7,9 +7,11 @@ import com.ykcloud.soa.erp.api.so.request.GroupSdApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OpenBranchDeliveryQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopProductDailySellQtyGetRequest;
-import com.ykcloud.soa.erp.api.so.request.SoByWlbcNumIdAndItemNumIdGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SoBySoNumIdAndItemNumIdGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetBySoNumIdRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SoNumIdOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SupplyToReturnAmoutGetRequest;
 import com.ykcloud.soa.erp.api.so.response.DemandSaleStatisticGetResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayOpenDistDeliveryQtyGetResponse;
@@ -18,9 +20,11 @@ import com.ykcloud.soa.erp.api.so.response.GroupSdApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OpenBranchDeliveryQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopProductDailySellQtyGetResponse;
-import com.ykcloud.soa.erp.api.so.response.SoByWlbcNumIdAndItemNumIdGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SoBySoNumIdAndItemNumIdGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetBySoNumIdResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SoNumIdOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyToReturnAmoutGetResponse;
 
 
@@ -35,16 +39,25 @@ public interface SoQueryService {
     //获得商品销售方面的信息
     public DemandSaleStatisticGetResponse getDemandSaleStatistic(DemandSaleStatisticGetRequest request);
    
-    /**
-     * 通过波次号与商品号，查询订单信息
+    
+    
+  //通过WLbc号与商品ID获取so_dtl随机一条，一半这边用limit
+  	public SoNumIdOneResponse getSoNumIdOne(SoNumIdOneRequest request);
+  	
+  //通过soNumId,itemNumId获取该订单明细的需求数量已经已播数量
+  	public SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse getSoDtlQtyAndPackingQtyBySoNumIdAndItemId(SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest request);
+  //根据订单号查询订单号头信息
+  	public SoHdrGetResponse getSoHdrBySoNumId(SoHdrGetRequest request);
+  	
+  	/**
+     * 通过订单号与商品号，查询订单明细
      * @param request
      * @return
      */
-  	public SoByWlbcNumIdAndItemNumIdGetResponse getSoDtlByWlbcAndItemNumId(SoByWlbcNumIdAndItemNumIdGetRequest request);
+  	public SoBySoNumIdAndItemNumIdGetResponse getSoDtlBySoNumIdAndItemNumId(SoBySoNumIdAndItemNumIdGetRequest request);
 
-  	//根据模糊订单号查询订单号
-  	public SoHdrGetResponse getSoHdrBySoNumId(SoHdrGetRequest request);
   	
+
   	//用订单好查询订单HDR
   	public SoHdrGetBySoNumIdResponse getSoHdrBySoNumId(SoHdrGetBySoNumIdRequest request);
     //获取退货申请单分组数据
@@ -59,4 +72,5 @@ public interface SoQueryService {
     ReturnApplyDtlGetResponse getReturnApplyDtlList(ReturnApplyDtlGetRequest request);
     //日销售门店商品销售数量及促销销售数量统计
     public ShopProductDailySellQtyGetResponse getShopProductDailySellQty(ShopProductDailySellQtyGetRequest request);
+
 }

@@ -11,7 +11,7 @@ import com.ykcloud.soa.erp.api.so.model.SoDtl;
  * @date 2018年3月30日
  * @description
  */
-public class SoByWlbcNumIdAndItemNumIdGetResponse extends MessagePack {
+public class SoBySoNumIdAndItemNumIdGetResponse extends MessagePack {
 	
 	//订单明细集合
 	private List<SoDtl> soDtlList;
