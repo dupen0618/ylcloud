@@ -3,6 +3,8 @@ package com.ykcloud.soa.erp.api.wm.request;
 import java.util.Date;
 import java.util.List;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -27,7 +29,9 @@ public class ReceiptForGenerateDirectWayDistributionSoGetRequest extends Abstrac
 	private String receiptNo;
 
 	@NotNull(message = "产生类别不能为空！")
-	@Range(min=1,max=2,message="产生类别错误！应为1:直通供应商确认或2:实际收货后部分商品数量调整")
+	//@Range(min=1,max=3,message="产生类别错误！应为1:直通供应商确认或2:实际收货后部分商品数量调整")
+	@Min(1)
+	@Max(2)
 	@ApiField(description="1:直通供应商确认	2:实际收货后部分商品数量调整")
 	private Long generateType;
 
