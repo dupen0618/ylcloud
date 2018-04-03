@@ -2,20 +2,18 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
-import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
-
-import javax.validation.constraints.NotNull;
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import java.util.Date;
+import javax.validation.constraints.NotNull;
 
 /**
- * @ClassName StockCheckPlanAuditRequest
- * @Description 盘点计划审核的入参
- * @author henry.wang
- * @date 2018年3月27日 下午1:40:24
- */
-public class StockCheckPlanAuditRequest extends AbstractUserSessionRequest {
+ * @Description: 查询盘点计划单表头的入参
+ * @author: henry.wang
+ * @date: 2018/3/31 17:12
+ **/
+public class StockTakingTaskHDRGetRequest extends AbstractRequest {
 
-    private static final long serialVersionUID = -3101956261800131597L;
+    private static final long serialVersionUID = 1L;
 
     @ApiField(description = "门店编号")
     @NotNull(message = "门店编号不能为空！")
