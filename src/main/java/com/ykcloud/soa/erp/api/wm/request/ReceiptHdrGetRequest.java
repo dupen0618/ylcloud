@@ -1,5 +1,9 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
@@ -10,17 +14,21 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 public class ReceiptHdrGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 1L;
+	@NotNull(message="门店编号布恩那个为空!")
+	private Long subUnitNUmId;//门店编号
+	@NotEmpty(message="验收单号不能为空!")
 	private String reservedNo;//验收单号后6位
-	/**
-	 * @return the reservedNo
-	 */
 	public String getReservedNo() {
 		return reservedNo;
 	}
-	/**
-	 * @param reservedNo the reservedNo to set
-	 */
 	public void setReservedNo(String reservedNo) {
 		this.reservedNo = reservedNo;
 	}
+	public Long getSubUnitNUmId() {
+		return subUnitNUmId;
+	}
+	public void setSubUnitNUmId(Long subUnitNUmId) {
+		this.subUnitNUmId = subUnitNUmId;
+	}
+	
 }

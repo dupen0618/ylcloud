@@ -33,6 +33,10 @@ public class ReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 	
 	@ApiField(description = "更新正常品/赠品标识")
 	private Long plmSign=2L;
+	
+	@ApiField(description = "门店编号")
+	@NotNull(message="门店编号不能为空!")
+	private Long subUnitNumId;
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -74,9 +78,15 @@ public class ReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 		this.plmSign = plmSign;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
 	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
+	
+	
 	
 	
 }

@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.DirectReceiptUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
@@ -11,6 +12,7 @@ import com.ykcloud.soa.erp.api.wm.request.ReceiptProduceDateUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
@@ -66,8 +68,8 @@ public interface WmReceiptService {
 	public ReceiptDtlUpdateResponse updateReceiptDtl(ReceiptDtlUpdateRequest request);
 	//一键收货
 	public DirectReceiptUpdateResponse updateDirectReceipt(DirectReceiptUpdateRequest request);
-
-
+	//收货完成
+	public ReceiptFinishRsponse finishReceipt(ReceiptFinishRequest request);
 
     //取门店有库存最高批次价格，用于直送、直通供应商退货
 	public ShopHaveInventoryMaxBatchPriceGetResponse getShopHaveInventoryMaxBatchPrice(ShopHaveInventoryMaxBatchPriceGetRequest request);
