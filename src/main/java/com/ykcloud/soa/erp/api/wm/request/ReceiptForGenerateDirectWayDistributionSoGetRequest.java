@@ -30,8 +30,6 @@ public class ReceiptForGenerateDirectWayDistributionSoGetRequest extends Abstrac
 
 	@NotNull(message = "产生类别不能为空！")
 	//@Range(min=1,max=3,message="产生类别错误！应为1:直通供应商确认或2:实际收货后部分商品数量调整")
-	@Min(1)
-	@Max(2)
 	@ApiField(description="1:直通供应商确认	2:实际收货后部分商品数量调整")
 	private Long generateType;
 
