@@ -16,5 +16,4 @@ public interface ScmSupplyService {
   	public DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetResponse  getDirectDeliveryReplenishweeklyDayFlagAndEffectiveDay(
   			DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetRequest request);
 
-  	public SubUnitNameBySubUnitNumIdRespose GetSubUnitNameBuSubUnitNumId(SubUnitNameBySubUnitNumIdRequest request);
 }
