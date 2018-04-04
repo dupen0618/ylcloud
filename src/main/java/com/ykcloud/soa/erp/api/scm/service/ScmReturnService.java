@@ -3,10 +3,12 @@ package com.ykcloud.soa.erp.api.scm.service;
 
 
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderByFinanceAutoAuditRequest;
+import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderByFinanceHandAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.DistributionApprovalReturnOrderByBuyerAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.SupplyApprovalReturnOrderByBuyerAuditRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByFinanceAutoAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByFinanceHandAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.request.ReturnProductGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.DistributionApprovalReturnOrderByBuyerAuditResponse;
@@ -40,5 +42,12 @@ public interface ScmReturnService {
     * @Date: 2018/4/3 
     */ 
 	public ApprovalReturnOrderByFinanceAutoAuditResponse auditApprovalReturnOrderByFinanceAuto(ApprovalReturnOrderByFinanceAutoAuditRequest request);
+
+	/** 
+	* @Description: 退供应商财务人工审核
+	* @Author: fred.zhao
+	* @Date: 2018/4/4 
+	*/ 
+	public ApprovalReturnOrderByFinanceHandAuditResponse auditApprovalReturnOrderByFinanceHand(ApprovalReturnOrderByFinanceHandAuditRequest request);
 
 }
