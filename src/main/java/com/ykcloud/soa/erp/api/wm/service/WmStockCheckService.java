@@ -1,8 +1,10 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckPlanAuditRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
+import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeStockCheckScanResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckPlanAuditResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingTaskHDRGetResponse;
@@ -37,4 +39,13 @@ public interface WmStockCheckService {
      * @return
      */
     StockTakingConHDRGetResponse getStockTakingConHDR(StockTakingConHDRGetRequest request);
+
+    /**
+     * 扫码商品条码盘点
+     *
+     * @param request
+     * @return
+     */
+    ItemBarcodeStockCheckScanResponse scanItemBarcodeStockCheck(
+        ItemBarcodeStockCheckScanRequest request);
 }
