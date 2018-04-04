@@ -2,16 +2,16 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import java.util.Date;
 import javax.validation.constraints.NotNull;
 
 /**
- * @Description: 查询盘点装箱单表头的入参
+ * @Description: 扫码商品条码盘点的入参
  * @author: henry.wang
- * @date: 2018/4/2 9:33
+ * @date: 2018/4/4 10:06
  **/
-public class StockTakingConHDRGetRequest extends AbstractRequest {
+public class ItemBarcodeStockCheckScanRequest extends AbstractUserSessionRequest {
 
     private static final long serialVersionUID = 1L;
 
@@ -21,7 +21,7 @@ public class StockTakingConHDRGetRequest extends AbstractRequest {
 
     @ApiField(description = "计划日期")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date inventorydate;
+    private Date inventoryDate;
 
     @ApiField(description = "盘点计划单号")
     @NotNull(message = "盘点计划单号不能为空！")
@@ -31,9 +31,9 @@ public class StockTakingConHDRGetRequest extends AbstractRequest {
     @NotNull(message = "货架号不能为空！")
     private String trayLabserlno;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
+    @ApiField(description = "商品条码")
+    @NotNull(message = "商品条码不能为空！")
+    private String barcode;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -43,12 +43,12 @@ public class StockTakingConHDRGetRequest extends AbstractRequest {
         this.subUnitNumId = subUnitNumId;
     }
 
-    public Date getInventorydate() {
-        return inventorydate;
+    public Date getInventoryDate() {
+        return inventoryDate;
     }
 
-    public void setInventorydate(Date inventorydate) {
-        this.inventorydate = inventorydate;
+    public void setInventoryDate(Date inventoryDate) {
+        this.inventoryDate = inventoryDate;
     }
 
     public String getReservedNo() {
@@ -65,5 +65,13 @@ public class StockTakingConHDRGetRequest extends AbstractRequest {
 
     public void setTrayLabserlno(String trayLabserlno) {
         this.trayLabserlno = trayLabserlno;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
     }
 }
