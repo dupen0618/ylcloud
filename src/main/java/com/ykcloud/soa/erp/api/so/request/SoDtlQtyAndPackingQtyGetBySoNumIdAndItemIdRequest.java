@@ -16,7 +16,7 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 	@NotNull(message="订单ID不能为空！")
 	private Long soNumId;
 	
-	@NotNull(message="商品ID不能为空！")
+	//@NotNull(message="商品ID不能为空！")
 	private Long itemNumId;
 	
 	@NotNull(message="门店ID不能为空！")
@@ -24,6 +24,9 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 	
 	@NotNull(message="orderDate不能为空！")
 	private Date orderDate;
+	
+	//sql是否要带itemNumId
+	private Long itemFlag;
 
 	public Long getSoNumId() {
 		return soNumId;
@@ -56,6 +59,15 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
+
+	public Long getItemFlag() {
+		return itemFlag;
+	}
+
+	public void setItemFlag(Long itemFlag) {
+		this.itemFlag = itemFlag;
+	}
+	
 	
 
 }

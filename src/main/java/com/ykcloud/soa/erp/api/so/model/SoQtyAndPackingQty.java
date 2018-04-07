@@ -2,23 +2,24 @@ package com.ykcloud.soa.erp.api.so.model;
 
 public class SoQtyAndPackingQty {
 	
-	private Long qty;
+	private Double lockQty;
 	
-	private Long packingQty;
+	private Double packingQty;
 
-	public Long getQty() {
-		return qty;
+
+	public Double getLockQty() {
+		return lockQty;
 	}
 
-	public void setQty(Long qty) {
-		this.qty = qty;
+	public void setLockQty(Double lockQty) {
+		this.lockQty = lockQty;
 	}
 
-	public Long getPackingQty() {
+	public Double getPackingQty() {
 		return packingQty;
 	}
 
-	public void setPackingQty(Long packingQty) {
+	public void setPackingQty(Double packingQty) {
 		this.packingQty = packingQty;
 	}
 

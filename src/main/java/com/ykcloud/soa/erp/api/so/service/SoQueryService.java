@@ -9,7 +9,6 @@ import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopProductDailySellQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoBySoNumIdAndItemNumIdGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest;
-import com.ykcloud.soa.erp.api.so.request.SoHdrGetBySoNumIdRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoNumIdOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SupplyToReturnAmoutGetRequest;
@@ -22,7 +21,6 @@ import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopProductDailySellQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoBySoNumIdAndItemNumIdGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse;
-import com.ykcloud.soa.erp.api.so.response.SoHdrGetBySoNumIdResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoNumIdOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyToReturnAmoutGetResponse;
@@ -44,10 +42,12 @@ public interface SoQueryService {
   //通过WLbc号与商品ID获取so_dtl随机一条，一半这边用limit
   	public SoNumIdOneResponse getSoNumIdOne(SoNumIdOneRequest request);
   	
-  //通过soNumId,itemNumId获取该订单明细的需求数量已经已播数量
+  //通过soNumId,itemNumId获取该订单明细的需求数量已经已播数量(可以不传itemNumId)
   	public SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse getSoDtlQtyAndPackingQtyBySoNumIdAndItemId(SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest request);
   //根据订单号查询订单号头信息
   	public SoHdrGetResponse getSoHdrBySoNumId(SoHdrGetRequest request);
+  	
+  	
   	
   	/**
      * 通过订单号与商品号，查询订单明细
