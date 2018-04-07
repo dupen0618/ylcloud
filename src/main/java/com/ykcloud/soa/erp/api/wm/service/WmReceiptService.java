@@ -4,22 +4,24 @@ import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
-import com.ykcloud.soa.erp.api.wm.request.ShopHaveInventoryMaxBatchPriceGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptProduceDateUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.ShopHaveInventoryMaxBatchPriceGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
-import com.ykcloud.soa.erp.api.wm.response.ShopHaveInventoryMaxBatchPriceGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ShopLastBatchPriceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptProduceDateUpdateResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.ShopHaveInventoryMaxBatchPriceGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.ShopLastBatchPriceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse;
 
 public interface WmReceiptService {
@@ -57,21 +59,18 @@ public interface WmReceiptService {
 	public ShopLastBatchPriceGetResponse getShopLastBatchPrice(ShopLastBatchPriceGetRequest request);
 
 	//以下byhank
-	// 查询验收单6位模糊查询，判断订单状态是否为发货方已确认。
+	// 查询验收单   (6位模糊查询，直通到仓需判断订单状态是否为发货方已确认)
 	public ReceiptHdrGetResponse getReceiptHdr(ReceiptHdrGetRequest request);
 
-
-	// 过期控制 证照控制
+	//过期控制 证照控制
 	public ReceiptProduceDateUpdateResponse updateReceiptProduceDate(ReceiptProduceDateUpdateRequest request);
-
 	// 更新收货数量
 	public ReceiptDtlUpdateResponse updateReceiptDtl(ReceiptDtlUpdateRequest request);
-	//一键收货
+	//一键收货 暂时弃用
 	public DirectReceiptUpdateResponse updateDirectReceipt(DirectReceiptUpdateRequest request);
 	//收货完成
 	public ReceiptFinishRsponse finishReceipt(ReceiptFinishRequest request);
 
     //取门店有库存最高批次价格，用于直送、直通供应商退货
 	public ShopHaveInventoryMaxBatchPriceGetResponse getShopHaveInventoryMaxBatchPrice(ShopHaveInventoryMaxBatchPriceGetRequest request);
-
 }

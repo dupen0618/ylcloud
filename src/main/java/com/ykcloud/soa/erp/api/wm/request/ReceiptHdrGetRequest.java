@@ -4,17 +4,17 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
 *
 @author hank.zhu
 @date 2018年3月12日 下午8:19:28 新建
 **/
-public class ReceiptHdrGetRequest extends AbstractRequest {
+public class ReceiptHdrGetRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1L;
-	@NotNull(message="门店编号布恩那个为空!")
+	@NotNull(message="门店编号不能为空!")
 	private Long subUnitNUmId;//门店编号
 	@NotEmpty(message="验收单号不能为空!")
 	private String reservedNo;//验收单号后6位
