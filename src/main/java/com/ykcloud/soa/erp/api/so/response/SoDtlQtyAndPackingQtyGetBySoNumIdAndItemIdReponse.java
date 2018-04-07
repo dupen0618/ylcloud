@@ -4,25 +4,27 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse extends MessagePack {
 
-	private Long qty;
+	private Double qty;
 	
-	private Long packingQty;
+	private Double packingQty;
 
-	public Long getQty() {
+	public Double getQty() {
 		return qty;
 	}
 
-	public void setQty(Long qty) {
+	public void setQty(Double qty) {
 		this.qty = qty;
 	}
 
-	public Long getPackingQty() {
+	public Double getPackingQty() {
 		return packingQty;
 	}
 
-	public void setPackingQty(Long packingQty) {
+	public void setPackingQty(Double packingQty) {
 		this.packingQty = packingQty;
 	}
+
+	
 	
 	
 }
