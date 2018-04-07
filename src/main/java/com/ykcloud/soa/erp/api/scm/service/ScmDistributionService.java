@@ -4,10 +4,12 @@ package com.ykcloud.soa.erp.api.scm.service;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalHdrForGenerateDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.DistributionApprovalOrderByBuyerAuditRequest;
+import com.ykcloud.soa.erp.api.scm.request.DistributionProductInfoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.InventoryForDistributionApprovalLockRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalHdrForGenerateDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.DistributionApprovalOrderByBuyerAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.DistributionProductInfoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.InventoryForDistributionApprovalLockResponse;
 
 public interface ScmDistributionService {
@@ -25,6 +27,10 @@ public interface ScmDistributionService {
 			ApprovalDtlsForGenerateDistributionSoGetRequest request);
 
     public DistributionApprovalOrderByBuyerAuditResponse auditDistributionApprovalOrderByBuyer(DistributionApprovalOrderByBuyerAuditRequest request);
+
+    
+	//获取配送商品属性
+	public DistributionProductInfoGetResponse getDistributionProductInfo(DistributionProductInfoGetRequest request);
 
 }
 
