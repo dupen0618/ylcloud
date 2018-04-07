@@ -1,11 +1,14 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.request.ContainerFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
+import com.ykcloud.soa.erp.api.wm.request.ItemQtyStockCheckInputRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckPlanAuditRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
-import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeStockCheckScanResponse;
+import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckPlanAuditResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockCheckResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingTaskHDRGetResponse;
 
@@ -46,6 +49,23 @@ public interface WmStockCheckService {
      * @param request
      * @return
      */
-    ItemBarcodeStockCheckScanResponse scanItemBarcodeStockCheck(
+    StockCheckResponse scanItemBarcodeStockCheck(
         ItemBarcodeStockCheckScanRequest request);
+
+    /**
+     * 输入商品数量盘点
+     *
+     * @param request
+     * @return
+     */
+    StockCheckResponse inputItemQtyStockCheck(
+        ItemQtyStockCheckInputRequest request);
+
+    /**
+     * 箱盘点完成
+     *
+     * @param request
+     * @return
+     */
+    ContainerFinishResponse finishContainer(ContainerFinishRequest request);
 }
