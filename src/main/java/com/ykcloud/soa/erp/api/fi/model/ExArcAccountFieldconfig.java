@@ -1,12 +1,14 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @Author Hewei
  * @Date 2018/3/27 17:31
  */
-public class ExArcAccountFieldconfig {
+public class ExArcAccountFieldconfig implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int series;
     private int tenant_num_id;
     private String AccountName;
