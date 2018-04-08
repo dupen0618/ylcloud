@@ -28,6 +28,10 @@ public class DmsForAutoReplenishCalcateRequest extends AbstractRequest {
 	private Double nsf; // 日常平滑系数
 
 	private Double psf; // 促销平滑系数
+	
+	private Double ndms; //正常日销量
+	
+	private Double pdms; //促销日销量
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -93,4 +97,20 @@ public class DmsForAutoReplenishCalcateRequest extends AbstractRequest {
 		this.psf = psf;
 	}
 
+	public Double getNdms() {
+		return ndms;
+	}
+
+	public void setNdms(Double ndms) {
+		this.ndms = ndms;
+	}
+
+	public Double getPdms() {
+		return pdms;
+	}
+
+	public void setPdms(Double pdms) {
+		this.pdms = pdms;
+	}
+    
 }
