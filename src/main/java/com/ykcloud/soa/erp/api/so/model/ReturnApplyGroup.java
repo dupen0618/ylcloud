@@ -18,6 +18,17 @@ public class ReturnApplyGroup implements Serializable{
 
     private Long logisticsType;//送货方式
 
+    private Long purchaseTypeNumId;//采购途径
+
+
+    public Long getPurchaseTypeNumId() {
+        return purchaseTypeNumId;
+    }
+
+    public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
+        this.purchaseTypeNumId = purchaseTypeNumId;
+    }
+
     public Long getSettlementType() {
         return settlementType;
     }

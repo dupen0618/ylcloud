@@ -1,32 +1,32 @@
-package com.ykcloud.soa.erp.api.scm.request;
+package com.ykcloud.soa.erp.api.so.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
- * @author zhaokang
- * 团购补货申请单生成订货审批单入参类
+ * @Author: fred.zhao
+ * @Description: 退货申请主管审核
+ * @Date: Created in 11:09:2018/4/7
  */
-public class CouponApprovalOrderGenerateRequest extends AbstractSessionRequest{
-    private static final long serialVersionUID = -1945009738807635650L;
+public class ReturnApplyAuditRequest  extends AbstractSessionRequest{
+    private static final long serialVersionUID = 4722285466425907379L;
 
-    @NotNull(message = "门店编号不能为空")
+    @NotNull(message = "订货门店编号不能为空！")
     private Long subUnitNumId;
 
-    @NotNull
+    @NotNull(message = "订单日期不能为空！")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date orderDate;//日期，格式：yyyy-mm-dd
+    private Date orderDate;
 
-    @NotNull
-    private Long onlyFdc;//1:只集生鲜商品(16:00集生鲜商品用,0:不限定 1：限定生鲜)
-
-    @NotNull(message = "补货申请单号不能为空")
+    @NotNull(message = "审批单号不能为空")
     private String applyNumId;
 
+
+    @NotNull(message = "审核标识不能为空！")
+    private Long autoAuditSign;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -44,13 +44,6 @@ public class CouponApprovalOrderGenerateRequest extends AbstractSessionRequest{
         this.orderDate = orderDate;
     }
 
-    public Long getOnlyFdc() {
-        return onlyFdc;
-    }
-
-    public void setOnlyFdc(Long onlyFdc) {
-        this.onlyFdc = onlyFdc;
-    }
 
     public String getApplyNumId() {
         return applyNumId;
@@ -58,5 +51,13 @@ public class CouponApprovalOrderGenerateRequest extends AbstractSessionRequest{
 
     public void setApplyNumId(String applyNumId) {
         this.applyNumId = applyNumId;
+    }
+
+    public Long getAutoAuditSign() {
+        return autoAuditSign;
+    }
+
+    public void setAutoAuditSign(Long autoAuditSign) {
+        this.autoAuditSign = autoAuditSign;
     }
 }
