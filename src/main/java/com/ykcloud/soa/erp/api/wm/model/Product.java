@@ -11,6 +11,7 @@ public class Product {
 	private Double conversionQty;// 件装数
 	private Long conversionUnitNumId;// 件装单位
 	private String conversionStyleDesc;// 件装描述
+	private Long qualityDays;//保质期天数
 	public Long getItemNumId() {
 		return itemNumId;
 	}
@@ -47,4 +48,11 @@ public class Product {
 	public void setConversionStyleDesc(String conversionStyleDesc) {
 		this.conversionStyleDesc = conversionStyleDesc;
 	}
+	public Long getQualityDays() {
+		return qualityDays;
+	}
+	public void setQualityDays(Long qualityDays) {
+		this.qualityDays = qualityDays;
+	}
+	
 }

@@ -11,4 +11,5 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 public class ReceiptProduceDateUpdateResponse extends MessagePack {
 
 	private static final long serialVersionUID = -6887267356750976052L;
+	
 }
