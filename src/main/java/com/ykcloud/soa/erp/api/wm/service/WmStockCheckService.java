@@ -3,10 +3,12 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.ContainerFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemQtyStockCheckInputRequest;
+import com.ykcloud.soa.erp.api.wm.request.OmitCheckProductListQueryRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckPlanAuditRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.OmitCheckProductListQueryResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckPlanAuditResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRGetResponse;
@@ -68,4 +70,13 @@ public interface WmStockCheckService {
      * @return
      */
     ContainerFinishResponse finishContainer(ContainerFinishRequest request);
+
+    /**
+     * 漏盘商品查询
+     *
+     * @param request
+     * @return
+     */
+    OmitCheckProductListQueryResponse queryOmitCheckProductList(
+        OmitCheckProductListQueryRequest request);
 }
