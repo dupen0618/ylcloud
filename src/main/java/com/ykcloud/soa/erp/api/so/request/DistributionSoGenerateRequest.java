@@ -6,9 +6,10 @@ import org.hibernate.validator.constraints.NotEmpty;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 //配送产生分拨单入参类
-public class DistributionSoGenerateRequest extends AbstractRequest {
+public class DistributionSoGenerateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1L;
 
