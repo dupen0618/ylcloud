@@ -36,7 +36,12 @@ public interface ScmDistributionService {
 	//为产生配送分拨单，获取配送单身
 	public ApprovalDtlsForGenerateDistributionSoGetResponse getApprovalDtlsForGenerateDistributionSo(
 			ApprovalDtlsForGenerateDistributionSoGetRequest request);
-
+    
+	/** 
+	* @Description: 配送单审核
+	* @Author: fred.zhao
+	* @Date: 2018/4/7 
+	*/ 
     public DistributionApprovalOrderByBuyerAuditResponse auditDistributionApprovalOrderByBuyer(DistributionApprovalOrderByBuyerAuditRequest request);
 
     

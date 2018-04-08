@@ -38,6 +38,8 @@ public class ReturnApplyDtlGetRequest extends AbstractRequest {
     @NotNull(message = "存储方式不能为空！")
     private Long storeType;
 
+    @NotNull(message = "采购方式不能为空！")
+    private Long purchaseTypeNumId;
 
     public Long getStoreType() {
         return storeType;
@@ -93,5 +95,13 @@ public class ReturnApplyDtlGetRequest extends AbstractRequest {
 
     public void setApplyNumId(String applyNumId) {
         this.applyNumId = applyNumId;
+    }
+
+    public Long getPurchaseTypeNumId() {
+        return purchaseTypeNumId;
+    }
+
+    public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
+        this.purchaseTypeNumId = purchaseTypeNumId;
     }
 }
