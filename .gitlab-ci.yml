@@ -30,4 +30,6 @@ Deploy to Maven:
   tags:
     - erp-internal
   script: "deploy.sh"
+  only:
+    - branches@erp/*
   when: manual
