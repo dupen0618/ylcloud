@@ -31,5 +31,5 @@ Deploy to Maven:
     - erp-internal
   script: "deploy.sh"
   only:
-    - branches@erp/*
+    - branches@erp
   when: manual
