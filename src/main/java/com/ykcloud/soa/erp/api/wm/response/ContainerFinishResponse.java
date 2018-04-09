@@ -3,11 +3,11 @@ package com.ykcloud.soa.erp.api.wm.response;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 /**
- * @Description: 扫码商品条码盘点的出参
+ * @Description: 箱盘点完成的出参
  * @author: henry.wang
- * @date: 2018/4/4 10:23
+ * @date: 2018/4/7 19:27
  **/
-public class ItemBarcodeStockCheckScanResponse extends MessagePack {
+public class ContainerFinishResponse extends MessagePack {
 
     private static final long serialVersionUID = 1L;
 }
