@@ -2,7 +2,7 @@ stages:
     - Sync source code
     - Build project
     - Unit test
-    - Deploy to Maven
+    - Deploy
 
 Sync source code:
   stage: Sync source code
@@ -25,8 +25,8 @@ Unit test:
   script: "test.sh"
   when: on_success
   
-Deploy to Maven:
-  stage: Deploy to Maven
+Deploy:
+  stage: Deploy
   tags:
     - erp-internal
   script: "deploy.sh"
