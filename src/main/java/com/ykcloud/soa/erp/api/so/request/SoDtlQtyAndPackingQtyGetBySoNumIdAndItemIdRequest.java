@@ -14,13 +14,13 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 	private static final long serialVersionUID = -7173705633933157105L;
 	
 	@NotNull(message="订单ID不能为空！")
-	private Long soNumId;
+	private String soNumId;
 	
 	//@NotNull(message="商品ID不能为空！")
 	private Long itemNumId;
 	
 	@NotNull(message="门店ID不能为空！")
-	private Long subUnitNumId;
+	private String subUnitNumId;
 	
 	@NotNull(message="orderDate不能为空！")
 	private Date orderDate;
@@ -28,11 +28,12 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 	//sql是否要带itemNumId
 	private Long itemFlag;
 
-	public Long getSoNumId() {
+
+	public String getSoNumId() {
 		return soNumId;
 	}
 
-	public void setSoNumId(Long soNumId) {
+	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
 
@@ -43,12 +44,12 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}
-
-	public Long getSubUnitNumId() {
+	
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
