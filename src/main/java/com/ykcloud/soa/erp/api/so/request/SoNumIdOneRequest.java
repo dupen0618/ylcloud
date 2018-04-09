@@ -14,26 +14,28 @@ public class SoNumIdOneRequest extends AbstractRequest {
 	private static final long serialVersionUID = -7870514749928476218L;
 	
 	@NotNull(message = "波次号不能为空!")
-	private Long wlbcNumId;
+	private String wlbc;
 	
 	@NotNull(message = "商品ID不能为空!")
 	private Long itemNumId;
 	
 	@NotNull(message = "门店ID不能为空!")
-	private Long subUnitNumId;
+	private String subUnitNumId;
 	
 	@NotNull(message = "orderDate不能为空!")
 	private Date orderDate;
 	
 	@NotNull(message = "订单出库类型不能为空!")
 	private String confirmType;
+	
+	private Long sowNumId;
 
-	public Long getWlbcNumId() {
-		return wlbcNumId;
+	public String getWlbc() {
+		return wlbc;
 	}
 
-	public void setWlbcNumId(Long wlbcNumId) {
-		this.wlbcNumId = wlbcNumId;
+	public void setWlbc(String wlbc) {
+		this.wlbc = wlbc;
 	}
 
 	public Long getItemNumId() {
@@ -44,12 +46,11 @@ public class SoNumIdOneRequest extends AbstractRequest {
 		this.itemNumId = itemNumId;
 	}
 
-
-	public Long getSubUnitNumId() {
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
@@ -68,7 +69,16 @@ public class SoNumIdOneRequest extends AbstractRequest {
 	public void setConfirmType(String confirmType) {
 		this.confirmType = confirmType;
 	}
-	
+
+	public Long getSowNumId() {
+		return sowNumId;
+	}
+
+	public void setSowNumId(Long sowNumId) {
+		this.sowNumId = sowNumId;
+	}
+
+
 	
 
 }

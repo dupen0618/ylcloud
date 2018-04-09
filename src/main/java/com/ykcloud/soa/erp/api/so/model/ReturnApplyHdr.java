@@ -29,6 +29,7 @@ public class ReturnApplyHdr implements Serializable {
     private Long recPhySicalNumId;//收货物理仓
 
 
+
     public Long getRecStorageNumId() {
         return recStorageNumId;
     }

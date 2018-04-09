@@ -1,7 +1,9 @@
 package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.so.request.LastSalesDateGetRequest;
+import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.response.LastSalesDateGetResponse;
+import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
 
 /**
  * TODO（描述类的职责）
@@ -18,8 +20,12 @@ public interface SoApplyService {
 	 * @return
 	 */
 	//LastSalesDateGetResponse getLastSalesDate(LastSalesDateGetRequest request);
-	
-	
+	/** 
+	* @Description: 退货申请单制单确认
+	* @Author: fred.zhao
+	* @Date: 2018/4/4 
+	*/ 
+	ReturnApplyByAuthorConfirmResponse confirmReturnApplyByAuthor(ReturnApplyByAuthorConfirmRequest request);
 	
 	
 }

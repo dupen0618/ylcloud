@@ -69,6 +69,8 @@ public class SoHdr {
 	private Date lastUpdtme;
 	
 	private Long confirmType;
+	
+	private Long sowNumId;
 
 	public Long getSeries() {
 		return series;
@@ -332,6 +334,14 @@ public class SoHdr {
 
 	public void setConfirmType(Long confirmType) {
 		this.confirmType = confirmType;
+	}
+
+	public Long getSowNumId() {
+		return sowNumId;
+	}
+
+	public void setSowNumId(Long sowNumId) {
+		this.sowNumId = sowNumId;
 	}
 	
 	

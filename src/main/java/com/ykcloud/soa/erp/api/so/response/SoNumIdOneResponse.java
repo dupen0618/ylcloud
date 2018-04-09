@@ -7,6 +7,8 @@ public class SoNumIdOneResponse extends MessagePack {
 	private Long soNumId;
 	
 	private Long custUnitNumId;
+	
+	private Long sowNumId;
 
 	public Long getSoNumId() {
 		return soNumId;
@@ -24,5 +26,13 @@ public class SoNumIdOneResponse extends MessagePack {
 		this.custUnitNumId = custUnitNumId;
 	}
 
+	public Long getSowNumId() {
+		return sowNumId;
+	}
+
+	public void setSowNumId(Long sowNumId) {
+		this.sowNumId = sowNumId;
+	}
+	
 
 }

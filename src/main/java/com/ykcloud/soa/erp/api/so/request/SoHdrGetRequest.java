@@ -14,26 +14,27 @@ public class SoHdrGetRequest extends AbstractRequest {
 	private static final long serialVersionUID = 8147686661977300539L;
 	
 	@NotNull(message="订单号不能为空！")
-	private Long soNumId;
+	private String soNumId;
 	
 	@NotNull(message="门店Id不能为空！")
-	private Long subUnitNumId;
+	private String subUnitNumId;
 	
 	private Date orderDate;
 
-	public Long getSoNumId() {
+
+	public String getSoNumId() {
 		return soNumId;
 	}
 
-	public void setSoNumId(Long soNumId) {
+	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
 
-	public Long getSubUnitNumId() {
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 

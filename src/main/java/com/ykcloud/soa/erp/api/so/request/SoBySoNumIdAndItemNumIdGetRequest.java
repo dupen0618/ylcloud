@@ -14,25 +14,36 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 	private static final long serialVersionUID = -8819181948393245910L;
 
 	@NotNull(message = "商品ID不能为空!")
-	private Long soNumId;
+	private String soNumId;
 	
 	@NotNull(message = "商品ID不能为空!")
 	private Long itemNumId;
 	
 	@NotNull(message = "门店ID不能为空!")
-	private Long subUnitNumId;
+	private String subUnitNumId;
 	
 	@NotNull(message = "订单日期不能为空!")
 	private Date orderDate;
 	
 	private Long plmSign;
 	
-	public Long getSoNumId() {
+
+	
+
+	public String getSoNumId() {
 		return soNumId;
 	}
 
-	public void setSoNumId(Long soNumId) {
+	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
+	}
+
+	public String getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(String subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
 	}
 
 	public Long getItemNumId() {
@@ -43,13 +54,7 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 		this.itemNumId = itemNumId;
 	}
 
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
-	}
 
 	public Date getOrderDate() {
 		return orderDate;

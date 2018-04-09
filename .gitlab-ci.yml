@@ -1,4 +1,35 @@
-job1:
+stages:
+    - Sync source code
+    - Build project
+    - Unit test
+    - Deploy
+
+Sync source code:
+  stage: Sync source code
   tags:
     - erp-internal
-  script: "autobuild.sh"
+  script: "repo_sync.sh"
+  when: always
+
+Build project:
+  stage: Build project
+  tags:
+    - erp-internal
+  script: "build.sh"
+  when: on_success
+
+Unit test:
+  stage: Unit test
+  tags:
+    - erp-internal
+  script: "test.sh"
+  when: on_success
+  
+Deploy:
+  stage: Deploy
+  tags:
+    - erp-internal
+  script: "deploy.sh"
+  only:
+    - branches@erp/erp-api
+  when: manual
