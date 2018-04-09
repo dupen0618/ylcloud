@@ -2,18 +2,22 @@ package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.so.request.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ApprovalReturnSoGenerateRequest;
+import com.ykcloud.soa.erp.api.so.request.CheckSoShipQtyAndPackingQtyRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayDistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoConfirmTypeRequest;
 import com.ykcloud.soa.erp.api.so.request.SoPackingUpdateRequest;
+import com.ykcloud.soa.erp.api.so.request.SoShipQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoWlbcAndSoBingingRequest;
 import com.ykcloud.soa.erp.api.so.response.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ApprovalReturnSoGenerateResponse;
+import com.ykcloud.soa.erp.api.so.response.CheckSoShipQtyAndPackingQtyResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayDistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoConfirmTypeResponse;
 import com.ykcloud.soa.erp.api.so.response.SoPackingUpdateResponse;
+import com.ykcloud.soa.erp.api.so.response.SoShipQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoWlbcAndSoBingingResponse;
 
@@ -48,5 +52,10 @@ public interface SoMaintanceService {
 	
 	//按wlbc更新订单状态
 	public SoStatusUpdateResponse updateSoStatus(SoStatusUpdateRequest request);
+
+	public SoShipQtyUpdateResponse updateSoShipQty(SoShipQtyUpdateRequest request);
+
+	public CheckSoShipQtyAndPackingQtyResponse checkSoShipQtyAndPackingQty(CheckSoShipQtyAndPackingQtyRequest request);
+	
 
 }

@@ -11,19 +11,20 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 	 */
 	private static final long serialVersionUID = 6020213655003704003L;
 	
-	private Long soNumId;
+	private String soNumId;
 	
 	private Long confirmType;
 	
-	private Long subUnitNumId;
+	private String subUnitNumId;
 	
 	private Date orderDate;
 
-	public Long getSoNumId() {
+
+	public String getSoNumId() {
 		return soNumId;
 	}
 
-	public void setSoNumId(Long soNumId) {
+	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
 
@@ -35,11 +36,12 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 		this.confirmType = confirmType;
 	}
 
-	public Long getSubUnitNumId() {
+
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 

@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.so.request;
+package com.ykcloud.soa.erp.api.wm.request;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class SoHdrGetRequest extends AbstractRequest {
+public class WmSoHdrGetRequest extends AbstractRequest {
 
 	/**
 	 * 
@@ -20,7 +20,6 @@ public class SoHdrGetRequest extends AbstractRequest {
 	private String subUnitNumId;
 	
 	private Date orderDate;
-
 
 	public String getSoNumId() {
 		return soNumId;
@@ -45,6 +44,7 @@ public class SoHdrGetRequest extends AbstractRequest {
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
+
 	
 	
 

@@ -22,7 +22,7 @@ public class SoPackingUpdateRequest extends AbstractRequest {
 	
 	
 	@NotNull(message = "门店不能为空!")
-	private Long subUnitNumId;
+	private String subUnitNumId;
 
 	@NotNull(message = "订单明细行号不能为空!")
 	private Long soLineId;
@@ -45,11 +45,12 @@ public class SoPackingUpdateRequest extends AbstractRequest {
 		this.cancelSign = cancelSign;
 	}
 
-	public Long getSubUnitNumId() {
+
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
