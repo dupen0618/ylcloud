@@ -65,6 +65,8 @@ public class scmAccInvOwnStkTsc extends AbstractRequest{
 
     private String remark;
 
+    private String billTypeNumId;
+
     public static SimpleDateFormat getDateFormater() {
         return dateFormater;
     }
@@ -267,5 +269,13 @@ public class scmAccInvOwnStkTsc extends AbstractRequest{
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public String getBillTypeNumId() {
+        return billTypeNumId;
+    }
+
+    public void setBillTypeNumId(String billTypeNumId) {
+        this.billTypeNumId = billTypeNumId;
     }
 }

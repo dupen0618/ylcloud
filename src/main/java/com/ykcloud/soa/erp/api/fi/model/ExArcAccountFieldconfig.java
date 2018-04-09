@@ -9,33 +9,33 @@ import java.util.Date;
  */
 public class ExArcAccountFieldconfig implements Serializable {
     private static final long serialVersionUID = 1L;
-    private int series;
-    private int tenant_num_id;
+    private Long series;
+    private Long tenant_num_id;
     private String AccountName;
     private String ActFieldName;
-    private int QtyOrAmount;
+    private Long QtyOrAmount;
     private Date create_dtme;
     private Date last_updtme;
-    private int create_user_id;
-    private int last_update_user_id;
-    private char cancelsign;
-    private char insertdata;
-    private char updatedata;
-    private int data_sign;
+    private Long create_user_id;
+    private Long last_update_user_id;
+    private String cancelsign;
+    private String insertdata;
+    private String updatedata;
+    private Long data_sign;
 
-    public int getSeries() {
+    public Long getSeries() {
         return series;
     }
 
-    public void setSeries(int series) {
+    public void setSeries(Long series) {
         this.series = series;
     }
 
-    public int getTenant_num_id() {
+    public Long getTenant_num_id() {
         return tenant_num_id;
     }
 
-    public void setTenant_num_id(int tenant_num_id) {
+    public void setTenant_num_id(Long tenant_num_id) {
         this.tenant_num_id = tenant_num_id;
     }
 
@@ -55,11 +55,11 @@ public class ExArcAccountFieldconfig implements Serializable {
         ActFieldName = actFieldName;
     }
 
-    public int getQtyOrAmount() {
+    public Long getQtyOrAmount() {
         return QtyOrAmount;
     }
 
-    public void setQtyOrAmount(int qtyOrAmount) {
+    public void setQtyOrAmount(Long qtyOrAmount) {
         QtyOrAmount = qtyOrAmount;
     }
 
@@ -79,51 +79,51 @@ public class ExArcAccountFieldconfig implements Serializable {
         this.last_updtme = last_updtme;
     }
 
-    public int getCreate_user_id() {
+    public Long getCreate_user_id() {
         return create_user_id;
     }
 
-    public void setCreate_user_id(int create_user_id) {
+    public void setCreate_user_id(Long create_user_id) {
         this.create_user_id = create_user_id;
     }
 
-    public int getLast_update_user_id() {
+    public Long getLast_update_user_id() {
         return last_update_user_id;
     }
 
-    public void setLast_update_user_id(int last_update_user_id) {
+    public void setLast_update_user_id(Long last_update_user_id) {
         this.last_update_user_id = last_update_user_id;
     }
 
-    public char getCancelsign() {
+    public String getCancelsign() {
         return cancelsign;
     }
 
-    public void setCancelsign(char cancelsign) {
+    public void setCancelsign(String cancelsign) {
         this.cancelsign = cancelsign;
     }
 
-    public char getInsertdata() {
+    public String getInsertdata() {
         return insertdata;
     }
 
-    public void setInsertdata(char insertdata) {
+    public void setInsertdata(String insertdata) {
         this.insertdata = insertdata;
     }
 
-    public char getUpdatedata() {
+    public String getUpdatedata() {
         return updatedata;
     }
 
-    public void setUpdatedata(char updatedata) {
+    public void setUpdatedata(String updatedata) {
         this.updatedata = updatedata;
     }
 
-    public int getData_sign() {
+    public Long getData_sign() {
         return data_sign;
     }
 
-    public void setData_sign(int data_sign) {
+    public void setData_sign(Long data_sign) {
         this.data_sign = data_sign;
     }
 }
