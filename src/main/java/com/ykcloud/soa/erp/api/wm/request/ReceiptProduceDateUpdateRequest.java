@@ -21,6 +21,10 @@ public class ReceiptProduceDateUpdateRequest extends AbstractRequest {
 	@NotNull(message = "验收单号不能为空!")
 	private String reservedNo;
 	
+	@ApiField(description = "门店编号")
+	@NotEmpty(message = "门店编号不能为空!")
+	private Long subUnitNumId;
+	
 	@ApiField(description = "托盘号")
 	@NotNull(message = "托盘号不能为空!")
 	private String traySerlno;
@@ -32,6 +36,8 @@ public class ReceiptProduceDateUpdateRequest extends AbstractRequest {
 	@ApiField(description = "实际生产日期")
 	@NotEmpty(message = "时期生产日期不能为空!")
 	private String actualProductionDate;
+	
+	
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -67,6 +73,14 @@ public class ReceiptProduceDateUpdateRequest extends AbstractRequest {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
 	}
 
 	

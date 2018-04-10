@@ -57,9 +57,13 @@ public interface WmReceiptService {
 
     //查询门店最新批次库存价格，用于配送补货
 	public ShopLastBatchPriceGetResponse getShopLastBatchPrice(ShopLastBatchPriceGetRequest request);
-
-	//以下byhank
-	// 查询验收单   (6位模糊查询，直通到仓需判断订单状态是否为发货方已确认)
+	/**
+	 *@Description: 查询验收单 (6位模糊查询，直通到仓需判断订单状态是否为发货方已确认)
+	 *@Auther hank
+	 *@Date 2018-4-9
+	 *@param request{subUnitNumId,reservedNo,userNumId}
+	 *@return response{reservedNo,traySerlno,traySerlnoLable,trayConfirmQty,receiptQty,receiptConfirmQty}
+	 */
 	public ReceiptHdrGetResponse getReceiptHdr(ReceiptHdrGetRequest request);
 
 	//过期控制 证照控制
