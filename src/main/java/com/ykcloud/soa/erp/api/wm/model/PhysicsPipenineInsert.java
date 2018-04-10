@@ -25,7 +25,7 @@ public class PhysicsPipenineInsert extends AbstractRequest{
 
     private Long conversionUnitNumId;//件装单位
 
-    private Long conversionStyleDesc;//件装规格
+    private String conversionStyleDesc;//件装规格
 
     private Long pmtMaterial;//赠品辅料
 
@@ -56,6 +56,8 @@ public class PhysicsPipenineInsert extends AbstractRequest{
     private Double reservedQty;//入账数量
 
     private Date recDate;//入库日期
+
+    private Long carrySign;//结转标识
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -121,11 +123,11 @@ public class PhysicsPipenineInsert extends AbstractRequest{
         this.conversionUnitNumId = conversionUnitNumId;
     }
 
-    public Long getConversionStyleDesc() {
+    public String getConversionStyleDesc() {
         return conversionStyleDesc;
     }
 
-    public void setConversionStyleDesc(Long conversionStyleDesc) {
+    public void setConversionStyleDesc(String conversionStyleDesc) {
         this.conversionStyleDesc = conversionStyleDesc;
     }
 
@@ -249,4 +251,11 @@ public class PhysicsPipenineInsert extends AbstractRequest{
         this.recDate = recDate;
     }
 
+    public Long getCarrySign() {
+        return carrySign;
+    }
+
+    public void setCarrySign(Long carrySign) {
+        this.carrySign = carrySign;
+    }
 }
