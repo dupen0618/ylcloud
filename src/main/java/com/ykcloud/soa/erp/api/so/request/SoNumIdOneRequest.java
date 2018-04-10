@@ -9,23 +9,23 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 public class SoNumIdOneRequest extends AbstractRequest {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -7870514749928476218L;
-	
+
 	@NotNull(message = "波次号不能为空!")
 	private String wlbc;
-	
+
 	@NotNull(message = "商品ID不能为空!")
 	private Long itemNumId;
-	
+
 	@NotNull(message = "门店ID不能为空!")
 	private String subUnitNumId;
-	
+
 	@NotNull(message = "orderDate不能为空!")
 	private Date orderDate;
-	
-	
+
+
 	private Long sowNumId;
 
 	public String getWlbc() {
@@ -70,6 +70,6 @@ public class SoNumIdOneRequest extends AbstractRequest {
 	}
 
 
-	
+
 
 }

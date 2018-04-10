@@ -1,23 +1,23 @@
-package com.ykcloud.soa.erp.api.wm.model;
+package com.ykcloud.soa.erp.api.wm.response;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 import java.util.Date;
 
 /**
- * Created by yiako on 2018/4/7
+ * Created by yiako on 2018/4/2
  */
-public class PhysicsPipenineInsert extends AbstractRequest{
+public class WmPhysicalAccountWbaGteByDateResponse extends MessagePack {
 
-    private Long subUnitNumId;//门店
+    private Long subUnitNumId;//门店编号
 
     private Long itemNumId;//商品编号
 
-    private Long DivNumId;//商品中心（部门）
+    private Long divNumId;//部类编号
 
     private String barcode;//商品条码
 
-    private String itemName;//商品品名
+    private String itemName;//商品名称
 
     private Long productOriginNumId;//产地
 
@@ -25,17 +25,17 @@ public class PhysicsPipenineInsert extends AbstractRequest{
 
     private Long conversionUnitNumId;//件装单位
 
-    private Long conversionStyleDesc;//件装规格
+    private String conversionStyleDesc;//件装规格
 
     private Long pmtMaterial;//赠品辅料
 
-    private Long supplyUnitNumId;//供应商
+    private Long supplyUnitNumId;//供应商编号
 
-    private Long physicalNumId;//收货物理仓库
+    private Long physicalNumId;//物理仓库
 
     private Long classifyNumId;//商品归集码
 
-    private Date orderDate;//单据日期,定货日期
+    private Date orderDate;//单据日期
 
     private Long typeNumId;//业务类型
 
@@ -53,9 +53,9 @@ public class PhysicsPipenineInsert extends AbstractRequest{
 
     private Long balanceFunction;//业务类型
 
-    private Double reservedQty;//入账数量
+    private Long reservedQty;//入账数量
 
-    private Date recDate;//入库日期
+    private Date recDate;//记账日期
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -74,11 +74,11 @@ public class PhysicsPipenineInsert extends AbstractRequest{
     }
 
     public Long getDivNumId() {
-        return DivNumId;
+        return divNumId;
     }
 
     public void setDivNumId(Long divNumId) {
-        DivNumId = divNumId;
+        this.divNumId = divNumId;
     }
 
     public String getBarcode() {
@@ -121,11 +121,11 @@ public class PhysicsPipenineInsert extends AbstractRequest{
         this.conversionUnitNumId = conversionUnitNumId;
     }
 
-    public Long getConversionStyleDesc() {
+    public String getConversionStyleDesc() {
         return conversionStyleDesc;
     }
 
-    public void setConversionStyleDesc(Long conversionStyleDesc) {
+    public void setConversionStyleDesc(String conversionStyleDesc) {
         this.conversionStyleDesc = conversionStyleDesc;
     }
 
@@ -233,11 +233,11 @@ public class PhysicsPipenineInsert extends AbstractRequest{
         this.balanceFunction = balanceFunction;
     }
 
-    public Double getReservedQty() {
+    public Long getReservedQty() {
         return reservedQty;
     }
 
-    public void setReservedQty(Double reservedQty) {
+    public void setReservedQty(Long reservedQty) {
         this.reservedQty = reservedQty;
     }
 
@@ -248,5 +248,4 @@ public class PhysicsPipenineInsert extends AbstractRequest{
     public void setRecDate(Date recDate) {
         this.recDate = recDate;
     }
-
 }

@@ -8,15 +8,12 @@ import javax.validation.constraints.NotNull;
  * Created by yiako on 2018/3/28
  */
 public class InventoryProfitAndLossesByReservedNoRequest extends AbstractRequest {
-    @NotNull(message = "出库单号不能为空！")
-    private Long reservedNo;//出库单号
-
-    @NotNull(message = "业务类型编号不能为空!")
-    private String billTypeNumId;//业务类型编号
-
-    @NotNull(message = "单据类型不能为空!")
-    private Long typeNumId;//单据类型
-
+    @NotNull(message = "订单编号不能为空！")
+    Long reservedNo;
+    @NotNull(message = "业务类型编号不能为空！")
+    String billTypeNum;
+    @NotNull(message = "单据类型不能为空！")
+    Long typeNum;
     @NotNull(message = "入账类型不能为空！")
     String accountName;
 
@@ -28,20 +25,20 @@ public class InventoryProfitAndLossesByReservedNoRequest extends AbstractRequest
         this.reservedNo = reservedNo;
     }
 
-    public String getBillTypeNumId() {
-        return billTypeNumId;
+    public String getBillTypeNum() {
+        return billTypeNum;
     }
 
-    public void setBillTypeNumId(String billTypeNumId) {
-        this.billTypeNumId = billTypeNumId;
+    public void setBillTypeNum(String billTypeNum) {
+        this.billTypeNum = billTypeNum;
     }
 
-    public Long getTypeNumId() {
-        return typeNumId;
+    public Long getTypeNum() {
+        return typeNum;
     }
 
-    public void setTypeNumId(Long typeNumId) {
-        this.typeNumId = typeNumId;
+    public void setTypeNum(Long typeNum) {
+        this.typeNum = typeNum;
     }
 
     public String getAccountName() {

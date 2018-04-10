@@ -21,9 +21,9 @@ public interface WmBillInAccountService {
     //可用验收入库单
     AffectRowsResponse getCheckoutByReservedNo(CheckoutGetByReservedNo checkoutGetByReservedNo);
     //可用库存销售订单(流水)
-    AffectRowsResponse getSalesOrderBySoNumId(SalesOrderBySoNumIdGetRequest request) throws InvocationTargetException, IllegalAccessException;
+    AffectRowsResponse getSalesOrderBySoNumId(SalesOrderBySoNumIdGetRequest request);
     //可用库存出库装箱单
-    AffectRowsResponse getWarehousePackingbySoNumId(WarehousepackingGetRequest request) throws InvocationTargetException, IllegalAccessException;
+    AffectRowsResponse getWarehousePackingbySoNumId(WarehousepackingGetRequest request);
     //可用库存出库单
     AffectRowsResponse LibraryOutByReservedNo(LibraryOutByReservedNoRequest request);
     //可用库存盘盈盘亏单
@@ -35,7 +35,7 @@ public interface WmBillInAccountService {
     //可用库存损益单
     AffectRowsResponse profitAndLossGetByWorkNumId(ProfitAndLossGetByWorkNumIdRequest request);
     //物理验收入库流水
-    WmBillInAccountResponse getVerifyPhysicsByReservedNo(VerifyPhysicsGetByReservedNoRequest request);
+    WmBillInAccountResponse getVerifyPhysicsByReservedNo(PhysicsWarehousepackingGetRequest request);
     //物理出库流水
     WmBillInAccountResponse getPhysicsSalesOrderByReservedNo(PhysicsWarehousepackingGetRequest request);
     //盘盈盘亏单

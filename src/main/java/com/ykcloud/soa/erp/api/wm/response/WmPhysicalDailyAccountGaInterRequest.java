@@ -1,13 +1,8 @@
-package com.ykcloud.soa.erp.api.wm.request;
-
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+package com.ykcloud.soa.erp.api.wm.response;
 
 import javax.validation.constraints.NotNull;
 
-/**
- * Created by yiako on 2018/3/27
- */
-public class WarehousepackingGetRequest extends AbstractRequest {
+public class WmPhysicalDailyAccountGaInterRequest {
 
     @NotNull(message = "订单编号不能为空！")
     Long reservedNo;

@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Created by yiako on 2018/4/2
  */
-public class UsableInventoryGetByReservedNoRequest extends AbstractRequest{
+public class UsableInventoryByReservedNoGetRequest extends AbstractRequest{
 
     @NotNull(message = "订单编号不能为空！")
     Long reservedNo;
