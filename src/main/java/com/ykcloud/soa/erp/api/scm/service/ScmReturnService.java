@@ -30,18 +30,7 @@ public interface ScmReturnService {
     public ApprovalReturnOrderGenerateResponse generateApprovalReturnOrder(ApprovalReturnOrderGenerateRequest request);
      //前台根据商品编号获取退货商品相关信息(价格）
 	public ReturnProductGetResponse getReturnProduct(ReturnProductGetRequest request);
-   /* *//**
-    * @Description: 退供应商审核
-    * @Author: fred.zhao
-    * @Date: 2018/4/3 
-    *//*
-	public SupplyApprovalReturnOrderByBuyerAuditResponse auditSupplyApprovalReturnOrderByBuyer(SupplyApprovalReturnOrderByBuyerAuditRequest request);
-    *//**
-    * @Description: 退大仓审核
-    * @Author: fred.zhao
-    * @Date: 2018/4/3
-    *//*
-	public DistributionApprovalReturnOrderByBuyerAuditResponse auditDistributionApprovalReturnOrderByBuyer(DistributionApprovalReturnOrderByBuyerAuditRequest request);*/
+
     /** 
     * @Description: 退供应商财务审核
     * @Author: fred.zhao
