@@ -24,6 +24,8 @@ import com.ykcloud.soa.erp.api.so.response.SoDtlQtyAndPackingQtyGetBySoNumIdAndI
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoNumIdOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyToReturnAmoutGetResponse;
+import com.ykcloud.soa.erp.api.wm.request.SoLockQtyByWlbcRequest;
+import com.ykcloud.soa.erp.api.wm.response.SoLockQtyByWlbcResponse;
 
 
 //查询分仓在途数的接口,以及查询销售的信息
@@ -68,5 +70,7 @@ public interface SoQueryService {
     ReturnApplyDtlGetResponse getReturnApplyDtlList(ReturnApplyDtlGetRequest request);
     //日销售门店商品销售数量及促销销售数量统计
     public ShopProductDailySellQtyGetResponse getShopProductDailySellQty(ShopProductDailySellQtyGetRequest request);
+	//获取wlbc里所有订单的lockqty
+    public SoLockQtyByWlbcResponse getSoLockQtyByWlbc(SoLockQtyByWlbcRequest request);
 
 }

@@ -1,9 +1,17 @@
 package com.ykcloud.soa.erp.api.so.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class SoHdr {
+public class SoHdr implements Serializable {
 	
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 987971073238076434L;
+
 	private Long series;
 	
 	private Long soNumId;

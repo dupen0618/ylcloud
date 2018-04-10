@@ -1,19 +1,18 @@
-package com.ykcloud.soa.erp.api.so.request;
+package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class SoStatusUpdateRequest extends AbstractRequest {
-	
+public class SoLockQtyByWlbcRequest extends AbstractRequest {
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 4263080691699508181L;
-
+	private static final long serialVersionUID = 2868728211423967864L;
+	
 	private String wlbc;
 	
 	private String subUnitNumId;
 	
-	private Long statusNumId;
 
 	public String getWlbc() {
 		return wlbc;
@@ -29,14 +28,6 @@ public class SoStatusUpdateRequest extends AbstractRequest {
 
 	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
-	}
-
-	public Long getStatusNumId() {
-		return statusNumId;
-	}
-
-	public void setStatusNumId(Long statusNumId) {
-		this.statusNumId = statusNumId;
 	}
 
 	
