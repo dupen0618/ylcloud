@@ -4,6 +4,7 @@ import com.ykcloud.soa.erp.api.so.request.DemandSaleStatisticGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayOpenDistDeliveryQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionOpenDistDeliveryQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.GroupSdApplyDtlGetRequest;
+import com.ykcloud.soa.erp.api.so.request.ItemSaleInfoByItemNumIdAndOrderDateGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OpenBranchDeliveryQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopProductDailySellQtyGetRequest;
@@ -16,6 +17,7 @@ import com.ykcloud.soa.erp.api.so.response.DemandSaleStatisticGetResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayOpenDistDeliveryQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionOpenDistDeliveryQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.GroupSdApplyDtlGetResponse;
+import com.ykcloud.soa.erp.api.so.response.ItemSaleInfoByItemNumIdAndOrderDateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OpenBranchDeliveryQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopProductDailySellQtyGetResponse;
@@ -72,5 +74,8 @@ public interface SoQueryService {
     public ShopProductDailySellQtyGetResponse getShopProductDailySellQty(ShopProductDailySellQtyGetRequest request);
 	//获取wlbc里所有订单的lockqty
     public SoLockQtyByWlbcResponse getSoLockQtyByWlbc(SoLockQtyByWlbcRequest request);
+
+    //自动补货查询商品销售的相关信息
+    public ItemSaleInfoByItemNumIdAndOrderDateGetResponse getItemSaleInfoByItemNumIdAndOrderDate(ItemSaleInfoByItemNumIdAndOrderDateGetRequest request);
 
 }
