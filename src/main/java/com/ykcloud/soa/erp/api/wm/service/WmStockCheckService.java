@@ -1,18 +1,22 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.ContainerFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.ContainerRefreshRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemQtyStockCheckInputRequest;
 import com.ykcloud.soa.erp.api.wm.request.OmitCheckProductListQueryRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckPlanAuditRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.ContainerRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeScanResponse;
 import com.ykcloud.soa.erp.api.wm.response.OmitCheckProductListQueryResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckPlanAuditResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingTaskHDRGetResponse;
 
@@ -90,4 +94,20 @@ public interface WmStockCheckService {
      */
     OmitCheckProductListQueryResponse queryOmitCheckProductList(
         OmitCheckProductListQueryRequest request);
+
+    /**
+     * 生成盘点装箱单表头
+     *
+     * @param request
+     * @return
+     */
+    StockTakingConHDRCreateResponse createStockTakingConHDR(StockTakingConHDRCreateRequest request);
+
+    /**
+     * 箱重盘
+     *
+     * @param request
+     * @return
+     */
+    ContainerRefreshResponse refreshContainer(ContainerRefreshRequest request);
 }
