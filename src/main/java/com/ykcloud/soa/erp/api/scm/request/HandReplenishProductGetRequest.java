@@ -33,7 +33,8 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
     @Range(min = 0, max = 1)
     private Long openQtyCacheSign; // 否，默认为1 在途数量是否用缓存表的数据，1：先查询缓存表，不存在先查询并写到缓存表，供下次使用，0：不用缓存表，查询后写到缓存表，供下次使用
 
-
+    private String action;//补货：repment 自动补货 auto_repment
+    
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
@@ -102,4 +103,14 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
     public void setOpenQtyCacheSign(Long openQtyCacheSign) {
         this.openQtyCacheSign = openQtyCacheSign;
     }
+
+	public String getAction() {
+		return action;
+	}
+
+	public void setAction(String action) {
+		this.action = action;
+	}
+    
+    
 }
