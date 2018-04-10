@@ -21,6 +21,9 @@ public class WmFinishShipContainerHdrRequest extends AbstractRequest {
 	
 	@NotNull(message = "复核类型不能为空! ")
 	private Long sowSign;
+	
+	
+	private String soNumId;
 
 	private Date orderDate;
 
@@ -56,6 +59,14 @@ public class WmFinishShipContainerHdrRequest extends AbstractRequest {
 
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
+	}
+
+	public String getSoNumId() {
+		return soNumId;
+	}
+
+	public void setSoNumId(String soNumId) {
+		this.soNumId = soNumId;
 	}
 
 	

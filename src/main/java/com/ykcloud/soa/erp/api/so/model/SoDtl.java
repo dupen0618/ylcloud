@@ -1,9 +1,15 @@
 package com.ykcloud.soa.erp.api.so.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class SoDtl {
+public class SoDtl implements Serializable {
 	
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1059899986268951129L;
+
 		private Long series;
 		
 		//订单ID
@@ -33,7 +39,7 @@ public class SoDtl {
 		
 		private Long productOriginNumId;
 		
-		private Double converSionQty;
+		private Double conversionQty;
 		
 		private Long conversionUnitNumId;
 		
@@ -199,12 +205,13 @@ public class SoDtl {
 			this.productOriginNumId = productOriginNumId;
 		}
 
-		public Double getConverSionQty() {
-			return converSionQty;
+
+		public Double getConversionQty() {
+			return conversionQty;
 		}
 
-		public void setConverSionQty(Double converSionQty) {
-			this.converSionQty = converSionQty;
+		public void setConversionQty(Double conversionQty) {
+			this.conversionQty = conversionQty;
 		}
 
 		public Long getConversionUnitNumId() {

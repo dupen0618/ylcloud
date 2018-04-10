@@ -5,8 +5,9 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 
-public class WmContainerHdrCreateRequest extends AbstractRequest {
+public class WmContainerHdrCreateRequest extends AbstractSessionRequest {
 
 	/**
 	 * 

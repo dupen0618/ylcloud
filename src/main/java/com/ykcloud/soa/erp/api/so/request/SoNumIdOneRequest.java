@@ -25,8 +25,6 @@ public class SoNumIdOneRequest extends AbstractRequest {
 	@NotNull(message = "orderDate不能为空!")
 	private Date orderDate;
 	
-	@NotNull(message = "订单出库类型不能为空!")
-	private String confirmType;
 	
 	private Long sowNumId;
 
@@ -62,13 +60,6 @@ public class SoNumIdOneRequest extends AbstractRequest {
 		this.orderDate = orderDate;
 	}
 
-	public String getConfirmType() {
-		return confirmType;
-	}
-
-	public void setConfirmType(String confirmType) {
-		this.confirmType = confirmType;
-	}
 
 	public Long getSowNumId() {
 		return sowNumId;
