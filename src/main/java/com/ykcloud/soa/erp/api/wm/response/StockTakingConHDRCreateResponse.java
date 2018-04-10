@@ -4,13 +4,13 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import java.util.Date;
 
 /**
- * @Description: 查询盘点装箱单表头的出参
+ * @Description: 生成盘点装箱单表头的出参
  * @author: henry.wang
- * @date: 2018/4/2 9:42
+ * @date: 2018/4/9 16:45
  **/
-public class StockTakingConHDRGetResponse extends MessagePack {
+public class StockTakingConHDRCreateResponse extends MessagePack {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -8716207623324225827L;
 
     private String reservedNo; // 盘存单号(引用盘存表)
     private String containerSerlno;//箱编号（主键）

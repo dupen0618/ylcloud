@@ -5,6 +5,7 @@ import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import java.util.Date;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 /**
  * @Description: 盘点入参父类
@@ -34,6 +35,11 @@ public class StockCheckRequest extends AbstractUserSessionRequest {
     @ApiField(description = "商品条码或编码")
     @NotNull(message = "商品条码或编码不能为空！")
     private String barcodeOrItemNumId;
+
+    @ApiField(description = "扫入/扫出标记")
+    @NotNull(message = "扫入/扫出标记不能为空！")
+    @Pattern(regexp = "(-)?[1]", message = "扫入扫出标记只能为1或-1")
+    private String inoutFlag;
 
     private Double inQty;
 
@@ -83,5 +89,13 @@ public class StockCheckRequest extends AbstractUserSessionRequest {
 
     public void setInQty(Double inQty) {
         this.inQty = inQty;
+    }
+
+    public String getInoutFlag() {
+        return inoutFlag;
+    }
+
+    public void setInoutFlag(String inoutFlag) {
+        this.inoutFlag = inoutFlag;
     }
 }
