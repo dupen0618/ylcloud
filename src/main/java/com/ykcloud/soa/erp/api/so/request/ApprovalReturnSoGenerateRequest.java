@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
  * 退供应商退总仓产生so入参
@@ -13,7 +14,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  *
  * @date 2018年4月8日下午6:40:44
  */
-public class ApprovalReturnSoGenerateRequest extends AbstractRequest {
+public class ApprovalReturnSoGenerateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 6666453249499123667L;
 	
