@@ -5,7 +5,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 public class WmShipDtlWithNoBatchUpdateResponse extends MessagePack {
 
 	//托盘商品数量，就是传人的itemNumId对应的商品数量
-	private Double qty;
+	private Double containerProductPackingQty;
 	
 	//托盘里所有商品的数量
 	private Double containerPackingQty;
@@ -22,12 +22,13 @@ public class WmShipDtlWithNoBatchUpdateResponse extends MessagePack {
 	//订单总数量的packing数量k数量
 	private Double soProductPackingQty;
 
-	public Double getQty() {
-		return qty;
+	
+	public Double getContainerProductPackingQty() {
+		return containerProductPackingQty;
 	}
 
-	public void setQty(Double qty) {
-		this.qty = qty;
+	public void setContainerProductPackingQty(Double containerProductPackingQty) {
+		this.containerProductPackingQty = containerProductPackingQty;
 	}
 
 	public Double getContainerPackingQty() {
