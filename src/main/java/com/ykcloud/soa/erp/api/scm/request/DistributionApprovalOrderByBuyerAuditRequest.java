@@ -1,8 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -12,7 +11,7 @@ import java.util.Date;
  * @Description: 配送审批单采购审核
  * @Date: Created in 9:51:2018/4/2
  */
-public class DistributionApprovalOrderByBuyerAuditRequest extends AbstractSessionRequest {
+public class DistributionApprovalOrderByBuyerAuditRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = 1959143135013489712L;
 
     @NotNull(message = "门店编号不能为空！")
