@@ -22,13 +22,7 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "供应商编号不能为空！")
 	private Long unitNumId;
-	
-	@NotNull(message = "租户不能为空！")
-	private Long tenantNumId;
-	
-	@NotNull(message = "生产或测试标识不能为空！")
-	private Long dataSign;
-	
+
 	@JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private String startDate;
@@ -48,36 +42,9 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "结算单号不能为空！")
 	private Long balanceNo;
-	
-	/*@NotNull(message = "收据单号不能为空！")
-	private Long reservedNo;
-	*/
-	
-	/*@NotNull(message = "状态不能为空！")
-	private Long statusNumId;
-	*/
-	/*@NotNull(message = "商品不能为空！")
-	private Long itemNumId;*/
-
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
-	}
-
-	public Long getTenantNumId() {
-		return tenantNumId;
-	}
-
-	public void setTenantNumId(Long tenantNumId) {
-		this.tenantNumId = tenantNumId;
-	}
-
-	public Long getDataSign() {
-		return dataSign;
-	}
-
-	public void setDataSign(Long dataSign) {
-		this.dataSign = dataSign;
 	}
 
 	public void setSubUnitNumId(Long subUnitNumId) {

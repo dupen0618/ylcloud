@@ -32,9 +32,9 @@ public class ReceiptForFiGetResponse extends MessagePack {
 
 	private String conversionStyleDesc;//件装规格
 
-	private Long price;//结算价格
+	private Double price;//结算价格
 	
-	private Long totalAmount;//金额
+	private Double totalAmount;//金额
 	
 	private String batchSeries;//批次行号
 
@@ -152,19 +152,21 @@ public class ReceiptForFiGetResponse extends MessagePack {
 		this.conversionStyleDesc = conversionStyleDesc;
 	}
 
-	public Long getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(Long price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 
-	public Long getTotalAmount() {
+	
+
+	public Double getTotalAmount() {
 		return totalAmount;
 	}
 
-	public void setTotalAmount(Long totalAmount) {
+	public void setTotalAmount(Double totalAmount) {
 		this.totalAmount = totalAmount;
 	}
 

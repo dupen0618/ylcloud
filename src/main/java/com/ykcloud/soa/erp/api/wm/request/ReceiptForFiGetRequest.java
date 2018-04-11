@@ -1,6 +1,5 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
-import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
@@ -14,15 +13,6 @@ public class ReceiptForFiGetRequest extends AbstractRequest{
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 	
-	@NotNull(message = "供应商编号不能为空！")
-	private Long unitNumId;
-	
-	@NotNull(message = "租户不能为空！")
-	private Long tenantNumId;
-	
-	@NotNull(message = "生产或测试标识不能为空！")
-	private Long dataSign;
-	
 	@JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private String startDate;
@@ -34,14 +24,18 @@ public class ReceiptForFiGetRequest extends AbstractRequest{
 	@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
 	
-	@NotNull(message = "结算周期不能为空！")
-	private Date balanceDate;
-	
-	@NotNull(message = "操作人ID不能为空！")
-	private Long userNumId;
-	
 	@NotNull(message = "结算单号不能为空！")
-	private Long balanceNo;
+	private Long reservedNo;
+
+	@NotNull(message = "供应商编号不能为空！")
+	private Long supplyUnitNumId;
+	
+	/*@NotNull(message = "结算周期不能为空！")
+	private Long physicalNumId;*/
+	
+	/*@NotNull(message = "操作人ID不能为空！")
+	private Long userNumId;*/
+	
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -51,12 +45,12 @@ public class ReceiptForFiGetRequest extends AbstractRequest{
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Long getUnitNumId() {
-		return unitNumId;
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
 	}
 
-	public void setUnitNumId(Long unitNumId) {
-		this.unitNumId = unitNumId;
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
 	}
 
 	public String getStartDate() {
@@ -83,45 +77,30 @@ public class ReceiptForFiGetRequest extends AbstractRequest{
 		this.settlementType = settlementType;
 	}
 
-	public Date getBalanceDate() {
-		return balanceDate;
+	/*public Long getPhysicalNumId() {
+		return physicalNumId;
 	}
 
-	public void setBalanceDate(Date balanceDate) {
-		this.balanceDate = balanceDate;
-	}
+	public void setPhysicalNumId(Long physicalNumId) {
+		this.physicalNumId = physicalNumId;
+	}*/
 
-	public Long getUserNumId() {
+	/*public Long getUserNumId() {
 		return userNumId;
 	}
 
 	public void setUserNumId(Long userNumId) {
 		this.userNumId = userNumId;
 	}
-
-	public Long getBalanceNo() {
-		return balanceNo;
+*/
+	public Long getReservedNo() {
+		return reservedNo;
 	}
 
-	public void setBalanceNo(Long balanceNo) {
-		this.balanceNo = balanceNo;
+	public void setReservedNo(Long reservedNo) {
+		this.reservedNo = reservedNo;
 	}
 
-	public Long getTenantNumId() {
-		return tenantNumId;
-	}
-
-	public void setTenantNumId(Long tenantNumId) {
-		this.tenantNumId = tenantNumId;
-	}
-
-	public Long getDataSign() {
-		return dataSign;
-	}
-
-	public void setDataSign(Long dataSign) {
-		this.dataSign = dataSign;
-	}
 	
 	
 	
