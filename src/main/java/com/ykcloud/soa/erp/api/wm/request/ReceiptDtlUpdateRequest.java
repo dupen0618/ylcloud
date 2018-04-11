@@ -37,6 +37,20 @@ public class ReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 	@ApiField(description = "门店编号")
 	@NotNull(message="门店编号不能为空!")
 	private Long subUnitNumId;
+	
+	@ApiField(description = "扫回标识")   //value{0 :正向,-1 :反向}
+	@NotNull(message="扫回标识不能为空!")
+	private Long canselSign;
+	
+
+
+	public Long getCanselSign() {
+		return canselSign;
+	}
+
+	public void setCanselSign(Long canselSign) {
+		this.canselSign = canselSign;
+	}
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -85,8 +99,4 @@ public class ReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
-	
-	
-	
-	
 }
