@@ -27,7 +27,7 @@ public class ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest extends A
     @NotNull(message = "退货申请单号不能为空！")
     private String applyNumId;
 
-    @NotNull(message = "申请单序号不能为空！")
+    @NotNull(message = "申请单身序号不能为空！")
     private Map<String,List<String>> approvalMap;
 
     @NotNull(message = "退货审批单号不能为空！")

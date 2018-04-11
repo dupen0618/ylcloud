@@ -1,8 +1,10 @@
 package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.so.request.LastSalesDateGetRequest;
+import com.ykcloud.soa.erp.api.so.request.ReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.response.LastSalesDateGetResponse;
+import com.ykcloud.soa.erp.api.so.response.ReturnApplyAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
 
 /**
@@ -26,6 +28,12 @@ public interface SoApplyService {
 	* @Date: 2018/4/4 
 	*/ 
 	ReturnApplyByAuthorConfirmResponse confirmReturnApplyByAuthor(ReturnApplyByAuthorConfirmRequest request);
-	
+    
+	/** 
+	* @Description: 退货申请主管审核
+	* @Author: fred.zhao
+	* @Date: 2018/4/11 
+	*/ 
+    public ReturnApplyAuditResponse auditReturnApply(ReturnApplyAuditRequest request);
 	
 }
