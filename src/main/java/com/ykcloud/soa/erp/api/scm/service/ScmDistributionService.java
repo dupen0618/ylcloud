@@ -8,6 +8,7 @@ import com.ykcloud.soa.erp.api.scm.request.ApprovalStatusNumIdAndSoNumIdUpdateRe
 import com.ykcloud.soa.erp.api.scm.request.DistributionApprovalOrderByBuyerAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.DistributionProductInfoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.InventoryForDistributionApprovalLockRequest;
+import com.ykcloud.soa.erp.api.scm.request.QtyForDistributionApprovalOrderCheckRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalHdrForGenerateDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse;
@@ -15,6 +16,7 @@ import com.ykcloud.soa.erp.api.scm.response.ApprovalStatusNumIdAndSoNumIdUpdateR
 import com.ykcloud.soa.erp.api.scm.response.DistributionApprovalOrderByBuyerAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.DistributionProductInfoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.InventoryForDistributionApprovalLockResponse;
+import com.ykcloud.soa.erp.api.scm.response.QtyForDistributionApprovalOrderCheckResponse;
 
 public interface ScmDistributionService {
 	
@@ -59,7 +61,13 @@ public interface ScmDistributionService {
     
 	//获取配送商品属性
 	public DistributionProductInfoGetResponse getDistributionProductInfo(DistributionProductInfoGetRequest request);
-
+	
+	/** 
+	* @Description: 配送数量检查
+	* @Author: fred.zhao
+	* @Date: 2018/4/11 
+	*/ 
+    public QtyForDistributionApprovalOrderCheckResponse checkQtyForDistributionApprovalOrder(QtyForDistributionApprovalOrderCheckRequest request);
 }
 
 
