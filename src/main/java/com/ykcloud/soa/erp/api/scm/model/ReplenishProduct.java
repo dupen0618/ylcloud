@@ -118,6 +118,13 @@ public class ReplenishProduct implements Serializable {
 	private Double openBranchDeliveryQty;// 分仓在途数
 
 	private Double returnQty;// return_qty
+	
+	private Long supplyContractCheckCode; //供应商合同检查
+	
+	private String supplyContractCheckMessage;
+	
+	private Long purchaseTypeNumId; // 采购途径 1:国内 2 国际
+	
 
 	public Long getItemNumId() {
 		return itemNumId;
@@ -566,5 +573,31 @@ public class ReplenishProduct implements Serializable {
 	public void setThisWeekSaleQty(Double thisWeekSaleQty) {
 		this.thisWeekSaleQty = thisWeekSaleQty;
 	}
+
+	public Long getSupplyContractCheckCode() {
+		return supplyContractCheckCode;
+	}
+
+	public void setSupplyContractCheckCode(Long supplyContractCheckCode) {
+		this.supplyContractCheckCode = supplyContractCheckCode;
+	}
+
+	public String getSupplyContractCheckMessage() {
+		return supplyContractCheckMessage;
+	}
+
+	public void setSupplyContractCheckMessage(String supplyContractCheckMessage) {
+		this.supplyContractCheckMessage = supplyContractCheckMessage;
+	}
+
+	public Long getPurchaseTypeNumId() {
+		return purchaseTypeNumId;
+	}
+
+	public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
+		this.purchaseTypeNumId = purchaseTypeNumId;
+	}
+	
+	
 	
 }
