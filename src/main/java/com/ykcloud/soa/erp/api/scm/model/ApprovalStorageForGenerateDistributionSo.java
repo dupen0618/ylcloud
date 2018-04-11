@@ -5,6 +5,11 @@ import java.io.Serializable;
 public class ApprovalStorageForGenerateDistributionSo implements Serializable {
 
 	private static final long serialVersionUID = 277797115130619689L;
+	
+	/**
+	 * 行号 用于回写so_num_id
+	 */
+	private String series;
 
 	private Long typeNumId;// 3：配送到店，4：配送分拨到仓，5：配送分拨到店
 
@@ -13,6 +18,14 @@ public class ApprovalStorageForGenerateDistributionSo implements Serializable {
 	private Long recStorageNumId;// 收货仓库编号
 
 	private Long storageNumId;// 发货仓
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
 
 	public Long getTypeNumId() {
 		return typeNumId;

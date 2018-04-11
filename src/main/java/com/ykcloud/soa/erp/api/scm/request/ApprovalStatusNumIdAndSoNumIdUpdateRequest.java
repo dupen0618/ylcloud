@@ -32,6 +32,17 @@ public class ApprovalStatusNumIdAndSoNumIdUpdateRequest extends AbstractUserSess
 	
 	@NotEmpty(message = "配送订单号不能为空！")
 	private String soNumId;
+	
+	@NotEmpty(message = "配送审批单行号不能为空！")
+	private String series;
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
 
 	public String getSoNumId() {
 		return soNumId;
