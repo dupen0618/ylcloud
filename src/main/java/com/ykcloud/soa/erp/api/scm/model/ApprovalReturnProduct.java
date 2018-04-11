@@ -1,13 +1,17 @@
 package com.ykcloud.soa.erp.api.scm.model;
 
+import java.io.Serializable;
+
 /**
  * 退货商品明细
  * @author tz.x
  *
  * @date 2018年4月10日上午9:24:45
  */
-public class ApprovalReturnProduct {
+public class ApprovalReturnProduct implements Serializable {
 	
+	private static final long serialVersionUID = 9090942233119517724L;
+
 	/**
 	 * 申请单编号
 	 */
