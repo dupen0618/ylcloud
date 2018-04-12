@@ -1,56 +1,165 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+		xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
+	<artifactId>erp-wm</artifactId>
+	<version>${erp-wm.version}</version>
+	<packaging>jar</packaging>
+	<name>ERP::WM</name>
+	<description>erp-wm</description>
+
 	<parent>
 		<groupId>com.ykcloud.soa</groupId>
 		<artifactId>erp-parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../erp-parent/pom.xml</relativePath>
 	</parent>
-	<artifactId>erp-api</artifactId>
-	<version>${erp-api.version}</version>
-	<packaging>jar</packaging>
-	<name>ERP::API</name>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 
 	<dependencies>
 
 		<dependency>
-			<groupId>com.gb.soa</groupId>
-			<artifactId>omp_ccommon_api</artifactId>
-			<version>${omp_ccommon_api.version}</version>
+			<groupId>com.ykcloud.soa</groupId>
+			<artifactId>omp_cmasterdata_api</artifactId>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>com.ykcloud.soa</groupId>
+			<artifactId>omp_cproduct_api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ykcloud.soa</groupId>
+			<artifactId>erp-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ykcloud.soa</groupId>
+			<artifactId>erp-common</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>com.gb.soa</groupId>
-			<artifactId>omp_cuser_api</artifactId>
+			<artifactId>omp_ccache_api</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.gb.soa</groupId>
-			<artifactId>omp_cexport_api</artifactId>
+			<artifactId>omp_ccommon</artifactId>
 		</dependency>
-		
+
 		<dependency>
-			<groupId>javax.el</groupId>
-			<artifactId>javax.el-api</artifactId>
+			<groupId>com.gb.soa</groupId>
+			<artifactId>omp_cmessagecenter_new_api</artifactId>
 		</dependency>
-		
+
 		<dependency>
-   			<groupId>org.glassfish</groupId>
-   			<artifactId>javax.el</artifactId>
+			<groupId>com.gb.soa</groupId>
+			<artifactId>sequence-client</artifactId>
 		</dependency>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>RELEASE</version>
-        </dependency>
+
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
+			<groupId>com.gb.soa</groupId>
+			<artifactId>omp_ccache_client</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<classifier>jdk15</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>com.gb.soa</groupId>
+			<artifactId>omp_cinventory_api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.22</version>
+		</dependency>
+
 	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>src/assembly/bin.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
