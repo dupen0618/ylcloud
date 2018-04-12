@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.scm.request;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -12,7 +13,7 @@ import java.util.List;
  * @author fred.zhao
  * 根据退货申请产生退货审批单request
  */
-public class ApprovalReturnOrderGenerateRequest extends AbstractSessionRequest {
+public class ApprovalReturnOrderGenerateRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = -2951967915214062535L;
 
     @NotNull(message = "门店编号不能为空!")
