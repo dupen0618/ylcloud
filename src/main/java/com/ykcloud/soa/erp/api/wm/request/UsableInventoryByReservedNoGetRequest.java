@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
  */
 public class UsableInventoryByReservedNoGetRequest extends AbstractRequest{
 
-    @NotNull(message = "订单编号不能为空！")
+    @NotNull(message = "单据编号不能为空！")
     Long reservedNo;
     @NotNull(message = "业务类型编号不能为空！")
     String billTypeNum;

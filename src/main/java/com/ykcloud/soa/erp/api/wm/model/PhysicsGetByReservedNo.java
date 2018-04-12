@@ -2,12 +2,13 @@ package com.ykcloud.soa.erp.api.wm.model;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by yiako on 2018/4/7
  */
-public class PhysicsGetByReservedNo extends AbstractRequest {
+public class PhysicsGetByReservedNo implements Serializable {
 
     private Long subUnitNumId;//门店
 
