@@ -21,6 +21,7 @@ public class StockCheckRequest extends AbstractUserSessionRequest {
     private Long subUnitNumId;
 
     @ApiField(description = "计划日期")
+    @NotNull(message = "计划日期不能为空！")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date inventoryDate;
 

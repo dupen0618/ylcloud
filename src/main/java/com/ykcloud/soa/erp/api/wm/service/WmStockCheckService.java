@@ -6,7 +6,12 @@ import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemQtyStockCheckInputRequest;
 import com.ykcloud.soa.erp.api.wm.request.OmitCheckProductListQueryRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockCheckCancelRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockCheckFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockCheckFirstFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckPlanAuditRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockCheckProductAbandonRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockCheckSecondFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
@@ -14,8 +19,13 @@ import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeScanResponse;
 import com.ykcloud.soa.erp.api.wm.response.OmitCheckProductListQueryResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockCheckCancelResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockCheckFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockCheckFirstFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckPlanAuditResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockCheckProductAbandonResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockCheckSecondFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingTaskHDRGetResponse;
@@ -110,4 +120,49 @@ public interface WmStockCheckService {
      * @return
      */
     ContainerRefreshResponse refreshContainer(ContainerRefreshRequest request);
+
+    /**
+     * 弃盘审核
+     *
+     * @param request
+     * @return
+     */
+    StockCheckProductAbandonResponse abandonStockCheckProduct(
+        StockCheckProductAbandonRequest request);
+
+    /**
+     * 初盘完成
+     *
+     * @param request
+     * @return
+     */
+    StockCheckFirstFinishResponse finishStockCheckFirst(
+        StockCheckFirstFinishRequest request);
+
+    /**
+     * 复盘完成
+     *
+     * @param request
+     * @return
+     */
+    StockCheckSecondFinishResponse finishStockCheckSecond(
+        StockCheckSecondFinishRequest request);
+
+    /**
+     * 盘点完成
+     *
+     * @param request
+     * @return
+     */
+    StockCheckFinishResponse finishStockCheck(
+        StockCheckFinishRequest request);
+
+    /**
+     * 盘点作废
+     *
+     * @param request
+     * @return
+     */
+    StockCheckCancelResponse cancelStockCheck(
+        StockCheckCancelRequest request);
 }
