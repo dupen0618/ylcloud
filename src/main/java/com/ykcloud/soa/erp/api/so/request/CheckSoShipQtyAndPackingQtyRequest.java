@@ -9,27 +9,25 @@ public class CheckSoShipQtyAndPackingQtyRequest extends AbstractRequest {
 	 */
 	private static final long serialVersionUID = 7008234009750911781L;
 
-	private Long subUnitNumId;
+	private String subUnitNumId;
 	
-	private Long soNumId;
+	private String soNumId;
 
-	public Long getSubUnitNumId() {
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Long getSoNumId() {
+	public String getSoNumId() {
 		return soNumId;
 	}
 
-	public void setSoNumId(Long soNumId) {
+	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
 
-
-	
 
 }

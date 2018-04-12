@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class WmScanShipContainerAndCreateShipHdrRequest extends AbstractRequest {
+public class WmScanShipContainerRequest extends AbstractRequest {
 
 	/**
 	 * 
@@ -24,7 +24,7 @@ public class WmScanShipContainerAndCreateShipHdrRequest extends AbstractRequest 
 	private String subUnitNumId;
 	
 	@NotNull(message="出库单号不能为空")
-	private Long reservedNo;
+	private String reservedNo;
 	//0正向 -1反向
 	@NotNull(message="正向，反向标识符不能为空")
 	private Long cancelSign;
@@ -47,11 +47,11 @@ public class WmScanShipContainerAndCreateShipHdrRequest extends AbstractRequest 
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Long getReservedNo() {
+	public String getReservedNo() {
 		return reservedNo;
 	}
 
-	public void setReservedNo(Long reservedNo) {
+	public void setReservedNo(String reservedNo) {
 		this.reservedNo = reservedNo;
 	}
 
