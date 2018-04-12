@@ -11,25 +11,25 @@ public class WmShipFinishRequest extends AbstractRequest {
 	 */
 	private static final long serialVersionUID = 845322839903701744L;
 	
-	private Long reservedNo;
+	private String reservedNo;
 
-	private Long subUnitNumId;
+	private String subUnitNumId;
 	
 	private Date orderDate;
 
-	public Long getReservedNo() {
+	public String getReservedNo() {
 		return reservedNo;
 	}
 
-	public void setReservedNo(Long reservedNo) {
+	public void setReservedNo(String reservedNo) {
 		this.reservedNo = reservedNo;
 	}
 
-	public Long getSubUnitNumId() {
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
@@ -40,9 +40,7 @@ public class WmShipFinishRequest extends AbstractRequest {
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
-	
-	
-	
+
 	
 
 }

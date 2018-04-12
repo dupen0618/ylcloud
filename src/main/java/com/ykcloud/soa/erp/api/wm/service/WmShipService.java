@@ -6,9 +6,10 @@ import com.ykcloud.soa.erp.api.wm.request.WmDataGetDataByBarcodeAndSoNumIdReques
 import com.ykcloud.soa.erp.api.wm.request.WmFinishShipContainerHdrRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmFinishSoPackingRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmQuerySoAndContainerRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmScanShipContainerAndCreateShipHdrRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmScanShipContainerRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipDtlWithNoBatchUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmShipGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmSoHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
@@ -19,9 +20,10 @@ import com.ykcloud.soa.erp.api.wm.response.WmDataGetDataByBarcodeAndSoNumIdRespo
 import com.ykcloud.soa.erp.api.wm.response.WmFinishShipContainerHdrResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmFinishSoPackingResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmQuerySoAndContainerResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmScanShipContainerAndCreateShipHdrResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmScanShipContainerHdrResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipDtlWithNoBatchUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmShipGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmSoHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmWlBcHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmWlbcHdrCreateResponse;
@@ -67,8 +69,11 @@ public interface WmShipService {
 		//创建波次单头
 		public WmWlbcHdrCreateResponse createWlbcHdr(WmWlbcHdrCreateRequest request);
 		
+		//获取交接单号
+		public WmShipGetResponse getShip(WmShipGetRequest request);
+		
 		//扫装箱单产生交接单
-		public WmScanShipContainerAndCreateShipHdrResponse scanShipContainerAndCreateShipHdr(WmScanShipContainerAndCreateShipHdrRequest request);
+		public WmScanShipContainerHdrResponse scanShipContainer(WmScanShipContainerRequest request);
 		
 		//出库完成
 		public WmShipFinishResponse finishShipHdr(WmShipFinishRequest request);
