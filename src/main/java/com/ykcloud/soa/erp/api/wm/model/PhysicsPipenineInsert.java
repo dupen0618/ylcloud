@@ -2,12 +2,15 @@ package com.ykcloud.soa.erp.api.wm.model;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by yiako on 2018/4/7
  */
-public class PhysicsPipenineInsert extends AbstractRequest{
+public class PhysicsPipenineInsert implements Serializable {
+
+    private Long tenantNumId;
 
     private Long subUnitNumId;//门店
 
@@ -56,6 +59,14 @@ public class PhysicsPipenineInsert extends AbstractRequest{
     private Double reservedQty;//入账数量
 
     private Date recDate;//入库日期
+
+    public Long getTenantNumId() {
+        return tenantNumId;
+    }
+
+    public void setTenantNumId(Long tenantNumId) {
+        this.tenantNumId = tenantNumId;
+    }
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
