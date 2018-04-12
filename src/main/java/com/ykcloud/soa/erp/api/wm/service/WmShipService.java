@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.request.ShipForMaterialIssueBackGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmContainerHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataByBarcodeGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataGetDataByBarcodeAndSoNumIdRequest;
@@ -14,6 +15,7 @@ import com.ykcloud.soa.erp.api.wm.request.WmSoHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmfinishPackingRequest;
+import com.ykcloud.soa.erp.api.wm.response.ShipForMaterialIssueBackGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmContainerHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataByBarcodeGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataGetDataByBarcodeAndSoNumIdResponse;
@@ -79,4 +81,13 @@ public interface WmShipService {
 		public WmShipFinishResponse finishShip(WmShipFinishRequest request);
 		
 		//SO订单出库
+		public WmShipFinishResponse finishShipHdr(WmShipFinishRequest request);
+        
+		/** 
+		* @Description: 行政领料退回，生成负的出库单
+		* @Author: fred.zhao
+		* @Date: 2018/4/12 
+		*/ 
+		public ShipForMaterialIssueBackGenerateResponse generateShipForMaterialIssueBack(ShipForMaterialIssueBackGenerateRequest request);
+
 }
