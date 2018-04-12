@@ -79,9 +79,6 @@ public interface WmShipService {
 		
 		//出库完成
 		public WmShipFinishResponse finishShip(WmShipFinishRequest request);
-		
-		//SO订单出库
-		public WmShipFinishResponse finishShipHdr(WmShipFinishRequest request);
         
 		/** 
 		* @Description: 行政领料退回，生成负的出库单
