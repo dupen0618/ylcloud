@@ -1,9 +1,11 @@
 package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.so.request.LastSalesDateGetRequest;
+import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyTransferBetweenShopGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.response.LastSalesDateGetResponse;
+import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenShopGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
 
@@ -14,6 +16,16 @@ import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
  * @version <b>1.0.0</b>
  */
 public interface SoApplyService {
+	
+	/**
+	 * 店间调拨商品查询
+	 * @author tz.x
+	 * @date 2018年4月11日下午7:13:32
+	 * @param 
+	 * @return
+	 */
+	public ProductInfoForSoApplyTransferBetweenShopGetResponse getProductInfoForSoApplyTransferBetweenShop(
+			ProductInfoForSoApplyTransferBetweenShopGetRequest request);
 	
 	/**
 	 * 获取当前店铺的上次日结日期
