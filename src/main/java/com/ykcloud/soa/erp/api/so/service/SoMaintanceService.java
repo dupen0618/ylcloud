@@ -9,6 +9,7 @@ import com.ykcloud.soa.erp.api.so.request.SoConfirmTypeRequest;
 import com.ykcloud.soa.erp.api.so.request.SoPackingUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoShipQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateRequest;
+import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateSoOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SoWlbcAndSoBingingRequest;
 import com.ykcloud.soa.erp.api.so.response.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ApprovalReturnSoGenerateResponse;
@@ -19,6 +20,7 @@ import com.ykcloud.soa.erp.api.so.response.SoConfirmTypeResponse;
 import com.ykcloud.soa.erp.api.so.response.SoPackingUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoShipQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateResponse;
+import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateSoOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SoWlbcAndSoBingingResponse;
 
 public interface SoMaintanceService {
@@ -41,7 +43,8 @@ public interface SoMaintanceService {
 	//更新订单中的装箱数量
 	public SoPackingUpdateResponse updateSoPackingDtl(SoPackingUpdateRequest request);
 	
-	public SoWlbcAndSoBingingResponse bingingWlbcAndSo(SoWlbcAndSoBingingRequest request);
+	//将wlbc与订单绑定
+	public SoWlbcAndSoBingingResponse updateSoWlbc(SoWlbcAndSoBingingRequest request);
 
 
     public ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse updateApplyHdrStatusForGenerateApprovalReturnOrder
@@ -51,11 +54,13 @@ public interface SoMaintanceService {
 	public SoConfirmTypeResponse updateSoConFirmType(SoConfirmTypeRequest request);
 	
 	//按wlbc更新订单状态
-	public SoStatusUpdateResponse updateSoStatus(SoStatusUpdateRequest request);
+	public SoStatusUpdateResponse updateSoStatusAndCancelQty(SoStatusUpdateRequest request);
 
+	//按so更新订单状态
+	public SoStatusUpdateSoOneResponse updateSoStatusAndCancelQtyOneSo(SoStatusUpdateSoOneRequest request);
+	
 	public SoShipQtyUpdateResponse updateSoShipQty(SoShipQtyUpdateRequest request);
 
 	public CheckSoShipQtyAndPackingQtyResponse checkSoShipQtyAndPackingQty(CheckSoShipQtyAndPackingQtyRequest request);
-	
 
 }
