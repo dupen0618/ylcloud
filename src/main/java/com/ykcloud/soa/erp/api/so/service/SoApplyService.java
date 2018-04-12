@@ -5,11 +5,13 @@ import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyTransferBetweenSh
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAfterGenerateReturnSoUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
+import com.ykcloud.soa.erp.api.so.request.SoReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.response.LastSalesDateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenShopGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAfterGenerateReturnSoUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
 
 /**
  * TODO（描述类的职责）
@@ -59,5 +61,11 @@ public interface SoApplyService {
 	* @Date: 2018/4/11 
 	*/ 
     public ReturnApplyAuditResponse auditReturnApply(ReturnApplyAuditRequest request);
-	
+    
+    /** 
+    * @Description: 领料退回审核
+    * @Author: fred.zhao
+    * @Date: 2018/4/12 
+    */ 
+	public SoReturnApplyAuditResponse auditSoReturnApply(SoReturnApplyAuditRequest request);
 }
