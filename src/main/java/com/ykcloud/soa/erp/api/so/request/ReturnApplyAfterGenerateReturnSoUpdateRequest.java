@@ -9,7 +9,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.so.model.ApplyDetail;
 
 /**
@@ -18,7 +18,7 @@ import com.ykcloud.soa.erp.api.so.model.ApplyDetail;
  *
  * @date 2018年4月12日上午10:42:44
  */
-public class ReturnApplyAfterGenerateReturnSoUpdateRequest extends AbstractRequest {
+public class ReturnApplyAfterGenerateReturnSoUpdateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 8658023881247190522L;
 	
@@ -31,8 +31,8 @@ public class ReturnApplyAfterGenerateReturnSoUpdateRequest extends AbstractReque
 	@ApiField(description = "订单日期")
 	private Date orderDate;
 
-	@NotEmpty(message = "配送审批单单号不能为空！")
-	@ApiField(description = "配送审批单单号")
+	@NotEmpty(message = "退货申请单号不能为空！")
+	@ApiField(description = "退货申请单号")
 	private String applyNumId;
 	
 	@NotEmpty(message = "申请单明细不能为空！")
