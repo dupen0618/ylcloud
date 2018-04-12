@@ -13,6 +13,6 @@ import com.ykcloud.soa.erp.api.wm.response.ReceiptForFiGetResponse;
 public interface WmReceiptForFiService {
 
 	//验收入库获取数据，供财务调用接口()
-	public List<ReceiptForFiGetResponse> getReceiptForBalance(ReceiptForFiGetRequest request);
+	public ReceiptForFiGetResponse getReceiptForBalance(ReceiptForFiGetRequest request);
 	
 }

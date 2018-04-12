@@ -30,11 +30,8 @@ public class ReceiptForFiGetRequest extends AbstractRequest{
 	@NotNull(message = "供应商编号不能为空！")
 	private Long supplyUnitNumId;
 	
-	/*@NotNull(message = "结算周期不能为空！")
-	private Long physicalNumId;*/
-	
-	/*@NotNull(message = "操作人ID不能为空！")
-	private Long userNumId;*/
+	@NotNull(message = "操作人ID不能为空！")
+	private Long userNumId;
 	
 
 	public Long getSubUnitNumId() {
@@ -85,14 +82,14 @@ public class ReceiptForFiGetRequest extends AbstractRequest{
 		this.physicalNumId = physicalNumId;
 	}*/
 
-	/*public Long getUserNumId() {
+	public Long getUserNumId() {
 		return userNumId;
 	}
 
 	public void setUserNumId(Long userNumId) {
 		this.userNumId = userNumId;
 	}
-*/
+
 	public Long getReservedNo() {
 		return reservedNo;
 	}
