@@ -1,13 +1,17 @@
 package com.ykcloud.soa.erp.api.scm.model;
 
+import java.io.Serializable;
+
 /**
  * 供应商确认明细
  * @author tz.x
  *
  * @date 2018年3月24日上午11:41:03
  */
-public class SupplyConfirmDtl {
+public class SupplyConfirmDtl  implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+
 	/**
 	 * 采购单供应商协同体行号
 	 */
