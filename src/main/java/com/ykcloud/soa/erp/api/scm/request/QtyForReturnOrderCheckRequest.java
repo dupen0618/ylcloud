@@ -8,12 +8,11 @@ import java.util.Date;
 
 /**
  * @Author: fred.zhao
- * @Description:配送数量检查
- * @Date: Created in 15:38:2018/4/11
+ * @Description:
+ * @Date: Created in 9:45:2018/4/12
  */
-public class QtyForDistributionApprovalOrderCheckRequest extends AbstractRequest {
-    private static final long serialVersionUID = -3039967510143413469L;
-
+public class QtyForReturnOrderCheckRequest extends AbstractRequest {
+    private static final long serialVersionUID = 1959720240255075837L;
     @NotNull(message = "门店编码不能为空！")
     private Long subUnitNumId;
 
@@ -25,27 +24,12 @@ public class QtyForDistributionApprovalOrderCheckRequest extends AbstractRequest
 
     private Double packageQty;
 
+    @NotNull(message = "出货仓库编号不能为空！")
+    private Long storageNumId;//出货仓库编号
     @NotNull(message = "件装数不能为空！")
     private Double conversionQty;//件装数
     @NotNull(message = "商品编号不能为空！")
     private Long itemNumId;
-
-
-    public Long getItemNumId() {
-        return itemNumId;
-    }
-
-    public void setItemNumId(Long itemNumId) {
-        this.itemNumId = itemNumId;
-    }
-
-    public Double getConversionQty() {
-        return conversionQty;
-    }
-
-    public void setConversionQty(Double conversionQty) {
-        this.conversionQty = conversionQty;
-    }
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -79,4 +63,27 @@ public class QtyForDistributionApprovalOrderCheckRequest extends AbstractRequest
         this.packageQty = packageQty;
     }
 
+    public Long getStorageNumId() {
+        return storageNumId;
+    }
+
+    public void setStorageNumId(Long storageNumId) {
+        this.storageNumId = storageNumId;
+    }
+
+    public Double getConversionQty() {
+        return conversionQty;
+    }
+
+    public void setConversionQty(Double conversionQty) {
+        this.conversionQty = conversionQty;
+    }
+
+    public Long getItemNumId() {
+        return itemNumId;
+    }
+
+    public void setItemNumId(Long itemNumId) {
+        this.itemNumId = itemNumId;
+    }
 }
