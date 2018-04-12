@@ -3,7 +3,7 @@ package com.ykcloud.soa.erp.api.wm.response;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.wm.model.ZMProduct;
 
-public class ProductZMGetResponse extends MessagePack {
+public class ProductChangeGetResponse extends MessagePack {
 
     private static final long serialVersionUID = 1L;
 
