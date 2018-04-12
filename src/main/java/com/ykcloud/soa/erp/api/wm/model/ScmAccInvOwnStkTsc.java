@@ -257,4 +257,20 @@ public class ScmAccInvOwnStkTsc implements Serializable {
     public void setBillTypeNumId(String billTypeNumId) {
         this.billTypeNumId = billTypeNumId;
     }
+
+    public Long getTenantNumId() {
+        return tenantNumId;
+    }
+
+    public void setTenantNumId(Long tenantNumId) {
+        this.tenantNumId = tenantNumId;
+    }
+
+    public Long getDataSign() {
+        return dataSign;
+    }
+
+    public void setDataSign(Long dataSign) {
+        this.dataSign = dataSign;
+    }
 }

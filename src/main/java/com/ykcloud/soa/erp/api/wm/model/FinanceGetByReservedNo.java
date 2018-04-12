@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * Created by yiako on 2018/4/7
  */
-public class PhysicsGetByReservedNo implements Serializable {
+public class FinanceGetByReservedNo implements Serializable {
 
     private Long subUnitNumId;//门店
 
