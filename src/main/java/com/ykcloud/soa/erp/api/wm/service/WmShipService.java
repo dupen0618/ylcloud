@@ -33,16 +33,16 @@ import com.ykcloud.soa.erp.api.wm.response.WmfinishPackingResponse;
 public interface WmShipService {
 
 		//后六位模糊查询波次号
-		public WmWlBcHdrGetResponse getWlbcHdr(WmWlBcHdrGetRequest request);
+		public WmWlBcHdrGetResponse getWlbc(WmWlBcHdrGetRequest request);
 		
 		//扫描商品条码
-		public WmDataByBarcodeGetResponse getDataByBarcode(WmDataByBarcodeGetRequest request);
+		public WmDataByBarcodeGetResponse getWlbcProductByBarcode(WmDataByBarcodeGetRequest request);
 		
 		//创建出库托盘
-		public WmContainerHdrCreateResponse createShipContainerHdr(WmContainerHdrCreateRequest request);
+		public WmContainerHdrCreateResponse createShipContainer(WmContainerHdrCreateRequest request);
 		
 		//查询出库装箱单(soNumId,containerSerlno)
-		public WmQuerySoAndContainerResponse getWmQuerySoAndContainer(WmQuerySoAndContainerRequest request);
+		public WmQuerySoAndContainerResponse getShipContainer(WmQuerySoAndContainerRequest request);
 		
 		//播种动作更新订单数据
 		public WmShipDtlWithNoBatchUpdateResponse  updateShipPacking(WmShipDtlWithNoBatchUpdateRequest request);
@@ -52,29 +52,31 @@ public interface WmShipService {
 		//public void updateShipContainerLab(Long tenantNumId,Long dataSign,Long subUnitNumId,Date orderDate,Double bzNum,Long containerSerlno,Long solineId,Long cancelSign);
 		
 		//装箱完成
-		public WmFinishShipContainerHdrResponse finishShipContainerHdr(WmFinishShipContainerHdrRequest request);
+		public WmFinishShipContainerHdrResponse finishShipContainer(WmFinishShipContainerHdrRequest request);
 		
 		//播种完成
-		public WmFinishSoPackingResponse finishSoPacking(WmFinishSoPackingRequest requst);
+		public WmFinishSoPackingResponse finishWlbcPacking(WmFinishSoPackingRequest requst);
 		
 		//模糊查询订单号，如果该订单没有波次号，那么自动生成该波次
-		public WmSoHdrGetResponse getSoHdrAndCreateWlbc(WmSoHdrGetRequest request);
+		public WmSoHdrGetResponse getShipSo(WmSoHdrGetRequest request);
 		
 		//装箱复核扫描条码获取订单信息
-		public WmDataGetDataByBarcodeAndSoNumIdResponse getDataByBarcodeAndSoNumId(WmDataGetDataByBarcodeAndSoNumIdRequest request);
+		public WmDataGetDataByBarcodeAndSoNumIdResponse getShipSoProductByBarcode(WmDataGetDataByBarcodeAndSoNumIdRequest request);
 		
 		//订单装箱完成
-		public WmfinishPackingResponse finishPacking(WmfinishPackingRequest request);
+		public WmfinishPackingResponse finishSoPacking(WmfinishPackingRequest request);
 		
 		//创建波次单头
-		public WmWlbcHdrCreateResponse createWlbcHdr(WmWlbcHdrCreateRequest request);
+		public WmWlbcHdrCreateResponse createWlbc(WmWlbcHdrCreateRequest request);
 		
 		//获取交接单号
-		public WmShipGetResponse getShip(WmShipGetRequest request);
+		public WmShipGetResponse createShipByContainer(WmShipGetRequest request);
 		
 		//扫装箱单产生交接单
 		public WmScanShipContainerHdrResponse scanShipContainer(WmScanShipContainerRequest request);
 		
 		//出库完成
-		public WmShipFinishResponse finishShipHdr(WmShipFinishRequest request);
+		public WmShipFinishResponse finishShip(WmShipFinishRequest request);
+		
+		//SO订单出库
 }
