@@ -34,11 +34,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.ykcloud.soa</groupId>
-			<artifactId>erp-common</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>com.gb.soa</groupId>
 			<artifactId>omp_ccache_api</artifactId>
 		</dependency>
