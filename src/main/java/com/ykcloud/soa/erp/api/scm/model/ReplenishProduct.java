@@ -11,6 +11,8 @@ public class ReplenishProduct implements Serializable {
 
 	private String itemName;// 商品名称
 
+	private String itemid;// 商家编号
+
 	private String barcode;// 条码
 
 	private Long divNumId;// 部类
@@ -126,6 +128,14 @@ public class ReplenishProduct implements Serializable {
 	private String supplyContractCheckMessage;
 
 	private Long purchaseTypeNumId; // 采购途径 1:国内 2 国际
+
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
 
 	public Long getItemNumId() {
 		return itemNumId;
