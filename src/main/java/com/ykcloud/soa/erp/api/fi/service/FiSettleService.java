@@ -6,17 +6,19 @@ import com.ykcloud.soa.erp.api.fi.request.BalanceDtlByReceiptGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BillAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.DeductionDtlForBalanceDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.DeductionForCanBalanceGetRequest;
+import com.ykcloud.soa.erp.api.fi.request.PaymentAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.ProductDtlForBalanceDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.ReceiptDtilsForCanBalanceGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.SupplyByBalanceDataGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.SupplyByBalanceDeductionFlushRequest;
-import com.ykcloud.soa.erp.api.fi.response.DeductionForCanBalanceGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.ProductDtlForBalanceDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDtlByDeductionGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDtlByReceiptGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BillAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.DeductionDtlForBalanceDeleteResponse;
+import com.ykcloud.soa.erp.api.fi.response.DeductionForCanBalanceGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.PaymentAuditResponse;
+import com.ykcloud.soa.erp.api.fi.response.ProductDtlForBalanceDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.ReceiptDtilsForCanBalanceGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.SupplyByBalanceDataGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.SupplyByBalanceDeductionFlushResponse;
@@ -58,5 +60,7 @@ public interface FiSettleService {
 	//到票发票审核
 	public BillAuditResponse auditBill(BillAuditRequest request);
 
+	//付款审核
+	public PaymentAuditResponse auditPayment(PaymentAuditRequest request);
 	
 }

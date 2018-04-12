@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
- * @Description:生成结算数据
+ * @Description:供应商结算生成结算单数据
  * @author Song
  * @Date 2018年4月4日 下午1:47:35
  */
@@ -19,10 +19,7 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
-	
-/*	@NotNull(message = "供应商编号不能为空！")
-	private Long unitNumId;
-*/
+
 	@JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private String startDate;
@@ -33,22 +30,29 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
-	
-	/*@NotNull(message = "结算周期不能为空！")
-	private Date balanceDate;
-*/	
+		
 	@NotNull(message = "操作人ID不能为空！")
 	private Long userNumId;
-	
-/*	@NotNull(message = "结算单号不能为空！")
-	private Long balanceNo;
-*/	
+
 	@NotNull(message = "供应商不能为空！")
 	private Long supplyUnitNumId;
 	
 	@NotNull(message = "单据编号不能为空！")
 	private Long ReservedNo;
 	
+
+	@NotNull(message = "结算单号不能为空！")
+	private Long balanceNo;
+
+	
+	public Long getBalanceNo() {
+		return balanceNo;
+	}
+
+	public void setBalanceNo(Long balanceNo) {
+		this.balanceNo = balanceNo;
+	}
+
 	public Long getReservedNo() {
 		return ReservedNo;
 	}
