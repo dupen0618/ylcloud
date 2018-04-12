@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.ykcloud.soa.erp.api.so.model.ApplySeries;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -29,7 +30,7 @@ public class ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest extends A
     private String applyNumId;
 
     @NotNull(message = "申请单身序号不能为空！")
-    private Map<String,List<String>> approvalMap;
+    private List<ApplySeries> applySeriesList;
 
     @NotNull(message = "退货审批单号不能为空！")
     private String approvalNumId;
@@ -58,12 +59,12 @@ public class ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest extends A
         this.applyNumId = applyNumId;
     }
 
-    public Map<String, List<String>> getApprovalMap() {
-        return approvalMap;
+    public List<ApplySeries> getApplySeriesList() {
+        return applySeriesList;
     }
 
-    public void setApprovalMap(Map<String, List<String>> approvalMap) {
-        this.approvalMap = approvalMap;
+    public void setApplySeriesList(List<ApplySeries> applySeriesList) {
+        this.applySeriesList = applySeriesList;
     }
 
     public String getApprovalNumId() {
