@@ -25,7 +25,7 @@ public class SoPackingUpdateRequest extends AbstractRequest {
 	private String subUnitNumId;
 
 	@NotNull(message = "订单明细行号不能为空!")
-	private Long soLineId;
+	private String soLineId;
 	
 	private Date orderDate;
 
@@ -54,11 +54,12 @@ public class SoPackingUpdateRequest extends AbstractRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Long getSoLineId() {
+
+	public String getSoLineId() {
 		return soLineId;
 	}
 
-	public void setSoLineId(Long soLineId) {
+	public void setSoLineId(String soLineId) {
 		this.soLineId = soLineId;
 	}
 

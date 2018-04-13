@@ -9,17 +9,17 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class WmContainerHdrCreateResponse extends MessagePack {
 	//托盘号
-	private Long containerSerlno;
+	private String containerSerlno;
 	
 	//托盘标识
 	private String contianerLabserlno;
 	
 
-	public Long getContainerSerlno() {
+	public String getContainerSerlno() {
 		return containerSerlno;
 	}
 
-	public void setContainerSerlno(Long containerSerlno) {
+	public void setContainerSerlno(String containerSerlno) {
 		this.containerSerlno = containerSerlno;
 	}
 

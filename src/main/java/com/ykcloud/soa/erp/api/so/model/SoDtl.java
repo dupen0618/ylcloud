@@ -10,15 +10,15 @@ public class SoDtl implements Serializable {
 		 */
 		private static final long serialVersionUID = 1059899986268951129L;
 
-		private Long series;
+		private String series;
 		
 		//订单ID
-		private Long soNumId;
+		private String soNumId;
 		
 		private Long tenantNumId;
 		
 		//商户ID
-		private Long subUnitNumId;
+		private String subUnitNumId;
 		
 		private Long ordSubUnitNumId;
 		
@@ -63,7 +63,7 @@ public class SoDtl implements Serializable {
 		
 		private Long receiptLine;
 		
-		private Long receiptNo;
+		private String receiptNo;
 		
 		private Long tmlNumId;
 		
@@ -101,19 +101,19 @@ public class SoDtl implements Serializable {
 		
 		private Date lastUpdtme;
 
-		public Long getSeries() {
+		public String getSeries() {
 			return series;
 		}
 
-		public void setSeries(Long series) {
+		public void setSeries(String series) {
 			this.series = series;
 		}
 
-		public Long getSoNumId() {
+		public String getSoNumId() {
 			return soNumId;
 		}
 
-		public void setSoNumId(Long soNumId) {
+		public void setSoNumId(String soNumId) {
 			this.soNumId = soNumId;
 		}
 
@@ -125,11 +125,11 @@ public class SoDtl implements Serializable {
 			this.tenantNumId = tenantNumId;
 		}
 
-		public Long getSubUnitNumId() {
+		public String getSubUnitNumId() {
 			return subUnitNumId;
 		}
 
-		public void setSubUnitNumId(Long subUnitNumId) {
+		public void setSubUnitNumId(String subUnitNumId) {
 			this.subUnitNumId = subUnitNumId;
 		}
 
@@ -204,7 +204,6 @@ public class SoDtl implements Serializable {
 		public void setProductOriginNumId(Long productOriginNumId) {
 			this.productOriginNumId = productOriginNumId;
 		}
-
 
 		public Double getConversionQty() {
 			return conversionQty;
@@ -302,11 +301,11 @@ public class SoDtl implements Serializable {
 			this.receiptLine = receiptLine;
 		}
 
-		public Long getReceiptNo() {
+		public String getReceiptNo() {
 			return receiptNo;
 		}
 
-		public void setReceiptNo(Long receiptNo) {
+		public void setReceiptNo(String receiptNo) {
 			this.receiptNo = receiptNo;
 		}
 
@@ -316,6 +315,14 @@ public class SoDtl implements Serializable {
 
 		public void setTmlNumId(Long tmlNumId) {
 			this.tmlNumId = tmlNumId;
+		}
+
+		public Long getTmlLine() {
+			return tmlLine;
+		}
+
+		public void setTmlLine(Long tmlLine) {
+			this.tmlLine = tmlLine;
 		}
 
 		public Long getLocPtyNumId() {
@@ -445,17 +452,6 @@ public class SoDtl implements Serializable {
 		public void setLastUpdtme(Date lastUpdtme) {
 			this.lastUpdtme = lastUpdtme;
 		}
-
-		public Long getTmlLine() {
-			return tmlLine;
-		}
-
-		public void setTmlLine(Long tmlLine) {
-			this.tmlLine = tmlLine;
-		}
-		
-		
-		
 
 		
 	

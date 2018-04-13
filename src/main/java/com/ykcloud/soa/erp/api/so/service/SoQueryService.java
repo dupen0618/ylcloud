@@ -12,6 +12,7 @@ import com.ykcloud.soa.erp.api.so.request.SoBySoNumIdAndItemNumIdGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoNumIdOneRequest;
+import com.ykcloud.soa.erp.api.so.request.SoSettlementTypeGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusOfWlbcRequest;
 import com.ykcloud.soa.erp.api.so.request.SupplyToReturnAmoutGetRequest;
 import com.ykcloud.soa.erp.api.so.response.DemandSaleStatisticGetResponse;
@@ -26,6 +27,7 @@ import com.ykcloud.soa.erp.api.so.response.SoBySoNumIdAndItemNumIdGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoNumIdOneResponse;
+import com.ykcloud.soa.erp.api.so.response.SoSettlementTypeGetResonse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusOfWlbcResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyToReturnAmoutGetResponse;
 import com.ykcloud.soa.erp.api.wm.request.SoLockQtyByWlbcRequest;
@@ -82,4 +84,7 @@ public interface SoQueryService {
 
     //check一个wlbc号下面所有的订单status是否为8(完全出库)
     public SoStatusOfWlbcResponse checkSoStatusOfWlbc(SoStatusOfWlbcRequest request);
+    
+    //根据sonumid获取该订单的销售方式，购销，代销，联销
+    public SoSettlementTypeGetResonse getSoSettlementType(SoSettlementTypeGetRequest request);
 }

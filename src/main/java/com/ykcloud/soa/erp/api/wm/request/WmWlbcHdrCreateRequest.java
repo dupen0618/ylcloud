@@ -2,50 +2,32 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import java.util.Date;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 
-public class WmWlbcHdrCreateRequest extends AbstractRequest {
+public class WmWlbcHdrCreateRequest extends AbstractSessionRequest {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 95011086979848977L;
+	  private static final long serialVersionUID = 95011086979848977L;
 	
-	private Long tenantNumId;
-	
-	private String subUnitNumId;
-	
-	//private Date wlbcDate;
-	
-	private Long statusNumId;
-	
-	private Long soFromType;
-	
-	private Long typeNumId;
-	
-	private Long stotageNumId;
-	
-	private Long physicalNumId;
-	
-	private Date deliveryDate;
-	
-	private String remark;
-	
-	private Long createUserId;
-	
-	private Long lastUpdateUserId;
-	
-	private Long carrySign;
-	
-	private Long dataSign;
-
-	public Long getTenantNumId() {
-		return tenantNumId;
-	}
-
-	public void setTenantNumId(Long tenantNumId) {
-		this.tenantNumId = tenantNumId;
-	}
+	  private String subUnitNumId;
+	  
+	  private Date wlbcDate;
+	  
+	  private Long statusNumId;
+	  
+	  private Long soFromType;
+	  
+	  private Long typeNumId;
+	  
+	  private Long stotageNumId;
+	  
+	  private Long physicalNumId;
+	  
+	  private Date deliveryDate;
+	  
+	  private String remark;
 
 	public String getSubUnitNumId() {
 		return subUnitNumId;
@@ -55,6 +37,13 @@ public class WmWlbcHdrCreateRequest extends AbstractRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
+	public Date getWlbcDate() {
+		return wlbcDate;
+	}
+
+	public void setWlbcDate(Date wlbcDate) {
+		this.wlbcDate = wlbcDate;
+	}
 
 	public Long getStatusNumId() {
 		return statusNumId;
@@ -111,39 +100,7 @@ public class WmWlbcHdrCreateRequest extends AbstractRequest {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-
-	public Long getCreateUserId() {
-		return createUserId;
-	}
-
-	public void setCreateUserId(Long createUserId) {
-		this.createUserId = createUserId;
-	}
-
-	public Long getLastUpdateUserId() {
-		return lastUpdateUserId;
-	}
-
-	public void setLastUpdateUserId(Long lastUpdateUserId) {
-		this.lastUpdateUserId = lastUpdateUserId;
-	}
-
-	public Long getDataSign() {
-		return dataSign;
-	}
-
-	public void setDataSign(Long dataSign) {
-		this.dataSign = dataSign;
-	}
-
-	public Long getCarrySign() {
-		return carrySign;
-	}
-
-	public void setCarrySign(Long carrySign) {
-		this.carrySign = carrySign;
-	}
-	
-	
+	  
+	  
 
 }
