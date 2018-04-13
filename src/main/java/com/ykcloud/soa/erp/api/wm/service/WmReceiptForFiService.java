@@ -2,9 +2,9 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForFiGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptUpdateStatusRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptStatusUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForFiGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptUpdateStatusResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptStatusUpdateResponse;
 
 /**
  * @Description:
@@ -17,6 +17,6 @@ public interface WmReceiptForFiService {
 	public ReceiptForFiGetResponse getReceiptForBalance(ReceiptForFiGetRequest request);
 	
 	//取结算数据，插入数据之后原表中商品状态改变
-	public ReceiptUpdateStatusResponse updateStatusForBalance(ReceiptUpdateStatusRequest request);
+	public ReceiptStatusUpdateResponse updateStatusForBalance(ReceiptStatusUpdateRequest request);
 
 }

@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class ReceiptUpdateStatusRequest extends AbstractRequest  {
+public class ReceiptStatusUpdateRequest extends AbstractRequest  {
 
 	private static final long serialVersionUID = -5195355820358295113L;
 
