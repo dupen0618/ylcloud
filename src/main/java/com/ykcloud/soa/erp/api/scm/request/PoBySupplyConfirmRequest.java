@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.scm.model.SupplyConfirmDtl;
 
 /**
@@ -17,7 +17,7 @@ import com.ykcloud.soa.erp.api.scm.model.SupplyConfirmDtl;
  *
  * @date 2018年3月24日上午11:30:02
  */
-public class PoBySupplyConfirmRequest extends AbstractRequest {
+public class PoBySupplyConfirmRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 2626180051596876648L;
 	

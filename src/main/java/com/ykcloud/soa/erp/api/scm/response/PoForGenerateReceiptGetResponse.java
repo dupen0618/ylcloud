@@ -18,6 +18,11 @@ public class PoForGenerateReceiptGetResponse extends MessagePack {
 	private static final long serialVersionUID = 8560296643393530581L;
 	
 	/**
+	 * 采购途径 1国内 2国际
+	 */
+	private Long purchaseTypeNumId;
+	
+	/**
 	 * 供应商确认生产日期
 	 */
 	private String supProduceDate;
@@ -66,6 +71,14 @@ public class PoForGenerateReceiptGetResponse extends MessagePack {
 	 * 供应商协同明细列表
 	 */
 	private List<PoSupDtlForGenerateReceipt> poSupDtls;
+
+	public Long getPurchaseTypeNumId() {
+		return purchaseTypeNumId;
+	}
+
+	public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
+		this.purchaseTypeNumId = purchaseTypeNumId;
+	}
 
 	public String getSupProduceDate() {
 		return supProduceDate;

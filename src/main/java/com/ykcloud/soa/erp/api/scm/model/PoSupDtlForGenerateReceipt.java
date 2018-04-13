@@ -12,6 +12,11 @@ import java.io.Serializable;
 public class PoSupDtlForGenerateReceipt implements Serializable {
 	
 	private static final long serialVersionUID = 3160059492005298596L;
+	
+	/**
+	 * 商品商家编码
+	 */
+	private String itemid;
 
 	/**
 	 * 促销档期，来自采购单身，暂不用，扩展用
@@ -97,6 +102,14 @@ public class PoSupDtlForGenerateReceipt implements Serializable {
 	 * 税金
 	 */
 	private Double taxAmount;
+
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
 
 	public String getPromotionGrade() {
 		return promotionGrade;
