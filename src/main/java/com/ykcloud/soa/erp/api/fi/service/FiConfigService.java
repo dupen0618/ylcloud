@@ -9,5 +9,5 @@ import java.util.List;
  * @Date 2018/3/27 17:10
  */
 public interface FiConfigService {
-    List<ExArcAccountFieldconfig> getExArcAccountFieldconfigByAccountName(String accountName);
+    List<ExArcAccountFieldconfig> getExArcAccountFieldconfigByAccountName(String accountName,Long dataSign);
 }

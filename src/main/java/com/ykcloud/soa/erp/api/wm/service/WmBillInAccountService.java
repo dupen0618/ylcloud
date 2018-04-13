@@ -3,8 +3,7 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.AffectRowsResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmBillInAccountResponse;
-
-import java.lang.reflect.InvocationTargetException;
+import com.ykcloud.soa.erp.api.wm.response.WmReceiptInAccountResponse;
 
 /**
  * @Author Hewei
@@ -54,6 +53,7 @@ public interface WmBillInAccountService {
     WmBillInAccountResponse ReceiptInAccountPhysicalDailyGAService(WmBillInAccountRequest wmBillInAccountRequest);
     //物理仓月进销存
     WmBillInAccountResponse ReceiptInAccountPhysicalMonthGAService(WmBillInAccountRequest wmBillInAccountRequest);
-
-
+    //财务库存处理-(批次库存日月进销存+商品成本)
+    //验收入库单
+    WmReceiptInAccountResponse setReceiptInAccountService(WmReceiptInAccountRequest request);
 }

@@ -1,25 +1,20 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
-import com.ykcloud.soa.erp.api.wm.model.ScmAccInvOwnStkTsc;
 
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 /**
  * @Author Hewei
- * @Date 2018/3/28 11:54
+ * @Date 2018/4/10 9:49
  */
-public class WmBillInAccountRequest extends AbstractUserSessionRequest {
-
+public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
     @NotNull(message = "订单编号不能为空！")
     String reservedNo;
     @NotNull(message = "单据类型不能为空！")
     String typeNum;
 
-    public List<ScmAccInvOwnStkTsc> scmAccInvOwnStkTscs;
-
-
+    String balaFuncId;
     public String getReservedNo() {
         return reservedNo;
     }
@@ -36,11 +31,11 @@ public class WmBillInAccountRequest extends AbstractUserSessionRequest {
         this.typeNum = typeNum;
     }
 
-    public List<ScmAccInvOwnStkTsc> getScmAccInvOwnStkTscs() {
-        return scmAccInvOwnStkTscs;
+    public String getBalaFuncId() {
+        return balaFuncId;
     }
 
-    public void setScmAccInvOwnStkTscs(List<ScmAccInvOwnStkTsc> scmAccInvOwnStkTscs) {
-        this.scmAccInvOwnStkTscs = scmAccInvOwnStkTscs;
+    public void setBalaFuncId(String balaFuncId) {
+        this.balaFuncId = balaFuncId;
     }
 }
