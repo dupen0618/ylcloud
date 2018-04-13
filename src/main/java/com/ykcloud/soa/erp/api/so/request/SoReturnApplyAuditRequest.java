@@ -20,7 +20,7 @@ public class SoReturnApplyAuditRequest  extends AbstractUserSessionRequest{
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date orderDate;// 日期，格式：yyyy-mm-dd
 
-    @NotNull(message = "退货申请单号不能为空！")
+    @NotNull(message = "退回仓库申请单号不能为空！")
     private String applyNumId;
 
     public Long getSubUnitNumId() {
