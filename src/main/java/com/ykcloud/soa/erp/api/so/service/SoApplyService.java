@@ -5,12 +5,14 @@ import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyTransferBetweenSh
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAfterGenerateReturnSoUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
+import com.ykcloud.soa.erp.api.so.request.ShopTransferByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.SoReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.response.LastSalesDateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenShopGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAfterGenerateReturnSoUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.ShopTransferByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
 
 /**
@@ -20,6 +22,15 @@ import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
  * @version <b>1.0.0</b>
  */
 public interface SoApplyService {
+	
+	/**
+	 * 店间调拨制单确认
+	 * @author tz.x
+	 * @date 2018年4月13日下午1:09:15
+	 * @param 
+	 * @return
+	 */
+	public ShopTransferByAuthorConfirmResponse confirmShopTransferByAuthor(ShopTransferByAuthorConfirmRequest request);
 	
 	/**
 	 * 产生退货so回写退审批单后再回写退货申请单so_num_id及订单数量

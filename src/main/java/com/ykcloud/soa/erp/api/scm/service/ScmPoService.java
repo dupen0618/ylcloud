@@ -49,7 +49,7 @@ public interface ScmPoService {
 	public PoBySupplyConfirmResponse confirmPoBySupply(PoBySupplyConfirmRequest request);
 	
 	/**
-	 * 通过订货审批单获取采购单号
+	 * 通过订货审批单生成采购单
 	 * @author tz.x
 	 * @date 2018年3月21日下午3:32:00
 	 * @param 
