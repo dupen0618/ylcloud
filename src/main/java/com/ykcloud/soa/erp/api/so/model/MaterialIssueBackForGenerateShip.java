@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.so.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,10 +26,30 @@ public class MaterialIssueBackForGenerateShip implements Serializable {
 
     private String originReservedNo;//源出库单编号
 
+    private Date originShipDate;
+
     private String remark;//备注
+
+    private Long statusNumId;//状态
 
     private List<ReturnApplyDtl> returnApplyDtlList;
 
+
+    public Date getOriginShipDate() {
+        return originShipDate;
+    }
+
+    public void setOriginShipDate(Date originShipDate) {
+        this.originShipDate = originShipDate;
+    }
+
+    public Long getStatusNumId() {
+        return statusNumId;
+    }
+
+    public void setStatusNumId(Long statusNumId) {
+        this.statusNumId = statusNumId;
+    }
 
     public String getApplyNumId() {
         return applyNumId;

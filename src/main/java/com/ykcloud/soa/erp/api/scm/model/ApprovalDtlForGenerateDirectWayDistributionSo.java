@@ -6,7 +6,7 @@ public class ApprovalDtlForGenerateDirectWayDistributionSo implements Serializab
 	
 	private static final long serialVersionUID = 1L;
 
-	
+
 	
     private Long ordSubUnitNumId; //订货门店
     
