@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -33,6 +35,17 @@ public class ReceiptForFiGetRequest extends AbstractRequest{
 	@NotNull(message = "操作人ID不能为空！")
 	private Long userNumId;
 	
+	@NotNull(message = "操作日期不能为空！")
+	private Date createDate;
+	
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;

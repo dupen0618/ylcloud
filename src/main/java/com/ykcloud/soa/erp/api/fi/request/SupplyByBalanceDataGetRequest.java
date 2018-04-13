@@ -33,6 +33,9 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 		
 	@NotNull(message = "操作人ID不能为空！")
 	private Long userNumId;
+	
+	@NotNull(message = "操作日期不能为空！")
+	private Date creatDate;
 
 	@NotNull(message = "供应商不能为空！")
 	private Long supplyUnitNumId;
@@ -43,8 +46,26 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 
 	@NotNull(message = "结算单号不能为空！")
 	private Long balanceNo;
-
 	
+	@NotNull(message = "行号不能为空！")
+	private Long series;
+
+	public Date getCreatDate() {
+		return creatDate;
+	}
+
+	public void setCreatDate(Date creatDate) {
+		this.creatDate = creatDate;
+	}
+
+	public Long getSeries() {
+		return series;
+	}
+
+	public void setSeries(Long series) {
+		this.series = series;
+	}
+
 	public Long getBalanceNo() {
 		return balanceNo;
 	}
