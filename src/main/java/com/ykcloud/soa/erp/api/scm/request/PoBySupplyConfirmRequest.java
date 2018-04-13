@@ -41,11 +41,11 @@ public class PoBySupplyConfirmRequest extends AbstractUserSessionRequest {
 	private String poNumId;
 	
 	/**
-	 * 确认日期
+	 * 供应商确认日期
 	 */
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "确认日期不能为空！")
-	private Date confirmDate;
+	private Date supConfirmDate;
 	
 	/**
 	 * 供应商确认明细列表
@@ -77,12 +77,12 @@ public class PoBySupplyConfirmRequest extends AbstractUserSessionRequest {
 		this.poNumId = poNumId;
 	}
 
-	public Date getConfirmDate() {
-		return confirmDate;
+	public Date getSupConfirmDate() {
+		return supConfirmDate;
 	}
 
-	public void setConfirmDate(Date confirmDate) {
-		this.confirmDate = confirmDate;
+	public void setSupConfirmDate(Date supConfirmDate) {
+		this.supConfirmDate = supConfirmDate;
 	}
 
 	public List<SupplyConfirmDtl> getSupplyConfimDtls() {

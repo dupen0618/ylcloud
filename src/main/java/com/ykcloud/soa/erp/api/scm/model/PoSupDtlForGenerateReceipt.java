@@ -14,6 +14,11 @@ public class PoSupDtlForGenerateReceipt implements Serializable {
 	private static final long serialVersionUID = 3160059492005298596L;
 	
 	/**
+	 * 供应商确认生产日期
+	 */
+	private String supProduceDate;
+	
+	/**
 	 * 商品商家编码
 	 */
 	private String itemid;
@@ -102,6 +107,14 @@ public class PoSupDtlForGenerateReceipt implements Serializable {
 	 * 税金
 	 */
 	private Double taxAmount;
+
+	public String getSupProduceDate() {
+		return supProduceDate;
+	}
+
+	public void setSupProduceDate(String supProduceDate) {
+		this.supProduceDate = supProduceDate;
+	}
 
 	public String getItemid() {
 		return itemid;
