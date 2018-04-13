@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.fi.request;
+package com.ykcloud.soa.erp.api.wm.request;
 
 import javax.validation.constraints.NotNull;
 
@@ -9,11 +9,10 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 /**
 *仓库收货,财务帐处理请求类
 @author hank.zhu
-@date 2018年4月12日 上午7:24:13 新建
+@date 2018年4月13日 下午4:51:50 新建
 **/
-public class WmReceiptFiBillUpdateRequest extends AbstractUserSessionRequest {
-	private static final long serialVersionUID = 6923661216035655759L;
-	
+public class ReceiptFinanceAccountUpdateRequest extends AbstractUserSessionRequest {
+	private static final long serialVersionUID = 7732775823579481518L;
 	@NotEmpty(message="门店编号不能为空!")
 	private Long subUnitNumId;
 	@NotNull(message="验收单号不能为空!")
@@ -30,5 +29,4 @@ public class WmReceiptFiBillUpdateRequest extends AbstractUserSessionRequest {
 	public void setReservedNO(String reservedNO) {
 		this.reservedNO = reservedNO;
 	}
-
 }
