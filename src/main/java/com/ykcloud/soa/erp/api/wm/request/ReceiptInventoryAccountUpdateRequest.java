@@ -11,7 +11,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 @author hank.zhu
 @date 2018年4月12日 上午6:58:09 新建
 **/
-public class WmReceiptInventoryBillUpdateRequest extends AbstractUserSessionRequest {
+public class ReceiptInventoryAccountUpdateRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = -4804228244059578778L;
 	
 	@NotEmpty(message="验收单号不能为空!")
