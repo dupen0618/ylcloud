@@ -1,6 +1,13 @@
 package com.ykcloud.soa.erp.api.so.model;
 
-public class GroupNumIdAndItemNumId {
+import java.io.Serializable;
+
+public class GroupNumIdAndItemNumId implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private Long groupNumId; // 组号
 
 	private Long itemNumId; // 商品编号
