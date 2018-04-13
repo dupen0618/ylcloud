@@ -1,6 +1,11 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
-public class BatchPrice {
+import java.io.Serializable;
+
+public class BatchPrice implements Serializable {
+	
+	private static final long serialVersionUID = -6781665813773667602L;
+
 	private Double price;
 
 	private Double taxRate;
