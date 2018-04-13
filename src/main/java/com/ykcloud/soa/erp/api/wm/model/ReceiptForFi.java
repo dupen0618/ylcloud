@@ -5,6 +5,9 @@ import java.util.Date;
 
 public class ReceiptForFi implements Serializable{
 	private static final long serialVersionUID = 1L;
+	
+	private Long series;//行号
+	
 	private Long reservedNo;//验收单号单号
 	
 	private Long tenantNumId;//租户
@@ -52,6 +55,16 @@ public class ReceiptForFi implements Serializable{
 	private Long lastUpdateUserId;//更新人
 
 	private Date createDtme;//创建时间
+	
+	
+
+	public Long getSeries() {
+		return series;
+	}
+
+	public void setSeries(Long series) {
+		this.series = series;
+	}
 
 	public Long getReservedNo() {
 		return reservedNo;
