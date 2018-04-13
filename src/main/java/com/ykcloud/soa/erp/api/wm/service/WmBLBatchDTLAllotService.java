@@ -8,6 +8,8 @@ import com.ykcloud.soa.erp.api.wm.response.WmBLBatchDTLAllotResponse;
  * @Date 2018/4/9 9:18
  */
 public interface WmBLBatchDTLAllotService {
-    //单据批次分配--出库单
+    //单据批次分配--出库单(暂时不用)
     WmBLBatchDTLAllotResponse updateBatchDtlByShip(WmBLBatchDTLAllotRequest request);
+    //单据批次分配--出库单(使用)
+    WmBLBatchDTLAllotResponse updateBatchDtlByContainer(WmBLBatchDTLAllotRequest request);
 }

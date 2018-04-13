@@ -9,5 +9,5 @@ import java.util.List;
  * @Date 2018/4/2 16:40
  */
 public interface FiExArcAccountFieldconfigService {
-    List<ExArcAccountFieldconfig> getExArcAccountFieldconfigByAccountName(String accountName);
+    List<ExArcAccountFieldconfig> getExArcAccountFieldconfigByAccountName(String accountName,Long dataSign);
 }
