@@ -6,6 +6,7 @@ import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemQtyStockCheckInputRequest;
 import com.ykcloud.soa.erp.api.wm.request.OmitCheckProductListQueryRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockAdjustCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckCancelRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckFirstFinishRequest;
@@ -19,6 +20,7 @@ import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeScanResponse;
 import com.ykcloud.soa.erp.api.wm.response.OmitCheckProductListQueryResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockAdjustCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckCancelResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckFirstFinishResponse;
@@ -165,4 +167,13 @@ public interface WmStockCheckService {
      */
     StockCheckCancelResponse cancelStockCheck(
         StockCheckCancelRequest request);
+
+    /**
+     * 生成盘盈盘亏单
+     *
+     * @param request
+     * @return
+     */
+    StockAdjustCreateResponse createStockAdjust(
+        StockAdjustCreateRequest request);
 }
