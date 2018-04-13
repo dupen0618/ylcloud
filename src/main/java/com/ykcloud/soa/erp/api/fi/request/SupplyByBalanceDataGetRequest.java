@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
- * @Description:生成结算数据
+ * @Description:供应商结算生成结算单数据
  * @author Song
  * @Date 2018年4月4日 下午1:47:35
  */
@@ -19,16 +19,7 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
-	
-	@NotNull(message = "供应商编号不能为空！")
-	private Long unitNumId;
-	
-	@NotNull(message = "租户不能为空！")
-	private Long tenantNumId;
-	
-	@NotNull(message = "生产或测试标识不能为空！")
-	private Long dataSign;
-	
+
 	@JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private String startDate;
@@ -39,57 +30,72 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
-	
-	@NotNull(message = "结算周期不能为空！")
-	private Date balanceDate;
-	
+		
 	@NotNull(message = "操作人ID不能为空！")
 	private Long userNumId;
 	
+	@NotNull(message = "操作日期不能为空！")
+	private Date creatDate;
+
+	@NotNull(message = "供应商不能为空！")
+	private Long supplyUnitNumId;
+	
+	@NotNull(message = "单据编号不能为空！")
+	private Long ReservedNo;
+	
+
 	@NotNull(message = "结算单号不能为空！")
 	private Long balanceNo;
 	
-	/*@NotNull(message = "收据单号不能为空！")
-	private Long reservedNo;
-	*/
-	
-	/*@NotNull(message = "状态不能为空！")
-	private Long statusNumId;
-	*/
-	/*@NotNull(message = "商品不能为空！")
-	private Long itemNumId;*/
+	@NotNull(message = "行号不能为空！")
+	private Long series;
 
+	public Date getCreatDate() {
+		return creatDate;
+	}
+
+	public void setCreatDate(Date creatDate) {
+		this.creatDate = creatDate;
+	}
+
+	public Long getSeries() {
+		return series;
+	}
+
+	public void setSeries(Long series) {
+		this.series = series;
+	}
+
+	public Long getBalanceNo() {
+		return balanceNo;
+	}
+
+	public void setBalanceNo(Long balanceNo) {
+		this.balanceNo = balanceNo;
+	}
+
+	public Long getReservedNo() {
+		return ReservedNo;
+	}
+
+	public void setReservedNo(Long reservedNo) {
+		ReservedNo = reservedNo;
+	}
+
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
+
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public Long getTenantNumId() {
-		return tenantNumId;
-	}
-
-	public void setTenantNumId(Long tenantNumId) {
-		this.tenantNumId = tenantNumId;
-	}
-
-	public Long getDataSign() {
-		return dataSign;
-	}
-
-	public void setDataSign(Long dataSign) {
-		this.dataSign = dataSign;
-	}
-
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
-	}
-
-	public Long getUnitNumId() {
-		return unitNumId;
-	}
-
-	public void setUnitNumId(Long unitNumId) {
-		this.unitNumId = unitNumId;
 	}
 
 	public String getStartDate() {
@@ -115,15 +121,7 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 	public void setSettlementType(Long settlementType) {
 		this.settlementType = settlementType;
 	}
-
-	public Date getBalanceDate() {
-		return balanceDate;
-	}
-
-	public void setBalanceDate(Date balanceDate) {
-		this.balanceDate = balanceDate;
-	}
-
+	
 	public Long getUserNumId() {
 		return userNumId;
 	}
@@ -132,12 +130,4 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 		this.userNumId = userNumId;
 	}
 
-	public Long getBalanceNo() {
-		return balanceNo;
-	}
-
-	public void setBalanceNo(Long balanceNo) {
-		this.balanceNo = balanceNo;
-	}
-	
 }

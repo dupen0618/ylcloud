@@ -63,11 +63,11 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractRequest {
 		this.settlementType = settlementType;
 	}
 
-	public Date getBalanceDate() {
+	public Long getBalanceDate() {
 		return balanceDate;
 	}
 
-	public void setBalanceDate(Date balanceDate) {
+	public void setBalanceDate(Long balanceDate) {
 		this.balanceDate = balanceDate;
 	}*/
 
