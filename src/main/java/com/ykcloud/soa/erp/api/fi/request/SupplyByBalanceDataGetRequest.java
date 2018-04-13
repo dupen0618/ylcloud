@@ -42,7 +42,6 @@ public class SupplyByBalanceDataGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "单据编号不能为空！")
 	private Long ReservedNo;
-	
 
 	@NotNull(message = "结算单号不能为空！")
 	private Long balanceNo;

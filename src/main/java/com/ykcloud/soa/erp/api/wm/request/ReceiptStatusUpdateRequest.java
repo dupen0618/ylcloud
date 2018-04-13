@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
@@ -9,33 +10,20 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 public class ReceiptStatusUpdateRequest extends AbstractRequest  {
 
 	private static final long serialVersionUID = -5195355820358295113L;
-
-	@NotNull(message = "行号不能为空！")
-	private Long series;
 	
-	@NotNull(message = "单号不能为空！")
-	private Long reservedNo;
+	@NotNull(message = "行号不能为空！")
+	private List<String> series;
 	
 	@NotNull(message = "修改人不能为空！")
 	private Long userNumId;
 	
-	@NotNull(message = "修改时间能为空！")
-	private Date createDate;
 
-	public Long getSeries() {
+	public List<String> getSeries() {
 		return series;
 	}
 
-	public void setSeries(Long series) {
+	public void setSeries(List<String> series) {
 		this.series = series;
-	}
-
-	public Long getReservedNo() {
-		return reservedNo;
-	}
-
-	public void setReservedNo(Long reservedNo) {
-		this.reservedNo = reservedNo;
 	}
 
 	public Long getUserNumId() {
@@ -46,15 +34,5 @@ public class ReceiptStatusUpdateRequest extends AbstractRequest  {
 		this.userNumId = userNumId;
 	}
 
-	public Date getCreateDate() {
-		return createDate;
-	}
-
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
-	}
-	
-	
-	
 
 }

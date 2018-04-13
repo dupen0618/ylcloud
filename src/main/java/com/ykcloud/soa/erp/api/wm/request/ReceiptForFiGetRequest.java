@@ -38,6 +38,11 @@ public class ReceiptForFiGetRequest extends AbstractRequest{
 	@NotNull(message = "操作日期不能为空！")
 	private Date createDate;
 	
+	@NotNull(message = "结算单号不能为空！")
+	private Long balanceNo;
+	
+	
+	
 
 	public Date getCreateDate() {
 		return createDate;
