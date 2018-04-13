@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
  * 更新采购单状态为供应商已确认（直送供应商确认生成验收单后或直通供应商确认生成验证单及分拨单后）入参
@@ -14,7 +14,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  * @date 2018年3月28日下午5:41:46
  * @see
  */
-public class PoStatusNumIdForConfirmPoBySupplyUpdateRequest extends AbstractRequest {
+public class PoStatusNumIdForConfirmPoBySupplyUpdateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 8657407766505135934L;
 	
