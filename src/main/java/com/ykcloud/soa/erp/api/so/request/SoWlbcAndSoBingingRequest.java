@@ -9,36 +9,36 @@ public class SoWlbcAndSoBingingRequest extends AbstractRequest {
 	 */
 	private static final long serialVersionUID = -8781020251949209140L;
 	
-	private Long wlbcNumId;
+	private String wlbc;
 	
-	private Long soNumId;
+	private String soNumId;
 	
-	private Long subUnitNumId;
+	private String subUnitNumId;
 
-	public Long getWlbcNumId() {
-		return wlbcNumId;
+	public String getWlbc() {
+		return wlbc;
 	}
 
-	public void setWlbcNumId(Long wlbcNumId) {
-		this.wlbcNumId = wlbcNumId;
+	public void setWlbc(String wlbc) {
+		this.wlbc = wlbc;
 	}
 
-	public Long getSoNumId() {
+	public String getSoNumId() {
 		return soNumId;
 	}
 
-	public void setSoNumId(Long soNumId) {
+	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
 
-	public Long getSubUnitNumId() {
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
-	
+
 	
 
 }

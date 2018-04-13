@@ -13,7 +13,7 @@ public class SoShipQtyUpdateRequest extends AbstractRequest {
 	
 	private Double qty;
 	
-	private Long subUnitNumId;
+	private String subUnitNumId;
 
 	public Long getSoLineId() {
 		return soLineId;
@@ -31,13 +31,15 @@ public class SoShipQtyUpdateRequest extends AbstractRequest {
 		this.qty = qty;
 	}
 
-	public Long getSubUnitNumId() {
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
+
+
 	
 	
 

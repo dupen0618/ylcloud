@@ -21,14 +21,12 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractRequest {
 	
 	@NotNull(message = "供应商编号不能为空！")
 	private Long unitNumId;
-	
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+
 	@NotNull(message = "开始日期不能为空！")
-	private Date startDate;
-	
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+	private String startDate;
+
 	@NotNull(message = "截止日期不能为空！")
-	private Date endtDate;
+	private String endtDate;
 	
 	@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
@@ -57,23 +55,6 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractRequest {
 	public void setUnitNumId(Long unitNumId) {
 		this.unitNumId = unitNumId;
 	}
-
-	public Date getStartDate() {
-		return startDate;
-	}
-
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
-
-	public Date getEndtDate() {
-		return endtDate;
-	}
-
-	public void setEndtDate(Date endtDate) {
-		this.endtDate = endtDate;
-	}
-
 	public Long getSettlementType() {
 		return settlementType;
 	}
@@ -105,6 +86,20 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractRequest {
 	public void setBalanceNo(Long balanceNo) {
 		this.balanceNo = balanceNo;
 	}
-	
-	
+
+	public String getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+
+	public String getEndtDate() {
+		return endtDate;
+	}
+
+	public void setEndtDate(String endtDate) {
+		this.endtDate = endtDate;
+	}
 }

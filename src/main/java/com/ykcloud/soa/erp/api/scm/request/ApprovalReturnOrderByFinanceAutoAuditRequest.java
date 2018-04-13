@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.scm.request;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -12,7 +13,7 @@ import java.util.Date;
  * @Description: 退供应商财务自动审核
  * @Date: Created in 17:16:2018/4/3
  */
-public class ApprovalReturnOrderByFinanceAutoAuditRequest extends AbstractSessionRequest {
+public class ApprovalReturnOrderByFinanceAutoAuditRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = -345206227061616109L;
     @NotNull(message = "订货门店编号不能为空！")
     private Long subUnitNumId;

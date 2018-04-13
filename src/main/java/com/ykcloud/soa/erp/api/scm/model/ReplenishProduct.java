@@ -11,6 +11,8 @@ public class ReplenishProduct implements Serializable {
 
 	private String itemName;// 商品名称
 
+	private String itemid;// 商家编号
+
 	private String barcode;// 条码
 
 	private Long divNumId;// 部类
@@ -77,6 +79,8 @@ public class ReplenishProduct implements Serializable {
 
 	private Double stockQty;// 库存数
 
+	private Double distributionStockQty;// 配送仓库库存数
+
 	private Double balanceCost;// 结存成本
 
 	private Double availbleSaleDays;// 可销天数
@@ -118,13 +122,20 @@ public class ReplenishProduct implements Serializable {
 	private Double openBranchDeliveryQty;// 分仓在途数
 
 	private Double returnQty;// return_qty
-	
-	private Long supplyContractCheckCode; //供应商合同检查
-	
+
+	private Long supplyContractCheckCode; // 供应商合同检查
+
 	private String supplyContractCheckMessage;
-	
+
 	private Long purchaseTypeNumId; // 采购途径 1:国内 2 国际
-	
+
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
 
 	public Long getItemNumId() {
 		return itemNumId;
@@ -597,7 +608,13 @@ public class ReplenishProduct implements Serializable {
 	public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
 		this.purchaseTypeNumId = purchaseTypeNumId;
 	}
-	
-	
-	
+
+	public Double getDistributionStockQty() {
+		return distributionStockQty;
+	}
+
+	public void setDistributionStockQty(Double distributionStockQty) {
+		this.distributionStockQty = distributionStockQty;
+	}
+
 }

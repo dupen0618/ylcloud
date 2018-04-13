@@ -1,7 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
-import com.ykcloud.soa.erp.api.wm.model.scmAccInvOwnStkTsc;
+import com.ykcloud.soa.erp.api.wm.model.ScmAccInvOwnStkTsc;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -17,7 +17,7 @@ public class WmBillInAccountRequest extends AbstractUserSessionRequest {
     @NotNull(message = "单据类型不能为空！")
     String typeNum;
 
-    public List<scmAccInvOwnStkTsc> scmAccInvOwnStkTscs;
+    public List<ScmAccInvOwnStkTsc> scmAccInvOwnStkTscs;
 
 
     public String getReservedNo() {
@@ -36,11 +36,11 @@ public class WmBillInAccountRequest extends AbstractUserSessionRequest {
         this.typeNum = typeNum;
     }
 
-    public List<scmAccInvOwnStkTsc> getScmAccInvOwnStkTscs() {
+    public List<ScmAccInvOwnStkTsc> getScmAccInvOwnStkTscs() {
         return scmAccInvOwnStkTscs;
     }
 
-    public void setScmAccInvOwnStkTscs(List<scmAccInvOwnStkTsc> scmAccInvOwnStkTscs) {
+    public void setScmAccInvOwnStkTscs(List<ScmAccInvOwnStkTsc> scmAccInvOwnStkTscs) {
         this.scmAccInvOwnStkTscs = scmAccInvOwnStkTscs;
     }
 }

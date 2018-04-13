@@ -1,14 +1,13 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
  * Created by yiako on 2018/3/27
  */
-public class scmAccInvOwnStkTsc extends AbstractRequest{
+public class ScmAccInvOwnStkTsc implements Serializable {
 
     static SimpleDateFormat dateFormater = new SimpleDateFormat(
             "yyyy-MM-dd HH:mm:ss");
@@ -72,7 +71,7 @@ public class scmAccInvOwnStkTsc extends AbstractRequest{
     }
 
     public static void setDateFormater(SimpleDateFormat dateFormater) {
-        scmAccInvOwnStkTsc.dateFormater = dateFormater;
+        ScmAccInvOwnStkTsc.dateFormater = dateFormater;
     }
 
     public String getSeries() {
@@ -81,16 +80,6 @@ public class scmAccInvOwnStkTsc extends AbstractRequest{
 
     public void setSeries(String series) {
         this.series = series;
-    }
-
-    @Override
-    public Long getTenantNumId() {
-        return tenantNumId;
-    }
-
-    @Override
-    public void setTenantNumId(Long tenantNumId) {
-        this.tenantNumId = tenantNumId;
     }
 
     public Long getReservedNo() {
@@ -245,16 +234,6 @@ public class scmAccInvOwnStkTsc extends AbstractRequest{
         this.triggerBillLine = triggerBillLine;
     }
 
-    @Override
-    public Long getDataSign() {
-        return dataSign;
-    }
-
-    @Override
-    public void setDataSign(Long dataSign) {
-        this.dataSign = dataSign;
-    }
-
     public Long getSystemFlag() {
         return systemFlag;
     }
@@ -277,5 +256,21 @@ public class scmAccInvOwnStkTsc extends AbstractRequest{
 
     public void setBillTypeNumId(String billTypeNumId) {
         this.billTypeNumId = billTypeNumId;
+    }
+
+    public Long getTenantNumId() {
+        return tenantNumId;
+    }
+
+    public void setTenantNumId(Long tenantNumId) {
+        this.tenantNumId = tenantNumId;
+    }
+
+    public Long getDataSign() {
+        return dataSign;
+    }
+
+    public void setDataSign(Long dataSign) {
+        this.dataSign = dataSign;
     }
 }

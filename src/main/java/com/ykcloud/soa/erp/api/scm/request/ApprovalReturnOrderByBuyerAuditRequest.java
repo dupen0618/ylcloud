@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.scm.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -11,7 +12,7 @@ import java.util.Date;
  * @Description: 退货审批单审核
  * @Date: Created in 20:42:2018/4/7
  */
-public class ApprovalReturnOrderByBuyerAuditRequest extends AbstractSessionRequest {
+public class ApprovalReturnOrderByBuyerAuditRequest extends AbstractUserSessionRequest {
 
     private static final long serialVersionUID = 5386263561550831647L;
 

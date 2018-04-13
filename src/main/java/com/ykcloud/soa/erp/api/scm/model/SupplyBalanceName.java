@@ -9,6 +9,7 @@ import java.io.Serializable;
  */
 public class SupplyBalanceName implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	//供应商名称
 	private String unitName;
 	//供应商id

@@ -16,6 +16,26 @@ public class ApprovalDtlForGenerateDistributionSo implements Serializable {
 	private Long conversionUnitNumId;
 	private String conversionStyleDesc;
 	private Double qty;
+	
+	private String applyNumId;
+	
+	private String applyLine;
+	
+	public String getApplyLine() {
+		return applyLine;
+	}
+
+	public void setApplyLine(String applyLine) {
+		this.applyLine = applyLine;
+	}
+
+	public String getApplyNumId() {
+		return applyNumId;
+	}
+
+	public void setApplyNumId(String applyNumId) {
+		this.applyNumId = applyNumId;
+	}
 
 	public String getSeries() {
 		return series;

@@ -25,16 +25,6 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>com.gb.soa</groupId>
-			<artifactId>omp_cuser_api</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.gb.soa</groupId>
-			<artifactId>omp_cexport_api</artifactId>
-		</dependency>
-		
-		<dependency>
 			<groupId>javax.el</groupId>
 			<artifactId>javax.el-api</artifactId>
 		</dependency>
@@ -42,15 +32,7 @@
 		<dependency>
    			<groupId>org.glassfish</groupId>
    			<artifactId>javax.el</artifactId>
-		</dependency>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>RELEASE</version>
-        </dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
+
 		</dependency>
 	</dependencies>
 </project>

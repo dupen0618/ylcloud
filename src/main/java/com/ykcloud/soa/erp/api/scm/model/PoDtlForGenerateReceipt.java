@@ -108,6 +108,19 @@ public class PoDtlForGenerateReceipt implements Serializable {
 	 */
 	private Double taxAmount;
 	
+	/**
+	 * 商品商家编码
+	 */
+	private String itemid;
+	
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
+
 	public Long getSeries() {
 		return series;
 	}

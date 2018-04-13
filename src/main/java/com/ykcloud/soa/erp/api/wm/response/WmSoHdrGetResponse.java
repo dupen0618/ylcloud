@@ -4,36 +4,85 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class WmSoHdrGetResponse extends MessagePack {
 
-	private Long soNumId;
+	private String soNumId;
 	
-	private Long wlbcNumId;
+	private String wlbc;
 	
-	private Long custSubUnitNumId;
+	private String custSubUnitName;
 
-	public Long getSoNumId() {
+	private String containerSerlno;
+	
+	private String containerLabserlno;
+	
+	private Double containerPackingQty;
+	
+	private Double soLockQty;
+	
+	private Double soPackingQty;
+
+	public String getSoNumId() {
 		return soNumId;
 	}
 
-	public void setSoNumId(Long soNumId) {
+	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
 
-	public Long getWlbcNumId() {
-		return wlbcNumId;
+	public String getWlbc() {
+		return wlbc;
 	}
 
-	public void setWlbcNumId(Long wlbcNumId) {
-		this.wlbcNumId = wlbcNumId;
+	public void setWlbc(String wlbc) {
+		this.wlbc = wlbc;
 	}
 
-	public Long getCustSubUnitNumId() {
-		return custSubUnitNumId;
+	public String getCustSubUnitName() {
+		return custSubUnitName;
 	}
 
-	public void setCustSubUnitNumId(Long custSubUnitNumId) {
-		this.custSubUnitNumId = custSubUnitNumId;
+	public void setCustSubUnitName(String custSubUnitName) {
+		this.custSubUnitName = custSubUnitName;
 	}
-	
+
+	public String getContainerSerlno() {
+		return containerSerlno;
+	}
+
+	public void setContainerSerlno(String containerSerlno) {
+		this.containerSerlno = containerSerlno;
+	}
+
+	public String getContainerLabserlno() {
+		return containerLabserlno;
+	}
+
+	public void setContainerLabserlno(String containerLabserlno) {
+		this.containerLabserlno = containerLabserlno;
+	}
+
+	public Double getContainerPackingQty() {
+		return containerPackingQty;
+	}
+
+	public void setContainerPackingQty(Double containerPackingQty) {
+		this.containerPackingQty = containerPackingQty;
+	}
+
+	public Double getSoLockQty() {
+		return soLockQty;
+	}
+
+	public void setSoLockQty(Double soLockQty) {
+		this.soLockQty = soLockQty;
+	}
+
+	public Double getSoPackingQty() {
+		return soPackingQty;
+	}
+
+	public void setSoPackingQty(Double soPackingQty) {
+		this.soPackingQty = soPackingQty;
+	}
 	
 	
 	

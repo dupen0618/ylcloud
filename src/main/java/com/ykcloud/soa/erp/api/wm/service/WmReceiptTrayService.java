@@ -22,4 +22,17 @@ public interface WmReceiptTrayService {
 
 	// 查询托盘
 	public ReceiptTrayGetResponse getReceiptTray(ReceiptTrayGetRequest request);
+	
+	/**
+	 *@Description: 更新周转箱
+	 *@Auther hank
+	 *@Date 2018-4-12
+	 *@param request{subUnitNumId,reservedNo,traySerlno,traySerlnoLable,userNumId}
+	 *@return response{}
+	 */
+	/*
+	public TraySerlnoLablebind bindTraySerlnoLable() {
+		
+	}
+	*/
 }
