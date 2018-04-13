@@ -1,10 +1,14 @@
 package com.ykcloud.soa.erp.api.wm.model;
+
+import java.io.Serializable;
+
 /**
 *
 @author hank.zhu
 @date 2018年4月2日 下午3:12:07 新建
 **/
-public class Product {
+public class Product implements Serializable{
+	private static final long serialVersionUID = 4421375547490050148L;
 	private Long itemNumId;// 商品主键
 	private String itemName;// 商品名称
 	private Long basicUnitNumId;// 商品基本单位
