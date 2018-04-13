@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import com.fasterxml.jackson.databind.util.ArrayBuilders.DoubleBuilder;
 
@@ -12,97 +13,175 @@ import com.fasterxml.jackson.databind.util.ArrayBuilders.DoubleBuilder;
 public class Deduction implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	private String SERIES;	// 行号
+	private Long TENANT_NUM_ID;	// 租户编号
+	private Long DATA_SIGN;   	// 0: 正式 1：测试
+	private Date CREATE_DTME;	// 创建时间
+	private Date LAST_UPDTME;	// 最后更新时间
+	private Long CREATE_USER_ID;	// 创建用户
+	private Long LAST_UPDATE_USER_ID;// 更新用户
+	private Long BALANCE_NO;            //结算单号	组合唯一索引　
+	private Long SUB_UNIT_NUM_ID;    //门店	分库标识
+	private Date BALANCE_DATE;        //结算日期	分表标识
+	private Long RESERVED_NO;        //单据编号	fi_bl_sup_cut_hdr
+	private Long TYPE_NUM_ID;        //业务类型	fi_bl_sup_cut_hdr
+	private Date OPERAT_DATE;        //业务日期	　
+	private Long CUT_ITEM;            //扣款项目	　
+	private Long CUT_DESC;            //扣款说明	　
+	private Long CUT_AMOUNT;            //扣款金额	　
+	private Long TAX_RATE;            //税率	　
+	private Long TAX_AMOUNT;            //税金	　　　
+	private Long CARRY_SIGN;        //结转标识	　
 
-	private Long series;//行号
-	
-	private Long reservedNo;//扣款单号
-	
-	private Long sub_unit_num_id;//门店
-	
-	private Long cut_item;//扣款项目
-	
-	private String cut_desc;//扣款说明
-	
-	private Double cut_amount;//扣款金额
-	
-	private Double tax_rate;//税率
-	
-	private Double tax_amount;//税金
-	
-	private int cut_sign;//票扣或账扣；标识：1票扣 2账扣
-
-	public Long getSeries() {
-		return series;
+	public String getSERIES() {
+		return SERIES;
 	}
 
-	public void setSeries(Long series) {
-		this.series = series;
+	public void setSERIES(String SERIES) {
+		this.SERIES = SERIES;
 	}
 
-	public Long getReservedNo() {
-		return reservedNo;
+	public Long getTENANT_NUM_ID() {
+		return TENANT_NUM_ID;
 	}
 
-	public void setReservedNo(Long reservedNo) {
-		this.reservedNo = reservedNo;
+	public void setTENANT_NUM_ID(Long TENANT_NUM_ID) {
+		this.TENANT_NUM_ID = TENANT_NUM_ID;
 	}
 
-	public Long getSub_unit_num_id() {
-		return sub_unit_num_id;
+	public Long getDATA_SIGN() {
+		return DATA_SIGN;
 	}
 
-	public void setSub_unit_num_id(Long sub_unit_num_id) {
-		this.sub_unit_num_id = sub_unit_num_id;
+	public void setDATA_SIGN(Long DATA_SIGN) {
+		this.DATA_SIGN = DATA_SIGN;
 	}
 
-	public Long getCut_item() {
-		return cut_item;
+	public Date getCREATE_DTME() {
+		return CREATE_DTME;
 	}
 
-	public void setCut_item(Long cut_item) {
-		this.cut_item = cut_item;
+	public void setCREATE_DTME(Date CREATE_DTME) {
+		this.CREATE_DTME = CREATE_DTME;
 	}
 
-	public String getCut_desc() {
-		return cut_desc;
+	public Date getLAST_UPDTME() {
+		return LAST_UPDTME;
 	}
 
-	public void setCut_desc(String cut_desc) {
-		this.cut_desc = cut_desc;
+	public void setLAST_UPDTME(Date LAST_UPDTME) {
+		this.LAST_UPDTME = LAST_UPDTME;
 	}
 
-	public Double getCut_amount() {
-		return cut_amount;
+	public Long getCREATE_USER_ID() {
+		return CREATE_USER_ID;
 	}
 
-	public void setCut_amount(Double cut_amount) {
-		this.cut_amount = cut_amount;
+	public void setCREATE_USER_ID(Long CREATE_USER_ID) {
+		this.CREATE_USER_ID = CREATE_USER_ID;
 	}
 
-	public Double getTax_rate() {
-		return tax_rate;
+	public Long getLAST_UPDATE_USER_ID() {
+		return LAST_UPDATE_USER_ID;
 	}
 
-	public void setTax_rate(Double tax_rate) {
-		this.tax_rate = tax_rate;
+	public void setLAST_UPDATE_USER_ID(Long LAST_UPDATE_USER_ID) {
+		this.LAST_UPDATE_USER_ID = LAST_UPDATE_USER_ID;
 	}
 
-	public Double getTax_amount() {
-		return tax_amount;
+	public Long getBALANCE_NO() {
+		return BALANCE_NO;
 	}
 
-	public void setTax_amount(Double tax_amount) {
-		this.tax_amount = tax_amount;
+	public void setBALANCE_NO(Long BALANCE_NO) {
+		this.BALANCE_NO = BALANCE_NO;
 	}
 
-	public int getCut_sign() {
-		return cut_sign;
+	public Long getSUB_UNIT_NUM_ID() {
+		return SUB_UNIT_NUM_ID;
 	}
 
-	public void setCut_sign(int cut_sign) {
-		this.cut_sign = cut_sign;
+	public void setSUB_UNIT_NUM_ID(Long SUB_UNIT_NUM_ID) {
+		this.SUB_UNIT_NUM_ID = SUB_UNIT_NUM_ID;
 	}
-	
-	
-	
+
+	public Date getBALANCE_DATE() {
+		return BALANCE_DATE;
+	}
+
+	public void setBALANCE_DATE(Date BALANCE_DATE) {
+		this.BALANCE_DATE = BALANCE_DATE;
+	}
+
+	public Long getRESERVED_NO() {
+		return RESERVED_NO;
+	}
+
+	public void setRESERVED_NO(Long RESERVED_NO) {
+		this.RESERVED_NO = RESERVED_NO;
+	}
+
+	public Long getTYPE_NUM_ID() {
+		return TYPE_NUM_ID;
+	}
+
+	public void setTYPE_NUM_ID(Long TYPE_NUM_ID) {
+		this.TYPE_NUM_ID = TYPE_NUM_ID;
+	}
+
+	public Date getOPERAT_DATE() {
+		return OPERAT_DATE;
+	}
+
+	public void setOPERAT_DATE(Date OPERAT_DATE) {
+		this.OPERAT_DATE = OPERAT_DATE;
+	}
+
+	public Long getCUT_ITEM() {
+		return CUT_ITEM;
+	}
+
+	public void setCUT_ITEM(Long CUT_ITEM) {
+		this.CUT_ITEM = CUT_ITEM;
+	}
+
+	public Long getCUT_DESC() {
+		return CUT_DESC;
+	}
+
+	public void setCUT_DESC(Long CUT_DESC) {
+		this.CUT_DESC = CUT_DESC;
+	}
+
+	public Long getCUT_AMOUNT() {
+		return CUT_AMOUNT;
+	}
+
+	public void setCUT_AMOUNT(Long CUT_AMOUNT) {
+		this.CUT_AMOUNT = CUT_AMOUNT;
+	}
+
+	public Long getTAX_RATE() {
+		return TAX_RATE;
+	}
+
+	public void setTAX_RATE(Long TAX_RATE) {
+		this.TAX_RATE = TAX_RATE;
+	}
+
+	public Long getTAX_AMOUNT() {
+		return TAX_AMOUNT;
+	}
+
+	public void setTAX_AMOUNT(Long TAX_AMOUNT) {
+		this.TAX_AMOUNT = TAX_AMOUNT;
+	}
+
+	public Long getCARRY_SIGN() {
+		return CARRY_SIGN;
+	}
+
+	public void setCARRY_SIGN(Long CARRY_SIGN) {
+		this.CARRY_SIGN = CARRY_SIGN;
+	}
 }

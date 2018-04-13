@@ -24,24 +24,24 @@ public class DeductionForCanBalanceGetRequest extends AbstractRequest {
 	
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
-	private Date startDate;
+	private String startDate;
 	
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
 	@NotNull(message = "截止日期不能为空！")
-	private Date endtDate;
+	private String endtDate;
 	
-	@NotNull(message = "经营方式不能为空！")
+/*	@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
 	
 	@NotNull(message = "结算周期不能为空！")
-	private Date balanceDate;
+	private Date balanceDate;*/
 	
-	@NotNull(message = "操作人ID不能为空！")
+	/*@NotNull(message = "操作人ID不能为空！")
 	private Long createUserId;
 	
 	@NotNull(message = "结算单号不能为空！")
 	private Long balanceNo;
-
+*/
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
@@ -58,22 +58,23 @@ public class DeductionForCanBalanceGetRequest extends AbstractRequest {
 		this.unitNumId = unitNumId;
 	}
 
-	public Date getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndtDate() {
+	public String getEndtDate() {
 		return endtDate;
 	}
 
-	public void setEndtDate(Date endtDate) {
+	public void setEndtDate(String endtDate) {
 		this.endtDate = endtDate;
 	}
 
+/*
 	public Long getSettlementType() {
 		return settlementType;
 	}
@@ -89,8 +90,9 @@ public class DeductionForCanBalanceGetRequest extends AbstractRequest {
 	public void setBalanceDate(Date balanceDate) {
 		this.balanceDate = balanceDate;
 	}
+*/
 
-	public Long getCreateUserId() {
+	/*public Long getCreateUserId() {
 		return createUserId;
 	}
 
@@ -104,6 +106,6 @@ public class DeductionForCanBalanceGetRequest extends AbstractRequest {
 
 	public void setBalanceNo(Long balanceNo) {
 		this.balanceNo = balanceNo;
-	}
+	}*/
 
 }
