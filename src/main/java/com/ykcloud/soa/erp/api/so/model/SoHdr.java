@@ -12,15 +12,15 @@ public class SoHdr implements Serializable {
 	 */
 	private static final long serialVersionUID = 987971073238076434L;
 
-	private Long series;
+	private String series;
 	
-	private Long soNumId;
+	private String soNumId;
 	
 	private Long applyNumId;
 	
 	private Long tenantNumId;
 	
-	private Long subUnitNumId;
+	private String subUnitNumId;
 	
 	private Date orderDate;
 	
@@ -32,7 +32,7 @@ public class SoHdr implements Serializable {
 	
 	private Long settlement;
 	
-	private Long wlbcNumId;
+	private String wlbcNumId;
 	
 	private Long divNumId;
 	
@@ -80,19 +80,20 @@ public class SoHdr implements Serializable {
 	
 	private Long sowNumId;
 
-	public Long getSeries() {
+
+	public String getSeries() {
 		return series;
 	}
 
-	public void setSeries(Long series) {
+	public void setSeries(String series) {
 		this.series = series;
 	}
 
-	public Long getSoNumId() {
+	public String getSoNumId() {
 		return soNumId;
 	}
 
-	public void setSoNumId(Long soNumId) {
+	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
 
@@ -112,11 +113,11 @@ public class SoHdr implements Serializable {
 		this.tenantNumId = tenantNumId;
 	}
 
-	public Long getSubUnitNumId() {
+	public String getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
+	public void setSubUnitNumId(String subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
@@ -160,11 +161,11 @@ public class SoHdr implements Serializable {
 		this.settlement = settlement;
 	}
 
-	public Long getWlbcNumId() {
+	public String getWlbcNumId() {
 		return wlbcNumId;
 	}
 
-	public void setWlbcNumId(Long wlbcNumId) {
+	public void setWlbcNumId(String wlbcNumId) {
 		this.wlbcNumId = wlbcNumId;
 	}
 
