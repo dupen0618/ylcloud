@@ -39,4 +39,5 @@ public interface ScmReplenishService {
 	public DmsForAutoReplenishCalcateResponse calcateDmsForAutoReplenish(DmsForAutoReplenishCalcateRequest request);
     //产生自动补货申请单
 	public AutoReplenishApplyGenerateResponse generateAutoReplenishApply(AutoReplenishApplyGenerateRequest request);
+
 }
