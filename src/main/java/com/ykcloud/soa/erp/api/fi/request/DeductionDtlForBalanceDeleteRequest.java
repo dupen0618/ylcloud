@@ -14,40 +14,29 @@ public class DeductionDtlForBalanceDeleteRequest extends AbstractRequest {
 	private static final long serialVersionUID = 5602269731920270845L;
 
 	@NotNull(message = "行号不能为空！")
-	private Long series;
-	
-	@NotNull(message = "数据源单号不能为空！")
-	private Long reservedNo;
-	
-	@NotNull(message = "结算单号不能为空！")
-	private Long balanceNo;
+	private String series;
+
+/*	@NotNull(message = "结算单号不能为空！")
+	private Long balanceNo;*/
 	
 	@NotNull(message = "操作人ID不能为空！")
 	private Long createUserId;
 
-	public Long getSeries() {
+	public String getSeries() {
 		return series;
 	}
 
-	public void setSeries(Long series) {
+	public void setSeries(String series) {
 		this.series = series;
 	}
-
-	public Long getReservedNo() {
-		return reservedNo;
-	}
-
-	public void setReservedNo(Long reservedNo) {
-		this.reservedNo = reservedNo;
-	}
-
+/*
 	public Long getBalanceNo() {
 		return balanceNo;
 	}
 
 	public void setBalanceNo(Long balanceNo) {
 		this.balanceNo = balanceNo;
-	}
+	}*/
 
 	public Long getCreateUserId() {
 		return createUserId;
