@@ -21,7 +21,7 @@ public class PoDtlForGenerateReceipt implements Serializable {
 	/**
 	 * 行号
 	 */
-	private Long series;
+	private String series;
 
 	/**
 	 * 促销档期，来自采购单身，暂不用，扩展用
@@ -132,14 +132,6 @@ public class PoDtlForGenerateReceipt implements Serializable {
 
 	public void setItemid(String itemid) {
 		this.itemid = itemid;
-	}
-
-	public Long getSeries() {
-		return series;
-	}
-
-	public void setSeries(Long series) {
-		this.series = series;
 	}
 
 	public String getPromotionGrade() {
@@ -285,5 +277,15 @@ public class PoDtlForGenerateReceipt implements Serializable {
 	public void setTaxAmount(Double taxAmount) {
 		this.taxAmount = taxAmount;
 	}
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
+	
+	
 
 }
