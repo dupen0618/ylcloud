@@ -16,5 +16,30 @@ public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
     @NotNull(message = "单据类型不能为空！")
     String typeNumId;
 
+    Long balaFuncId;
 
+
+    public String getReservedNo() {
+        return reservedNo;
+    }
+
+    public void setReservedNo(String reservedNo) {
+        this.reservedNo = reservedNo;
+    }
+
+    public String getTypeNumId() {
+        return typeNumId;
+    }
+
+    public void setTypeNumId(String typeNumId) {
+        this.typeNumId = typeNumId;
+    }
+
+    public Long getBalaFuncId() {
+        return balaFuncId;
+    }
+
+    public void setBalaFuncId(Long balaFuncId) {
+        this.balaFuncId = balaFuncId;
+    }
 }
