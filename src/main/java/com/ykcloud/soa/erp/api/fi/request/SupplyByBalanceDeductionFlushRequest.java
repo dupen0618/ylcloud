@@ -24,13 +24,7 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractUserSessionReq
 
 	@NotNull(message = "截止日期不能为空！")
 	private Date endDate;
-	
-	/*@NotNull(message = "经营方式不能为空！")
-	private Long settlementType;
-	
-	@NotNull(message = "结算周期不能为空！")
-	private Date balanceDate;*/
-	
+		
 	@NotNull(message = "结算单号不能为空！")
 	private String balanceNo;
 
@@ -49,25 +43,6 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractUserSessionReq
 	public void setUnitNumId(Long unitNumId) {
 		this.unitNumId = unitNumId;
 	}
-/*	public Long getSettlementType() {
-		return settlementType;
-	}
-
-	public void setSettlementType(Long settlementType) {
-		this.settlementType = settlementType;
-	}
-
-	public Long getBalanceDate() {
-		return balanceDate;
-	}
-
-	public void setBalanceDate(Long balanceDate) {
-		this.balanceDate = balanceDate;
-	}*/
-
-	public String getBalanceNo() {
-		return balanceNo;
-	}
 
 	public Date getStartDate() {
 		return startDate;
@@ -85,10 +60,13 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractUserSessionReq
 		this.endDate = endDate;
 	}
 
-	public void setBalanceNo(Long balanceNo) {
-		this.balanceNo = balanceNo;
+	public String getBalanceNo() {
+		return balanceNo;
 	}
 
+	public void setBalanceNo(String balanceNo) {
+		this.balanceNo = balanceNo;
+	}
 
 	
 }
