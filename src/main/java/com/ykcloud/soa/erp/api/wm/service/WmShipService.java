@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.ShipBusinessAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipForMaterialIssueBackGenerateRequest;
+import com.ykcloud.soa.erp.api.wm.request.SoShipFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmContainerHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataByBarcodeGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataGetDataByBarcodeAndSoNumIdRequest;
@@ -20,6 +21,7 @@ import com.ykcloud.soa.erp.api.wm.request.WmfinishPackingRequest;
 import com.ykcloud.soa.erp.api.wm.response.ShipBusinessAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipForMaterialIssueBackGenerateResponse;
+import com.ykcloud.soa.erp.api.wm.response.SoShipFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmContainerHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataByBarcodeGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataGetDataByBarcodeAndSoNumIdResponse;
@@ -96,4 +98,7 @@ public interface WmShipService {
 		
 		//发送财务处理消息TCC
 		public ShipFiAccountProcessResponse ProcessShipFiAccount(ShipFiAccountProcessRequest request);
+		
+		
+		public SoShipFinishResponse finishSoShip(SoShipFinishRequest request);
 }
