@@ -33,7 +33,7 @@ public class SoHdr implements Serializable {
 
 	private Long classifyNumId;
 
-	private Long tmlNumId;
+	private String tmlNumId;
 
 	private Long soFromType;
 
@@ -183,11 +183,11 @@ public class SoHdr implements Serializable {
 		this.classifyNumId = classifyNumId;
 	}
 
-	public Long getTmlNumId() {
+	public String getTmlNumId() {
 		return tmlNumId;
 	}
 
-	public void setTmlNumId(Long tmlNumId) {
+	public void setTmlNumId(String tmlNumId) {
 		this.tmlNumId = tmlNumId;
 	}
 

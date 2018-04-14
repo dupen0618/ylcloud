@@ -21,8 +21,9 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 
 	@NotNull(message = "订单日期不能为空!")
 	private Date orderDate;
-
+	
 	private Long plmSign;
+
 
 	public String getSoNumId() {
 		return soNumId;
@@ -63,5 +64,7 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 	public void setPlmSign(Long plmSign) {
 		this.plmSign = plmSign;
 	}
+
+	
 
 }

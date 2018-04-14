@@ -26,6 +26,15 @@ public class WmQuerySoAndContainerRequest extends AbstractRequest {
 		this.containerSerno = containerSerno;
 	}
 
+	
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
+
 	public Date getOrderDate() {
 		return orderDate;
 	}

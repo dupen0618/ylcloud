@@ -25,7 +25,7 @@ public class SoDtl implements Serializable {
 		//订单日期
 		private Date orderDate;
 		
-		private Long promotionGrade;
+		private String promotionGrade;
 		
 		private Long itemNumId;
 		
@@ -61,13 +61,13 @@ public class SoDtl implements Serializable {
 		
 		private Long logisticsType;
 		
-		private Long receiptLine;
+		private String receiptLine;
 		
 		private String receiptNo;
 		
-		private Long tmlNumId;
+		private String tmlNumId;
 		
-		private Long tmlLine;
+		private String tmlLine;
 		
 		private Long locPtyNumId;
 		
@@ -149,11 +149,11 @@ public class SoDtl implements Serializable {
 			this.orderDate = orderDate;
 		}
 
-		public Long getPromotionGrade() {
+		public String getPromotionGrade() {
 			return promotionGrade;
 		}
 
-		public void setPromotionGrade(Long promotionGrade) {
+		public void setPromotionGrade(String promotionGrade) {
 			this.promotionGrade = promotionGrade;
 		}
 
@@ -293,11 +293,12 @@ public class SoDtl implements Serializable {
 			this.logisticsType = logisticsType;
 		}
 
-		public Long getReceiptLine() {
+
+		public String getReceiptLine() {
 			return receiptLine;
 		}
 
-		public void setReceiptLine(Long receiptLine) {
+		public void setReceiptLine(String receiptLine) {
 			this.receiptLine = receiptLine;
 		}
 
@@ -309,19 +310,20 @@ public class SoDtl implements Serializable {
 			this.receiptNo = receiptNo;
 		}
 
-		public Long getTmlNumId() {
+
+		public String getTmlNumId() {
 			return tmlNumId;
 		}
 
-		public void setTmlNumId(Long tmlNumId) {
+		public void setTmlNumId(String tmlNumId) {
 			this.tmlNumId = tmlNumId;
 		}
 
-		public Long getTmlLine() {
+		public String getTmlLine() {
 			return tmlLine;
 		}
 
-		public void setTmlLine(Long tmlLine) {
+		public void setTmlLine(String tmlLine) {
 			this.tmlLine = tmlLine;
 		}
 
