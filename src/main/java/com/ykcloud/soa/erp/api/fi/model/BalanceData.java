@@ -29,9 +29,9 @@ public class BalanceData implements Serializable {
 	
 	private Date balanceDate;//结算周期
 	
-	private String createUserId;//操作人
+	private Long createUserId;//操作人
 	
-	private Long balanceNo;//结算单号
+	private String balanceNo;//结算单号
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -81,21 +81,23 @@ public class BalanceData implements Serializable {
 		this.balanceDate = balanceDate;
 	}
 
-	public String getCreateUserId() {
+	public Long getCreateUserId() {
 		return createUserId;
 	}
 
-	public void setCreateUserId(String createUserId) {
+	public void setCreateUserId(Long createUserId) {
 		this.createUserId = createUserId;
 	}
 
-	public Long getBalanceNo() {
+	public String getBalanceNo() {
 		return balanceNo;
 	}
 
-	public void setBalanceNo(Long balanceNo) {
+	public void setBalanceNo(String balanceNo) {
 		this.balanceNo = balanceNo;
 	}
 
+
+	
 	
 }

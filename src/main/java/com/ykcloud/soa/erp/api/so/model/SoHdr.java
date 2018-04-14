@@ -4,82 +4,76 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class SoHdr implements Serializable {
-	
-	
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 987971073238076434L;
 
 	private String series;
-	
-	private String soNumId;
-	
-	private Long applyNumId;
-	
-	private Long tenantNumId;
-	
-	private String subUnitNumId;
-	
-	private Date orderDate;
-	
-	private Long custUnitNumId;
-	
-	private Long custSubUnitNumId;
-	
-	private Long statusNumId;
-	
-	private Long settlement;
-	
-	private String wlbcNumId;
-	
-	private Long divNumId;
-	
-	private Long classifyNumId;
-	
-	private Long tmlNumId;
-	
-	private Long soFromType;
-	
-	private Long typeNumId;
-	
-	private Long storageNumId;
-	
-	private Long physicalNumId;
-	
-	private Long recStorageNumId;
-	
-	private Long recPhysicalNumId;
-	
-	private Long recAdrNumId;
-	
-	private Date deliveryDate;
-	
-	private Double depositAmout;
-	
-	private Long approvalNumId;
-	
-	private String remark;
-	
-	private Long createUserId;
-	
-	private Long lastUpdateUserID;
-	
-	private String cancelsign;
-	
-	private Long carrySign;
-	
-	private Long dataSign;
-	
-	private Date createDtme;
-	
-	private Date lastUpdtme;
-	
-	private Long confirmType;
-	
-	private Long sowNumId;
 
+	private String soNumId;
+
+	private String applyNumId;
+
+	private Long tenantNumId;
+
+	private String subUnitNumId;
+
+	private Date orderDate;
+
+	private Long custUnitNumId;
+
+	private Long custSubUnitNumId;
+
+	private Long statusNumId;
+
+	private Long settlement;
+
+	private String wlbcNumId;
+
+	private Long divNumId;
+
+	private Long classifyNumId;
+
+	private Long tmlNumId;
+
+	private Long soFromType;
+
+	private Long typeNumId;
+
+	private Long storageNumId;
+
+	private Long physicalNumId;
+
+	private Long recStorageNumId;
+
+	private Long recPhysicalNumId;
+
+	private Long recAdrNumId;
+
+	private Date deliveryDate;
+
+	private Double depositAmout;
+
+	private String approvalNumId;
+
+	private String remark;
+
+	private Long createUserId;
+
+	private Long lastUpdateUserID;
+
+	private String cancelsign;
+
+	private Long carrySign;
+
+	private Long dataSign;
+
+	private Date createDtme;
+
+	private Date lastUpdtme;
+
+	private Long confirmType;
+
+	private Long sowNumId;
 
 	public String getSeries() {
 		return series;
@@ -97,12 +91,16 @@ public class SoHdr implements Serializable {
 		this.soNumId = soNumId;
 	}
 
-	public Long getApplyNumId() {
+	public String getApplyNumId() {
 		return applyNumId;
 	}
 
-	public void setApplyNumId(Long applyNumId) {
+	public void setApplyNumId(String applyNumId) {
 		this.applyNumId = applyNumId;
+	}
+
+	public void setApprovalNumId(String approvalNumId) {
+		this.approvalNumId = approvalNumId;
 	}
 
 	public Long getTenantNumId() {
@@ -265,12 +263,8 @@ public class SoHdr implements Serializable {
 		this.depositAmout = depositAmout;
 	}
 
-	public Long getApprovalNumId() {
+	public String getApprovalNumId() {
 		return approvalNumId;
-	}
-
-	public void setApprovalNumId(Long approvalNumId) {
-		this.approvalNumId = approvalNumId;
 	}
 
 	public String getRemark() {
@@ -352,9 +346,5 @@ public class SoHdr implements Serializable {
 	public void setSowNumId(Long sowNumId) {
 		this.sowNumId = sowNumId;
 	}
-	
-	
-	
-	
-	
+
 }
