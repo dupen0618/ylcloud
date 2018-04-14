@@ -39,6 +39,7 @@ public class ReceiptForFiGetRequest extends AbstractRequest {
 
 	@NotNull(message = "结算单号不能为空！")
 	private String balanceNo;
+	
 
 	public Date getCreateDate() {
 		return createDate;
