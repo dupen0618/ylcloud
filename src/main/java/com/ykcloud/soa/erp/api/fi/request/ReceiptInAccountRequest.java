@@ -21,7 +21,27 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
 
 	Long balaFuncId;
 
+    public String getTypeNumId() {
+        return typeNumId;
+    }
 
+    public void setTypeNumId(String typeNumId) {
+        this.typeNumId = typeNumId;
+    }
 
+    public List<FiPhysicalBatchAccountWba> getFiPhysicalBatchAccountWbaList() {
+        return fiPhysicalBatchAccountWbaList;
+    }
 
+    public void setFiPhysicalBatchAccountWbaList(List<FiPhysicalBatchAccountWba> fiPhysicalBatchAccountWbaList) {
+        this.fiPhysicalBatchAccountWbaList = fiPhysicalBatchAccountWbaList;
+    }
+
+    public Long getBalaFuncId() {
+        return balaFuncId;
+    }
+
+    public void setBalaFuncId(Long balaFuncId) {
+        this.balaFuncId = balaFuncId;
+    }
 }
