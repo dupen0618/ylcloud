@@ -35,7 +35,11 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 	private Long supplyUnitNumId;
 
 	@NotNull(message = "单据编号不能为空！")
+<<<<<<< f3a70e7f2b065021a1515730931b536a76277963
 	private String reservedNo;
+=======
+	private String ReservedNo;
+>>>>>>> 更改参数
 
 	@NotNull(message = "结算单号不能为空！")
 	private String balanceNo;
@@ -63,12 +67,21 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 		return startDate;
 	}
 
+<<<<<<< f3a70e7f2b065021a1515730931b536a76277963
 	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 
 	public Date getEndDate() {
 		return endDate;
+=======
+	public String getReservedNo() {
+		return ReservedNo;
+	}
+
+	public void setReservedNo(String reservedNo) {
+		ReservedNo = reservedNo;
+>>>>>>> 更改参数
 	}
 
 	public void setEndDate(Date endDate) {

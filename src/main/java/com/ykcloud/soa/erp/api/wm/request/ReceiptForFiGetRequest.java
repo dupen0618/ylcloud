@@ -16,11 +16,11 @@ public class ReceiptForFiGetRequest extends AbstractRequest {
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
-	private Date startDate;
+	private String startDate;
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "截止日期不能为空！")
-	private Date endDate;
+	private String endDate;
 
 	@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
@@ -37,9 +37,8 @@ public class ReceiptForFiGetRequest extends AbstractRequest {
 	@NotNull(message = "操作日期不能为空！")
 	private Date createDate;
 
-	@NotNull(message = "结算单号不能为空！")
-	private String balanceNo;
-	
+	/*@NotNull(message = "结算单号不能为空！")
+	private String balanceNo;*/
 
 	public Date getCreateDate() {
 		return createDate;
@@ -65,19 +64,21 @@ public class ReceiptForFiGetRequest extends AbstractRequest {
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
 
-	public Date getStartDate() {
+	
+	
+	public String getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 
@@ -105,12 +106,15 @@ public class ReceiptForFiGetRequest extends AbstractRequest {
 		this.userNumId = userNumId;
 	}
 
+	/*public void setBalanceNo(String balanceNo) {
+		this.balanceNo = balanceNo;
+	}
+
 	public String getBalanceNo() {
 		return balanceNo;
 	}
 
-	public void setBalanceNo(String balanceNo) {
-		this.balanceNo = balanceNo;
-	}
-
+*/
+	
+	
 }
