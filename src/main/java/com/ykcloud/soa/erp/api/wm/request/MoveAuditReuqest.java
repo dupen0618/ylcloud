@@ -13,6 +13,7 @@ public class MoveAuditReuqest extends AbstractRequest{
 	
 	@NotNull(message = "移库单号不能为空")
 	private String moveNumId;
+	
 	@NotNull(message = "门店不能为空")
 	private Long subUnitNumId;
 	

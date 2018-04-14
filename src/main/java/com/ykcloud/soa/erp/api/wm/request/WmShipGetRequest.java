@@ -6,22 +6,21 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class WmShipGetRequest extends AbstractRequest {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -798434039581851255L;
 
 	@NotNull(message="门店Id不能为空！")
-	private String subUnitNumId;
+	private Long subUnitNumId;
 	
 	@NotNull(message="托盘标识符不能为空！")
 	private String containerLabserlno;
 
-	public String getSubUnitNumId() {
+
+	
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 

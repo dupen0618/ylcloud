@@ -7,13 +7,16 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  */
 public class SdBlSoHdrGetReservedQtyRequest extends AbstractRequest {
 
-    private Long soNumId;//销售单号
+	private static final long serialVersionUID = 1L;
 
-    public Long getSoNumId() {
-        return soNumId;
-    }
+	private String soNumId;// 销售单号
 
-    public void setSoNumId(Long soNumId) {
-        this.soNumId = soNumId;
-    }
+	public String getSoNumId() {
+		return soNumId;
+	}
+
+	public void setSoNumId(String soNumId) {
+		this.soNumId = soNumId;
+	}
+
 }

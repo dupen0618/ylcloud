@@ -12,35 +12,11 @@ import java.util.List;
  */
 public class WmBillInAccountRequest extends AbstractUserSessionRequest {
 
+	private static final long serialVersionUID = 1L;
     @NotNull(message = "订单编号不能为空！")
     String reservedNo;
     @NotNull(message = "单据类型不能为空！")
     String typeNumId;
 
-    public List<ScmAccInvOwnStkTsc> scmAccInvOwnStkTscs;
 
-
-    public String getReservedNo() {
-        return reservedNo;
-    }
-
-    public void setReservedNo(String reservedNo) {
-        this.reservedNo = reservedNo;
-    }
-
-    public String getTypeNumId() {
-        return typeNumId;
-    }
-
-    public void setTypeNumId(String typeNumId) {
-        this.typeNumId = typeNumId;
-    }
-
-    public List<ScmAccInvOwnStkTsc> getScmAccInvOwnStkTscs() {
-        return scmAccInvOwnStkTscs;
-    }
-
-    public void setScmAccInvOwnStkTscs(List<ScmAccInvOwnStkTsc> scmAccInvOwnStkTscs) {
-        this.scmAccInvOwnStkTscs = scmAccInvOwnStkTscs;
-    }
 }

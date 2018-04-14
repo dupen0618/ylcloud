@@ -14,9 +14,12 @@ public class ReceiptTrayHdrFinishRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = 7297928684649536716L;
 	private Long subUnitNumId;
 	@NotEmpty(message="验收单号不能为空!")
+	
 	private String reservedNo;
 	@NotEmpty(message="托盘号不能为空!")
+	
 	private String traySerlno;
+	
 	public String getReservedNo() {
 		return reservedNo;
 	}

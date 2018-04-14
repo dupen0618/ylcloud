@@ -7,10 +7,6 @@ import javax.validation.constraints.NotNull;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractRequest {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -7173705633933157105L;
 	
 	@NotNull(message="订单ID不能为空！")

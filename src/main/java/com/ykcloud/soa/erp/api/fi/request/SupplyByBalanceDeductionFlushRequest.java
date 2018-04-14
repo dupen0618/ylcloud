@@ -1,18 +1,15 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
 import java.util.Date;
-
 import javax.validation.constraints.NotNull;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
  * @Description:刷新扣款项
  * @author Song
  * @Date 2018年4月4日 下午2:50:06
  */
-public class SupplyByBalanceDeductionFlushRequest extends AbstractRequest {
+public class SupplyByBalanceDeductionFlushRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 4627685577873375711L;
 	
@@ -23,10 +20,10 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractRequest {
 	private Long unitNumId;
 
 	@NotNull(message = "开始日期不能为空！")
-	private String startDate;
+	private Date startDate;
 
 	@NotNull(message = "截止日期不能为空！")
-	private String endtDate;
+	private Date endDate;
 	
 	/*@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
@@ -34,11 +31,8 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractRequest {
 	@NotNull(message = "结算周期不能为空！")
 	private Date balanceDate;*/
 	
-	@NotNull(message = "操作人ID不能为空！")
-	private Long createUserId;
-	
 	@NotNull(message = "结算单号不能为空！")
-	private Long balanceNo;
+	private String balanceNo;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -71,35 +65,30 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractRequest {
 		this.balanceDate = balanceDate;
 	}*/
 
-	public Long getCreateUserId() {
-		return createUserId;
-	}
-
-	public void setCreateUserId(Long createUserId) {
-		this.createUserId = createUserId;
-	}
-
-	public Long getBalanceNo() {
-		return balanceNo;
-	}
-
-	public void setBalanceNo(Long balanceNo) {
-		this.balanceNo = balanceNo;
-	}
-
-	public String getStartDate() {
+	public Date getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(String startDate) {
+	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 
-	public String getEndtDate() {
-		return endtDate;
+	public Date getEndDate() {
+		return endDate;
 	}
 
-	public void setEndtDate(String endtDate) {
-		this.endtDate = endtDate;
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
+
+	public String getBalanceNo() {
+		return balanceNo;
+	}
+
+	public void setBalanceNo(String balanceNo) {
+		this.balanceNo = balanceNo;
+	}
+
+
+	
 }

@@ -11,6 +11,7 @@ public class ProductChangeRequest extends AbstractRequest {
 
     @NotNull(message = "门店编号不能为空")
     private Long subUnitNumId;
+    
     @NotNull(message = "商品条码或编号不能为空")
     private String barcode;
 

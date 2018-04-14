@@ -8,16 +8,13 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class WmSoHdrGetRequest extends AbstractRequest {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 8147686661977300539L;
 	
 	@NotNull(message="订单号不能为空！")
 	private String soNumId;
 	
 	@NotNull(message="门店Id不能为空！")
-	private String subUnitNumId;
+	private Long subUnitNumId;
 	
 	private Date orderDate;
 
@@ -29,11 +26,11 @@ public class WmSoHdrGetRequest extends AbstractRequest {
 		this.soNumId = soNumId;
 	}
 
-	public String getSubUnitNumId() {
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 

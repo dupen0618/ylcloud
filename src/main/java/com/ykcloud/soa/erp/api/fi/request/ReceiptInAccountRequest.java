@@ -12,34 +12,16 @@ import java.util.List;
  * @Date 2018/4/10 11:31
  */
 public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
+	private static final long serialVersionUID = 1L;
+
     @NotNull(message = "单据类型不能为空！")
     String typeNumId;
     @NotEmpty(message = "待入账批次流水不能为空！")
     List<FiPhysicalBatchAccountWba> fiPhysicalBatchAccountWbaList;
 
-    String balaFuncId;
+	Long balaFuncId;
 
-    public String getTypeNumId() {
-        return typeNumId;
-    }
 
-    public void setTypeNumId(String typeNumId) {
-        this.typeNumId = typeNumId;
-    }
 
-    public List<FiPhysicalBatchAccountWba> getFiPhysicalBatchAccountWbaList() {
-        return fiPhysicalBatchAccountWbaList;
-    }
 
-    public void setFiPhysicalBatchAccountWbaList(List<FiPhysicalBatchAccountWba> fiPhysicalBatchAccountWbaList) {
-        this.fiPhysicalBatchAccountWbaList = fiPhysicalBatchAccountWbaList;
-    }
-
-    public String getBalaFuncId() {
-        return balaFuncId;
-    }
-
-    public void setBalaFuncId(String balaFuncId) {
-        this.balaFuncId = balaFuncId;
-    }
 }

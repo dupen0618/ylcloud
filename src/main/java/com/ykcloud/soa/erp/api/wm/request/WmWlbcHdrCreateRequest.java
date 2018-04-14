@@ -6,34 +6,31 @@ import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 
 public class WmWlbcHdrCreateRequest extends AbstractSessionRequest {
 
-	/**
-	 * 
-	 */
-	  private static final long serialVersionUID = 95011086979848977L;
-	
-	  private String subUnitNumId;
-	  
-	  private Date wlbcDate;
-	  
-	  private Long statusNumId;
-	  
-	  private Long soFromType;
-	  
-	  private Long typeNumId;
-	  
-	  private Long stotageNumId;
-	  
-	  private Long physicalNumId;
-	  
-	  private Date deliveryDate;
-	  
-	  private String remark;
+	private static final long serialVersionUID = 95011086979848977L;
 
-	public String getSubUnitNumId() {
+	private Long subUnitNumId;
+
+	private Date wlbcDate;
+
+	private Long statusNumId;
+
+	private Long soFromType;
+
+	private Long typeNumId;
+
+	private Long stotageNumId;
+
+	private Long physicalNumId;
+
+	private Date deliveryDate;
+
+	private String remark;
+
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
@@ -100,7 +97,5 @@ public class WmWlbcHdrCreateRequest extends AbstractSessionRequest {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-	  
-	  
 
 }

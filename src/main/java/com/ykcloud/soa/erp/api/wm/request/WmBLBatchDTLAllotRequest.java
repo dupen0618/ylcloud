@@ -9,7 +9,9 @@ import javax.validation.constraints.NotNull;
  * @Date 2018/4/9 9:18
  */
 public class WmBLBatchDTLAllotRequest extends AbstractUserSessionRequest {
-    //updateBatchDtlByShip用
+	private static final long serialVersionUID = 1L;
+
+	//updateBatchDtlByShip用
     @NotNull(message = "订单编号不能为空！")
     String reservedNo;
 

@@ -6,9 +6,6 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class SoConfirmTypeRequest extends AbstractRequest {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 6020213655003704003L;
 	
 	private String soNumId;

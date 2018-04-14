@@ -9,7 +9,9 @@ import java.util.Date;
  */
 public class WmPhysicalAccountWbaGteByDateRequest extends AbstractRequest {
 
-    private Date recDate;
+	private static final long serialVersionUID = 1L;
+	
+	private Date recDate;
 
     public Date getRecDate() {
         return recDate;

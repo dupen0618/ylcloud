@@ -7,28 +7,22 @@ import javax.validation.constraints.NotNull;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -8819181948393245910L;
 
-	@NotNull(message = "商品ID不能为空!")
+	@NotNull(message = "订单编号不能为空!")
 	private String soNumId;
-	
-	@NotNull(message = "商品ID不能为空!")
+
+	@NotNull(message = "商品编号不能为空!")
 	private Long itemNumId;
-	
-	@NotNull(message = "门店ID不能为空!")
-	private String subUnitNumId;
-	
+
+	@NotNull(message = "门店编号不能为空!")
+	private Long subUnitNumId;
+
 	@NotNull(message = "订单日期不能为空!")
 	private Date orderDate;
-	
-	private Long plmSign;
-	
 
-	
+	private Long pmtSign;
 
 	public String getSoNumId() {
 		return soNumId;
@@ -36,14 +30,6 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 
 	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
-	}
-
-	public String getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(String subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
 	}
 
 	public Long getItemNumId() {
@@ -54,7 +40,13 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 		this.itemNumId = itemNumId;
 	}
 
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
 
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
 
 	public Date getOrderDate() {
 		return orderDate;
@@ -64,14 +56,12 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 		this.orderDate = orderDate;
 	}
 
-	public Long getPlmSign() {
-		return plmSign;
+	public Long getPmtSign() {
+		return pmtSign;
 	}
 
-	public void setPlmSign(Long plmSign) {
-		this.plmSign = plmSign;
+	public void setPmtSign(Long pmtSign) {
+		this.pmtSign = pmtSign;
 	}
 
-	
-	
 }

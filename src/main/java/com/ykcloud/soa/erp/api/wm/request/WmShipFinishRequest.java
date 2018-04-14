@@ -6,15 +6,12 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class WmShipFinishRequest extends AbstractRequest {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 845322839903701744L;
-	
+
 	private String reservedNo;
 
-	private String subUnitNumId;
-	
+	private Long subUnitNumId;
+
 	private Date orderDate;
 
 	public String getReservedNo() {
@@ -25,11 +22,11 @@ public class WmShipFinishRequest extends AbstractRequest {
 		this.reservedNo = reservedNo;
 	}
 
-	public String getSubUnitNumId() {
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
@@ -40,7 +37,5 @@ public class WmShipFinishRequest extends AbstractRequest {
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
-
-	
 
 }

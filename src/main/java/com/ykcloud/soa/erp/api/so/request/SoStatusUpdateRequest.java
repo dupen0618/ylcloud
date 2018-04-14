@@ -4,14 +4,11 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class SoStatusUpdateRequest extends AbstractRequest {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 4263080691699508181L;
 
 	private String wlbc;
 	
-	private String subUnitNumId;
+	private Long subUnitNumId;
 	
 	private Long statusNumId;
 
@@ -23,11 +20,11 @@ public class SoStatusUpdateRequest extends AbstractRequest {
 		this.wlbc = wlbc;
 	}
 
-	public String getSubUnitNumId() {
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
@@ -38,6 +35,7 @@ public class SoStatusUpdateRequest extends AbstractRequest {
 	public void setStatusNumId(Long statusNumId) {
 		this.statusNumId = statusNumId;
 	}
+
 
 	
 

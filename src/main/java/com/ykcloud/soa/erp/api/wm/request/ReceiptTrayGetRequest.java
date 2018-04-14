@@ -10,8 +10,11 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 public class ReceiptTrayGetRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = 4267755424420696319L;
 	private String  reservedNo;
+	
 	private String traySerlno;
+	
 	private Long subUnitNumId;
+	
 	public String getReservedNo() {
 		return reservedNo;
 	}

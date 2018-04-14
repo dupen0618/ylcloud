@@ -5,18 +5,15 @@ import javax.validation.constraints.NotNull;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class WmFinishSoPackingRequest extends AbstractRequest {
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 4419449230653442470L;
 
 	@NotNull(message = "物流波次号不能为空! ")
 	private String wlbc;
-	
+
 	@NotNull(message = "门店号不能为空! ")
-	private String subUnitNumId;
-	
+	private Long subUnitNumId;
+
 	@NotNull(message = "是否可以短播标识符不能为空! ")
 	private Long cancelSign;
 
@@ -28,11 +25,11 @@ public class WmFinishSoPackingRequest extends AbstractRequest {
 		this.wlbc = wlbc;
 	}
 
-	public String getSubUnitNumId() {
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
@@ -44,5 +41,4 @@ public class WmFinishSoPackingRequest extends AbstractRequest {
 		this.cancelSign = cancelSign;
 	}
 
-	
 }

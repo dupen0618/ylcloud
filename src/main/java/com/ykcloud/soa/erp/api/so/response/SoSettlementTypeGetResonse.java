@@ -4,6 +4,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class SoSettlementTypeGetResonse extends MessagePack {
 	
+	private static final long serialVersionUID = 1L;
 	private Long settlementType;
 
 	public Long getSettlementType() {

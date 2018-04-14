@@ -10,13 +10,11 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  */
 public class SoByApplyCreateRequest extends AbstractRequest{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@NotNull(message="申请单号不能为空")
 	private String applyNumId;//申请单号
+	
 	private Long subUnitNumId;//门店
 	
 	public String getApplyNumId() {
