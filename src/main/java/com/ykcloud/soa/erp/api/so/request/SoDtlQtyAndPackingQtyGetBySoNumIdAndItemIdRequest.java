@@ -40,7 +40,6 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}
-	
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
