@@ -16,7 +16,7 @@ public class PhysicsPipelineInsert implements Serializable {
 
 	private Long itemNumId;// 商品编号
 
-	private Long DivNumId;// 商品中心（部门）
+	private Long divNumId;// 商品中心（部门）
 
 	private String barcode;// 商品条码
 
@@ -85,11 +85,11 @@ public class PhysicsPipelineInsert implements Serializable {
 	}
 
 	public Long getDivNumId() {
-		return DivNumId;
+		return divNumId;
 	}
 
 	public void setDivNumId(Long divNumId) {
-		DivNumId = divNumId;
+		this.divNumId = divNumId;
 	}
 
 	public String getBarcode() {

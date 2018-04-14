@@ -32,7 +32,7 @@ public class FinanceGetByReservedNo implements Serializable {
 
 	private Long productOriginNumId;// 产地
 
-	private Long conversionQty;// 件装数
+	private Double conversionQty;// 件装数
 
 	private Long conversionUnitNumId;// 件装单位
 
@@ -144,11 +144,11 @@ public class FinanceGetByReservedNo implements Serializable {
 		this.productOriginNumId = productOriginNumId;
 	}
 
-	public Long getConversionQty() {
+	public Double getConversionQty() {
 		return conversionQty;
 	}
 
-	public void setConversionQty(Long conversionQty) {
+	public void setConversionQty(Double conversionQty) {
 		this.conversionQty = conversionQty;
 	}
 
