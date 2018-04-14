@@ -13,18 +13,18 @@ import java.util.List;
  */
 public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
     @NotNull(message = "单据类型不能为空！")
-    String typeNum;
+    String typeNumId;
     @NotEmpty(message = "待入账批次流水不能为空！")
     List<FiPhysicalBatchAccountWba> fiPhysicalBatchAccountWbaList;
 
     String balaFuncId;
 
-    public String getTypeNum() {
-        return typeNum;
+    public String getTypeNumId() {
+        return typeNumId;
     }
 
-    public void setTypeNum(String typeNum) {
-        this.typeNum = typeNum;
+    public void setTypeNumId(String typeNumId) {
+        this.typeNumId = typeNumId;
     }
 
     public List<FiPhysicalBatchAccountWba> getFiPhysicalBatchAccountWbaList() {
