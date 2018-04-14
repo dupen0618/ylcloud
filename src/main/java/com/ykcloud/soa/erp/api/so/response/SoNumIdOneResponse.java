@@ -8,6 +8,8 @@ public class SoNumIdOneResponse extends MessagePack {
 	private static final long serialVersionUID = 1L;
 	private SoHdr sohdr;
 
+
+
 	public SoHdr getSohdr() {
 		return sohdr;
 	}

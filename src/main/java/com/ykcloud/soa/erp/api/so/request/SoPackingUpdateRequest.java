@@ -63,5 +63,4 @@ public class SoPackingUpdateRequest extends AbstractRequest {
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
-
 }

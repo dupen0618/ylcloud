@@ -14,37 +14,37 @@ public class UsableInventoryByReservedNoGetRequest extends AbstractRequest{
     String reservedNo;
     
 	@NotNull(message = "业务类型编号不能为空！")
-    String billTypeNum;
+    String billTypeNumId;
     
 	@NotNull(message = "单据类型不能为空！")
-    Long typeNum;
+    Long typeNumId;
     
 	@NotNull(message = "入账类型不能为空！")
     String accountName;
 
-
-	public String getReservedNo() {
-		return reservedNo;
-	}
-
-	public void setReservedNo(String reservedNo) {
-		this.reservedNo = reservedNo;
-	}
-
-	public String getBillTypeNum() {
-        return billTypeNum;
+    public String getReservedNo() {
+        return reservedNo;
     }
 
-    public void setBillTypeNum(String billTypeNum) {
-        this.billTypeNum = billTypeNum;
+    public void setReservedNo(String reservedNo) {
+        this.reservedNo = reservedNo;
     }
 
-    public Long getTypeNum() {
-        return typeNum;
+    public String getBillTypeNumId() {
+
+        return billTypeNumId;
     }
 
-    public void setTypeNum(Long typeNum) {
-        this.typeNum = typeNum;
+    public void setBillTypeNumId(String billTypeNumId) {
+        this.billTypeNumId = billTypeNumId;
+    }
+
+    public Long getTypeNumId() {
+        return typeNumId;
+    }
+
+    public void setTypeNumId(Long typeNumId) {
+        this.typeNumId = typeNumId;
     }
 
     public String getAccountName() {

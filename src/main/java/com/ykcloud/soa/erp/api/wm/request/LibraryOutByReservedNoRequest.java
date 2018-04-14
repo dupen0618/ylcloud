@@ -17,7 +17,7 @@ public class LibraryOutByReservedNoRequest extends AbstractRequest {
     
     @NotNull(message = "单据类型不能为空！")
     Long typeNum;
-    
+
     @NotNull(message = "入账类型不能为空！")
     String accountName;
 

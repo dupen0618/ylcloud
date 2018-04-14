@@ -6,6 +6,8 @@ import com.ykcloud.soa.erp.api.wm.request.ReceiptStatusUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForFiGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptStatusUpdateResponse;
 
+import java.util.List;
+
 /**
  * @Description:
  * @author Song
