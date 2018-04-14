@@ -16,8 +16,10 @@ public class ReceiptInventoryAccountUpdateRequest extends AbstractUserSessionReq
 	
 	@NotEmpty(message="验收单号不能为空!")
 	private String reservedNo;
+	
 	@NotNull(message="门店编号不能为空!")
 	private Long subUnitNumId;
+	
 	public String getReservedNo() {
 		return reservedNo;
 	}

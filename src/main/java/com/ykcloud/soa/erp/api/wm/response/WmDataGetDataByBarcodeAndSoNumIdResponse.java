@@ -4,6 +4,8 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class WmDataGetDataByBarcodeAndSoNumIdResponse extends MessagePack {
 	
+	private static final long serialVersionUID = 1L;
+
 	private Long itemNumId;
 	
 	private String itemName;

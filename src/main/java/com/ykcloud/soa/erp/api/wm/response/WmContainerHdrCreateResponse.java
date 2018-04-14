@@ -1,13 +1,10 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
-import java.util.Date;
-
-import javax.validation.constraints.NotNull;
-
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class WmContainerHdrCreateResponse extends MessagePack {
+	private static final long serialVersionUID = 1L;
+
 	//托盘号
 	private String containerSerlno;
 	

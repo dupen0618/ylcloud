@@ -4,15 +4,16 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class SoHdrGetBySoNumIdResponse extends MessagePack {
 
-	private Long wlbcNumId;
+	private static final long serialVersionUID = 1L;
 
-	public Long getWlbcNumId() {
+	private String wlbcNumId;
+
+	public String getWlbcNumId() {
 		return wlbcNumId;
 	}
 
-	public void setWlbcNumId(Long wlbcNumId) {
+	public void setWlbcNumId(String wlbcNumId) {
 		this.wlbcNumId = wlbcNumId;
 	}
-	
-	
+
 }

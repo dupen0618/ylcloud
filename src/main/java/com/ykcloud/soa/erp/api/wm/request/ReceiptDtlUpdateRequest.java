@@ -32,7 +32,7 @@ public class ReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 	private Double qty;
 	
 	@ApiField(description = "更新正常品/赠品标识")
-	private Long plmSign=2L;
+	private Long pmtSign=1L;
 	
 	@ApiField(description = "门店编号")
 	@NotNull(message="门店编号不能为空!")
@@ -84,13 +84,6 @@ public class ReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 		this.qty = qty;
 	}
 
-	public Long getPlmSign() {
-		return plmSign;
-	}
-
-	public void setPlmSign(Long plmSign) {
-		this.plmSign = plmSign;
-	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -99,4 +92,14 @@ public class ReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
+
+	public Long getPmtSign() {
+		return pmtSign;
+	}
+
+	public void setPmtSign(Long pmtSign) {
+		this.pmtSign = pmtSign;
+	}
+	
+	
 }

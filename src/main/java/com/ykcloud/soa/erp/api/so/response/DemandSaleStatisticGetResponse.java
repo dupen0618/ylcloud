@@ -12,6 +12,8 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  *
  */
 public class DemandSaleStatisticGetResponse extends MessagePack {
+	private static final long serialVersionUID = 1L;
+
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date lastSaleDate; // 最近销售日期,格式yyyy-mm-dd
 

@@ -3,21 +3,18 @@ package com.ykcloud.soa.erp.api.so.request;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class CheckSoShipQtyAndPackingQtyRequest extends AbstractRequest {
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 7008234009750911781L;
 
-	private String subUnitNumId;
-	
+	private Long subUnitNumId;
+
 	private String soNumId;
 
-	public String getSubUnitNumId() {
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
@@ -28,6 +25,5 @@ public class CheckSoShipQtyAndPackingQtyRequest extends AbstractRequest {
 	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
-
 
 }

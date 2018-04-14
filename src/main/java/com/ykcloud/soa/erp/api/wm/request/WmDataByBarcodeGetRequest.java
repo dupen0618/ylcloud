@@ -8,23 +8,19 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class WmDataByBarcodeGetRequest extends AbstractRequest {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 3393272083567570905L;
-	
 
 	@NotNull(message = "条码值不能为空! ")
 	private String barcode;
-	
+
 	@NotNull(message = "波次号不能为空! ")
 	private String wlbc;
-	
+
 	@NotNull(message = "门店ID不能为空! ")
-	private String subUnitNumId;
-	
+	private Long subUnitNumId;
+
 	private Long sowNumId;
-	
+
 	private Date orderDate;
 
 	public String getBarcode() {
@@ -43,14 +39,13 @@ public class WmDataByBarcodeGetRequest extends AbstractRequest {
 		this.wlbc = wlbc;
 	}
 
-	public String getSubUnitNumId() {
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
-	
 
 	public Long getSowNumId() {
 		return sowNumId;
@@ -67,5 +62,5 @@ public class WmDataByBarcodeGetRequest extends AbstractRequest {
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
-	
+
 }

@@ -7,4 +7,6 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @Date 2018/4/10 11:31
  */
 public class ReceiptInAccountResponse extends MessagePack {
+
+	private static final long serialVersionUID = 1L;
 }

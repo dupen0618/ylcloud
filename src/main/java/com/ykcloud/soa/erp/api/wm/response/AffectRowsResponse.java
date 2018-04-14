@@ -9,7 +9,8 @@ import java.util.List;
  */
 public class AffectRowsResponse extends MessagePack{
 
-    private List<Integer> rows;
+	private static final long serialVersionUID = 1L;
+	private List<Integer> rows;
 
     public List<Integer> getRows() {
         return rows;

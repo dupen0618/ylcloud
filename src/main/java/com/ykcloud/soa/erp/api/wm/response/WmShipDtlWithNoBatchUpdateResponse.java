@@ -4,6 +4,8 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class WmShipDtlWithNoBatchUpdateResponse extends MessagePack {
 
+	private static final long serialVersionUID = 1L;
+
 	//托盘商品数量，就是传人的itemNumId对应的商品数量
 	private Double containerProductPackingQty;
 	
