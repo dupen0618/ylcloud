@@ -19,11 +19,11 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
-	private Date startDate;
+	private String startDate;
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "截止日期不能为空！")
-	private Date endDate;
+	private String endDate;
 
 	@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
@@ -35,11 +35,7 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 	private Long supplyUnitNumId;
 
 	@NotNull(message = "单据编号不能为空！")
-<<<<<<< f3a70e7f2b065021a1515730931b536a76277963
 	private String reservedNo;
-=======
-	private String ReservedNo;
->>>>>>> 更改参数
 
 	@NotNull(message = "结算单号不能为空！")
 	private String balanceNo;
@@ -61,31 +57,6 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
-	}
-
-	public Date getStartDate() {
-		return startDate;
-	}
-
-<<<<<<< f3a70e7f2b065021a1515730931b536a76277963
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
-
-	public Date getEndDate() {
-		return endDate;
-=======
-	public String getReservedNo() {
-		return ReservedNo;
-	}
-
-	public void setReservedNo(String reservedNo) {
-		ReservedNo = reservedNo;
->>>>>>> 更改参数
-	}
-
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
 	}
 
 	public Long getSettlementType() {
@@ -127,5 +98,23 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 	public void setSeries(String series) {
 		this.series = series;
 	}
+
+	public String getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+
+	public String getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
+	}
+	
+	
 
 }
