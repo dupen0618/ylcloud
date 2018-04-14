@@ -26,7 +26,7 @@ public class ReceiptDtilsForCanBalanceGetRequest extends AbstractUserSessionRequ
 
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
 	@NotNull(message = "截止日期不能为空！")
-	private Date endtDate;
+	private Date endDate;
 
 	@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
@@ -61,12 +61,12 @@ public class ReceiptDtilsForCanBalanceGetRequest extends AbstractUserSessionRequ
 		this.startDate = startDate;
 	}
 
-	public Date getEndtDate() {
-		return endtDate;
+	public Date getEndDate() {
+		return endDate;
 	}
 
-	public void setEndtDate(Date endtDate) {
-		this.endtDate = endtDate;
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
 	public Long getSettlementType() {

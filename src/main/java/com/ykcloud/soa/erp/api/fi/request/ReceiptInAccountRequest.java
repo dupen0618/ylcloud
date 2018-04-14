@@ -19,7 +19,7 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
 	@NotEmpty(message = "待入账批次流水不能为空！")
 	List<FiPhysicalBatchAccountWba> fiPhysicalBatchAccountWbaList;
 
-	String balaFuncId;
+	Long balaFuncId;
 
 	public Long getTypeNum() {
 		return typeNum;
@@ -37,11 +37,14 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
 		this.fiPhysicalBatchAccountWbaList = fiPhysicalBatchAccountWbaList;
 	}
 
-	public String getBalaFuncId() {
+	public Long getBalaFuncId() {
 		return balaFuncId;
 	}
 
-	public void setBalaFuncId(String balaFuncId) {
+	public void setBalaFuncId(Long balaFuncId) {
 		this.balaFuncId = balaFuncId;
 	}
+
+
+	
 }
