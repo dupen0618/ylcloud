@@ -56,4 +56,12 @@ public class SoPackingUpdateRequest extends AbstractRequest {
 		this.orderDate = orderDate;
 	}
 
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
+
 }

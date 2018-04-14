@@ -22,7 +22,7 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 	@NotNull(message = "订单日期不能为空!")
 	private Date orderDate;
 
-	private Long pmtSign;
+	private Long plmSign;
 
 	public String getSoNumId() {
 		return soNumId;
@@ -56,12 +56,12 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 		this.orderDate = orderDate;
 	}
 
-	public Long getPmtSign() {
-		return pmtSign;
+	public Long getPlmSign() {
+		return plmSign;
 	}
 
-	public void setPmtSign(Long pmtSign) {
-		this.pmtSign = pmtSign;
+	public void setPlmSign(Long plmSign) {
+		this.plmSign = plmSign;
 	}
 
 }
