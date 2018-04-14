@@ -3,7 +3,6 @@ package com.ykcloud.soa.erp.api.wm.request;
 import java.util.Date;
 
 import javax.validation.constraints.NotNull;
-
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
@@ -19,10 +18,10 @@ public class GoodsSupplyBalanceGetRequest extends AbstractRequest {
 	private Long subUnitNumId;
 	
 	@NotNull(message = "起始日期不能为空")
-	private String startDate;
+	private Date startDate;
 	
 	@NotNull(message = "截止日期不能为空")
-	private String endDate;
+	private Date endDate;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -32,22 +31,24 @@ public class GoodsSupplyBalanceGetRequest extends AbstractRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public String getStartDate() {
+	public Date getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(String startDate) {
+	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 
-	public String getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
 
+
+	
 
 	
 	

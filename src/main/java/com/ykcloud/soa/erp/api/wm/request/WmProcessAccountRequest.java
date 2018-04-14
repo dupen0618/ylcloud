@@ -6,46 +6,51 @@ import javax.validation.constraints.NotNull;
 /**
  * Created by yiako on 2018/4/2
  */
-public class WmProcessAccountRequest extends AbstractRequest{
+public class WmProcessAccountRequest extends AbstractRequest {
 
-    @NotNull(message = "订单编号不能为空！")
-    Long reservedNo;
-    @NotNull(message = "业务类型编号不能为空！")
-    String billTypeNum;
+	private static final long serialVersionUID = 1L;
 
-    Long typeNum;
-    @NotNull(message = "入账类型不能为空！")
-    String accountName;
+	@NotNull(message = "订单编号不能为空！")
+	private String reservedNo;
 
-    public Long getReservedNo() {
-        return reservedNo;
-    }
+	@NotNull(message = "业务类型编号不能为空！")
+	private Long billTypeNum;
 
-    public void setReservedNo(Long reservedNo) {
-        this.reservedNo = reservedNo;
-    }
+	private Long typeNum;
 
-    public String getBillTypeNum() {
-        return billTypeNum;
-    }
+	@NotNull(message = "入账类型不能为空！")
+	String accountName;
 
-    public void setBillTypeNum(String billTypeNum) {
-        this.billTypeNum = billTypeNum;
-    }
+	public String getReservedNo() {
+		return reservedNo;
+	}
 
-    public Long getTypeNum() {
-        return typeNum;
-    }
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
+	}
 
-    public void setTypeNum(Long typeNum) {
-        this.typeNum = typeNum;
-    }
+	public Long getBillTypeNum() {
+		return billTypeNum;
+	}
 
-    public String getAccountName() {
-        return accountName;
-    }
+	public void setBillTypeNum(Long billTypeNum) {
+		this.billTypeNum = billTypeNum;
+	}
 
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
+	public Long getTypeNum() {
+		return typeNum;
+	}
+
+	public void setTypeNum(Long typeNum) {
+		this.typeNum = typeNum;
+	}
+
+	public String getAccountName() {
+		return accountName;
+	}
+
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
+	}
+
 }

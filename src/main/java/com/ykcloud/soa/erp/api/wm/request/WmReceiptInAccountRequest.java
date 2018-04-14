@@ -9,12 +9,16 @@ import javax.validation.constraints.NotNull;
  * @Date 2018/4/10 9:49
  */
 public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
-    @NotNull(message = "订单编号不能为空！")
-    String reservedNo;
-    @NotNull(message = "单据类型不能为空！")
-    String typeNum;
+	private static final long serialVersionUID = 1L;
 
-    String balaFuncId;
+	@NotNull(message = "订单编号不能为空！")
+    private String reservedNo;
+    
+	@NotNull(message = "单据类型不能为空！")
+    private Long typeNum;
+
+    private Long balaFuncId;
+    
     public String getReservedNo() {
         return reservedNo;
     }
@@ -23,19 +27,22 @@ public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
         this.reservedNo = reservedNo;
     }
 
-    public String getTypeNum() {
-        return typeNum;
-    }
+	public Long getTypeNum() {
+		return typeNum;
+	}
 
-    public void setTypeNum(String typeNum) {
-        this.typeNum = typeNum;
-    }
+	public void setTypeNum(Long typeNum) {
+		this.typeNum = typeNum;
+	}
 
-    public String getBalaFuncId() {
-        return balaFuncId;
-    }
+	public Long getBalaFuncId() {
+		return balaFuncId;
+	}
 
-    public void setBalaFuncId(String balaFuncId) {
-        this.balaFuncId = balaFuncId;
-    }
+	public void setBalaFuncId(Long balaFuncId) {
+		this.balaFuncId = balaFuncId;
+	}
+
+
+    
 }

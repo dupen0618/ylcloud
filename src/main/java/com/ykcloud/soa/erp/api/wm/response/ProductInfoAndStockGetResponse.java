@@ -6,9 +6,6 @@ import com.ykcloud.soa.erp.api.wm.model.BProduct;
 
 public class ProductInfoAndStockGetResponse extends MessagePack {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	private BProduct bProduct;

@@ -1,7 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
-import javax.validation.constraints.NotNull;
 
 /**
  * @Description: 扫码商品条码盘点的入参

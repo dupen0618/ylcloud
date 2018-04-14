@@ -9,24 +9,29 @@ import javax.validation.constraints.NotNull;
  */
 public class UsableInventoryByReservedNoGetRequest extends AbstractRequest{
 
-    @NotNull(message = "单据编号不能为空！")
-    Long reservedNo;
-    @NotNull(message = "业务类型编号不能为空！")
+	private static final long serialVersionUID = 1L;
+	@NotNull(message = "单据编号不能为空！")
+    String reservedNo;
+    
+	@NotNull(message = "业务类型编号不能为空！")
     String billTypeNum;
-    @NotNull(message = "单据类型不能为空！")
+    
+	@NotNull(message = "单据类型不能为空！")
     Long typeNum;
-    @NotNull(message = "入账类型不能为空！")
+    
+	@NotNull(message = "入账类型不能为空！")
     String accountName;
 
-    public Long getReservedNo() {
-        return reservedNo;
-    }
 
-    public void setReservedNo(Long reservedNo) {
-        this.reservedNo = reservedNo;
-    }
+	public String getReservedNo() {
+		return reservedNo;
+	}
 
-    public String getBillTypeNum() {
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
+	}
+
+	public String getBillTypeNum() {
         return billTypeNum;
     }
 

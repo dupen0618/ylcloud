@@ -10,10 +10,13 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  */
 public class ShopProductLastReceiveDateGetRequest extends AbstractRequest {
 	
+	private static final long serialVersionUID = 1L;
 	@NotNull(message="门店编号不能为空!")
 	private Long subUnitNumId;   //门店编号
+
 	@NotNull(message="商品编号不能为空!")
 	private Long itemNumId;     //商品编号
+	
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}

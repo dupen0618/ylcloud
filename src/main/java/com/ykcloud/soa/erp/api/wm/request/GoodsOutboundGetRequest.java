@@ -1,8 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
-
 import javax.validation.constraints.NotNull;
 
 /**
@@ -28,7 +26,7 @@ public class GoodsOutboundGetRequest extends AbstractUserSessionRequest{
     private String tmlNumId;
 
     @NotNull(message="商品数量不能为空")
-    private String qty;
+    private Double qty;
 
     @NotNull(message="波次号不能为空")
     private String wlbc;
@@ -74,15 +72,18 @@ public class GoodsOutboundGetRequest extends AbstractUserSessionRequest{
         this.tmlNumId = tmlNumId;
     }
 
-    public String getQty() {
-        return qty;
-    }
 
-    public void setQty(String qty) {
-        this.qty = qty;
-    }
+    
 
-    public String getWlbc() {
+    public Double getQty() {
+		return qty;
+	}
+
+	public void setQty(Double qty) {
+		this.qty = qty;
+	}
+
+	public String getWlbc() {
         return wlbc;
     }
 

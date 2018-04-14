@@ -9,7 +9,8 @@ import javax.validation.constraints.NotNull;
  * @Date 2018/4/8 15:55
  */
 public class WmBLBatchDTLUpdateRequest extends AbstractUserSessionRequest {
-    @NotNull(message = "订单编号不能为空！")
+	private static final long serialVersionUID = 1L;
+	@NotNull(message = "订单编号不能为空！")
     String reservedNo;
 
     public String getReservedNo() {

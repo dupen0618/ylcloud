@@ -16,8 +16,10 @@ public class ReceiptHdrGetRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = 1L;
 	@NotNull(message="门店编号不能为空!")
 	private Long subUnitNUmId;//门店编号
+	
 	@NotEmpty(message="验收单号不能为空!")
 	private String reservedNo;//验收单号后6位
+	
 	public String getReservedNo() {
 		return reservedNo;
 	}

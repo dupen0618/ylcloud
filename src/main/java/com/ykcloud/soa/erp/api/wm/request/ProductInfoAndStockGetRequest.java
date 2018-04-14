@@ -8,13 +8,11 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class ProductInfoAndStockGetRequest extends AbstractRequest {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@NotNull(message="商品条码不能为空")
 	private String barcode;//条码
+
 	@NotNull(message = "逻辑仓不能为空")
 	private Long storageNumId;//逻辑仓号
 

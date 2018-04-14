@@ -1,158 +1,155 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
-import java.util.Date;
-
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class WmDataByBarcodeGetResponse extends MessagePack {
-	
-		
-		//订单ID
-		private String soNumId;
-		
-		private String custSubUnitName;
-		
-		private Long sowNumId;
-		
-		//商品ID
-		private Long itemNumId;
-		
-		//商品名称
-		private String itemName;
-		
-		//商品条码数量
-		private Double conversionQty;
-		
-		//托盘码
-		private String containerSerlno;
-		
-		//托盘纸质编号
-		private String containerLabserlno;
-		
-		private Double containerProductPackingQty;
-		
-		private Double containerPackingQty;
-		
-		private Double soLockQty;
-		
-		private Double soPackIngQty;
-		
-		private Double soProductLockQty;
-		
-		private Double soProductPackingQty;
 
-		
+	private static final long serialVersionUID = 1L;
 
-		public String getSoNumId() {
-			return soNumId;
-		}
+	// 订单ID
+	private String soNumId;
 
-		public void setSoNumId(String soNumId) {
-			this.soNumId = soNumId;
-		}
+	private String custSubUnitName;
 
-		public String getCustSubUnitName() {
-			return custSubUnitName;
-		}
+	private Long sowNumId;
 
-		public void setCustSubUnitName(String custSubUnitName) {
-			this.custSubUnitName = custSubUnitName;
-		}
+	// 商品ID
+	private Long itemNumId;
 
-		public Long getSowNumId() {
-			return sowNumId;
-		}
+	// 商品名称
+	private String itemName;
 
-		public void setSowNumId(Long sowNumId) {
-			this.sowNumId = sowNumId;
-		}
+	// 商品条码数量
+	private Double conversionQty;
 
-		public Long getItemNumId() {
-			return itemNumId;
-		}
+	// 托盘码
+	private String containerSerlno;
 
-		public void setItemNumId(Long itemNumId) {
-			this.itemNumId = itemNumId;
-		}
+	// 托盘纸质编号
+	private String containerLabserlno;
 
-		public String getItemName() {
-			return itemName;
-		}
+	private Double containerProductPackingQty;
 
-		public void setItemName(String itemName) {
-			this.itemName = itemName;
-		}
+	private Double containerPackingQty;
 
-		public Double getConversionQty() {
-			return conversionQty;
-		}
+	private Double soLockQty;
 
-		public void setConversionQty(Double conversionQty) {
-			this.conversionQty = conversionQty;
-		}
-		
-		public String getContainerSerlno() {
-			return containerSerlno;
-		}
+	private Double soPackIngQty;
 
-		public void setContainerSerlno(String containerSerlno) {
-			this.containerSerlno = containerSerlno;
-		}
+	private Double soProductLockQty;
 
-		public String getContainerLabserlno() {
-			return containerLabserlno;
-		}
+	private Double soProductPackingQty;
 
-		public void setContainerLabserlno(String containerLabserlno) {
-			this.containerLabserlno = containerLabserlno;
-		}
+	public String getSoNumId() {
+		return soNumId;
+	}
 
-		public Double getContainerProductPackingQty() {
-			return containerProductPackingQty;
-		}
+	public void setSoNumId(String soNumId) {
+		this.soNumId = soNumId;
+	}
 
-		public void setContainerProductPackingQty(Double containerProductPackingQty) {
-			this.containerProductPackingQty = containerProductPackingQty;
-		}
+	public String getCustSubUnitName() {
+		return custSubUnitName;
+	}
 
-		public Double getContainerPackingQty() {
-			return containerPackingQty;
-		}
+	public void setCustSubUnitName(String custSubUnitName) {
+		this.custSubUnitName = custSubUnitName;
+	}
 
-		public void setContainerPackingQty(Double containerPackingQty) {
-			this.containerPackingQty = containerPackingQty;
-		}
+	public Long getSowNumId() {
+		return sowNumId;
+	}
 
-		public Double getSoLockQty() {
-			return soLockQty;
-		}
+	public void setSowNumId(Long sowNumId) {
+		this.sowNumId = sowNumId;
+	}
 
-		public void setSoLockQty(Double soLockQty) {
-			this.soLockQty = soLockQty;
-		}
+	public Long getItemNumId() {
+		return itemNumId;
+	}
 
-		public Double getSoPackIngQty() {
-			return soPackIngQty;
-		}
+	public void setItemNumId(Long itemNumId) {
+		this.itemNumId = itemNumId;
+	}
 
-		public void setSoPackIngQty(Double soPackIngQty) {
-			this.soPackIngQty = soPackIngQty;
-		}
+	public String getItemName() {
+		return itemName;
+	}
 
-		public Double getSoProductLockQty() {
-			return soProductLockQty;
-		}
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
 
-		public void setSoProductLockQty(Double soProductLockQty) {
-			this.soProductLockQty = soProductLockQty;
-		}
+	public Double getConversionQty() {
+		return conversionQty;
+	}
 
-		public Double getSoProductPackingQty() {
-			return soProductPackingQty;
-		}
+	public void setConversionQty(Double conversionQty) {
+		this.conversionQty = conversionQty;
+	}
 
-		public void setSoProductPackingQty(Double soProductPackingQty) {
-			this.soProductPackingQty = soProductPackingQty;
-		}
+	public String getContainerSerlno() {
+		return containerSerlno;
+	}
+
+	public void setContainerSerlno(String containerSerlno) {
+		this.containerSerlno = containerSerlno;
+	}
+
+	public String getContainerLabserlno() {
+		return containerLabserlno;
+	}
+
+	public void setContainerLabserlno(String containerLabserlno) {
+		this.containerLabserlno = containerLabserlno;
+	}
+
+	public Double getContainerProductPackingQty() {
+		return containerProductPackingQty;
+	}
+
+	public void setContainerProductPackingQty(Double containerProductPackingQty) {
+		this.containerProductPackingQty = containerProductPackingQty;
+	}
+
+	public Double getContainerPackingQty() {
+		return containerPackingQty;
+	}
+
+	public void setContainerPackingQty(Double containerPackingQty) {
+		this.containerPackingQty = containerPackingQty;
+	}
+
+	public Double getSoLockQty() {
+		return soLockQty;
+	}
+
+	public void setSoLockQty(Double soLockQty) {
+		this.soLockQty = soLockQty;
+	}
+
+	public Double getSoPackIngQty() {
+		return soPackIngQty;
+	}
+
+	public void setSoPackIngQty(Double soPackIngQty) {
+		this.soPackIngQty = soPackIngQty;
+	}
+
+	public Double getSoProductLockQty() {
+		return soProductLockQty;
+	}
+
+	public void setSoProductLockQty(Double soProductLockQty) {
+		this.soProductLockQty = soProductLockQty;
+	}
+
+	public Double getSoProductPackingQty() {
+		return soProductPackingQty;
+	}
+
+	public void setSoProductPackingQty(Double soProductPackingQty) {
+		this.soProductPackingQty = soProductPackingQty;
+	}
 
 }
