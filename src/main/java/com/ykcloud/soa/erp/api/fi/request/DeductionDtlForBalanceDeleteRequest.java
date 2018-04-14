@@ -18,9 +18,9 @@ public class DeductionDtlForBalanceDeleteRequest extends AbstractRequest {
 
 /*	@NotNull(message = "结算单号不能为空！")
 	private Long balanceNo;*/
-	
+/*
 	@NotNull(message = "数据源单号不能为空！")
-	private Long reservedNo;
+	private Long reservedNo;*/
 	
 	@NotNull(message = "操作人ID不能为空！")
 	private Long createUserId;
@@ -41,13 +41,13 @@ public class DeductionDtlForBalanceDeleteRequest extends AbstractRequest {
 		this.balanceNo = balanceNo;
 	}*/
 
-	public Long getReservedNo() {
+/*	public Long getReservedNo() {
 		return reservedNo;
 	}
 
 	public void setReservedNo(Long reservedNo) {
 		this.reservedNo = reservedNo;
-	}
+	}*/
 
 	public Long getCreateUserId() {
 		return createUserId;
