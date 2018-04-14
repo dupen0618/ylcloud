@@ -32,7 +32,7 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractUserSessionReq
 	private Date balanceDate;*/
 	
 	@NotNull(message = "结算单号不能为空！")
-	private String balanceNo;
+	private Long balanceNo;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -65,6 +65,10 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractUserSessionReq
 		this.balanceDate = balanceDate;
 	}*/
 
+	public Long getBalanceNo() {
+		return balanceNo;
+	}
+
 	public Date getStartDate() {
 		return startDate;
 	}
@@ -81,11 +85,7 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractUserSessionReq
 		this.endDate = endDate;
 	}
 
-	public String getBalanceNo() {
-		return balanceNo;
-	}
-
-	public void setBalanceNo(String balanceNo) {
+	public void setBalanceNo(Long balanceNo) {
 		this.balanceNo = balanceNo;
 	}
 

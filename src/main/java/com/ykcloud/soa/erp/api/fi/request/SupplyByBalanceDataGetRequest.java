@@ -19,11 +19,11 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
-	private String startDate;
+	private Date startDate;
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "截止日期不能为空！")
-	private String endDate;
+	private Date endDate;
 
 	@NotNull(message = "经营方式不能为空！")
 	private Long settlementType;
@@ -99,22 +99,23 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 		this.series = series;
 	}
 
-	public String getStartDate() {
+	public Date getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(String startDate) {
+	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 
-	public String getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
-	
+
+
 	
 
 }

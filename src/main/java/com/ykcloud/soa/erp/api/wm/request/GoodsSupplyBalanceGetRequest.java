@@ -46,10 +46,6 @@ public class GoodsSupplyBalanceGetRequest extends AbstractRequest {
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
-
-
-	
-
 	
 	
 }
