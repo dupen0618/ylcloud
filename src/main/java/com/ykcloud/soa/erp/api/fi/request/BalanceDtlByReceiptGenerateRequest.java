@@ -12,40 +12,38 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 public class BalanceDtlByReceiptGenerateRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 3737818551885038156L;
-	
-	@NotNull(message = "验收单号不能为空！")
-	private Long reservedNo;
-	
-	@NotNull(message = "行号不能为空！")
-	private Long series;
-	
-	@NotNull(message = "结算单号不能为空！")
-	private Long balanceNo;
 
-	public Long getReservedNo() {
+	@NotNull(message = "验收单号不能为空！")
+	private String reservedNo;
+
+	@NotNull(message = "行号不能为空！")
+	private String series;
+
+	@NotNull(message = "结算单号不能为空！")
+	private String balanceNo;
+
+	public String getReservedNo() {
 		return reservedNo;
 	}
 
-	public void setReservedNo(Long reservedNo) {
+	public void setReservedNo(String reservedNo) {
 		this.reservedNo = reservedNo;
 	}
 
-	public Long getSeries() {
+	public String getSeries() {
 		return series;
 	}
 
-	public void setSeries(Long series) {
+	public void setSeries(String series) {
 		this.series = series;
 	}
 
-	public Long getBalanceNo() {
+	public String getBalanceNo() {
 		return balanceNo;
 	}
 
-	public void setBalanceNo(Long balanceNo) {
+	public void setBalanceNo(String balanceNo) {
 		this.balanceNo = balanceNo;
 	}
-	
-	
 
 }

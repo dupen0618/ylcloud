@@ -16,12 +16,13 @@ public class DeductionDtlForBalanceDeleteRequest extends AbstractRequest {
 	@NotNull(message = "行号不能为空！")
 	private String series;
 
-/*	@NotNull(message = "结算单号不能为空！")
-	private Long balanceNo;*/
-	
+	/*
+	 * @NotNull(message = "结算单号不能为空！") private Long balanceNo;
+	 */
+
 	@NotNull(message = "数据源单号不能为空！")
-	private Long reservedNo;
-	
+	private String reservedNo;
+
 	@NotNull(message = "操作人ID不能为空！")
 	private Long createUserId;
 
@@ -32,20 +33,17 @@ public class DeductionDtlForBalanceDeleteRequest extends AbstractRequest {
 	public void setSeries(String series) {
 		this.series = series;
 	}
-/*
-	public Long getBalanceNo() {
-		return balanceNo;
-	}
+	/*
+	 * public Long getBalanceNo() { return balanceNo; }
+	 * 
+	 * public void setBalanceNo(Long balanceNo) { this.balanceNo = balanceNo; }
+	 */
 
-	public void setBalanceNo(Long balanceNo) {
-		this.balanceNo = balanceNo;
-	}*/
-
-	public Long getReservedNo() {
+	public String getReservedNo() {
 		return reservedNo;
 	}
 
-	public void setReservedNo(Long reservedNo) {
+	public void setReservedNo(String reservedNo) {
 		this.reservedNo = reservedNo;
 	}
 
@@ -56,5 +54,5 @@ public class DeductionDtlForBalanceDeleteRequest extends AbstractRequest {
 	public void setCreateUserId(Long createUserId) {
 		this.createUserId = createUserId;
 	}
-	
+
 }

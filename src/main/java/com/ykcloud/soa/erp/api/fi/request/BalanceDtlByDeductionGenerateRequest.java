@@ -13,26 +13,16 @@ import java.util.List;
  */
 public class BalanceDtlByDeductionGenerateRequest extends AbstractRequest {
 
-
 	private static final long serialVersionUID = 8338043862824578275L;
 
 	@NotNull(message = "操作人ID不能为空！")
 	private Long createUserId;
-	
+
 	@NotNull(message = "行号不能为空！")
 	private List<String> seriess;
-	
+
 	@NotNull(message = "结算单号不能为空！")
-	private Long balanceNo;
-
-
-	public Long getBalanceNo() {
-		return balanceNo;
-	}
-
-	public void setBalanceNo(Long balanceNo) {
-		this.balanceNo = balanceNo;
-	}
+	private String balanceNo;
 
 	public Long getCreateUserId() {
 		return createUserId;
@@ -49,4 +39,13 @@ public class BalanceDtlByDeductionGenerateRequest extends AbstractRequest {
 	public void setSeriess(List<String> seriess) {
 		this.seriess = seriess;
 	}
+
+	public String getBalanceNo() {
+		return balanceNo;
+	}
+
+	public void setBalanceNo(String balanceNo) {
+		this.balanceNo = balanceNo;
+	}
+
 }

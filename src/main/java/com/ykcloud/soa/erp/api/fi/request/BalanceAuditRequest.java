@@ -14,16 +14,16 @@ public class BalanceAuditRequest extends AbstractRequest {
 	private static final long serialVersionUID = -1766553622327456524L;
 
 	@NotNull(message = "结算单号不能为空！")
-	private Long balanceNo;
+	private String balanceNo;
 	
 	@NotNull(message = "操作人ID不能为空！")
 	private Long createUserId;
 
-	public Long getBalanceNo() {
+	public String getBalanceNo() {
 		return balanceNo;
 	}
 
-	public void setBalanceNo(Long balanceNo) {
+	public void setBalanceNo(String balanceNo) {
 		this.balanceNo = balanceNo;
 	}
 
@@ -34,6 +34,8 @@ public class BalanceAuditRequest extends AbstractRequest {
 	public void setCreateUserId(Long createUserId) {
 		this.createUserId = createUserId;
 	}
+
+
 	
 	
 }
