@@ -16,23 +16,22 @@ public interface WmBillInAccountService {
     //物理仓
     WmBillInAccountResponse setReceiptInAccountPhysicalWBAService(WmBillInAccountRequest wmBillInAccountRequest);
 
-    WmBillInAccountResponse ReceiptInAccountPhysicalWBAService(WmBillInAccountRequest wmBillInAccountRequest);
     //可用验收入库单
-    AffectRowsResponse getCheckoutByReservedNo(CheckoutGetByReservedNo checkoutGetByReservedNo);
+    AffectRowsResponse getCheckoutByReservedNo(UsableInventoryByReservedNoGetRequest checkoutGetByReservedNo);
     //可用库存销售订单(流水)
-    AffectRowsResponse getSalesOrderBySoNumId(SalesOrderBySoNumIdGetRequest request);
+    AffectRowsResponse getSalesOrderBySoNumId(UsableInventoryByReservedNoGetRequest request);
     //可用库存出库装箱单
-    AffectRowsResponse getWarehousePackingbySoNumId(WarehousepackingGetRequest request);
+    AffectRowsResponse getWarehousePackingbySoNumId(UsableInventoryByReservedNoGetRequest request);
     //可用库存出库单
-    AffectRowsResponse LibraryOutByReservedNo(LibraryOutByReservedNoRequest request);
+    AffectRowsResponse LibraryOutByReservedNo(UsableInventoryByReservedNoGetRequest request);
     //可用库存盘盈盘亏单
-    AffectRowsResponse inventoryProfitAndLossesByReservedNo(InventoryProfitAndLossesByReservedNoRequest request);
+    AffectRowsResponse inventoryProfitAndLossesByReservedNo(UsableInventoryByReservedNoGetRequest request);
     //可用库存加工单
-    AffectRowsResponse materialProcessingFromGetByWorkNumId(MaterialProcessingFromGetByWorkNumIdRequest request);
+    AffectRowsResponse materialProcessingFromGetByWorkNumId(UsableInventoryByReservedNoGetRequest request);
     //可用库存成品
-    AffectRowsResponse finishedProductsProcessingFromGetByWorkNumId(FinishedProductsProcessingFromGetByWorkNumIdRequest request);
+    AffectRowsResponse finishedProductsProcessingFromGetByWorkNumId(UsableInventoryByReservedNoGetRequest request);
     //可用库存损益单
-    AffectRowsResponse profitAndLossGetByWorkNumId(ProfitAndLossGetByWorkNumIdRequest request);
+    AffectRowsResponse profitAndLossGetByWorkNumId(UsableInventoryByReservedNoGetRequest request);
     //物理验收入库流水
     WmBillInAccountResponse getVerifyPhysicsByReservedNo(PhysicsWarehousepackingGetRequest request);
     //物理出库流水
@@ -54,6 +53,6 @@ public interface WmBillInAccountService {
     //物理仓月进销存
     WmBillInAccountResponse ReceiptInAccountPhysicalMonthGAService(WmBillInAccountRequest wmBillInAccountRequest);
     //财务库存处理-(批次库存日月进销存+商品成本)
-    //验收入库单
-    WmReceiptInAccountResponse setReceiptInAccountService(WmReceiptInAccountRequest request);
+
+    public WmReceiptInAccountResponse setReceiptInAccountService(WmReceiptInAccountRequest request);
 }

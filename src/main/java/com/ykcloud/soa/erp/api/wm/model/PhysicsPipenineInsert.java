@@ -43,11 +43,11 @@ public class PhysicsPipenineInsert implements Serializable {
 
 	private Long billTypeNumId;// 单据类型
 
-	private String triggerBillid;// 单据编号
+	private Long triggerBillid;// 单据编号
 
-	private String triggerBillLine;// 单据行号
+	private Long triggerBillLine;// 单据行号
 
-	private String assistLine;// 辅助行号
+	private Long assistLine;// 辅助行号
 
 	private Long locNumId;// 库位
 
@@ -195,27 +195,27 @@ public class PhysicsPipenineInsert implements Serializable {
 		this.billTypeNumId = billTypeNumId;
 	}
 
-	public String getTriggerBillid() {
+	public Long getTriggerBillid() {
 		return triggerBillid;
 	}
 
-	public void setTriggerBillid(String triggerBillid) {
+	public void setTriggerBillid(Long triggerBillid) {
 		this.triggerBillid = triggerBillid;
 	}
 
-	public String getTriggerBillLine() {
+	public Long getTriggerBillLine() {
 		return triggerBillLine;
 	}
 
-	public void setTriggerBillLine(String triggerBillLine) {
+	public void setTriggerBillLine(Long triggerBillLine) {
 		this.triggerBillLine = triggerBillLine;
 	}
 
-	public String getAssistLine() {
+	public Long getAssistLine() {
 		return assistLine;
 	}
 
-	public void setAssistLine(String assistLine) {
+	public void setAssistLine(Long assistLine) {
 		this.assistLine = assistLine;
 	}
 

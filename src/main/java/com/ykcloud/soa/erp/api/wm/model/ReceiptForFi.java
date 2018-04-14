@@ -20,7 +20,7 @@ public class ReceiptForFi implements Serializable {
 
 	private Long itemNumId;// 商品
 
-	private String divNumId;// 商品中心
+	private Long divNumId;// 商品中心
 
 	private String barcode;// 商品条码
 
@@ -112,11 +112,15 @@ public class ReceiptForFi implements Serializable {
 		this.itemNumId = itemNumId;
 	}
 
-	public String getDivNumId() {
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public Long getDivNumId() {
 		return divNumId;
 	}
 
-	public void setDivNumId(String divNumId) {
+	public void setDivNumId(Long divNumId) {
 		this.divNumId = divNumId;
 	}
 

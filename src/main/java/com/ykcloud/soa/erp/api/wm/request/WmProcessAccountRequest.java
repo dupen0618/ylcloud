@@ -12,11 +12,10 @@ public class WmProcessAccountRequest extends AbstractRequest {
 
 	@NotNull(message = "订单编号不能为空！")
 	private String reservedNo;
-
 	@NotNull(message = "业务类型编号不能为空！")
-	private Long billTypeNum;
+	private String billTypeNumId;
 
-	private Long typeNum;
+	private Long typeNumId;
 
 	@NotNull(message = "入账类型不能为空！")
 	String accountName;
@@ -29,20 +28,20 @@ public class WmProcessAccountRequest extends AbstractRequest {
 		this.reservedNo = reservedNo;
 	}
 
-	public Long getBillTypeNum() {
-		return billTypeNum;
+	public String getBillTypeNumId() {
+		return billTypeNumId;
 	}
 
-	public void setBillTypeNum(Long billTypeNum) {
-		this.billTypeNum = billTypeNum;
+	public void setBillTypeNumId(String billTypeNumId) {
+		this.billTypeNumId = billTypeNumId;
 	}
 
-	public Long getTypeNum() {
-		return typeNum;
+	public Long getTypeNumId() {
+		return typeNumId;
 	}
 
-	public void setTypeNum(Long typeNum) {
-		this.typeNum = typeNum;
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
 	}
 
 	public String getAccountName() {

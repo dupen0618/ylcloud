@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
  * Created by yiako on 2018/3/31
  */
 public class PhysicsWarehousepackingGetRequest extends AbstractRequest {
+
 	private static final long serialVersionUID = 1L;
 
 	@NotNull(message = "出库单号不能为空！")

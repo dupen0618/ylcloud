@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
  * Created by yiako on 2018/3/28
  */
 public class InventoryProfitAndLossesByReservedNoRequest extends AbstractRequest {
+
 	private static final long serialVersionUID = 1L;
 	@NotNull(message = "订单编号不能为空！")
     String reservedNo;
@@ -44,6 +45,4 @@ public class InventoryProfitAndLossesByReservedNoRequest extends AbstractRequest
 		this.accountName = accountName;
 	}
 
-
-    
 }
