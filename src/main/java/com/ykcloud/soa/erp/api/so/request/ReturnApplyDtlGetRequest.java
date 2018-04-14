@@ -2,11 +2,9 @@ package com.ykcloud.soa.erp.api.so.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-import com.ykcloud.soa.erp.api.so.model.ReturnApplyDtl;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
-import java.util.List;
 
 /**
  * @Author: fred.zhao

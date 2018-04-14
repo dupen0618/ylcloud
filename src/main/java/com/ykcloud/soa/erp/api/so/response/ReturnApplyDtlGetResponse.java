@@ -1,7 +1,7 @@
 package com.ykcloud.soa.erp.api.so.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.so.model.ReturnApplyDtl;
+import com.ykcloud.soa.erp.api.so.model.MaterialIssueBackDtl;
 
 import java.util.List;
 
@@ -13,13 +13,13 @@ import java.util.List;
 public class ReturnApplyDtlGetResponse extends MessagePack {
     private static final long serialVersionUID = -2483461422473599832L;
 
-    private List<ReturnApplyDtl> returnApplyDtls;
+    private List<MaterialIssueBackDtl> materialIssueBackDtls;
 
-    public List<ReturnApplyDtl> getReturnApplyDtls() {
-        return returnApplyDtls;
+    public List<MaterialIssueBackDtl> getMaterialIssueBackDtls() {
+        return materialIssueBackDtls;
     }
 
-    public void setReturnApplyDtls(List<ReturnApplyDtl> returnApplyDtls) {
-        this.returnApplyDtls = returnApplyDtls;
+    public void setMaterialIssueBackDtls(List<MaterialIssueBackDtl> materialIssueBackDtls) {
+        this.materialIssueBackDtls = materialIssueBackDtls;
     }
 }

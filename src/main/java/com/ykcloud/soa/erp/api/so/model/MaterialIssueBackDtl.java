@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @Description:
  * @Date: Created in 14:09:2018/3/29
  */
-public class ReturnApplyDtl implements Serializable {
+public class MaterialIssueBackDtl implements Serializable {
 
     private static final long serialVersionUID = -2305750048515780399L;
 
