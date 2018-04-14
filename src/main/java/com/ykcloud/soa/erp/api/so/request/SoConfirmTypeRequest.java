@@ -12,7 +12,7 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 	
 	private Long confirmType;
 	
-	private String subUnitNumId;
+	private Long subUnitNumId;
 	
 	private Date orderDate;
 
@@ -34,11 +34,11 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 	}
 
 
-	public String getSubUnitNumId() {
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
