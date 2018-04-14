@@ -12,10 +12,14 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  *
  */
 public class DemandSaleStatisticGetRequest extends AbstractRequest {
+	private static final long serialVersionUID = 1L;
+	
 	@NotNull(message="门店编号不能为空!")
 	private  Long subUnitNumId;   //门店编号
+	
 	@NotNull(message="商品编号不能为空!")
 	private  Long itemNumId;     //商品编号
+	
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "日期不能为空！")
 	private  Date orderDate;   //订单日期

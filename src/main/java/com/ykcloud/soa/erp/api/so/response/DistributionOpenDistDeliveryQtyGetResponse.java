@@ -4,6 +4,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 //仓库配送数的   配送方式出参类
 public class DistributionOpenDistDeliveryQtyGetResponse extends MessagePack {
+	private static final long serialVersionUID = 1L;
 	private Double openDistDeliveryQty; // 仓库配送数
 
 	public Double getOpenDistDeliveryQty() {

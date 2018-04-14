@@ -13,6 +13,7 @@ import com.ykcloud.soa.erp.api.so.model.SoDtl;
  */
 public class SoBySoNumIdAndItemNumIdGetResponse extends MessagePack {
 	
+	private static final long serialVersionUID = 1L;
 	//订单明细集合
 	private List<SoDtl> soDtlList;
 
