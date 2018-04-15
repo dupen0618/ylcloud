@@ -1,9 +1,9 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
-import com.ykcloud.soa.erp.api.scm.request.InTransitDepositByBillIdRequest;
+import com.ykcloud.soa.erp.api.scm.request.InTransitDepositRequest;
 import com.ykcloud.soa.erp.api.scm.request.ProductDemandQtyGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ShopProductDemandQtyGenerateRequest;
-import com.ykcloud.soa.erp.api.scm.response.InTransitDepositByBillIdResponse;
+import com.ykcloud.soa.erp.api.scm.response.InTransitDepositResponse;
 import com.ykcloud.soa.erp.api.scm.response.ProductDemandQtyGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ShopProductDemandQtyGenerateResponse;
 
@@ -23,6 +23,6 @@ public interface ScmDemandService {
 	public ProductDemandQtyGetResponse getProductDemandQty(ProductDemandQtyGetRequest request);
 	
 	//在途数量按单据编号入账销账
-	public InTransitDepositByBillIdResponse depositInTransitByBillId(InTransitDepositByBillIdRequest request);
+	public InTransitDepositResponse depositInTransit(InTransitDepositRequest request);
 	
 }
