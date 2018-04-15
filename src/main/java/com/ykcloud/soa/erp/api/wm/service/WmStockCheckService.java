@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.ContainerFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.ContainerProductDetailGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ContainerRefreshRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
@@ -17,6 +18,7 @@ import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.ContainerProductDetailGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeScanResponse;
 import com.ykcloud.soa.erp.api.wm.response.OmitCheckProductListQueryResponse;
@@ -176,4 +178,13 @@ public interface WmStockCheckService {
      */
     StockAdjustCreateResponse createStockAdjust(
         StockAdjustCreateRequest request);
+
+    /**
+     * 查询箱明细
+     *
+     * @param request
+     * @return
+     */
+    ContainerProductDetailGetResponse getContainerProductDetail(
+        ContainerProductDetailGetRequest request);
 }
