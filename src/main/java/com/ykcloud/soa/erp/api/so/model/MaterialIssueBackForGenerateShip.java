@@ -32,7 +32,7 @@ public class MaterialIssueBackForGenerateShip implements Serializable {
 
     private Long statusNumId;//状态
 
-    private List<MaterialIssueBackDtl> materialIssueBackDtlList;
+    private List<ReturnApplyDtl> returnApplyDtlList;
 
 
     public Date getOriginShipDate() {
@@ -115,11 +115,11 @@ public class MaterialIssueBackForGenerateShip implements Serializable {
         this.remark = remark;
     }
 
-    public List<MaterialIssueBackDtl> getMaterialIssueBackDtlList() {
-        return materialIssueBackDtlList;
+    public List<ReturnApplyDtl> getReturnApplyDtlList() {
+        return returnApplyDtlList;
     }
 
-    public void setMaterialIssueBackDtlList(List<MaterialIssueBackDtl> materialIssueBackDtlList) {
-        this.materialIssueBackDtlList = materialIssueBackDtlList;
+    public void setReturnApplyDtlList(List<ReturnApplyDtl> returnApplyDtlList) {
+        this.returnApplyDtlList = returnApplyDtlList;
     }
 }
