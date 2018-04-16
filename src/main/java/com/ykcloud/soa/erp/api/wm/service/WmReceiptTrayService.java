@@ -3,9 +3,11 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayHdrFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.TraySerlnoLableUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayHdrFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.TraySerlnoLableUpdateResponse;
 
 public interface WmReceiptTrayService {
 	/**
@@ -24,15 +26,11 @@ public interface WmReceiptTrayService {
 	public ReceiptTrayGetResponse getReceiptTray(ReceiptTrayGetRequest request);
 	
 	/**
-	 *@Description: 更新周转箱
+	 *@Description: 更新托盘实物周转箱编号
 	 *@Auther hank
 	 *@Date 2018-4-12
 	 *@param request{subUnitNumId,reservedNo,traySerlno,traySerlnoLable,userNumId}
-	 *@return response{}
+	 *@return response{code,message}
 	 */
-	/*
-	public TraySerlnoLablebind bindTraySerlnoLable() {
-		
-	}
-	*/
+	public TraySerlnoLableUpdateResponse updateTraySerlnoLable(TraySerlnoLableUpdateRequest request); 
 }
