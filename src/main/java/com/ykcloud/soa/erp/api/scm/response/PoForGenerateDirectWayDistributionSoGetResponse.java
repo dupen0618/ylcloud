@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.response;
 
+import java.util.Date;
+
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class PoForGenerateDirectWayDistributionSoGetResponse extends MessagePack {
@@ -10,6 +12,32 @@ public class PoForGenerateDirectWayDistributionSoGetResponse extends MessagePack
 	
 	private String approvalNumId;
 	
+	/**
+	 * 送货截止日期
+	 */
+	private Date deliveryDate;
+	
+	/**
+	 * 来源
+	 */
+	private Long soFromType;
+	
+	public Long getSoFromType() {
+		return soFromType;
+	}
+
+	public void setSoFromType(Long soFromType) {
+		this.soFromType = soFromType;
+	}
+
+	public Date getDeliveryDate() {
+		return deliveryDate;
+	}
+
+	public void setDeliveryDate(Date deliveryDate) {
+		this.deliveryDate = deliveryDate;
+	}
+
 	public Double getDepositAmount() {
 		return depositAmount;
 	}
