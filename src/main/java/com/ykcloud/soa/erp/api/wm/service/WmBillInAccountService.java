@@ -10,12 +10,6 @@ import com.ykcloud.soa.erp.api.wm.response.WmReceiptInAccountResponse;
  * @Date 2018/3/26 18:51
  */
 public interface WmBillInAccountService {
-    //可用库存
-    WmBillInAccountResponse setReceiptInAccountTSCService(WmBillInAccountRequest wmBillInAccountRequest);
-
-    //物理仓
-    WmBillInAccountResponse setReceiptInAccountPhysicalWBAService(WmBillInAccountRequest wmBillInAccountRequest);
-
     //可用验收入库单
     AffectRowsResponse getCheckoutByReservedNo(UsableInventoryByReservedNoGetRequest checkoutGetByReservedNo);
     //可用库存销售订单(流水)

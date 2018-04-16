@@ -61,6 +61,17 @@ public class PhysicsPipenineInsert implements Serializable {
 
 	private Date recDate;// 入库日期
 
+	private Long createUserId;//创建人
+
+	private Long lastUpdateUserId;//更新人
+
+	private Date createDtme;//创建时间
+
+	private Date lastUpdtme;//更新时间
+
+	private Date carrySign;//结转标识
+
+
 	public Long getTenantNumId() {
 		return tenantNumId;
 	}
@@ -173,7 +184,6 @@ public class PhysicsPipenineInsert implements Serializable {
 		this.classifyNumId = classifyNumId;
 	}
 
-	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	public Date getOrderDate() {
 		return orderDate;
 	}
@@ -262,4 +272,47 @@ public class PhysicsPipenineInsert implements Serializable {
 		this.recDate = recDate;
 	}
 
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public Long getCreateUserId() {
+		return createUserId;
+	}
+
+	public void setCreateUserId(Long createUserId) {
+		this.createUserId = createUserId;
+	}
+
+	public Long getLastUpdateUserId() {
+		return lastUpdateUserId;
+	}
+
+	public void setLastUpdateUserId(Long lastUpdateUserId) {
+		this.lastUpdateUserId = lastUpdateUserId;
+	}
+
+	public Date getCreateDtme() {
+		return createDtme;
+	}
+
+	public void setCreateDtme(Date createDtme) {
+		this.createDtme = createDtme;
+	}
+
+	public Date getLastUpdtme() {
+		return lastUpdtme;
+	}
+
+	public void setLastUpdtme(Date lastUpdtme) {
+		this.lastUpdtme = lastUpdtme;
+	}
+
+	public Date getCarrySign() {
+		return carrySign;
+	}
+
+	public void setCarrySign(Date carrySign) {
+		this.carrySign = carrySign;
+	}
 }
