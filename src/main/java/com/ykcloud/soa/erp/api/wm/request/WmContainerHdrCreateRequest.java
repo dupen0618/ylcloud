@@ -6,8 +6,9 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WmContainerHdrCreateRequest extends AbstractSessionRequest {
+public class WmContainerHdrCreateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 585490687158871833L;
 

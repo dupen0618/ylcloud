@@ -3,8 +3,9 @@ package com.ykcloud.soa.erp.api.wm.request;
 import java.util.Date;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WmShipFinishRequest extends AbstractRequest {
+public class WmShipFinishRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 845322839903701744L;
 
