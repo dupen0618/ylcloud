@@ -11,22 +11,22 @@ public class WmQuerySoAndContainerRequest extends AbstractRequest {
 	private static final long serialVersionUID = 4037272833488307601L;
 
 	@NotNull(message = "托盘码不能为空")
-	private String containerSerno;
+	private String containerSerlno;
 
 	@NotNull(message = "门店ID不能为空")
 	private Long subUnitNumId;
 
 	private Date orderDate;
 
-	public String getContainerSerno() {
-		return containerSerno;
+
+
+	public String getContainerSerlno() {
+		return containerSerlno;
 	}
 
-	public void setContainerSerno(String containerSerno) {
-		this.containerSerno = containerSerno;
+	public void setContainerSerlno(String containerSerlno) {
+		this.containerSerlno = containerSerlno;
 	}
-
-
 
 	public Date getOrderDate() {
 		return orderDate;
