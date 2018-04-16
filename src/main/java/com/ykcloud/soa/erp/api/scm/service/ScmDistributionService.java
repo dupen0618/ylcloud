@@ -11,6 +11,7 @@ import com.ykcloud.soa.erp.api.scm.request.DistributionProductInfoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.InventoryForDistributionApprovalLockRequest;
 import com.ykcloud.soa.erp.api.scm.request.QtyForDistributionApprovalOrderCheckRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlAndApplyDtlForGenerateDistributionUpdateResponse;
+import com.ykcloud.soa.erp.api.scm.request.QtyForSoApplyGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalHdrForGenerateDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse;
@@ -19,6 +20,7 @@ import com.ykcloud.soa.erp.api.scm.response.DistributionApprovalOrderByBuyerAudi
 import com.ykcloud.soa.erp.api.scm.response.DistributionProductInfoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.InventoryForDistributionApprovalLockResponse;
 import com.ykcloud.soa.erp.api.scm.response.QtyForDistributionApprovalOrderCheckResponse;
+import com.ykcloud.soa.erp.api.scm.response.QtyForSoApplyGetResponse;
 
 public interface ScmDistributionService {
 	
@@ -79,6 +81,11 @@ public interface ScmDistributionService {
 	* @Date: 2018/4/11 
 	*/ 
     public QtyForDistributionApprovalOrderCheckResponse checkQtyForDistributionApprovalOrder(QtyForDistributionApprovalOrderCheckRequest request);
+
+    //数量检查(店间调拨、仓间调拨、加工领料、行政领料)
+    public QtyForSoApplyGetResponse checkQtyForSoApply(QtyForSoApplyGetRequest request);
+
+
 }
 
 
