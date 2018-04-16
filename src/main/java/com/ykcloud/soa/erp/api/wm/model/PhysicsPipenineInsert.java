@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -171,6 +173,7 @@ public class PhysicsPipenineInsert implements Serializable {
 		this.classifyNumId = classifyNumId;
 	}
 
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	public Date getOrderDate() {
 		return orderDate;
 	}
