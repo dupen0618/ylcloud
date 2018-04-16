@@ -35,6 +35,8 @@ public class SoDtl implements Serializable {
 		
 		private String itemName;
 		
+		private String itemid;
+		
 		private Long storeType;
 		
 		private Long productOriginNumId;
@@ -455,6 +457,15 @@ public class SoDtl implements Serializable {
 			this.lastUpdtme = lastUpdtme;
 		}
 
+		public String getItemid() {
+			return itemid;
+		}
+
+		public void setItemid(String itemid) {
+			this.itemid = itemid;
+		}
+
+		
 		
 	
 }
