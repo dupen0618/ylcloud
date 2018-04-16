@@ -15,12 +15,14 @@ public class UsableInventoryByReservedNoGetRequest extends AbstractRequest{
     
 	@NotNull(message = "业务类型编号不能为空！")
     String billTypeNumId;
-    
-	@NotNull(message = "单据类型不能为空！")
+
     Long typeNumId;
     
 	@NotNull(message = "入账类型不能为空！")
     String accountName;
+
+    @NotNull(message = "供应商编号不能为空！")
+    Long subUnitNumId;
 
     public String getReservedNo() {
         return reservedNo;
@@ -53,5 +55,13 @@ public class UsableInventoryByReservedNoGetRequest extends AbstractRequest{
 
     public void setAccountName(String accountName) {
         this.accountName = accountName;
+    }
+
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
     }
 }
