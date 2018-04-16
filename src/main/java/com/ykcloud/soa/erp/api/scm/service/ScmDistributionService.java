@@ -1,6 +1,7 @@
 
 package com.ykcloud.soa.erp.api.scm.service;
 
+import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlAndApplyDtlForGenerateDistributionUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalHdrForGenerateDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnStorageAndProductForGenerateReturnSoGetRequest;
@@ -9,6 +10,7 @@ import com.ykcloud.soa.erp.api.scm.request.DistributionApprovalOrderByBuyerAudit
 import com.ykcloud.soa.erp.api.scm.request.DistributionProductInfoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.InventoryForDistributionApprovalLockRequest;
 import com.ykcloud.soa.erp.api.scm.request.QtyForDistributionApprovalOrderCheckRequest;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlAndApplyDtlForGenerateDistributionUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalHdrForGenerateDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse;
@@ -19,6 +21,15 @@ import com.ykcloud.soa.erp.api.scm.response.InventoryForDistributionApprovalLock
 import com.ykcloud.soa.erp.api.scm.response.QtyForDistributionApprovalOrderCheckResponse;
 
 public interface ScmDistributionService {
+	
+	/**
+	 * 回写配送申请单身和补货单
+	 * @author tz.x
+	 * @date 2018年4月14日上午9:08:28
+	 * @param 
+	 * @return
+	 */
+	public ApprovalDtlAndApplyDtlForGenerateDistributionUpdateResponse updateApprovalHdrAndApplyDtlForGenerateDistributionSo(ApprovalDtlAndApplyDtlForGenerateDistributionUpdateRequest request);
 	
 	/**
 	 * 根据锁库结果获取指定的退货审批单的仓库及商品
