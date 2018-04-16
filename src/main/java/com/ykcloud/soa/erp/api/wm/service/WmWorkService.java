@@ -10,12 +10,14 @@ import com.ykcloud.soa.erp.api.wm.request.OutOpenWorkConfirmRequest;
 import com.ykcloud.soa.erp.api.wm.request.ProductInfoAndStockGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WorkChangeConfirmRequest;
 import com.ykcloud.soa.erp.api.wm.request.WorkConfirmAssembleRequest;
+import com.ykcloud.soa.erp.api.wm.request.WorkLossCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ProductChangeRequest;
 import com.ykcloud.soa.erp.api.wm.response.OpenWorkConfirmResponse;
 import com.ykcloud.soa.erp.api.wm.response.OutOpenWorkConfirmResponse;
 import com.ykcloud.soa.erp.api.wm.response.ProductInfoAndStockGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WorkChangeConfirmResponse;
 import com.ykcloud.soa.erp.api.wm.response.WorkConfirmAssembleResponse;
+import com.ykcloud.soa.erp.api.wm.response.WorkLossCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ProductChangeGetResponse;
 
 public interface WmWorkService {
@@ -49,4 +51,7 @@ public interface WmWorkService {
 
 	//委外加工单入账
 	public OutOpenWorkConfirmResponse confirmOutOpenWork(OutOpenWorkConfirmRequest request);
+	
+	//生成报损单（内部方法）
+	public WorkLossCreateResponse createWorkLossByWorkNumID(WorkLossCreateRequest request);
 }
