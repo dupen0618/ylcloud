@@ -15,6 +15,8 @@ public class ApprovalDtlForGenerateDirectWayDistributionSo implements Serializab
     
     private Long itemNumId;
     
+    private String itemid;
+    
     private Long divNumId;
     
     private String itemName;
@@ -35,6 +37,14 @@ public class ApprovalDtlForGenerateDirectWayDistributionSo implements Serializab
     
     private Double pmtQty;
     
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
+
 	public String getSeries() {
 		return series;
 	}
