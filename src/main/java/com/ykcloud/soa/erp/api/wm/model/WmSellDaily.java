@@ -1,8 +1,9 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class WmSellDaily {
+public class WmSellDaily  implements Serializable {
 
     private static final long serialVersionUID = 1L;
     /**
