@@ -22,6 +22,16 @@ public class PoForGenerateDirectWayDistributionSoGetResponse extends MessagePack
 	 */
 	private Long soFromType;
 	
+	private Long supplyUnitNumId;
+	
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
+
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
+	}
+
 	public Long getSoFromType() {
 		return soFromType;
 	}
