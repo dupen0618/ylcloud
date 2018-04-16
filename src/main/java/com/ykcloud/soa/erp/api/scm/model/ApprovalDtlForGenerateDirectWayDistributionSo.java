@@ -6,7 +6,10 @@ public class ApprovalDtlForGenerateDirectWayDistributionSo implements Serializab
 	
 	private static final long serialVersionUID = 1L;
 
-
+	/**
+	 * 行号
+	 */
+	private String series;
 	
     private Long ordSubUnitNumId; //订货门店
     
@@ -32,6 +35,14 @@ public class ApprovalDtlForGenerateDirectWayDistributionSo implements Serializab
     
     private Double pmtQty;
     
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
+
 	public Long getItemNumId() {
 		return itemNumId;
 	}
