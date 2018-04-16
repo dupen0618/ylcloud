@@ -37,9 +37,6 @@ public class ReceiptForFiGetRequest extends AbstractRequest {
 	@NotNull(message = "操作日期不能为空！")
 	private Date createDate;
 
-	/*@NotNull(message = "结算单号不能为空！")
-	private String balanceNo;*/
-
 	public Date getCreateDate() {
 		return createDate;
 	}
@@ -103,16 +100,5 @@ public class ReceiptForFiGetRequest extends AbstractRequest {
 	public void setUserNumId(Long userNumId) {
 		this.userNumId = userNumId;
 	}
-
-	/*public void setBalanceNo(String balanceNo) {
-		this.balanceNo = balanceNo;
-	}
-
-	public String getBalanceNo() {
-		return balanceNo;
-	}
-
-*/
-	
 	
 }
