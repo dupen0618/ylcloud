@@ -5,8 +5,9 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WmSoHdrGetRequest extends AbstractRequest {
+public class WmSoHdrGetRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 8147686661977300539L;
 	

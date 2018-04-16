@@ -3,8 +3,9 @@ package com.ykcloud.soa.erp.api.wm.request;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WmShipGetRequest extends AbstractRequest {
+public class WmShipGetRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = -798434039581851255L;
 
@@ -15,6 +16,7 @@ public class WmShipGetRequest extends AbstractRequest {
 	private String containerLabserlno;
 
 
+	private String containerSerlno;
 	
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -31,6 +33,15 @@ public class WmShipGetRequest extends AbstractRequest {
 	public void setContainerLabserlno(String containerLabserlno) {
 		this.containerLabserlno = containerLabserlno;
 	}
+
+	public String getContainerSerlno() {
+		return containerSerlno;
+	}
+
+	public void setContainerSerlno(String containerSerlno) {
+		this.containerSerlno = containerSerlno;
+	}
+	
 	
 	
 }

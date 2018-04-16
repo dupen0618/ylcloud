@@ -5,8 +5,9 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WmFinishShipContainerHdrRequest extends AbstractRequest {
+public class WmFinishShipContainerHdrRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = -3357073694317741885L;
 
 	@NotNull(message = "门店不能为空! ")

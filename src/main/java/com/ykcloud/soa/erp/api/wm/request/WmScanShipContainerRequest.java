@@ -5,14 +5,17 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WmScanShipContainerRequest extends AbstractRequest {
+public class WmScanShipContainerRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = -329220897215489154L;
 
 	// 装箱识别码
 	@NotNull(message = "装箱识别码不能为空")
 	private String containerLabserlno;
+	
+	private String containerSerlno;
 
 	// 门店号
 	@NotNull(message = "门店号不能为空")
@@ -66,5 +69,15 @@ public class WmScanShipContainerRequest extends AbstractRequest {
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
+
+	public String getContainerSerlno() {
+		return containerSerlno;
+	}
+
+	public void setContainerSerlno(String containerSerlno) {
+		this.containerSerlno = containerSerlno;
+	}
+	
+	
 
 }
