@@ -11,9 +11,10 @@ import org.hibernate.validator.constraints.Range;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 //直通收货按验收单及订货审批单产生分拨单入参类
-public class DirectWayDistributionSoGenerateRequest extends AbstractRequest {
+public class DirectWayDistributionSoGenerateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1L;
 
