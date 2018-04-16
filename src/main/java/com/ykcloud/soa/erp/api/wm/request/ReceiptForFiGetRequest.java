@@ -35,14 +35,15 @@ public class ReceiptForFiGetRequest extends AbstractRequest {
 	private Long userNumId;
 
 	@NotNull(message = "操作日期不能为空！")
-	private Date createDate;
+	private Date createDtme;
 
-	public Date getCreateDate() {
-		return createDate;
+
+	public Date getCreateDtme() {
+		return createDtme;
 	}
 
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
+	public void setCreateDtme(Date createDtme) {
+		this.createDtme = createDtme;
 	}
 
 	public Long getSubUnitNumId() {

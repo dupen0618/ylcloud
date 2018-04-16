@@ -19,6 +19,4 @@ public class ReceiptForFiGetResponse extends MessagePack {
 		this.receiptForFi = receiptForFi;
 	}
 	
-	
-	
 }
