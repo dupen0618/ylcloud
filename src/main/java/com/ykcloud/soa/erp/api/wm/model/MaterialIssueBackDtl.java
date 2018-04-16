@@ -57,4 +57,189 @@ public class MaterialIssueBackDtl implements Serializable{
     private Long returnReasonId;//退货原因
 
     private String returnDesc;//退货描述
+
+
+    public String getSeries() {
+        return series;
+    }
+
+    public void setSeries(String series) {
+        this.series = series;
+    }
+
+    public String getApplyNumId() {
+        return applyNumId;
+    }
+
+    public void setApplyNumId(String applyNumId) {
+        this.applyNumId = applyNumId;
+    }
+
+    public Long getItemNumId() {
+        return itemNumId;
+    }
+
+    public void setItemNumId(Long itemNumId) {
+        this.itemNumId = itemNumId;
+    }
+
+    public Long getDivNumId() {
+        return divNumId;
+    }
+
+    public void setDivNumId(Long divNumId) {
+        this.divNumId = divNumId;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public Double getLockQty() {
+        return lockQty;
+    }
+
+    public void setLockQty(Double lockQty) {
+        this.lockQty = lockQty;
+    }
+
+    public Double getStockQty() {
+        return stockQty;
+    }
+
+    public void setStockQty(Double stockQty) {
+        this.stockQty = stockQty;
+    }
+
+    public Long getProductOriginNumId() {
+        return productOriginNumId;
+    }
+
+    public void setProductOriginNumId(Long productOriginNumId) {
+        this.productOriginNumId = productOriginNumId;
+    }
+
+    public Double getConversionQty() {
+        return conversionQty;
+    }
+
+    public void setConversionQty(Double conversionQty) {
+        this.conversionQty = conversionQty;
+    }
+
+    public Long getConversionUnitNumId() {
+        return conversionUnitNumId;
+    }
+
+    public void setConversionUnitNumId(Long conversionUnitNumId) {
+        this.conversionUnitNumId = conversionUnitNumId;
+    }
+
+    public String getConversionStyleDesc() {
+        return conversionStyleDesc;
+    }
+
+    public void setConversionStyleDesc(String conversionStyleDesc) {
+        this.conversionStyleDesc = conversionStyleDesc;
+    }
+
+    public Double getPackageQty() {
+        return packageQty;
+    }
+
+    public void setPackageQty(Double packageQty) {
+        this.packageQty = packageQty;
+    }
+
+    public Double getQty() {
+        return qty;
+    }
+
+    public void setQty(Double qty) {
+        this.qty = qty;
+    }
+
+    public Double getPmtQty() {
+        return pmtQty;
+    }
+
+    public void setPmtQty(Double pmtQty) {
+        this.pmtQty = pmtQty;
+    }
+
+    public Long getPmtMaterial() {
+        return pmtMaterial;
+    }
+
+    public void setPmtMaterial(Long pmtMaterial) {
+        this.pmtMaterial = pmtMaterial;
+    }
+
+    public Double getTradePrice() {
+        return tradePrice;
+    }
+
+    public void setTradePrice(Double tradePrice) {
+        this.tradePrice = tradePrice;
+    }
+
+    public Double getTradeAmount() {
+        return tradeAmount;
+    }
+
+    public void setTradeAmount(Double tradeAmount) {
+        this.tradeAmount = tradeAmount;
+    }
+
+    public Double getTaxRate() {
+        return taxRate;
+    }
+
+    public void setTaxRate(Double taxRate) {
+        this.taxRate = taxRate;
+    }
+
+    public Double getTaxAmount() {
+        return taxAmount;
+    }
+
+    public void setTaxAmount(Double taxAmount) {
+        this.taxAmount = taxAmount;
+    }
+
+    public Double getOrderQty() {
+        return orderQty;
+    }
+
+    public void setOrderQty(Double orderQty) {
+        this.orderQty = orderQty;
+    }
+
+    public Long getReturnReasonId() {
+        return returnReasonId;
+    }
+
+    public void setReturnReasonId(Long returnReasonId) {
+        this.returnReasonId = returnReasonId;
+    }
+
+    public String getReturnDesc() {
+        return returnDesc;
+    }
+
+    public void setReturnDesc(String returnDesc) {
+        this.returnDesc = returnDesc;
+    }
 }
