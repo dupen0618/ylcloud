@@ -70,7 +70,11 @@ public interface WmReceiptService {
 	public ReceiptProduceDateUpdateResponse updateReceiptProduceDate(ReceiptProduceDateUpdateRequest request);
 	// 更新收货数量
 	public ReceiptDtlUpdateResponse updateReceiptDtl(ReceiptDtlUpdateRequest request);
-	//一键收货 暂时弃用
+	/**
+	 * 一键收货
+	 * @param request
+	 * @return
+	 */
 	public DirectReceiptUpdateResponse updateDirectReceipt(DirectReceiptUpdateRequest request);
 	//收货完成
 	public ReceiptFinishRsponse finishReceipt(ReceiptFinishRequest request);
