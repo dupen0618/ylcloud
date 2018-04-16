@@ -26,7 +26,7 @@ public class ReceiptForFi implements Serializable {
 
 	private String itemName;// 商品品名
 
-	private String productOriginNumId;// 产地
+	private Long productOriginNumId;// 产地
 
 	private Double conversionQty;// 件装单位
 
@@ -111,11 +111,7 @@ public class ReceiptForFi implements Serializable {
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}
-
-	public static long getSerialVersionUID() {
-		return serialVersionUID;
-	}
-
+	
 	public Long getDivNumId() {
 		return divNumId;
 	}
@@ -140,11 +136,11 @@ public class ReceiptForFi implements Serializable {
 		this.itemName = itemName;
 	}
 
-	public String getProductOriginNumId() {
+	public Long getProductOriginNumId() {
 		return productOriginNumId;
 	}
 
-	public void setProductOriginNumId(String productOriginNumId) {
+	public void setProductOriginNumId(Long productOriginNumId) {
 		this.productOriginNumId = productOriginNumId;
 	}
 
@@ -260,4 +256,5 @@ public class ReceiptForFi implements Serializable {
 		this.createDtme = createDtme;
 	}
 
+	
 }

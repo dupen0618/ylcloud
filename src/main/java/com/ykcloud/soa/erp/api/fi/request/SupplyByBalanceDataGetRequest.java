@@ -59,22 +59,6 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Date getStartDate() {
-		return startDate;
-	}
-
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
-
-	public Date getEndDate() {
-		return endDate;
-	}
-
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
-	}
-
 	public Long getSettlementType() {
 		return settlementType;
 	}
@@ -114,5 +98,24 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 	public void setSeries(String series) {
 		this.series = series;
 	}
+
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+
+
+	
 
 }

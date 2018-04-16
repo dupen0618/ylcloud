@@ -6,6 +6,7 @@ import com.ykcloud.soa.erp.api.so.request.ReturnApplyAfterGenerateReturnSoUpdate
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByAuthorConfirmRequest;
+import com.ykcloud.soa.erp.api.so.request.ShopTransferByOperationCenterAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.SoReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.response.LastSalesDateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenShopGetResponse;
@@ -13,6 +14,7 @@ import com.ykcloud.soa.erp.api.so.response.ReturnApplyAfterGenerateReturnSoUpdat
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByAuthorConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.ShopTransferByOperationCenterAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
 
 /**
@@ -22,6 +24,15 @@ import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
  * @version <b>1.0.0</b>
  */
 public interface SoApplyService {
+	
+	/**
+	 * 店间调拨收货门店确认
+	 * @author tz.x
+	 * @date 2018年4月16日上午9:02:37
+	 * @param 
+	 * @return
+	 */
+	public ShopTransferByOperationCenterAuditResponse confirmShopTransferByReceiver(ShopTransferByOperationCenterAuditRequest request);
 	
 	/**
 	 * 店间调拨制单确认
