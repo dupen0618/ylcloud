@@ -3,7 +3,7 @@ package com.ykcloud.soa.erp.api.fi.response;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.fi.model.ReceiptDtl;
+import com.ykcloud.soa.erp.api.fi.model.WmSellDaily;
 
 /**
  * @Description://获取可结算验收入库明细
@@ -13,14 +13,14 @@ import com.ykcloud.soa.erp.api.fi.model.ReceiptDtl;
 public class ReceiptDtilsForCanBalanceGetResponse extends MessagePack {
 
 	private static final long serialVersionUID = -3725506062937780824L;
-	
-	private List<ReceiptDtl> data;
 
-	public List<ReceiptDtl> getData() {
+	private List<WmSellDaily> data;
+
+	public List<WmSellDaily> getData() {
 		return data;
 	}
 
-	public void setData(List<ReceiptDtl> data) {
+	public void setData(List<WmSellDaily> data) {
 		this.data = data;
 	}
 
