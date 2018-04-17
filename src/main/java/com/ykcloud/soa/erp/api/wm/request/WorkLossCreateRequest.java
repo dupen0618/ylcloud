@@ -10,7 +10,7 @@ public class WorkLossCreateRequest extends AbstractRequest {
 
 	// 加工单号
 	@NotNull(message = "加工单号不能为空")
-	private Long workNumId;
+	private String workNumId;
 
 	// 损耗数量
 	@NotNull(message = "损耗数量不能为空")
@@ -19,11 +19,11 @@ public class WorkLossCreateRequest extends AbstractRequest {
 	@NotNull(message = "损耗金额不能为空")
 	private Double losscost;
 
-	public Long getWorkNumId() {
+	public String getWorkNumId() {
 		return workNumId;
 	}
 
-	public void setWorkNumId(Long workNumId) {
+	public void setWorkNumId(String workNumId) {
 		this.workNumId = workNumId;
 	}
 
