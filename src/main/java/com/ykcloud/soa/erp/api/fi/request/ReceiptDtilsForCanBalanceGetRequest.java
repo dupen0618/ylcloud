@@ -3,39 +3,36 @@ package com.ykcloud.soa.erp.api.fi.request;
 import java.util.Date;
 import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
- * @Description://获取可结算验收入库明细
- * @author Song
+ * @Description://获取可结算明细
+ * @author ALI
  * @Date 2018年4月4日 下午3:06:50
  */
-public class ReceiptDtilsForCanBalanceGetRequest extends AbstractUserSessionRequest {
+public class ReceiptDtilsForCanBalanceGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = -5126554109130183317L;
 
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 
-	@NotNull(message = "供应商编号不能为空！")
-	private Long unitNumId;
-
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private Date startDate;
 
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "截止日期不能为空！")
 	private Date endDate;
 
-	@NotNull(message = "经营方式不能为空！")
+	@NotNull(message = "结算方式不能为空！")
 	private Long settlementType;
 
-	@NotNull(message = "结算周期不能为空！")
-	private Date balanceDate;
+	@NotNull(message = "供应商不能为空！")
+	private Long supplyUnitNumId;
 
-	@NotNull(message = "结算单号不能为空！")
-	private String balanceNo;
+	//结算周期
+	private Long  balaneCYC;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -43,14 +40,6 @@ public class ReceiptDtilsForCanBalanceGetRequest extends AbstractUserSessionRequ
 
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
-	}
-
-	public Long getUnitNumId() {
-		return unitNumId;
-	}
-
-	public void setUnitNumId(Long unitNumId) {
-		this.unitNumId = unitNumId;
 	}
 
 	public Date getStartDate() {
@@ -77,20 +66,19 @@ public class ReceiptDtilsForCanBalanceGetRequest extends AbstractUserSessionRequ
 		this.settlementType = settlementType;
 	}
 
-	public Date getBalanceDate() {
-		return balanceDate;
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
 	}
 
-	public void setBalanceDate(Date balanceDate) {
-		this.balanceDate = balanceDate;
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
 	}
 
-	public String getBalanceNo() {
-		return balanceNo;
+	public Long getBalaneCYC() {
+		return balaneCYC;
 	}
 
-	public void setBalanceNo(String balanceNo) {
-		this.balanceNo = balanceNo;
+	public void setBalaneCYC(Long balaneCYC) {
+		this.balaneCYC = balaneCYC;
 	}
-
 }

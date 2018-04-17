@@ -6,8 +6,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
- * @Description:供应商结算生成结算单数据
- * @author Song
+ * @Description:供应商结算生成结算单
+ * @author Ali
  * @Date 2018年4月4日 下午1:47:35
  */
 public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
@@ -25,30 +25,24 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "截止日期不能为空！")
 	private Date endDate;
 
-	@NotNull(message = "经营方式不能为空！")
+	@NotNull(message = "结算方式不能为空！")
 	private Long settlementType;
-
-	@NotNull(message = "操作日期不能为空！")
-	private Date creatDate;
 
 	@NotNull(message = "供应商不能为空！")
 	private Long supplyUnitNumId;
 
-	@NotNull(message = "单据编号不能为空！")
-	private String reservedNo;
-
 	@NotNull(message = "结算单号不能为空！")
 	private String balanceNo;
 
-	@NotNull(message = "行号不能为空！")
-	private String series;
+	//结算周期
+	private Long  balaneCYC;
 
-	public Date getCreatDate() {
-		return creatDate;
+	public Long getBalaneCYC() {
+		return balaneCYC;
 	}
 
-	public void setCreatDate(Date creatDate) {
-		this.creatDate = creatDate;
+	public void setBalaneCYC(Long balaneCYC) {
+		this.balaneCYC = balaneCYC;
 	}
 
 	public Long getSubUnitNumId() {
@@ -75,28 +69,12 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
 
-	public String getReservedNo() {
-		return reservedNo;
-	}
-
-	public void setReservedNo(String reservedNo) {
-		this.reservedNo = reservedNo;
-	}
-
 	public String getBalanceNo() {
 		return balanceNo;
 	}
 
 	public void setBalanceNo(String balanceNo) {
 		this.balanceNo = balanceNo;
-	}
-
-	public String getSeries() {
-		return series;
-	}
-
-	public void setSeries(String series) {
-		this.series = series;
 	}
 
 	public Date getStartDate() {

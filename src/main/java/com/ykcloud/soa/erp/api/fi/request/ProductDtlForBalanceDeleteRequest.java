@@ -15,11 +15,6 @@ public class ProductDtlForBalanceDeleteRequest extends AbstractUserSessionReques
 	@NotNull(message = "行号不能为空！")
 	private String series;
 
-	@NotNull(message = "数据源单号不能为空！")
-	private String reservedNo;
-
-	@NotNull(message = "结算单号不能为空！")
-	private String balanceNo;
 
 	public String getSeries() {
 		return series;
@@ -27,22 +22,6 @@ public class ProductDtlForBalanceDeleteRequest extends AbstractUserSessionReques
 
 	public void setSeries(String series) {
 		this.series = series;
-	}
-
-	public String getReservedNo() {
-		return reservedNo;
-	}
-
-	public void setReservedNo(String reservedNo) {
-		this.reservedNo = reservedNo;
-	}
-
-	public String getBalanceNo() {
-		return balanceNo;
-	}
-
-	public void setBalanceNo(String balanceNo) {
-		this.balanceNo = balanceNo;
 	}
 
 }
