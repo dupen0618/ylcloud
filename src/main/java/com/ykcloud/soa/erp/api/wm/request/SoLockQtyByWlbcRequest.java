@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import java.util.Date;
+
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class SoLockQtyByWlbcRequest extends AbstractRequest {
@@ -9,6 +11,7 @@ public class SoLockQtyByWlbcRequest extends AbstractRequest {
 	private String wlbc;
 	
 	private Long subUnitNumId;
+	
 	
 
 	public String getWlbc() {
@@ -28,8 +31,5 @@ public class SoLockQtyByWlbcRequest extends AbstractRequest {
 	}
 
 
-	
-
-	
 
 }

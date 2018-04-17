@@ -19,8 +19,6 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 	@NotNull(message = "门店编号不能为空!")
 	private Long subUnitNumId;
 
-	@NotNull(message = "订单日期不能为空!")
-	private Date orderDate;
 	
 	private Long plmSign;
 
@@ -47,14 +45,6 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
-	}
-
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
 	}
 
 	public Long getPlmSign() {

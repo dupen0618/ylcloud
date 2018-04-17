@@ -22,7 +22,6 @@ public class SoPackingUpdateRequest extends AbstractRequest {
 	@NotNull(message = "订单明细行号不能为空!")
 	private String soLineId;
 
-	private Date orderDate;
 
 	public Double getBzNum() {
 		return bzNum;
@@ -48,13 +47,6 @@ public class SoPackingUpdateRequest extends AbstractRequest {
 		this.soLineId = soLineId;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;

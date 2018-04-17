@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
@@ -18,6 +20,7 @@ public class WmDataGetDataByBarcodeAndSoNumIdRequest extends AbstractRequest {
 
 	@NotNull(message = "条码不能为空! ")
 	private String barcode;
+	
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -50,5 +53,6 @@ public class WmDataGetDataByBarcodeAndSoNumIdRequest extends AbstractRequest {
 	public void setBarcode(String barcode) {
 		this.barcode = barcode;
 	}
+
 
 }

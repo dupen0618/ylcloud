@@ -11,6 +11,8 @@ public class SoStatusUpdateRequest extends AbstractRequest {
 	private Long subUnitNumId;
 	
 	private Long statusNumId;
+	
+	private Long userNumId;
 
 	public String getWlbc() {
 		return wlbc;
@@ -36,6 +38,13 @@ public class SoStatusUpdateRequest extends AbstractRequest {
 		this.statusNumId = statusNumId;
 	}
 
+	public Long getUserNumId() {
+		return userNumId;
+	}
+
+	public void setUserNumId(Long userNumId) {
+		this.userNumId = userNumId;
+	}
 
 	
 

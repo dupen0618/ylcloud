@@ -19,9 +19,6 @@ public class SoNumIdOneRequest extends AbstractRequest {
 	@NotNull(message = "门店ID不能为空!")
 	private Long subUnitNumId;
 
-	@NotNull(message = "orderDate不能为空!")
-	private Date orderDate;
-
 	private Long sowNumId;
 
 	public String getWlbc() {
@@ -48,13 +45,6 @@ public class SoNumIdOneRequest extends AbstractRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
 
 	public Long getSowNumId() {
 		return sowNumId;

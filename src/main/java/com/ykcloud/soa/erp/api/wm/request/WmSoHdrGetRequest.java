@@ -17,7 +17,6 @@ public class WmSoHdrGetRequest extends AbstractUserSessionRequest {
 	@NotNull(message="门店Id不能为空！")
 	private Long subUnitNumId;
 	
-	private Date orderDate;
 
 	public String getSoNumId() {
 		return soNumId;
@@ -35,15 +34,5 @@ public class WmSoHdrGetRequest extends AbstractUserSessionRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
-
-	
-	
 
 }

@@ -14,9 +14,6 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 	
 	private Long subUnitNumId;
 	
-	private Date orderDate;
-
-
 	public String getSoNumId() {
 		return soNumId;
 	}
@@ -42,14 +39,5 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
-	
-	
 
 }
