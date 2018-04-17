@@ -25,6 +25,10 @@ public class ShipForMaterialIssueBackGenerateRequest extends AbstractUserSession
     @NotNull(message = "申请单审核日期不能为空！")
     private Date auditDate;
 
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    @NotNull(message = "出库日期不能为空！")
+    private Date shipDate;
+
     @NotNull(message = "申请单数据不能为空！")
     private MaterialIssueBackForGenerateShip generateShip;
 
@@ -61,5 +65,13 @@ public class ShipForMaterialIssueBackGenerateRequest extends AbstractUserSession
 
     public void setAuditDate(Date auditDate) {
         this.auditDate = auditDate;
+    }
+
+    public Date getShipDate() {
+        return shipDate;
+    }
+
+    public void setShipDate(Date shipDate) {
+        this.shipDate = shipDate;
     }
 }
