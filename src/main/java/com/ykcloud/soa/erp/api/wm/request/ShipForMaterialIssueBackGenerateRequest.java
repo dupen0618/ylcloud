@@ -18,12 +18,12 @@ public class ShipForMaterialIssueBackGenerateRequest extends AbstractUserSession
     @NotNull(message = "门店编号不能为空！")
     private Long subUnitNumId;
 
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    @NotNull(message = "订单日期不能为空！")
-    private Date orderDate;
-
     @NotNull(message = "申请单号不能为空！")
     private String applyNumId;
+
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    @NotNull(message = "申请单审核日期不能为空！")
+    private Date auditDate;
 
     @NotNull(message = "申请单数据不能为空！")
     private MaterialIssueBackForGenerateShip generateShip;
@@ -45,13 +45,6 @@ public class ShipForMaterialIssueBackGenerateRequest extends AbstractUserSession
         this.subUnitNumId = subUnitNumId;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
 
     public String getApplyNumId() {
         return applyNumId;
@@ -59,5 +52,14 @@ public class ShipForMaterialIssueBackGenerateRequest extends AbstractUserSession
 
     public void setApplyNumId(String applyNumId) {
         this.applyNumId = applyNumId;
+    }
+
+
+    public Date getAuditDate() {
+        return auditDate;
+    }
+
+    public void setAuditDate(Date auditDate) {
+        this.auditDate = auditDate;
     }
 }

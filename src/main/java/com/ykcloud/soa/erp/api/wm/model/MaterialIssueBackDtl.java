@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @Author: fred.zhao
- * @Description:
+ * @Description: 领料退回申请单数据
  * @Date: Created in 15:49:2018/4/16
  */
 public class MaterialIssueBackDtl implements Serializable{
