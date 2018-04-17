@@ -106,7 +106,7 @@ public interface SoApplyService {
     * @Author: fred.zhao
     * @Date: 2018/4/12 
     */ 
-	public SoReturnApplyAuditResponse auditSoReturnApply(SoReturnApplyAuditRequest request);
+	public SoReturnApplyAuditResponse auditMaterialIssueBacky(SoReturnApplyAuditRequest request);
 
     //店内调拨、行政领料商品查询
 	public ProductInfoForSoApplyShopTransferAndMaterialIssueGetResponse getProductInfoForSoApplyShopTransferAndMaterialIssue(ProductInfoForSoApplyShopTransferAndMaterialIssueGetRequest request);
