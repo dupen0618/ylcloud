@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
  * 
@@ -13,7 +14,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  *
  * @date 2018年3月21日下午3:30:02
  */
-public class PoGenerateRequest extends AbstractRequest {
+public class PoGenerateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 5118059696054727934L;
 	

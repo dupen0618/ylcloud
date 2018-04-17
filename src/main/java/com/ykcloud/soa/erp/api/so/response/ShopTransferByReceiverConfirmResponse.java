@@ -6,14 +6,14 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.scm.model.LackInventoryProduct;
 
 /**
- * 店间调拨营运中心确认出参
+ * 店间调拨收货门店确认出参
  * @author tz.x
  *
- * @date 2018年4月16日上午9:01:43
+ * @date 2018年4月17日下午1:45:06
  */
-public class ShopTransferByOperationCenterAuditResponse extends MessagePack {
+public class ShopTransferByReceiverConfirmResponse extends MessagePack {
 
-	private static final long serialVersionUID = -6690747633252806745L;
+	private static final long serialVersionUID = 7494409614036480518L;
 	
 	/**
 	 * 缺货商品列表
