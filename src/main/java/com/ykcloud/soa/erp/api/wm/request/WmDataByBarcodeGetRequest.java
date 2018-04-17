@@ -19,8 +19,10 @@ public class WmDataByBarcodeGetRequest extends AbstractRequest {
 	@NotNull(message = "门店ID不能为空! ")
 	private Long subUnitNumId;
 
+	//订单种号
 	private Long sowNumId;
 
+	//分库标识符
 	private Date orderDate;
 
 	public String getBarcode() {

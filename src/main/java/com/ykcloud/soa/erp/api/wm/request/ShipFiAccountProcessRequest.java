@@ -2,9 +2,9 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import javax.validation.constraints.NotNull;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class ShipFiAccountProcessRequest extends AbstractRequest {
+public class ShipFiAccountProcessRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 60119569369773714L;
 
