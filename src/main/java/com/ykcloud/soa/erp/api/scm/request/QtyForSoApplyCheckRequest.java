@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 //数量检查(店间调拨、仓间调拨、加工领料、行政领料)的入参
-public class QtyForSoApplyGetRequest extends AbstractRequest {
+public class QtyForSoApplyCheckRequest extends AbstractRequest {
 		
 		@NotNull(message="门店编号不能为空")
 		private Long subUnitNumId; //门店编号
