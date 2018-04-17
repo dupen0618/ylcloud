@@ -24,4 +24,7 @@ public interface WmSellDailyService {
 
 	//修改销售日报结算状态
 	public SellDailySeriesUpdateResponse updateStatusNumId(SellDailyUpdateRequest request);
+
+	//联销获得结算
+	public SellDailyGetResponse getSubBlanceDtlLXInfoBySellDaily(SellDailyGetRequest request);
 }

@@ -140,8 +140,25 @@ public class WmSellDaily  implements Serializable {
      * 结算金额
      */
     private Double TOTAL_AMOUNT;
-    
-    
+
+    /**
+     *原价格
+     */
+    private  Double RETAIL_PRICE;
+
+    /**
+     *结算方式
+     */
+    private  Long  settlementType;
+
+    public Double getRETAIL_PRICE() {
+        return RETAIL_PRICE;
+    }
+
+    public void setRETAIL_PRICE(Double RETAIL_PRICE) {
+        this.RETAIL_PRICE = RETAIL_PRICE;
+    }
+
     public Date getORDER_DATE() {
 		return ORDER_DATE;
 	}
@@ -351,5 +368,13 @@ public class WmSellDaily  implements Serializable {
 
     public void setITEMID(String ITEMID) {
         this.ITEMID = ITEMID;
+    }
+
+    public Long getSettlementType() {
+        return settlementType;
+    }
+
+    public void setSettlementType(Long settlementType) {
+        this.settlementType = settlementType;
     }
 }
