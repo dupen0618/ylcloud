@@ -2,10 +2,11 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
-import com.ykcloud.soa.erp.api.so.model.MaterialIssueBackForGenerateShip;
+import com.ykcloud.soa.erp.api.wm.model.MaterialIssueBackDtl;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Author: fred.zhao
@@ -25,21 +26,15 @@ public class ShipForMaterialIssueBackGenerateRequest extends AbstractUserSession
     @NotNull(message = "申请单审核日期不能为空！")
     private Date auditDate;
 
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    @NotNull(message = "出库日期不能为空！")
-    private Date shipDate;
+    @NotNull(message = "原出库单编号不能为空！")
+    private String originReservedNo;//原出库单编号
+
+    @NotNull(message = "原单出库申请日期不能为空！")
+    private Date originShipDate;//原单出库日期
+
 
     @NotNull(message = "申请单数据不能为空！")
-    private MaterialIssueBackForGenerateShip generateShip;
-
-
-    public MaterialIssueBackForGenerateShip getGenerateShip() {
-        return generateShip;
-    }
-
-    public void setGenerateShip(MaterialIssueBackForGenerateShip generateShip) {
-        this.generateShip = generateShip;
-    }
+    private List<MaterialIssueBackDtl> materialIssueBackDtlList;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -49,7 +44,6 @@ public class ShipForMaterialIssueBackGenerateRequest extends AbstractUserSession
         this.subUnitNumId = subUnitNumId;
     }
 
-
     public String getApplyNumId() {
         return applyNumId;
     }
@@ -57,7 +51,6 @@ public class ShipForMaterialIssueBackGenerateRequest extends AbstractUserSession
     public void setApplyNumId(String applyNumId) {
         this.applyNumId = applyNumId;
     }
-
 
     public Date getAuditDate() {
         return auditDate;
@@ -67,11 +60,27 @@ public class ShipForMaterialIssueBackGenerateRequest extends AbstractUserSession
         this.auditDate = auditDate;
     }
 
-    public Date getShipDate() {
-        return shipDate;
+    public String getOriginReservedNo() {
+        return originReservedNo;
     }
 
-    public void setShipDate(Date shipDate) {
-        this.shipDate = shipDate;
+    public void setOriginReservedNo(String originReservedNo) {
+        this.originReservedNo = originReservedNo;
+    }
+
+    public Date getOriginShipDate() {
+        return originShipDate;
+    }
+
+    public void setOriginShipDate(Date originShipDate) {
+        this.originShipDate = originShipDate;
+    }
+
+    public List<MaterialIssueBackDtl> getMaterialIssueBackDtlList() {
+        return materialIssueBackDtlList;
+    }
+
+    public void setMaterialIssueBackDtlList(List<MaterialIssueBackDtl> materialIssueBackDtlList) {
+        this.materialIssueBackDtlList = materialIssueBackDtlList;
     }
 }
