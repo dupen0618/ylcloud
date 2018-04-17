@@ -4,21 +4,22 @@ import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.wm.model.ReceiptForFi;
+import com.ykcloud.soa.erp.api.wm.model.WmSellDaily;
 
 public class ReceiptForFiGetResponse extends MessagePack {
 
 	private static final long serialVersionUID = 2999054411107103895L;
 	
-	private List<ReceiptForFi> receiptForFi;
+	private List<WmSellDaily> wmSellDaily;
 
-	public List<ReceiptForFi> getReceiptForFi() {
-		return receiptForFi;
+	public List<WmSellDaily> getWmSellDaily() {
+		return wmSellDaily;
 	}
 
-	public void setReceiptForFi(List<ReceiptForFi> receiptForFi) {
-		this.receiptForFi = receiptForFi;
+	public void setWmSellDaily(List<WmSellDaily> wmSellDaily) {
+		this.wmSellDaily = wmSellDaily;
 	}
-	
+
 	
 	
 }
