@@ -29,7 +29,7 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 	private Long settlementType;
 
 	@NotNull(message = "操作日期不能为空！")
-	private Date creatDate;
+	private Date creatDtme;
 
 	@NotNull(message = "供应商不能为空！")
 	private Long supplyUnitNumId;
@@ -40,19 +40,20 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "结算单号不能为空！")
 	private String balanceNo;
 
-	@NotNull(message = "行号不能为空！")
+/*	@NotNull(message = "行号不能为空！")
 	private String series;
-
-	public Date getCreatDate() {
-		return creatDate;
-	}
-
-	public void setCreatDate(Date creatDate) {
-		this.creatDate = creatDate;
-	}
-
+*/
+	
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
+	}
+
+	public Date getCreatDtme() {
+		return creatDtme;
+	}
+
+	public void setCreatDtme(Date creatDtme) {
+		this.creatDtme = creatDtme;
 	}
 
 	public void setSubUnitNumId(Long subUnitNumId) {
@@ -91,14 +92,14 @@ public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
 		this.balanceNo = balanceNo;
 	}
 
-	public String getSeries() {
+/*	public String getSeries() {
 		return series;
 	}
 
 	public void setSeries(String series) {
 		this.series = series;
 	}
-
+*/
 	public Date getStartDate() {
 		return startDate;
 	}

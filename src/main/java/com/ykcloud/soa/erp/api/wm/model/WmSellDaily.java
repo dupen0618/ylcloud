@@ -3,6 +3,11 @@ package com.ykcloud.soa.erp.api.wm.model;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @Description:
+ * @author Song
+ * @Date 2018年4月17日 下午1:05:21
+ */
 public class WmSellDaily  implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -84,7 +89,7 @@ public class WmSellDaily  implements Serializable {
     /**
      * 批次行号
      */
-    private Long BATCH_SERIES;
+    private String BATCH_SERIES;
 
     /**
      * 批次促销档期
@@ -94,7 +99,7 @@ public class WmSellDaily  implements Serializable {
     /**
      * 批次供应商
      */
-    private Integer BATCH_SUPPLY_UNIT_NUM_ID;
+    private Long BATCH_SUPPLY_UNIT_NUM_ID;
 
     /**
      * 批次采购价格
@@ -125,8 +130,35 @@ public class WmSellDaily  implements Serializable {
      * 商品商家编码
      */
     private String ITEMID;
+    
+    /**
+     * 业务日期
+     */
+    private Date ORDER_DATE;
+    
+    /**
+     * 结算金额
+     */
+    private Double TOTAL_AMOUNT;
+    
+    
+    public Date getORDER_DATE() {
+		return ORDER_DATE;
+	}
 
-    public String getSERIES() {
+	public void setORDER_DATE(Date oRDER_DATE) {
+		ORDER_DATE = oRDER_DATE;
+	}
+
+	public Double getTOTAL_AMOUNT() {
+		return TOTAL_AMOUNT;
+	}
+
+	public void setTOTAL_AMOUNT(Double tOTAL_AMOUNT) {
+		TOTAL_AMOUNT = tOTAL_AMOUNT;
+	}
+
+	public String getSERIES() {
         return SERIES;
     }
 
@@ -248,15 +280,15 @@ public class WmSellDaily  implements Serializable {
         this.AMOUNT = AMOUNT;
     }
 
-    public Long getBATCH_SERIES() {
-        return BATCH_SERIES;
-    }
+    public String getBATCH_SERIES() {
+		return BATCH_SERIES;
+	}
 
-    public void setBATCH_SERIES(Long BATCH_SERIES) {
-        this.BATCH_SERIES = BATCH_SERIES;
-    }
+	public void setBATCH_SERIES(String bATCH_SERIES) {
+		BATCH_SERIES = bATCH_SERIES;
+	}
 
-    public Long getBATCH_PROMOTION_GRADE() {
+	public Long getBATCH_PROMOTION_GRADE() {
         return BATCH_PROMOTION_GRADE;
     }
 
@@ -264,15 +296,16 @@ public class WmSellDaily  implements Serializable {
         this.BATCH_PROMOTION_GRADE = BATCH_PROMOTION_GRADE;
     }
 
-    public Integer getBATCH_SUPPLY_UNIT_NUM_ID() {
-        return BATCH_SUPPLY_UNIT_NUM_ID;
-    }
 
-    public void setBATCH_SUPPLY_UNIT_NUM_ID(Integer BATCH_SUPPLY_UNIT_NUM_ID) {
-        this.BATCH_SUPPLY_UNIT_NUM_ID = BATCH_SUPPLY_UNIT_NUM_ID;
-    }
+    public Long getBATCH_SUPPLY_UNIT_NUM_ID() {
+		return BATCH_SUPPLY_UNIT_NUM_ID;
+	}
 
-    public Double getBATCH_PO_PRICE() {
+	public void setBATCH_SUPPLY_UNIT_NUM_ID(Long bATCH_SUPPLY_UNIT_NUM_ID) {
+		BATCH_SUPPLY_UNIT_NUM_ID = bATCH_SUPPLY_UNIT_NUM_ID;
+	}
+
+	public Double getBATCH_PO_PRICE() {
         return BATCH_PO_PRICE;
     }
 

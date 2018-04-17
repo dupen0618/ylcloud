@@ -3,11 +3,11 @@ package com.ykcloud.soa.erp.api.wm.request;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
- * @Description:生成日报查询的入参
- * @Author: ALi
+ * @Description:生成验收入库查询的入参
+ * @Author: song
  * @Date: 2018/4/13 20:28
  */
-public class SeriesBySellDailyGetRequest extends AbstractRequest {
+public class ReceiptSeriesGetRequest extends AbstractRequest {
     private static final long serialVersionUID = -2565804606566389459L;
     private  String batchSeries;
     private  Long itemUumId;
