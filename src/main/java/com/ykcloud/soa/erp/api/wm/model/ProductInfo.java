@@ -8,6 +8,7 @@ public class ProductInfo implements Serializable {
 
     private Long itemNumId;// 商品主键
     private String itemName;// 商品名称
+    private String itemid;//商家编号
     private String simItemName;// 商品中文简称
     private String enItemName;// 商品英文名称
     private String enSmpItemName;// 商品英文简称
@@ -55,6 +56,14 @@ public class ProductInfo implements Serializable {
 
     public void setItemName(String itemName) {
         this.itemName = itemName;
+    }
+
+    public String getItemid() {
+        return itemid;
+    }
+
+    public void setItemid(String itemid) {
+        this.itemid = itemid;
     }
 
     public String getSimItemName() {
