@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
@@ -34,14 +35,14 @@ public class ApprovalStatusNumIdAndSoNumIdUpdateRequest extends AbstractUserSess
 	private String soNumId;
 	
 	@NotEmpty(message = "配送审批单行号不能为空！")
-	private String series;
+	private List<String> seriesList;
 
-	public String getSeries() {
-		return series;
+	public List<String> getSeriesList() {
+		return seriesList;
 	}
 
-	public void setSeries(String series) {
-		this.series = series;
+	public void setSeriesList(List<String> seriesList) {
+		this.seriesList = seriesList;
 	}
 
 	public String getSoNumId() {

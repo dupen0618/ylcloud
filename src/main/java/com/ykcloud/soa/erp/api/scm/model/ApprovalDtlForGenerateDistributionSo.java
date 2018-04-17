@@ -21,6 +21,26 @@ public class ApprovalDtlForGenerateDistributionSo implements Serializable {
 	
 	private String applyLine;
 	
+	private String itemid;
+	
+	private String supProduceDate;
+	
+	public String getSupProduceDate() {
+		return supProduceDate;
+	}
+
+	public void setSupProduceDate(String supProduceDate) {
+		this.supProduceDate = supProduceDate;
+	}
+
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
+
 	public String getApplyLine() {
 		return applyLine;
 	}
