@@ -21,7 +21,6 @@ public class WmFinishShipContainerHdrRequest extends AbstractUserSessionRequest 
 
 	private String soNumId;
 
-	private Date orderDate;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -55,12 +54,5 @@ public class WmFinishShipContainerHdrRequest extends AbstractUserSessionRequest 
 		this.soNumId = soNumId;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
 
 }

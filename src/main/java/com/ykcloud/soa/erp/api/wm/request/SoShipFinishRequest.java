@@ -1,8 +1,9 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 public class SoShipFinishRequest extends AbstractUserSessionRequest {
@@ -17,6 +18,7 @@ public class SoShipFinishRequest extends AbstractUserSessionRequest {
 	
 	@NotNull(message = "订单编号不能为空! ")
 	private String soNumId;
+	
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -33,7 +35,6 @@ public class SoShipFinishRequest extends AbstractUserSessionRequest {
 	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
-	
-	
+
 
 }

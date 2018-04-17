@@ -1,7 +1,5 @@
 package com.ykcloud.soa.erp.api.so.request;
 
-import java.util.Date;
-
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
@@ -17,9 +15,6 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 	
 	@NotNull(message="门店ID不能为空！")
 	private Long subUnitNumId;
-	
-	@NotNull(message="orderDate不能为空！")
-	private Date orderDate;
 	
 	//sql是否要带itemNumId
 	private Long itemFlag;
@@ -47,14 +42,6 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
-	}
-
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
 	}
 
 	public Long getItemFlag() {

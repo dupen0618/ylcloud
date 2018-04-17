@@ -37,9 +37,6 @@ public class WmShipDtlWithNoBatchUpdateRequest extends AbstractUserSessionReques
 	@NotNull(message = "扫入或是扫入标识不能为空不能为空! ")
 	private Long cancelSign;
 
-	// 订单日期
-	// @NotNull(message = "订单日期不能为空! ")
-	private Date orderDate;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -97,12 +94,5 @@ public class WmShipDtlWithNoBatchUpdateRequest extends AbstractUserSessionReques
 		this.cancelSign = cancelSign;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
 
 }

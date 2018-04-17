@@ -22,8 +22,6 @@ public class WmDataByBarcodeGetRequest extends AbstractRequest {
 	//订单种号
 	private Long sowNumId;
 
-	//分库标识符
-	private Date orderDate;
 
 	public String getBarcode() {
 		return barcode;
@@ -55,14 +53,6 @@ public class WmDataByBarcodeGetRequest extends AbstractRequest {
 
 	public void setSowNumId(Long sowNumId) {
 		this.sowNumId = sowNumId;
-	}
-
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
 	}
 
 }

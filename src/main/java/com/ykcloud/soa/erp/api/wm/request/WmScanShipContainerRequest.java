@@ -28,7 +28,6 @@ public class WmScanShipContainerRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "正向，反向标识符不能为空")
 	private Long cancelSign;
 
-	private Date orderDate;
 
 	public String getContainerLabserlno() {
 		return containerLabserlno;
@@ -62,13 +61,6 @@ public class WmScanShipContainerRequest extends AbstractUserSessionRequest {
 		this.cancelSign = cancelSign;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
 
 	public String getContainerSerlno() {
 		return containerSerlno;

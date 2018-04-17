@@ -1,10 +1,13 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WmFinishSoPackingRequest extends AbstractRequest {
+public class WmFinishSoPackingRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 4419449230653442470L;
 
@@ -16,6 +19,7 @@ public class WmFinishSoPackingRequest extends AbstractRequest {
 
 	@NotNull(message = "是否可以短播标识符不能为空! ")
 	private Long cancelSign;
+	
 
 	public String getWlbc() {
 		return wlbc;
@@ -40,5 +44,6 @@ public class WmFinishSoPackingRequest extends AbstractRequest {
 	public void setCancelSign(Long cancelSign) {
 		this.cancelSign = cancelSign;
 	}
+
 
 }

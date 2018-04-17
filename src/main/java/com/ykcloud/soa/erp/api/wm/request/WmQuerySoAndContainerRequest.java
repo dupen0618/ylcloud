@@ -16,9 +16,6 @@ public class WmQuerySoAndContainerRequest extends AbstractRequest {
 	@NotNull(message = "门店ID不能为空")
 	private Long subUnitNumId;
 
-	private Date orderDate;
-
-
 
 	public String getContainerSerlno() {
 		return containerSerlno;
@@ -28,13 +25,6 @@ public class WmQuerySoAndContainerRequest extends AbstractRequest {
 		this.containerSerlno = containerSerlno;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
