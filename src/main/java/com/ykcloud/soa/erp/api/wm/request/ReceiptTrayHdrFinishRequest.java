@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 
+import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
@@ -12,12 +14,14 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 **/
 public class ReceiptTrayHdrFinishRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = 7297928684649536716L;
+	
+	@NotNull(message="门店编不能为空!")
 	private Long subUnitNumId;
+	
 	@NotEmpty(message="验收单号不能为空!")
-	
 	private String reservedNo;
-	@NotEmpty(message="托盘号不能为空!")
 	
+	@NotEmpty(message="托盘号不能为空!")
 	private String traySerlno;
 	
 	public String getReservedNo() {

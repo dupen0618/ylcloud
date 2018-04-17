@@ -18,6 +18,15 @@ public interface WmReceiptTrayService {
 	 *@return response{traySerlno,traySerlnoLable}
 	 */
 	public ReceiptTrayHdrCreateResponse createReceiptTrayHdr(ReceiptTrayHdrCreateRequest request);
+	
+	/**
+	 *@Description: 创建收货托盘
+	 *@Auther hank
+	 *@Date 2018-4-9
+	 *@param request{subUnitNumId,reservedNo,traySerlnoLabel,userNumId}
+	 *@return response{traySerlno,traySerlnoLable}
+	 */
+	public ReceiptTrayHdrCreateResponse createReceiptTrayHdrWithNoTransaction(ReceiptTrayHdrCreateRequest request);
 
 	// 托盘完成(封箱)
 	public ReceiptTrayHdrFinishResponse finishReceiptTrayHdr(ReceiptTrayHdrFinishRequest request);

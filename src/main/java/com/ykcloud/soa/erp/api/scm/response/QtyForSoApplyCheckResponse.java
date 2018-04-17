@@ -2,7 +2,7 @@ package com.ykcloud.soa.erp.api.scm.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
-public class QtyForSoApplyGetResponse extends MessagePack {
+public class QtyForSoApplyCheckResponse extends MessagePack {
 		
 		private Double qty;   //数量
 		

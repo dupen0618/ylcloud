@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.scm.response;
 
+import java.util.Date;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
@@ -12,6 +13,16 @@ public class ApprovalHdrForGenerateDistributionSoGetResponse extends MessagePack
 	private Long settlementType;
 
 	private Long storeType;
+	
+	private Date deliveryDate;
+
+	public Date getDeliveryDate() {
+		return deliveryDate;
+	}
+
+	public void setDeliveryDate(Date deliveryDate) {
+		this.deliveryDate = deliveryDate;
+	}
 
 	private List<ApprovalStorageForGenerateDistributionSo> approvalStorageList;
 

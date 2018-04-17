@@ -5,20 +5,8 @@ package com.ykcloud.soa.erp.api.wm.service;
  *
  */
 
-import com.ykcloud.soa.erp.api.wm.request.OpenWorkConfirmRequest;
-import com.ykcloud.soa.erp.api.wm.request.OutOpenWorkConfirmRequest;
-import com.ykcloud.soa.erp.api.wm.request.ProductInfoAndStockGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.WorkChangeConfirmRequest;
-import com.ykcloud.soa.erp.api.wm.request.WorkConfirmAssembleRequest;
-import com.ykcloud.soa.erp.api.wm.request.WorkLossCreateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ProductChangeRequest;
-import com.ykcloud.soa.erp.api.wm.response.OpenWorkConfirmResponse;
-import com.ykcloud.soa.erp.api.wm.response.OutOpenWorkConfirmResponse;
-import com.ykcloud.soa.erp.api.wm.response.ProductInfoAndStockGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.WorkChangeConfirmResponse;
-import com.ykcloud.soa.erp.api.wm.response.WorkConfirmAssembleResponse;
-import com.ykcloud.soa.erp.api.wm.response.WorkLossCreateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ProductChangeGetResponse;
+import com.ykcloud.soa.erp.api.wm.request.*;
+import com.ykcloud.soa.erp.api.wm.response.*;
 
 public interface WmWorkService {
 	//获取商品信息+商品库存信息
@@ -54,4 +42,7 @@ public interface WmWorkService {
 	
 	//生成报损单（内部方法）
 	public WorkLossCreateResponse createWorkLossByWorkNumID(WorkLossCreateRequest request);
+
+	//查询BOM加工的成品
+	public WorkProductAndBomIDGetResponse getWorkProductAndBomID(WorkProductAndBomIDGetRequest request);
 }
