@@ -20,7 +20,7 @@ public class WmWlBcHdrGetRequest extends AbstractRequest {
 	@NotNull(message = "门店ID不能为空! ")
 	private Long subUnitNumId;
 
-	private Date orderDate;
+	private Date wlbcDate;
 
 	public String getWlbc() {
 		return wlbc;
@@ -38,12 +38,14 @@ public class WmWlBcHdrGetRequest extends AbstractRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
+	public Date getWlbcDate() {
+		return wlbcDate;
 	}
 
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
+	public void setWlbcDate(Date wlbcDate) {
+		this.wlbcDate = wlbcDate;
 	}
+
+	
 
 }

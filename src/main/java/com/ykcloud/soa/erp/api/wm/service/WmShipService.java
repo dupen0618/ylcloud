@@ -94,10 +94,10 @@ public interface WmShipService {
 		public ShipForMaterialIssueBackGenerateResponse generateShipForMaterialIssueBack(ShipForMaterialIssueBackGenerateRequest request);
 
 		//发送库存处理消息TCC,服务
-		public ShipBusinessAccountProcessResponse ProcessShipBusinessAccount(ShipBusinessAccountProcessRequest request);
+		public ShipBusinessAccountProcessResponse processShipBusinessAccount(ShipBusinessAccountProcessRequest request);
 		
 		//发送财务处理消息TCC
-		public ShipFiAccountProcessResponse ProcessShipFiAccount(ShipFiAccountProcessRequest request);
+		public ShipFiAccountProcessResponse processShipFiAccount(ShipFiAccountProcessRequest request);
 		
 		
 		public SoShipFinishResponse finishSoShip(SoShipFinishRequest request);
