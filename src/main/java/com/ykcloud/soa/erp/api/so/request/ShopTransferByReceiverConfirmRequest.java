@@ -8,15 +8,15 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
- * 店间调拨营运中心确认入参
+ * 店间调拨收货门店确认入参
  * @author tz.x
  *
- * @date 2018年4月16日上午9:00:11
+ * @date 2018年4月17日下午1:44:10
  */
-public class ShopTransferByOperationCenterAuditRequest extends AbstractUserSessionRequest {
-	
-	private static final long serialVersionUID = 1034959357911621148L;
+public class ShopTransferByReceiverConfirmRequest extends AbstractUserSessionRequest {
 
+	private static final long serialVersionUID = -3450520387851886721L;
+	
 	@NotNull(message = "门店不能为空!")
 	private Long subUnitNumId;
 	
