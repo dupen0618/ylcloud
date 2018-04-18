@@ -6,6 +6,8 @@ import java.io.Serializable;
 public class ReceiptDtlForGenerateDirectWayDistributionSo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
+	private Double confirmQty;
 
 	private String promotionGrade;
 
@@ -36,6 +38,14 @@ public class ReceiptDtlForGenerateDirectWayDistributionSo implements Serializabl
 	private Long logisticsType;
 
 	private String supProduceDate;
+
+	public Double getConfirmQty() {
+		return confirmQty;
+	}
+
+	public void setConfirmQty(Double confirmQty) {
+		this.confirmQty = confirmQty;
+	}
 
 	public String getPromotionGrade() {
 		return promotionGrade;
