@@ -9,13 +9,9 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
  * @Date 2018年4月4日 下午5:18:14
  */
 public class ProductDtlForBalanceDeleteRequest extends AbstractUserSessionRequest {
-
 	private static final long serialVersionUID = 5418678300240637435L;
-
 	@NotNull(message = "行号不能为空！")
 	private String series;
-
-
 	public String getSeries() {
 		return series;
 	}
