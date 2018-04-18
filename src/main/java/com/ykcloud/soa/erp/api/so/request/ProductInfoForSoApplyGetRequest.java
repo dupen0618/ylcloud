@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 //店内调拨、行政领料商品查询的入参
-public class ProductInfoForSoApplyShopTransferAndMaterialIssueGetRequest extends AbstractRequest {
+public class ProductInfoForSoApplyGetRequest extends AbstractRequest {
 			@NotNull(message="门店编号不能为空")
 			private Long subUnitNumId;   //调出门店编号(申请门店)
 			

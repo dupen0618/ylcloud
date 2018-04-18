@@ -1,7 +1,7 @@
 package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.so.request.LastSalesDateGetRequest;
-import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyShopTransferAndMaterialIssueGetRequest;
+import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplySubcontractSplitGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyTransferBetweenShopGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAfterGenerateReturnSoUpdateRequest;
@@ -10,10 +10,11 @@ import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByOperationCenterAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByReceiverConfirmRequest;
+import com.ykcloud.soa.erp.api.so.request.ShopTransferRejectAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.SoReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.response.LastSalesDateGetResponse;
-import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyShopTransferAndMaterialIssueGetResponse;
+import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplySubcontractSplitGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenShopGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAfterGenerateReturnSoUpdateResponse;
@@ -22,6 +23,7 @@ import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByOperationCenterAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByReceiverConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.ShopTransferRejectAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.SoApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
 
@@ -32,6 +34,15 @@ import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
  * @version <b>1.0.0</b>
  */
 public interface SoApplyService {
+	
+	/**
+	 * 店间调拨驳回
+	 * @author tz.x
+	 * @date 2018年4月18日下午2:11:37
+	 * @param 
+	 * @return
+	 */
+	public ShopTransferRejectAuditResponse rejectShopTransferAudit(ShopTransferRejectAuditRequest request);
 	
 	/**
 	 * 店间调拨营运中心确认
@@ -109,7 +120,7 @@ public interface SoApplyService {
 	public SoReturnApplyAuditResponse auditMaterialIssueBacky(SoReturnApplyAuditRequest request);
 
     //店内调拨、行政领料商品查询
-	public ProductInfoForSoApplyShopTransferAndMaterialIssueGetResponse getProductInfoForSoApplyShopTransferAndMaterialIssue(ProductInfoForSoApplyShopTransferAndMaterialIssueGetRequest request);
+	public ProductInfoForSoApplyGetResponse getProductInfoForSoApply(ProductInfoForSoApplyGetRequest request);
 
 	//委外分解领料商品查询
 	public ProductInfoForSoApplySubcontractSplitGetResponse  getProductInfoForSoApplySubcontractSplit(ProductInfoForSoApplySubcontractSplitGetRequest request);

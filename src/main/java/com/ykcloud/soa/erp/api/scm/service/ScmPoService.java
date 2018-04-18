@@ -5,6 +5,7 @@ import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDirectWayDistr
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderByBuyerAuditGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoBySupplyConfirmRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoDtlRecQtyUpdateRequest;
+import com.ykcloud.soa.erp.api.scm.request.PoFinishRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoForGenerateReceiptGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoGenerateRequest;
@@ -13,6 +14,7 @@ import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDirectWayDist
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderByBuyerAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoBySupplyConfirmResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoDtlRecQtyUpdateResponse;
+import com.ykcloud.soa.erp.api.scm.response.PoFinishResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoForGenerateReceiptGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoGenerateResponse;
@@ -66,6 +68,14 @@ public interface ScmPoService {
 	public ApprovalOrderByBuyerAuditResponse auditApprovalOrderByBuyer(ApprovalOrderByBuyerAuditGetRequest request);
 	//收货验收完成时反向更新Po_DTL_rec_qty  byhank
 	public PoDtlRecQtyUpdateResponse   updatePoDtlRecQty(PoDtlRecQtyUpdateRequest request);
+	/**
+	 *@Description: 更新po完成
+	 *@Auther hank
+	 *@Date 2018-4-12
+	 *@param request{subUnitNumId,PoNumId,userNumId}
+	 *@return response{}
+	 */
+	public PoFinishResponse finishPo(PoFinishRequest request);
 	
 }
 
