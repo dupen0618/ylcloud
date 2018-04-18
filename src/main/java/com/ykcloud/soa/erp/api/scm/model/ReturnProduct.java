@@ -65,14 +65,14 @@ public class ReturnProduct implements Serializable {
 
 	private Double stockQty; // 库存数
 	
-	private String itemId;   
+	private String itemid;   
 
 	public String getItemId() {
-		return itemId;
+		return itemid;
 	}
 
 	public void setItemId(String itemId) {
-		this.itemId = itemId;
+		this.itemid = itemId;
 	}
 
 	public Long getItemNumId() {
