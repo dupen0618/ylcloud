@@ -18,10 +18,6 @@ public class MaterialIssueBackDtl implements Serializable{
 
     private Double conversionQty;//件装数
 
-    private Long conversionUnitNumId;//件装单位
-
-    private Double packageQty;//件数
-
     private Double qty;//数量
 
     private Double pmtQty;//赠品数量
@@ -48,22 +44,6 @@ public class MaterialIssueBackDtl implements Serializable{
 
     public void setConversionQty(Double conversionQty) {
         this.conversionQty = conversionQty;
-    }
-
-    public Long getConversionUnitNumId() {
-        return conversionUnitNumId;
-    }
-
-    public void setConversionUnitNumId(Long conversionUnitNumId) {
-        this.conversionUnitNumId = conversionUnitNumId;
-    }
-
-    public Double getPackageQty() {
-        return packageQty;
-    }
-
-    public void setPackageQty(Double packageQty) {
-        this.packageQty = packageQty;
     }
 
     public Double getQty() {
