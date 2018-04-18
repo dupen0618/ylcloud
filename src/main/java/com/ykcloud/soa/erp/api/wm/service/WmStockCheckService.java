@@ -7,6 +7,7 @@ import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemQtyStockCheckInputRequest;
 import com.ykcloud.soa.erp.api.wm.request.OmitCheckProductListQueryRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockAdjustAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockAdjustAccountRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockAdjustCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckCancelRequest;
@@ -23,6 +24,7 @@ import com.ykcloud.soa.erp.api.wm.response.ContainerProductDetailGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeScanResponse;
 import com.ykcloud.soa.erp.api.wm.response.OmitCheckProductListQueryResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockAdjustAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockAdjustAccountResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockAdjustCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckCancelResponse;
@@ -198,4 +200,13 @@ public interface WmStockCheckService {
      */
     StockAdjustAccountResponse accountStockAdjust(
         StockAdjustAccountRequest request);
+
+    /**
+     * 消费消息调用入账服务
+     *
+     * @param request
+     * @return
+     */
+    StockAdjustAccountProcessResponse processStockAdjustAccount(
+        StockAdjustAccountProcessRequest request);
 }
