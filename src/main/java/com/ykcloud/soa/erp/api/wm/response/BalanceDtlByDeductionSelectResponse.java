@@ -6,7 +6,7 @@ import com.ykcloud.soa.erp.api.wm.model.WmSellDaily;
 import java.util.List;
 
 /**
- * @Description: 销售日报出库查询出参
+ * @Description: 验收入库查询出参
  * @Author: ALi
  * @Date: 2018/4/13 20:49
  */

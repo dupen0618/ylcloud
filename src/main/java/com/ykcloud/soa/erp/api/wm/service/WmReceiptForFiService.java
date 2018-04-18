@@ -13,6 +13,10 @@ import com.ykcloud.soa.erp.api.wm.request.StockadJustDataGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadJustSelectRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadJustSeriesGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadJustStatusGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.WorkRawBatchDataGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.WorkRawDtlSelectRequest;
+import com.ykcloud.soa.erp.api.wm.request.WorkRawSeriesGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.WorkRawStatusGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.BalanceDtlByDeductionSelectResponse;
 import com.ykcloud.soa.erp.api.wm.response.LossDtlByBalanceSelectResponse;
 import com.ykcloud.soa.erp.api.wm.response.LossDtlDataGetResponse;
@@ -25,6 +29,10 @@ import com.ykcloud.soa.erp.api.wm.response.StockadJustDataGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadJustSelectResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadJustSeriesGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadJustStatusGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.WorkRawBatchDataGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.WorkRawDtlSelectResponse;
+import com.ykcloud.soa.erp.api.wm.response.WorkRawSeriesGetResqonse;
+import com.ykcloud.soa.erp.api.wm.response.WorkRawStatusGetResponse;
 
 /**
  * @Description:
@@ -63,12 +71,26 @@ public interface WmReceiptForFiService {
 	public StockadJustDataGetResponse getStockadJustData(StockadJustDataGetRequest request);
 	
 	//改变盈亏单结算后的状态
-	public StockadJustStatusGetResponse getStockadJustStatus(StockadJustStatusGetRequest request);
+	public StockadJustStatusGetResponse updateStockadJustStatus(StockadJustStatusGetRequest request);
 	
 	//获得盈亏单行号
 	public StockadJustSeriesGetResponse getStockadJustSeries(StockadJustSeriesGetRequest request);
 	
 	//选择指定的盈亏单明细生成结算单
 	public StockadJustSelectResponse selectStockadJust(StockadJustSelectRequest request);
+	
+	
+	//加工单获取数据
+	public WorkRawBatchDataGetResponse getWorkRawBatchData(WorkRawBatchDataGetRequest request);
+	
+	//改变加工单结算后的状态
+	public WorkRawStatusGetResponse updateWorkRawStatus(WorkRawStatusGetRequest request);
+	
+	//获取加工单行号
+	public WorkRawSeriesGetResqonse getWorkRawSeries(WorkRawSeriesGetRequest request);
+	
+	//选择指定的加工单明细生成结算单
+	public WorkRawDtlSelectResponse selectWorkRawDtl(WorkRawDtlSelectRequest request);
+	
 	
 }
