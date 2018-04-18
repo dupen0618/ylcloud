@@ -22,7 +22,8 @@ public class WmContainerHdrCreateRequest extends AbstractUserSessionRequest {
 	// 门店ID
 	@NotNull(message = "门店ID不能为空! ")
 	private Long subUnitNumId;
-
+	
+	private Date containerDate;
 
 	public String getSoNumId() {
 		return soNumId;
@@ -48,5 +49,12 @@ public class WmContainerHdrCreateRequest extends AbstractUserSessionRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
+	public Date getContainerDate() {
+		return containerDate;
+	}
+
+	public void setContainerDate(Date containerDate) {
+		this.containerDate = containerDate;
+	}
 
 }

@@ -12,7 +12,6 @@ public class WmShipGetRequest extends AbstractUserSessionRequest {
 	@NotNull(message="门店Id不能为空！")
 	private Long subUnitNumId;
 	
-	@NotNull(message="托盘标识符不能为空！")
 	private String containerLabserlno;
 
 

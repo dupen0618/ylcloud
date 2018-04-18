@@ -14,6 +14,8 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 	
 	private Long subUnitNumId;
 	
+	private Long userNumId;
+	
 	public String getSoNumId() {
 		return soNumId;
 	}
@@ -37,6 +39,14 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
+	}
+
+	public Long getUserNumId() {
+		return userNumId;
+	}
+
+	public void setUserNumId(Long userNumId) {
+		this.userNumId = userNumId;
 	}
 
 
