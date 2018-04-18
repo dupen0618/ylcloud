@@ -6,4 +6,13 @@ public class WorkLossCreateResponse extends MessagePack {
 
 	private static final long serialVersionUID = 1L;
 
+	private String lossNumId;
+
+	public String getLossNumId() {
+		return lossNumId;
+	}
+
+	public void setLossNumId(String lossNumId) {
+		this.lossNumId = lossNumId;
+	}
 }
