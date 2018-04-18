@@ -13,7 +13,6 @@ public class WmShipFinishRequest extends AbstractUserSessionRequest {
 
 	private Long subUnitNumId;
 
-	private Date orderDate;
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -31,12 +30,5 @@ public class WmShipFinishRequest extends AbstractUserSessionRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
 
 }
