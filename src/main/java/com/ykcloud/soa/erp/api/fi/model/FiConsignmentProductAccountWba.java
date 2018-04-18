@@ -1,12 +1,15 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @Author Hewei
  * @Date 2018/4/18 11:31
  */
-public class FiConsignmentProductAccountWba {
+public class FiConsignmentProductAccountWba implements Serializable {
+
+    private static final long serialVersionUID = 168984921682033967L;
     private Long itemNumId;
     private Long divNumId;
     private String barcode;
