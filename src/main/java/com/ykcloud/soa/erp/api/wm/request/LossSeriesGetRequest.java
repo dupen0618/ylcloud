@@ -8,7 +8,7 @@ public class LossSeriesGetRequest extends AbstractRequest {
 
 	 private  String batchSeries;
 	    private  Long itemUumId;
-	    private String lossNumId;
+	    private String reservedNo;
 	  
 	    public String getBatchSeries() {
 			return batchSeries;
@@ -26,14 +26,13 @@ public class LossSeriesGetRequest extends AbstractRequest {
 	        this.itemUumId = itemUumId;
 	    }
 
-		public String getLossNumId() {
-			return lossNumId;
+		public String getReservedNo() {
+			return reservedNo;
 		}
 
-		public void setLossNumId(String lossNumId) {
-			this.lossNumId = lossNumId;
+		public void setReservedNo(String reservedNo) {
+			this.reservedNo = reservedNo;
 		}
-
-		
+	
 
 }
