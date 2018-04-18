@@ -1,236 +1,291 @@
 package com.ykcloud.soa.erp.api.wm.model;
-
-import java.util.Date;
+/*
+ * PROJECT NAME: omp_bcommon
+ * PACKAGE NAME: com.gb.soa.omp.dto
+ * FILE    NAME: ScmAccInvownStkdto.java
+ * COPYRIGHT: Copyright(c) © 2016 Goodbaby Company Ltd. All Rights Reserved
+ */
+import java.io.Serializable;
 
 /**
- * @Author Hewei
- * @Date 2018/3/25 21:27 此类特殊，需要与Entity一样
+ * 库存redis更新实体
+ * @author xiaoliu.zhu
+ * @date 2016年5月11日 下午3:01:10
+ * @version <b>1.0.0</b>
  */
-public class ScmAccInvOwnStk {
-	private Long TENANT_NUM_ID;
-	private Long DIV_NUM_ID;
-	private Long STORAGE_NUM_ID;
-	private Long LOC_PTY_NUM_ID;
-	private Long ITEM_NUM_ID;
-	private Double PHYSIC_QTY;
-	private Double RESERVED_QTY;
-	private Double LOCK_QTY;
-	private Double KEEP_QTY;
-	private Double AVAL_QTY;
-	private String CANCELSIGN;
-	private String INSERTDATA;
-	private String UPDATEDATA;
-	private Double VIRTUAL_QTY;
-	private Double FACT_VIRTUAL_QTY;
-	private Long SUB_UNIT_NUM_ID;
-	private Double SAMPLE_QTY;
-	private Double DEFECTIVE_QTY;
-	private String SERIES;
-	private Long CREATE_USER_ID;
-	private Long LAST_UPDATE_USER_ID;
-	private Date CREATE_DTME;
-	private Date LAST_UPDTME;
-	private Long CARRY_SIGN;
-	private Long DATA_SIGN;
+public class ScmAccInvOwnStk implements Serializable{
 
-	public Long getTENANT_NUM_ID() {
-		return TENANT_NUM_ID;
-	}
+    private static final long serialVersionUID = -6257977489391902499L;
 
-	public void setTENANT_NUM_ID(Long tENANT_NUM_ID) {
-		TENANT_NUM_ID = tENANT_NUM_ID;
-	}
 
-	public Long getDIV_NUM_ID() {
-		return DIV_NUM_ID;
-	}
+    private String series;
 
-	public void setDIV_NUM_ID(Long dIV_NUM_ID) {
-		DIV_NUM_ID = dIV_NUM_ID;
-	}
+    private Long itemNumId;
 
-	public Long getSTORAGE_NUM_ID() {
-		return STORAGE_NUM_ID;
-	}
+    private Long locPtyNumId;
 
-	public void setSTORAGE_NUM_ID(Long sTORAGE_NUM_ID) {
-		STORAGE_NUM_ID = sTORAGE_NUM_ID;
-	}
+    private Long storageNumId;
 
-	public Long getLOC_PTY_NUM_ID() {
-		return LOC_PTY_NUM_ID;
-	}
+    private Long avalQty;
 
-	public void setLOC_PTY_NUM_ID(Long lOC_PTY_NUM_ID) {
-		LOC_PTY_NUM_ID = lOC_PTY_NUM_ID;
-	}
+    private Long lockQty;
 
-	public Long getITEM_NUM_ID() {
-		return ITEM_NUM_ID;
-	}
+    private Long stkNumId;
 
-	public void setITEM_NUM_ID(Long iTEM_NUM_ID) {
-		ITEM_NUM_ID = iTEM_NUM_ID;
-	}
+    private Long divNumId;
 
-	public Double getPHYSIC_QTY() {
-		return PHYSIC_QTY;
-	}
+    private Long ownerNumId;
 
-	public void setPHYSIC_QTY(Double pHYSIC_QTY) {
-		PHYSIC_QTY = pHYSIC_QTY;
-	}
+    private Long subUnitNumId;
 
-	public Double getRESERVED_QTY() {
-		return RESERVED_QTY;
-	}
+    private Long cortNumId;
 
-	public void setRESERVED_QTY(Double rESERVED_QTY) {
-		RESERVED_QTY = rESERVED_QTY;
-	}
+    private Long virtualQty;
 
-	public Double getLOCK_QTY() {
-		return LOCK_QTY;
-	}
+    private Long physicQty;
 
-	public void setLOCK_QTY(Double lOCK_QTY) {
-		LOCK_QTY = lOCK_QTY;
-	}
+    private Long tenantNumId;
 
-	public Double getKEEP_QTY() {
-		return KEEP_QTY;
-	}
+    private Long dataSign;
 
-	public void setKEEP_QTY(Double kEEP_QTY) {
-		KEEP_QTY = kEEP_QTY;
-	}
+    /**
+     * 获得series
+     * @return String
+     */
+    public String getSeries() {
+        return series;
+    }
 
-	public Double getAVAL_QTY() {
-		return AVAL_QTY;
-	}
+    /**
+     * 设置series
+     * @param series
+     */
+    public void setSeries(String series) {
+        this.series = series;
+    }
 
-	public void setAVAL_QTY(Double aVAL_QTY) {
-		AVAL_QTY = aVAL_QTY;
-	}
+    /**
+     * 获得itemNumId
+     * @return Long
+     */
+    public Long getItemNumId() {
+        return itemNumId;
+    }
 
-	public String getCANCELSIGN() {
-		return CANCELSIGN;
-	}
+    /**
+     * 设置itemNumId
+     * @param itemNumId
+     */
+    public void setItemNumId(Long itemNumId) {
+        this.itemNumId = itemNumId;
+    }
 
-	public void setCANCELSIGN(String cANCELSIGN) {
-		CANCELSIGN = cANCELSIGN;
-	}
+    /**
+     * 获得locPtyNumId
+     * @return Long
+     */
+    public Long getLocPtyNumId() {
+        return locPtyNumId;
+    }
 
-	public String getINSERTDATA() {
-		return INSERTDATA;
-	}
+    /**
+     * 设置locPtyNumId
+     * @param locPtyNumId
+     */
+    public void setLocPtyNumId(Long locPtyNumId) {
+        this.locPtyNumId = locPtyNumId;
+    }
 
-	public void setINSERTDATA(String iNSERTDATA) {
-		INSERTDATA = iNSERTDATA;
-	}
+    /**
+     * 获得storageNumId
+     * @return Long
+     */
+    public Long getStorageNumId() {
+        return storageNumId;
+    }
 
-	public String getUPDATEDATA() {
-		return UPDATEDATA;
-	}
+    /**
+     * 设置storageNumId
+     * @param storageNumId
+     */
+    public void setStorageNumId(Long storageNumId) {
+        this.storageNumId = storageNumId;
+    }
 
-	public void setUPDATEDATA(String uPDATEDATA) {
-		UPDATEDATA = uPDATEDATA;
-	}
+    /**
+     * 获得avalQty
+     * @return Long
+     */
+    public Long getAvalQty() {
+        return avalQty;
+    }
 
-	public Double getVIRTUAL_QTY() {
-		return VIRTUAL_QTY;
-	}
+    /**
+     * 设置avalQty
+     * @param avalQty
+     */
+    public void setAvalQty(Long avalQty) {
+        this.avalQty = avalQty;
+    }
 
-	public void setVIRTUAL_QTY(Double vIRTUAL_QTY) {
-		VIRTUAL_QTY = vIRTUAL_QTY;
-	}
+    /**
+     * 获得lockQty
+     * @return Long
+     */
+    public Long getLockQty() {
+        return lockQty;
+    }
 
-	public Double getFACT_VIRTUAL_QTY() {
-		return FACT_VIRTUAL_QTY;
-	}
+    /**
+     * 设置lockQty
+     * @param lockQty
+     */
+    public void setLockQty(Long lockQty) {
+        this.lockQty = lockQty;
+    }
 
-	public void setFACT_VIRTUAL_QTY(Double fACT_VIRTUAL_QTY) {
-		FACT_VIRTUAL_QTY = fACT_VIRTUAL_QTY;
-	}
+    /**
+     * 获得divNumId
+     * @return Long
+     */
+    public Long getDivNumId() {
+        return divNumId;
+    }
 
-	public Long getSUB_UNIT_NUM_ID() {
-		return SUB_UNIT_NUM_ID;
-	}
+    /**
+     * 获得stkNumId
+     * @return Long
+     */
+    public Long getStkNumId() {
+        return stkNumId;
+    }
 
-	public void setSUB_UNIT_NUM_ID(Long sUB_UNIT_NUM_ID) {
-		SUB_UNIT_NUM_ID = sUB_UNIT_NUM_ID;
-	}
+    /**
+     * 设置stkNumId
+     * @param stkNumId
+     */
+    public void setStkNumId(Long stkNumId) {
+        this.stkNumId = stkNumId;
+    }
 
-	public Double getSAMPLE_QTY() {
-		return SAMPLE_QTY;
-	}
+    /**
+     * 设置divNumId
+     * @param divNumId
+     */
+    public void setDivNumId(Long divNumId) {
+        this.divNumId = divNumId;
+    }
 
-	public void setSAMPLE_QTY(Double sAMPLE_QTY) {
-		SAMPLE_QTY = sAMPLE_QTY;
-	}
+    /**
+     * 获得ownerNumId
+     * @return Long
+     */
+    public Long getOwnerNumId() {
+        return ownerNumId;
+    }
 
-	public Double getDEFECTIVE_QTY() {
-		return DEFECTIVE_QTY;
-	}
+    /**
+     * 设置ownerNumId
+     * @param ownerNumId
+     */
+    public void setOwnerNumId(Long ownerNumId) {
+        this.ownerNumId = ownerNumId;
+    }
 
-	public void setDEFECTIVE_QTY(Double dEFECTIVE_QTY) {
-		DEFECTIVE_QTY = dEFECTIVE_QTY;
-	}
+    /**
+     * 获得subUnitNumId
+     * @return Long
+     */
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
 
-	public String getSERIES() {
-		return SERIES;
-	}
+    /**
+     * 设置subUnitNumId
+     * @param subUnitNumId
+     */
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
+    }
 
-	public void setSERIES(String sERIES) {
-		SERIES = sERIES;
-	}
+    /**
+     * 获得cortNumId
+     * @return Long
+     */
+    public Long getCortNumId() {
+        return cortNumId;
+    }
 
-	public Long getCREATE_USER_ID() {
-		return CREATE_USER_ID;
-	}
+    /**
+     * 设置cortNumId
+     * @param cortNumId
+     */
+    public void setCortNumId(Long cortNumId) {
+        this.cortNumId = cortNumId;
+    }
 
-	public void setCREATE_USER_ID(Long cREATE_USER_ID) {
-		CREATE_USER_ID = cREATE_USER_ID;
-	}
+    /**
+     * 获得virtualQty
+     * @return Long
+     */
+    public Long getVirtualQty() {
+        return virtualQty;
+    }
 
-	public Long getLAST_UPDATE_USER_ID() {
-		return LAST_UPDATE_USER_ID;
-	}
+    /**
+     * 设置virtualQty
+     * @param virtualQty
+     */
+    public void setVirtualQty(Long virtualQty) {
+        this.virtualQty = virtualQty;
+    }
 
-	public void setLAST_UPDATE_USER_ID(Long lAST_UPDATE_USER_ID) {
-		LAST_UPDATE_USER_ID = lAST_UPDATE_USER_ID;
-	}
+    /**
+     * 获得physicQty
+     * @return Long
+     */
+    public Long getPhysicQty() {
+        return physicQty;
+    }
 
-	public Date getCREATE_DTME() {
-		return CREATE_DTME;
-	}
+    /**
+     * 设置physicQty
+     * @param physicQty
+     */
+    public void setPhysicQty(Long physicQty) {
+        this.physicQty = physicQty;
+    }
 
-	public void setCREATE_DTME(Date cREATE_DTME) {
-		CREATE_DTME = cREATE_DTME;
-	}
+    /**
+     * 获得tenantNumId
+     * @return Long
+     */
+    public Long getTenantNumId() {
+        return tenantNumId;
+    }
 
-	public Date getLAST_UPDTME() {
-		return LAST_UPDTME;
-	}
+    /**
+     * 设置tenantNumId
+     * @param tenantNumId
+     */
+    public void setTenantNumId(Long tenantNumId) {
+        this.tenantNumId = tenantNumId;
+    }
 
-	public void setLAST_UPDTME(Date lAST_UPDTME) {
-		LAST_UPDTME = lAST_UPDTME;
-	}
+    /**
+     * 获得dataSign
+     * @return Long
+     */
+    public Long getDataSign() {
+        return dataSign;
+    }
 
-	public Long getCARRY_SIGN() {
-		return CARRY_SIGN;
-	}
-
-	public void setCARRY_SIGN(Long cARRY_SIGN) {
-		CARRY_SIGN = cARRY_SIGN;
-	}
-
-	public Long getDATA_SIGN() {
-		return DATA_SIGN;
-	}
-
-	public void setDATA_SIGN(Long dATA_SIGN) {
-		DATA_SIGN = dATA_SIGN;
-	}
+    /**
+     * 设置dataSign
+     * @param dataSign
+     */
+    public void setDataSign(Long dataSign) {
+        this.dataSign = dataSign;
+    }
 
 }
