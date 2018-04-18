@@ -3,7 +3,8 @@ package com.ykcloud.soa.erp.api.so.response;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.scm.model.LackInventoryProduct;
+import com.ykcloud.soa.erp.api.so.model.LackInventoryProduct;
+
 
 /**
  * 店间调拨营运中心确认出参
