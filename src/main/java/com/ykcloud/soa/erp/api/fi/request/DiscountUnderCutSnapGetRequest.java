@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.wm.request;
+package com.ykcloud.soa.erp.api.fi.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
@@ -10,7 +10,7 @@ import java.util.Date;
  * @Author: ALi
  * @Date: 2018/4/17 20:32
  */
-public class DiscountUndercutSnapGetRequest extends AbstractRequest {
+public class DiscountUnderCutSnapGetRequest extends AbstractRequest {
     private static final long serialVersionUID = 1L;
     @NotNull(message = "供应商信息不能为空！")
     private Long supplyUnitNumId;
