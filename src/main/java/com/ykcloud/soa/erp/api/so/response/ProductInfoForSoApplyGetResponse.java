@@ -2,7 +2,7 @@ package com.ykcloud.soa.erp.api.so.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 //店内调拨、行政领料商品查询的出参
-public class ProductInfoForSoApplyShopTransferAndMaterialIssueGetResponse extends MessagePack {
+public class ProductInfoForSoApplyGetResponse extends MessagePack {
 
 		private Long itemNumId;  //商品编号
 		private String itemName;  //商品名称
