@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.wm.response;
+package com.ykcloud.soa.erp.api.fi.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
@@ -7,7 +7,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @Author: ALi
  * @Date: 2018/4/17 19:43
  */
-public class DiscountUndercutSnapGetResponse extends MessagePack {
+public class DiscountUnderCutSnapGetResponse extends MessagePack {
     private static final long serialVersionUID = -420261746747848058L;
     private Double undercutSnap1;
     private Double undercutSnap2;

@@ -1,6 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import java.util.List;
  * @Author: ALi
  * @Date: 2018/4/13 20:28
  */
-public class SellDailyBySeriesGetRequest extends AbstractUserSessionRequest {
+public class SellDailyBySeriesGetRequest extends AbstractRequest {
     private static final long serialVersionUID = -2565804606566389459L;
    private List<String> servies;
 

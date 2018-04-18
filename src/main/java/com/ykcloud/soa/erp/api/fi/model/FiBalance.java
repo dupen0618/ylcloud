@@ -7,7 +7,7 @@ import java.util.Date;
  * @author ALi
  * @Date 2018年4月17日 下午5:20:28
  */
-public class WmSellDaily implements Serializable {
+public class FiBalance implements Serializable {
 
     private static final long serialVersionUID = 1L;
     /**
