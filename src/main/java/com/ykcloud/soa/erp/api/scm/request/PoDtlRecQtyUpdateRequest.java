@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.scm.model.PoDtlRecQtyAndSeries;
 
 /**
@@ -11,7 +12,7 @@ import com.ykcloud.soa.erp.api.scm.model.PoDtlRecQtyAndSeries;
 @author hank.zhu
 @date 2018年4月3日 下午2:51:48 新建
 **/
-public class PoDtlRecQtyUpdateRequest extends AbstractRequest {
+public class PoDtlRecQtyUpdateRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = -8656263074440464318L;
 	private Long subUnitNumId;//门店编号
 	private String poNumId;//采购单号
