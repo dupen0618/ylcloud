@@ -10,6 +10,7 @@ import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByOperationCenterAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByReceiverConfirmRequest;
+import com.ykcloud.soa.erp.api.so.request.ShopTransferRejectAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.SoReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.response.LastSalesDateGetResponse;
@@ -22,6 +23,7 @@ import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByOperationCenterAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByReceiverConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.ShopTransferRejectAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.SoApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
 
@@ -32,6 +34,15 @@ import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
  * @version <b>1.0.0</b>
  */
 public interface SoApplyService {
+	
+	/**
+	 * 店间调拨驳回
+	 * @author tz.x
+	 * @date 2018年4月18日下午2:11:37
+	 * @param 
+	 * @return
+	 */
+	public ShopTransferRejectAuditResponse rejectShopTransferAudit(ShopTransferRejectAuditRequest request);
 	
 	/**
 	 * 店间调拨营运中心确认
