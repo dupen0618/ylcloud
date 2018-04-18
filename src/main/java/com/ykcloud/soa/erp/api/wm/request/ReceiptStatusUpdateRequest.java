@@ -12,6 +12,8 @@ public class ReceiptStatusUpdateRequest extends AbstractUserSessionRequest  {
 	
 	@NotNull(message = "行号不能为空！")
 	private List<String> series;	
+	
+	private Long flagStatus;
 
 	public List<String> getSeries() {
 		return series;
@@ -20,4 +22,14 @@ public class ReceiptStatusUpdateRequest extends AbstractUserSessionRequest  {
 	public void setSeries(List<String> series) {
 		this.series = series;
 	}
+
+	public Long getFlagStatus() {
+		return flagStatus;
+	}
+
+	public void setFlagStatus(Long flagStatus) {
+		this.flagStatus = flagStatus;
+	}
+	
+	
 }

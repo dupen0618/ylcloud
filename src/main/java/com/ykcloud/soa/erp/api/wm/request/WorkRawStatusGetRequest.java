@@ -11,7 +11,10 @@ public class WorkRawStatusGetRequest extends AbstractSessionRequest {
 	private static final long serialVersionUID = 3613814236336029304L;
 
 	@NotNull(message = "行号不能为空！")
-	private List<String> series;	
+	private List<String> series;
+	
+	@NotNull(message = "状态不能为空！")
+	private Long flagStatus;
 
 	public List<String> getSeries() {
 		return series;
@@ -20,4 +23,14 @@ public class WorkRawStatusGetRequest extends AbstractSessionRequest {
 	public void setSeries(List<String> series) {
 		this.series = series;
 	}
+
+	public Long getFlagStatus() {
+		return flagStatus;
+	}
+
+	public void setFlagStatus(Long flagStatus) {
+		this.flagStatus = flagStatus;
+	}
+	
+	
 }

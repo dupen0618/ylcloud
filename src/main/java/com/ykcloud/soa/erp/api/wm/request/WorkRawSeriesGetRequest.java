@@ -8,7 +8,7 @@ public class WorkRawSeriesGetRequest extends AbstractRequest {
 
 	 private  String batchSeries;
 	    private  Long itemUumId;
-	    private String workNumId;
+	    private String reservedNo;
 	  
 	    public String getBatchSeries() {
 			return batchSeries;
@@ -26,13 +26,15 @@ public class WorkRawSeriesGetRequest extends AbstractRequest {
 	        this.itemUumId = itemUumId;
 	    }
 
-		public String getWorkNumId() {
-			return workNumId;
+		public String getReservedNo() {
+			return reservedNo;
 		}
 
-		public void setWorkNumId(String workNumId) {
-			this.workNumId = workNumId;
+		public void setReservedNo(String reservedNo) {
+			this.reservedNo = reservedNo;
 		}
+
+		
 
 	
 
