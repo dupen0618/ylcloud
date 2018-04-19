@@ -1,28 +1,22 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
 
-
-import java.util.Date;
-import java.util.Map;
-
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderByBuyerAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderByFinanceAutoAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderByFinanceHandAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderGenerateRequest;
-import com.ykcloud.soa.erp.api.scm.request.DistributionApprovalReturnOrderByBuyerAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.QtyForReturnOrderCheckRequest;
+import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderActualQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderAfterGeneateReturnSoUpdateRequest;
-import com.ykcloud.soa.erp.api.scm.request.SupplyApprovalReturnOrderByBuyerAuditRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByBuyerAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByFinanceAutoAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByFinanceHandAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.request.ReturnProductGetRequest;
-import com.ykcloud.soa.erp.api.scm.response.DistributionApprovalReturnOrderByBuyerAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.QtyForReturnOrderCheckResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderAfterGeneateReturnSoUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnProductGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.SupplyApprovalReturnOrderByBuyerAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderActualQtyUpdateResponse;
 
 /**
  * @author fred.zhao
@@ -72,4 +66,16 @@ public interface ScmReturnService {
     * @Date: 2018/4/12
     */
     public QtyForReturnOrderCheckResponse checkQtyForReturnOrder(QtyForReturnOrderCheckRequest request);
+    
+    
+    /**
+     * 更新退货审批单单身实退数量
+     * @author shirong.chen
+     * @date 2018年4月10日下午7:07:01
+     * @param
+     * @return
+     * 
+     **/
+    public ReturnApprovalOrderActualQtyUpdateResponse updateReturnApprovalOrderActualQty(
+    		ReturnApprovalOrderActualQtyUpdateRequest request);
 }
