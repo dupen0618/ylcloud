@@ -21,7 +21,7 @@ public class UsableInventoryByReservedNoGetRequest extends AbstractRequest{
 	@NotNull(message = "入账类型不能为空！")
     String accountName;
 
-    @NotNull(message = "供应商编号不能为空！")
+    @NotNull(message = "门店编号不能为空！")
     Long subUnitNumId;
 
     public String getReservedNo() {
