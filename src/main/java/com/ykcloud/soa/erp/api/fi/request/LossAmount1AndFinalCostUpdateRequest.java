@@ -22,7 +22,7 @@ public class LossAmount1AndFinalCostUpdateRequest extends AbstractRequest {
 	@NotNull(message = "损耗类型不能为空！")
 	private String lossType;
 
-	public static interface lossType {
+	public static interface lossTypeOption {
 		public String loss = "0";// 报损
 		public String overFlow = "1";// 报溢
 	}
