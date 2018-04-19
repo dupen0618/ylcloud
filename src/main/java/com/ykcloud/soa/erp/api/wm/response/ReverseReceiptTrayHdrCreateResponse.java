@@ -7,7 +7,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 @author hank.zhu
 @date 2018年4月19日 下午4:23:01 新建
 **/
-public class ReverseReceiptTrayHdrCreatResponse extends MessagePack {
+public class ReverseReceiptTrayHdrCreateResponse extends MessagePack {
 	private static final long serialVersionUID = -3472757841303125392L;
 	private String traySerlno;//托盘号
 	private String traySerlnoLable;//托盘实物标签

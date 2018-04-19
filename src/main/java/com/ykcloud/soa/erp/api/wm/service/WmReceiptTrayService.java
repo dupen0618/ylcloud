@@ -3,12 +3,12 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayHdrFinishRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptTrayHdrCreatRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptTrayHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.TraySerlnoLableUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayHdrFinishResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptTrayHdrCreatResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptTrayHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.TraySerlnoLableUpdateResponse;
 
 public interface WmReceiptTrayService {
@@ -52,5 +52,5 @@ public interface WmReceiptTrayService {
 	 *@param request{subUnitNumId,reservedNo,traySerlnoLabel,userNumId}
 	 *@return response{code,message,traySerlno,traySerlnoLable}
 	 */
-	public ReverseReceiptTrayHdrCreatResponse creatReverseReceiptTrayHdr(ReverseReceiptTrayHdrCreatRequest request);
+	public ReverseReceiptTrayHdrCreateResponse createReverseReceiptTrayHdr(ReverseReceiptTrayHdrCreateRequest request);
 }
