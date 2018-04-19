@@ -7,11 +7,11 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 
 /**
- * @Description: 普通盘点入账消息处理的入参
+ * @Description: 生产盘点入账消息处理的入参
  * @author: henry.wang
- * @date: 2018/4/17 22:34
+ * @date: 2018/4/19 13:33
  **/
-public class StockAdjustAccountProcessRequest extends AbstractUserSessionRequest {
+public class AccountForProduceStockProcessRequest extends AbstractUserSessionRequest {
 
     private static final long serialVersionUID = -3101956261800131597L;
 
