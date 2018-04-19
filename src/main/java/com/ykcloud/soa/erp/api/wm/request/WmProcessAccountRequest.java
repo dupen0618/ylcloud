@@ -14,10 +14,13 @@ public class WmProcessAccountRequest extends AbstractUserSessionRequest {
 
 	@NotNull(message = "订单编号不能为空！")
 	private String reservedNo;
+	
 	@NotNull(message = "业务类型编号不能为空！")
 	private String billTypeNumId;
-	@NotNull(message = "供应商不能为空！")
-	private Long subUntiNumId;
+	
+	@NotNull(message = "门店编号不能为空！")
+	private Long subUnitNumId;
+	
 	private Long typeNumId;
 
 	@NotNull(message = "入账类型不能为空！")
@@ -55,11 +58,11 @@ public class WmProcessAccountRequest extends AbstractUserSessionRequest {
 		this.accountName = accountName;
 	}
 
-	public Long getSubUntiNumId() {
-		return subUntiNumId;
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
 	}
 
-	public void setSubUntiNumId(Long subUntiNumId) {
-		this.subUntiNumId = subUntiNumId;
+	public void setSubUnitNumId(Long subUntiNumId) {
+		this.subUnitNumId = subUntiNumId;
 	}
 }
