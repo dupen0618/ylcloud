@@ -3,11 +3,11 @@ package com.ykcloud.soa.erp.api.wm.response;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 /**
- * @Description: 普通盘点入账消息处理的出参
+ * @Description: 生产盘点入账消息处理的出参
  * @author: henry.wang
- * @date: 2018/4/17 22:37
+ * @date: 2018/4/19 13:34
  **/
-public class StockAdjustAccountProcessResponse extends MessagePack {
+public class AccountForProduceStockProcessResponse extends MessagePack {
 
     private static final long serialVersionUID = -8716207623324225827L;
 }
