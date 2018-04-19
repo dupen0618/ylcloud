@@ -18,6 +18,7 @@ public class WorkLossCreateRequest extends AbstractRequest {
 
 	@NotNull(message = "损耗金额不能为空")
 	private Double losscost;
+	private Long typeNumId;
 
 	public String getWorkNumId() {
 		return workNumId;
@@ -47,4 +48,11 @@ public class WorkLossCreateRequest extends AbstractRequest {
 		return serialVersionUID;
 	}
 
+	public Long getTypeNumId() {
+		return typeNumId;
+	}
+
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
+	}
 }
