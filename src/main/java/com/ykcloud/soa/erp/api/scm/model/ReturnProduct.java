@@ -64,15 +64,15 @@ public class ReturnProduct implements Serializable {
 	private String conversionStyleDesc; // 件装规格
 
 	private Double stockQty; // 库存数
-	
-	private String itemid;   
 
-	public String getItemId() {
+	private String itemid;
+
+	public String getItemid() {
 		return itemid;
 	}
 
-	public void setItemId(String itemId) {
-		this.itemid = itemId;
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
 	}
 
 	public Long getItemNumId() {
