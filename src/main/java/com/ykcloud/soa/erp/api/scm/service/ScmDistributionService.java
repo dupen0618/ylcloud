@@ -4,6 +4,7 @@ package com.ykcloud.soa.erp.api.scm.service;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlAndApplyDtlForGenerateDistributionUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalHdrForGenerateDistributionSoGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderActualQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnStorageAndProductForGenerateReturnSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalStatusNumIdAndSoNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.DistributionApprovalOrderByBuyerAuditRequest;
@@ -14,6 +15,7 @@ import com.ykcloud.soa.erp.api.scm.request.QtyForSoApplyCheckRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlAndApplyDtlForGenerateDistributionUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalHdrForGenerateDistributionSoGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderActualQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalStatusNumIdAndSoNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.DistributionApprovalOrderByBuyerAuditResponse;
@@ -24,6 +26,15 @@ import com.ykcloud.soa.erp.api.scm.response.QtyForSoApplyCheckResponse;
 
 
 public interface ScmDistributionService {
+	
+	/**
+	 * 订单发货后回写配送审批单和配送申请单发货数量(配送)
+	 * @author tz.x
+	 * @date 2018年4月19日上午9:32:42
+	 * @param 
+	 * @return
+	 */
+	public ApprovalOrderActualQtyUpdateResponse updateApprovalOrderActualQty(ApprovalOrderActualQtyUpdateRequest request);
 	
 	/**
 	 * 回写配送申请单身和补货单
