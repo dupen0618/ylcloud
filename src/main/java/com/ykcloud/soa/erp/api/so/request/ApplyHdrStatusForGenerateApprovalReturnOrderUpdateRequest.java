@@ -32,8 +32,6 @@ public class ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest extends A
     @NotNull(message = "申请单身序号不能为空！")
     private List<ApplySeries> applySeriesList;
 
-    @NotNull(message = "退货审批单号不能为空！")
-    private String approvalNumId;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -67,11 +65,5 @@ public class ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest extends A
         this.applySeriesList = applySeriesList;
     }
 
-    public String getApprovalNumId() {
-        return approvalNumId;
-    }
 
-    public void setApprovalNumId(String approvalNumId) {
-        this.approvalNumId = approvalNumId;
-    }
 }
