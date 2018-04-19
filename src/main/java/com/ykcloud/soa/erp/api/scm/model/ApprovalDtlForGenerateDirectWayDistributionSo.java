@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class ApprovalDtlForGenerateDirectWayDistributionSo implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-
+	
 	/**
 	 * 行号
 	 */
