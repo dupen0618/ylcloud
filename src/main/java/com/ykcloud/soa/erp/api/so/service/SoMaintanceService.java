@@ -6,6 +6,7 @@ import com.ykcloud.soa.erp.api.so.request.CheckSoShipQtyAndPackingQtyRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayDistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoConfirmTypeRequest;
+import com.ykcloud.soa.erp.api.so.request.SoDtlForUpdateActualQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoPackingUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoShipQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateRequest;
@@ -17,6 +18,7 @@ import com.ykcloud.soa.erp.api.so.response.CheckSoShipQtyAndPackingQtyResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayDistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoConfirmTypeResponse;
+import com.ykcloud.soa.erp.api.so.response.SoDtlForUpdateActualQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoPackingUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoShipQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateResponse;
@@ -24,6 +26,15 @@ import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateSoOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SoWlbcAndSoBingingResponse;
 
 public interface SoMaintanceService {
+	
+	/**
+	 * 订单发货后回写审批单和申请单发货数量之前通过so单号查询要回写的审批单
+	 * @author tz.x
+	 * @date 2018年4月19日上午9:56:59
+	 * @param 
+	 * @return
+	 */
+	public SoDtlForUpdateActualQtyGetResponse getSoDtlForUpdateActualQty(SoDtlForUpdateActualQtyGetRequest request);
 	
 	/**
 	 * 退供应商退总仓产生so

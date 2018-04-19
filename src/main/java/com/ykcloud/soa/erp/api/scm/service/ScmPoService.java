@@ -9,6 +9,7 @@ import com.ykcloud.soa.erp.api.scm.request.PoFinishRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoForGenerateReceiptGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoGenerateRequest;
+import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderActualQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoStatusNumIdForConfirmPoBySupplyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderByBuyerAuditResponse;
@@ -18,9 +19,19 @@ import com.ykcloud.soa.erp.api.scm.response.PoFinishResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoForGenerateReceiptGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoGenerateResponse;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderActualQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoStatusNumIdForConfirmPoBySupplyUpdateResponse;
 
 public interface ScmPoService {
+	
+	/**
+	 * 订单发货后回写审批单和申请单发货数量
+	 * @author tz.x
+	 * @date 2018年4月19日上午9:32:42
+	 * @param 
+	 * @return
+	 */
+	public ApprovalOrderActualQtyUpdateResponse updateApprovalOrderActualQty(ApprovalOrderActualQtyUpdateRequest request);
 	
 	/**
 	 * 更新采购单状态为供应商已确认（直送供应商确认生成验收单后或直通供应商确认生成验证单及分拨单后）
