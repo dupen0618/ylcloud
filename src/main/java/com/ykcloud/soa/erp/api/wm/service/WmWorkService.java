@@ -28,35 +28,39 @@ public interface WmWorkService {
 
 	//拆解加工单入账
 	public OpenWorkConfirmResponse confirmOpenWork(OpenWorkConfirmRequest request);
-	
+
 	/**
-	 * 
-	 * @Title: confirmWorkChange  
-	 * @Description: 转码加工单入账
 	 * @param @return
 	 * @return WorkChangeConfirmResponse
+	 * @Title: confirmWorkChange
+	 * @Description: 转码加工单入账
 	 */
 	public WorkChangeConfirmResponse confirmWorkChange(WorkChangeConfirmRequest request);
-	
+
 	/**
-	 * 
-	 * @Title: confirmAssembleWork  
-	 * @Description: 组装加工单入账
-	 * @param @param request
+	 * @param @param  request
 	 * @param @return
 	 * @return WorkConfirmAssembleResponse
+	 * @Title: confirmAssembleWork
+	 * @Description: 组装加工单入账
 	 */
 	public WorkConfirmAssembleResponse confirmAssembleWork(WorkConfirmAssembleRequest request);
 
 	//委外加工单入账
 	public OutOpenWorkConfirmResponse confirmOutOpenWork(OutOpenWorkConfirmRequest request);
-	
+
 	//生成报损单（内部方法）
 	public WorkLossCreateResponse createWorkLossByWorkNumID(WorkLossCreateRequest request);
 
 	//查询BOM加工的成品
 	public WorkProductAndBomIDGetResponse getWorkProductAndBomID(WorkProductAndBomIDGetRequest request);
+
 	
 	//损溢单入账
 	public LossWorkconfirmResponse confirmqueWorkLoss(LossWorkconfirmRequest request);
+
+
+	//溢出转码入账
+	public WorkLossChangeConfirmResponse confirmWorkLossChange(WorkLossChangeConfirmRequest request);
+
 }

@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
-public class ZMProduct {
+import java.io.Serializable;
+
+public class ZMProduct implements Serializable {
     private Long itemNumId;// 商品主键
     private String itemName;// 商品名称
     private String simItemName;// 商品中文简称
