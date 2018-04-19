@@ -7,6 +7,7 @@ import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptProduceDateUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseShipHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopHaveInventoryMaxBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
@@ -19,6 +20,7 @@ import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptProduceDateUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseShipHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopHaveInventoryMaxBatchPriceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopLastBatchPriceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse;
@@ -88,8 +90,17 @@ public interface WmReceiptService {
 	 * @Description:收货完成收尾:1.更新采购履行数量,更新采购单完成;2.产生内部差异单3.更新验收单完成
 	 * @Auther hank
 	 * @Date 2018-4-16
-	 * @param subUnitNumId,reservedNo,userNumId,internalSign
-	 * @return void
+	 * @param request{subUnitNumId,reservedNo,userNumId,internalSign}
+	 * @return response{code,message}
 	 */	
 	public UpdateReceiptAccountFinishResponse finishUpdateReceiptAccount(UpdateReceiptAccountFinishRequest request);
+	
+	/**
+	 *@Description: 6位模糊查询负出库单 
+	 *@Auther hank
+	 *@Date 2018-4-19
+	 *@param request{subUnitNumId,reservedNo}
+	 *@return response{code,message,reservedNo,traySerlno,traySerlnoLable}
+	 */
+	public ReverseShipHdrGetResponse getReverseShipHdr(ReverseShipHdrGetRequest request);
 }
