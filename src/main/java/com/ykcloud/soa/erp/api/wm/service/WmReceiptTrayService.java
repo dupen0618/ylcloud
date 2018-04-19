@@ -3,10 +3,12 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayHdrFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptTrayHdrCreatRequest;
 import com.ykcloud.soa.erp.api.wm.request.TraySerlnoLableUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayHdrFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptTrayHdrCreatResponse;
 import com.ykcloud.soa.erp.api.wm.response.TraySerlnoLableUpdateResponse;
 
 public interface WmReceiptTrayService {
@@ -41,5 +43,14 @@ public interface WmReceiptTrayService {
 	 *@param request{subUnitNumId,reservedNo,traySerlno,traySerlnoLable,userNumId}
 	 *@return response{code,message}
 	 */
-	public TraySerlnoLableUpdateResponse updateTraySerlnoLable(TraySerlnoLableUpdateRequest request); 
+	public TraySerlnoLableUpdateResponse updateTraySerlnoLable(TraySerlnoLableUpdateRequest request);
+	
+	/**
+	 *@Description: 退库收货创建托盘
+	 *@Auther hank
+	 *@Date 2018-4-12
+	 *@param request{subUnitNumId,reservedNo,traySerlnoLabel,userNumId}
+	 *@return response{code,message,traySerlno,traySerlnoLable}
+	 */
+	public ReverseReceiptTrayHdrCreatResponse creatReverseReceiptTrayHdr(ReverseReceiptTrayHdrCreatRequest request);
 }
