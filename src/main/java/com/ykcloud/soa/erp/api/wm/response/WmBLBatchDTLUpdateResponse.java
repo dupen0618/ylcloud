@@ -10,4 +10,13 @@ public class WmBLBatchDTLUpdateResponse extends MessagePack {
 
 	private static final long serialVersionUID = 1L;
 
+	private Exception e;
+
+	public Exception getE() {
+		return e;
+	}
+
+	public void setE(Exception e) {
+		this.e = e;
+	}
 }
