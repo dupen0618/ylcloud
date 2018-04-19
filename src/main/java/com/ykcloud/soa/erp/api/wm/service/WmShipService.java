@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.request.ReceiptBudCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipBusinessAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipForMaterialIssueBackGenerateRequest;
@@ -18,6 +19,7 @@ import com.ykcloud.soa.erp.api.wm.request.WmSoHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmfinishPackingRequest;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptBudCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipBusinessAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipForMaterialIssueBackGenerateResponse;
@@ -77,10 +79,10 @@ public interface WmShipService {
 		//创建波次单头
 		public WmWlbcHdrCreateResponse createWlbc(WmWlbcHdrCreateRequest request);
 		
-		//获取交接单号
+		//获取交接单号,并扫入该装箱
 		public WmShipGetResponse createShipByContainer(WmShipGetRequest request);
 		
-		//扫装箱单产生交接单
+		//扫装箱单
 		public WmScanShipContainerHdrResponse scanShipContainer(WmScanShipContainerRequest request);
 		
 		//出库完成
@@ -99,6 +101,9 @@ public interface WmShipService {
 		//发送财务处理消息TCC
 		public ShipFiAccountProcessResponse processShipFiAccount(ShipFiAccountProcessRequest request);
 		
-		
+		//so一键出库
 		public SoShipFinishResponse finishSoShip(SoShipFinishRequest request);
+		
+		//产生验收单
+		public ReceiptBudCreateResponse createReceiptBud(ReceiptBudCreateRequest request);
 }
