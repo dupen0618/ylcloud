@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.ReceiptBudCreateRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptDtlUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipBusinessAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipForMaterialIssueBackGenerateRequest;
@@ -20,6 +22,8 @@ import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmfinishPackingRequest;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptBudCreateResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptDtlUpdateReponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipBusinessAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipForMaterialIssueBackGenerateResponse;
@@ -106,4 +110,22 @@ public interface WmShipService {
 		
 		//产生验收单
 		public ReceiptBudCreateResponse createReceiptBud(ReceiptBudCreateRequest request);
+		/**
+		 * 
+		 * @description  反配、行政领料退库收货更新数量
+		 * @author gaoyun.shen
+		 * @date: 2018年4月18日 下午4:01:20
+		 * @param 
+		 * @return
+		 */
+		public ReverseReceiptDtlUpdateReponse updateReverseReceiptDtl(ReverseReceiptDtlUpdateRequest request);
+		/**
+		 * 
+		 * @description 反配、行政领料退库收货完成
+		 * @author gaoyun.shen
+		 * @date: 2018年4月19日 下午5:50:18
+		 * @param 
+		 * @return
+		 */
+		public ReverseReceiptFinishResponse finishReverseShip(ReverseReceiptFinishRequest request);
 }
