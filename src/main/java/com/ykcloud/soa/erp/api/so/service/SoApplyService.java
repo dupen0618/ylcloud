@@ -1,6 +1,5 @@
 package com.ykcloud.soa.erp.api.so.service;
 
-import com.ykcloud.soa.erp.api.so.request.LastSalesDateGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplySubcontractSplitGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyTransferBetweenShopGetRequest;
@@ -12,8 +11,8 @@ import com.ykcloud.soa.erp.api.so.request.ShopTransferByOperationCenterAuditRequ
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByReceiverConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferRejectAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyByAuthorConfirmRequest;
+import com.ykcloud.soa.erp.api.so.request.SoOriginReservedNoRequest;
 import com.ykcloud.soa.erp.api.so.request.SoReturnApplyAuditRequest;
-import com.ykcloud.soa.erp.api.so.response.LastSalesDateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplySubcontractSplitGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenShopGetResponse;
@@ -25,6 +24,7 @@ import com.ykcloud.soa.erp.api.so.response.ShopTransferByOperationCenterAuditRes
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByReceiverConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferRejectAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.SoApplyByAuthorConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.SoOriginReservedNoResponse;
 import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
 
 /**
@@ -127,4 +127,13 @@ public interface SoApplyService {
 
 	//制单确认（仓间调拨、委外分解领用、政领料领用）
 	public SoApplyByAuthorConfirmResponse confirmSoApplyByAuthor(SoApplyByAuthorConfirmRequest request);
+	/**
+	 * 
+	 * @description
+	 * @author gaoyun.shen
+	 * @date: 2018年4月19日 下午3:48:53
+	 * @param   根据申请单号获取原出库单号
+	 * @return 
+	 */
+	public SoOriginReservedNoResponse getOriginReservedNoByApplyNumId(SoOriginReservedNoRequest request);
 }

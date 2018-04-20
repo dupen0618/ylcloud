@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.request.AccountForProduceStockProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ContainerFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ContainerProductDetailGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ContainerRefreshRequest;
@@ -19,6 +20,7 @@ import com.ykcloud.soa.erp.api.wm.request.StockCheckSecondFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
+import com.ykcloud.soa.erp.api.wm.response.AccountForProduceStockProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerProductDetailGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerRefreshResponse;
@@ -202,11 +204,20 @@ public interface WmStockCheckService {
         StockAdjustAccountRequest request);
 
     /**
-     * 消费消息调用入账服务
+     * 普通盘点入账消息处理
      *
      * @param request
      * @return
      */
     StockAdjustAccountProcessResponse processStockAdjustAccount(
         StockAdjustAccountProcessRequest request);
+
+    /**
+     * 生产盘点入账消息处理
+     *
+     * @param request
+     * @return
+     */
+    AccountForProduceStockProcessResponse processAccountForProduceStock(
+        AccountForProduceStockProcessRequest request);
 }

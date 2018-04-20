@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
-public class BProduct {
+import java.io.Serializable;
+
+public class BProduct implements Serializable {
 	private Long itemNumId;// 商品主键
 	private String itemName;// 商品名称
 	private String simItemName;// 商品中文简称
@@ -30,6 +32,7 @@ public class BProduct {
 	private Long typeNumId;// 商品类型 1:正常品 2:母商品 3:子商品 4:销售码 5:虚拟商品
 	private Long freshType;// 生鲜属性 0=正常商品 1=普通生鲜 2=原材料 3=转化成品 4=分割成品 5=组合成品 6=加工成品 7=生鲜耗材
 	private Double avalQty;
+	private Double costPrice;
 	public Long getItemNumId() {
 		return itemNumId;
 	}
@@ -204,6 +207,12 @@ public class BProduct {
 	public void setAvalQty(Double avalQty) {
 		this.avalQty = avalQty;
 	}
-	
-	
+
+	public Double getCostPrice() {
+		return costPrice;
+	}
+
+	public void setCostPrice(Double costPrice) {
+		this.costPrice = costPrice;
+	}
 }
