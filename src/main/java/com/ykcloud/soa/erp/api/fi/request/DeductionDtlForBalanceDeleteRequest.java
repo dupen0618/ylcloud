@@ -16,6 +16,7 @@ public class DeductionDtlForBalanceDeleteRequest extends AbstractUserSessionRequ
 
 	@NotNull(message = "行号不能为空！")
 	private String series;
+
 	public String getSeries() {
 		return series;
 	}
