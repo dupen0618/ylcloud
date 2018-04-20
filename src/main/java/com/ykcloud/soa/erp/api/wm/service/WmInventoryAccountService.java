@@ -18,5 +18,18 @@ public interface WmInventoryAccountService {
 	 *@return response{}
 	 */
 	public ReceiptInventoryAccountUpdateResponse updateReceiptInventoryAccount(ReceiptInventoryAccountUpdateRequest request);
+	
+	/**
+	 * 
+	 * @description 
+	 * @author gaoyun.shen
+	 * @date: 2018年4月19日 下午6:01:30
+	 * @param 
+	 * @return
+	 */
+	public ReceiptInventoryAccountUpdateResponse updateReserveReceiptInventoryAccount(ReceiptInventoryAccountUpdateRequest request);
+	
+	
+	
 
 }
