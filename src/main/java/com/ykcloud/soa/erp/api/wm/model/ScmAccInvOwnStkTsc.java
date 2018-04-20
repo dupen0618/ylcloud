@@ -16,7 +16,7 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 	/** 租户ID */
 	private Long tenantNumId = 0L;
 	/** 交易单号 */
-	private Long reservedNo = 0L;
+	private String reservedNo = "0";
 	/** 物流中心主键 */
 	private Long stkNumId = 0L;
 	/** 事业部主键 */
@@ -81,11 +81,11 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 		this.series = series;
 	}
 
-	public Long getReservedNo() {
+	public String getReservedNo() {
 		return reservedNo;
 	}
 
-	public void setReservedNo(Long reservedNo) {
+	public void setReservedNo(String reservedNo) {
 		this.reservedNo = reservedNo;
 	}
 
