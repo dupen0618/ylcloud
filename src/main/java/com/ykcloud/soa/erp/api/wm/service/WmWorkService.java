@@ -2,14 +2,6 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.*;
-import com.ykcloud.soa.erp.api.wm.request.LossWorkconfirmRequest;
-import com.ykcloud.soa.erp.api.wm.request.OpenWorkConfirmRequest;
-import com.ykcloud.soa.erp.api.wm.request.OutOpenWorkConfirmRequest;
-import com.ykcloud.soa.erp.api.wm.request.ProductInfoAndStockGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.WorkChangeConfirmRequest;
-import com.ykcloud.soa.erp.api.wm.request.WorkConfirmAssembleRequest;
-import com.ykcloud.soa.erp.api.wm.request.WorkLossCreateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ProductChangeRequest;
 import com.ykcloud.soa.erp.api.wm.response.LossWorkconfirmResponse;
 import com.ykcloud.soa.erp.api.wm.response.OpenWorkConfirmResponse;
 import com.ykcloud.soa.erp.api.wm.response.OutOpenWorkConfirmResponse;
