@@ -55,6 +55,4 @@ public interface WmWorkService {
 	//溢出转码入账
 	public WorkLossChangeConfirmResponse confirmWorkLossChange(WorkLossChangeConfirmRequest request);
 
-	int createBlWorkHdrByDailySettlement(DailySettlementRequest request);
-
 }
