@@ -1,8 +1,13 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.ReceiptBudCreateRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptBusinessAccountProcessRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptCreateByContainerRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptDtlUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptScanContainerRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptShipFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipBusinessAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipForMaterialIssueBackGenerateRequest;
@@ -22,8 +27,13 @@ import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmfinishPackingRequest;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptBudCreateResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptBusinessAccountProcessResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptCreateByContainerRespone;
 import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptDtlUpdateReponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptScanContainerResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptShipFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipBusinessAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipForMaterialIssueBackGenerateResponse;
@@ -128,4 +138,43 @@ public interface WmShipService {
 		 * @return
 		 */
 		public ReverseReceiptFinishResponse finishReverseShip(ReverseReceiptFinishRequest request);
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月20日
+		 * @description 出库反配产生验收单(通过反配托盘)
+		 */
+		public ReverseReceiptCreateByContainerRespone createReverseReceiptHdr(ReverseReceiptCreateByContainerRequest request);
+
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月20日
+		 * @description 装箱单关联验收单(将验收单号关联到containerHdr中的出库单号)
+		 */
+		public ReverseReceiptScanContainerResponse scanContainerForRecerseReceipt(ReverseReceiptScanContainerRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月20日
+		 * @description 反配出库确认
+		 */
+		public ReverseReceiptShipFinishResponse finishReverseReceipt(ReverseReceiptShipFinishRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月20日
+		 * @description 出库反配库存处理TCC服务
+		 */
+		public ReverseReceiptBusinessAccountProcessResponse reverseReceiptBusinessAccountProcess(ReverseReceiptBusinessAccountProcessRequest request);
+
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月20日
+		 * @description 出库反配财务账处理消息TCC
+		 */
+		public ReverseReceiptFiAccountProcessResponse reverseReceiptFiAccountProcess(ReverseReceiptFiAccountProcessRequest request);
 }
