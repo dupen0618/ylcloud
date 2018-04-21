@@ -1,8 +1,10 @@
 package com.ykcloud.soa.erp.api.so.service;
 
+import com.ykcloud.soa.erp.api.scm.response.QtyForSoApplyCheckResponse;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplySubcontractSplitGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyTransferBetweenShopGetRequest;
+import com.ykcloud.soa.erp.api.so.request.QtyForSoApplyCheckRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAfterGenerateReturnSoUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
@@ -136,4 +138,7 @@ public interface SoApplyService {
 	 * @return 
 	 */
 	public SoOriginReservedNoResponse getOriginReservedNoByApplyNumId(SoOriginReservedNoRequest request);
+	
+	//数量检查(店间调拨、仓间调拨、加工领料、行政领料)
+    public QtyForSoApplyCheckResponse checkQtyForSoApply(QtyForSoApplyCheckRequest request);
 }
