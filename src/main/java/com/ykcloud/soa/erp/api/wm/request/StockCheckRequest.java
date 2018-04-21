@@ -42,7 +42,7 @@ public class StockCheckRequest extends AbstractUserSessionRequest {
     @Pattern(regexp = "(-)?[1]", message = "扫入扫出标记只能为1或-1")
     private String inoutFlag;
 
-    private Double inQty;
+    private Double inQty = 1D;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
