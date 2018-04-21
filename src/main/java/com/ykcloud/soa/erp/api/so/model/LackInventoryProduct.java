@@ -19,6 +19,16 @@ public class LackInventoryProduct implements Serializable{
 		private Double stockQty; //库存数量
 		
 		private Double lackQty; //缺少数量
+		
+		private String itemid;  //商家编码
+
+		public String getItemid() {
+			return itemid;
+		}
+
+		public void setItemid(String itemid) {
+			this.itemid = itemid;
+		}
 
 		public Long getItemNumId() {
 			return itemNumId;
