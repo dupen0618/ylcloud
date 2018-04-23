@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.so.model;
 
-public class SdBlSoHdrAndSdBlSoDtl  {
+import java.io.Serializable;
+
+public class SdBlSoHdrAndSdBlSoDtl implements Serializable {
 
     private String series;
 
