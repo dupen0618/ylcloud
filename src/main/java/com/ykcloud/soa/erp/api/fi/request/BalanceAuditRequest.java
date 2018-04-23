@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.constraints.NotNull;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.ykcloud.soa.erp.api.fi.model.BalanceDtlAppoint;
 
 /**
  * @Description:付款审核 结算单审核
@@ -15,6 +16,8 @@ public class BalanceAuditRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "结算单号不能为空！")
 	private List<String> balanceNo;
 	
+	private List<BalanceDtlAppoint> balanceDtlAppoints;
+	
 	public List<String> getBalanceNo() {
 		return balanceNo;
 	}
@@ -23,6 +26,15 @@ public class BalanceAuditRequest extends AbstractUserSessionRequest {
 		this.balanceNo = balanceNo;
 	}
 
+	public List<BalanceDtlAppoint> getBalanceDtlAppoints() {
+		return balanceDtlAppoints;
+	}
+
+	public void setBalanceDtlAppoints(List<BalanceDtlAppoint> balanceDtlAppoints) {
+		this.balanceDtlAppoints = balanceDtlAppoints;
+	}
+
+	
 	
 	
 
