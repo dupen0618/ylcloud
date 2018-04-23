@@ -42,7 +42,7 @@ public interface ScmPoService {
 	 * @param 
 	 * @return
 	 */
-	public ApprovalOrderActualQtyUpdateResponse updateDistributionApprovalOrderActualQty(ApprovalOrderActualQtyUpdateRequest request);
+	public ApprovalOrderActualQtyUpdateResponse updateDirectWayDistributionApprovalOrderActualQty(ApprovalOrderActualQtyUpdateRequest request);
 	
 	/**
 	 * 更新采购单状态为供应商已确认（直送供应商确认生成验收单后或直通供应商确认生成验证单及分拨单后）
