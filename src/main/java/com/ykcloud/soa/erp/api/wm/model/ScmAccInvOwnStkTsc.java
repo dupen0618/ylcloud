@@ -65,15 +65,26 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 
 	private String billTypeNumId;
 
-	private Long pty_num_1;
 
-	private Long pty_num_2;
+	private Long PTY_NUM_1;
 
-	private Long pty_num_3;
+	private Long PTY_NUM_2;
 
-	private Long depart_num_id;
+	private Long PTY_NUM_3;
 
-	private Long storageDeptNumId;
+	private Long DEPART_NUM_ID;
+
+	private Long storagedeptnumid;
+
+	private Long SETTLEMENT_TYPE;
+
+	public Long getSETTLEMENT_TYPE() {
+		return SETTLEMENT_TYPE;
+	}
+
+	public void setSETTLEMENT_TYPE(Long SETTLEMENT_TYPE) {
+		this.SETTLEMENT_TYPE = SETTLEMENT_TYPE;
+	}
 
 	public static SimpleDateFormat getDateFormater() {
 		return dateFormater;
@@ -287,43 +298,44 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 		return serialVersionUID;
 	}
 
-	public Long getPty_num_1() {
-		return pty_num_1;
+
+	public Long getPTY_NUM_1() {
+		return PTY_NUM_1;
 	}
 
-	public void setPty_num_1(Long pty_num_1) {
-		this.pty_num_1 = pty_num_1;
+	public void setPTY_NUM_1(Long PTY_NUM_1) {
+		this.PTY_NUM_1 = PTY_NUM_1;
 	}
 
-	public Long getPty_num_2() {
-		return pty_num_2;
+	public Long getPTY_NUM_2() {
+		return PTY_NUM_2;
 	}
 
-	public void setPty_num_2(Long pty_num_2) {
-		this.pty_num_2 = pty_num_2;
+	public void setPTY_NUM_2(Long PTY_NUM_2) {
+		this.PTY_NUM_2 = PTY_NUM_2;
 	}
 
-	public Long getPty_num_3() {
-		return pty_num_3;
+	public Long getPTY_NUM_3() {
+		return PTY_NUM_3;
 	}
 
-	public void setPty_num_3(Long pty_num_3) {
-		this.pty_num_3 = pty_num_3;
+	public void setPTY_NUM_3(Long PTY_NUM_3) {
+		this.PTY_NUM_3 = PTY_NUM_3;
 	}
 
-	public Long getDepart_num_id() {
-		return depart_num_id;
+	public Long getDEPART_NUM_ID() {
+		return DEPART_NUM_ID;
 	}
 
-	public void setDepart_num_id(Long depart_num_id) {
-		this.depart_num_id = depart_num_id;
+	public void setDEPART_NUM_ID(Long DEPART_NUM_ID) {
+		this.DEPART_NUM_ID = DEPART_NUM_ID;
 	}
 
-	public Long getStorageDeptNumId() {
-		return storageDeptNumId;
+	public Long getStoragedeptnumid() {
+		return storagedeptnumid;
 	}
 
-	public void setStorageDeptNumId(Long storageDeptNumId) {
-		this.storageDeptNumId = storageDeptNumId;
+	public void setStoragedeptnumid(Long storagedeptnumid) {
+		this.storagedeptnumid = storagedeptnumid;
 	}
 }
