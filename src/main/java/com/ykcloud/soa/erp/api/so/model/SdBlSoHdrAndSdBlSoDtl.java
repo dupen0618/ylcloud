@@ -31,6 +31,9 @@ public class SdBlSoHdrAndSdBlSoDtl  {
     private Double lockQty;//锁库数量
 
     private Long userNumId;
+
+    private Long SETTLEMENT_TYPE;
+
     public String getSeries() {
         return series;
     }
@@ -148,6 +151,15 @@ public class SdBlSoHdrAndSdBlSoDtl  {
     }
 
     public void setUserNumId(Long userNumId) {
+
         this.userNumId = userNumId;
+    }
+
+    public Long getSETTLEMENT_TYPE() {
+        return SETTLEMENT_TYPE;
+    }
+
+    public void setSETTLEMENT_TYPE(Long SETTLEMENT_TYPE) {
+        this.SETTLEMENT_TYPE = SETTLEMENT_TYPE;
     }
 }
