@@ -27,8 +27,8 @@ public class ReceiptForGenerateDirectWayDistributionSoGetRequest extends Abstrac
 	@ApiField(description="1:直通供应商确认	2:实际收货后部分商品数量调整")
 	private Long generateType;
 
-	@ApiField(description="实际收货后部分商品数量调整的明细行号(不是到批次行号)")
-	private List<String> receiptDtlSeriesList;
+	/*@ApiField(description="实际收货后部分商品数量调整的明细行号(不是到批次行号)")
+	private List<String> receiptDtlSeriesList;*/
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -52,14 +52,6 @@ public class ReceiptForGenerateDirectWayDistributionSoGetRequest extends Abstrac
 
 	public void setGenerateType(Long generateType) {
 		this.generateType = generateType;
-	}
-
-	public List<String> getReceiptDtlSeriesList() {
-		return receiptDtlSeriesList;
-	}
-
-	public void setReceiptDtlSeriesList(List<String> receiptDtlSeriesList) {
-		this.receiptDtlSeriesList = receiptDtlSeriesList;
 	}
 
 	public String getReceiptNo() {

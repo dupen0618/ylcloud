@@ -2,14 +2,17 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * fakir
  * 2018/4/18
  */
 public class WorkLossChangeConfirmRequest extends AbstractRequest {
     private static final long serialVersionUID = 1L;
+    @NotNull(message = "加工单号不能为空")
     private String workNumId;
-    private Double changeCost;
+
     public String getWorkNumId() {
         return workNumId;
     }
@@ -18,11 +21,4 @@ public class WorkLossChangeConfirmRequest extends AbstractRequest {
         this.workNumId = workNumId;
     }
 
-    public Double getChangeCost() {
-        return changeCost;
-    }
-
-    public void setChangeCost(Double changeCost) {
-        this.changeCost = changeCost;
-    }
 }
