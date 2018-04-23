@@ -1,10 +1,12 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
+import java.io.Serializable;
+
 /**
  * fakir
  * 2018/4/17
  */
-public class ProductAndBom {
+public class ProductAndBom implements Serializable {
 
     private Long itemNumId;// 商品主键
     private String itemName;// 商品名称
