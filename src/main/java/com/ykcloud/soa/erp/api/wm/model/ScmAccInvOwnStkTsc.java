@@ -65,6 +65,16 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 
 	private String billTypeNumId;
 
+	private Long pty_num_1;
+
+	private Long pty_num_2;
+
+	private Long pty_num_3;
+
+	private Long depart_num_id;
+
+	private Long storageDeptNumId;
+
 	public static SimpleDateFormat getDateFormater() {
 		return dateFormater;
 	}
@@ -271,5 +281,49 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 
 	public void setDataSign(Long dataSign) {
 		this.dataSign = dataSign;
+	}
+
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public Long getPty_num_1() {
+		return pty_num_1;
+	}
+
+	public void setPty_num_1(Long pty_num_1) {
+		this.pty_num_1 = pty_num_1;
+	}
+
+	public Long getPty_num_2() {
+		return pty_num_2;
+	}
+
+	public void setPty_num_2(Long pty_num_2) {
+		this.pty_num_2 = pty_num_2;
+	}
+
+	public Long getPty_num_3() {
+		return pty_num_3;
+	}
+
+	public void setPty_num_3(Long pty_num_3) {
+		this.pty_num_3 = pty_num_3;
+	}
+
+	public Long getDepart_num_id() {
+		return depart_num_id;
+	}
+
+	public void setDepart_num_id(Long depart_num_id) {
+		this.depart_num_id = depart_num_id;
+	}
+
+	public Long getStorageDeptNumId() {
+		return storageDeptNumId;
+	}
+
+	public void setStorageDeptNumId(Long storageDeptNumId) {
+		this.storageDeptNumId = storageDeptNumId;
 	}
 }
