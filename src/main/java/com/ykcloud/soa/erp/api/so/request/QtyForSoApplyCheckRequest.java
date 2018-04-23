@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.scm.request;
+package com.ykcloud.soa.erp.api.so.request;
 
 import java.util.Date;
 

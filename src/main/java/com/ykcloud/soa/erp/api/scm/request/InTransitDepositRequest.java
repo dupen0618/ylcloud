@@ -1,11 +1,14 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
 import java.util.Date;
+import java.util.List;
+
 import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Range;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.ykcloud.soa.erp.api.scm.model.InTransitWriteoffBeforeDeposit;
 
 public class InTransitDepositRequest extends AbstractRequest {
 	private static final long serialVersionUID = 5118059696054727934L;
@@ -36,6 +39,8 @@ public class InTransitDepositRequest extends AbstractRequest {
 	@ApiField(description = "1:入账 2:销账")
 	@Range(min = 1L, max = 2L, message = "1:入账 2:销账")
 	private Long depositSign;
+	
+	private List<InTransitWriteoffBeforeDeposit> writeoffList;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -91,6 +96,14 @@ public class InTransitDepositRequest extends AbstractRequest {
 
 	public void setBillType(Long billType) {
 		this.billType = billType;
+	}
+
+	public List<InTransitWriteoffBeforeDeposit> getWriteoffList() {
+		return writeoffList;
+	}
+
+	public void setWriteoffList(List<InTransitWriteoffBeforeDeposit> writeoffList) {
+		this.writeoffList = writeoffList;
 	}
 	
 	

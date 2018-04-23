@@ -6,10 +6,12 @@ import com.ykcloud.soa.erp.api.so.request.DistributionOpenDistDeliveryQtyGetRequ
 import com.ykcloud.soa.erp.api.so.request.GroupSdApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSaleInfoByItemNumIdAndOrderDateGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OpenBranchDeliveryQtyGetRequest;
+import com.ykcloud.soa.erp.api.so.request.OrdSubUnitNumIdsForInTransitDepositGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopProductDailySellQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoBySoNumIdAndItemNumIdGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest;
+import com.ykcloud.soa.erp.api.so.request.SoDtlsForInTransitDepositGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoNumIdOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SoSettlementTypeGetRequest;
@@ -21,10 +23,12 @@ import com.ykcloud.soa.erp.api.so.response.DistributionOpenDistDeliveryQtyGetRes
 import com.ykcloud.soa.erp.api.so.response.GroupSdApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSaleInfoByItemNumIdAndOrderDateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OpenBranchDeliveryQtyGetResponse;
+import com.ykcloud.soa.erp.api.so.response.OrdSubUnitNumIdsForInTransitDepositGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopProductDailySellQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoBySoNumIdAndItemNumIdGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse;
+import com.ykcloud.soa.erp.api.so.response.SoDtlsForInTransitDepositGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoNumIdOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SoSettlementTypeGetResonse;
@@ -87,4 +91,14 @@ public interface SoQueryService {
     
     //根据sonumid获取该订单的销售方式，购销，代销，联销
     public SoSettlementTypeGetResonse getSoSettlementType(SoSettlementTypeGetRequest request);
+    
+	//直通分拨单在途入账,补货门店列表
+	public OrdSubUnitNumIdsForInTransitDepositGetResponse getOrdSubUnitNumIdsForInTransitDeposit(
+			OrdSubUnitNumIdsForInTransitDepositGetRequest request);
+	
+	//直通分拨单在途入账,明细列表
+	public SoDtlsForInTransitDepositGetResponse getSoDtlsForInTransitDeposit(
+			SoDtlsForInTransitDepositGetRequest request);
+
+
 }
