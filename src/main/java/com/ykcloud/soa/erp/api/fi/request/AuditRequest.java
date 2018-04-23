@@ -11,24 +11,44 @@ import javax.validation.constraints.NotNull;
  */
 public class AuditRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = -1766553622327456524L;
+    @NotNull(message = "原始状态不能为空！")
+    private Long oldStatusNumId;
+    @NotNull(message = "新状态不能为空！")
+    private Long newStatusNumId;
+    @NotNull(message = "单据号不能为空！")
+    private String reservedNo;
     @NotNull(message = "业务类型不能为空！")
-    private  Long typeNumId;
-    @NotNull(message = "结算单号不能为空！")
-    private  String balanceNo;
+    private Long billTypeNumId;
 
-    public Long getTypeNumId() {
-        return typeNumId;
+    public Long getOldStatusNumId() {
+        return oldStatusNumId;
     }
 
-    public void setTypeNumId(Long typeNumId) {
-        this.typeNumId = typeNumId;
+    public void setOldStatusNumId(Long oldStatusNumId) {
+        this.oldStatusNumId = oldStatusNumId;
     }
 
-    public String getBalanceNo() {
-        return balanceNo;
+    public Long getNewStatusNumId() {
+        return newStatusNumId;
     }
 
-    public void setBalanceNo(String balanceNo) {
-        this.balanceNo = balanceNo;
+    public void setNewStatusNumId(Long newStatusNumId) {
+        this.newStatusNumId = newStatusNumId;
+    }
+
+    public String getReservedNo() {
+        return reservedNo;
+    }
+
+    public void setReservedNo(String reservedNo) {
+        this.reservedNo = reservedNo;
+    }
+
+    public Long getBillTypeNumId() {
+        return billTypeNumId;
+    }
+
+    public void setBillTypeNumId(Long billTypeNumId) {
+        this.billTypeNumId = billTypeNumId;
     }
 }
