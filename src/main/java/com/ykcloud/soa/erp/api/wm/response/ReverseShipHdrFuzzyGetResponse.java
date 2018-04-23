@@ -7,7 +7,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 @author hank.zhu
 @date 2018年4月19日 下午4:39:51 新建
 **/
-public class ReverseShipHdrGetResponse extends MessagePack {
+public class ReverseShipHdrFuzzyGetResponse extends MessagePack {
 	private static final long serialVersionUID = 9123492729930562580L;
 	private String reservedNo;//验收单号
 	private String traySerlno;//未完成收货托盘

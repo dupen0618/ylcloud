@@ -7,11 +7,11 @@ import org.hibernate.validator.constraints.NotEmpty;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
-*
+*查询验收单请求类
 @author hank.zhu
 @date 2018年3月12日 下午8:19:28 新建
 **/
-public class ReceiptHdrGetRequest extends AbstractUserSessionRequest {
+public class ReceiptHdrFuzzyGetRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1L;
 	@NotNull(message="门店编号不能为空!")
@@ -32,5 +32,4 @@ public class ReceiptHdrGetRequest extends AbstractUserSessionRequest {
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
-	
 }
