@@ -12,7 +12,7 @@ import java.util.Date;
  * @Description: 退货申请主管审核
  * @Date: Created in 11:09:2018/4/7
  */
-public class ReturnApplyAuditRequest  extends AbstractUserSessionRequest{
+public class  ReturnApplyAuditRequest  extends AbstractUserSessionRequest{
     private static final long serialVersionUID = 4722285466425907379L;
 
     @NotNull(message = "订货门店编号不能为空！")
