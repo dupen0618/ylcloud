@@ -47,5 +47,7 @@ public interface WmBillInAccountService {
     //物理仓月进销存
     WmBillInAccountResponse ReceiptInAccountPhysicalMonthGAService(WmBillInAccountRequest wmBillInAccountRequest);
     //财务库存处理-(批次库存日月进销存+商品成本)
-    public WmReceiptInAccountResponse setReceiptInAccountService(WmReceiptInAccountRequest request);
+    public WmReceiptInAccountResponse setReceiptBillInAccount(WmReceiptInAccountRequest request);
+
+    public WmReceiptInAccountResponse setShipBillInAccount(WmReceiptInAccountRequest request);
 }

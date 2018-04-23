@@ -2,13 +2,14 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 
 /**
  * Created by yiako on 2018/4/2
  */
-public class UsableInventoryByReservedNoGetRequest extends AbstractSessionRequest {
+public class UsableInventoryByReservedNoGetRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1L;
 	@NotNull(message = "单据编号不能为空！")

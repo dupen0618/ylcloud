@@ -27,7 +27,7 @@ public class FiConsignmentProductAccountWba implements Serializable {
     private Long triggerBillid;
     private Long triggerBillLine;
     private Long assistLine;
-    private Long batchSeries;
+    private String batchSeries;
     private String promotionGrade;
     private Double price;
     private String supPromotionGrade;
@@ -190,11 +190,11 @@ public class FiConsignmentProductAccountWba implements Serializable {
         this.assistLine = assistLine;
     }
 
-    public Long getBatchSeries() {
+    public String getBatchSeries() {
         return batchSeries;
     }
 
-    public void setBatchSeries(Long batchSeries) {
+    public void setBatchSeries(String batchSeries) {
         this.batchSeries = batchSeries;
     }
 
