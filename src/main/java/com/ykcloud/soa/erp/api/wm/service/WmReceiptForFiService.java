@@ -89,7 +89,7 @@ public interface WmReceiptForFiService {
 	//结算单审核，得到验收入库表头的行号
 	public ReceiptHdrSeriesGetResponse getBalanceHdrByReceipt(ReceiptHdrSeriesGetRequest request);
 	
-	//结算单审核查询损益单明细表的状态
+	//结算单审核查询验收入库单明细表的状态
 	public BalanceAuditForReceiptDtlStatusSelectResponse selectReceiptDtlStatus (BalanceAuditForReceiptDtlStatusSelectRequest request);
 
 	

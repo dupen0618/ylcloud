@@ -7,7 +7,7 @@ import com.ykcloud.soa.erp.api.fi.model.FiBlSupBalanceDtl;
 public interface FiBlSupBalanceDtlService {
 
 
-	List<FiBlSupBalanceDtl> getFiBlSupBalanceDtlByBalanceNo(Long dataSign, Long balanceNo);
+	//List<FiBlSupBalanceDtl> getFiBlSupBalanceDtlByBalanceNo(Long dataSign, Long balanceNo);
 		
 	
 }
