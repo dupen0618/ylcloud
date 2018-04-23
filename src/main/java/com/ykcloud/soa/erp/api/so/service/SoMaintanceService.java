@@ -5,6 +5,7 @@ import com.ykcloud.soa.erp.api.so.request.ApprovalReturnSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.CheckSoShipQtyAndPackingQtyRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayDistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionSoGenerateRequest;
+import com.ykcloud.soa.erp.api.so.request.SoAllotWithShipRequest;
 import com.ykcloud.soa.erp.api.so.request.SoConfirmTypeRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlForUpdateActualQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoPackingUpdateRequest;
@@ -17,6 +18,7 @@ import com.ykcloud.soa.erp.api.so.response.ApprovalReturnSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.CheckSoShipQtyAndPackingQtyResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayDistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionSoGenerateResponse;
+import com.ykcloud.soa.erp.api.so.response.SoAllotWithShipResponse;
 import com.ykcloud.soa.erp.api.so.response.SoConfirmTypeResponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlForUpdateActualQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoPackingUpdateResponse;
@@ -74,4 +76,5 @@ public interface SoMaintanceService {
 
 	public CheckSoShipQtyAndPackingQtyResponse checkSoShipQtyAndPackingQty(CheckSoShipQtyAndPackingQtyRequest request);
 
+	public SoAllotWithShipResponse allotSoWithShip(SoAllotWithShipRequest request);
 }

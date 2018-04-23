@@ -12,6 +12,7 @@ import com.ykcloud.soa.erp.api.wm.request.ShipBusinessAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipForMaterialIssueBackGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.SoShipFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmAllotWithShipRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmContainerHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataByBarcodeGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataGetDataByBarcodeAndSoNumIdRequest;
@@ -38,6 +39,7 @@ import com.ykcloud.soa.erp.api.wm.response.ShipBusinessAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipForMaterialIssueBackGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.SoShipFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmAllotWithShipResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmContainerHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataByBarcodeGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataGetDataByBarcodeAndSoNumIdResponse;
@@ -177,4 +179,12 @@ public interface WmShipService {
 		 * @description 出库反配财务账处理消息TCC
 		 */
 		public ReverseReceiptFiAccountProcessResponse reverseReceiptFiAccountProcess(ReverseReceiptFiAccountProcessRequest request);
+
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月23日
+		 * @description 产生分拨单
+		 */
+		public WmAllotWithShipResponse allotSoWithShip(WmAllotWithShipRequest request);
 }
