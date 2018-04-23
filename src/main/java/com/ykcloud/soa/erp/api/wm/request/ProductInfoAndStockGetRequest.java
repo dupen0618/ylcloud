@@ -16,7 +16,6 @@ public class ProductInfoAndStockGetRequest extends AbstractRequest {
 
 	@NotNull(message = "逻辑仓不能为空")
 	private Long storageNumId;//逻辑仓号
-
 	@NotNull(message = "门店编号不能为空")
 	private Long subUnitNumId;
 	public String getBarcode() {
