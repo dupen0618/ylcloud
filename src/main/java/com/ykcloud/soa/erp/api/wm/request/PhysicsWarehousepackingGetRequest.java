@@ -22,7 +22,15 @@ public class PhysicsWarehousepackingGetRequest extends AbstractRequest {
 	@NotNull(message = "入账类型不能为空！")
 	String accountName;
 
-	Long userNumId;
+	@NotNull(message = "门店编号不能为空!")
+	private Long subUnitNumId;
+
+	@NotNull(message = "操作人不能为空!")
+	private Long userNumId;
+
+	private Long BalanceFunctionId;
+
+
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -62,5 +70,21 @@ public class PhysicsWarehousepackingGetRequest extends AbstractRequest {
 
 	public void setUserNumId(Long userNumId) {
 		this.userNumId = userNumId;
+	}
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
+
+	public Long getBalanceFunctionId() {
+		return BalanceFunctionId;
+	}
+
+	public void setBalanceFunctionId(Long balanceFunctionId) {
+		BalanceFunctionId = balanceFunctionId;
 	}
 }

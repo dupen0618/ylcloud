@@ -7,413 +7,413 @@ import java.util.Date;
  */
 public class EX_ARC_BALA_FUNC_DAILY_PHWBA {
 
-    private  Long series;
+    private Long SERIES;
 
-    private Long tenant_Num_Id;
+    private Long TENANT_NUM_ID;
 
-    private String bill_Type_Num_Name;//业务类型描述
+    private String BILL_TYPE_NUM_NAME;//业务类型描述
 
-    private String bill_Type_Num_Id;//业务类型编号
+    private String BILL_TYPE_NUM_ID;//业务类型编号
 
-    private Long type_Num_Id;//单据类型
+    private Long TYPE_NUM_ID;//单据类型
 
-    private Long balance_Function_Id;//库存流水类型编号
+    private Long BALANCE_FUNCTION_ID;//库存流水类型编号
 
-    private String balance_Function_Name;//库存流水类型描述
+    private String BALANCE_FUNCTION_NAME;//库存流水类型描述
 
-    private String bill_Dtl_Tablename;//单据明细表
+    private String BILL_DTL_TABLENAME;//单据明细表
 
-    private Long expect_first_aval_qty_SIGN;//初期可用
+    private Long EXPECT_FIRST_AVAL_QTY_SIGN;//初期可用
 
-    private Long expect_first_qty_SIGN;//初期数量
+    private Long EXPECT_FIRST_QTY_SIGN;//初期数量
 
-    private Double in_qty_SIGN;//进货数量
+    private Double IN_QTY_SIGN;//进货数量
 
-    private Double INSIDE_QTY_sign;//内部进货数量
+    private Double INSIDE_QTY_SIGN;//内部进货数量
 
-    private Double allot_in_qty_SIGN;//拨入数量
+    private Double ALLOT_IN_QTY_SIGN;//拨入数量
 
-    private Double work_in_qty_SIGN;//加工拨入数量
+    private Double WORK_IN_QTY_SIGN;//加工拨入数量
 
-    private Double rise_qty_SIGN;//升溢数量
+    private Double RISE_QTY_SIGN;//升溢数量
 
-    private Double loss_qty_SIGN;//损耗数量
+    private Double LOSS_QTY_SIGN;//损耗数量
 
-    private Double fresh_loss_qty_SIGN;//生鲜损耗数量
+    private Double FRESH_LOSS_QTY_SIGN;//生鲜损耗数量
 
-    private Double allot_out_qty_SIGN;//拨出数量
+    private Double ALLOT_OUT_QTY_SIGN;//拨出数量
 
-    private Double work_out_qty_SIGN;//加工拨出数量
+    private Double WORK_OUT_QTY_SIGN;//加工拨出数量
 
-    private Double turn_pmt_qty_SIGN;//转赠品数量
+    private Double TURN_PMT_QTY_SIGN;//转赠品数量
 
-    private Double sell_qty_SIGN;//销售数量
+    private Double SELL_QTY_SIGN;//销售数量
 
-    private Double online_sell_qty_SIGN;//其中线上数量
+    private Double ONLINE_SELL_QTY_SIGN;//其中线上数量
 
-    private Double shop_sell_qty_SIGN;//其中门店数量
+    private Double SHOP_SELL_QTY_SIGN;//其中门店数量
 
-    private Double online_wait_packing_qty_SIGN;//线上待拣货数量
+    private Double ONLINE_WAIT_PACKING_QTY_SIGN;//线上待拣货数量
 
-    private Double online_packing_qty_SIGN;//线上已拣货数量
+    private Double ONLINE_PACKING_QTY_SIGN;//线上已拣货数量
 
-    private Double online_ship_qty_SIGN;//线上已出库数量
+    private Double ONLINE_SHIP_QTY_SIGN;//线上已出库数量
 
-    private Double online_cancel_qty_SIGN;//线上取消数量
+    private Double ONLINE_CANCEL_QTY_SIGN;//线上取消数量
 
-    private Double online_wait_back_qty_SIGN;//线上待退货数量
+    private Double ONLINE_WAIT_BACK_QTY_SIGN;//线上待退货数量
 
-    private Double online_back_qty_SIGN;//线上已退货数量
+    private Double ONLINE_BACK_QTY_SIGN;//线上已退货数量
 
-    private Double shop_back_qty_SIGN;//门店已退货数量
+    private Double SHOP_BACK_QTY_SIGN;//门店已退货数量
 
-    private Double online_wait_work_qty_SIGN;//线上待加工数量
+    private Double ONLINE_WAIT_WORK_QTY_SIGN;//线上待加工数量
 
-    private Double online_work_qty_SIGN;//线上已加工数量
+    private Double ONLINE_WORK_QTY_SIGN;//线上已加工数量
 
-    private Double in_sell_qty_SIGN;//内部销售数量
+    private Double IN_SELL_QTY_SIGN;//内部销售数量
 
-    private Double for_share_sell_qty_SIGN;//待分摊销售数量
+    private Double FOR_SHARE_SELL_QTY_SIGN;//待分摊销售数量
 
-    private Double final_qty_SIGN;//期末数量
+    private Double FINAL_QTY_SIGN;//期末数量
 
-    private Double final_aval_qty_SIGN;//期末可用
+    private Double FINAL_AVAL_QTY_SIGN;//期末可用
 
-    private String gaCompareFieldName;//减库存的时候用于判断是否够的Qty字段
+    private String GACOMPAREFIELDNAME;//减库存的时候用于判断是否够的Qty字段
 
-    private Long canbenegative;//是否可以扣减成负数,0 不可以，1 可以
+    private Long CANBENEGATIVE;//是否可以扣减成负数,0 不可以，1 可以
 
-    private String wbaQtyFieldName;//流水账中的数量字段 RESERVED_QTY
+    private String WBAQTYFIELDNAME;//流水账中的数量字段 RESERVED_QTY
 
-    private Long accountType;//账务处理类型 1增加模型，2 扣减模型
+    private Long ACCOUNTTYPE;//账务处理类型 1增加模型，2 扣减模型
 
-    private Date create_dtme;//创建时间(0:无变化 1：增加 2：扣减)
+    private Date CREATE_DTME;//创建时间(0:无变化 1：增加 2：扣减)
 
-    public Long getSeries() {
-        return series;
+    public Long getSERIES() {
+        return SERIES;
     }
 
-    public void setSeries(Long series) {
-        this.series = series;
+    public void setSERIES(Long SERIES) {
+        this.SERIES = SERIES;
     }
 
-    public Long getTenant_Num_Id() {
-        return tenant_Num_Id;
+    public Long getTENANT_NUM_ID() {
+        return TENANT_NUM_ID;
     }
 
-    public void setTenant_Num_Id(Long tenant_Num_Id) {
-        this.tenant_Num_Id = tenant_Num_Id;
+    public void setTENANT_NUM_ID(Long TENANT_NUM_ID) {
+        this.TENANT_NUM_ID = TENANT_NUM_ID;
     }
 
-    public String getBill_Type_Num_Name() {
-        return bill_Type_Num_Name;
+    public String getBILL_TYPE_NUM_NAME() {
+        return BILL_TYPE_NUM_NAME;
     }
 
-    public void setBill_Type_Num_Name(String bill_Type_Num_Name) {
-        this.bill_Type_Num_Name = bill_Type_Num_Name;
+    public void setBILL_TYPE_NUM_NAME(String BILL_TYPE_NUM_NAME) {
+        this.BILL_TYPE_NUM_NAME = BILL_TYPE_NUM_NAME;
     }
 
-    public String getBill_Type_Num_Id() {
-        return bill_Type_Num_Id;
+    public String getBILL_TYPE_NUM_ID() {
+        return BILL_TYPE_NUM_ID;
     }
 
-    public void setBill_Type_Num_Id(String bill_Type_Num_Id) {
-        this.bill_Type_Num_Id = bill_Type_Num_Id;
+    public void setBILL_TYPE_NUM_ID(String BILL_TYPE_NUM_ID) {
+        this.BILL_TYPE_NUM_ID = BILL_TYPE_NUM_ID;
     }
 
-    public Long getType_Num_Id() {
-        return type_Num_Id;
+    public Long getTYPE_NUM_ID() {
+        return TYPE_NUM_ID;
     }
 
-    public void setType_Num_Id(Long type_Num_Id) {
-        this.type_Num_Id = type_Num_Id;
+    public void setTYPE_NUM_ID(Long TYPE_NUM_ID) {
+        this.TYPE_NUM_ID = TYPE_NUM_ID;
     }
 
-    public Long getBalance_Function_Id() {
-        return balance_Function_Id;
+    public Long getBALANCE_FUNCTION_ID() {
+        return BALANCE_FUNCTION_ID;
     }
 
-    public void setBalance_Function_Id(Long balance_Function_Id) {
-        this.balance_Function_Id = balance_Function_Id;
+    public void setBALANCE_FUNCTION_ID(Long BALANCE_FUNCTION_ID) {
+        this.BALANCE_FUNCTION_ID = BALANCE_FUNCTION_ID;
     }
 
-    public String getBalance_Function_Name() {
-        return balance_Function_Name;
+    public String getBALANCE_FUNCTION_NAME() {
+        return BALANCE_FUNCTION_NAME;
     }
 
-    public void setBalance_Function_Name(String balance_Function_Name) {
-        this.balance_Function_Name = balance_Function_Name;
+    public void setBALANCE_FUNCTION_NAME(String BALANCE_FUNCTION_NAME) {
+        this.BALANCE_FUNCTION_NAME = BALANCE_FUNCTION_NAME;
     }
 
-    public String getBill_Dtl_Tablename() {
-        return bill_Dtl_Tablename;
+    public String getBILL_DTL_TABLENAME() {
+        return BILL_DTL_TABLENAME;
     }
 
-    public void setBill_Dtl_Tablename(String bill_Dtl_Tablename) {
-        this.bill_Dtl_Tablename = bill_Dtl_Tablename;
+    public void setBILL_DTL_TABLENAME(String BILL_DTL_TABLENAME) {
+        this.BILL_DTL_TABLENAME = BILL_DTL_TABLENAME;
     }
 
-    public Long getExpect_first_aval_qty_SIGN() {
-        return expect_first_aval_qty_SIGN;
+    public Long getEXPECT_FIRST_AVAL_QTY_SIGN() {
+        return EXPECT_FIRST_AVAL_QTY_SIGN;
     }
 
-    public void setExpect_first_aval_qty_SIGN(Long expect_first_aval_qty_SIGN) {
-        this.expect_first_aval_qty_SIGN = expect_first_aval_qty_SIGN;
+    public void setEXPECT_FIRST_AVAL_QTY_SIGN(Long EXPECT_FIRST_AVAL_QTY_SIGN) {
+        this.EXPECT_FIRST_AVAL_QTY_SIGN = EXPECT_FIRST_AVAL_QTY_SIGN;
     }
 
-    public Long getExpect_first_qty_SIGN() {
-        return expect_first_qty_SIGN;
+    public Long getEXPECT_FIRST_QTY_SIGN() {
+        return EXPECT_FIRST_QTY_SIGN;
     }
 
-    public void setExpect_first_qty_SIGN(Long expect_first_qty_SIGN) {
-        this.expect_first_qty_SIGN = expect_first_qty_SIGN;
+    public void setEXPECT_FIRST_QTY_SIGN(Long EXPECT_FIRST_QTY_SIGN) {
+        this.EXPECT_FIRST_QTY_SIGN = EXPECT_FIRST_QTY_SIGN;
     }
 
-    public Double getIn_qty_SIGN() {
-        return in_qty_SIGN;
+    public Double getIN_QTY_SIGN() {
+        return IN_QTY_SIGN;
     }
 
-    public void setIn_qty_SIGN(Double in_qty_SIGN) {
-        this.in_qty_SIGN = in_qty_SIGN;
+    public void setIN_QTY_SIGN(Double IN_QTY_SIGN) {
+        this.IN_QTY_SIGN = IN_QTY_SIGN;
     }
 
-    public Double getINSIDE_QTY_sign() {
-        return INSIDE_QTY_sign;
+    public Double getINSIDE_QTY_SIGN() {
+        return INSIDE_QTY_SIGN;
     }
 
-    public void setINSIDE_QTY_sign(Double INSIDE_QTY_sign) {
-        this.INSIDE_QTY_sign = INSIDE_QTY_sign;
+    public void setINSIDE_QTY_SIGN(Double INSIDE_QTY_SIGN) {
+        this.INSIDE_QTY_SIGN = INSIDE_QTY_SIGN;
     }
 
-    public Double getAllot_in_qty_SIGN() {
-        return allot_in_qty_SIGN;
+    public Double getALLOT_IN_QTY_SIGN() {
+        return ALLOT_IN_QTY_SIGN;
     }
 
-    public void setAllot_in_qty_SIGN(Double allot_in_qty_SIGN) {
-        this.allot_in_qty_SIGN = allot_in_qty_SIGN;
+    public void setALLOT_IN_QTY_SIGN(Double ALLOT_IN_QTY_SIGN) {
+        this.ALLOT_IN_QTY_SIGN = ALLOT_IN_QTY_SIGN;
     }
 
-    public Double getWork_in_qty_SIGN() {
-        return work_in_qty_SIGN;
+    public Double getWORK_IN_QTY_SIGN() {
+        return WORK_IN_QTY_SIGN;
     }
 
-    public void setWork_in_qty_SIGN(Double work_in_qty_SIGN) {
-        this.work_in_qty_SIGN = work_in_qty_SIGN;
+    public void setWORK_IN_QTY_SIGN(Double WORK_IN_QTY_SIGN) {
+        this.WORK_IN_QTY_SIGN = WORK_IN_QTY_SIGN;
     }
 
-    public Double getRise_qty_SIGN() {
-        return rise_qty_SIGN;
+    public Double getRISE_QTY_SIGN() {
+        return RISE_QTY_SIGN;
     }
 
-    public void setRise_qty_SIGN(Double rise_qty_SIGN) {
-        this.rise_qty_SIGN = rise_qty_SIGN;
+    public void setRISE_QTY_SIGN(Double RISE_QTY_SIGN) {
+        this.RISE_QTY_SIGN = RISE_QTY_SIGN;
     }
 
-    public Double getLoss_qty_SIGN() {
-        return loss_qty_SIGN;
+    public Double getLOSS_QTY_SIGN() {
+        return LOSS_QTY_SIGN;
     }
 
-    public void setLoss_qty_SIGN(Double loss_qty_SIGN) {
-        this.loss_qty_SIGN = loss_qty_SIGN;
+    public void setLOSS_QTY_SIGN(Double LOSS_QTY_SIGN) {
+        this.LOSS_QTY_SIGN = LOSS_QTY_SIGN;
     }
 
-    public Double getFresh_loss_qty_SIGN() {
-        return fresh_loss_qty_SIGN;
+    public Double getFRESH_LOSS_QTY_SIGN() {
+        return FRESH_LOSS_QTY_SIGN;
     }
 
-    public void setFresh_loss_qty_SIGN(Double fresh_loss_qty_SIGN) {
-        this.fresh_loss_qty_SIGN = fresh_loss_qty_SIGN;
+    public void setFRESH_LOSS_QTY_SIGN(Double FRESH_LOSS_QTY_SIGN) {
+        this.FRESH_LOSS_QTY_SIGN = FRESH_LOSS_QTY_SIGN;
     }
 
-    public Double getAllot_out_qty_SIGN() {
-        return allot_out_qty_SIGN;
+    public Double getALLOT_OUT_QTY_SIGN() {
+        return ALLOT_OUT_QTY_SIGN;
     }
 
-    public void setAllot_out_qty_SIGN(Double allot_out_qty_SIGN) {
-        this.allot_out_qty_SIGN = allot_out_qty_SIGN;
+    public void setALLOT_OUT_QTY_SIGN(Double ALLOT_OUT_QTY_SIGN) {
+        this.ALLOT_OUT_QTY_SIGN = ALLOT_OUT_QTY_SIGN;
     }
 
-    public Double getWork_out_qty_SIGN() {
-        return work_out_qty_SIGN;
+    public Double getWORK_OUT_QTY_SIGN() {
+        return WORK_OUT_QTY_SIGN;
     }
 
-    public void setWork_out_qty_SIGN(Double work_out_qty_SIGN) {
-        this.work_out_qty_SIGN = work_out_qty_SIGN;
+    public void setWORK_OUT_QTY_SIGN(Double WORK_OUT_QTY_SIGN) {
+        this.WORK_OUT_QTY_SIGN = WORK_OUT_QTY_SIGN;
     }
 
-    public Double getTurn_pmt_qty_SIGN() {
-        return turn_pmt_qty_SIGN;
+    public Double getTURN_PMT_QTY_SIGN() {
+        return TURN_PMT_QTY_SIGN;
     }
 
-    public void setTurn_pmt_qty_SIGN(Double turn_pmt_qty_SIGN) {
-        this.turn_pmt_qty_SIGN = turn_pmt_qty_SIGN;
+    public void setTURN_PMT_QTY_SIGN(Double TURN_PMT_QTY_SIGN) {
+        this.TURN_PMT_QTY_SIGN = TURN_PMT_QTY_SIGN;
     }
 
-    public Double getSell_qty_SIGN() {
-        return sell_qty_SIGN;
+    public Double getSELL_QTY_SIGN() {
+        return SELL_QTY_SIGN;
     }
 
-    public void setSell_qty_SIGN(Double sell_qty_SIGN) {
-        this.sell_qty_SIGN = sell_qty_SIGN;
+    public void setSELL_QTY_SIGN(Double SELL_QTY_SIGN) {
+        this.SELL_QTY_SIGN = SELL_QTY_SIGN;
     }
 
-    public Double getOnline_sell_qty_SIGN() {
-        return online_sell_qty_SIGN;
+    public Double getONLINE_SELL_QTY_SIGN() {
+        return ONLINE_SELL_QTY_SIGN;
     }
 
-    public void setOnline_sell_qty_SIGN(Double online_sell_qty_SIGN) {
-        this.online_sell_qty_SIGN = online_sell_qty_SIGN;
+    public void setONLINE_SELL_QTY_SIGN(Double ONLINE_SELL_QTY_SIGN) {
+        this.ONLINE_SELL_QTY_SIGN = ONLINE_SELL_QTY_SIGN;
     }
 
-    public Double getShop_sell_qty_SIGN() {
-        return shop_sell_qty_SIGN;
+    public Double getSHOP_SELL_QTY_SIGN() {
+        return SHOP_SELL_QTY_SIGN;
     }
 
-    public void setShop_sell_qty_SIGN(Double shop_sell_qty_SIGN) {
-        this.shop_sell_qty_SIGN = shop_sell_qty_SIGN;
+    public void setSHOP_SELL_QTY_SIGN(Double SHOP_SELL_QTY_SIGN) {
+        this.SHOP_SELL_QTY_SIGN = SHOP_SELL_QTY_SIGN;
     }
 
-    public Double getOnline_wait_packing_qty_SIGN() {
-        return online_wait_packing_qty_SIGN;
+    public Double getONLINE_WAIT_PACKING_QTY_SIGN() {
+        return ONLINE_WAIT_PACKING_QTY_SIGN;
     }
 
-    public void setOnline_wait_packing_qty_SIGN(Double online_wait_packing_qty_SIGN) {
-        this.online_wait_packing_qty_SIGN = online_wait_packing_qty_SIGN;
+    public void setONLINE_WAIT_PACKING_QTY_SIGN(Double ONLINE_WAIT_PACKING_QTY_SIGN) {
+        this.ONLINE_WAIT_PACKING_QTY_SIGN = ONLINE_WAIT_PACKING_QTY_SIGN;
     }
 
-    public Double getOnline_packing_qty_SIGN() {
-        return online_packing_qty_SIGN;
+    public Double getONLINE_PACKING_QTY_SIGN() {
+        return ONLINE_PACKING_QTY_SIGN;
     }
 
-    public void setOnline_packing_qty_SIGN(Double online_packing_qty_SIGN) {
-        this.online_packing_qty_SIGN = online_packing_qty_SIGN;
+    public void setONLINE_PACKING_QTY_SIGN(Double ONLINE_PACKING_QTY_SIGN) {
+        this.ONLINE_PACKING_QTY_SIGN = ONLINE_PACKING_QTY_SIGN;
     }
 
-    public Double getOnline_ship_qty_SIGN() {
-        return online_ship_qty_SIGN;
+    public Double getONLINE_SHIP_QTY_SIGN() {
+        return ONLINE_SHIP_QTY_SIGN;
     }
 
-    public void setOnline_ship_qty_SIGN(Double online_ship_qty_SIGN) {
-        this.online_ship_qty_SIGN = online_ship_qty_SIGN;
+    public void setONLINE_SHIP_QTY_SIGN(Double ONLINE_SHIP_QTY_SIGN) {
+        this.ONLINE_SHIP_QTY_SIGN = ONLINE_SHIP_QTY_SIGN;
     }
 
-    public Double getOnline_cancel_qty_SIGN() {
-        return online_cancel_qty_SIGN;
+    public Double getONLINE_CANCEL_QTY_SIGN() {
+        return ONLINE_CANCEL_QTY_SIGN;
     }
 
-    public void setOnline_cancel_qty_SIGN(Double online_cancel_qty_SIGN) {
-        this.online_cancel_qty_SIGN = online_cancel_qty_SIGN;
+    public void setONLINE_CANCEL_QTY_SIGN(Double ONLINE_CANCEL_QTY_SIGN) {
+        this.ONLINE_CANCEL_QTY_SIGN = ONLINE_CANCEL_QTY_SIGN;
     }
 
-    public Double getOnline_wait_back_qty_SIGN() {
-        return online_wait_back_qty_SIGN;
+    public Double getONLINE_WAIT_BACK_QTY_SIGN() {
+        return ONLINE_WAIT_BACK_QTY_SIGN;
     }
 
-    public void setOnline_wait_back_qty_SIGN(Double online_wait_back_qty_SIGN) {
-        this.online_wait_back_qty_SIGN = online_wait_back_qty_SIGN;
+    public void setONLINE_WAIT_BACK_QTY_SIGN(Double ONLINE_WAIT_BACK_QTY_SIGN) {
+        this.ONLINE_WAIT_BACK_QTY_SIGN = ONLINE_WAIT_BACK_QTY_SIGN;
     }
 
-    public Double getOnline_back_qty_SIGN() {
-        return online_back_qty_SIGN;
+    public Double getONLINE_BACK_QTY_SIGN() {
+        return ONLINE_BACK_QTY_SIGN;
     }
 
-    public void setOnline_back_qty_SIGN(Double online_back_qty_SIGN) {
-        this.online_back_qty_SIGN = online_back_qty_SIGN;
+    public void setONLINE_BACK_QTY_SIGN(Double ONLINE_BACK_QTY_SIGN) {
+        this.ONLINE_BACK_QTY_SIGN = ONLINE_BACK_QTY_SIGN;
     }
 
-    public Double getShop_back_qty_SIGN() {
-        return shop_back_qty_SIGN;
+    public Double getSHOP_BACK_QTY_SIGN() {
+        return SHOP_BACK_QTY_SIGN;
     }
 
-    public void setShop_back_qty_SIGN(Double shop_back_qty_SIGN) {
-        this.shop_back_qty_SIGN = shop_back_qty_SIGN;
+    public void setSHOP_BACK_QTY_SIGN(Double SHOP_BACK_QTY_SIGN) {
+        this.SHOP_BACK_QTY_SIGN = SHOP_BACK_QTY_SIGN;
     }
 
-    public Double getOnline_wait_work_qty_SIGN() {
-        return online_wait_work_qty_SIGN;
+    public Double getONLINE_WAIT_WORK_QTY_SIGN() {
+        return ONLINE_WAIT_WORK_QTY_SIGN;
     }
 
-    public void setOnline_wait_work_qty_SIGN(Double online_wait_work_qty_SIGN) {
-        this.online_wait_work_qty_SIGN = online_wait_work_qty_SIGN;
+    public void setONLINE_WAIT_WORK_QTY_SIGN(Double ONLINE_WAIT_WORK_QTY_SIGN) {
+        this.ONLINE_WAIT_WORK_QTY_SIGN = ONLINE_WAIT_WORK_QTY_SIGN;
     }
 
-    public Double getOnline_work_qty_SIGN() {
-        return online_work_qty_SIGN;
+    public Double getONLINE_WORK_QTY_SIGN() {
+        return ONLINE_WORK_QTY_SIGN;
     }
 
-    public void setOnline_work_qty_SIGN(Double online_work_qty_SIGN) {
-        this.online_work_qty_SIGN = online_work_qty_SIGN;
+    public void setONLINE_WORK_QTY_SIGN(Double ONLINE_WORK_QTY_SIGN) {
+        this.ONLINE_WORK_QTY_SIGN = ONLINE_WORK_QTY_SIGN;
     }
 
-    public Double getIn_sell_qty_SIGN() {
-        return in_sell_qty_SIGN;
+    public Double getIN_SELL_QTY_SIGN() {
+        return IN_SELL_QTY_SIGN;
     }
 
-    public void setIn_sell_qty_SIGN(Double in_sell_qty_SIGN) {
-        this.in_sell_qty_SIGN = in_sell_qty_SIGN;
+    public void setIN_SELL_QTY_SIGN(Double IN_SELL_QTY_SIGN) {
+        this.IN_SELL_QTY_SIGN = IN_SELL_QTY_SIGN;
     }
 
-    public Double getFor_share_sell_qty_SIGN() {
-        return for_share_sell_qty_SIGN;
+    public Double getFOR_SHARE_SELL_QTY_SIGN() {
+        return FOR_SHARE_SELL_QTY_SIGN;
     }
 
-    public void setFor_share_sell_qty_SIGN(Double for_share_sell_qty_SIGN) {
-        this.for_share_sell_qty_SIGN = for_share_sell_qty_SIGN;
+    public void setFOR_SHARE_SELL_QTY_SIGN(Double FOR_SHARE_SELL_QTY_SIGN) {
+        this.FOR_SHARE_SELL_QTY_SIGN = FOR_SHARE_SELL_QTY_SIGN;
     }
 
-    public Double getFinal_qty_SIGN() {
-        return final_qty_SIGN;
+    public Double getFINAL_QTY_SIGN() {
+        return FINAL_QTY_SIGN;
     }
 
-    public void setFinal_qty_SIGN(Double final_qty_SIGN) {
-        this.final_qty_SIGN = final_qty_SIGN;
+    public void setFINAL_QTY_SIGN(Double FINAL_QTY_SIGN) {
+        this.FINAL_QTY_SIGN = FINAL_QTY_SIGN;
     }
 
-    public Double getFinal_aval_qty_SIGN() {
-        return final_aval_qty_SIGN;
+    public Double getFINAL_AVAL_QTY_SIGN() {
+        return FINAL_AVAL_QTY_SIGN;
     }
 
-    public void setFinal_aval_qty_SIGN(Double final_aval_qty_SIGN) {
-        this.final_aval_qty_SIGN = final_aval_qty_SIGN;
+    public void setFINAL_AVAL_QTY_SIGN(Double FINAL_AVAL_QTY_SIGN) {
+        this.FINAL_AVAL_QTY_SIGN = FINAL_AVAL_QTY_SIGN;
     }
 
-    public Long getCanbenegative() {
-        return canbenegative;
+    public String getGACOMPAREFIELDNAME() {
+        return GACOMPAREFIELDNAME;
     }
 
-    public void setCanbenegative(Long canbenegative) {
-        this.canbenegative = canbenegative;
+    public void setGACOMPAREFIELDNAME(String GACOMPAREFIELDNAME) {
+        this.GACOMPAREFIELDNAME = GACOMPAREFIELDNAME;
     }
 
-    public String getGaCompareFieldName() {
-        return gaCompareFieldName;
+    public Long getCANBENEGATIVE() {
+        return CANBENEGATIVE;
     }
 
-    public void setGaCompareFieldName(String gaCompareFieldName) {
-        this.gaCompareFieldName = gaCompareFieldName;
+    public void setCANBENEGATIVE(Long CANBENEGATIVE) {
+        this.CANBENEGATIVE = CANBENEGATIVE;
     }
 
-    public String getWbaQtyFieldName() {
-        return wbaQtyFieldName;
+    public String getWBAQTYFIELDNAME() {
+        return WBAQTYFIELDNAME;
     }
 
-    public void setWbaQtyFieldName(String wbaQtyFieldName) {
-        this.wbaQtyFieldName = wbaQtyFieldName;
+    public void setWBAQTYFIELDNAME(String WBAQTYFIELDNAME) {
+        this.WBAQTYFIELDNAME = WBAQTYFIELDNAME;
     }
 
-    public Long getAccountType() {
-        return accountType;
+    public Long getACCOUNTTYPE() {
+        return ACCOUNTTYPE;
     }
 
-    public void setAccountType(Long accountType) {
-        this.accountType = accountType;
+    public void setACCOUNTTYPE(Long ACCOUNTTYPE) {
+        this.ACCOUNTTYPE = ACCOUNTTYPE;
     }
 
-    public Date getCreate_dtme() {
-        return create_dtme;
+    public Date getCREATE_DTME() {
+        return CREATE_DTME;
     }
 
-    public void setCreate_dtme(Date create_dtme) {
-        this.create_dtme = create_dtme;
+    public void setCREATE_DTME(Date CREATE_DTME) {
+        this.CREATE_DTME = CREATE_DTME;
     }
 }

@@ -1,7 +1,5 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -29,7 +27,7 @@ public class PhysicsPipenineInsert implements Serializable {
 
 	private Long conversionUnitNumId;// 件装单位
 
-	private Long conversionStyleDesc;// 件装规格
+	private String conversionStyleDesc;// 件装规格
 
 	private Long pmtMaterial;// 赠品辅料
 
@@ -43,13 +41,13 @@ public class PhysicsPipenineInsert implements Serializable {
 
 	private Long typeNumId;// 业务类型
 
-	private Long billTypeNumId;// 单据类型
+	private String billTypeNumId;// 单据类型
 
-	private Long triggerBillid;// 单据编号
+	private String triggerBillid;// 单据编号
 
-	private Long triggerBillLine;// 单据行号
+	private String triggerBillLine;// 单据行号
 
-	private Long assistLine;// 辅助行号
+	private String assistLine;// 辅助行号
 
 	private Long locNumId;// 库位
 
@@ -69,7 +67,15 @@ public class PhysicsPipenineInsert implements Serializable {
 
 	private Date lastUpdtme;//更新时间
 
-	private Date carrySign;//结转标识
+	private Long carrySign;//结转标识
+
+	private Long Pty_num_1;
+
+	private Long Pty_num_2;
+
+	private Long Pty_num_3;
+
+	private Long storageDeptNumId;
 
 
 	public Long getTenantNumId() {
@@ -144,11 +150,11 @@ public class PhysicsPipenineInsert implements Serializable {
 		this.conversionUnitNumId = conversionUnitNumId;
 	}
 
-	public Long getConversionStyleDesc() {
+	public String getConversionStyleDesc() {
 		return conversionStyleDesc;
 	}
 
-	public void setConversionStyleDesc(Long conversionStyleDesc) {
+	public void setConversionStyleDesc(String conversionStyleDesc) {
 		this.conversionStyleDesc = conversionStyleDesc;
 	}
 
@@ -200,35 +206,28 @@ public class PhysicsPipenineInsert implements Serializable {
 		this.typeNumId = typeNumId;
 	}
 
-	public Long getBillTypeNumId() {
+	public String getBillTypeNumId() {
 		return billTypeNumId;
 	}
 
-	public void setBillTypeNumId(Long billTypeNumId) {
+	public void setBillTypeNumId(String billTypeNumId) {
 		this.billTypeNumId = billTypeNumId;
 	}
 
-	public Long getTriggerBillid() {
+	public String getTriggerBillid() {
 		return triggerBillid;
 	}
 
-	public void setTriggerBillid(Long triggerBillid) {
+	public void setTriggerBillid(String triggerBillid) {
 		this.triggerBillid = triggerBillid;
 	}
 
-	public Long getTriggerBillLine() {
-		return triggerBillLine;
-	}
 
-	public void setTriggerBillLine(Long triggerBillLine) {
-		this.triggerBillLine = triggerBillLine;
-	}
-
-	public Long getAssistLine() {
+	public String getAssistLine() {
 		return assistLine;
 	}
 
-	public void setAssistLine(Long assistLine) {
+	public void setAssistLine(String assistLine) {
 		this.assistLine = assistLine;
 	}
 
@@ -308,11 +307,51 @@ public class PhysicsPipenineInsert implements Serializable {
 		this.lastUpdtme = lastUpdtme;
 	}
 
-	public Date getCarrySign() {
+	public Long getCarrySign() {
 		return carrySign;
 	}
 
-	public void setCarrySign(Date carrySign) {
+	public void setCarrySign(Long carrySign) {
 		this.carrySign = carrySign;
+	}
+
+	public String getTriggerBillLine() {
+		return triggerBillLine;
+	}
+
+	public void setTriggerBillLine(String triggerBillLine) {
+		this.triggerBillLine = triggerBillLine;
+	}
+
+	public Long getPty_num_1() {
+		return Pty_num_1;
+	}
+
+	public void setPty_num_1(Long pty_num_1) {
+		Pty_num_1 = pty_num_1;
+	}
+
+	public Long getPty_num_2() {
+		return Pty_num_2;
+	}
+
+	public void setPty_num_2(Long pty_num_2) {
+		Pty_num_2 = pty_num_2;
+	}
+
+	public Long getPty_num_3() {
+		return Pty_num_3;
+	}
+
+	public void setPty_num_3(Long pty_num_3) {
+		Pty_num_3 = pty_num_3;
+	}
+
+	public Long getStorageDeptNumId() {
+		return storageDeptNumId;
+	}
+
+	public void setStorageDeptNumId(Long storageDeptNumId) {
+		this.storageDeptNumId = storageDeptNumId;
 	}
 }

@@ -1,14 +1,13 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 
 /**
  * Created by yiako on 2018/4/2
  */
-public class UsableInventoryByReservedNoGetRequest extends AbstractSessionRequest {
+public class UsableInventoryByReservedNoGetRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1L;
 	@NotNull(message = "单据编号不能为空！")
@@ -24,6 +23,8 @@ public class UsableInventoryByReservedNoGetRequest extends AbstractSessionReques
 
     @NotNull(message = "门店编号不能为空！")
     Long subUnitNumId;
+
+    private Long balanceFunctionId;
 
     public String getReservedNo() {
         return reservedNo;
@@ -64,5 +65,13 @@ public class UsableInventoryByReservedNoGetRequest extends AbstractSessionReques
 
     public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
+    }
+
+    public Long getBalanceFunctionId() {
+        return balanceFunctionId;
+    }
+
+    public void setBalanceFunctionId(Long balanceFunctionId) {
+        this.balanceFunctionId = balanceFunctionId;
     }
 }
