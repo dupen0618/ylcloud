@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.so.service;
 
+import com.ykcloud.soa.erp.api.so.request.CountSoTmlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DemandSaleStatisticGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayOpenDistDeliveryQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionOpenDistDeliveryQtyGetRequest;
@@ -16,7 +17,9 @@ import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoNumIdOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SoSettlementTypeGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusOfWlbcRequest;
+import com.ykcloud.soa.erp.api.so.request.SoTmlLimitGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupplyToReturnAmoutGetRequest;
+import com.ykcloud.soa.erp.api.so.response.CountSoTmlHdrGetResponse;
 import com.ykcloud.soa.erp.api.so.response.DemandSaleStatisticGetResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayOpenDistDeliveryQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionOpenDistDeliveryQtyGetResponse;
@@ -33,6 +36,7 @@ import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoNumIdOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SoSettlementTypeGetResonse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusOfWlbcResponse;
+import com.ykcloud.soa.erp.api.so.response.SoTmlHdrLimitGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyToReturnAmoutGetResponse;
 import com.ykcloud.soa.erp.api.wm.request.SoLockQtyByWlbcRequest;
 import com.ykcloud.soa.erp.api.wm.response.SoLockQtyByWlbcResponse;
@@ -91,6 +95,7 @@ public interface SoQueryService {
     
     //根据sonumid获取该订单的销售方式，购销，代销，联销
     public SoSettlementTypeGetResonse getSoSettlementType(SoSettlementTypeGetRequest request);
+
     
 	//直通分拨单在途入账,补货门店列表
 	public OrdSubUnitNumIdsForInTransitDepositGetResponse getOrdSubUnitNumIdsForInTransitDeposit(
@@ -99,6 +104,14 @@ public interface SoQueryService {
 	//直通分拨单在途入账,明细列表
 	public SoDtlsForInTransitDepositGetResponse getSoDtlsForInTransitDeposit(
 			SoDtlsForInTransitDepositGetRequest request);
+
+
+
+    //分页查询小票单头
+    public SoTmlHdrLimitGetResponse getSoTmlLimit(SoTmlLimitGetRequest request);
+
+    //统计小票单头数据
+    public CountSoTmlHdrGetResponse getCountSoTmlGetRequest(CountSoTmlGetRequest request);
 
 
 }
