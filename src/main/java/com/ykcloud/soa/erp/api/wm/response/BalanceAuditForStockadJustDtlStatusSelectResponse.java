@@ -6,4 +6,13 @@ public class BalanceAuditForStockadJustDtlStatusSelectResponse extends MessagePa
 
 	private static final long serialVersionUID = 4339230455389767787L;
 
+	private  Integer  sum;//修改行数
+
+	public Integer getSum() {
+		return sum;
+	}
+
+	public void setSum(Integer sum) {
+		this.sum = sum;
+	}
 }

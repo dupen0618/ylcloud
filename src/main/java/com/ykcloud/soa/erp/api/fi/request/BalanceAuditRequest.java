@@ -14,28 +14,14 @@ import com.ykcloud.soa.erp.api.fi.model.BalanceDtlAppoint;
 public class BalanceAuditRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = -1766553622327456524L;
 	@NotNull(message = "结算单号不能为空！")
-	private List<String> balanceNo;
+	private String balanceNo;
 	
-	private List<BalanceDtlAppoint> balanceDtlAppoints;
-	
-	public List<String> getBalanceNo() {
+	public String getBalanceNo() {
 		return balanceNo;
 	}
-
-	public void setBalanceNo(List<String> balanceNo) {
+	public void setBalanceNo(String balanceNo) {
 		this.balanceNo = balanceNo;
 	}
-
-	public List<BalanceDtlAppoint> getBalanceDtlAppoints() {
-		return balanceDtlAppoints;
-	}
-
-	public void setBalanceDtlAppoints(List<BalanceDtlAppoint> balanceDtlAppoints) {
-		this.balanceDtlAppoints = balanceDtlAppoints;
-	}
-
 	
 	
-	
-
 }
