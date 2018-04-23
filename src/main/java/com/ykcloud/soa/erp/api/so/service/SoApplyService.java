@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.so.service;
 
+import com.ykcloud.soa.erp.api.scm.request.ShopTransferOrderActualQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.response.QtyForSoApplyCheckResponse;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplySubcontractSplitGetRequest;
@@ -24,6 +25,7 @@ import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByOperationCenterAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByReceiverConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.ShopTransferOrderActualQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferRejectAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.SoApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.SoOriginReservedNoResponse;
@@ -36,6 +38,15 @@ import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
  * @version <b>1.0.0</b>
  */
 public interface SoApplyService {
+	
+	/**
+	 * 店间调拨回写实际发货数量
+	 * @author tz.x
+	 * @date 2018年4月23日下午6:57:39
+	 * @param 
+	 * @return
+	 */
+	public ShopTransferOrderActualQtyUpdateResponse updateShopTransferOrderActualQty(ShopTransferOrderActualQtyUpdateRequest request);
 	
 	/**
 	 * 店间调拨驳回
