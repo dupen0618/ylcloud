@@ -1,14 +1,14 @@
-package com.ykcloud.soa.erp.api.wm.response;
+package com.ykcloud.soa.erp.api.wm.model;
 
-import com.gb.soa.omp.ccommon.api.response.MessagePack;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @Description: 查询盘点装箱单表头的出参
+ * @Description: 盘点箱（货架）信息
  * @author: henry.wang
- * @date: 2018/4/2 9:42
+ * @date: 2018/4/23 14:24
  **/
-public class StockTakingConHDRGetResponse extends MessagePack {
+public class ContainerInfoForStockCheck implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -20,14 +20,9 @@ public class StockTakingConHDRGetResponse extends MessagePack {
     private Long soFromType;// 来源
     private Long physicalNumId;// 物理仓库
     private String remark;// 备注
-    private Long carrySign;// 结转标识
     private Long planStatusNumId;//盘点计划单状态
 
     private Double totalByCon;  //当前箱盘点的合计数量
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public String getReservedNo() {
         return reservedNo;
@@ -91,14 +86,6 @@ public class StockTakingConHDRGetResponse extends MessagePack {
 
     public void setRemark(String remark) {
         this.remark = remark;
-    }
-
-    public Long getCarrySign() {
-        return carrySign;
-    }
-
-    public void setCarrySign(Long carrySign) {
-        this.carrySign = carrySign;
     }
 
     public Long getPlanStatusNumId() {
