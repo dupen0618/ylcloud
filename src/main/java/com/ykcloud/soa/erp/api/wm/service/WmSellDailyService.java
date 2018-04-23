@@ -1,9 +1,11 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.request.DataFromTmlGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.SellDailyBySeriesGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SellDailyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SellDailyUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.SeriesBySellDailyGetRequest;
+import com.ykcloud.soa.erp.api.wm.response.DataFromTmlGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailySeriesUpdateResponse;
 
@@ -27,4 +29,6 @@ public interface WmSellDailyService {
 
 	//联销获得结算
 	public SellDailyGetResponse getSubBlanceDtlLXInfoBySellDaily(SellDailyGetRequest request);
+
+	public DataFromTmlGenerateResponse generateDataFromTml(DataFromTmlGenerateRequest request);
 }

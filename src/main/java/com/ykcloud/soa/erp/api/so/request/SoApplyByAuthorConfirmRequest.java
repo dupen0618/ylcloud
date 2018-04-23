@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 //制单确认（仓间调拨、委外分解领用、政领料领用)的入参
 public class SoApplyByAuthorConfirmRequest extends AbstractUserSessionRequest {
@@ -12,6 +13,7 @@ public class SoApplyByAuthorConfirmRequest extends AbstractUserSessionRequest {
 		private Long subUnitNumId;  //门店编号
 		
 		@NotNull(message="日期不能为空")
+		@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 		private Date orderDate;    //日期
 		
 		@NotNull(message="申请单单号不能为空")
