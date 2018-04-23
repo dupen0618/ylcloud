@@ -11,9 +11,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
  * @Date 2018年4月4日 下午5:21:38
  */
 public class BalanceAuditRequest extends AbstractUserSessionRequest {
-
 	private static final long serialVersionUID = -1766553622327456524L;
-
 	@NotNull(message = "结算单号不能为空！")
 	private List<String> balanceNo;
 	

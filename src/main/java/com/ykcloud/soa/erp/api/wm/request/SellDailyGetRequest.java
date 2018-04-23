@@ -1,7 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -11,7 +11,7 @@ import java.util.Date;
  * @Author: ALi
  * @Date: 2018/4/13 20:28
  */
-public class SellDailyGetRequest extends AbstractUserSessionRequest {
+public class SellDailyGetRequest extends AbstractRequest {
     private static final long serialVersionUID = -2565804606566389459L;
     @NotNull(message = "门店编号不能为空！")
     private Long subUnitNumId;

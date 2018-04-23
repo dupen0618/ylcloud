@@ -5,15 +5,12 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import javax.validation.constraints.NotNull;
 
 /**
- * @Description: TODO
+ * @Description: 审核
  * @Author: ALi
- * @Date: 2018/4/19 18:24
+ * @Date: 2018/4/20 18:02
  */
-public class VoucherAndAccSubjectRequest extends AbstractUserSessionRequest {
-    private static final long serialVersionUID = 4627685577873375711L;
-
-    @NotNull(message = "凭证单号不能为空！")
-    private String voucherNumId;
+public class AuditRequest extends AbstractUserSessionRequest {
+    private static final long serialVersionUID = -1766553622327456524L;
     @NotNull(message = "原始状态不能为空！")
     private Long oldStatusNumId;
     @NotNull(message = "新状态不能为空！")
@@ -22,14 +19,6 @@ public class VoucherAndAccSubjectRequest extends AbstractUserSessionRequest {
     private String reservedNo;
     @NotNull(message = "业务类型不能为空！")
     private Long billTypeNumId;
-
-    public String getVoucherNumId() {
-        return voucherNumId;
-    }
-
-    public void setVoucherNumId(String voucherNumId) {
-        this.voucherNumId = voucherNumId;
-    }
 
     public Long getOldStatusNumId() {
         return oldStatusNumId;
