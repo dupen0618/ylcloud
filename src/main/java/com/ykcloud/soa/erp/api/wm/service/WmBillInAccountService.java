@@ -39,7 +39,7 @@ public interface WmBillInAccountService {
     //物理财务移库单(出库)
     WmBillInAccountResponse getWmBlMoveOutByMoveNumId(PhysicsWarehousepackingGetRequest request);
     //物理财务移库单(入库)
-    public WmBillInAccountResponse getWmBlMoveTurnIntoByMoveNumId(PhysicsWarehousepackingGetRequest request);
+    WmBillInAccountResponse getWmBlMoveTurnIntoByMoveNumId(PhysicsWarehousepackingGetRequest request);
     //物理财务加工单(原料)
     WmBillInAccountResponse getWmBlWorkRawDtlByWorkNumId(PhysicsWarehousepackingGetRequest request);
     //物理财务加工单(成品)
@@ -48,4 +48,11 @@ public interface WmBillInAccountService {
     WmBillInAccountResponse getWmBlLossHdrByLossNumId(PhysicsWarehousepackingGetRequest request);
     //物理仓日进销存
     public WmReceiptInAccountResponse setReceiptInAccountService(WmReceiptInAccountRequest request);
+    WmBillInAccountResponse ReceiptInAccountPhysicalDailyGAService(WmBillInAccountRequest wmBillInAccountRequest);
+    //物理仓月进销存
+    WmBillInAccountResponse ReceiptInAccountPhysicalMonthGAService(WmBillInAccountRequest wmBillInAccountRequest);
+    //财务库存处理-(批次库存日月进销存+商品成本)
+    public WmReceiptInAccountResponse setReceiptBillInAccount(WmReceiptInAccountRequest request);
+
+    public WmReceiptInAccountResponse setShipBillInAccount(WmReceiptInAccountRequest request);
 }

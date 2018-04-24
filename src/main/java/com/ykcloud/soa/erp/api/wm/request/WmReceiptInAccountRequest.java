@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
@@ -15,6 +16,10 @@ public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
     String reservedNo;
     @NotNull(message = "单据类型不能为空！")
     String typeNumId;
+
+    @ApiField(description = "门店编号")
+    @NotNull(message = "门店编号不能为空!")
+    private Long subUnitNumId;
 
     Long balaFuncId;
 
@@ -41,5 +46,13 @@ public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
 
     public void setBalaFuncId(Long balaFuncId) {
         this.balaFuncId = balaFuncId;
+    }
+
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
     }
 }
