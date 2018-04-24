@@ -4,10 +4,10 @@ import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrFuzzyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptProduceDateUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseShipHdrGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseShipHdrFuzzyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopHaveInventoryMaxBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
@@ -17,10 +17,10 @@ import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrFuzzyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptProduceDateUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseShipHdrGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseShipHdrFuzzyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopHaveInventoryMaxBatchPriceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopLastBatchPriceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse;
@@ -41,7 +41,7 @@ public interface WmReceiptService {
 	 * @author tz.x
 	 * @date 2018年3月26日下午2:03:24
 	 * @param 
-	 * @return
+	 * @returnj
 	 */
 	public ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse getReceiptSupConfirmDateAndStatusNumIdByPoNumId(
 			ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest request);
@@ -66,7 +66,8 @@ public interface WmReceiptService {
 	 *@param request{subUnitNumId,reservedNo,userNumId}
 	 *@return response{reservedNo,traySerlno,traySerlnoLable,trayConfirmQty,receiptQty,receiptConfirmQty}
 	 */
-	public ReceiptHdrGetResponse getReceiptHdr(ReceiptHdrGetRequest request);
+	public ReceiptHdrFuzzyGetResponse getReceiptHdrFuzzy(ReceiptHdrFuzzyGetRequest request);
+
 
 	//过期控制 证照控制
 	public ReceiptProduceDateUpdateResponse updateReceiptProduceDate(ReceiptProduceDateUpdateRequest request);
@@ -102,5 +103,6 @@ public interface WmReceiptService {
 	 *@param request{subUnitNumId,reservedNo}
 	 *@return response{code,message,reservedNo,traySerlno,traySerlnoLable}
 	 */
-	public ReverseShipHdrGetResponse getReverseShipHdr(ReverseShipHdrGetRequest request);
+	public ReverseShipHdrFuzzyGetResponse getReverseShipHdrFuzzy(ReverseShipHdrFuzzyGetRequest request);
+	
 }
