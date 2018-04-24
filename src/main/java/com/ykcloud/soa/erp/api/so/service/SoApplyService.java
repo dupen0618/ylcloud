@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.scm.request.ShopTransferOrderActualQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.response.QtyForSoApplyCheckResponse;
+import com.ykcloud.soa.erp.api.so.request.ActualQtyForReturnUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplySubcontractSplitGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyTransferBetweenShopGetRequest;
@@ -16,6 +17,7 @@ import com.ykcloud.soa.erp.api.so.request.ShopTransferRejectAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.SoOriginReservedNoRequest;
 import com.ykcloud.soa.erp.api.so.request.SoReturnApplyAuditRequest;
+import com.ykcloud.soa.erp.api.so.response.ActualQtyForReturnUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplySubcontractSplitGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenShopGetResponse;
@@ -152,4 +154,8 @@ public interface SoApplyService {
 	
 	//数量检查(店间调拨、仓间调拨、加工领料、行政领料)
     public QtyForSoApplyCheckResponse checkQtyForSoApply(QtyForSoApplyCheckRequest request);
+
+    //更改实际退货数量
+    public ActualQtyForReturnUpdateResponse updateActualQty(ActualQtyForReturnUpdateRequest request);
+
 }
