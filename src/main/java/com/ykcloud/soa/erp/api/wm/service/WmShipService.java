@@ -19,6 +19,7 @@ import com.ykcloud.soa.erp.api.wm.request.WmDataGetDataByBarcodeAndSoNumIdReques
 import com.ykcloud.soa.erp.api.wm.request.WmFinishShipContainerHdrRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmFinishSoPackingRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmQuerySoAndContainerRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmRfFinishOneStepRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmScanShipContainerRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipDtlWithNoBatchUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipFinishRequest;
@@ -46,6 +47,7 @@ import com.ykcloud.soa.erp.api.wm.response.WmDataGetDataByBarcodeAndSoNumIdRespo
 import com.ykcloud.soa.erp.api.wm.response.WmFinishShipContainerHdrResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmFinishSoPackingResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmQuerySoAndContainerResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmRfFinishOneStepResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmScanShipContainerHdrResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipDtlWithNoBatchUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipFinishResponse;
@@ -58,7 +60,7 @@ import com.ykcloud.soa.erp.api.wm.response.WmfinishPackingResponse;
 
 public interface WmShipService {
 
-		//后六位模糊查询波次号
+		//后六位模糊查询波次号,只查出status=2的号
 		public WmWlBcHdrGetResponse getWlbc(WmWlBcHdrGetRequest request);
 		
 		//扫描商品条码
@@ -187,4 +189,12 @@ public interface WmShipService {
 		 * @description 产生分拨单
 		 */
 		public WmAllotWithShipResponse allotSoWithShip(WmAllotWithShipRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月24日
+		 * @description RF一键出库
+		 */
+		public WmRfFinishOneStepResponse finishRfOneStep(WmRfFinishOneStepRequest request);
 }

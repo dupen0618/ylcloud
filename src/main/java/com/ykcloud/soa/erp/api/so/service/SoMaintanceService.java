@@ -12,6 +12,7 @@ import com.ykcloud.soa.erp.api.so.request.SoPackingUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoShipQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateSoOneRequest;
+import com.ykcloud.soa.erp.api.so.request.SoUpdateLockToPackingRequest;
 import com.ykcloud.soa.erp.api.so.request.SoWlbcAndSoBingingRequest;
 import com.ykcloud.soa.erp.api.so.response.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ApprovalReturnSoGenerateResponse;
@@ -25,6 +26,7 @@ import com.ykcloud.soa.erp.api.so.response.SoPackingUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoShipQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateSoOneResponse;
+import com.ykcloud.soa.erp.api.so.response.SoUpdateLockToPackingResponse;
 import com.ykcloud.soa.erp.api.so.response.SoWlbcAndSoBingingResponse;
 
 public interface SoMaintanceService {
@@ -77,4 +79,6 @@ public interface SoMaintanceService {
 	public CheckSoShipQtyAndPackingQtyResponse checkSoShipQtyAndPackingQty(CheckSoShipQtyAndPackingQtyRequest request);
 
 	public SoAllotWithShipResponse allotSoWithShip(SoAllotWithShipRequest request);
+	
+	public SoUpdateLockToPackingResponse updateSoLockToPacking(SoUpdateLockToPackingRequest request);
 }

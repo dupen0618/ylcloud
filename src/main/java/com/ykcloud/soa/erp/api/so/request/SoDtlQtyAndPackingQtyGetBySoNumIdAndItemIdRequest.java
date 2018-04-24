@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.so.request;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
@@ -18,6 +20,8 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 	
 	//sql是否要带itemNumId
 	private Long itemFlag;
+	
+	private Date orderDate;
 
 
 	public String getSoNumId() {
@@ -50,6 +54,14 @@ public class SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest extends AbstractR
 
 	public void setItemFlag(Long itemFlag) {
 		this.itemFlag = itemFlag;
+	}
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
 	}
 	
 	
