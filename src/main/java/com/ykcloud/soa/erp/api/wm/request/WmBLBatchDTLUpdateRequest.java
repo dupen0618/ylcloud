@@ -13,7 +13,7 @@ public class WmBLBatchDTLUpdateRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "订单编号不能为空！")
     String reservedNo;
 	@NotNull(message="门店编号不能为空")
-    String subUnitNumId;
+    Long subUnitNumId;
 
     public String getReservedNo() {
         return reservedNo;
@@ -23,11 +23,11 @@ public class WmBLBatchDTLUpdateRequest extends AbstractUserSessionRequest {
         this.reservedNo = reservedNo;
     }
 
-    public String getSubUnitNumId() {
+    public Long getSubUnitNumId() {
         return subUnitNumId;
     }
 
-    public void setSubUnitNumId(String subUnitNumId) {
+    public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
     }
 }
