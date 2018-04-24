@@ -7,15 +7,16 @@ public class FiBlSupBalanceDtlByBalanceNoRequest extends AbstractRequest{
 
 	private static final long serialVersionUID = -8931594271378510652L;
 
-	private Long balanceNo;
+	private String balanceNo;
 
-	public Long getBalanceNo() {
+	public String getBalanceNo() {
 		return balanceNo;
 	}
 
-	public void setBalanceNo(Long balanceNo) {
+	public void setBalanceNo(String balanceNo) {
 		this.balanceNo = balanceNo;
 	}
+
 	
 	
 }
