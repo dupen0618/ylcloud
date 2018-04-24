@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.response;
 
+import java.util.List;
+
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 /**
@@ -15,15 +17,15 @@ public class PoGenerateResponse extends MessagePack {
 	/**
 	 * 采购单号
 	 */
-	private String poNumId;
+	private List<String> poNumId;
 
-	public String getPoNumId() {
+	public List<String> getPoNumId() {
 		return poNumId;
 	}
 
-	public void setPoNumId(String poNumId) {
+	public void setPoNumId(List<String> poNumId) {
 		this.poNumId = poNumId;
 	}
-	
+
 	
 }
