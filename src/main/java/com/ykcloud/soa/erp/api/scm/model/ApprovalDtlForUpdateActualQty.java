@@ -27,6 +27,33 @@ public class ApprovalDtlForUpdateActualQty {
 	 * 赠品数量
 	 */
 	private Double pmyQty;
+	
+	/**
+	 * 审批单号
+	 */
+	private String approvalNumId;
+	
+	/**
+	 * 审批单行号
+	 */
+	private String series;
+
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
+
+	public String getApprovalNumId() {
+		return approvalNumId;
+	}
+
+	public void setApprovalNumId(String approvalNumId) {
+		this.approvalNumId = approvalNumId;
+	}
 
 	public String getApplyNumId() {
 		return applyNumId;

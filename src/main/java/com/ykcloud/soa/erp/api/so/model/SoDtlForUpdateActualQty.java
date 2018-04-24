@@ -27,6 +27,32 @@ public class SoDtlForUpdateActualQty {
 	 * 赠品实际发货数量
 	 */
 	private Long pmtSign;
+	
+	/**
+	 * 申请单行号
+	 */
+	private String applyLine;
+	
+	/**
+	 * 申请单号
+	 */
+	private String applyNumId;
+
+	public String getApplyNumId() {
+		return applyNumId;
+	}
+
+	public void setApplyNumId(String applyNumId) {
+		this.applyNumId = applyNumId;
+	}
+
+	public String getApplyLine() {
+		return applyLine;
+	}
+
+	public void setApplyLine(String applyLine) {
+		this.applyLine = applyLine;
+	}
 
 	public String getApprovalNumId() {
 		return approvalNumId;
