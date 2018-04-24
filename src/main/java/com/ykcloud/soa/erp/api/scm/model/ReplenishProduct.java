@@ -3,6 +3,8 @@ package com.ykcloud.soa.erp.api.scm.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class ReplenishProduct implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -59,8 +61,10 @@ public class ReplenishProduct implements Serializable {
 
 	private Long costTypeTemp;// 临时调价类型(502:临时调价 503:DM促销)
 
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date tempBeginDay;// DM/临时调价起始日期
 
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date tempEndDay;// DM/临时调价结束日期
 
 	private String promotionGrade;// 促销档期（503DM促销时返回）
@@ -85,8 +89,10 @@ public class ReplenishProduct implements Serializable {
 
 	private Double availbleSaleDays;// 可销天数
 
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date lastSaleDate;// 最近销售日期
 
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date lastReceiveDate;// 最近收货日期
 
 	private Double monthSaleQty;// 月销售量
