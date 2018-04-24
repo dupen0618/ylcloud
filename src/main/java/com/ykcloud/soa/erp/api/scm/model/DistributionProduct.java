@@ -61,6 +61,16 @@ public class DistributionProduct implements Serializable {
 	private Double openDistQty;// 在配数量
 
 	private Double minQty;// 最小配送数
+	
+	private String itemid; //商家编号
+
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
 
 	public Long getItemNumId() {
 		return itemNumId;
