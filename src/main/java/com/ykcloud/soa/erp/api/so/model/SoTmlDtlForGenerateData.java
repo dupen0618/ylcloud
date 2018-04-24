@@ -162,8 +162,18 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     private Long supplyUnitNumId;//默认供应商，为分组准备
 
+    private Long settlementType;//结算方式,为分组准备
+
     private List<SoTmlLockForGenerateData> lockTmlList;
 
+
+    public Long getSettlementType() {
+        return settlementType;
+    }
+
+    public void setSettlementType(Long settlementType) {
+        this.settlementType = settlementType;
+    }
 
     public List<SoTmlLockForGenerateData> getLockTmlList() {
         return lockTmlList;
