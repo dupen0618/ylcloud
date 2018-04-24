@@ -12,6 +12,7 @@ import com.ykcloud.soa.erp.api.wm.request.OmitCheckProductListQueryRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockAdjustAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockAdjustAccountRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockAdjustCreateRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockAdjustHzAuditRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckCancelRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockCheckFirstFinishRequest;
@@ -31,6 +32,7 @@ import com.ykcloud.soa.erp.api.wm.response.OmitCheckProductListQueryResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockAdjustAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockAdjustAccountResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockAdjustCreateResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockAdjustHzAuditResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckCancelResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockCheckFirstFinishResponse;
@@ -230,4 +232,12 @@ public interface WmStockCheckService {
      * @return
      */
     MyCheckContainerGetResponse getMyCheckContainer(MyCheckContainerGetRequest request);
+
+    /**
+     * 库存汇总调整生成盈亏单
+     * @param request
+     * @return
+     */
+    StockAdjustHzAuditResponse auditStockAdjustHz(StockAdjustHzAuditRequest request);
+
 }
