@@ -8,5 +8,5 @@ import com.ykcloud.soa.erp.api.fi.request.FiInAccountByReceiptRequest;
  * @Date 2018/4/18 13:53
  */
 public interface FiConsignmentInAccountService {
-    FiInAccountByReceiptResponse setInAccountByReceipt(FiInAccountByReceiptRequest request);
+    FiInAccountByReceiptResponse setConsignmentInAccount(FiInAccountByReceiptRequest request);
 }
