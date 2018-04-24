@@ -1,6 +1,5 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
@@ -25,6 +24,8 @@ public class WmProcessAccountRequest extends AbstractUserSessionRequest {
 
 	@NotNull(message = "入账类型不能为空！")
 	String accountName;
+
+	private Long balanceFunctionId;
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -64,5 +65,13 @@ public class WmProcessAccountRequest extends AbstractUserSessionRequest {
 
 	public void setSubUnitNumId(Long subUntiNumId) {
 		this.subUnitNumId = subUntiNumId;
+	}
+
+	public Long getBalanceFunctionId() {
+		return balanceFunctionId;
+	}
+
+	public void setBalanceFunctionId(Long balanceFunctionId) {
+		this.balanceFunctionId = balanceFunctionId;
 	}
 }

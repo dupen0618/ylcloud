@@ -20,6 +20,10 @@ public interface WmBillInAccountService {
     AffectRowsResponse LibraryOutByReservedNo(UsableInventoryByReservedNoGetRequest request);
     //可用库存盘盈盘亏单
     AffectRowsResponse inventoryProfitAndLossesByReservedNo(UsableInventoryByReservedNoGetRequest request);
+    //移库单(出库)
+    AffectRowsResponse  getWmBlMoveByMoveNumId(UsableInventoryByReservedNoGetRequest request);
+    //移库单(入库)
+    AffectRowsResponse  getWmBlMoveIntoByMoveNumId(UsableInventoryByReservedNoGetRequest request);
     //可用库存加工单
     AffectRowsResponse materialProcessingFromGetByWorkNumId(UsableInventoryByReservedNoGetRequest request);
     //可用库存成品
@@ -43,6 +47,7 @@ public interface WmBillInAccountService {
     //物理财务物理损溢单
     WmBillInAccountResponse getWmBlLossHdrByLossNumId(PhysicsWarehousepackingGetRequest request);
     //物理仓日进销存
+    public WmReceiptInAccountResponse setReceiptInAccountService(WmReceiptInAccountRequest request);
     WmBillInAccountResponse ReceiptInAccountPhysicalDailyGAService(WmBillInAccountRequest wmBillInAccountRequest);
     //物理仓月进销存
     WmBillInAccountResponse ReceiptInAccountPhysicalMonthGAService(WmBillInAccountRequest wmBillInAccountRequest);

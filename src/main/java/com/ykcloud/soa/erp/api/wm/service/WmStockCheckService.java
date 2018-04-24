@@ -7,6 +7,7 @@ import com.ykcloud.soa.erp.api.wm.request.ContainerRefreshRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemQtyStockCheckInputRequest;
+import com.ykcloud.soa.erp.api.wm.request.MyCheckContainerGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.OmitCheckProductListQueryRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockAdjustAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockAdjustAccountRequest;
@@ -25,6 +26,7 @@ import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerProductDetailGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeScanResponse;
+import com.ykcloud.soa.erp.api.wm.response.MyCheckContainerGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.OmitCheckProductListQueryResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockAdjustAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockAdjustAccountResponse;
@@ -220,4 +222,12 @@ public interface WmStockCheckService {
      */
     AccountForProduceStockProcessResponse processAccountForProduceStock(
         AccountForProduceStockProcessRequest request);
+
+    /**
+     * 查询当前人盘点的货架列表
+     *
+     * @param request
+     * @return
+     */
+    MyCheckContainerGetResponse getMyCheckContainer(MyCheckContainerGetRequest request);
 }

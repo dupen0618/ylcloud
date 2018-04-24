@@ -1,7 +1,5 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
@@ -25,6 +23,8 @@ public class UsableInventoryByReservedNoGetRequest extends AbstractUserSessionRe
 
     @NotNull(message = "门店编号不能为空！")
     Long subUnitNumId;
+
+    private Long balanceFunctionId;
 
     public String getReservedNo() {
         return reservedNo;
@@ -65,5 +65,13 @@ public class UsableInventoryByReservedNoGetRequest extends AbstractUserSessionRe
 
     public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
+    }
+
+    public Long getBalanceFunctionId() {
+        return balanceFunctionId;
+    }
+
+    public void setBalanceFunctionId(Long balanceFunctionId) {
+        this.balanceFunctionId = balanceFunctionId;
     }
 }
