@@ -51,6 +51,11 @@ public class FiPhysicalBatchAccountWba implements Serializable {
     private Long carrySign;
     private Long dataSign;
     private String itemid;
+    private Long PtyNum1;
+    private Long PtyNum2;
+    private Long PtyNum3;
+	private Long SettlementType;
+    private Long StorageDeptNumId;
 	public String getSeries() {
 		return series;
 	}
@@ -304,6 +309,47 @@ public class FiPhysicalBatchAccountWba implements Serializable {
 		this.itemid = itemid;
 	}
 
- 
-    
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public Long getPtyNum1() {
+		return PtyNum1;
+	}
+
+	public void setPtyNum1(Long ptyNum1) {
+		PtyNum1 = ptyNum1;
+	}
+
+	public Long getPtyNum2() {
+		return PtyNum2;
+	}
+
+	public void setPtyNum2(Long ptyNum2) {
+		PtyNum2 = ptyNum2;
+	}
+
+	public Long getPtyNum3() {
+		return PtyNum3;
+	}
+
+	public void setPtyNum3(Long ptyNum3) {
+		PtyNum3 = ptyNum3;
+	}
+
+	public Long getStorageDeptNumId() {
+		return StorageDeptNumId;
+	}
+
+	public void setStorageDeptNumId(Long storageDeptNumId) {
+		StorageDeptNumId = storageDeptNumId;
+	}
+
+	public Long getSettlementType() {
+		return SettlementType;
+	}
+
+	public void setSettlementType(Long settlementType) {
+		SettlementType = settlementType;
+	}
 }
