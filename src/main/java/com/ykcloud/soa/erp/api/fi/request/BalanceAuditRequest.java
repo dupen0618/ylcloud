@@ -1,10 +1,8 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
-import java.util.List;
 
 import javax.validation.constraints.NotNull;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
-import com.ykcloud.soa.erp.api.fi.model.BalanceDtlAppoint;
 
 /**
  * @Description:付款审核 结算单审核

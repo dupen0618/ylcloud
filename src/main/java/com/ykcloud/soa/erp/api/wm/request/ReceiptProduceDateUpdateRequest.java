@@ -6,6 +6,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
 *更新生产日期,证照验证响应类
@@ -13,7 +14,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 @date 2018年3月13日 下午4:19:33 新建
 **/
 //过期控制  证照控制 入参类
-public class ReceiptProduceDateUpdateRequest extends AbstractRequest {
+public class ReceiptProduceDateUpdateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 8792481116124137792L;
 

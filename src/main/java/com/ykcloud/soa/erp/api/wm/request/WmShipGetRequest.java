@@ -17,6 +17,8 @@ public class WmShipGetRequest extends AbstractUserSessionRequest {
 
 	private String containerSerlno;
 	
+	private Long containerFlag;
+	
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
@@ -39,6 +41,14 @@ public class WmShipGetRequest extends AbstractUserSessionRequest {
 
 	public void setContainerSerlno(String containerSerlno) {
 		this.containerSerlno = containerSerlno;
+	}
+
+	public Long getContainerFlag() {
+		return containerFlag;
+	}
+
+	public void setContainerFlag(Long containerFlag) {
+		this.containerFlag = containerFlag;
 	}
 	
 	

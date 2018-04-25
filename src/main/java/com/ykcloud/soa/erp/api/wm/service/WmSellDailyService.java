@@ -1,13 +1,17 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.request.BatchSupplyUnitNumIdRequest;
 import com.ykcloud.soa.erp.api.wm.request.DataFromTmlGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.SellDailyBySeriesGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SellDailyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SellDailyUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.SeriesBySellDailyGetRequest;
+import com.ykcloud.soa.erp.api.wm.response.BatchSupplyUnitNumIdResponse;
 import com.ykcloud.soa.erp.api.wm.response.DataFromTmlGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailySeriesUpdateResponse;
+
+import java.util.List;
 
 /**
  * @Description:零售销售出库日报明细
@@ -31,4 +35,7 @@ public interface WmSellDailyService {
 	public SellDailyGetResponse getSubBlanceDtlLXInfoBySellDaily(SellDailyGetRequest request);
 
 	public DataFromTmlGenerateResponse generateDataFromTml(DataFromTmlGenerateRequest request);
+
+	//获得没有结算的供应商
+	public BatchSupplyUnitNumIdResponse getBatchSupplyUnitNumId(BatchSupplyUnitNumIdRequest request);
 }

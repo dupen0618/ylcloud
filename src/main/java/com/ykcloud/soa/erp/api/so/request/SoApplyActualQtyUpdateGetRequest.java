@@ -3,21 +3,16 @@ package com.ykcloud.soa.erp.api.so.request;
 import java.util.Date;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+//商品发货数量回写so申请单入参
+public class SoApplyActualQtyUpdateGetRequest extends AbstractRequest {
+	private static final long serialVersionUID = 1L;
 
-public class SoConfirmTypeRequest extends AbstractRequest {
+	private String soNumId;     //订单单号
+	
+	private Long subUnitNumId;   //门店编号
+	
+	private Date orderDate;     //日期
 
-	private static final long serialVersionUID = 6020213655003704003L;
-	
-	private String soNumId;
-	
-	private Long confirmType;
-	
-	private Long subUnitNumId;
-	
-	private Long userNumId;
-	
-	private Date orderDate;
-	
 	public String getSoNumId() {
 		return soNumId;
 	}
@@ -26,29 +21,12 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 		this.soNumId = soNumId;
 	}
 
-	public Long getConfirmType() {
-		return confirmType;
-	}
-
-	public void setConfirmType(Long confirmType) {
-		this.confirmType = confirmType;
-	}
-
-
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
-	}
-
-	public Long getUserNumId() {
-		return userNumId;
-	}
-
-	public void setUserNumId(Long userNumId) {
-		this.userNumId = userNumId;
 	}
 
 	public Date getOrderDate() {
@@ -60,6 +38,7 @@ public class SoConfirmTypeRequest extends AbstractRequest {
 	}
 	
 	
-
+	
+	 
 
 }

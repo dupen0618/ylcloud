@@ -10,7 +10,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 @author hank.zhu
 @date 2018年4月19日 下午5:14:09 新建
 **/
-public class ReverseShipHdrGetRequest extends AbstractUserSessionRequest {
+public class ReverseShipHdrFuzzyGetRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = 3504288628107413793L;
 	
 	@ApiField(description = "门店编号")

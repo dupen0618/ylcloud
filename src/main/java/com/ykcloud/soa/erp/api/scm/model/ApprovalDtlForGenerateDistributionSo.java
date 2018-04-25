@@ -5,6 +5,8 @@ import java.io.Serializable;
 public class ApprovalDtlForGenerateDistributionSo implements Serializable {
 
 	private static final long serialVersionUID = 277797115130619689L;
+	
+	private Double confirmPmtQty;
 	private String series;
 	private Long ordSubUnitNumId;
 	private Long itemNumId;
@@ -25,6 +27,14 @@ public class ApprovalDtlForGenerateDistributionSo implements Serializable {
 	
 	private String supProduceDate;
 	
+	public Double getConfirmPmtQty() {
+		return confirmPmtQty;
+	}
+
+	public void setConfirmPmtQty(Double confirmPmtQty) {
+		this.confirmPmtQty = confirmPmtQty;
+	}
+
 	public String getSupProduceDate() {
 		return supProduceDate;
 	}

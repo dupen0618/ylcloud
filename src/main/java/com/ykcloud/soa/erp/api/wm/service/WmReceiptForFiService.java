@@ -7,6 +7,7 @@ import com.ykcloud.soa.erp.api.wm.request.BalanceAuditForSellDailyDtlStatusSelec
 import com.ykcloud.soa.erp.api.wm.request.BalanceAuditForStockadJustDtlStatusSelectRequest;
 import com.ykcloud.soa.erp.api.wm.request.BalanceAuditForWorkRawDtlStatusSelectRequest;
 import com.ykcloud.soa.erp.api.wm.request.BalanceDtlByDeductionSelectRequest;
+import com.ykcloud.soa.erp.api.wm.request.BatchSupplyUnitNumIdRequest;
 import com.ykcloud.soa.erp.api.wm.request.LoseDtlDataGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.LossDtlByBalanceSelectRequest;
 import com.ykcloud.soa.erp.api.wm.request.LossHdrSeriesGetRequest;
@@ -38,6 +39,7 @@ import com.ykcloud.soa.erp.api.wm.response.BalanceAuditForSellDailyDtlStatusSele
 import com.ykcloud.soa.erp.api.wm.response.BalanceAuditForStockadJustDtlStatusSelectResponse;
 import com.ykcloud.soa.erp.api.wm.response.BalanceAuditForWorkRawDtlStatusSelectResponse;
 import com.ykcloud.soa.erp.api.wm.response.BalanceDtlByDeductionSelectResponse;
+import com.ykcloud.soa.erp.api.wm.response.BatchSupplyUnitNumIdResponse;
 import com.ykcloud.soa.erp.api.wm.response.LossDtlByBalanceSelectResponse;
 import com.ykcloud.soa.erp.api.wm.response.LossDtlDataGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.LossHdrSeriesGetResponse;
@@ -92,7 +94,8 @@ public interface WmReceiptForFiService {
 	//结算单审核查询验收入库单明细表的状态
 	public BalanceAuditForReceiptDtlStatusSelectResponse selectReceiptDtlStatus (BalanceAuditForReceiptDtlStatusSelectRequest request);
 
-	
+	//获得没有结算的供应商
+	public BatchSupplyUnitNumIdResponse getBatchSupplyUnitNumIdYS(BatchSupplyUnitNumIdRequest request);
 	
 	//损益单获取数据
 	public LossDtlDataGetResponse getLoseDtlData(LoseDtlDataGetRequest request);
