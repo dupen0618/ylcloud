@@ -9,7 +9,7 @@ import com.ykcloud.soa.erp.api.wm.response.ShipBatchDtlDataGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipBatchDtlSeriesSelectResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipBatchDtlStatusUpdateResponse;
 
-public interface WmBlShipBatchdalService {
+public interface WmBlShipBatchDtlService {
 
 		//获取出库单明细数据
 		public ShipBatchDtlDataGetResponse getShipBatchDtlData(ShipBatchDtlDataGetRequest request);
@@ -21,6 +21,6 @@ public interface WmBlShipBatchdalService {
 		public ShipBatchDtlStatusUpdateResponse updateShipBatchDtlStatus(ShipBatchDtlStatusUpdateRequest request);
 		
 		//选择指定出库单生成结算单
-		public ShipBatchDtlAppointResponse AppointShipBatchDtl(ShipBatchDtlAppointRequest request);
+		public ShipBatchDtlAppointResponse AppointShipBatchDtlForBalance(ShipBatchDtlAppointRequest request);
 
 }
