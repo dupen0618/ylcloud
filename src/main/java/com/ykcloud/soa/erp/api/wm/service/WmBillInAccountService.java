@@ -64,4 +64,6 @@ public interface WmBillInAccountService {
     //财务库存加工单（成品）处理-(批次库存日月进销存+商品成本)
    WmReceiptInAccountResponse setProWork(WmReceiptInAccountRequest request);
 
+   //财务库存损溢单处理-(批次库存日月进销存+商品成本)
+
 }
