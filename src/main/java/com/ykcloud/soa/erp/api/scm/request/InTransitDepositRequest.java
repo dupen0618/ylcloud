@@ -21,7 +21,7 @@ public class InTransitDepositRequest extends AbstractRequest {
 	private Date orderDate;
 
 	@NotNull(message = "单据类型不能为空！")
-	@ApiField(description = "1:补货申请单 2:订货审批单 3:配送审批单 4:采购单  5:执行订单so")
+	@ApiField(description = "1:补货申请单 2:订货审批单 3:配送审批单 4:采购单  5:验收单  6:执行订单so")
 	private Long billCategory;
 
 	@NotNull(message = "单据类型不能为空！")

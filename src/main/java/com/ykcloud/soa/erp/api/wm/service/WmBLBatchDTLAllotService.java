@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.WmBLBatchDTLAllotRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmBLBatchDTLUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.response.WmBLBatchDTLAllotResponse;
 
 /**
@@ -15,16 +16,16 @@ public interface WmBLBatchDTLAllotService {
     WmBLBatchDTLAllotResponse updateBatchDtlByContainer(WmBLBatchDTLAllotRequest request);
 
     //单据批次分配--盘亏单
-    WmBLBatchDTLAllotResponse updateBatchDtlByStockAdjust(WmBLBatchDTLAllotRequest request);
+    WmBLBatchDTLAllotResponse updateBatchDtlByStockAdjust(WmBLBatchDTLUpdateRequest request);
 
     //单据批次分配--移库单-移出
     WmBLBatchDTLAllotResponse updateBatchDtlByMove(WmBLBatchDTLAllotRequest request);
 
     //单据批次分配--加工单-原材料
-    WmBLBatchDTLAllotResponse updateBatchDtlByWork(WmBLBatchDTLAllotRequest request);
+    WmBLBatchDTLAllotResponse updateBatchDtlByWork(WmBLBatchDTLUpdateRequest request);
 
     //单据批次分配--损溢单-损耗
-    WmBLBatchDTLAllotResponse updateBatchDtlByLoss(WmBLBatchDTLAllotRequest request);
+    WmBLBatchDTLAllotResponse updateBatchDtlByLoss(WmBLBatchDTLUpdateRequest request);
 
     //单据批次分配--出库日报
     WmBLBatchDTLAllotResponse updateBatchDtlByShipSellDaily(WmBLBatchDTLAllotRequest request);
