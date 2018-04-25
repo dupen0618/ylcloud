@@ -35,7 +35,4 @@ public interface WmSellDailyService {
 	public SellDailyGetResponse getSubBlanceDtlLXInfoBySellDaily(SellDailyGetRequest request);
 
 	public DataFromTmlGenerateResponse generateDataFromTml(DataFromTmlGenerateRequest request);
-
-	//获得没有结算的供应商
-	public BatchSupplyUnitNumIdResponse getBatchSupplyUnitNumId(BatchSupplyUnitNumIdRequest request);
 }
