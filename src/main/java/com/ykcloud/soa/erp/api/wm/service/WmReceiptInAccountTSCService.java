@@ -18,5 +18,5 @@ public interface WmReceiptInAccountTSCService {
     * @return WmPhysicalDailyAccountGaReponse    返回类型  
     * @throws
      */
-    public WmPhysicalDailyAccountGaReponse createWmPhysicalDailyAccountGaCarryDown(WmPhysicalDailyAccountGaRequest request);
+    WmPhysicalDailyAccountGaReponse createWmPhysicalDailyAccountGaCarryDown(WmPhysicalDailyAccountGaRequest request);
 }
