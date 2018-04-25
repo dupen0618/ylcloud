@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.wm.request;
+package com.ykcloud.soa.erp.api.fi.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
@@ -31,16 +31,11 @@ public class AccountForStockCheckByClassifyNumIdProcessRequest extends AbstractU
 
     @ApiField(description = "归集码商品")
     @NotNull(message = "归集码商品不能为空！")
-    private Long itemNumId;
+    private Long classifyNumId;
 
-    @ApiField(description = "盘点金额")
-    @NotNull(message = "盘点金额不能为空！")
-    private Double checkAmount;
-
-    @ApiField(description = "盈亏标识")
-    @NotNull(message = "盈亏标识不能为空！")
-    @Pattern(regexp = "[1-2]", message = "盈亏标识只能为1或2")
-    private String riseOrLoss;
+    @ApiField(description = "盘点盈亏金额")
+    @NotNull(message = "盘点盈亏金额不能为空！")
+    private Double workInAmount;
 
     @ApiField(description = "全盘或部分盘标识")
     @NotNull(message = "全盘或部分盘标识不能为空！")
@@ -71,28 +66,20 @@ public class AccountForStockCheckByClassifyNumIdProcessRequest extends AbstractU
         this.physicalNumId = physicalNumId;
     }
 
-    public Long getItemNumId() {
-        return itemNumId;
+    public Long getClassifyNumId() {
+        return classifyNumId;
     }
 
-    public void setItemNumId(Long itemNumId) {
-        this.itemNumId = itemNumId;
+    public void setClassifyNumId(Long classifyNumId) {
+        this.classifyNumId = classifyNumId;
     }
 
-    public Double getCheckAmount() {
-        return checkAmount;
+    public Double getWorkInAmount() {
+        return workInAmount;
     }
 
-    public void setCheckAmount(Double checkAmount) {
-        this.checkAmount = checkAmount;
-    }
-
-    public String getRiseOrLoss() {
-        return riseOrLoss;
-    }
-
-    public void setRiseOrLoss(String riseOrLoss) {
-        this.riseOrLoss = riseOrLoss;
+    public void setWorkInAmount(Double workInAmount) {
+        this.workInAmount = workInAmount;
     }
 
     public String getFullOrPart() {

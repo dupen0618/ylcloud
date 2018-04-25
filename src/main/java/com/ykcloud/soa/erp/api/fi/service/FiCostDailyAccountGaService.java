@@ -2,9 +2,11 @@ package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.request.LossAmount1AndFinalCostUpdateRequest;
 import com.ykcloud.soa.erp.api.fi.response.LossAmount1AndFinalCostUpdaterResponse;
-import com.ykcloud.soa.erp.api.wm.request.AccountForStockCheckByClassifyNumIdProcessRequest;
+import com.ykcloud.soa.erp.api.fi.request.AccountForSellDetermineInventoryByClassifyNumIdProcessRequest;
+import com.ykcloud.soa.erp.api.fi.request.AccountForStockCheckByClassifyNumIdProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.CarryDownDailyFiRequest;
-import com.ykcloud.soa.erp.api.wm.response.AccountForStockCheckByClassifyNumIdProcessResponse;
+import com.ykcloud.soa.erp.api.fi.response.AccountForSellDetermineInventoryByClassifyNumIdProcessResponse;
+import com.ykcloud.soa.erp.api.fi.response.AccountForStockCheckByClassifyNumIdProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.CarryDownDailyFiResponse;
 
 /**
@@ -21,15 +23,14 @@ public interface FiCostDailyAccountGaService {
 	public LossAmount1AndFinalCostUpdaterResponse updateLossAmount1AndFinalCost(LossAmount1AndFinalCostUpdateRequest request);
 
 	/**
-	 * 按归集码商品处理盘点财务账
+	 * 生产盘点财务成本处理（归集码拨入）
 	 *
 	 * @param request
 	 * @return
 	 */
 	AccountForStockCheckByClassifyNumIdProcessResponse processAccountForStockCheckByClassifyNumId(
 		AccountForStockCheckByClassifyNumIdProcessRequest request);
-	
-	
+
 	/**
 	 * 
 	* @Title: fiDailyCarryDown  
@@ -40,4 +41,13 @@ public interface FiCostDailyAccountGaService {
 	* @throws
 	 */
 	CarryDownDailyFiResponse fiDailyCarryDown(CarryDownDailyFiRequest request);
+
+	/**
+	 * 以销定入商品日结财务成本处理（归集码拨出）
+	 *
+	 * @param request
+	 * @return
+	 */
+	AccountForSellDetermineInventoryByClassifyNumIdProcessResponse processAccountForSellDetermineInventoryByClassifyNumId(
+		AccountForSellDetermineInventoryByClassifyNumIdProcessRequest request);
 }
