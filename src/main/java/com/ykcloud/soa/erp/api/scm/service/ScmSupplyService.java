@@ -3,9 +3,11 @@ package com.ykcloud.soa.erp.api.scm.service;
 import com.ykcloud.soa.erp.api.scm.request.DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.DirectWayReplenishweeklyDayFlagGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ProtocolBackOffRateGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.SupplyPayTypeIdGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.DirectWayReplenishweeklyDayFlagGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ProtocolBackOffRateGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.SupplyPayTypeIdGetResponse;
 
 public interface ScmSupplyService {
   
@@ -19,5 +21,8 @@ public interface ScmSupplyService {
   	//根据供应商找到对应的采购协议
 	public ProtocolBackOffRateGetResponse getProtocolBackOffRate(
 			ProtocolBackOffRateGetRequest request);
+
+	//获得结算周期
+	public SupplyPayTypeIdGetResponse getSupplyPayTypeId(SupplyPayTypeIdGetRequest Request);
 
 }
