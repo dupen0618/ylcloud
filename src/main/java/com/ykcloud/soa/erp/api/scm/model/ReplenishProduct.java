@@ -134,6 +134,16 @@ public class ReplenishProduct implements Serializable {
 	private String supplyContractCheckMessage;
 
 	private Long purchaseTypeNumId; // 采购途径 1:国内 2 国际
+	
+	private Long storageDeptNumId;  //仓库部门
+
+	public Long getStorageDeptNumId() {
+		return storageDeptNumId;
+	}
+
+	public void setStorageDeptNumId(Long storageDeptNumId) {
+		this.storageDeptNumId = storageDeptNumId;
+	}
 
 	public String getItemid() {
 		return itemid;
