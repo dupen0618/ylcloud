@@ -175,4 +175,7 @@ public interface WmReceiptForFiService {
 	//结算单审核查询销售日报明细表的状态
 	public BalanceAuditForSellDailyDtlStatusSelectResponse selectSellDailyDtlStatus (BalanceAuditForSellDailyDtlStatusSelectRequest request);
 
+
+	//获得没有结算的供应商
+	public BatchSupplyUnitNumIdResponse getBatchSupplyUnitNumIdDX(BatchSupplyUnitNumIdRequest request);
 }
