@@ -2,6 +2,8 @@ package com.ykcloud.soa.erp.api.so.model;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 //缺货商品
 public class LackInventoryProduct implements Serializable{
 	
@@ -9,6 +11,12 @@ public class LackInventoryProduct implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	/**
+	 * 行号
+	 */
+	@JsonIgnore
+	private String serise;
 
 		private Long itemNumId;  //商品编号
 		
@@ -21,6 +29,14 @@ public class LackInventoryProduct implements Serializable{
 		private Double lackQty; //缺少数量
 		
 		private String itemid;  //商家编码
+
+		public String getSerise() {
+			return serise;
+		}
+
+		public void setSerise(String serise) {
+			this.serise = serise;
+		}
 
 		public String getItemid() {
 			return itemid;
