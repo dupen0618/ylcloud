@@ -19,7 +19,7 @@ public class WmBLBatchDTLAllotRequest extends AbstractUserSessionRequest {
     @NotNull(message = "装箱单号不能为空！")
     String containerSerlno;
     @NotNull(message="门店编号不能为空")
-    String subUnitNumId;
+    Long subUnitNumId;
 
     public String getReservedNo() {
         return reservedNo;
@@ -37,11 +37,11 @@ public class WmBLBatchDTLAllotRequest extends AbstractUserSessionRequest {
         this.containerSerlno = containerSerlno;
     }
 
-    public String getSubUnitNumId() {
+    public Long getSubUnitNumId() {
         return subUnitNumId;
     }
 
-    public void setSubUnitNumId(String subUnitNumId) {
+    public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
     }
 }
