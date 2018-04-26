@@ -36,6 +36,8 @@ public class SdBlSoHdrAndSdBlSoDtl implements Serializable {
 
     private Long SETTLEMENT_TYPE;
 
+    private Long supply_unit_num_id;
+
     public String getSeries() {
         return series;
     }
@@ -163,5 +165,13 @@ public class SdBlSoHdrAndSdBlSoDtl implements Serializable {
 
     public void setSETTLEMENT_TYPE(Long SETTLEMENT_TYPE) {
         this.SETTLEMENT_TYPE = SETTLEMENT_TYPE;
+    }
+
+    public Long getSupply_unit_num_id() {
+        return supply_unit_num_id;
+    }
+
+    public void setSupply_unit_num_id(Long supply_unit_num_id) {
+        this.supply_unit_num_id = supply_unit_num_id;
     }
 }
