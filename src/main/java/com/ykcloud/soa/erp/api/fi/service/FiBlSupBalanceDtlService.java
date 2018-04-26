@@ -12,4 +12,6 @@ public interface FiBlSupBalanceDtlService {
 	/*List<FiBlSupBalanceDtl> getFiBlSupBalanceDtlByBalanceNo(Long tenantNumId, Long dataSign, Long balanceNo);
 	*/
 	FiBlSupBalanceDtlByBalanceNoResponse getFiBlSupBalanceDtlByBalanceNo(FiBlSupBalanceDtlByBalanceNoRequest request);
+
+    List<FiBlSupBalanceDtl> selectList(Long tenantNumId, Long dataSign, Long subUnitNumId, String reservedNo);
 }
