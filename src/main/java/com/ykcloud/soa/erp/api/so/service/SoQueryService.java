@@ -118,7 +118,9 @@ public interface SoQueryService {
     //统计小票单头数据
     public CountSoTmlHdrGetResponse getCountSoTmlGetRequest(CountSoTmlGetRequest request);
 
+    //查询订单单体
     List<SdBlSoHdrAndSdBlSoDtl> getSdBlSoHdrAndSdBlSoDtlBysoNumId(UsableInventoryByReservedNoGetRequest request);
 
+    //查询订单单头
     SoBlSoHdr getSdBlSoHdrBySoNumId(UsableInventoryByReservedNoGetRequest request);
 }
