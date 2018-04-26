@@ -23,6 +23,7 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 	private Long plmSign;
 	
 	private Date orderDate;
+	
 
 
 	public String getSoNumId() {
@@ -65,6 +66,5 @@ public class SoBySoNumIdAndItemNumIdGetRequest extends AbstractRequest {
 		this.orderDate = orderDate;
 	}
 
-	
 
 }

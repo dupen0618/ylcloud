@@ -197,4 +197,12 @@ public interface WmShipService {
 		 * @description RF一键出库
 		 */
 		public WmRfFinishOneStepResponse finishDirect(WmRfFinishOneStepRequest request);
+
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月26日
+		 * @description RF一键出库没有tcc
+		 */
+		public WmRfFinishOneStepResponse finishDirectWithNoTransaction(WmRfFinishOneStepRequest request);
 }
