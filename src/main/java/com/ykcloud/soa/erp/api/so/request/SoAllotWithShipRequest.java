@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.so.request;
 
+import java.util.Date;
 import java.util.Map;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
@@ -18,6 +19,10 @@ public class SoAllotWithShipRequest extends AbstractUserSessionRequest {
 	private Map<String, Double> qtyMap;
 	
 	private Long typeNumId;
+	
+	private String reservedNo;
+	
+	private Long cust_sub_unit_num_id;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -50,7 +55,22 @@ public class SoAllotWithShipRequest extends AbstractUserSessionRequest {
 	public void setTypeNumId(Long typeNumId) {
 		this.typeNumId = typeNumId;
 	}
-	
-	
+
+	public String getReservedNo() {
+		return reservedNo;
+	}
+
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
+	}
+
+	public Long getCust_sub_unit_num_id() {
+		return cust_sub_unit_num_id;
+	}
+
+	public void setCust_sub_unit_num_id(Long cust_sub_unit_num_id) {
+		this.cust_sub_unit_num_id = cust_sub_unit_num_id;
+	}
+
 
 }

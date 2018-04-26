@@ -7,15 +7,14 @@ public class PaymentAuditRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = -7738726438426208797L;
 
-	@NotNull(message = "结算单号不能为空！")
-	private String balanceNo;
+	@NotNull(message = "付款单号不能为空！")
+	private String reservedNo;
 
-	public String getBalanceNo() {
-		return balanceNo;
+	public String getReservedNo() {
+		return reservedNo;
 	}
 
-	public void setBalanceNo(String balanceNo) {
-		this.balanceNo = balanceNo;
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
 	}
-
 }

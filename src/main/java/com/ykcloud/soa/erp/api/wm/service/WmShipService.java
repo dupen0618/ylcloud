@@ -196,5 +196,5 @@ public interface WmShipService {
 		 * @date 2018年4月24日
 		 * @description RF一键出库
 		 */
-		public WmRfFinishOneStepResponse finishRfOneStep(WmRfFinishOneStepRequest request);
+		public WmRfFinishOneStepResponse finishDirect(WmRfFinishOneStepRequest request);
 }

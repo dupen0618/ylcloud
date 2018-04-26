@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.model.ShipSellDailyInfo;
 import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.*;
 import com.ykcloud.soa.erp.api.wm.response.LossWorkconfirmResponse;
@@ -54,6 +55,13 @@ public interface WmWorkService {
 
 	//溢出转码入账
 	public WorkLossChangeConfirmResponse confirmWorkLossChange(WorkLossChangeConfirmRequest request);
-	
-	
+
+	/**
+	 * 以销定入商品日结处理
+	 *
+	 * @param request
+	 * @return
+	 * @author henry.wang
+	 */
+	SellDetermineInventoryByResponse bySellDetermineInventory(SellDetermineInventoryByRequest request);
 }

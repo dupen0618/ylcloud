@@ -31,11 +31,5 @@ public interface WmSellDailyService {
 	//修改销售日报结算状态
 	public SellDailySeriesUpdateResponse updateStatusNumId(SellDailyUpdateRequest request);
 
-	//联销获得结算
-	public SellDailyGetResponse getSubBlanceDtlLXInfoBySellDaily(SellDailyGetRequest request);
-
 	public DataFromTmlGenerateResponse generateDataFromTml(DataFromTmlGenerateRequest request);
-
-	//获得没有结算的供应商
-	public BatchSupplyUnitNumIdResponse getBatchSupplyUnitNumId(BatchSupplyUnitNumIdRequest request);
 }
