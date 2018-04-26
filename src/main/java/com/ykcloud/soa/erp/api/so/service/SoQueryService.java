@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.so.service;
 
+import com.ykcloud.soa.erp.api.so.model.SdBlSoHdrAndSdBlSoDtl;
 import com.ykcloud.soa.erp.api.so.request.CountSoTmlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DemandSaleStatisticGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayOpenDistDeliveryQtyGetRequest;
@@ -39,7 +40,10 @@ import com.ykcloud.soa.erp.api.so.response.SoStatusOfWlbcResponse;
 import com.ykcloud.soa.erp.api.so.response.SoTmlHdrLimitGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyToReturnAmoutGetResponse;
 import com.ykcloud.soa.erp.api.wm.request.SoLockQtyByWlbcRequest;
+import com.ykcloud.soa.erp.api.wm.request.UsableInventoryByReservedNoGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.SoLockQtyByWlbcResponse;
+
+import java.util.List;
 
 
 //查询分仓在途数的接口,以及查询销售的信息
@@ -113,5 +117,5 @@ public interface SoQueryService {
     //统计小票单头数据
     public CountSoTmlHdrGetResponse getCountSoTmlGetRequest(CountSoTmlGetRequest request);
 
-
+    List<SdBlSoHdrAndSdBlSoDtl> getSdBlSoHdrAndSdBlSoDtlBysoNumId(UsableInventoryByReservedNoGetRequest request);
 }

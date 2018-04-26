@@ -27,57 +27,57 @@ public class EX_ARC_BALA_FUNC_DAILY_PHWBA {
 
     private Long EXPECT_FIRST_QTY_SIGN;//初期数量
 
-    private Double IN_QTY_SIGN;//进货数量
+    private Long IN_QTY_SIGN;//进货数量
 
-    private Double INSIDE_QTY_SIGN;//内部进货数量
+    private Long INSIDE_QTY_SIGN;//内部进货数量
 
-    private Double ALLOT_IN_QTY_SIGN;//拨入数量
+    private Long ALLOT_IN_QTY_SIGN;//拨入数量
 
-    private Double WORK_IN_QTY_SIGN;//加工拨入数量
+    private Long WORK_IN_QTY_SIGN;//加工拨入数量
 
-    private Double RISE_QTY_SIGN;//升溢数量
+    private Long RISE_QTY_SIGN;//升溢数量
 
-    private Double LOSS_QTY_SIGN;//损耗数量
+    private Long LOSS_QTY_SIGN;//损耗数量
 
-    private Double FRESH_LOSS_QTY_SIGN;//生鲜损耗数量
+    private Long FRESH_LOSS_QTY_SIGN;//生鲜损耗数量
 
-    private Double ALLOT_OUT_QTY_SIGN;//拨出数量
+    private Long ALLOT_OUT_QTY_SIGN;//拨出数量
 
-    private Double WORK_OUT_QTY_SIGN;//加工拨出数量
+    private Long WORK_OUT_QTY_SIGN;//加工拨出数量
 
-    private Double TURN_PMT_QTY_SIGN;//转赠品数量
+    private Long TURN_PMT_QTY_SIGN;//转赠品数量
 
-    private Double SELL_QTY_SIGN;//销售数量
+    private Long SELL_QTY_SIGN;//销售数量
 
-    private Double ONLINE_SELL_QTY_SIGN;//其中线上数量
+    private Long ONLINE_SELL_QTY_SIGN;//其中线上数量
 
-    private Double SHOP_SELL_QTY_SIGN;//其中门店数量
+    private Long SHOP_SELL_QTY_SIGN;//其中门店数量
 
-    private Double ONLINE_WAIT_PACKING_QTY_SIGN;//线上待拣货数量
+    private Long ONLINE_WAIT_PACKING_QTY_SIGN;//线上待拣货数量
 
-    private Double ONLINE_PACKING_QTY_SIGN;//线上已拣货数量
+    private Long ONLINE_PACKING_QTY_SIGN;//线上已拣货数量
 
-    private Double ONLINE_SHIP_QTY_SIGN;//线上已出库数量
+    private Long ONLINE_SHIP_QTY_SIGN;//线上已出库数量
 
-    private Double ONLINE_CANCEL_QTY_SIGN;//线上取消数量
+    private Long ONLINE_CANCEL_QTY_SIGN;//线上取消数量
 
-    private Double ONLINE_WAIT_BACK_QTY_SIGN;//线上待退货数量
+    private Long ONLINE_WAIT_BACK_QTY_SIGN;//线上待退货数量
 
-    private Double ONLINE_BACK_QTY_SIGN;//线上已退货数量
+    private Long ONLINE_BACK_QTY_SIGN;//线上已退货数量
 
-    private Double SHOP_BACK_QTY_SIGN;//门店已退货数量
+    private Long SHOP_BACK_QTY_SIGN;//门店已退货数量
 
-    private Double ONLINE_WAIT_WORK_QTY_SIGN;//线上待加工数量
+    private Long ONLINE_WAIT_WORK_QTY_SIGN;//线上待加工数量
 
-    private Double ONLINE_WORK_QTY_SIGN;//线上已加工数量
+    private Long ONLINE_WORK_QTY_SIGN;//线上已加工数量
 
-    private Double IN_SELL_QTY_SIGN;//内部销售数量
+    private Long IN_SELL_QTY_SIGN;//内部销售数量
 
-    private Double FOR_SHARE_SELL_QTY_SIGN;//待分摊销售数量
+    private Long FOR_SHARE_SELL_QTY_SIGN;//待分摊销售数量
 
-    private Double FINAL_QTY_SIGN;//期末数量
+    private Long FINAL_QTY_SIGN;//期末数量
 
-    private Double FINAL_AVAL_QTY_SIGN;//期末可用
+    private Long FINAL_AVAL_QTY_SIGN;//期末可用
 
     private String GACOMPAREFIELDNAME;//减库存的时候用于判断是否够的Qty字段
 
@@ -169,211 +169,195 @@ public class EX_ARC_BALA_FUNC_DAILY_PHWBA {
         this.EXPECT_FIRST_QTY_SIGN = EXPECT_FIRST_QTY_SIGN;
     }
 
-    public Double getIN_QTY_SIGN() {
+    public Long getIN_QTY_SIGN() {
         return IN_QTY_SIGN;
     }
 
-    public void setIN_QTY_SIGN(Double IN_QTY_SIGN) {
+    public void setIN_QTY_SIGN(Long IN_QTY_SIGN) {
         this.IN_QTY_SIGN = IN_QTY_SIGN;
     }
 
-    public Double getINSIDE_QTY_SIGN() {
+    public Long getINSIDE_QTY_SIGN() {
         return INSIDE_QTY_SIGN;
     }
 
-    public void setINSIDE_QTY_SIGN(Double INSIDE_QTY_SIGN) {
+    public void setINSIDE_QTY_SIGN(Long INSIDE_QTY_SIGN) {
         this.INSIDE_QTY_SIGN = INSIDE_QTY_SIGN;
     }
 
-    public Double getALLOT_IN_QTY_SIGN() {
+    public Long getALLOT_IN_QTY_SIGN() {
         return ALLOT_IN_QTY_SIGN;
     }
 
-    public void setALLOT_IN_QTY_SIGN(Double ALLOT_IN_QTY_SIGN) {
+    public void setALLOT_IN_QTY_SIGN(Long ALLOT_IN_QTY_SIGN) {
         this.ALLOT_IN_QTY_SIGN = ALLOT_IN_QTY_SIGN;
     }
 
-    public Double getWORK_IN_QTY_SIGN() {
+    public Long getWORK_IN_QTY_SIGN() {
         return WORK_IN_QTY_SIGN;
     }
 
-    public void setWORK_IN_QTY_SIGN(Double WORK_IN_QTY_SIGN) {
+    public void setWORK_IN_QTY_SIGN(Long WORK_IN_QTY_SIGN) {
         this.WORK_IN_QTY_SIGN = WORK_IN_QTY_SIGN;
     }
 
-    public Double getRISE_QTY_SIGN() {
+    public Long getRISE_QTY_SIGN() {
         return RISE_QTY_SIGN;
     }
 
-    public void setRISE_QTY_SIGN(Double RISE_QTY_SIGN) {
+    public void setRISE_QTY_SIGN(Long RISE_QTY_SIGN) {
         this.RISE_QTY_SIGN = RISE_QTY_SIGN;
     }
 
-    public Double getLOSS_QTY_SIGN() {
+    public Long getLOSS_QTY_SIGN() {
         return LOSS_QTY_SIGN;
     }
 
-    public void setLOSS_QTY_SIGN(Double LOSS_QTY_SIGN) {
+    public void setLOSS_QTY_SIGN(Long LOSS_QTY_SIGN) {
         this.LOSS_QTY_SIGN = LOSS_QTY_SIGN;
     }
 
-    public Double getFRESH_LOSS_QTY_SIGN() {
+    public Long getFRESH_LOSS_QTY_SIGN() {
         return FRESH_LOSS_QTY_SIGN;
     }
 
-    public void setFRESH_LOSS_QTY_SIGN(Double FRESH_LOSS_QTY_SIGN) {
+    public void setFRESH_LOSS_QTY_SIGN(Long FRESH_LOSS_QTY_SIGN) {
         this.FRESH_LOSS_QTY_SIGN = FRESH_LOSS_QTY_SIGN;
     }
 
-    public Double getALLOT_OUT_QTY_SIGN() {
+    public Long getALLOT_OUT_QTY_SIGN() {
         return ALLOT_OUT_QTY_SIGN;
     }
 
-    public void setALLOT_OUT_QTY_SIGN(Double ALLOT_OUT_QTY_SIGN) {
+    public void setALLOT_OUT_QTY_SIGN(Long ALLOT_OUT_QTY_SIGN) {
         this.ALLOT_OUT_QTY_SIGN = ALLOT_OUT_QTY_SIGN;
     }
 
-    public Double getWORK_OUT_QTY_SIGN() {
-        return WORK_OUT_QTY_SIGN;
-    }
-
-    public void setWORK_OUT_QTY_SIGN(Double WORK_OUT_QTY_SIGN) {
-        this.WORK_OUT_QTY_SIGN = WORK_OUT_QTY_SIGN;
-    }
-
-    public Double getTURN_PMT_QTY_SIGN() {
+    public Long getTURN_PMT_QTY_SIGN() {
         return TURN_PMT_QTY_SIGN;
     }
 
-    public void setTURN_PMT_QTY_SIGN(Double TURN_PMT_QTY_SIGN) {
+    public void setTURN_PMT_QTY_SIGN(Long TURN_PMT_QTY_SIGN) {
         this.TURN_PMT_QTY_SIGN = TURN_PMT_QTY_SIGN;
     }
 
-    public Double getSELL_QTY_SIGN() {
+    public Long getSELL_QTY_SIGN() {
         return SELL_QTY_SIGN;
     }
 
-    public void setSELL_QTY_SIGN(Double SELL_QTY_SIGN) {
+    public void setSELL_QTY_SIGN(Long SELL_QTY_SIGN) {
         this.SELL_QTY_SIGN = SELL_QTY_SIGN;
     }
 
-    public Double getONLINE_SELL_QTY_SIGN() {
+    public Long getONLINE_SELL_QTY_SIGN() {
         return ONLINE_SELL_QTY_SIGN;
     }
 
-    public void setONLINE_SELL_QTY_SIGN(Double ONLINE_SELL_QTY_SIGN) {
+    public void setONLINE_SELL_QTY_SIGN(Long ONLINE_SELL_QTY_SIGN) {
         this.ONLINE_SELL_QTY_SIGN = ONLINE_SELL_QTY_SIGN;
     }
 
-    public Double getSHOP_SELL_QTY_SIGN() {
+    public Long getSHOP_SELL_QTY_SIGN() {
         return SHOP_SELL_QTY_SIGN;
     }
 
-    public void setSHOP_SELL_QTY_SIGN(Double SHOP_SELL_QTY_SIGN) {
+    public void setSHOP_SELL_QTY_SIGN(Long SHOP_SELL_QTY_SIGN) {
         this.SHOP_SELL_QTY_SIGN = SHOP_SELL_QTY_SIGN;
     }
 
-    public Double getONLINE_WAIT_PACKING_QTY_SIGN() {
+    public Long getONLINE_WAIT_PACKING_QTY_SIGN() {
         return ONLINE_WAIT_PACKING_QTY_SIGN;
     }
 
-    public void setONLINE_WAIT_PACKING_QTY_SIGN(Double ONLINE_WAIT_PACKING_QTY_SIGN) {
+    public void setONLINE_WAIT_PACKING_QTY_SIGN(Long ONLINE_WAIT_PACKING_QTY_SIGN) {
         this.ONLINE_WAIT_PACKING_QTY_SIGN = ONLINE_WAIT_PACKING_QTY_SIGN;
     }
 
-    public Double getONLINE_PACKING_QTY_SIGN() {
+    public Long getONLINE_PACKING_QTY_SIGN() {
         return ONLINE_PACKING_QTY_SIGN;
     }
 
-    public void setONLINE_PACKING_QTY_SIGN(Double ONLINE_PACKING_QTY_SIGN) {
+    public void setONLINE_PACKING_QTY_SIGN(Long ONLINE_PACKING_QTY_SIGN) {
         this.ONLINE_PACKING_QTY_SIGN = ONLINE_PACKING_QTY_SIGN;
     }
 
-    public Double getONLINE_SHIP_QTY_SIGN() {
-        return ONLINE_SHIP_QTY_SIGN;
-    }
-
-    public void setONLINE_SHIP_QTY_SIGN(Double ONLINE_SHIP_QTY_SIGN) {
-        this.ONLINE_SHIP_QTY_SIGN = ONLINE_SHIP_QTY_SIGN;
-    }
-
-    public Double getONLINE_CANCEL_QTY_SIGN() {
+    public Long getONLINE_CANCEL_QTY_SIGN() {
         return ONLINE_CANCEL_QTY_SIGN;
     }
 
-    public void setONLINE_CANCEL_QTY_SIGN(Double ONLINE_CANCEL_QTY_SIGN) {
+    public void setONLINE_CANCEL_QTY_SIGN(Long ONLINE_CANCEL_QTY_SIGN) {
         this.ONLINE_CANCEL_QTY_SIGN = ONLINE_CANCEL_QTY_SIGN;
     }
 
-    public Double getONLINE_WAIT_BACK_QTY_SIGN() {
+    public Long getONLINE_WAIT_BACK_QTY_SIGN() {
         return ONLINE_WAIT_BACK_QTY_SIGN;
     }
 
-    public void setONLINE_WAIT_BACK_QTY_SIGN(Double ONLINE_WAIT_BACK_QTY_SIGN) {
+    public void setONLINE_WAIT_BACK_QTY_SIGN(Long ONLINE_WAIT_BACK_QTY_SIGN) {
         this.ONLINE_WAIT_BACK_QTY_SIGN = ONLINE_WAIT_BACK_QTY_SIGN;
     }
 
-    public Double getONLINE_BACK_QTY_SIGN() {
+    public Long getONLINE_BACK_QTY_SIGN() {
         return ONLINE_BACK_QTY_SIGN;
     }
 
-    public void setONLINE_BACK_QTY_SIGN(Double ONLINE_BACK_QTY_SIGN) {
+    public void setONLINE_BACK_QTY_SIGN(Long ONLINE_BACK_QTY_SIGN) {
         this.ONLINE_BACK_QTY_SIGN = ONLINE_BACK_QTY_SIGN;
     }
 
-    public Double getSHOP_BACK_QTY_SIGN() {
+    public Long getSHOP_BACK_QTY_SIGN() {
         return SHOP_BACK_QTY_SIGN;
     }
 
-    public void setSHOP_BACK_QTY_SIGN(Double SHOP_BACK_QTY_SIGN) {
+    public void setSHOP_BACK_QTY_SIGN(Long SHOP_BACK_QTY_SIGN) {
         this.SHOP_BACK_QTY_SIGN = SHOP_BACK_QTY_SIGN;
     }
 
-    public Double getONLINE_WAIT_WORK_QTY_SIGN() {
+    public Long getONLINE_WAIT_WORK_QTY_SIGN() {
         return ONLINE_WAIT_WORK_QTY_SIGN;
     }
 
-    public void setONLINE_WAIT_WORK_QTY_SIGN(Double ONLINE_WAIT_WORK_QTY_SIGN) {
+    public void setONLINE_WAIT_WORK_QTY_SIGN(Long ONLINE_WAIT_WORK_QTY_SIGN) {
         this.ONLINE_WAIT_WORK_QTY_SIGN = ONLINE_WAIT_WORK_QTY_SIGN;
     }
 
-    public Double getONLINE_WORK_QTY_SIGN() {
+    public Long getONLINE_WORK_QTY_SIGN() {
         return ONLINE_WORK_QTY_SIGN;
     }
 
-    public void setONLINE_WORK_QTY_SIGN(Double ONLINE_WORK_QTY_SIGN) {
+    public void setONLINE_WORK_QTY_SIGN(Long ONLINE_WORK_QTY_SIGN) {
         this.ONLINE_WORK_QTY_SIGN = ONLINE_WORK_QTY_SIGN;
     }
 
-    public Double getIN_SELL_QTY_SIGN() {
+    public Long getIN_SELL_QTY_SIGN() {
         return IN_SELL_QTY_SIGN;
     }
 
-    public void setIN_SELL_QTY_SIGN(Double IN_SELL_QTY_SIGN) {
+    public void setIN_SELL_QTY_SIGN(Long IN_SELL_QTY_SIGN) {
         this.IN_SELL_QTY_SIGN = IN_SELL_QTY_SIGN;
     }
 
-    public Double getFOR_SHARE_SELL_QTY_SIGN() {
+    public Long getFOR_SHARE_SELL_QTY_SIGN() {
         return FOR_SHARE_SELL_QTY_SIGN;
     }
 
-    public void setFOR_SHARE_SELL_QTY_SIGN(Double FOR_SHARE_SELL_QTY_SIGN) {
+    public void setFOR_SHARE_SELL_QTY_SIGN(Long FOR_SHARE_SELL_QTY_SIGN) {
         this.FOR_SHARE_SELL_QTY_SIGN = FOR_SHARE_SELL_QTY_SIGN;
     }
 
-    public Double getFINAL_QTY_SIGN() {
+    public Long getFINAL_QTY_SIGN() {
         return FINAL_QTY_SIGN;
     }
 
-    public void setFINAL_QTY_SIGN(Double FINAL_QTY_SIGN) {
+    public void setFINAL_QTY_SIGN(Long FINAL_QTY_SIGN) {
         this.FINAL_QTY_SIGN = FINAL_QTY_SIGN;
     }
 
-    public Double getFINAL_AVAL_QTY_SIGN() {
+    public Long getFINAL_AVAL_QTY_SIGN() {
         return FINAL_AVAL_QTY_SIGN;
     }
 
-    public void setFINAL_AVAL_QTY_SIGN(Double FINAL_AVAL_QTY_SIGN) {
+    public void setFINAL_AVAL_QTY_SIGN(Long FINAL_AVAL_QTY_SIGN) {
         this.FINAL_AVAL_QTY_SIGN = FINAL_AVAL_QTY_SIGN;
     }
 
@@ -415,5 +399,21 @@ public class EX_ARC_BALA_FUNC_DAILY_PHWBA {
 
     public void setCREATE_DTME(Date CREATE_DTME) {
         this.CREATE_DTME = CREATE_DTME;
+    }
+
+    public Long getWORK_OUT_QTY_SIGN() {
+        return WORK_OUT_QTY_SIGN;
+    }
+
+    public void setWORK_OUT_QTY_SIGN(Long WORK_OUT_QTY_SIGN) {
+        this.WORK_OUT_QTY_SIGN = WORK_OUT_QTY_SIGN;
+    }
+
+    public Long getONLINE_SHIP_QTY_SIGN() {
+        return ONLINE_SHIP_QTY_SIGN;
+    }
+
+    public void setONLINE_SHIP_QTY_SIGN(Long ONLINE_SHIP_QTY_SIGN) {
+        this.ONLINE_SHIP_QTY_SIGN = ONLINE_SHIP_QTY_SIGN;
     }
 }

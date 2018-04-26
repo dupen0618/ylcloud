@@ -16,6 +16,9 @@ public class WmAllotWithShipRequest extends AbstractUserSessionRequest {
 	
 	@NotNull(message = "出库单号不能为空! ")
 	private String reservedNo;
+	
+	@NotNull(message = "验收单号不能为空! ")
+	private String receiptReservedNo;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -31,6 +34,14 @@ public class WmAllotWithShipRequest extends AbstractUserSessionRequest {
 
 	public void setReservedNo(String reservedNo) {
 		this.reservedNo = reservedNo;
+	}
+
+	public String getReceiptReservedNo() {
+		return receiptReservedNo;
+	}
+
+	public void setReceiptReservedNo(String receiptReservedNo) {
+		this.receiptReservedNo = receiptReservedNo;
 	}
 	
 	
