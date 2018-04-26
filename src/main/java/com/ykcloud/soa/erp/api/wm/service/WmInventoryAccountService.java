@@ -19,6 +19,16 @@ public interface WmInventoryAccountService {
 	 */
 	public ReceiptInventoryAccountUpdateResponse updateReceiptInventoryAccount(ReceiptInventoryAccountUpdateRequest request);
 	
+	
+	/**
+	 *@Description: 仓库收货,业务帐处理   ;在验收单验收复核完成后,通过消息调用触发  不带TCC
+	 *@Auther hank
+	 *@Date 2018-4-12
+	 *@param request{subUnitNumId,reservedNo,userNumId}
+	 *@return response{}
+	 */
+	public ReceiptInventoryAccountUpdateResponse updateReceiptInventoryAccountWithNoTransaction(ReceiptInventoryAccountUpdateRequest request);
+	
 	/**
 	 * 
 	 * @description 
