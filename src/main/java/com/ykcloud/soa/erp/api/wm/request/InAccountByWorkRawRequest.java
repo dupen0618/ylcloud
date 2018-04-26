@@ -12,7 +12,7 @@ public class InAccountByWorkRawRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = 1L;
 
     @NotNull(message = "订单编号不能为空！")
-    String reservedNo;
+    String workNumId;
     @NotNull(message = "单据类型不能为空！")
     Long typeNumId;
     @NotNull(message="门店编号不能为空")
@@ -20,12 +20,12 @@ public class InAccountByWorkRawRequest extends AbstractUserSessionRequest {
 
     Long balaFuncId;
 
-    public String getReservedNo() {
-        return reservedNo;
+    public String getWorkNumId() {
+        return workNumId;
     }
 
-    public void setReservedNo(String reservedNo) {
-        this.reservedNo = reservedNo;
+    public void setWorkNumId(String workNumId) {
+        this.workNumId = workNumId;
     }
 
     public Long getTypeNumId() {
