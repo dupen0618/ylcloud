@@ -2,6 +2,8 @@ package com.ykcloud.soa.erp.api.fi.request;
 
 import java.util.Date;
 import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
@@ -19,9 +21,11 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractUserSessionReq
 	@NotNull(message = "供应商编号不能为空！")
 	private Long unitNumId;
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private Date startDate;
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
 	@NotNull(message = "截止日期不能为空！")
 	private Date endDate;
 		
