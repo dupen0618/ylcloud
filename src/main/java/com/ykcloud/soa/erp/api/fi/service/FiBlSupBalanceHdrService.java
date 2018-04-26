@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
+import com.ykcloud.soa.erp.api.fi.model.FiBlSupBalanceHdr;
 import com.ykcloud.soa.erp.api.fi.request.SupplyHdrSeriesGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.SupplyHdrStatusUpdateRequest;
 import com.ykcloud.soa.erp.api.fi.response.SupplyHdrSeriesGetResponse;
@@ -18,4 +19,7 @@ public interface FiBlSupBalanceHdrService {
 	
 	//根据行号修改供应商状态
 	public SupplyHdrStatusUpdateResponse UpdateSupplyHdrStatus(SupplyHdrStatusUpdateRequest request);
+
+	//获取单头
+	FiBlSupBalanceHdr fetchOne(Long tenantNumId, Long dataSign, Long subUnitNumId, Long balaFuncId);
 }
