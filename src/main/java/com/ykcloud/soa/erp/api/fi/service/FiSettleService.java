@@ -64,6 +64,6 @@ public interface FiSettleService {
 	public PaymentAuditResponse auditPayment(PaymentAuditRequest request);
 
 	//预付款审核
-	public PaymentAuditResponse auditPrePayment(PaymentAuditRequest request);
+	public PaymentAuditResponse auditPrePayment(BillAuditRequest request);
 
 }
