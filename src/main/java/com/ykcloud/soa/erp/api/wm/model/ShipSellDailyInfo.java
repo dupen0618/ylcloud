@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class ShipSellDailyInfo {
 
-    private Long reservedNo;// 日报出库单号
+    private String reservedNo;// 日报出库单号
     private Long tenantNumId;// 租户
     private Long subUnitNumId;// 门店
     private Date orderDate;// 销售日期
@@ -23,11 +23,11 @@ public class ShipSellDailyInfo {
     private Double costPrice;// 成本价
     private Double workCost;// 成本金额
 
-    public Long getReservedNo() {
+    public String getReservedNo() {
         return reservedNo;
     }
 
-    public void setReservedNo(Long reservedNo) {
+    public void setReservedNo(String reservedNo) {
         this.reservedNo = reservedNo;
     }
 
