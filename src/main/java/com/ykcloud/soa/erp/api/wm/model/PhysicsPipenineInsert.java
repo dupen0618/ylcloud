@@ -81,6 +81,8 @@ public class PhysicsPipenineInsert implements Serializable {
 
 	private Long STORE_TYPE;
 
+	private String ITEM_ID;
+
 	public Long getTenantNumId() {
 		return tenantNumId;
 	}
@@ -371,5 +373,13 @@ public class PhysicsPipenineInsert implements Serializable {
 
 	public void setSTORE_TYPE(Long STORE_TYPE) {
 		this.STORE_TYPE = STORE_TYPE;
+	}
+
+	public String getITEM_ID() {
+		return ITEM_ID;
+	}
+
+	public void setITEM_ID(String ITEM_ID) {
+		this.ITEM_ID = ITEM_ID;
 	}
 }
