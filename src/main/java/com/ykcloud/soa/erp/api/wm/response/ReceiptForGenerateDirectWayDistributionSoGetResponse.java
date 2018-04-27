@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
+import java.util.Date;
 import java.util.List;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.wm.model.ReceiptDtlForGenerateDirectWayDistributionSo;
@@ -23,6 +24,19 @@ public class ReceiptForGenerateDirectWayDistributionSoGetResponse extends Messag
 	private Long settlementType;
 	
 	private Long storeType;
+	
+	/**
+	 * 供应商确认日期
+	 */
+	private Date supConfirmDate;
+
+	public Date getSupConfirmDate() {
+		return supConfirmDate;
+	}
+
+	public void setSupConfirmDate(Date supConfirmDate) {
+		this.supConfirmDate = supConfirmDate;
+	}
 
 	// 验收明细
 	private List<ReceiptDtlForGenerateDirectWayDistributionSo> receiptDtls;

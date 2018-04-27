@@ -24,11 +24,20 @@ public class ReceiptForGenerateDirectWayDistributionSoGetRequest extends Abstrac
 
 	@NotNull(message = "产生类别不能为空！")
 	//@Range(min=1,max=3,message="产生类别错误！应为1:直通供应商确认或2:实际收货后部分商品数量调整")
-	@ApiField(description="1:直通供应商确认	2:实际收货后部分商品数量调整")
+	@ApiField(description="1:直通供应商确认	2:实际收货后部分商品数量调整   3:分拨单数量人工调整")
 	private Long generateType;
 
-	/*@ApiField(description="实际收货后部分商品数量调整的明细行号(不是到批次行号)")
-	private List<String> receiptDtlSeriesList;*/
+	// generateType为3必填
+	@ApiField(description="实际收货后部分商品数量调整的明细行号(不是到批次行号)")
+	private List<String> receiptDtlSeriesList;
+
+	public List<String> getReceiptDtlSeriesList() {
+		return receiptDtlSeriesList;
+	}
+
+	public void setReceiptDtlSeriesList(List<String> receiptDtlSeriesList) {
+		this.receiptDtlSeriesList = receiptDtlSeriesList;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
