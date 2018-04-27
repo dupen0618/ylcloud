@@ -3,7 +3,6 @@ package com.ykcloud.soa.erp.api.so.service;
 import com.ykcloud.soa.erp.api.so.model.SdBlSoDtl;
 import java.util.List;
 
-import com.ykcloud.soa.erp.api.so.model.SdBlSoHdrAndSdBlSoDtl;
 import com.ykcloud.soa.erp.api.so.model.SoBlSoHdr;
 import com.ykcloud.soa.erp.api.so.request.CountSoTmlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DemandSaleStatisticGetRequest;
