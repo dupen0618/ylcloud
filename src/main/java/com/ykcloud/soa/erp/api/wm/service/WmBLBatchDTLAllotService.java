@@ -15,6 +15,9 @@ public interface WmBLBatchDTLAllotService {
     //单据批次分配--出库单(使用)
     WmBLBatchDTLAllotResponse updateBatchDtlByContainer(WmBLBatchDTLAllotRequest request);
 
+    //单据批次分配--出库单(负数更新批次明细)
+    WmBLBatchDTLAllotResponse updateNegativeBatchDtlByShip(WmBLBatchDTLAllotRequest request);
+
     //单据批次分配--盘亏单
     WmBLBatchDTLAllotResponse updateBatchDtlByStockAdjust(WmBLBatchDTLUpdateRequest request);
 
