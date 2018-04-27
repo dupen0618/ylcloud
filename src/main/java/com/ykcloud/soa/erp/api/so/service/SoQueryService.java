@@ -1,6 +1,6 @@
 package com.ykcloud.soa.erp.api.so.service;
 
-import com.ykcloud.soa.erp.api.so.model.SdBlSoHdrAndSdBlSoDtl;
+import com.ykcloud.soa.erp.api.so.model.SdBlSoDtl;
 import com.ykcloud.soa.erp.api.so.model.SoBlSoHdr;
 import com.ykcloud.soa.erp.api.so.request.CountSoTmlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DemandSaleStatisticGetRequest;
@@ -119,7 +119,7 @@ public interface SoQueryService {
     public CountSoTmlHdrGetResponse getCountSoTmlGetRequest(CountSoTmlGetRequest request);
 
     //查询订单单体
-    List<SdBlSoHdrAndSdBlSoDtl> getSdBlSoHdrAndSdBlSoDtlBysoNumId(UsableInventoryByReservedNoGetRequest request);
+    List<SdBlSoDtl> getSdBlSoHdrAndSdBlSoDtlBysoNumId(UsableInventoryByReservedNoGetRequest request);
 
     //查询订单单头
     SoBlSoHdr getSdBlSoHdrBySoNumId(UsableInventoryByReservedNoGetRequest request);
