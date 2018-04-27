@@ -19,7 +19,8 @@ public class WmProcessAccountRequest extends AbstractUserSessionRequest {
 	
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
-	
+
+	@NotNull(message = "单据类型编号不能为空！")
 	private Long typeNumId;
 
 	@NotNull(message = "入账类型不能为空！")

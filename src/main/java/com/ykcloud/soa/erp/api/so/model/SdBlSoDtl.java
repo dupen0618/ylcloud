@@ -2,7 +2,7 @@ package com.ykcloud.soa.erp.api.so.model;
 
 import java.io.Serializable;
 
-public class SdBlSoHdrAndSdBlSoDtl implements Serializable {
+public class SdBlSoDtl implements Serializable {
 
     private String series;
 
@@ -17,10 +17,6 @@ public class SdBlSoHdrAndSdBlSoDtl implements Serializable {
     private Long statusNumId;
 
     private Long typeNumId;
-
-    private Long storageNumId;
-
-    private Long physicalNumId;
 
     private Long itemNumId;
 
@@ -92,22 +88,6 @@ public class SdBlSoHdrAndSdBlSoDtl implements Serializable {
 
     public void setTypeNumId(Long typeNumId) {
         this.typeNumId = typeNumId;
-    }
-
-    public Long getStorageNumId() {
-        return storageNumId;
-    }
-
-    public void setStorageNumId(Long storageNumId) {
-        this.storageNumId = storageNumId;
-    }
-
-    public Long getPhysicalNumId() {
-        return physicalNumId;
-    }
-
-    public void setPhysicalNumId(Long physicalNumId) {
-        this.physicalNumId = physicalNumId;
     }
 
     public Long getItemNumId() {

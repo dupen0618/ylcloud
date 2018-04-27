@@ -17,6 +17,7 @@ public class PhysicsWarehousepackingGetRequest extends AbstractRequest {
 	@NotNull(message = "业务类型编号不能为空!")
 	private String billTypeNumId;// 业务类型编号
 
+	@NotNull(message = "单据类型编号不能为空！")
 	private Long typeNumId;// 单据类型
 
 	@NotNull(message = "入账类型不能为空！")
