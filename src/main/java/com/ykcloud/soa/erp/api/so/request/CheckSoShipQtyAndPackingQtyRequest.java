@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.so.request;
 
+import java.util.Date;
+
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class CheckSoShipQtyAndPackingQtyRequest extends AbstractRequest {
@@ -9,6 +11,8 @@ public class CheckSoShipQtyAndPackingQtyRequest extends AbstractRequest {
 	private Long subUnitNumId;
 
 	private String soNumId;
+	
+	private Date orderDate;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -25,5 +29,15 @@ public class CheckSoShipQtyAndPackingQtyRequest extends AbstractRequest {
 	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
+	
+	
 
 }

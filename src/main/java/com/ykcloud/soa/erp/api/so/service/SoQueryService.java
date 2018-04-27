@@ -1,6 +1,9 @@
 package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.so.model.SdBlSoDtl;
+import java.util.List;
+
+import com.ykcloud.soa.erp.api.so.model.SdBlSoHdrAndSdBlSoDtl;
 import com.ykcloud.soa.erp.api.so.model.SoBlSoHdr;
 import com.ykcloud.soa.erp.api.so.request.CountSoTmlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DemandSaleStatisticGetRequest;
@@ -16,6 +19,7 @@ import com.ykcloud.soa.erp.api.so.request.SoBySoNumIdAndItemNumIdGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlsForInTransitDepositGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SoHdrListGetByWlbcRequest;
 import com.ykcloud.soa.erp.api.so.request.SoNumIdOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SoSettlementTypeGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusOfWlbcRequest;
@@ -35,6 +39,7 @@ import com.ykcloud.soa.erp.api.so.response.SoBySoNumIdAndItemNumIdGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlsForInTransitDepositGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SoHdrListGetByWlbcResponse;
 import com.ykcloud.soa.erp.api.so.response.SoNumIdOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SoSettlementTypeGetResonse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusOfWlbcResponse;
@@ -43,8 +48,6 @@ import com.ykcloud.soa.erp.api.so.response.SupplyToReturnAmoutGetResponse;
 import com.ykcloud.soa.erp.api.wm.request.SoLockQtyByWlbcRequest;
 import com.ykcloud.soa.erp.api.wm.request.UsableInventoryByReservedNoGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.SoLockQtyByWlbcResponse;
-
-import java.util.List;
 
 
 //查询分仓在途数的接口,以及查询销售的信息
@@ -123,4 +126,6 @@ public interface SoQueryService {
 
     //查询订单单头
     SoBlSoHdr getSdBlSoHdrBySoNumId(UsableInventoryByReservedNoGetRequest request);
+
+    SoHdrListGetByWlbcResponse getSoHdrListByWlbc(SoHdrListGetByWlbcRequest request);
 }
