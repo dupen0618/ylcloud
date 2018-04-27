@@ -3,18 +3,20 @@ package com.ykcloud.soa.erp.api.wm.response;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.wm.model.BProduct;
 
+import java.util.List;
+
 
 public class ProductInfoAndStockGetResponse extends MessagePack {
 
 	private static final long serialVersionUID = 1L;
 	
-	private BProduct bProduct;
+	private List<BProduct> list;
 
-	public BProduct getbProduct() {
-		return bProduct;
+	public List<BProduct> getList() {
+		return list;
 	}
 
-	public void setbProduct(BProduct bProduct) {
-		this.bProduct = bProduct;
+	public void setList(List<BProduct> list) {
+		this.list = list;
 	}
 }

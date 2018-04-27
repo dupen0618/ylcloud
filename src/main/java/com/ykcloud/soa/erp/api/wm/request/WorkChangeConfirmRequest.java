@@ -10,7 +10,8 @@ public class WorkChangeConfirmRequest extends AbstractRequest {
 	
 	@NotNull(message = "加工单号不能为空")
 	private String workNumId;
-
+	@NotNull(message = "门店编号不能为空")
+	private Long subUnitNumId;
 	public String getWorkNumId() {
 		return workNumId;
 	}
@@ -19,7 +20,11 @@ public class WorkChangeConfirmRequest extends AbstractRequest {
 		this.workNumId = workNumId;
 	}
 
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
 
-	
-	
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
 }
