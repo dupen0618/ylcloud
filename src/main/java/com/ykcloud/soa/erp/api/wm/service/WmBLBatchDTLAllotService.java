@@ -26,7 +26,4 @@ public interface WmBLBatchDTLAllotService {
 
     //单据批次分配--损溢单-损耗
     WmBLBatchDTLAllotResponse updateBatchDtlByLoss(WmBLBatchDTLUpdateRequest request);
-
-    //单据批次分配--出库日报
-    WmBLBatchDTLAllotResponse updateBatchDtlByShipSellDaily(WmBLBatchDTLAllotRequest request);
 }
