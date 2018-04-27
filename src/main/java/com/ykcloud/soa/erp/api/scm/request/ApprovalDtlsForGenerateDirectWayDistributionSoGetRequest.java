@@ -20,7 +20,10 @@ public class ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest extends Ab
 	private Date orderDate;
 
 	@NotEmpty(message = "订货审批单编号不能为空！")
-	private String approvalNumId;
+	private String approvalNumId;	
+
+	@NotEmpty(message = "订货编号不能为空！")
+	private String poNumId;	
 
 	@NotNull(message = "商品编号不能为空！")
 	private Long itemNumId;
@@ -90,4 +93,13 @@ public class ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest extends Ab
 		this.taxRate = taxRate;
 	}
 
+	public String getPoNumId() {
+		return poNumId;
+	}
+
+	public void setPoNumId(String poNumId) {
+		this.poNumId = poNumId;
+	}
+
+	
 }
