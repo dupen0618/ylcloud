@@ -9,6 +9,8 @@ public class WorkConfirmAssembleRequest extends AbstractRequest {
 	
 	@NotNull(message = "加工单号不能为空")
 	private String workNumId;
+	@NotNull(message = "加工单号不能为空")
+	private Long subUnitNumId;
 
 	public String getWorkNumId() {
 		return workNumId;
@@ -18,7 +20,11 @@ public class WorkConfirmAssembleRequest extends AbstractRequest {
 		this.workNumId = workNumId;
 	}
 
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
 
-	
-
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
 }

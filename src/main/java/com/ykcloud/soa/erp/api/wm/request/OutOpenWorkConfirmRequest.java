@@ -13,12 +13,21 @@ public class OutOpenWorkConfirmRequest extends AbstractRequest {
 
     @NotNull(message = "加工单号不能为空")
     private String workNumId;//加工单号
-
+    @NotNull
+    private Long subUnitNumId;
     public String getWorkNumId() {
         return workNumId;
     }
 
     public void setWorkNumId(String workNumId) {
         this.workNumId = workNumId;
+    }
+
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
     }
 }
