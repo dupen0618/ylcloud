@@ -81,6 +81,15 @@ public interface WmReceiptService {
 	 * @return
 	 */
 	public DirectReceiptUpdateResponse updateDirectReceipt(DirectReceiptUpdateRequest request);
+	/**
+	 * 
+	 * @description一键收货  不含TCC
+	 * @author gaoyun.shen
+	 * @date: 2018年4月27日 下午2:37:37
+	 * @param 
+	 * @return
+	 */
+	public DirectReceiptUpdateResponse updateDirectReceiptWithNoTransaction(DirectReceiptUpdateRequest request);
 	//收货完成
 	public ReceiptFinishRsponse finishReceipt(ReceiptFinishRequest request);
 
