@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.so.service;
 import com.ykcloud.soa.erp.api.so.request.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ApprovalReturnSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.CheckSoShipQtyAndPackingQtyRequest;
+import com.ykcloud.soa.erp.api.so.request.DirectWayAllocateDtlCancelConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayDistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoAllotWithShipRequest;
@@ -17,6 +18,7 @@ import com.ykcloud.soa.erp.api.so.request.SoWlbcAndSoBingingRequest;
 import com.ykcloud.soa.erp.api.so.response.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ApprovalReturnSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.CheckSoShipQtyAndPackingQtyResponse;
+import com.ykcloud.soa.erp.api.so.response.DirectWayAllocateDtlCancelConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayDistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoAllotWithShipResponse;
@@ -30,6 +32,13 @@ import com.ykcloud.soa.erp.api.so.response.SoUpdateLockToPackingResponse;
 import com.ykcloud.soa.erp.api.so.response.SoWlbcAndSoBingingResponse;
 
 public interface SoMaintanceService {
+	
+	/**
+	 * @description 直通分拨单及分配单取消确认
+	 * @author tz.x
+	 * @date 2018年4月27日上午9:25:27
+	 */
+	public DirectWayAllocateDtlCancelConfirmResponse cancelConfirmDirectWayAllocateDtl(DirectWayAllocateDtlCancelConfirmRequest request);
 	
 	/**
 	 * 订单发货后回写审批单和申请单发货数量之前通过so单号查询要回写的审批单
