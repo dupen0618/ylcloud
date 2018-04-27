@@ -90,4 +90,5 @@ public interface SoMaintanceService {
 	public SoAllotWithShipResponse allotSoWithShip(SoAllotWithShipRequest request);
 	
 	public SoUpdateLockToPackingResponse updateSoLockToPacking(SoUpdateLockToPackingRequest request);
+
 }
