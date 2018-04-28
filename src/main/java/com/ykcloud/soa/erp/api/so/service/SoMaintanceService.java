@@ -103,7 +103,7 @@ public interface SoMaintanceService {
 	public SoAllotWithShipResponse allotSoWithShip(SoAllotWithShipRequest request);
 	
 	public SoUpdateLockToPackingResponse updateSoLockToPacking(SoUpdateLockToPackingRequest request);
-	
+
 
 	//订单预出
 	public packingOrderItemInventoryResponse upPackingOrderItemInventory(packingOrderItemInventoryRequest request);
