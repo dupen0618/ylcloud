@@ -1,10 +1,11 @@
 package com.ykcloud.soa.erp.api.so.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 
-public class packingOrderItemInventoryRequest extends AbstractRequest {
+public class packingOrderItemInventoryRequest extends AbstractUserSessionRequest {
 
     @NotNull(message = "订单编号不能为空！")
     String reservedNo;
