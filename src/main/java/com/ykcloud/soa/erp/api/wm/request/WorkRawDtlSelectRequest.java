@@ -6,6 +6,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class WorkRawDtlSelectRequest extends AbstractRequest {
 
+
 	private static final long serialVersionUID = -5007034439516790169L;
 
 	 private List<String> servies;
