@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 import javax.validation.constraints.NotNull;
@@ -16,6 +17,7 @@ public class BackOffRateRequest extends AbstractRequest {
     private Long supplyUnitNumId;
     @NotNull(message = "商品编号不能为空！")
     private Long itemNumId;
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     @NotNull(message = "业务日期不能为空！")
     private Date operatDate;
     @NotNull(message = "采购协议单号不能为空！")
