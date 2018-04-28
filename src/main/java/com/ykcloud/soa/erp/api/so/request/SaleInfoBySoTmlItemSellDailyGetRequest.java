@@ -19,11 +19,11 @@ public class SaleInfoBySoTmlItemSellDailyGetRequest extends AbstractRequest {
 		@NotNull(message="结算方式不能为空")
 		private Long settlementType;  //结算方式
 		
-		@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+		@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 		@NotNull(message = "开始日期不能为空！")
 		private Date startDate;    //起始时间
 		
-		@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+		@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 		@NotNull(message = "截止日期不能为空！")
 		private Date endDate;      //截止时间
 
