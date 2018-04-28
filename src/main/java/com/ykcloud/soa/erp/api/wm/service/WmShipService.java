@@ -25,6 +25,7 @@ import com.ykcloud.soa.erp.api.wm.request.WmShipDtlWithNoBatchUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmSoHdrGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmSoReverseReceiptRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmfinishPackingRequest;
@@ -53,6 +54,7 @@ import com.ykcloud.soa.erp.api.wm.response.WmShipDtlWithNoBatchUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmSoHdrGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmSoReverseReceiptRespose;
 import com.ykcloud.soa.erp.api.wm.response.WmWlBcHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmWlbcHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmfinishPackingResponse;
@@ -205,4 +207,12 @@ public interface WmShipService {
 		 * @description RF一键出库没有tcc
 		 */
 		public WmRfFinishOneStepResponse finishDirectWithNoTransaction(WmRfFinishOneStepRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月27日
+		 * @description
+		 */
+		public WmSoReverseReceiptRespose soReserverReceipt(WmSoReverseReceiptRequest request);
 }
