@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
  * @Author: ALi
  * @Date: 2018/4/13 20:28
  */
-public class BalanceDtlByDeductionSelectRequest extends AbstractUserSessionRequest {
+public class BalanceDtlByDeductionSelectRequest extends AbstractRequest {
     private static final long serialVersionUID = -2565804606566389459L;
     private List<String> servies;
 
