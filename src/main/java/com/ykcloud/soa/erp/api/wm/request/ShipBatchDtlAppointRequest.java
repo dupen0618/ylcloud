@@ -2,9 +2,10 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import java.util.List;
 
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 
-public class ShipBatchDtlAppointRequest extends AbstractSessionRequest{
+public class ShipBatchDtlAppointRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = -8356014312083384584L;
 		private List<String> servies;
