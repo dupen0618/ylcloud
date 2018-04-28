@@ -121,6 +121,8 @@ public class ProductForShopTransfer implements Serializable {
 	 * 库存数
 	 */
 	private Double stockQty;
+	
+	private String itemid;
 
 	public Long getItemNumId() {
 		return itemNumId;
@@ -298,4 +300,13 @@ public class ProductForShopTransfer implements Serializable {
 		this.stockQty = stockQty;
 	}
 
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
+
+	
 }
