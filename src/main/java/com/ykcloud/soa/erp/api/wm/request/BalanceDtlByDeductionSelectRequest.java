@@ -13,11 +13,9 @@ import java.util.List;
 public class BalanceDtlByDeductionSelectRequest extends AbstractRequest {
     private static final long serialVersionUID = -2565804606566389459L;
     private List<String> servies;
-
     public List<String> getServies() {
         return servies;
     }
-
     public void setServies(List<String> servies) {
         this.servies = servies;
     }
