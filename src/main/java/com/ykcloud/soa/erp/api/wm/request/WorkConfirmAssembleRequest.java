@@ -9,7 +9,7 @@ public class WorkConfirmAssembleRequest extends AbstractRequest {
 	
 	@NotNull(message = "加工单号不能为空")
 	private String workNumId;
-	@NotNull(message = "加工单号不能为空")
+	@NotNull(message = "门店编号不能为空")
 	private Long subUnitNumId;
 
 	public String getWorkNumId() {

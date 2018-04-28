@@ -16,6 +16,10 @@ public class ReverseReceiptCreateByContainerRequest extends AbstractUserSessionR
 	
 	@NotNull(message="托盘实物标志不能为空！")
 	private String containerLabserlno;
+	
+	private String containerSerlno;
+	
+	private Long containerFlag;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -32,6 +36,22 @@ public class ReverseReceiptCreateByContainerRequest extends AbstractUserSessionR
 	public void setContainerLabserlno(String containerLabserlno) {
 		this.containerLabserlno = containerLabserlno;
 	}
-	
 
+	public String getContainerSerlno() {
+		return containerSerlno;
+	}
+
+	public void setContainerSerlno(String containerSerlno) {
+		this.containerSerlno = containerSerlno;
+	}
+
+	public Long getContainerFlag() {
+		return containerFlag;
+	}
+
+	public void setContainerFlag(Long containerFlag) {
+		this.containerFlag = containerFlag;
+	}
+	
+	
 }

@@ -18,6 +18,10 @@ public class WorkLossCreateRequest extends AbstractRequest {
 
 	@NotNull(message = "损耗金额不能为空")
 	private Double losscost;
+	
+	@NotNull(message = "门店编号不能为空")
+	private Long subUnitNumId;
+	
 	private Long typeNumId;
 
 	public String getWorkNumId() {
@@ -55,4 +59,13 @@ public class WorkLossCreateRequest extends AbstractRequest {
 	public void setTypeNumId(Long typeNumId) {
 		this.typeNumId = typeNumId;
 	}
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
+	
 }
