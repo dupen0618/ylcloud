@@ -80,6 +80,8 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 
 	private Long STORE_TYPE;
 
+	private String ITEMID;
+
 	public Long getSETTLEMENT_TYPE() {
 		return SETTLEMENT_TYPE;
 	}
@@ -347,5 +349,13 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 
 	public void setSTORE_TYPE(Long STORE_TYPE) {
 		this.STORE_TYPE = STORE_TYPE;
+	}
+
+	public String getITEMID() {
+		return ITEMID;
+	}
+
+	public void setITEMID(String ITEMID) {
+		this.ITEMID = ITEMID;
 	}
 }

@@ -34,6 +34,8 @@ public class SdBlSoDtl implements Serializable {
 
     private Long supply_unit_num_id;
 
+    private String ITEMID;
+
     public String getSeries() {
         return series;
     }
@@ -153,5 +155,13 @@ public class SdBlSoDtl implements Serializable {
 
     public void setSupply_unit_num_id(Long supply_unit_num_id) {
         this.supply_unit_num_id = supply_unit_num_id;
+    }
+
+    public String getITEMID() {
+        return ITEMID;
+    }
+
+    public void setITEMID(String ITEMID) {
+        this.ITEMID = ITEMID;
     }
 }
