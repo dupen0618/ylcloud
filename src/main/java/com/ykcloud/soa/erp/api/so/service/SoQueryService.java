@@ -111,7 +111,7 @@ public interface SoQueryService {
 			SoNumIdsByReceiptNoForInTransitDepositGetRequest request);
 
 	//直通分拨单在途入账,按订单编号找及补货门店列表
-	public OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetResponse getOrdSubUnitNumIdsBySoNumIdsForInTransitDeposit(
+	public OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetResponse getOrdSubUnitNumIdsBySoNumIdForInTransitDeposit(
 			OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetRequest request);
 	
 	//直通分拨单在途入账,明细列表
