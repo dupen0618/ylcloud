@@ -22,11 +22,13 @@ public class InTransitDepositRequest extends AbstractRequest {
 
 	@NotNull(message = "单据类型不能为空！")
 	@ApiField(description = "1:补货申请单 2:订货审批单 3:配送审批单 4:采购单  5:验收单  6:执行订单so")
-	private Long billCategory;
-
-	@NotNull(message = "单据类型不能为空！")
-	@ApiField(description = "100:补货申请单 200:采购单 3XX:执行订单so(301：直通分拨到店（总仓），302：直通分拨到仓，303：配送到店，304：配送分拨到仓，305：配送分拨到店，309：直送退供应商，310：直通退供应商 311：配送退总仓，315：直通分拨到店（分仓）")
 	private Long billType;
+
+	// @NotNull(message = "单据类型不能为空！")
+	// @ApiField(description = "100:补货申请单 200:采购单
+	// 3XX:执行订单so(301：直通分拨到店（总仓），302：直通分拨到仓，303：配送到店，304：配送分拨到仓，305：配送分拨到店，309：直送退供应商，310：直通退供应商
+	// 311：配送退总仓，315：直通分拨到店（分仓）")
+	// private Long billType;
 
 	@NotNull(message = "单据编号不能为空！")
 	private String reservedNo;
@@ -39,7 +41,7 @@ public class InTransitDepositRequest extends AbstractRequest {
 	@ApiField(description = "1:入账 2:销账")
 	@Range(min = 1L, max = 2L, message = "1:入账 2:销账")
 	private Long depositSign;
-	
+
 	private List<InTransitWriteoffBeforeDeposit> writeoffList;
 
 	public Long getSubUnitNumId() {
@@ -66,12 +68,12 @@ public class InTransitDepositRequest extends AbstractRequest {
 		this.reservedNo = reservedNo;
 	}
 
-	public Long getBillCategory() {
-		return billCategory;
+	public Long getBillType() {
+		return billType;
 	}
 
-	public void setBillCategory(Long billCategory) {
-		this.billCategory = billCategory;
+	public void setBillType(Long billType) {
+		this.billType = billType;
 	}
 
 	public Long getDepositSign() {
@@ -90,13 +92,11 @@ public class InTransitDepositRequest extends AbstractRequest {
 		this.typeNumId = typeNumId;
 	}
 
-	public Long getBillType() {
-		return billType;
-	}
-
-	public void setBillType(Long billType) {
-		this.billType = billType;
-	}
+	/*
+	 * public Long getBillType() { return billType; }
+	 * 
+	 * public void setBillType(Long billType) { this.billType = billType; }
+	 */
 
 	public List<InTransitWriteoffBeforeDeposit> getWriteoffList() {
 		return writeoffList;
@@ -105,7 +105,5 @@ public class InTransitDepositRequest extends AbstractRequest {
 	public void setWriteoffList(List<InTransitWriteoffBeforeDeposit> writeoffList) {
 		this.writeoffList = writeoffList;
 	}
-	
-	
 
 }

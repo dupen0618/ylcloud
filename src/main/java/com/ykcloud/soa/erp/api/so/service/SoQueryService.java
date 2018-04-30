@@ -11,7 +11,8 @@ import com.ykcloud.soa.erp.api.so.request.DistributionOpenDistDeliveryQtyGetRequ
 import com.ykcloud.soa.erp.api.so.request.GroupSdApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSaleInfoByItemNumIdAndOrderDateGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OpenBranchDeliveryQtyGetRequest;
-import com.ykcloud.soa.erp.api.so.request.OrdSubUnitNumIdsForInTransitDepositGetRequest;
+import com.ykcloud.soa.erp.api.so.request.OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SoNumIdsByReceiptNoForInTransitDepositGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopProductDailySellQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoBySoNumIdAndItemNumIdGetRequest;
@@ -31,7 +32,8 @@ import com.ykcloud.soa.erp.api.so.response.DistributionOpenDistDeliveryQtyGetRes
 import com.ykcloud.soa.erp.api.so.response.GroupSdApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSaleInfoByItemNumIdAndOrderDateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OpenBranchDeliveryQtyGetResponse;
-import com.ykcloud.soa.erp.api.so.response.OrdSubUnitNumIdsForInTransitDepositGetResponse;
+import com.ykcloud.soa.erp.api.so.response.OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SoNumIdsByReceiptNoForInTransitDepositGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopProductDailySellQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoBySoNumIdAndItemNumIdGetResponse;
@@ -104,9 +106,13 @@ public interface SoQueryService {
     public SoSettlementTypeGetResonse getSoSettlementType(SoSettlementTypeGetRequest request);
 
     
-	//直通分拨单在途入账,补货门店列表
-	public OrdSubUnitNumIdsForInTransitDepositGetResponse getOrdSubUnitNumIdsForInTransitDeposit(
-			OrdSubUnitNumIdsForInTransitDepositGetRequest request);
+	//直通分拨单在途入账,按验收单找分拨订单号列表
+	public SoNumIdsByReceiptNoForInTransitDepositGetResponse getSoNumIdsByReceiptNoForInTransitDeposit(
+			SoNumIdsByReceiptNoForInTransitDepositGetRequest request);
+
+	//直通分拨单在途入账,按订单编号找及补货门店列表
+	public OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetResponse getOrdSubUnitNumIdsBySoNumIdsForInTransitDeposit(
+			OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetRequest request);
 	
 	//直通分拨单在途入账,明细列表
 	public SoDtlsForInTransitDepositGetResponse getSoDtlsForInTransitDeposit(

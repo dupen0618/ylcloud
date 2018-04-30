@@ -3,15 +3,15 @@ package com.ykcloud.soa.erp.api.scm.model;
 import java.io.Serializable;
 
 //在途入账前销账列表
-public class InTransitWriteoffBeforeDeposit  implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
-	
-	private String billId;
-	
-	private String billLine;//0-代表此单号下面所有行号
+public class InTransitWriteoffBeforeDeposit implements Serializable {
 
-	private Long subUnitNumId;//补货门店
+	private static final long serialVersionUID = 1L;
+
+	private Long subUnitNumId;// 补货门店
+
+	private String billId;// soNumId
+
+	private String billLine;// soLine 0-代表此单号下面所有行号
 
 	private Long itemNumId; // 商品编号 0-代表此单号下面所有商品
 
@@ -46,10 +46,5 @@ public class InTransitWriteoffBeforeDeposit  implements Serializable{
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}
-
-
-	
-
-	
 
 }

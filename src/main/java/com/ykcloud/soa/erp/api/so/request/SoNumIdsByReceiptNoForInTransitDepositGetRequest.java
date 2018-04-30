@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 //仓库配送数的   配送方式如入参类
-public class OrdSubUnitNumIdsForInTransitDepositGetRequest extends AbstractRequest {
+public class SoNumIdsByReceiptNoForInTransitDepositGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 1L;
 
@@ -19,8 +19,8 @@ public class OrdSubUnitNumIdsForInTransitDepositGetRequest extends AbstractReque
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date orderDate;
 
-	@NotNull(message = "订单编号不能为空！")
-	private String soNumId;
+	@NotNull(message = "验收单编号不能为空！")
+	private String receiptNo;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -38,12 +38,12 @@ public class OrdSubUnitNumIdsForInTransitDepositGetRequest extends AbstractReque
 		this.orderDate = orderDate;
 	}
 
-	public String getSoNumId() {
-		return soNumId;
+	public String getReceiptNo() {
+		return receiptNo;
 	}
 
-	public void setSoNumId(String soNumId) {
-		this.soNumId = soNumId;
+	public void setReceiptNo(String receiptNo) {
+		this.receiptNo = receiptNo;
 	}
 
 }
