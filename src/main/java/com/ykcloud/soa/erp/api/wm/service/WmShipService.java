@@ -99,6 +99,8 @@ public interface WmShipService {
 		//创建波次单头
 		public WmWlbcHdrCreateResponse createWlbc(WmWlbcHdrCreateRequest request);
 		
+		public WmWlbcHdrCreateResponse createWlbcWithNoTransaction(WmWlbcHdrCreateRequest request);
+		
 		//获取交接单号,并扫入该装箱
 		public WmShipGetResponse createShipByContainer(WmShipGetRequest request);
 		

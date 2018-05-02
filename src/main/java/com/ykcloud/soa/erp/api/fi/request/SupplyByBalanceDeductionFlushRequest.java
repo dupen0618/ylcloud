@@ -21,11 +21,11 @@ public class SupplyByBalanceDeductionFlushRequest extends AbstractUserSessionReq
 	@NotNull(message = "供应商编号不能为空！")
 	private Long unitNumId;
 
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private Date startDate;
 
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "截止日期不能为空！")
 	private Date endDate;
 		

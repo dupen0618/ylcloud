@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 import javax.validation.constraints.NotNull;
@@ -14,6 +15,7 @@ public class DiscountUnderCutSnapGetRequest extends AbstractRequest {
     private static final long serialVersionUID = 1L;
     @NotNull(message = "供应商信息不能为空！")
     private Long supplyUnitNumId;
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     @NotNull(message = "商品编号不能为空！")
     private Long itemNumId;
     @NotNull(message = "业务日期不能为空！")
