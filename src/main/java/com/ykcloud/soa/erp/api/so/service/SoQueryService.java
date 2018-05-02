@@ -1,8 +1,8 @@
 package com.ykcloud.soa.erp.api.so.service;
 
-import com.ykcloud.soa.erp.api.so.model.SdBlSoDtl;
 import java.util.List;
 
+import com.ykcloud.soa.erp.api.so.model.SdBlSoDtl;
 import com.ykcloud.soa.erp.api.so.model.SoBlSoHdr;
 import com.ykcloud.soa.erp.api.so.request.CountSoTmlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.DemandSaleStatisticGetRequest;
@@ -12,15 +12,16 @@ import com.ykcloud.soa.erp.api.so.request.GroupSdApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSaleInfoByItemNumIdAndOrderDateGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OpenBranchDeliveryQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetRequest;
-import com.ykcloud.soa.erp.api.so.request.SoNumIdsByReceiptNoForInTransitDepositGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopProductDailySellQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoBySoNumIdAndItemNumIdGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlsForInTransitDepositGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SoHdrListGetBySoNumIdsRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrListGetByWlbcRequest;
 import com.ykcloud.soa.erp.api.so.request.SoNumIdOneRequest;
+import com.ykcloud.soa.erp.api.so.request.SoNumIdsByReceiptNoForInTransitDepositGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoSettlementTypeGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusOfWlbcRequest;
 import com.ykcloud.soa.erp.api.so.request.SoTmlLimitGetRequest;
@@ -33,15 +34,16 @@ import com.ykcloud.soa.erp.api.so.response.GroupSdApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSaleInfoByItemNumIdAndOrderDateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OpenBranchDeliveryQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetResponse;
-import com.ykcloud.soa.erp.api.so.response.SoNumIdsByReceiptNoForInTransitDepositGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopProductDailySellQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoBySoNumIdAndItemNumIdGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlsForInTransitDepositGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SoHdrListGetBySoNumIdsResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrListGetByWlbcResponse;
 import com.ykcloud.soa.erp.api.so.response.SoNumIdOneResponse;
+import com.ykcloud.soa.erp.api.so.response.SoNumIdsByReceiptNoForInTransitDepositGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoSettlementTypeGetResonse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusOfWlbcResponse;
 import com.ykcloud.soa.erp.api.so.response.SoTmlHdrLimitGetResponse;
@@ -127,10 +129,13 @@ public interface SoQueryService {
     public CountSoTmlHdrGetResponse getCountSoTmlGetRequest(CountSoTmlGetRequest request);
 
     //查询订单单体
-    List<SdBlSoDtl> getSdBlSoHdrAndSdBlSoDtlBysoNumId(UsableInventoryByReservedNoGetRequest request);
+    public List<SdBlSoDtl> getSdBlSoHdrAndSdBlSoDtlBysoNumId(UsableInventoryByReservedNoGetRequest request);
 
     //查询订单单头
-    SoBlSoHdr getSdBlSoHdrBySoNumId(UsableInventoryByReservedNoGetRequest request);
+    public SoBlSoHdr getSdBlSoHdrBySoNumId(UsableInventoryByReservedNoGetRequest request);
 
-    SoHdrListGetByWlbcResponse getSoHdrListByWlbc(SoHdrListGetByWlbcRequest request);
+    //根据wlbc号查询该wlbc下的所有订单
+    public SoHdrListGetByWlbcResponse getSoHdrListByWlbc(SoHdrListGetByWlbcRequest request);
+    //根据soNumId数组获取SoHdrList
+    public SoHdrListGetBySoNumIdsResponse getSoHdrListBySoNumIds(SoHdrListGetBySoNumIdsRequest request);
 }
