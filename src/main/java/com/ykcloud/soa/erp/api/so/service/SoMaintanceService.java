@@ -15,6 +15,7 @@ import com.ykcloud.soa.erp.api.so.request.SoShipQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateSoOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SoUpdateLockToPackingRequest;
+import com.ykcloud.soa.erp.api.so.request.SoTmlTranTypeUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoWlbcAndSoBingingRequest;
 import com.ykcloud.soa.erp.api.so.response.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ApprovalReturnSoGenerateResponse;
@@ -31,6 +32,7 @@ import com.ykcloud.soa.erp.api.so.response.SoShipQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateSoOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SoUpdateLockToPackingResponse;
+import com.ykcloud.soa.erp.api.so.response.SoTmlTranTypeUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoWlbcAndSoBingingResponse;
 import com.ykcloud.soa.erp.api.so.request.*;
 import com.ykcloud.soa.erp.api.so.response.*;
@@ -38,14 +40,14 @@ import com.ykcloud.soa.erp.api.so.response.*;
 public interface SoMaintanceService {
 	
 	/**
-	 * @description 直通分拨单及分配单确认
+	 * 直通分拨单及分配单确认
 	 * @author tz.x
 	 * @date 2018年4月27日下午2:31:31
 	 */
 	public DirectWayAllocateDtlConfirmResponse confirmDirectWayAllocateDtl(DirectWayAllocateDtlConfirmRequest request);
 
 	/**
-	 * @description 直通分拨单及分配单取消确认
+	 * 直通分拨单及分配单取消确认
 	 * @author tz.x
 	 * @date 2018年4月27日上午9:25:27
 	 */
@@ -104,5 +106,9 @@ public interface SoMaintanceService {
 
 
 	//订单预出
-	public packingOrderItemInventoryResponse upPackingOrderItemInventory(packingOrderItemInventoryRequest request);
+	public PackingOrderItemInventoryResponse upPackingOrderItemInventory(packingOrderItemInventoryRequest request);
+
+	public SoTmlTranTypeUpdateResponse updateTmlTranTypeNumId(SoTmlTranTypeUpdateRequest request);
+
+
 }
