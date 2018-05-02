@@ -17,7 +17,7 @@ public class FiInAccountByReceiptRequest extends AbstractUserSessionRequest{
     @NotNull(message = "单据类型不能为空！")
     String typeNumId;
     @NotNull(message="门店编号不能为空")
-    String subUnitNumId;
+    Long subUnitNumId;
 
     Long balaFuncId;
 
@@ -47,11 +47,11 @@ public class FiInAccountByReceiptRequest extends AbstractUserSessionRequest{
         this.balaFuncId = balaFuncId;
     }
 
-    public String getSubUnitNumId() {
+    public Long getSubUnitNumId() {
         return subUnitNumId;
     }
 
-    public void setSubUnitNumId(String subUnitNumId) {
+    public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
     }
 
