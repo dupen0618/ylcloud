@@ -16,6 +16,8 @@ public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
     String reservedNo;
     @NotNull(message = "单据类型不能为空！")
     String typeNumId;
+    @NotNull(message = "业务类型编号不能为空!")
+    private String billTypeNumId;// 业务类型编号
 
     @ApiField(description = "门店编号")
     @NotNull(message = "门店编号不能为空!")
@@ -54,5 +56,13 @@ public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
 
     public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
+    }
+
+    public String getBillTypeNumId() {
+        return billTypeNumId;
+    }
+
+    public void setBillTypeNumId(String billTypeNumId) {
+        this.billTypeNumId = billTypeNumId;
     }
 }
