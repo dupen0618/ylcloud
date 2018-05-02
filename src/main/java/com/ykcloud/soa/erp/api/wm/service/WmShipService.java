@@ -25,6 +25,7 @@ import com.ykcloud.soa.erp.api.wm.request.WmShipDtlWithNoBatchUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmSoHdrGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmSoListBingWlbcRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmSoReverseReceiptRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
@@ -54,6 +55,7 @@ import com.ykcloud.soa.erp.api.wm.response.WmShipDtlWithNoBatchUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmSoHdrGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmSoListBingWlbcResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmSoReverseReceiptRespose;
 import com.ykcloud.soa.erp.api.wm.response.WmWlBcHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmWlbcHdrCreateResponse;
@@ -160,7 +162,7 @@ public interface WmShipService {
 		 * @date 2018年4月20日
 		 * @description 装箱单关联验收单(将验收单号关联到containerHdr中的出库单号)
 		 */
-		public ReverseReceiptScanContainerResponse scanContainerForRecerseReceipt(ReverseReceiptScanContainerRequest request);
+		public ReverseReceiptScanContainerResponse scanContainerForReverseReceipt(ReverseReceiptScanContainerRequest request);
 		
 		/**
 		 * 
@@ -217,4 +219,12 @@ public interface WmShipService {
 		 * @description
 		 */
 		public WmSoReverseReceiptRespose soReserverReceipt(WmSoReverseReceiptRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年5月2日
+		 * @description so集合绑定wlbc，不同的storageNumId要创建不同的wlbc并绑定
+		 */
+		public WmSoListBingWlbcResponse bingSoListWlbc(WmSoListBingWlbcRequest request);
 }
