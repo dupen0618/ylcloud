@@ -20,4 +20,6 @@ public interface WmBLBatchDTLUpdateService {
 
     //单据更新批次明细表--损溢单-升溢
     WmBLBatchDTLUpdateResponse updateBatchDtlByLoss(WmBLBatchDTLUpdateRequest request);
+    //出库单更新批次明细--负数
+    WmBLBatchDTLUpdateResponse updateBatchDtlByShip(WmBLBatchDTLUpdateRequest request);
 }
