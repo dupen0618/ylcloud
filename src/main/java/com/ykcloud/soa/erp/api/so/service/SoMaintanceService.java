@@ -105,7 +105,7 @@ public interface SoMaintanceService {
 
 
 	//订单预出
-	public PackingOrderItemInventoryResponse upPackingOrderItemInventory(packingOrderItemInventoryRequest request);
+	public PackingOrderItemInventoryUpResponse upPackingOrderItemInventory(PackingOrderItemInventoryUpRequest request);
 
 	public SoTmlTranTypeUpdateResponse updateTmlTranTypeNumId(SoTmlTranTypeUpdateRequest request);
 
