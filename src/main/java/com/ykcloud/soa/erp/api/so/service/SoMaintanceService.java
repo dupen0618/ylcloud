@@ -38,14 +38,14 @@ import com.ykcloud.soa.erp.api.so.response.*;
 public interface SoMaintanceService {
 	
 	/**
-	 * @description 直通分拨单及分配单确认
+	 * 直通分拨单及分配单确认
 	 * @author tz.x
 	 * @date 2018年4月27日下午2:31:31
 	 */
 	public DirectWayAllocateDtlConfirmResponse confirmDirectWayAllocateDtl(DirectWayAllocateDtlConfirmRequest request);
 
 	/**
-	 * @description 直通分拨单及分配单取消确认
+	 * 直通分拨单及分配单取消确认
 	 * @author tz.x
 	 * @date 2018年4月27日上午9:25:27
 	 */
