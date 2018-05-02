@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.wm.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.wm.model.ProductInfo;
+import java.util.List;
 
 /**
  * @Description: 扫码商品条码返回商品信息的出参
@@ -12,13 +13,13 @@ public class ItemBarcodeScanResponse extends MessagePack {
 
     private static final long serialVersionUID = 1L;
 
-    private ProductInfo productInfo;
+    private List<ProductInfo> productInfos;
 
-    public ProductInfo getProductInfo() {
-        return productInfo;
+    public List<ProductInfo> getProductInfos() {
+        return productInfos;
     }
 
-    public void setProductInfo(ProductInfo productInfo) {
-        this.productInfo = productInfo;
+    public void setProductInfos(List<ProductInfo> productInfos) {
+        this.productInfos = productInfos;
     }
 }
