@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.so.response;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.so.model.SoTmlDtlForGenerateData;
 import com.ykcloud.soa.erp.api.so.model.SoTmlHdrForGenerateData;
+import com.ykcloud.soa.erp.api.so.model.SoTmlLockForGenerateData;
 
 import java.util.List;
 
@@ -18,6 +19,16 @@ public class SoTmlHdrLimitGetResponse extends MessagePack {
     private List<SoTmlHdrForGenerateData> tmlHdrList;
 
     private List<SoTmlDtlForGenerateData> soTmlDtlList;
+
+    private List<SoTmlLockForGenerateData> lockTmlList;
+
+    public List<SoTmlLockForGenerateData> getLockTmlList() {
+        return lockTmlList;
+    }
+
+    public void setLockTmlList(List<SoTmlLockForGenerateData> lockTmlList) {
+        this.lockTmlList = lockTmlList;
+    }
 
     public List<SoTmlDtlForGenerateData> getSoTmlDtlList() {
         return soTmlDtlList;
