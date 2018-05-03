@@ -3,19 +3,26 @@ package com.ykcloud.soa.erp.api.wm.request;
 import java.util.Date;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
-
+import com.ykcloud.soa.erp.api.scm.model.CiteDtl;
+//保存明细表
 public class ReturnCiteDtlSaveRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = 1L;
+
+	private CiteDtl citeDtl;  
 	
-	private  Long subUnitNumId;   //门店/仓库编号
+	private Long subUnitNumId; //门店编号
 	
-	private Date orderDate;       //日期
+	private Date orderDate;  //日期
 	
-	private String approvalNumId; //退货审批单编号
-	
-	private String citeReservedNo; // 出库/验收单号
-	
-	private String citeLine;    //出库/验收单行号
+	private String approvalNumId; //审批单号
+
+	public CiteDtl getCiteDtl() {
+		return citeDtl;
+	}
+
+	public void setCiteDtl(CiteDtl citeDtl) {
+		this.citeDtl = citeDtl;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -39,22 +46,6 @@ public class ReturnCiteDtlSaveRequest extends AbstractUserSessionRequest {
 
 	public void setApprovalNumId(String approvalNumId) {
 		this.approvalNumId = approvalNumId;
-	}
-
-	public String getCiteReservedNo() {
-		return citeReservedNo;
-	}
-
-	public void setCiteReservedNo(String citeReservedNo) {
-		this.citeReservedNo = citeReservedNo;
-	}
-
-	public String getCiteLine() {
-		return citeLine;
-	}
-
-	public void setCiteLine(String citeLine) {
-		this.citeLine = citeLine;
 	}
 	
 	

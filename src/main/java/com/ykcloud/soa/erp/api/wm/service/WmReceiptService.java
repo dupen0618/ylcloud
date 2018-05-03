@@ -7,6 +7,7 @@ import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrFuzzyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptProduceDateUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReturnCiteDtlGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReturnCiteDtlSaveRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseShipHdrFuzzyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopHaveInventoryMaxBatchPriceGetRequest;
@@ -21,6 +22,7 @@ import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrFuzzyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptProduceDateUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReturnCiteDtlGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReturnCiteDtlSaveResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseShipHdrFuzzyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopHaveInventoryMaxBatchPriceGetResponse;
@@ -117,6 +119,8 @@ public interface WmReceiptService {
 	public ReverseShipHdrFuzzyGetResponse getReverseShipHdrFuzzy(ReverseShipHdrFuzzyGetRequest request);
 	
 	//查询采购退货引用明细表体
-	public ReturnCiteDtlSaveResponse saveReturnCiteDtl(ReturnCiteDtlSaveRequest request);
+	public ReturnCiteDtlGetResponse getReturnCiteDtl(ReturnCiteDtlGetRequest request);
 
+	//保存验收单/负出库单到单号引用表中
+	public ReturnCiteDtlSaveResponse saveReturnCiteDtl(ReturnCiteDtlSaveRequest request);
 }
