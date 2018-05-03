@@ -2,7 +2,7 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WmSoReverseReceiptRequest extends AbstractUserSessionRequest {
+public class WmFinishReserverSoShipRequest extends AbstractUserSessionRequest {
 
 	/**
 	 * 

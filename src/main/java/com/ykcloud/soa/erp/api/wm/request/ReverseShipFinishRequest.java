@@ -4,7 +4,7 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class ReverseReceiptShipFinishRequest extends AbstractUserSessionRequest {
+public class ReverseShipFinishRequest extends AbstractUserSessionRequest {
 
 	/**
 	 * 
