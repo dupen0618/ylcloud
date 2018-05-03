@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.so.request;
 
+import java.util.List;
+
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 public class SoHdrListGetBySoNumIdsRequest extends AbstractRequest {
@@ -11,7 +13,7 @@ public class SoHdrListGetBySoNumIdsRequest extends AbstractRequest {
 	
 	private Long subUnitNumId;
 	
-	private String[] soNumIds;
+	private List<String> soNumIds;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -21,13 +23,14 @@ public class SoHdrListGetBySoNumIdsRequest extends AbstractRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public String[] getSoNumIds() {
+	public List<String> getSoNumIds() {
 		return soNumIds;
 	}
 
-	public void setSoNumIds(String[] soNumIds) {
+	public void setSoNumIds(List<String> soNumIds) {
 		this.soNumIds = soNumIds;
 	}
+
 	
 	
 

@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import java.util.List;
+
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 public class WmSoListBingWlbcRequest extends AbstractUserSessionRequest {
@@ -11,7 +13,7 @@ public class WmSoListBingWlbcRequest extends AbstractUserSessionRequest {
 	
 	private Long subUnitNumId;
 	
-	private String[] soNumIds;
+	private List<String> soNumIds;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -21,13 +23,15 @@ public class WmSoListBingWlbcRequest extends AbstractUserSessionRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public String[] getSoNumIds() {
+	public List<String> getSoNumIds() {
 		return soNumIds;
 	}
 
-	public void setSoNumIds(String[] soNumIds) {
+	public void setSoNumIds(List<String> soNumIds) {
 		this.soNumIds = soNumIds;
 	}
+
+	
 	
 	
 
