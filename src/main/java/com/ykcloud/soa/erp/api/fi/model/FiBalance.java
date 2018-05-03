@@ -2,6 +2,8 @@ package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 /**
  * @Description:Wm查询结果
  * @author ALi
@@ -13,339 +15,264 @@ public class FiBalance implements Serializable {
     /**
      * 行号
      */
-    private String SERIES;
-
-    /**
-     * 租户
-     */
-    private Long TENANT_NUM_ID;
-
-    /**
-     * 门店
-     */
-    private Long SUB_UNIT_NUM_ID;
+    private String series;
 
     /**
      * 单据编号
      */
-    private String RESERVED_NO;
+    private String reservedNo;
 
     /**
      * 业务类型
      */
-    private Long TYPE_NUM_ID;
+    private Long typeNumId;
 
     /**
      * 业务日期
      */
-    private Date OPERAT_DATE;
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    private Date operatDate;
 
     /**
      * 商品
      */
-    private Long ITEM_NUM_ID;
+    private Long itemNumId;
 
     /**
      * 商品中心（部门）
      */
-    private Long DIV_NUM_ID;
+    private Long divNumId;
 
     /**
      * 商品条码
      */
-    private String BARCODE;
+    private String barcode;
 
     /**
      * 商品品名
      */
-    private String ITEM_NAME;
+    private String itemName;
 
     /**
      * 产地
      */
-    private Long PRODUCT_ORIGIN_NUM_ID;
+    private Long productOriginNumId;
 
     /**
      * 件装单位
      */
-    private Double CONVERSION_QTY;
+    private Double conversionQty;
 
     /**
      * 件装规格
      */
-    private String CONVERSION_STYLE_DESC;
+    private String conversionStyleDesc;
 
     /**
      * 结算价格
      */
-    private Double PRICE;
+    private Double price;
 
     /**
      * 结算金额
      */
-    private Double AMOUNT;
+    private Double amount;
 
     /**
      * 批次行号
      */
-    private String BATCH_SERIES;
+    private String batchSeries;
 
     /**
      * 批次促销档期
      */
-    private Long BATCH_PROMOTION_GRADE;
+    private Long batchPromotionGrade;
 
     /**
      * 批次供应商
      */
-    private Long BATCH_SUPPLY_UNIT_NUM_ID;
+    private Long batchSupplyUnitNumId;
 
     /**
      * 批次采购价格
      */
-    private Double BATCH_PO_PRICE;
+    private Double batchPoPrice;
 
     /**
      * 税率
      */
-    private Double TAX_RATE;
+    private Double taxRate;
 
     /**
      * 税金
      */
-    private Double TAX_AMOUNT;
+    private Double taxAmount;
 
     /**
      * 结转标识
      */
-    private Long CARRY_SIGN;
+    private Long carrySign;
 
     /**
      * 生产或测试标识
      */
-    private Long DATA_SIGN;
+    private Long dataSign;
 
     /**
      * 商品商家编码
      */
-    private String ITEMID;
+    private String itemid;
 
     /**
      * 单据类型
      */
-    private Long RESERVED_TYPE_NUM_ID;
+    private Long reservedTypeNumId;
     /**
      * 单据类型名字
      */
-    private String RESERVED_TYPE_NUM_ID_NAME;
-
-    public String getSERIES() {
-        return SERIES;
-    }
-
-    public void setSERIES(String SERIES) {
-        this.SERIES = SERIES;
-    }
-
-
-    public Long getTENANT_NUM_ID() {
-        return TENANT_NUM_ID;
-    }
-
-    public void setTENANT_NUM_ID(Long TENANT_NUM_ID) {
-        this.TENANT_NUM_ID = TENANT_NUM_ID;
-    }
-
-    public Long getSUB_UNIT_NUM_ID() {
-        return SUB_UNIT_NUM_ID;
-    }
-
-    public void setSUB_UNIT_NUM_ID(Long SUB_UNIT_NUM_ID) {
-        this.SUB_UNIT_NUM_ID = SUB_UNIT_NUM_ID;
-    }
-
-
-    public String getRESERVED_NO() {
-        return RESERVED_NO;
-    }
-
-    public void setRESERVED_NO(String RESERVED_NO) {
-        this.RESERVED_NO = RESERVED_NO;
-    }
-
-    public Long getTYPE_NUM_ID() {
-        return TYPE_NUM_ID;
-    }
-
-    public void setTYPE_NUM_ID(Long TYPE_NUM_ID) {
-        this.TYPE_NUM_ID = TYPE_NUM_ID;
-    }
-
-    public Date getOPERAT_DATE() {
-        return OPERAT_DATE;
-    }
-
-    public void setOPERAT_DATE(Date OPERAT_DATE) {
-        this.OPERAT_DATE = OPERAT_DATE;
-    }
-
-    public Long getITEM_NUM_ID() {
-        return ITEM_NUM_ID;
-    }
-
-    public void setITEM_NUM_ID(Long ITEM_NUM_ID) {
-        this.ITEM_NUM_ID = ITEM_NUM_ID;
-    }
-
-    public Long getDIV_NUM_ID() {
-        return DIV_NUM_ID;
-    }
-
-    public void setDIV_NUM_ID(Long DIV_NUM_ID) {
-        this.DIV_NUM_ID = DIV_NUM_ID;
-    }
-
-    public String getBARCODE() {
-        return BARCODE;
-    }
-
-    public void setBARCODE(String BARCODE) {
-        this.BARCODE = BARCODE;
-    }
-
-    public String getITEM_NAME() {
-        return ITEM_NAME;
-    }
-
-    public void setITEM_NAME(String ITEM_NAME) {
-        this.ITEM_NAME = ITEM_NAME;
-    }
-
-    public Long getPRODUCT_ORIGIN_NUM_ID() {
-        return PRODUCT_ORIGIN_NUM_ID;
-    }
-
-    public void setPRODUCT_ORIGIN_NUM_ID(Long PRODUCT_ORIGIN_NUM_ID) {
-        this.PRODUCT_ORIGIN_NUM_ID = PRODUCT_ORIGIN_NUM_ID;
-    }
-
-    public Double getCONVERSION_QTY() {
-        return CONVERSION_QTY;
-    }
-
-    public void setCONVERSION_QTY(Double CONVERSION_QTY) {
-        this.CONVERSION_QTY = CONVERSION_QTY;
-    }
-
-    public String getCONVERSION_STYLE_DESC() {
-        return CONVERSION_STYLE_DESC;
-    }
-
-    public void setCONVERSION_STYLE_DESC(String CONVERSION_STYLE_DESC) {
-        this.CONVERSION_STYLE_DESC = CONVERSION_STYLE_DESC;
-    }
-
-    public Double getPRICE() {
-        return PRICE;
-    }
-
-    public void setPRICE(Double PRICE) {
-        this.PRICE = PRICE;
-    }
-
-    public Double getAMOUNT() {
-        return AMOUNT;
-    }
-
-    public void setAMOUNT(Double AMOUNT) {
-        this.AMOUNT = AMOUNT;
-    }
-
-    public String getBATCH_SERIES() {
-        return BATCH_SERIES;
-    }
-
-    public void setBATCH_SERIES(String BATCH_SERIES) {
-        this.BATCH_SERIES = BATCH_SERIES;
-    }
-
-    public Long getBATCH_PROMOTION_GRADE() {
-        return BATCH_PROMOTION_GRADE;
-    }
-
-    public void setBATCH_PROMOTION_GRADE(Long BATCH_PROMOTION_GRADE) {
-        this.BATCH_PROMOTION_GRADE = BATCH_PROMOTION_GRADE;
-    }
-
-    public Long getBATCH_SUPPLY_UNIT_NUM_ID() {
-        return BATCH_SUPPLY_UNIT_NUM_ID;
-    }
-
-    public void setBATCH_SUPPLY_UNIT_NUM_ID(Long BATCH_SUPPLY_UNIT_NUM_ID) {
-        this.BATCH_SUPPLY_UNIT_NUM_ID = BATCH_SUPPLY_UNIT_NUM_ID;
-    }
-
-    public Double getBATCH_PO_PRICE() {
-        return BATCH_PO_PRICE;
-    }
-
-    public void setBATCH_PO_PRICE(Double BATCH_PO_PRICE) {
-        this.BATCH_PO_PRICE = BATCH_PO_PRICE;
-    }
-
-    public Double getTAX_RATE() {
-        return TAX_RATE;
-    }
-
-    public void setTAX_RATE(Double TAX_RATE) {
-        this.TAX_RATE = TAX_RATE;
-    }
-
-    public Double getTAX_AMOUNT() {
-        return TAX_AMOUNT;
-    }
-
-    public void setTAX_AMOUNT(Double TAX_AMOUNT) {
-        this.TAX_AMOUNT = TAX_AMOUNT;
-    }
-
-    public Long getCARRY_SIGN() {
-        return CARRY_SIGN;
-    }
-
-    public void setCARRY_SIGN(Long CARRY_SIGN) {
-        this.CARRY_SIGN = CARRY_SIGN;
-    }
-
-    public Long getDATA_SIGN() {
-        return DATA_SIGN;
-    }
-
-    public void setDATA_SIGN(Long DATA_SIGN) {
-        this.DATA_SIGN = DATA_SIGN;
-    }
-
-    public String getITEMID() {
-        return ITEMID;
-    }
-
-    public void setITEMID(String ITEMID) {
-        this.ITEMID = ITEMID;
-    }
-
-    public Long getRESERVED_TYPE_NUM_ID() {
-        return RESERVED_TYPE_NUM_ID;
-    }
-
-    public void setRESERVED_TYPE_NUM_ID(Long RESERVED_TYPE_NUM_ID) {
-        this.RESERVED_TYPE_NUM_ID = RESERVED_TYPE_NUM_ID;
-    }
-
-    public String getRESERVED_TYPE_NUM_ID_NAME() {
-        return RESERVED_TYPE_NUM_ID_NAME;
-    }
-
-    public void setRESERVED_TYPE_NUM_ID_NAME(String RESERVED_TYPE_NUM_ID_NAME) {
-        this.RESERVED_TYPE_NUM_ID_NAME = RESERVED_TYPE_NUM_ID_NAME;
-    }
+    private String reservedTypeNumIdName;
+	public String getSeries() {
+		return series;
+	}
+	public void setSeries(String series) {
+		this.series = series;
+	}
+	public String getReservedNo() {
+		return reservedNo;
+	}
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
+	}
+	public Long getTypeNumId() {
+		return typeNumId;
+	}
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
+	}
+	public Date getOperatDate() {
+		return operatDate;
+	}
+	public void setOperatDate(Date operatDate) {
+		this.operatDate = operatDate;
+	}
+	public Long getItemNumId() {
+		return itemNumId;
+	}
+	public void setItemNumId(Long itemNumId) {
+		this.itemNumId = itemNumId;
+	}
+	public Long getDivNumId() {
+		return divNumId;
+	}
+	public void setDivNumId(Long divNumId) {
+		this.divNumId = divNumId;
+	}
+	public String getBarcode() {
+		return barcode;
+	}
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
+	}
+	public String getItemName() {
+		return itemName;
+	}
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+	public Long getProductOriginNumId() {
+		return productOriginNumId;
+	}
+	public void setProductOriginNumId(Long productOriginNumId) {
+		this.productOriginNumId = productOriginNumId;
+	}
+	public Double getConversionQty() {
+		return conversionQty;
+	}
+	public void setConversionQty(Double conversionQty) {
+		this.conversionQty = conversionQty;
+	}
+	public String getConversionStyleDesc() {
+		return conversionStyleDesc;
+	}
+	public void setConversionStyleDesc(String conversionStyleDesc) {
+		this.conversionStyleDesc = conversionStyleDesc;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	public Double getAmount() {
+		return amount;
+	}
+	public void setAmount(Double amount) {
+		this.amount = amount;
+	}
+	public String getBatchSeries() {
+		return batchSeries;
+	}
+	public void setBatchSeries(String batchSeries) {
+		this.batchSeries = batchSeries;
+	}
+	public Long getBatchPromotionGrade() {
+		return batchPromotionGrade;
+	}
+	public void setBatchPromotionGrade(Long batchPromotionGrade) {
+		this.batchPromotionGrade = batchPromotionGrade;
+	}
+	public Long getBatchSupplyUnitNumId() {
+		return batchSupplyUnitNumId;
+	}
+	public void setBatchSupplyUnitNumId(Long batchSupplyUnitNumId) {
+		this.batchSupplyUnitNumId = batchSupplyUnitNumId;
+	}
+	public Double getBatchPoPrice() {
+		return batchPoPrice;
+	}
+	public void setBatchPoPrice(Double batchPoPrice) {
+		this.batchPoPrice = batchPoPrice;
+	}
+	public Double getTaxRate() {
+		return taxRate;
+	}
+	public void setTaxRate(Double taxRate) {
+		this.taxRate = taxRate;
+	}
+	public Double getTaxAmount() {
+		return taxAmount;
+	}
+	public void setTaxAmount(Double taxAmount) {
+		this.taxAmount = taxAmount;
+	}
+	public Long getCarrySign() {
+		return carrySign;
+	}
+	public void setCarrySign(Long carrySign) {
+		this.carrySign = carrySign;
+	}
+	public Long getDataSign() {
+		return dataSign;
+	}
+	public void setDataSign(Long dataSign) {
+		this.dataSign = dataSign;
+	}
+	public String getItemid() {
+		return itemid;
+	}
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
+	public Long getReservedTypeNumId() {
+		return reservedTypeNumId;
+	}
+	public void setReservedTypeNumId(Long reservedTypeNumId) {
+		this.reservedTypeNumId = reservedTypeNumId;
+	}
+	public String getReservedTypeNumIdName() {
+		return reservedTypeNumIdName;
+	}
+	public void setReservedTypeNumIdName(String reservedTypeNumIdName) {
+		this.reservedTypeNumIdName = reservedTypeNumIdName;
+	}
 }
