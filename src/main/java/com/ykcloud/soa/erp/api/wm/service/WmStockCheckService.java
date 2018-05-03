@@ -22,6 +22,7 @@ import com.ykcloud.soa.erp.api.wm.request.StockCheckSecondFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.UnConfirmStockAdjustGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.AccountForProduceStockProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerProductDetailGetResponse;
@@ -43,6 +44,7 @@ import com.ykcloud.soa.erp.api.wm.response.StockCheckSecondFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingTaskHDRGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.UnConfirmStockAdjustGetResponse;
 
 /**
  * @Description: 盘点服务
@@ -54,6 +56,7 @@ public interface WmStockCheckService {
     /**
      * 审核盘点计划
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -62,6 +65,7 @@ public interface WmStockCheckService {
     /**
      * 查询盘点计划单表头信息
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -70,6 +74,7 @@ public interface WmStockCheckService {
     /**
      * 查询盘点装箱单表头信息
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -78,6 +83,7 @@ public interface WmStockCheckService {
     /**
      * 扫码商品条码返回商品信息
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -87,6 +93,7 @@ public interface WmStockCheckService {
     /**
      * 扫码商品条码盘点
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -96,6 +103,7 @@ public interface WmStockCheckService {
     /**
      * 输入商品数量盘点
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -105,6 +113,7 @@ public interface WmStockCheckService {
     /**
      * 箱盘点完成
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -113,6 +122,7 @@ public interface WmStockCheckService {
     /**
      * 漏盘商品查询
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -122,6 +132,7 @@ public interface WmStockCheckService {
     /**
      * 生成盘点装箱单表头
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -130,6 +141,7 @@ public interface WmStockCheckService {
     /**
      * 箱重盘
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -138,6 +150,7 @@ public interface WmStockCheckService {
     /**
      * 弃盘审核
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -147,6 +160,7 @@ public interface WmStockCheckService {
     /**
      * 初盘完成
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -156,6 +170,7 @@ public interface WmStockCheckService {
     /**
      * 复盘完成
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -165,6 +180,7 @@ public interface WmStockCheckService {
     /**
      * 盘点完成
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -174,6 +190,7 @@ public interface WmStockCheckService {
     /**
      * 盘点作废
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -183,6 +200,7 @@ public interface WmStockCheckService {
     /**
      * 生成盘盈盘亏单
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -192,6 +210,7 @@ public interface WmStockCheckService {
     /**
      * 查询箱明细
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -201,6 +220,7 @@ public interface WmStockCheckService {
     /**
      * 盘盈盘亏单入账
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -210,6 +230,7 @@ public interface WmStockCheckService {
     /**
      * 普通盘点入账消息处理
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -219,6 +240,7 @@ public interface WmStockCheckService {
     /**
      * 生产盘点入账消息处理
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -228,6 +250,7 @@ public interface WmStockCheckService {
     /**
      * 查询当前人盘点的货架列表
      *
+     * @author henry.wang
      * @param request
      * @return
      */
@@ -240,4 +263,12 @@ public interface WmStockCheckService {
      */
     StockAdjustHzAuditResponse auditStockAdjustHz(StockAdjustHzAuditRequest request);
 
+    /**
+     * 查询指定日期之前的所有未入账的盈亏单
+     *
+     * @author henry.wang
+     * @param request
+     * @return
+     */
+    UnConfirmStockAdjustGetResponse getUnConfirmStockAdjust(UnConfirmStockAdjustGetRequest request);
 }
