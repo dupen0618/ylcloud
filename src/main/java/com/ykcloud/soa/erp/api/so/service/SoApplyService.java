@@ -17,7 +17,7 @@ import com.ykcloud.soa.erp.api.so.request.ShopTransferRejectAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyActualQtyUpdateGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.SoOriginReservedNoRequest;
-import com.ykcloud.soa.erp.api.so.request.SoReturnApplyAuditRequest;
+import com.ykcloud.soa.erp.api.so.request.MaterialIssueBackAuditRequest;
 import com.ykcloud.soa.erp.api.so.response.ActualQtyForReturnUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplySubcontractSplitGetResponse;
@@ -33,7 +33,7 @@ import com.ykcloud.soa.erp.api.so.response.ShopTransferRejectAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.SoApplyActualQtyUpdateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.SoOriginReservedNoResponse;
-import com.ykcloud.soa.erp.api.so.response.SoReturnApplyAuditResponse;
+import com.ykcloud.soa.erp.api.so.response.MaterialIssueBackAuditResponse;
 
 /**
  * TODO（描述类的职责）
@@ -134,7 +134,7 @@ public interface SoApplyService {
     * @Author: fred.zhao
     * @Date: 2018/4/12 
     */ 
-	public SoReturnApplyAuditResponse auditMaterialIssueBacky(SoReturnApplyAuditRequest request);
+	public MaterialIssueBackAuditResponse auditMaterialIssueBack(MaterialIssueBackAuditRequest request);
 
     //店内调拨、行政领料商品查询
 	public ProductInfoForSoApplyGetResponse getProductInfoForSoApply(ProductInfoForSoApplyGetRequest request);
