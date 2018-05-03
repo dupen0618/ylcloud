@@ -37,9 +37,9 @@ public class SoTmlLockForGenerateData implements Serializable {
 
     private Date lastUpdtme;
 
-    private Long insertdata;
+    private String insertdata;
 
-    private Long cancelsign;
+    private String cancelsign;
 
     private Long createUserId;//
 
@@ -155,23 +155,25 @@ public class SoTmlLockForGenerateData implements Serializable {
         this.lastUpdtme = lastUpdtme;
     }
 
-    public Long getInsertdata() {
-        return insertdata;
-    }
+    
 
-    public void setInsertdata(Long insertdata) {
-        this.insertdata = insertdata;
-    }
+    public String getInsertdata() {
+		return insertdata;
+	}
 
-    public Long getCancelsign() {
-        return cancelsign;
-    }
+	public void setInsertdata(String insertdata) {
+		this.insertdata = insertdata;
+	}
 
-    public void setCancelsign(Long cancelsign) {
-        this.cancelsign = cancelsign;
-    }
+	public String getCancelsign() {
+		return cancelsign;
+	}
 
-    public Long getCreateUserId() {
+	public void setCancelsign(String cancelsign) {
+		this.cancelsign = cancelsign;
+	}
+
+	public Long getCreateUserId() {
         return createUserId;
     }
 

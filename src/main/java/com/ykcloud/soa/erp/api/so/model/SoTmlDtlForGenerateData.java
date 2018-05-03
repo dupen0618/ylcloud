@@ -18,6 +18,8 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     private String tmlNumId;//终端订单号
 
+    private Long subUnitNumId;//门店编号
+
     private Long divNumId;//事业部主键
 
     private Long itemNumId;//商品主键
@@ -48,9 +50,7 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     private Double initShipQty;//本店发货量
 
-    private Date revcDate;//收货日期要求
-
-    private String storageAppay;//指定锁库仓库
+    private String storageArray;//指定锁库仓库
 
     private Double locPtyNumId;//库位属性
 
@@ -68,11 +68,15 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     private Double pcy1Amount;//买赠金额
 
+    private Double changeQty;//
+
+    private Date recvDate;//收货日期要求
+
     private Double cx2TradePrice;//组合降价后价格
 
     private Date createDtme;//创建时间
 
-    private Double lastUpdtme;//最后更新时间
+    private Date lastUpdtme;//最后更新时间
 
     private Long createUserId;//用户
 
@@ -83,6 +87,8 @@ public class SoTmlDtlForGenerateData implements Serializable{
     private String insertData;//新增
 
     private String updatedata;//更新
+
+    private String barcodeTypeNumId;
 
     private String invFromType;//库存来源：1店内现货，2无货后台共享
 
@@ -166,7 +172,189 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     private Long logisticsType;//送货方式
 
-    private List<SoTmlLockForGenerateData> lockTmlList;
+    private Double otherDiscount;//其他优惠
+
+    private Double deductAmount; //
+
+    private Double custInvoicePrice;//
+
+    private Double fiTradePrice;
+
+    private Double mcPointAmount;//
+
+    private Double cashCouponAmount;//
+
+    private Double voucherAmount;//
+
+    private Long recvStorageNumId;//
+
+
+    private Long sendStorageNumId;//
+
+    private Long stkNumId;
+
+    private Long locType;
+
+    private Double malingAmount;
+
+    private Double fAmount;
+
+    private Double tradeAmount;
+
+    private Long itemid;
+
+
+    public Long getItemid() {
+        return itemid;
+    }
+
+    public void setItemid(Long itemid) {
+        this.itemid = itemid;
+    }
+
+    public Double getTradeAmount() {
+        return tradeAmount;
+    }
+
+    public void setTradeAmount(Double tradeAmount) {
+        this.tradeAmount = tradeAmount;
+    }
+
+    public Double getfAmount() {
+        return fAmount;
+    }
+
+    public void setfAmount(Double fAmount) {
+        this.fAmount = fAmount;
+    }
+
+    public Double getMalingAmount() {
+        return malingAmount;
+    }
+
+    public void setMalingAmount(Double malingAmount) {
+        this.malingAmount = malingAmount;
+    }
+
+    public Long getLocType() {
+        return locType;
+    }
+
+    public void setLocType(Long locType) {
+        this.locType = locType;
+    }
+
+    public Long getStkNumId() {
+        return stkNumId;
+    }
+
+    public void setStkNumId(Long stkNumId) {
+        this.stkNumId = stkNumId;
+    }
+
+    public Long getSendStorageNumId() {
+        return sendStorageNumId;
+    }
+
+    public void setSendStorageNumId(Long sendStorageNumId) {
+        this.sendStorageNumId = sendStorageNumId;
+    }
+
+    public Long getRecvStorageNumId() {
+        return recvStorageNumId;
+    }
+
+    public void setRecvStorageNumId(Long recvStorageNumId) {
+        this.recvStorageNumId = recvStorageNumId;
+    }
+
+    public Double getVoucherAmount() {
+        return voucherAmount;
+    }
+
+    public void setVoucherAmount(Double voucherAmount) {
+        this.voucherAmount = voucherAmount;
+    }
+
+    public Double getCashCouponAmount() {
+        return cashCouponAmount;
+    }
+
+    public void setCashCouponAmount(Double cashCouponAmount) {
+        this.cashCouponAmount = cashCouponAmount;
+    }
+
+    public Double getMcPointAmount() {
+        return mcPointAmount;
+    }
+
+    public void setMcPointAmount(Double mcPointAmount) {
+        this.mcPointAmount = mcPointAmount;
+    }
+
+    public Double getFiTradePrice() {
+        return fiTradePrice;
+    }
+
+    public void setFiTradePrice(Double fiTradePrice) {
+        this.fiTradePrice = fiTradePrice;
+    }
+
+    public Double getCustInvoicePrice() {
+        return custInvoicePrice;
+    }
+
+    public void setCustInvoicePrice(Double custInvoicePrice) {
+        this.custInvoicePrice = custInvoicePrice;
+    }
+
+    public Double getDeductAmount() {
+        return deductAmount;
+    }
+
+    public void setDeductAmount(Double deductAmount) {
+        this.deductAmount = deductAmount;
+    }
+
+    public Double getOtherDiscount() {
+        return otherDiscount;
+    }
+
+    public void setOtherDiscount(Double otherDiscount) {
+        this.otherDiscount = otherDiscount;
+    }
+
+    public String getBarcodeTypeNumId() {
+        return barcodeTypeNumId;
+    }
+
+    public void setBarcodeTypeNumId(String barcodeTypeNumId) {
+        this.barcodeTypeNumId = barcodeTypeNumId;
+    }
+
+    public Date getRecvDate() {
+        return recvDate;
+    }
+
+    public void setRecvDate(Date recvDate) {
+        this.recvDate = recvDate;
+    }
+
+    public Double getChangeQty() {
+        return changeQty;
+    }
+
+    public void setChangeQty(Double changeQty) {
+        this.changeQty = changeQty;
+    }
+
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
+    }
 
     public Long getLogisticsType() {
         return logisticsType;
@@ -182,14 +370,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     public void setSettlementType(Long settlementType) {
         this.settlementType = settlementType;
-    }
-
-    public List<SoTmlLockForGenerateData> getLockTmlList() {
-        return lockTmlList;
-    }
-
-    public void setLockTmlList(List<SoTmlLockForGenerateData> lockTmlList) {
-        this.lockTmlList = lockTmlList;
     }
 
     public Long getSupplyUnitNumId() {
@@ -344,20 +524,12 @@ public class SoTmlDtlForGenerateData implements Serializable{
         this.initShipQty = initShipQty;
     }
 
-    public Date getRevcDate() {
-        return revcDate;
+    public String getStorageArray() {
+        return storageArray;
     }
 
-    public void setRevcDate(Date revcDate) {
-        this.revcDate = revcDate;
-    }
-
-    public String getStorageAppay() {
-        return storageAppay;
-    }
-
-    public void setStorageAppay(String storageAppay) {
-        this.storageAppay = storageAppay;
+    public void setStorageArray(String storageArray) {
+        this.storageArray = storageArray;
     }
 
     public Double getLocPtyNumId() {
@@ -440,15 +612,17 @@ public class SoTmlDtlForGenerateData implements Serializable{
         this.createDtme = createDtme;
     }
 
-    public Double getLastUpdtme() {
-        return lastUpdtme;
-    }
+    
 
-    public void setLastUpdtme(Double lastUpdtme) {
-        this.lastUpdtme = lastUpdtme;
-    }
+    public Date getLastUpdtme() {
+		return lastUpdtme;
+	}
 
-    public Long getCreateUserId() {
+	public void setLastUpdtme(Date lastUpdtme) {
+		this.lastUpdtme = lastUpdtme;
+	}
+
+	public Long getCreateUserId() {
         return createUserId;
     }
 

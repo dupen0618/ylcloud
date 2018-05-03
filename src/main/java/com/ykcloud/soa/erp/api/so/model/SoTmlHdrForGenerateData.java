@@ -29,7 +29,7 @@ public class SoTmlHdrForGenerateData implements Serializable{
 
     private Date orderDate;//订单日期
 
-    private Long skipNumId;//物流中心主键
+    private Long stkNumId;//物流中心主键
 
     private Long logicalStorageId; //逻辑仓库
 
@@ -103,7 +103,7 @@ public class SoTmlHdrForGenerateData implements Serializable{
 
     private Date createDtme;//创建时间
 
-    private Date lastUpdate;//最后更新时间
+    private Date lastUpdtme;//最后更新时间
 
     private Long createUserId;//用户
 
@@ -187,6 +187,16 @@ public class SoTmlHdrForGenerateData implements Serializable{
 
     private Long offUpSign;//离线订单上传标识
 
+    private Double freight;//运费
+
+
+    public Double getFreight() {
+        return freight;
+    }
+
+    public void setFreight(Double freight) {
+        this.freight = freight;
+    }
 
     public String getSeries() {
         return series;
@@ -252,12 +262,12 @@ public class SoTmlHdrForGenerateData implements Serializable{
         this.orderDate = orderDate;
     }
 
-    public Long getSkipNumId() {
-        return skipNumId;
+    public Long getStkNumId() {
+        return stkNumId;
     }
 
-    public void setSkipNumId(Long skipNumId) {
-        this.skipNumId = skipNumId;
+    public void setStkNumId(Long stkNumId) {
+        this.stkNumId = stkNumId;
     }
 
     public Long getLogicalStorageId() {
@@ -548,12 +558,12 @@ public class SoTmlHdrForGenerateData implements Serializable{
         this.createDtme = createDtme;
     }
 
-    public Date getLastUpdate() {
-        return lastUpdate;
+    public Date getLastUpdtme() {
+        return lastUpdtme;
     }
 
-    public void setLastUpdate(Date lastUpdate) {
-        this.lastUpdate = lastUpdate;
+    public void setLastUpdtme(Date lastUpdtme) {
+        this.lastUpdtme = lastUpdtme;
     }
 
     public Long getCreateUserId() {
