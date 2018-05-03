@@ -11,6 +11,11 @@ import java.io.Serializable;
 public class ProductForShopTransfer implements Serializable {
 	
 	private static final long serialVersionUID = -7437509378376568072L;
+	
+	/**
+	 * 税率
+	 */
+	private Double taxRate;
 
 	/**
 	 * 商品编号
@@ -123,6 +128,14 @@ public class ProductForShopTransfer implements Serializable {
 	private Double stockQty;
 	
 	private String itemid;
+
+	public Double getTaxRate() {
+		return taxRate;
+	}
+
+	public void setTaxRate(Double taxRate) {
+		this.taxRate = taxRate;
+	}
 
 	public Long getItemNumId() {
 		return itemNumId;
