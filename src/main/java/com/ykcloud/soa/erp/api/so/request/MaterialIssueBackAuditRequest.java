@@ -11,7 +11,7 @@ import java.util.Date;
  * @Description:领料退回,审核
  * @Date: Created in 15:12:2018/4/12
  */
-public class SoReturnApplyAuditRequest  extends AbstractUserSessionRequest{
+public class MaterialIssueBackAuditRequest  extends AbstractUserSessionRequest{
     private static final long serialVersionUID = 5128298133224977007L;
     @NotNull(message = "门店编号不能为空!")
     private Long subUnitNumId;
