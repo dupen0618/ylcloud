@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.so.response;
 
-public class PackingOrderItemInventoryUpResponse {
+import com.gb.soa.omp.ccommon.api.response.MessagePack;
+
+public class PackingOrderItemInventoryUpResponse extends MessagePack {
     private static final long serialVersionUID = 1L;
     //影响行数
     private int influence;

@@ -6,8 +6,8 @@ import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptCreateByContainerRequest
 import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptFinishRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptScanContainerRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptShipFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseScanContainerRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseShipFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipBusinessAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipForMaterialIssueBackGenerateRequest;
@@ -16,6 +16,7 @@ import com.ykcloud.soa.erp.api.wm.request.WmAllotWithShipRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmContainerHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataByBarcodeGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataGetDataByBarcodeAndSoNumIdRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmFinishReserverSoShipRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmFinishShipContainerHdrRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmFinishSoPackingRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmQuerySoAndContainerRequest;
@@ -26,7 +27,6 @@ import com.ykcloud.soa.erp.api.wm.request.WmShipFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmSoHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmSoListBingWlbcRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmSoReverseReceiptRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmfinishPackingRequest;
@@ -36,8 +36,8 @@ import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptCreateByContainerRespon
 import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptDtlUpdateReponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptFinishResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptScanContainerResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptShipFinishResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseScanContainerResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseShipFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipBusinessAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipForMaterialIssueBackGenerateResponse;
@@ -46,6 +46,7 @@ import com.ykcloud.soa.erp.api.wm.response.WmAllotWithShipResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmContainerHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataByBarcodeGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataGetDataByBarcodeAndSoNumIdResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmFinishReserverSoShipRespose;
 import com.ykcloud.soa.erp.api.wm.response.WmFinishShipContainerHdrResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmFinishSoPackingResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmQuerySoAndContainerResponse;
@@ -56,7 +57,6 @@ import com.ykcloud.soa.erp.api.wm.response.WmShipFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmSoHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmSoListBingWlbcResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmSoReverseReceiptRespose;
 import com.ykcloud.soa.erp.api.wm.response.WmWlBcHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmWlbcHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmfinishPackingResponse;
@@ -162,7 +162,7 @@ public interface WmShipService {
 		 * @date 2018年4月20日
 		 * @description 装箱单关联验收单(将验收单号关联到containerHdr中的出库单号)
 		 */
-		public ReverseReceiptScanContainerResponse scanContainerForReverseReceipt(ReverseReceiptScanContainerRequest request);
+		public ReverseScanContainerResponse scanContainerForReverse(ReverseScanContainerRequest request);
 		
 		/**
 		 * 
@@ -170,7 +170,7 @@ public interface WmShipService {
 		 * @date 2018年4月20日
 		 * @description 反配出库确认
 		 */
-		public ReverseReceiptShipFinishResponse finishReverseReceipt(ReverseReceiptShipFinishRequest request);
+		public ReverseShipFinishResponse finishReverseShip(ReverseShipFinishRequest request);
 		
 		/**
 		 * 
@@ -218,7 +218,7 @@ public interface WmShipService {
 		 * @date 2018年4月27日
 		 * @description
 		 */
-		public WmSoReverseReceiptRespose soReserverReceipt(WmSoReverseReceiptRequest request);
+		public WmFinishReserverSoShipRespose finishReserverSoShip(WmFinishReserverSoShipRequest request);
 		
 		/**
 		 * 
