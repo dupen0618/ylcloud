@@ -16,6 +16,8 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
 
     @NotNull(message = "单据类型不能为空！")
     String typeNumId;
+    @NotNull(message = "业务类型编号不能为空！")
+    private String billTypeNumId;
     @NotEmpty(message = "待入账批次流水不能为空！")
     List<FiPhysicalBatchAccountWba> fiPhysicalBatchAccountWbaList;
 
@@ -43,5 +45,13 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
 
     public void setBalaFuncId(Long balaFuncId) {
         this.balaFuncId = balaFuncId;
+    }
+
+    public String getBillTypeNumId() {
+        return billTypeNumId;
+    }
+
+    public void setBillTypeNumId(String billTypeNumId) {
+        this.billTypeNumId = billTypeNumId;
     }
 }
