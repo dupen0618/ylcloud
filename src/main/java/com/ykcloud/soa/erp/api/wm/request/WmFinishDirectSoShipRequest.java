@@ -4,7 +4,7 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WmRfFinishOneStepRequest extends AbstractUserSessionRequest {
+public class WmFinishDirectSoShipRequest extends AbstractUserSessionRequest {
 
 	/**
 	 * 

@@ -1,26 +1,26 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.ReceiptBudCreateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptBusinessAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptCreateByContainerRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptDtlUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseScanContainerRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseShipBusinessAccountProcessRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReverseShipFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseShipFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipBusinessAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipFiAccountProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShipForMaterialIssueBackGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.SoShipFinishRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmAllotWithShipRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmContainerHdrCreateRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmCreateDistributionWithShipRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataByBarcodeGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmDataGetDataByBarcodeAndSoNumIdRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmFinishDirectSoShipRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmFinishReserverSoShipRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmFinishShipContainerHdrRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmFinishSoPackingRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmQuerySoAndContainerRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmRfFinishOneStepRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmScanShipContainerRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipDtlWithNoBatchUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmShipFinishRequest;
@@ -31,26 +31,26 @@ import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmfinishPackingRequest;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptBudCreateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptBusinessAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptCreateByContainerRespone;
 import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptDtlUpdateReponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseScanContainerResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReverseShipBusinessAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseShipFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipBusinessAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipFiAccountProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShipForMaterialIssueBackGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.SoShipFinishResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmAllotWithShipResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmContainerHdrCreateResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmCreateDistributionWithShipResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataByBarcodeGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmDataGetDataByBarcodeAndSoNumIdResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmFinishDirectSoShipResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmFinishReserverSoShipRespose;
 import com.ykcloud.soa.erp.api.wm.response.WmFinishShipContainerHdrResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmFinishSoPackingResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmQuerySoAndContainerResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmRfFinishOneStepResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmScanShipContainerHdrResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipDtlWithNoBatchUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmShipFinishResponse;
@@ -178,7 +178,7 @@ public interface WmShipService {
 		 * @date 2018年4月20日
 		 * @description 出库反配库存处理TCC服务
 		 */
-		public ReverseReceiptBusinessAccountProcessResponse reverseReceiptBusinessAccountProcess(ReverseReceiptBusinessAccountProcessRequest request);
+		public ReverseShipBusinessAccountProcessResponse reverseShipBusinessAccountProcess(ReverseShipBusinessAccountProcessRequest request);
 
 		/**
 		 * 
@@ -186,7 +186,7 @@ public interface WmShipService {
 		 * @date 2018年4月20日
 		 * @description 出库反配财务账处理消息TCC
 		 */
-		public ReverseReceiptFiAccountProcessResponse reverseReceiptFiAccountProcess(ReverseReceiptFiAccountProcessRequest request);
+		public ReverseReceiptFiAccountProcessResponse reverseShipFiAccountProcess(ReverseShipFiAccountProcessRequest request);
 
 		/**
 		 * 
@@ -194,7 +194,7 @@ public interface WmShipService {
 		 * @date 2018年4月23日
 		 * @description 产生分拨单
 		 */
-		public WmAllotWithShipResponse allotSoWithShip(WmAllotWithShipRequest request);
+		public WmCreateDistributionWithShipResponse createDistributionWithShip(WmCreateDistributionWithShipRequest request);
 		
 		/**
 		 * 
@@ -202,7 +202,7 @@ public interface WmShipService {
 		 * @date 2018年4月24日
 		 * @description RF一键出库
 		 */
-		public WmRfFinishOneStepResponse finishDirect(WmRfFinishOneStepRequest request);
+		public WmFinishDirectSoShipResponse finishDirectSoShip(WmFinishDirectSoShipRequest request);
 
 		/**
 		 * 
@@ -210,7 +210,7 @@ public interface WmShipService {
 		 * @date 2018年4月26日
 		 * @description RF一键出库没有tcc
 		 */
-		public WmRfFinishOneStepResponse finishDirectWithNoTransaction(WmRfFinishOneStepRequest request);
+		public WmFinishDirectSoShipResponse finishDirectSoShipWithNoTransaction(WmFinishDirectSoShipRequest request);
 		
 		/**
 		 * 
