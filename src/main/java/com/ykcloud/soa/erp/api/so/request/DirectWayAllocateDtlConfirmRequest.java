@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
@@ -28,7 +29,8 @@ public class DirectWayAllocateDtlConfirmRequest extends AbstractUserSessionReque
     @NotEmpty(message = "验收单号不能为空！")
     private String receiptNo;
     
-    @NotNull(message = "是否强制审核标识不能为空！")
+    @ApiField(description = "0：普通审核  1：强制审核")
+    @NotNull(message = "审核标识不能为空！")
     private Long forceSign;
 
 	public Long getForceSign() {
