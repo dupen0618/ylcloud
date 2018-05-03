@@ -30,6 +30,14 @@ public class SoApplyProduct implements Serializable{
 	private Double tradePrice;//价格
 	private Double stockQty;//库存数
 	private String itemid;  //商家编号
+	private Double costTaxRate;//税率
+	
+	public Double getCostTaxRate() {
+		return costTaxRate;
+	}
+	public void setCostTaxRate(Double costTaxRate) {
+		this.costTaxRate = costTaxRate;
+	}
 	public String getItemid() {
 		return itemid;
 	}
