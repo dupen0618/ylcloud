@@ -27,6 +27,17 @@ public class DirectWayAllocateDtlConfirmRequest extends AbstractUserSessionReque
     
     @NotEmpty(message = "验收单号不能为空！")
     private String receiptNo;
+    
+    @NotNull(message = "是否强制审核标识不能为空！")
+    private Long forceSign;
+
+	public Long getForceSign() {
+		return forceSign;
+	}
+
+	public void setForceSign(Long forceSign) {
+		this.forceSign = forceSign;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
