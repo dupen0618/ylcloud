@@ -1,9 +1,11 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
+import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.scm.request.DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.DirectWayReplenishweeklyDayFlagGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ProtocolBackOffRateGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.SupplyPayTypeIdGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.UploadBaseInfoTaskRequest;
 import com.ykcloud.soa.erp.api.scm.response.DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.DirectWayReplenishweeklyDayFlagGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ProtocolBackOffRateGetResponse;
@@ -24,5 +26,15 @@ public interface ScmSupplyService {
 
 	//获得结算周期
 	public SupplyPayTypeIdGetResponse getSupplyPayTypeId(SupplyPayTypeIdGetRequest Request);
+	
+	/**
+	 * 
+	 * @description 上传基础数据到证照系统中间库
+	 * @author gaoyun.shen
+	 * @date: 2018年5月2日 下午8:05:33
+	 * @param 
+	 * @return
+	 */
+	public MessagePack uploadBaseInfoTask(UploadBaseInfoTaskRequest request);
 
 }

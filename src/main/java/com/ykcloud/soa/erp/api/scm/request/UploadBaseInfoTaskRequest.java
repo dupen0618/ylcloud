@@ -1,0 +1,25 @@
+package com.ykcloud.soa.erp.api.scm.request;
+
+
+import com.gb.soa.omp.ccommon.api.annotation.ApiField;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+/**
+ * 
+ * @author gaoyun.shen
+ *
+ * @date 2018年5月3日 下午12:12:09
+ * 
+ * @Description 上传基础数据到证照系统中间表请求类
+ */
+public class UploadBaseInfoTaskRequest extends AbstractUserSessionRequest {
+	private static final long serialVersionUID = -3936899766322939348L;
+	@ApiField(description = "定时器起始时间，不传就是默认当前时间前一天 yyyy-MM-dd")
+	private String startDate;
+	public String getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+
+}
