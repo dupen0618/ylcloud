@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import java.util.Date;
+import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.scm.model.CiteDtl;
@@ -8,7 +9,7 @@ import com.ykcloud.soa.erp.api.scm.model.CiteDtl;
 public class ReturnCiteDtlSaveRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = 1L;
 
-	private CiteDtl citeDtl;  
+	private List<CiteDtl> citeDtls;  
 	
 	private Long subUnitNumId; //门店编号
 	
@@ -16,12 +17,13 @@ public class ReturnCiteDtlSaveRequest extends AbstractUserSessionRequest {
 	
 	private String approvalNumId; //审批单号
 
-	public CiteDtl getCiteDtl() {
-		return citeDtl;
+
+	public List<CiteDtl> getCiteDtls() {
+		return citeDtls;
 	}
 
-	public void setCiteDtl(CiteDtl citeDtl) {
-		this.citeDtl = citeDtl;
+	public void setCiteDtls(List<CiteDtl> citeDtls) {
+		this.citeDtls = citeDtls;
 	}
 
 	public Long getSubUnitNumId() {
