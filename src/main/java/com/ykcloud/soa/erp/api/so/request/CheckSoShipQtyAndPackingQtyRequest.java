@@ -3,8 +3,9 @@ package com.ykcloud.soa.erp.api.so.request;
 import java.util.Date;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class CheckSoShipQtyAndPackingQtyRequest extends AbstractRequest {
+public class CheckSoShipQtyAndPackingQtyRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 7008234009750911781L;
 
