@@ -16,6 +16,11 @@ public class ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse exten
 	private static final long serialVersionUID = -70558279745442924L;
 	
 	/**
+	 * 存储方式
+	 */
+	private Long storeType;
+	
+	/**
 	 * 退货申请单编号
 	 */
 	private String applyNumId;
@@ -64,6 +69,14 @@ public class ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse exten
 	 * 退货商品列表
 	 */
 	private List<ApprovalReturnProduct> approvalReturnProductList;
+
+	public Long getStoreType() {
+		return storeType;
+	}
+
+	public void setStoreType(Long storeType) {
+		this.storeType = storeType;
+	}
 
 	public List<ApprovalReturnProduct> getApprovalReturnProductList() {
 		return approvalReturnProductList;
