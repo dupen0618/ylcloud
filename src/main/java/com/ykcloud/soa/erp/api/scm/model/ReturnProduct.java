@@ -66,6 +66,16 @@ public class ReturnProduct implements Serializable {
 	private Double stockQty; // 库存数
 
 	private String itemid;
+	
+	private Long purchaseTypeNumId; //采购途径  1.国内采购  2国际
+
+	public Long getPurchaseTypeNumId() {
+		return purchaseTypeNumId;
+	}
+
+	public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
+		this.purchaseTypeNumId = purchaseTypeNumId;
+	}
 
 	public String getItemid() {
 		return itemid;
