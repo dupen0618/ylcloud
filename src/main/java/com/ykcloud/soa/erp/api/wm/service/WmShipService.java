@@ -216,7 +216,7 @@ public interface WmShipService {
 		 * 
 		 * @author Dan
 		 * @date 2018年4月27日
-		 * @description
+		 * @description 反配一键出库
 		 */
 		public WmFinishReserverSoShipRespose finishReserverSoShip(WmFinishReserverSoShipRequest request);
 		
@@ -227,4 +227,5 @@ public interface WmShipService {
 		 * @description so集合绑定wlbc，不同的storageNumId要创建不同的wlbc并绑定
 		 */
 		public WmSoListBingWlbcResponse bingSoListWlbc(WmSoListBingWlbcRequest request);
+		
 }
