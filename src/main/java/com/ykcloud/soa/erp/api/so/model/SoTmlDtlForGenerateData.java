@@ -135,9 +135,7 @@ public class SoTmlDtlForGenerateData implements Serializable{
     private Double conversionRate;//子母转换比率
 
     private Double starndardDiscount;//标准折扣
-
-    private Double originalProductPrice;//在修改商品单价时，保存的原始商品价格(备注：此值必须默认值为负数)
-
+    
     private Double depreciatePrice;//降价差价
 
     private Double returnReasons;//退货原因
@@ -846,13 +844,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
         this.starndardDiscount = starndardDiscount;
     }
 
-    public Double getOriginalProductPrice() {
-        return originalProductPrice;
-    }
-
-    public void setOriginalProductPrice(Double originalProductPrice) {
-        this.originalProductPrice = originalProductPrice;
-    }
 
     public Double getDepreciatePrice() {
         return depreciatePrice;
