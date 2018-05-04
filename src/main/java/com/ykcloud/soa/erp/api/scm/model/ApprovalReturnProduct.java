@@ -11,6 +11,16 @@ import java.io.Serializable;
 public class ApprovalReturnProduct implements Serializable {
 	
 	private static final long serialVersionUID = 9090942233119517724L;
+	
+	/**
+	 * 审批单行号
+	 */
+	private String approvalLine;
+	
+	/**
+	 * 商品商家编码
+	 */
+	private String itemid;
 
 	/**
 	 * 申请单编号
@@ -116,6 +126,22 @@ public class ApprovalReturnProduct implements Serializable {
 	 * 税率
 	 */
 	private Double taxRate;
+
+	public String getApprovalLine() {
+		return approvalLine;
+	}
+
+	public void setApprovalLine(String approvalLine) {
+		this.approvalLine = approvalLine;
+	}
+
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
 
 	public String getApplyNumId() {
 		return applyNumId;
