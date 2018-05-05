@@ -59,5 +59,5 @@ public interface FiCostDailyAccountGaService {
 	 * @param reuqest
 	 * @return
 	 */
-	CalcSaleGrossProfitResponse calcSaleGrossProfit(CalcSaleGrossProfitRequest reuqest);
+	//CalcSaleGrossProfitResponse calcSaleGrossProfit(CalcSaleGrossProfitRequest reuqest);
 }
