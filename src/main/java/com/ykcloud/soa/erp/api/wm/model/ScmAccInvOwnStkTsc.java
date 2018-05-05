@@ -81,7 +81,10 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 	private Long STORE_TYPE;
 
 	private String ITEMID;
-	private Long typeNumId;
+
+	private Date ORDER_DATE;
+
+	private Long TypeNumId;
 
 	public Long getSETTLEMENT_TYPE() {
 		return SETTLEMENT_TYPE;
@@ -358,5 +361,21 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 
 	public void setITEMID(String ITEMID) {
 		this.ITEMID = ITEMID;
+	}
+
+	public Date getORDER_DATE() {
+		return ORDER_DATE;
+	}
+
+	public void setORDER_DATE(Date oRDER_DATE) {
+		ORDER_DATE = oRDER_DATE;
+	}
+
+	public Long getTypeNumId() {
+		return TypeNumId;
+	}
+
+	public void setTypeNumId(Long typeNumId) {
+		TypeNumId = typeNumId;
 	}
 }
