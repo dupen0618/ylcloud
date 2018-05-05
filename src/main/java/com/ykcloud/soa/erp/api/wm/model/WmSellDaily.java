@@ -13,6 +13,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class WmSellDaily  implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    
+    private Long tenantNumId;
     /**
      * 行号
      */
@@ -164,8 +166,13 @@ public class WmSellDaily  implements Serializable {
 		this.series = series;
 	}
 
+	public Long getTenantNumId() {
+		return tenantNumId;
+	}
 
-
+	public void setTenantNumId(Long tenantNumId) {
+		this.tenantNumId = tenantNumId;
+	}
 
 	public String getReservedNo() {
 		return reservedNo;
