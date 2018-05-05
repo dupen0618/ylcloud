@@ -1,4 +1,5 @@
 package com.ykcloud.soa.erp.api.wm.service;
+import com.ykcloud.soa.erp.api.wm.request.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest;
 import com.ykcloud.soa.erp.api.wm.request.DirectReceiptUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
@@ -7,12 +8,14 @@ import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrFuzzyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptProduceDateUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReturnCiteDtlByCiteProductDeleteRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReturnCiteDtlSaveRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseShipHdrFuzzyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopHaveInventoryMaxBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.UpdateReceiptAccountFinishRequest;
+import com.ykcloud.soa.erp.api.wm.response.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse;
 import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
@@ -21,6 +24,7 @@ import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrFuzzyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptProduceDateUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReturnCiteDtlByCiteProductDeleteResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReturnCiteDtlSaveResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReverseShipHdrFuzzyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopHaveInventoryMaxBatchPriceGetResponse;
@@ -118,4 +122,10 @@ public interface WmReceiptService {
 
 	//保存验收单/负出库单到单号引用表中
 	public ReturnCiteDtlSaveResponse saveReturnCiteDtl(ReturnCiteDtlSaveRequest request);
+
+	//从单号引用表中删除验收单和负出库单
+	public ReturnCiteDtlByCiteProductDeleteResponse deleteReturnCiteDtlByCiteProduct(ReturnCiteDtlByCiteProductDeleteRequest request);
+
+	//退供应商引用负出库单和验收单核销
+	public CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse writeoffCiteQtyForAuditApprovalReturnOrderByBuyer(CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest request);
 }
