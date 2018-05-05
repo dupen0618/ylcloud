@@ -58,6 +58,8 @@ public class FiPhysicalBatchAccountWba implements Serializable {
     private Long settlementType;
     private Double taxAmount;
     private Double costAmount;
+	private Double taxRate;
+
 	public String getSeries() {
 		return series;
 	}
@@ -366,4 +368,12 @@ public class FiPhysicalBatchAccountWba implements Serializable {
 	public void setCostAmount(Double costAmount) {
 		this.costAmount = costAmount;
 	}
+
+    public void setTaxRate(Double taxRate) {
+        this.taxRate = taxRate;
+    }
+
+    public Double getTaxRate() {
+        return taxRate;
+    }
 }
