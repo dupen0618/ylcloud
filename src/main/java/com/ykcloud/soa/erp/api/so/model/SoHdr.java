@@ -25,7 +25,7 @@ public class SoHdr implements Serializable {
 
 	private Long statusNumId;
 
-	private Long settlement;
+	private Long settlementType;
 
 	private String wlbcNumId;
 
@@ -151,12 +151,12 @@ public class SoHdr implements Serializable {
 		this.statusNumId = statusNumId;
 	}
 
-	public Long getSettlement() {
-		return settlement;
+	public Long getSettlementType() {
+		return settlementType;
 	}
 
-	public void setSettlement(Long settlement) {
-		this.settlement = settlement;
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
 	}
 
 	public String getWlbcNumId() {
