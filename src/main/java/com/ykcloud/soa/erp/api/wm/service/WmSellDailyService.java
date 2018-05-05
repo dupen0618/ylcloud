@@ -31,6 +31,6 @@ public interface WmSellDailyService {
 	 * @param request
 	 * @return
 	 */
-	public SellDailyPurchaseSellResponse getSellDailyPsCostAmount(SellDailyPurchaseSellRequest request);
+	//public SellDailyPurchaseSellResponse getSellDailyPsCostAmount(SellDailyPurchaseSellRequest request);
 
 }
