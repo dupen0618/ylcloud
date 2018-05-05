@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
+import com.ykcloud.soa.erp.api.fi.request.CalcSaleGrossProfitRequest;
 import com.ykcloud.soa.erp.api.fi.request.LossAmount1AndFinalCostUpdateRequest;
+import com.ykcloud.soa.erp.api.fi.response.CalcSaleGrossProfitResponse;
 import com.ykcloud.soa.erp.api.fi.response.LossAmount1AndFinalCostUpdaterResponse;
 import com.ykcloud.soa.erp.api.fi.request.AccountForSellDetermineInventoryByClassifyNumIdProcessRequest;
 import com.ykcloud.soa.erp.api.fi.request.AccountForStockCheckByClassifyNumIdProcessRequest;
@@ -50,4 +52,12 @@ public interface FiCostDailyAccountGaService {
 	 */
 	AccountForSellDetermineInventoryByClassifyNumIdProcessResponse processAccountForSellDetermineInventoryByClassifyNumId(
 		AccountForSellDetermineInventoryByClassifyNumIdProcessRequest request);
+
+
+	/**
+	 * 计算销售毛利
+	 * @param reuqest
+	 * @return
+	 */
+	CalcSaleGrossProfitResponse calcSaleGrossProfit(CalcSaleGrossProfitRequest reuqest);
 }
