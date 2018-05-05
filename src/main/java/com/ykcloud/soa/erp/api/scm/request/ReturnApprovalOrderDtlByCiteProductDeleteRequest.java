@@ -23,7 +23,7 @@ public class ReturnApprovalOrderDtlByCiteProductDeleteRequest extends AbstractRe
 		private String approvalNumId;  //退货审批单号
 		
 		@NotNull(message="商品编号不能为空")
-		private String itemNumId; //应用商品明细
+		private Long itemNumId; //商品编号
 
 		public Long getSubUnitNumId() {
 			return subUnitNumId;
@@ -49,14 +49,15 @@ public class ReturnApprovalOrderDtlByCiteProductDeleteRequest extends AbstractRe
 			this.approvalNumId = approvalNumId;
 		}
 
-		public String getItemNumId() {
+		public Long getItemNumId() {
 			return itemNumId;
 		}
 
-		public void setItemNumId(String itemNumId) {
+		public void setItemNumId(Long itemNumId) {
 			this.itemNumId = itemNumId;
 		}
 
+		
 		
 		
 		
