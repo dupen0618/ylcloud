@@ -24,7 +24,7 @@ public class ReturnCiteDtlByCiteProductDeleteRequest extends AbstractRequest {
 		private String approvalNumId;
 		
 		@NotNull(message="商品编号不能为空")
-		private Long itemNumId;
+		private List<Long> itemNumIds;
 
 		public Long getSubUnitNumId() {
 			return subUnitNumId;
@@ -50,13 +50,15 @@ public class ReturnCiteDtlByCiteProductDeleteRequest extends AbstractRequest {
 			this.approvalNumId = approvalNumId;
 		}
 
-		public Long getItemNumId() {
-			return itemNumId;
+		public List<Long> getItemNumIds() {
+			return itemNumIds;
 		}
 
-		public void setItemNumId(Long itemNumId) {
-			this.itemNumId = itemNumId;
+		public void setItemNumIds(List<Long> itemNumIds) {
+			this.itemNumIds = itemNumIds;
 		}
+
+		
 
 		
 		
