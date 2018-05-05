@@ -1,4 +1,5 @@
 package com.ykcloud.soa.erp.api.wm.service;
+import com.ykcloud.soa.erp.api.wm.request.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest;
 import com.ykcloud.soa.erp.api.wm.request.DirectReceiptUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
@@ -14,6 +15,7 @@ import com.ykcloud.soa.erp.api.wm.request.ShopHaveInventoryMaxBatchPriceGetReque
 import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.UpdateReceiptAccountFinishRequest;
+import com.ykcloud.soa.erp.api.wm.response.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse;
 import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
@@ -123,4 +125,7 @@ public interface WmReceiptService {
 
 	//从单号引用表中删除验收单和负出库单
 	public ReturnCiteDtlByCiteProductDeleteResponse deleteReturnCiteDtlByCiteProduct(ReturnCiteDtlByCiteProductDeleteRequest request);
+
+	//退供应商引用负出库单和验收单核销
+	public CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse writeoffCiteQtyForAuditApprovalReturnOrderByBuyer(CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest request);
 }
