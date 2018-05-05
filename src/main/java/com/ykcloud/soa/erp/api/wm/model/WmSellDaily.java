@@ -144,6 +144,17 @@ public class WmSellDaily  implements Serializable {
      *结算方式
      */
     private  Long  settlementType;
+    
+    private Long subUnitNumId;
+    
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
 
 	public String getSeries() {
 		return series;
