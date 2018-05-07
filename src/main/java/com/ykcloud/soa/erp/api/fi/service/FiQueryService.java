@@ -2,12 +2,14 @@ package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.request.ApBalanceForFinanceAuditApprovalReturnOrderGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetRequest;
-import com.ykcloud.soa.erp.api.fi.request.CutAmountGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.LastMoveWeightingPriceGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.ApBalanceForFinanceAuditApprovalReturnOrderGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.CutAmountGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.LastMoveWeightingPriceGetResponse;
+import com.ykcloud.soa.erp.api.fi.request.ToDeductAmountGetRequest;
+import com.ykcloud.soa.erp.api.fi.response.ApBalanceForFinanceAuditApprovalReturnOrderGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.ToDeductAmountGetResponse;
 
 /**
 * @ClassName: FiCostQueryService.java
@@ -23,7 +25,7 @@ public interface FiQueryService {
 	 * @author tz.x
 	 * @date 2018年5月5日下午5:56:46
 	 */
-	public CutAmountGetResponse getToDeductAmount(CutAmountGetRequest request);
+	public ToDeductAmountGetResponse getToDeductAmount(ToDeductAmountGetRequest request);
 	
 	//取最新移动加权成本服务
 	public LastMoveWeightingPriceGetResponse getLastMoveWeightingPrice(LastMoveWeightingPriceGetRequest request);

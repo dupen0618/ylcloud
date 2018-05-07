@@ -7,7 +7,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @author tz.x
  * @date 2018年5月5日下午5:55:23
  */
-public class CutAmountGetResponse extends MessagePack {
+public class ToDeductAmountGetResponse extends MessagePack {
 
 	private static final long serialVersionUID = -3660008938297799L;
 	
