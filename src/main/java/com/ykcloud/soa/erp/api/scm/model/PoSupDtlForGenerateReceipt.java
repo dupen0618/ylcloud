@@ -14,6 +14,11 @@ public class PoSupDtlForGenerateReceipt implements Serializable {
 	private static final long serialVersionUID = 3160059492005298596L;
 	
 	/**
+	 * 进价调整类型  502-临时调价 503-DM调价
+	 */
+	private Long costTypeTemp;
+	
+	/**
 	 * 供应商确认生产日期
 	 */
 	private String supProduceDate;
@@ -107,6 +112,14 @@ public class PoSupDtlForGenerateReceipt implements Serializable {
 	 * 税金
 	 */
 	private Double taxAmount;
+
+	public Long getCostTypeTemp() {
+		return costTypeTemp;
+	}
+
+	public void setCostTypeTemp(Long costTypeTemp) {
+		this.costTypeTemp = costTypeTemp;
+	}
 
 	public String getSupProduceDate() {
 		return supProduceDate;
