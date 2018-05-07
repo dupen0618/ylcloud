@@ -200,9 +200,22 @@ public class SoTmlDtlForGenerateData implements Serializable{
     private Double tradeAmount;
 
     private Long itemid;
+    
+    private Date orderDate;
+    
+    
+    
 
 
-    public Long getItemid() {
+    public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public Long getItemid() {
         return itemid;
     }
 

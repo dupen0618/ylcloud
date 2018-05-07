@@ -3,11 +3,11 @@ package com.ykcloud.soa.erp.api.fi.service;
 import com.ykcloud.soa.erp.api.fi.request.ApBalanceForFinanceAuditApprovalReturnOrderGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.CutAmountGetRequest;
-import com.ykcloud.soa.erp.api.fi.request.LastMoveWeightingCostPriceGetRequest;
+import com.ykcloud.soa.erp.api.fi.request.LastMoveWeightingPriceGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.ApBalanceForFinanceAuditApprovalReturnOrderGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.CutAmountGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.LastMoveWeightingCostPriceGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.LastMoveWeightingPriceGetResponse;
 
 /**
 * @ClassName: FiCostQueryService.java
@@ -26,7 +26,7 @@ public interface FiQueryService {
 	public CutAmountGetResponse getToDeductAmount(CutAmountGetRequest request);
 	
 	//取最新移动加权成本服务
-	public LastMoveWeightingCostPriceGetResponse getLastMoveWeightingCostPrice(LastMoveWeightingCostPriceGetRequest request);
+	public LastMoveWeightingPriceGetResponse getLastMoveWeightingPrice(LastMoveWeightingPriceGetRequest request);
     
 	/** 
 	* @Description: 获取门店别供应商应付账款、应付暂估、保证金、未扣费用

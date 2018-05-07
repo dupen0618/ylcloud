@@ -15,7 +15,12 @@ import java.util.List;
  */
 public class SoTmlTranTypeUpdateRequest extends AbstractUserSessionRequest{
 
-    @NotNull(message = "销售门店编号不能为空！")
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@NotNull(message = "销售门店编号不能为空！")
     private Long subUnitNumId;
 
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
