@@ -22,7 +22,11 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
 
     private Long logisticsType;//物流方式
 
-    private String  barcode;//商品编号、商品条码二选一
+    private String barcode;//商品编号、商品条码二选一
+    
+    @Range(min = 1, max = 4)
+    @NotNull(message = "补货类别不能为空")
+    private Long typeNumId=1L;
 
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     @NotNull(message = "日期不能为空")
