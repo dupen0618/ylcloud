@@ -61,8 +61,10 @@ public class DistributionProduct implements Serializable {
 	private Double openDistQty;// 在配数量
 
 	private Double minQty;// 最小配送数
-	
-	private String itemid; //商家编号
+
+	private String itemid; // 商家编号
+
+	private Long pmtMaterial;
 
 	public String getItemid() {
 		return itemid;
@@ -294,6 +296,14 @@ public class DistributionProduct implements Serializable {
 
 	public void setMinQty(Double minQty) {
 		this.minQty = minQty;
+	}
+
+	public Long getPmtMaterial() {
+		return pmtMaterial;
+	}
+
+	public void setPmtMaterial(Long pmtMaterial) {
+		this.pmtMaterial = pmtMaterial;
 	}
 
 }

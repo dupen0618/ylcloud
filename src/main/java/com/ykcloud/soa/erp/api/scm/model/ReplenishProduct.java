@@ -82,6 +82,8 @@ public class ReplenishProduct implements Serializable {
 	private Double minQty;// 最小配送数
 
 	private Double stockQty;// 库存数
+	
+	private Long pmtMaterial;//赠品辅料
 
 	private Double distributionStockQty;// 配送仓库库存数
 
@@ -633,4 +635,13 @@ public class ReplenishProduct implements Serializable {
 		this.distributionStockQty = distributionStockQty;
 	}
 
+	public Long getPmtMaterial() {
+		return pmtMaterial;
+	}
+
+	public void setPmtMaterial(Long pmtMaterial) {
+		this.pmtMaterial = pmtMaterial;
+	}
+
+	
 }
