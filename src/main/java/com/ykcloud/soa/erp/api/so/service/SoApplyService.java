@@ -1,7 +1,6 @@
 package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.scm.request.ShopTransferOrderActualQtyUpdateRequest;
-import com.ykcloud.soa.erp.api.scm.response.QtyForSoApplyCheckResponse;
 import com.ykcloud.soa.erp.api.so.request.ActualQtyForReturnUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplySubcontractSplitGetRequest;
@@ -22,6 +21,7 @@ import com.ykcloud.soa.erp.api.so.response.ActualQtyForReturnUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplySubcontractSplitGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenShopGetResponse;
+import com.ykcloud.soa.erp.api.so.response.QtyForSoApplyCheckResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAfterGenerateReturnSoUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;

@@ -11,9 +11,6 @@ public class ProductInfoForSoApplySubcontractSplitGetRequest extends AbstractReq
 			@NotNull(message="调出门店商品编号不为空")
 	  		private Long subUnitNumId;   //调出门店编号
 			
-			@NotNull(message="调入门店编号")
-			private Long recSubUnitNumId; //调入门店编号
-			
 			@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 			@NotNull(message="日期不能为空")
 			private Date orderDate;			//日期
@@ -36,14 +33,6 @@ public class ProductInfoForSoApplySubcontractSplitGetRequest extends AbstractReq
 
 			public void setSubUnitNumId(Long subUnitNumId) {
 				this.subUnitNumId = subUnitNumId;
-			}
-
-			public Long getRecSubUnitNumId() {
-				return recSubUnitNumId;
-			}
-
-			public void setRecSubUnitNumId(Long recSubUnitNumId) {
-				this.recSubUnitNumId = recSubUnitNumId;
 			}
 
 			public Date getOrderDate() {
