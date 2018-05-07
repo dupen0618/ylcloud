@@ -8,7 +8,7 @@ import com.ykcloud.soa.erp.api.fi.response.AutomaticBalanceResponse;
  * @Author: ALi
  * @Date: 2018/4/23 15:24
  */
-public interface AutomaticBalanceService {
+public interface FiAutomaticBalanceService {
     //购销
     public AutomaticBalanceResponse automaticBalanceGX(AutomaticBalanceRequest request);
     //代销
