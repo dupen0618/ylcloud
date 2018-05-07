@@ -29,6 +29,8 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
 	private Long storeType;// 指定存储方式
 
 	private String promotionGrade;// 指定促销档期
+	
+	private Long purchaseTypeNumId;//国内国外
 
 	@Range(min = 1, max = 4)
 	@NotNull(message = "补货类别不能为空")
@@ -153,4 +155,13 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
 		this.typeNumId = typeNumId;
 	}
 
+	public Long getPurchaseTypeNumId() {
+		return purchaseTypeNumId;
+	}
+
+	public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
+		this.purchaseTypeNumId = purchaseTypeNumId;
+	}
+
+	
 }
