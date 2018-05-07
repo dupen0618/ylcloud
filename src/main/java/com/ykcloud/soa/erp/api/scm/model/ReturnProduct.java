@@ -68,6 +68,16 @@ public class ReturnProduct implements Serializable {
 	private String itemid;
 	
 	private Long purchaseTypeNumId; //采购途径  1.国内采购  2国际
+	
+	private Double saleTaxRate;   //销售税率
+
+	public Double getSaleTaxRate() {
+		return saleTaxRate;
+	}
+
+	public void setSaleTaxRate(Double saleTaxRate) {
+		this.saleTaxRate = saleTaxRate;
+	}
 
 	public Long getPurchaseTypeNumId() {
 		return purchaseTypeNumId;

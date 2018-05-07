@@ -10,8 +10,16 @@ public class DistributionProductInfoGetRequest extends AbstractRequest {
 
 	@NotNull(message = "门店编号不能为空")
 	private Long subUnitNumId;
-	
-	private Long settlementType;//物流方式:供应商自下联营订单时控制 
+
+	private Long settlementType;// 物流方式:供应商自下联营订单时控制
+
+	private Long divNumId;// 部类
+
+	private Long storeType;// 指定存储方式
+
+	private Long purchaseTypeNumId;// 国内国外
+
+	private Long typeNumId;// 4-赠品订单
 
 	@NotNull(message = "门店编号不能为空")
 	private String barcode;// 商品编号、商品条码二选一
@@ -52,5 +60,36 @@ public class DistributionProductInfoGetRequest extends AbstractRequest {
 		this.settlementType = settlementType;
 	}
 
-	
+	public Long getDivNumId() {
+		return divNumId;
+	}
+
+	public void setDivNumId(Long divNumId) {
+		this.divNumId = divNumId;
+	}
+
+	public Long getStoreType() {
+		return storeType;
+	}
+
+	public void setStoreType(Long storeType) {
+		this.storeType = storeType;
+	}
+
+	public Long getPurchaseTypeNumId() {
+		return purchaseTypeNumId;
+	}
+
+	public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
+		this.purchaseTypeNumId = purchaseTypeNumId;
+	}
+
+	public Long getTypeNumId() {
+		return typeNumId;
+	}
+
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
+	}
+
 }

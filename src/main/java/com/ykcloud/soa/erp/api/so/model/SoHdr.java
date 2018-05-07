@@ -38,6 +38,8 @@ public class SoHdr implements Serializable {
 	private Long soFromType;
 
 	private Long typeNumId;
+	
+	private Long storeType;
 
 	private Long storageNumId;
 
@@ -347,4 +349,14 @@ public class SoHdr implements Serializable {
 		this.sowNumId = sowNumId;
 	}
 
+	public Long getStoreType() {
+		return storeType;
+	}
+
+	public void setStoreType(Long storeType) {
+		this.storeType = storeType;
+	}
+
+
+	
 }
