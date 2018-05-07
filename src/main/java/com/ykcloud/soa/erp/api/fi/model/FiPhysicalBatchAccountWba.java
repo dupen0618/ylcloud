@@ -59,6 +59,7 @@ public class FiPhysicalBatchAccountWba implements Serializable {
     private Double taxAmount;
     private Double costAmount;
 	private Double taxRate;
+	private Long departNumId;
 
 	public String getSeries() {
 		return series;
@@ -375,5 +376,13 @@ public class FiPhysicalBatchAccountWba implements Serializable {
 
     public Double getTaxRate() {
         return taxRate;
+    }
+
+    public void setDepartNumId(Long departNumId) {
+        this.departNumId = departNumId;
+    }
+
+    public Long getDepartNumId() {
+        return departNumId;
     }
 }

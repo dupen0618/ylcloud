@@ -74,8 +74,6 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 
 	private Long DEPART_NUM_ID;
 
-	private Long storagedeptnumid;
-
 	private Long SETTLEMENT_TYPE;
 
 	private Long STORE_TYPE;
@@ -337,14 +335,6 @@ public class ScmAccInvOwnStkTsc implements Serializable {
 
 	public void setDEPART_NUM_ID(Long DEPART_NUM_ID) {
 		this.DEPART_NUM_ID = DEPART_NUM_ID;
-	}
-
-	public Long getStoragedeptnumid() {
-		return storagedeptnumid;
-	}
-
-	public void setStoragedeptnumid(Long storagedeptnumid) {
-		this.storagedeptnumid = storagedeptnumid;
 	}
 
 	public Long getSTORE_TYPE() {
