@@ -11,102 +11,107 @@ import java.util.Date;
  * Created by yiako on 2018/3/15
  */
 public class HandReplenishProductGetRequest extends AbstractRequest {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @NotNull(message = "门店编号不能为空")
-    private Long subUnitNumId;
+	@NotNull(message = "门店编号不能为空")
+	private Long subUnitNumId;
 
-    private Long supplyUnitNumId;//供应商编号
+	private Long supplyUnitNumId;// 供应商编号
 
-    private Long settlementType;//结算方式1：购销，2：代销，3：联销,用于3.21.3	供应商自下联营订单时控制
+	private Long settlementType;// 结算方式1：购销，2：代销，3：联销,用于3.21.3 供应商自下联营订单时控制
 
-    private Long logisticsType;//物流方式
+	private Long logisticsType;// 物流方式
 
-    private String barcode;//商品编号、商品条码二选一
-    
-    @Range(min = 1, max = 4)
-    @NotNull(message = "补货类别不能为空")
-    private Long typeNumId=1L;
+	private String barcode;// 商品编号、商品条码二选一
 
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    @NotNull(message = "日期不能为空")
-    private Date orderDate;//日期，格式：yyyy-mm-dd
+	private Long storageNumId;// 指定收货仓
 
-    private Long supplyContractCheckSign;//1:要检查合同0：不检查合同
+	private Long storeType;// 指定存储方式
 
-    @Range(min = 0, max = 1)
-    private Long openQtyCacheSign; // 否，默认为1 在途数量是否用缓存表的数据，1：先查询缓存表，不存在先查询并写到缓存表，供下次使用，0：不用缓存表，查询后写到缓存表，供下次使用
+	private String promotionGrade;// 指定促销档期
 
-    private String action;//补货：repment 自动补货 auto_repment
-    
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
+	@Range(min = 1, max = 4)
+	@NotNull(message = "补货类别不能为空")
+	private Long typeNumId = 1L;
 
-    public Long getSubUnitNumId() {
-        return subUnitNumId;
-    }
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+	@NotNull(message = "日期不能为空")
+	private Date orderDate;// 日期，格式：yyyy-mm-dd
 
-    public void setSubUnitNumId(Long subUnitNumId) {
-        this.subUnitNumId = subUnitNumId;
-    }
+	private Long supplyContractCheckSign;// 1:要检查合同0：不检查合同
 
-    public Long getSupplyUnitNumId() {
-        return supplyUnitNumId;
-    }
+	@Range(min = 0, max = 1)
+	private Long openQtyCacheSign; // 否，默认为1 在途数量是否用缓存表的数据，1：先查询缓存表，不存在先查询并写到缓存表，供下次使用，0：不用缓存表，查询后写到缓存表，供下次使用
 
-    public void setSupplyUnitNumId(Long supplyUnitNumId) {
-        this.supplyUnitNumId = supplyUnitNumId;
-    }
+	private String action;// 补货：repment 自动补货 auto_repment
 
-    public Long getSettlementType() {
-        return settlementType;
-    }
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
 
-    public void setSettlementType(Long settlementType) {
-        this.settlementType = settlementType;
-    }
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
 
-    public Long getLogisticsType() {
-        return logisticsType;
-    }
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
 
-    public void setLogisticsType(Long logisticsType) {
-        this.logisticsType = logisticsType;
-    }
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
 
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
+	}
 
-    public String getBarcode() {
-        return barcode;
-    }
+	public Long getSettlementType() {
+		return settlementType;
+	}
 
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
-    }
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
+	}
 
-    public Date getOrderDate() {
-        return orderDate;
-    }
+	public Long getLogisticsType() {
+		return logisticsType;
+	}
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
+	public void setLogisticsType(Long logisticsType) {
+		this.logisticsType = logisticsType;
+	}
 
-    public Long getSupplyContractCheckSign() {
-        return supplyContractCheckSign;
-    }
+	public String getBarcode() {
+		return barcode;
+	}
 
-    public void setSupplyContractCheckSign(Long supplyContractCheckSign) {
-        this.supplyContractCheckSign = supplyContractCheckSign;
-    }
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
+	}
 
-    public Long getOpenQtyCacheSign() {
-        return openQtyCacheSign;
-    }
+	public Date getOrderDate() {
+		return orderDate;
+	}
 
-    public void setOpenQtyCacheSign(Long openQtyCacheSign) {
-        this.openQtyCacheSign = openQtyCacheSign;
-    }
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public Long getSupplyContractCheckSign() {
+		return supplyContractCheckSign;
+	}
+
+	public void setSupplyContractCheckSign(Long supplyContractCheckSign) {
+		this.supplyContractCheckSign = supplyContractCheckSign;
+	}
+
+	public Long getOpenQtyCacheSign() {
+		return openQtyCacheSign;
+	}
+
+	public void setOpenQtyCacheSign(Long openQtyCacheSign) {
+		this.openQtyCacheSign = openQtyCacheSign;
+	}
 
 	public String getAction() {
 		return action;
@@ -115,6 +120,37 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
 	public void setAction(String action) {
 		this.action = action;
 	}
-    
-    
+
+	public Long getStorageNumId() {
+		return storageNumId;
+	}
+
+	public void setStorageNumId(Long storageNumId) {
+		this.storageNumId = storageNumId;
+	}
+
+	public Long getStoreType() {
+		return storeType;
+	}
+
+	public void setStoreType(Long storeType) {
+		this.storeType = storeType;
+	}
+
+	public String getPromotionGrade() {
+		return promotionGrade;
+	}
+
+	public void setPromotionGrade(String promotionGrade) {
+		this.promotionGrade = promotionGrade;
+	}
+
+	public Long getTypeNumId() {
+		return typeNumId;
+	}
+
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
+	}
+
 }
