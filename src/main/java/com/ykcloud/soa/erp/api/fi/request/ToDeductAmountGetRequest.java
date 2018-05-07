@@ -9,7 +9,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  * @author tz.x
  * @date 2018年5月5日下午5:51:30
  */
-public class CutAmountGetRequest extends AbstractRequest {
+public class ToDeductAmountGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 1813749786131716846L;
 	
