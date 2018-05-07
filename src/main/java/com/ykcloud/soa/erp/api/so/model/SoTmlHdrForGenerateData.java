@@ -31,7 +31,7 @@ public class SoTmlHdrForGenerateData implements Serializable{
 
     private Long stkNumId;//物流中心主键
 
-    private Long logicalStorageId; //逻辑仓库
+    private Long logicalStorageid; //逻辑仓库
 
     private Long divNumId;//事业部主键
 
@@ -270,15 +270,17 @@ public class SoTmlHdrForGenerateData implements Serializable{
         this.stkNumId = stkNumId;
     }
 
-    public Long getLogicalStorageId() {
-        return logicalStorageId;
-    }
+  
 
-    public void setLogicalStorageId(Long logicalStorageId) {
-        this.logicalStorageId = logicalStorageId;
-    }
+    public Long getLogicalStorageid() {
+		return logicalStorageid;
+	}
 
-    public Long getDivNumId() {
+	public void setLogicalStorageid(Long logicalStorageid) {
+		this.logicalStorageid = logicalStorageid;
+	}
+
+	public Long getDivNumId() {
         return divNumId;
     }
 

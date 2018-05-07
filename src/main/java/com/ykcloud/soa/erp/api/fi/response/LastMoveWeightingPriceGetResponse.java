@@ -9,7 +9,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
 * @author: fred.zhao
 * @date: 2018年3月20日 上午9:59:38 
 */
-public class LastMoveWeightingCostPriceGetResponse extends MessagePack{
+public class LastMoveWeightingPriceGetResponse extends MessagePack{
 
 	private static final long serialVersionUID = 3725506062937780824L;
 	

@@ -11,7 +11,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  * @author: fred.zhao
  * @date: 2018年3月20日 上午9:58:35
  */
-public class LastMoveWeightingCostPriceGetRequest extends AbstractRequest {
+public class LastMoveWeightingPriceGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 4627685577873375711L;
 
