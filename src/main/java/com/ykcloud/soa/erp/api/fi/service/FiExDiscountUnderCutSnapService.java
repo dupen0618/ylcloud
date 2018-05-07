@@ -8,6 +8,6 @@ import com.ykcloud.soa.erp.api.fi.response.DiscountUnderCutSnapGetResponse;
  * @Author: ALi
  * @Date: 2018/4/18 13:42
  */
-public interface ExDiscountUnderCutSnapService {
+public interface FiExDiscountUnderCutSnapService {
     public DiscountUnderCutSnapGetResponse getDiscountUnderCutSnap(DiscountUnderCutSnapGetRequest request);
 }

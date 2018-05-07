@@ -127,6 +127,16 @@ public class FiBalance implements Serializable {
      * 单据类型
      */
     private Long reservedTypeNumId;
+
+	/**
+	 * 门店
+	 */
+	private Long subUnitNumId;
+	/**
+	 * 门店名称
+	 */
+	private String unitName;
+
     /**
      * 单据类型名字
      */
@@ -274,5 +284,21 @@ public class FiBalance implements Serializable {
 	}
 	public void setReservedTypeNumIdName(String reservedTypeNumIdName) {
 		this.reservedTypeNumIdName = reservedTypeNumIdName;
+	}
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
+
+	public String getUnitName() {
+		return unitName;
+	}
+
+	public void setUnitName(String unitName) {
+		this.unitName = unitName;
 	}
 }
