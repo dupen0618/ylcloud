@@ -2,9 +2,11 @@ package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.request.ApBalanceForFinanceAuditApprovalReturnOrderGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetRequest;
+import com.ykcloud.soa.erp.api.fi.request.CutAmountGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.LastMoveWeightingCostPriceGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.ApBalanceForFinanceAuditApprovalReturnOrderGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.CutAmountGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.LastMoveWeightingCostPriceGetResponse;
 
 /**
@@ -15,6 +17,14 @@ import com.ykcloud.soa.erp.api.fi.response.LastMoveWeightingCostPriceGetResponse
 * @date: 2018年3月20日 上午10:02:30 
 */
 public interface FiQueryService {
+	
+	/**
+	 * 获取门店、供应别未扣费用
+	 * @author tz.x
+	 * @date 2018年5月5日下午5:56:46
+	 */
+	public CutAmountGetResponse getToDeductAmount(CutAmountGetRequest request);
+	
 	//取最新移动加权成本服务
 	public LastMoveWeightingCostPriceGetResponse getLastMoveWeightingCostPrice(LastMoveWeightingCostPriceGetRequest request);
     
