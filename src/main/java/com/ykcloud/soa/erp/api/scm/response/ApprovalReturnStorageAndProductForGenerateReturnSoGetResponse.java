@@ -16,6 +16,11 @@ public class ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse exten
 	private static final long serialVersionUID = -70558279745442924L;
 	
 	/**
+	 * 供应商
+	 */
+	private Long supplyUnitNumId;
+	
+	/**
 	 * 存储方式
 	 */
 	private Long storeType;
@@ -69,6 +74,14 @@ public class ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse exten
 	 * 退货商品列表
 	 */
 	private List<ApprovalReturnProduct> approvalReturnProductList;
+
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
+
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
+	}
 
 	public Long getStoreType() {
 		return storeType;
