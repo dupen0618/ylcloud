@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.ykcloud.soa.erp.api.wm.model.ApprovalDtlForWriteoffCiteQty;
 //退供应商引用负出库单和验收单核销入参
@@ -15,6 +16,7 @@ public class CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest extends Ab
 	private Long subUnitNumId; //门店编号
 	
 	@NotNull(message="日期不能为空")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date orderDate;     //日期
 	
 	@NotNull(message="退货审批单号不能为空")
