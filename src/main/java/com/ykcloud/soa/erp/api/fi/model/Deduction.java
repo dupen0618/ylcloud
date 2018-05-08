@@ -18,9 +18,11 @@ public class Deduction implements Serializable {
 	private String unitName;//门店名称
 	private String reservedNo; // 单据编号 fi_bl_sup_cut_hdr
 	private Long typeNumId; // 业务类型 fi_bl_sup_cut_hdr
+	private String typeName; // 业务类型名字
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date operatDate; // 业务日期
 	private Long cutItem; // 扣款项目
+	private Long kxName; // 扣款项目名称
 	private String cutDesc; // 扣款说明
 	private Double cutAmount; // 扣款金额
 	private Double taxRate; // 税率
@@ -109,5 +111,29 @@ public class Deduction implements Serializable {
 
 	public void setTenantNumId(Long tenantNumId) {
 		this.tenantNumId = tenantNumId;
+	}
+
+	public String getUnitName() {
+		return unitName;
+	}
+
+	public void setUnitName(String unitName) {
+		this.unitName = unitName;
+	}
+
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
+
+	public Long getKxName() {
+		return kxName;
+	}
+
+	public void setKxName(Long kxName) {
+		this.kxName = kxName;
 	}
 }
