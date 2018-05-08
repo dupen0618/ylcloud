@@ -1,65 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
-import com.ykcloud.soa.erp.api.wm.request.ReceiptBudCreateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptCreateByContainerRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptDtlUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptFinishRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseScanContainerRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseShipBusinessAccountProcessRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseShipFiAccountProcessRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseShipFinishRequest;
-import com.ykcloud.soa.erp.api.wm.request.ShipBusinessAccountProcessRequest;
-import com.ykcloud.soa.erp.api.wm.request.ShipFiAccountProcessRequest;
-import com.ykcloud.soa.erp.api.wm.request.ShipForMaterialIssueBackGenerateRequest;
-import com.ykcloud.soa.erp.api.wm.request.SoShipFinishRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmContainerHdrCreateRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmCreateDistributionWithShipRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmDataByBarcodeGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmDataGetDataByBarcodeAndSoNumIdRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmFinishDirectSoShipRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmFinishReserverSoShipRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmFinishShipContainerHdrRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmFinishSoPackingRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmQuerySoAndContainerRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmScanShipContainerRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmShipDtlWithNoBatchUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmShipFinishRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmShipGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmSoHdrGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmSoListBingWlbcRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmWlBcHdrGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmWlbcHdrCreateRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmfinishPackingRequest;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptBudCreateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptCreateByContainerRespone;
-import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptDtlUpdateReponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptFiAccountProcessResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseReceiptFinishResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseScanContainerResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseShipBusinessAccountProcessResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseShipFinishResponse;
-import com.ykcloud.soa.erp.api.wm.response.ShipBusinessAccountProcessResponse;
-import com.ykcloud.soa.erp.api.wm.response.ShipFiAccountProcessResponse;
-import com.ykcloud.soa.erp.api.wm.response.ShipForMaterialIssueBackGenerateResponse;
-import com.ykcloud.soa.erp.api.wm.response.SoShipFinishResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmContainerHdrCreateResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmCreateDistributionWithShipResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmDataByBarcodeGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmDataGetDataByBarcodeAndSoNumIdResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmFinishDirectSoShipResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmFinishReserverSoShipRespose;
-import com.ykcloud.soa.erp.api.wm.response.WmFinishShipContainerHdrResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmFinishSoPackingResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmQuerySoAndContainerResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmScanShipContainerHdrResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmShipDtlWithNoBatchUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmShipFinishResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmShipGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmSoHdrGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmSoListBingWlbcResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmWlBcHdrGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmWlbcHdrCreateResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmfinishPackingResponse;
+import com.ykcloud.soa.erp.api.wm.request.*;
+import com.ykcloud.soa.erp.api.wm.response.*;
 
 
 public interface WmShipService {
@@ -227,5 +169,27 @@ public interface WmShipService {
 		 * @description so集合绑定wlbc，不同的storageNumId要创建不同的wlbc并绑定
 		 */
 		public WmSoListBingWlbcResponse bingSoListWlbc(WmSoListBingWlbcRequest request);
-		
+
+		 /**
+		 * @author alfred
+		 * @date 2018/5/4 17:48
+		 * @description wm根据托盘标记获取托盘必需是封箱状态（status_num_id = 2）
+		 */
+		 WmBlShipContainerHrdResponse getContainerWithStatus(WmBlShipContainerHrdRequest request);
+
+		 /**
+		  * @author alfred
+		  * @date 2018/5/5 9:55
+		  * @description 扫描条形码获取对应商品托盘信息
+		  */
+		 WmBlContainerDtlResponse getContainerDtlByItem(WmBlContainerDtlRequest request);
+
+		 /**
+		  * @author alfred
+		  * @date 2018/5/5 10:13
+		  * @description 更新托盘复核状态为复核完成
+		  */
+		 WmShipDtlScanStatusResponse updateContainerHdrStatus(WmShipDtlScanStatusRequest request);
+
+
 }
