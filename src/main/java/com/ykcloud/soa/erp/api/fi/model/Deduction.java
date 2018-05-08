@@ -22,7 +22,7 @@ public class Deduction implements Serializable {
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date operatDate; // 业务日期
 	private Long cutItem; // 扣款项目
-	private Long kxName; // 扣款项目名称
+	private String kxName; // 扣款项目名称
 	private String cutDesc; // 扣款说明
 	private Double cutAmount; // 扣款金额
 	private Double taxRate; // 税率
@@ -129,11 +129,11 @@ public class Deduction implements Serializable {
 		this.typeName = typeName;
 	}
 
-	public Long getKxName() {
+	public String getKxName() {
 		return kxName;
 	}
 
-	public void setKxName(Long kxName) {
+	public void setKxName(String kxName) {
 		this.kxName = kxName;
 	}
 }
