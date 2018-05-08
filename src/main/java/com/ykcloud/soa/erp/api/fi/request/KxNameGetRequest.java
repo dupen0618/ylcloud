@@ -13,14 +13,16 @@ public class KxNameGetRequest extends AbstractRequest{
 
 	private static final long serialVersionUID = 1L;
 	
-	@NotNull(message = "扣项类型不能为空！")
-	private Long kxType;
+	@NotNull(message = "扣项单号不能为空！")
+	private Long kxNumId;
 
-	public Long getKxType() {
-		return kxType;
+	public Long getKxNumId() {
+		return kxNumId;
 	}
 
-	public void setKxType(Long kxType) {
-		this.kxType = kxType;
+	public void setKxNumId(Long kxNumId) {
+		this.kxNumId = kxNumId;
 	}
+
+	
 }
