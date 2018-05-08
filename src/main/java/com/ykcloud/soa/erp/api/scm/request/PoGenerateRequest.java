@@ -42,7 +42,7 @@ public class PoGenerateRequest extends AbstractUserSessionRequest {
 	 * 订货审批单号
 	 */
 	@NotNull(message = "订货审批单号不能为空！")
-	private String approvaNumId;
+	private String approvalNumId;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -60,12 +60,12 @@ public class PoGenerateRequest extends AbstractUserSessionRequest {
 		this.orderDate = orderDate;
 	}
 
-	public String getApprovaNumId() {
-		return approvaNumId;
+	public String getApprovalNumId() {
+		return approvalNumId;
 	}
 
-	public void setApprovaNumId(String approvaNumId) {
-		this.approvaNumId = approvaNumId;
+	public void setApprovalNumId(String approvalNumId) {
+		this.approvalNumId = approvalNumId;
 	}
 
 	public Date getAuditDate() {
