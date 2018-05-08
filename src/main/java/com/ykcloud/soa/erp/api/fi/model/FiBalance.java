@@ -27,6 +27,11 @@ public class FiBalance implements Serializable {
      */
     private Long typeNumId;
 
+	/**
+	 * 业务类型名称
+	 */
+	private String typeName;
+
     /**
      * 业务日期
      */
@@ -42,6 +47,10 @@ public class FiBalance implements Serializable {
      * 商品中心（部门）
      */
     private Long divNumId;
+	/**
+	 * 商品中心（部门）名称
+	 */
+	private String divName;
 
     /**
      * 商品条码
@@ -57,6 +66,10 @@ public class FiBalance implements Serializable {
      * 产地
      */
     private Long productOriginNumId;
+	/**
+	 * 产地名称
+	 */
+	private String productOriginName;
 
     /**
      * 件装单位
@@ -300,5 +313,29 @@ public class FiBalance implements Serializable {
 
 	public void setUnitName(String unitName) {
 		this.unitName = unitName;
+	}
+
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
+
+	public String getDivName() {
+		return divName;
+	}
+
+	public void setDivName(String divName) {
+		this.divName = divName;
+	}
+
+	public String getProductOriginName() {
+		return productOriginName;
+	}
+
+	public void setProductOriginName(String productOriginName) {
+		this.productOriginName = productOriginName;
 	}
 }

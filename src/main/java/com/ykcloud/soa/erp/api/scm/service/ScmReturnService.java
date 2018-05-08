@@ -5,6 +5,7 @@ import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderByBuyerAuditReques
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderByFinanceAutoAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderByFinanceHandAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderGenerateRequest;
+import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnStorageAndProductForGenerateReturnSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.QtyForReturnOrderCheckRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalActualQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderActualQtyUpdateRequest;
@@ -15,6 +16,7 @@ import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByBuyerAuditRespo
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByFinanceAutoAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByFinanceHandAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderGenerateResponse;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.request.ReturnProductGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.QtyForReturnOrderCheckResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalActualQtyUpdateResponse;
@@ -29,6 +31,16 @@ import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderActualQtyUpdateRe
  * 根据退货申请产生退货审批单服务
  */
 public interface ScmReturnService {
+	
+	/**
+	 * 根据锁库结果获取指定的退货审批单的仓库及商品
+	 * @author tz.x
+	 * @date 2018年4月10日上午9:27:06
+	 * @param 
+	 * @return
+	 */
+	public ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse getApprovalReturnStorageAndProductForGenerateReturnSo(
+			ApprovalReturnStorageAndProductForGenerateReturnSoGetRequest request);
 	
 	/**
 	 * 更新退货审批单单身so_num_id
