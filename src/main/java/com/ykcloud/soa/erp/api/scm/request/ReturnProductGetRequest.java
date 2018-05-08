@@ -22,6 +22,16 @@ public class ReturnProductGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "出货仓库编号不能为空")
 	private Long storageNumId;// 出货仓库编号
+	
+	private Long settlementType;// 结算方式1：购销，2：代销，3：联销,
+	
+	private Long logisticsType;// 物流方式
+	
+	private Long storeType;// 指定存储方式
+	
+	private Long purchaseTypeNumId;// 国内国外
+
+	private Long divNumId;// 部类
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -66,5 +76,47 @@ public class ReturnProductGetRequest extends AbstractRequest {
 	public void setSupplyUnitNumId(Long supplyUnitNumId) {
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
+
+	public Long getSettlementType() {
+		return settlementType;
+	}
+
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
+	}
+
+	public Long getLogisticsType() {
+		return logisticsType;
+	}
+
+	public void setLogisticsType(Long logisticsType) {
+		this.logisticsType = logisticsType;
+	}
+
+	public Long getStoreType() {
+		return storeType;
+	}
+
+	public void setStoreType(Long storeType) {
+		this.storeType = storeType;
+	}
+
+	public Long getPurchaseTypeNumId() {
+		return purchaseTypeNumId;
+	}
+
+	public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
+		this.purchaseTypeNumId = purchaseTypeNumId;
+	}
+
+	public Long getDivNumId() {
+		return divNumId;
+	}
+
+	public void setDivNumId(Long divNumId) {
+		this.divNumId = divNumId;
+	}
+	
+	
     
 }
