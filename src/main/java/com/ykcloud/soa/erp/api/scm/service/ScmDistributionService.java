@@ -44,15 +44,6 @@ public interface ScmDistributionService {
 	 */
 	public ApprovalDtlAndApplyDtlForGenerateDistributionUpdateResponse updateApprovalHdrAndApplyDtlForGenerateDistributionSo(ApprovalDtlAndApplyDtlForGenerateDistributionUpdateRequest request);
 	
-	/**
-	 * 根据锁库结果获取指定的退货审批单的仓库及商品
-	 * @author tz.x
-	 * @date 2018年4月10日上午9:27:06
-	 * @param 
-	 * @return
-	 */
-	public ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse getApprovalReturnStorageAndProductForGenerateReturnSo(
-			ApprovalReturnStorageAndProductForGenerateReturnSoGetRequest request);
 	
 	/**
 	 * 配送生成so后更新配送审批单状态并回填审批单单身so_num_id
