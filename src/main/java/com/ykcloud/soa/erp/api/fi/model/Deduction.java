@@ -14,89 +14,31 @@ public class Deduction implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private String series; // 行号
-	private Long tenantNumId; // 租户编号
-	private Long dataSign; // 0: 正式 1：测试
-	private Date createDtme; // 创建时间
-	private Date lastUpdtme; // 最后更新时间
-	private Long createUserId; // 创建用户
-	private Long lastUpdateUserId;// 更新用户
-	private String balanceNo; // 结算单号 组合唯一索引
 	private Long subUnitNumId; // 门店 分库标识
-	
-	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-	private Date balanceDate; // 结算日期 分表标识
-	
+	private String unitName;//门店名称
 	private String reservedNo; // 单据编号 fi_bl_sup_cut_hdr
 	private Long typeNumId; // 业务类型 fi_bl_sup_cut_hdr
-	
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date operatDate; // 业务日期
-	
 	private Long cutItem; // 扣款项目
 	private String cutDesc; // 扣款说明
 	private Double cutAmount; // 扣款金额
 	private Double taxRate; // 税率
 	private Double taxAmount; // 税金
 	private Long carrySign; // 结转标识
+	private Long dataSign;
+	private Long tenantNumId;	// 租户编号
 	public String getSeries() {
 		return series;
 	}
 	public void setSeries(String series) {
 		this.series = series;
 	}
-	public Long getTenantNumId() {
-		return tenantNumId;
-	}
-	public void setTenantNumId(Long tenantNumId) {
-		this.tenantNumId = tenantNumId;
-	}
-	public Long getDataSign() {
-		return dataSign;
-	}
-	public void setDataSign(Long dataSign) {
-		this.dataSign = dataSign;
-	}
-	public Date getCreateDtme() {
-		return createDtme;
-	}
-	public void setCreateDtme(Date createDtme) {
-		this.createDtme = createDtme;
-	}
-	public Date getLastUpdtme() {
-		return lastUpdtme;
-	}
-	public void setLastUpdtme(Date lastUpdtme) {
-		this.lastUpdtme = lastUpdtme;
-	}
-	public Long getCreateUserId() {
-		return createUserId;
-	}
-	public void setCreateUserId(Long createUserId) {
-		this.createUserId = createUserId;
-	}
-	public Long getLastUpdateUserId() {
-		return lastUpdateUserId;
-	}
-	public void setLastUpdateUserId(Long lastUpdateUserId) {
-		this.lastUpdateUserId = lastUpdateUserId;
-	}
-	public String getBalanceNo() {
-		return balanceNo;
-	}
-	public void setBalanceNo(String balanceNo) {
-		this.balanceNo = balanceNo;
-	}
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
-	}
-	public Date getBalanceDate() {
-		return balanceDate;
-	}
-	public void setBalanceDate(Date balanceDate) {
-		this.balanceDate = balanceDate;
 	}
 	public String getReservedNo() {
 		return reservedNo;
@@ -153,5 +95,19 @@ public class Deduction implements Serializable {
 		this.carrySign = carrySign;
 	}
 
-	
+	public Long getDataSign() {
+		return dataSign;
+	}
+
+	public void setDataSign(Long dataSign) {
+		this.dataSign = dataSign;
+	}
+
+	public Long getTenantNumId() {
+		return tenantNumId;
+	}
+
+	public void setTenantNumId(Long tenantNumId) {
+		this.tenantNumId = tenantNumId;
+	}
 }
