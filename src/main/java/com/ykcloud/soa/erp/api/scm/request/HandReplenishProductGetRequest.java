@@ -35,8 +35,8 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
 	private Long divNumId;// 部类
 
 	@Range(min = 1, max = 4)
-	@NotNull(message = "补货类别不能为空")
-	private Long typeNumId = 1L;
+	@NotNull(message = "补货单类别不能为空")
+	private Long typeNumId;
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "日期不能为空")
