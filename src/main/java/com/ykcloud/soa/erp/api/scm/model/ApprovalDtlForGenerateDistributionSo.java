@@ -18,14 +18,7 @@ public class ApprovalDtlForGenerateDistributionSo implements Serializable {
 	private Long conversionUnitNumId;
 	private String conversionStyleDesc;
 	private Double qty;
-	
-	private String applyNumId;
-	
-	private String applyLine;
-	
 	private String itemid;
-	
-	private String supProduceDate;
 	
 	public Double getConfirmPmtQty() {
 		return confirmPmtQty;
@@ -35,36 +28,12 @@ public class ApprovalDtlForGenerateDistributionSo implements Serializable {
 		this.confirmPmtQty = confirmPmtQty;
 	}
 
-	public String getSupProduceDate() {
-		return supProduceDate;
-	}
-
-	public void setSupProduceDate(String supProduceDate) {
-		this.supProduceDate = supProduceDate;
-	}
-
 	public String getItemid() {
 		return itemid;
 	}
 
 	public void setItemid(String itemid) {
 		this.itemid = itemid;
-	}
-
-	public String getApplyLine() {
-		return applyLine;
-	}
-
-	public void setApplyLine(String applyLine) {
-		this.applyLine = applyLine;
-	}
-
-	public String getApplyNumId() {
-		return applyNumId;
-	}
-
-	public void setApplyNumId(String applyNumId) {
-		this.applyNumId = applyNumId;
 	}
 
 	public String getSeries() {
