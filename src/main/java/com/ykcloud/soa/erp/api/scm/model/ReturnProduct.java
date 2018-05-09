@@ -4,9 +4,7 @@ import java.io.Serializable;
 
 //前台根据商品编号获取退货商品相关信息(价格）
 public class ReturnProduct implements Serializable {
-	/**
-	 * 退货商品相关信息的封装类
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	private Long itemNumId; // 商品编号
@@ -44,8 +42,6 @@ public class ReturnProduct implements Serializable {
 	private Long storeType; // 储存方式1：常温 2：冷藏 3：冷冻
 
 	private String storeTypeName;// 储存方式名称
-
-	private Long storageNumId; // 出货逻辑仓
 
 	private Long supplyUnitNumId;// 供应商编号
 
@@ -237,14 +233,6 @@ public class ReturnProduct implements Serializable {
 
 	public void setStoreTypeName(String storeTypeName) {
 		this.storeTypeName = storeTypeName;
-	}
-
-	public Long getStorageNumId() {
-		return storageNumId;
-	}
-
-	public void setStorageNumId(Long storageNumId) {
-		this.storageNumId = storageNumId;
 	}
 
 	public Long getSupplyUnitNumId() {
