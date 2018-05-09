@@ -25,7 +25,7 @@ public class InTransitDepositRequest extends AbstractRequest {
 	private String reservedNo;
 
 	@NotNull(message = "在途类别不能为空！")
-	@ApiField(description = "10:在途补货数 20:在途订货数 30:在途配送数 41:仓库配送数(直通)  42:仓库配送数(配送) 51: 分仓在途数（直通) 52: 分仓在途数(配送)")
+	@ApiField(description = "10:在途补货数 20:在途订货数 30:在途配送数 41:仓库配送数(直通)  42:仓库配送数(配送) 51: 分仓在途数（直通) 52: 分仓在途数(配送) 60:已审未退数")
 	private Long typeNumId;
 
 	@NotNull(message = "入账销账标识不能为空！")
