@@ -29,9 +29,9 @@ public class PoFinishRequest extends AbstractUserSessionRequest {
 	private Date orderDate; // 订单日期
 
 
-	@ApiField(description = "用户ID")
-	@NotNull(message = "用户ID不能为空!")
-	private Long userNumId;
+//	@ApiField(description = "用户ID")
+//	@NotNull(message = "用户ID不能为空!")
+//	private Long userNumId;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -50,12 +50,12 @@ public class PoFinishRequest extends AbstractUserSessionRequest {
 		this.poNumId = poNumId;
 	}
 
-	public Long getUserNumId() {
-		return userNumId;
-	}
-	public void setUserNumId(Long userNumId) {
-		this.userNumId = userNumId;
-	}
+//	public Long getUserNumId() {
+//		return userNumId;
+//	}
+//	public void setUserNumId(Long userNumId) {
+//		this.userNumId = userNumId;
+//	}
 
 	public Date getOrderDate() {
 		return orderDate;

@@ -15,7 +15,7 @@ import com.ykcloud.soa.erp.api.wm.response.CarryDownDailyFiResponse;
  * 
   * @ClassName: FiCostDailyAccountGaService  
   * @Description: 商品日进销存
-  * @author Andy  
+  * @author Andy
   * @date 2018-04-18 11:28
   *
  */
@@ -59,5 +59,5 @@ public interface FiCostDailyAccountGaService {
 	 * @param reuqest
 	 * @return
 	 */
-	//CalcSaleGrossProfitResponse calcSaleGrossProfit(CalcSaleGrossProfitRequest reuqest);
+	CalcSaleGrossProfitResponse calcSaleGrossProfit(CalcSaleGrossProfitRequest reuqest);
 }
