@@ -9,250 +9,243 @@ public class FiBlSupBalance implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private String SERIES;   //行号
+	private String series;   //行号
 	
-	private Long TENANT_NUM_ID; //租户
+	private Long tenantNumId; //租户
 	
-	private Long SUB_UNIT_NUM_ID; //门店编号
+	private Long subUnitNumId; //门店编号
 	
-	private String RESERVED_NO; //单号
+	private String reservedNo; //单号
 	
-	private Long TYPE_NUM_ID;    //业务类型
+	private Long typeNumId;    //业务类型
 	
-	private Date OPERAT_DATE;   //业务日期
+	private Date operatDate;   //业务日期
 	
-	private Long ITEM_NUM_ID;   //商品编号
+	private Long itemNumId;   //商品编号
 	
-	private Long DIV_NUM_ID;     //商品中心
+	private Long divNumId;     //商品中心
 	
-	private String BARCODE;   //商品条码
+	private String barcode;   //商品条码
 	
-	private String ITEM_NAME;  //商品品名
+	private String itemName;  //商品品名
 	
-	private Long PRODUCT_ORIGIN_NUM_ID; //原产地编号
+	private Long productOrigiNumId; //原产地编号
 	
-	private Double CONVERSION_QTY;   //件装单位
+	private Double conversionQty;   //件装单位
 	
-	private String CONVERSION_STYLE_DESC; //件装规格
+	private String conversionStyleDesc; //件装规格
 	
-	private Double PRICE;          //结算价格
+	private Double price;          //结算价格
 	
-	private Double AMOUNT;        //结算金额
+	private Double amount;        //结算金额
 	
-	private String BATCH_SERIES;  //批次行号
+	private String batchSeries;  //批次行号
 	
-	private Long BATCH_PROMOTION_GRADE; //批次促销档期
+	private Long batchPromotionGrade; //批次促销档期
 	
-	private Long BATCH_SUPPLY_UNIT_NUM_ID; //批次供应商
+	private Long batchSupplyUnitNumId; //批次供应商
 	
-	private Double BATCH_PO_PRICE;    //批次采购价格
+	private Double batchPoPrice;    //批次采购价格
 	
-	private Double TAX_RATE;       // 税率
+	private Double taxRate;       // 税率
 	
-    private Double TAX_AMOUNT;   //税金
+    private Double taxAmount;   //税金
 
-    private Long CARRY_SIGN;    //结转标识
+    private Long carrySign;    //结转标识
 
-    private Long DATA_SIGN;     //生产或测试标识
+    private Long dataSign;     //生产或测试标识
 
-    private String ITEMID;     //商品商家编码
+    private String itemid;     //商品商家编码
 
-	public String getSERIES() {
-		return SERIES;
+	public String getSeries() {
+		return series;
 	}
 
-	public void setSERIES(String sERIES) {
-		SERIES = sERIES;
+	public void setSeries(String series) {
+		this.series = series;
 	}
 
-	public Long getTENANT_NUM_ID() {
-		return TENANT_NUM_ID;
+	public Long getTenantNumId() {
+		return tenantNumId;
 	}
 
-	public void setTENANT_NUM_ID(Long tENANT_NUM_ID) {
-		TENANT_NUM_ID = tENANT_NUM_ID;
+	public void setTenantNumId(Long tenantNumId) {
+		this.tenantNumId = tenantNumId;
 	}
 
-	public Long getSUB_UNIT_NUM_ID() {
-		return SUB_UNIT_NUM_ID;
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
 	}
 
-	public void setSUB_UNIT_NUM_ID(Long sUB_UNIT_NUM_ID) {
-		SUB_UNIT_NUM_ID = sUB_UNIT_NUM_ID;
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
 	}
 
-	public String getRESERVED_NO() {
-		return RESERVED_NO;
+	public String getReservedNo() {
+		return reservedNo;
 	}
 
-	public void setRESERVED_NO(String rESERVED_NO) {
-		RESERVED_NO = rESERVED_NO;
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
 	}
 
-	public Long getTYPE_NUM_ID() {
-		return TYPE_NUM_ID;
+	public Long getTypeNumId() {
+		return typeNumId;
 	}
 
-	public void setTYPE_NUM_ID(Long tYPE_NUM_ID) {
-		TYPE_NUM_ID = tYPE_NUM_ID;
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
 	}
 
-	public Date getOPERAT_DATE() {
-		return OPERAT_DATE;
-	}
-	//@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-	public void setOPERAT_DATE(Date oPERAT_DATE) {
-		OPERAT_DATE = oPERAT_DATE;
+	public Date getOperatDate() {
+		return operatDate;
 	}
 
-	public Long getITEM_NUM_ID() {
-		return ITEM_NUM_ID;
+	public void setOperatDate(Date operatDate) {
+		this.operatDate = operatDate;
 	}
 
-	public void setITEM_NUM_ID(Long iTEM_NUM_ID) {
-		ITEM_NUM_ID = iTEM_NUM_ID;
+	public Long getItemNumId() {
+		return itemNumId;
 	}
 
-	public Long getDIV_NUM_ID() {
-		return DIV_NUM_ID;
+	public void setItemNumId(Long itemNumId) {
+		this.itemNumId = itemNumId;
 	}
 
-	public void setDIV_NUM_ID(Long dIV_NUM_ID) {
-		DIV_NUM_ID = dIV_NUM_ID;
+	public Long getDivNumId() {
+		return divNumId;
 	}
 
-	public String getBARCODE() {
-		return BARCODE;
+	public void setDivNumId(Long divNumId) {
+		this.divNumId = divNumId;
 	}
 
-	public void setBARCODE(String bARCODE) {
-		BARCODE = bARCODE;
+	public String getBarcode() {
+		return barcode;
 	}
 
-	public String getITEM_NAME() {
-		return ITEM_NAME;
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
 	}
 
-	public void setITEM_NAME(String iTEM_NAME) {
-		ITEM_NAME = iTEM_NAME;
+	public String getItemName() {
+		return itemName;
 	}
 
-	public Long getPRODUCT_ORIGIN_NUM_ID() {
-		return PRODUCT_ORIGIN_NUM_ID;
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
 	}
 
-	public void setPRODUCT_ORIGIN_NUM_ID(Long pRODUCT_ORIGIN_NUM_ID) {
-		PRODUCT_ORIGIN_NUM_ID = pRODUCT_ORIGIN_NUM_ID;
+	public Long getProductOrigiNumId() {
+		return productOrigiNumId;
 	}
 
-	public Double getCONVERSION_QTY() {
-		return CONVERSION_QTY;
+	public void setProductOrigiNumId(Long productOrigiNumId) {
+		this.productOrigiNumId = productOrigiNumId;
 	}
 
-	public void setCONVERSION_QTY(Double cONVERSION_QTY) {
-		CONVERSION_QTY = cONVERSION_QTY;
+	public Double getConversionQty() {
+		return conversionQty;
 	}
 
-	public String getCONVERSION_STYLE_DESC() {
-		return CONVERSION_STYLE_DESC;
+	public void setConversionQty(Double conversionQty) {
+		this.conversionQty = conversionQty;
 	}
 
-	public void setCONVERSION_STYLE_DESC(String cONVERSION_STYLE_DESC) {
-		CONVERSION_STYLE_DESC = cONVERSION_STYLE_DESC;
+	public String getConversionStyleDesc() {
+		return conversionStyleDesc;
 	}
 
-	public Double getPRICE() {
-		return PRICE;
+	public void setConversionStyleDesc(String conversionStyleDesc) {
+		this.conversionStyleDesc = conversionStyleDesc;
 	}
 
-	public void setPRICE(Double pRICE) {
-		PRICE = pRICE;
+	public Double getPrice() {
+		return price;
 	}
 
-	public Double getAMOUNT() {
-		return AMOUNT;
+	public void setPrice(Double price) {
+		this.price = price;
 	}
 
-	public void setAMOUNT(Double aMOUNT) {
-		AMOUNT = aMOUNT;
+	public Double getAmount() {
+		return amount;
 	}
 
-	public String getBATCH_SERIES() {
-		return BATCH_SERIES;
+	public void setAmount(Double amount) {
+		this.amount = amount;
 	}
 
-	public void setBATCH_SERIES(String bATCH_SERIES) {
-		BATCH_SERIES = bATCH_SERIES;
+	public String getBatchSeries() {
+		return batchSeries;
 	}
 
-	public Long getBATCH_PROMOTION_GRADE() {
-		return BATCH_PROMOTION_GRADE;
+	public void setBatchSeries(String batchSeries) {
+		this.batchSeries = batchSeries;
 	}
 
-	public void setBATCH_PROMOTION_GRADE(Long bATCH_PROMOTION_GRADE) {
-		BATCH_PROMOTION_GRADE = bATCH_PROMOTION_GRADE;
+	public Long getBatchPromotionGrade() {
+		return batchPromotionGrade;
 	}
 
-	public Long getBATCH_SUPPLY_UNIT_NUM_ID() {
-		return BATCH_SUPPLY_UNIT_NUM_ID;
+	public void setBatchPromotionGrade(Long batchPromotionGrade) {
+		this.batchPromotionGrade = batchPromotionGrade;
 	}
 
-	public void setBATCH_SUPPLY_UNIT_NUM_ID(Long bATCH_SUPPLY_UNIT_NUM_ID) {
-		BATCH_SUPPLY_UNIT_NUM_ID = bATCH_SUPPLY_UNIT_NUM_ID;
+	public Long getBatchSupplyUnitNumId() {
+		return batchSupplyUnitNumId;
 	}
 
-	public Double getBATCH_PO_PRICE() {
-		return BATCH_PO_PRICE;
+	public void setBatchSupplyUnitNumId(Long batchSupplyUnitNumId) {
+		this.batchSupplyUnitNumId = batchSupplyUnitNumId;
 	}
 
-	public void setBATCH_PO_PRICE(Double bATCH_PO_PRICE) {
-		BATCH_PO_PRICE = bATCH_PO_PRICE;
+	public Double getBatchPoPrice() {
+		return batchPoPrice;
 	}
 
-	public Double getTAX_RATE() {
-		return TAX_RATE;
+	public void setBatchPoPrice(Double batchPoPrice) {
+		this.batchPoPrice = batchPoPrice;
 	}
 
-	public void setTAX_RATE(Double tAX_RATE) {
-		TAX_RATE = tAX_RATE;
+	public Double getTaxRate() {
+		return taxRate;
 	}
 
-	public Double getTAX_AMOUNT() {
-		return TAX_AMOUNT;
+	public void setTaxRate(Double taxRate) {
+		this.taxRate = taxRate;
 	}
 
-	public void setTAX_AMOUNT(Double tAX_AMOUNT) {
-		TAX_AMOUNT = tAX_AMOUNT;
+	public Double getTaxAmount() {
+		return taxAmount;
 	}
 
-	public Long getCARRY_SIGN() {
-		return CARRY_SIGN;
+	public void setTaxAmount(Double taxAmount) {
+		this.taxAmount = taxAmount;
 	}
 
-	public void setCARRY_SIGN(Long cARRY_SIGN) {
-		CARRY_SIGN = cARRY_SIGN;
+	public Long getCarrySign() {
+		return carrySign;
 	}
 
-	public Long getDATA_SIGN() {
-		return DATA_SIGN;
+	public void setCarrySign(Long carrySign) {
+		this.carrySign = carrySign;
 	}
 
-	public void setDATA_SIGN(Long dATA_SIGN) {
-		DATA_SIGN = dATA_SIGN;
+	public Long getDataSign() {
+		return dataSign;
 	}
 
-	public String getITEMID() {
-		return ITEMID;
+	public void setDataSign(Long dataSign) {
+		this.dataSign = dataSign;
 	}
 
-	public void setITEMID(String iTEMID) {
-		ITEMID = iTEMID;
+	public String getItemid() {
+		return itemid;
 	}
-	 
-	 
 
-
-
-
-
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
 }
