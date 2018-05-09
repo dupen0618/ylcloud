@@ -21,8 +21,10 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
 	private Long settlementType;// 结算方式1：购销，2：代销，3：联销,用于3.21.3 供应商自下联营订单时控制
 
 	private Long logisticsType;// 物流方式
-
+	
 	private String barcode;// 商品编号、商品条码二选一
+	
+	private Long itemNumberType;//商品序号类别 1-item_num_id 2:itemid 3:barcode
 
 	private Long storageNumId;// 指定收货仓
 
@@ -173,4 +175,13 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
 		this.divNumId = divNumId;
 	}
 
+	public Long getItemNumberType() {
+		return itemNumberType;
+	}
+
+	public void setItemNumberType(Long itemNumberType) {
+		this.itemNumberType = itemNumberType;
+	}
+
+	
 }
