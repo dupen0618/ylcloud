@@ -14,7 +14,7 @@ public class ReceiptHdrFuzzyGetResponse extends MessagePack {
 	private static final long serialVersionUID = 1L;
 	private String reservedNo; //验收单号
 	private String traySerlno; //未完成收货的托盘
-	private  String traySerlnoLablep;//托盘实物标签号
+	private  String traySerlnoLable;//托盘实物标签号
 	private Double trayConfirmQty;//托盘已收数量
 	private Double receiptQty;//订单应收数量
 	private Double receiptConfirmQty;//订单已收数量
@@ -32,11 +32,12 @@ public class ReceiptHdrFuzzyGetResponse extends MessagePack {
 	public void setTraySerlno(String traySerlno) {
 		this.traySerlno = traySerlno;
 	}
-	public String getTraySerlnoLablep() {
-		return traySerlnoLablep;
+	
+	public String getTraySerlnoLable() {
+		return traySerlnoLable;
 	}
-	public void setTraySerlnoLablep(String traySerlnoLablep) {
-		this.traySerlnoLablep = traySerlnoLablep;
+	public void setTraySerlnoLable(String traySerlnoLable) {
+		this.traySerlnoLable = traySerlnoLable;
 	}
 	public Double getTrayConfirmQty() {
 		return trayConfirmQty;

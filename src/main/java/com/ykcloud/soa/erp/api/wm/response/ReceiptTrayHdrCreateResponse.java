@@ -32,8 +32,5 @@ public class ReceiptTrayHdrCreateResponse extends MessagePack {
 		this.traySerlnoLabel = traySerlnoLabel;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 	
 }
