@@ -55,12 +55,8 @@ import com.ykcloud.soa.erp.api.wm.response.SoLockQtyByWlbcResponse;
 
 //查询分仓在途数的接口,以及查询销售的信息
 public interface SoQueryService {
-	//从数据库中查询在途分仓数
-	public OpenBranchDeliveryQtyGetResponse   getOpenBranchDeliveryQty(OpenBranchDeliveryQtyGetRequest request);
-	//仓库配送数量    直通方式
-    public DirectWayOpenDistDeliveryQtyGetResponse getDirectWayOpenDistDeliveryQty(DirectWayOpenDistDeliveryQtyGetRequest request);
-	//仓库配送数量  配送方式
-    public DistributionOpenDistDeliveryQtyGetResponse getDistributionOpenDistDeliveryQty(DistributionOpenDistDeliveryQtyGetRequest request);
+	
+	
     //获得商品销售方面的信息
     public DemandSaleStatisticGetResponse getDemandSaleStatistic(DemandSaleStatisticGetRequest request);
    
