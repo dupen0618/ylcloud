@@ -31,7 +31,7 @@ public class SellDailyCollectRequest extends AbstractRequest {
     /**
      * 商品产地
      */
-    private Integer productOriginNumId;
+    private Long productOriginNumId;
 
     /**
      * 结算方式
@@ -67,11 +67,11 @@ public class SellDailyCollectRequest extends AbstractRequest {
         this.physicalNumId = physicalNumId;
     }
 
-    public Integer getProductOriginNumId() {
+    public Long getProductOriginNumId() {
         return productOriginNumId;
     }
 
-    public void setProductOriginNumId(Integer productOriginNumId) {
+    public void setProductOriginNumId(Long productOriginNumId) {
         this.productOriginNumId = productOriginNumId;
     }
 

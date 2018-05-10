@@ -10,6 +10,7 @@ import java.io.Serializable;
  */
 public class WmCollectShipSellDailyDtl implements Serializable {
 
+
     /**
      * 商品编号
      */
@@ -135,6 +136,14 @@ public class WmCollectShipSellDailyDtl implements Serializable {
         this.sellAmount = sellAmount;
     }
 
+    public Double getCostAmount() {
+        return costAmount;
+    }
+
+    public void setCostAmount(Double costAmount) {
+        this.costAmount = costAmount;
+    }
+
     public Double getInSellAmount() {
         return inSellAmount;
     }
@@ -189,6 +198,14 @@ public class WmCollectShipSellDailyDtl implements Serializable {
 
     public void setConversionQty(Double conversionQty) {
         this.conversionQty = conversionQty;
+    }
+
+    public Double getQty() {
+        return qty;
+    }
+
+    public void setQty(Double qty) {
+        this.qty = qty;
     }
 
     public Double getSellQty() {
