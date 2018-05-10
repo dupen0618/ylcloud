@@ -15,7 +15,7 @@ import com.ykcloud.soa.erp.api.so.request.SoShipQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateSoOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SoUpdateLockToPackingRequest;
-import com.ykcloud.soa.erp.api.so.request.SoTmlTranTypeUpdateRequest;
+import com.ykcloud.soa.erp.api.so.request.SoTmlBalanceSignUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoWlbcAndSoBingingRequest;
 import com.ykcloud.soa.erp.api.so.response.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ApprovalReturnSoGenerateResponse;
@@ -107,7 +107,15 @@ public interface SoMaintanceService {
 	//订单预出
 	public PackingOrderItemInventoryUpResponse upPackingOrderItemInventory(PackingOrderItemInventoryUpRequest request);
 
-	public SoTmlTranTypeUpdateResponse updateTmlTranTypeNumId(SoTmlTranTypeUpdateRequest request);
+	public SoTmlBalanceSignUpdateResponse updateTmlBalanceSign(SoTmlBalanceSignUpdateRequest request);
+
+	 /**
+	  * @author alfred
+	  * @date 2018/5/9 20:10
+	  * @description 根据验收单号修改状态
+	  */
+	 UpdateSoStatusResponse updateSoStatus(UpdateSoStatusRequest request);
+
 
 
 }

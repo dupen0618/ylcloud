@@ -11,11 +11,14 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  *
  */
 
-public class ProductFdcSignBySupplyNumIdAndPtyNum3GetRequest extends AbstractRequest {
+public class ProductFdcSignBySupplyNumIdAndPty3NumIdGetRequest extends AbstractRequest {
+	private static final long serialVersionUID = 1L;
+
 	@NotNull(message = "供应商编号不能为空！")
 	private Long supplyUnitNumId; // 供应商编号
+
 	@NotNull(message = "商品小类编号不能为空！")
-	private Long ptyNum3; // 商品小类
+	private Long pty3NumId; // 商品小类
 
 	public Long getSupplyUnitNumId() {
 		return supplyUnitNumId;
@@ -25,12 +28,12 @@ public class ProductFdcSignBySupplyNumIdAndPtyNum3GetRequest extends AbstractReq
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
 
-	public Long getPtyNum3() {
-		return ptyNum3;
+	public Long getPty3NumId() {
+		return pty3NumId;
 	}
 
-	public void setPtyNum3(Long ptyNum3) {
-		this.ptyNum3 = ptyNum3;
+	public void setPty3NumId(Long pty3NumId) {
+		this.pty3NumId = pty3NumId;
 	}
 
 }

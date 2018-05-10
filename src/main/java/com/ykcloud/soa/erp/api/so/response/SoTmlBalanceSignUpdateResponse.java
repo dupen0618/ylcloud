@@ -7,5 +7,5 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @Description:
  * @Date: Created in 10:18:2018/4/25
  */
-public class SoTmlTranTypeUpdateResponse extends MessagePack {
+public class SoTmlBalanceSignUpdateResponse extends MessagePack {
 }
