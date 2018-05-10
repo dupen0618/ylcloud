@@ -1,7 +1,9 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
-import java.util.Date;
+
 import java.util.List;
+
+import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.scm.model.AuditReplenishApply;
@@ -10,7 +12,7 @@ public class ReplenishApplyBatchAuditRequest extends AbstractUserSessionRequest 
 	
 		private static final long serialVersionUID = 1L;
 
-
+		@NotNull(message="门店编号不能为空")
 		private Long subUnitNumId;  //门店编号
 		
 		

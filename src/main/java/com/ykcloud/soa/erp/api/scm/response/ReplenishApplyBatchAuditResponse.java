@@ -13,6 +13,8 @@ public class ReplenishApplyBatchAuditResponse extends MessagePack {
 	private static final long serialVersionUID = 1L;
 	
 	private List<AuditReplenishApplyResult> auditReplenishApplyResults;
+	
+	
 
 	public List<AuditReplenishApplyResult> getAuditReplenishApplyResults() {
 		return auditReplenishApplyResults;
