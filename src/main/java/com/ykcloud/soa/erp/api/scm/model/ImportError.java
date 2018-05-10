@@ -24,7 +24,7 @@ public class ImportError implements Serializable {
 	/**
 	 * 商品sku
 	 */
-	private Long itemid;
+	private String itemid;
 	
 	/**
 	 * 商品条码
@@ -52,11 +52,11 @@ public class ImportError implements Serializable {
 		this.itemNumId = itemNumId;
 	}
 
-	public Long getItemid() {
+	public String getItemid() {
 		return itemid;
 	}
 
-	public void setItemid(Long itemid) {
+	public void setItemid(String itemid) {
 		this.itemid = itemid;
 	}
 
