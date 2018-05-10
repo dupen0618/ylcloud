@@ -9,7 +9,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * 
  */
 
-public class ProductFdcSignBySupplyNumIdAndPtyNum3GetResponse extends MessagePack {
+public class ProductFdcSignBySupplyNumIdAndPty3NumIdGetResponse extends MessagePack {
 	private static final long serialVersionUID = 7601749578834540994L;
 	private Long fdcSign; // 生鲜标识 1:生鲜 0非生鲜
 
