@@ -15,10 +15,26 @@ public class WmBlShipContainerHrdResponse extends MessagePack
     //托盘号
     private String containerSerlno;
     //托盘标识
+    private String containerLabserlno;
+    //订单编号
     private String soNumId;
     //客户名称
     private String custSubUnitName;
 
+    public String getContainerSerlno()
+    {
+        return containerSerlno;
+    }
+
+    public String getContainerLabserlno()
+    {
+        return containerLabserlno;
+    }
+
+    public void setContainerLabserlno(String containerLabserlno)
+    {
+        this.containerLabserlno = containerLabserlno;
+    }
 
     public void setContainerSerlno(String containerSerlno)
     {

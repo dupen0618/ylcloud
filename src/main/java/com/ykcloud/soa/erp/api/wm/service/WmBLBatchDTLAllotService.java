@@ -2,7 +2,10 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.WmBLBatchDTLAllotRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmBLBatchDTLUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmBlBatchDtlBySeriesRequest;
 import com.ykcloud.soa.erp.api.wm.response.WmBLBatchDTLAllotResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmBlBatchDtlBySeriesResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmBlContainerDtlResponse;
 
 /**
  * @Author Hewei
@@ -27,4 +30,11 @@ public interface WmBLBatchDTLAllotService {
 
     //单据批次分配--损溢单-损耗
     WmBLBatchDTLAllotResponse updateBatchDtlByLoss(WmBLBatchDTLUpdateRequest request);
+
+     /**
+      * @author alfred
+      * @date 2018/5/10 11:28
+      * @description
+      */
+    WmBlBatchDtlBySeriesResponse selectOneBySeries(WmBlBatchDtlBySeriesRequest request);
 }
