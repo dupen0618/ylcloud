@@ -1,10 +1,16 @@
 package com.ykcloud.soa.erp.api.so.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class SoBlSoHdr {
+public class SoBlSoHdr implements Serializable {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * 存储方式
      */
     private Long STORE_TYPE;
