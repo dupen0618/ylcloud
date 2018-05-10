@@ -13,7 +13,7 @@ import java.util.List;
  * @Description:
  * @Date: Created in 10:18:2018/4/25
  */
-public class SoTmlTranTypeUpdateRequest extends AbstractUserSessionRequest{
+public class SoTmlBalanceSignUpdateRequest extends AbstractUserSessionRequest{
 
     /**
 	 * 
