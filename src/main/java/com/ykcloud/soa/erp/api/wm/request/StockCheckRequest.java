@@ -38,8 +38,8 @@ public class StockCheckRequest extends AbstractUserSessionRequest {
     private String barcodeOrItemNumId;
 
     @ApiField(description = "扫入/扫出标记")
-    @NotNull(message = "扫入/扫出标记不能为空！")
-    @Pattern(regexp = "(-)?[1]", message = "扫入扫出标记只能为1或-1")
+    @NotNull(message = "扫描标识不能为空！")
+    @Pattern(regexp = "(-)?[1]|[0]", message = "扫描标识只能为-1、0或1")
     private String inoutFlag;
 
     private Double inQty = 1D;
