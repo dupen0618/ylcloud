@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.scm.service;
 
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderByBuyerAuditGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderDtlImportRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoBySupplyConfirmRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoDtlRecQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoFinishRequest;
@@ -14,6 +15,7 @@ import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderActualQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoStatusNumIdForConfirmPoBySupplyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderByBuyerAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderDtlImportResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoBySupplyConfirmResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoDtlRecQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoFinishResponse;
@@ -25,6 +27,13 @@ import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderActualQtyUpdateResponse
 import com.ykcloud.soa.erp.api.scm.response.PoStatusNumIdForConfirmPoBySupplyUpdateResponse;
 
 public interface ScmPoService {
+	
+	/**
+	 * 订货审批单excel批量导入
+	 * @author tz.x
+	 * @date 2018年5月9日下午2:19:53
+	 */
+	public ApprovalOrderDtlImportResponse importApprovalOrderDtl(ApprovalOrderDtlImportRequest request);
 	
 	/**
 	 * 订单发货后回写审批单和申请单发货数量(供应商预约送货)
