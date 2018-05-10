@@ -3,8 +3,9 @@ package com.ykcloud.soa.erp.api.wm.request;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class MoveAuditReuqest extends AbstractRequest{
+public class MoveAuditReuqest extends AbstractUserSessionRequest {
 
 	/**
 	 * 移库审核
