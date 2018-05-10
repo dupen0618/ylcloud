@@ -109,5 +109,13 @@ public interface SoMaintanceService {
 
 	public SoTmlTranTypeUpdateResponse updateTmlTranTypeNumId(SoTmlTranTypeUpdateRequest request);
 
+	 /**
+	  * @author alfred
+	  * @date 2018/5/9 20:10
+	  * @description 根据验收单号修改状态
+	  */
+	 UpdateSoStatusResponse updateSoStatus(UpdateSoStatusRequest request);
+
+
 
 }
