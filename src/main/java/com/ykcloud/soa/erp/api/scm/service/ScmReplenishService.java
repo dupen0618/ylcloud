@@ -10,9 +10,11 @@ import com.ykcloud.soa.erp.api.scm.response.AutoReplenishApplyGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.DmsForAutoReplenishCalcateResponse;
 import com.ykcloud.soa.erp.api.scm.response.HandReplenishProductGetResponse;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyAuditRequest;
+import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyBatchAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyBatchAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyByAuthorConfirmResponse;
 
 
@@ -40,4 +42,6 @@ public interface ScmReplenishService {
     //产生自动补货申请单
 	public AutoReplenishApplyGenerateResponse generateAutoReplenishApply(AutoReplenishApplyGenerateRequest request);
 
+	//主管批量审核
+	public ReplenishApplyBatchAuditResponse batchAuditReplenishApply(ReplenishApplyBatchAuditRequest request);
 }
