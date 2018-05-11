@@ -8,6 +8,7 @@ import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyTransferBetweenSh
 import com.ykcloud.soa.erp.api.so.request.QtyForSoApplyCheckRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAfterGenerateReturnSoUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAuditRequest;
+import com.ykcloud.soa.erp.api.so.request.ReturnApplyBatchAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByOperationCenterAuditRequest;
@@ -24,6 +25,7 @@ import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenS
 import com.ykcloud.soa.erp.api.so.response.QtyForSoApplyCheckResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAfterGenerateReturnSoUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAuditResponse;
+import com.ykcloud.soa.erp.api.so.response.ReturnApplyBatchAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByOperationCenterAuditResponse;
@@ -162,4 +164,7 @@ public interface SoApplyService {
 
     //更改订单申请单中的实际收退货数量
     public SoApplyActualQtyUpdateGetResponse updateSoApplyActualQty(SoApplyActualQtyUpdateGetRequest request);
+
+    //退货申请主管批量审核
+    public ReturnApplyBatchAuditResponse batchAuditReturnApply(ReturnApplyBatchAuditRequest request);
 }
