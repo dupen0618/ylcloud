@@ -29,7 +29,7 @@ public class FiBlSupBalance implements Serializable{
 	
 	private String itemName;  //商品品名
 	
-	private Long productOrigiNumId; //原产地编号
+	private Long productOriginNumId; //原产地编号
 	
 	private Double conversionQty;   //件装单位
 	
@@ -137,12 +137,12 @@ public class FiBlSupBalance implements Serializable{
 		this.itemName = itemName;
 	}
 
-	public Long getProductOrigiNumId() {
-		return productOrigiNumId;
+	public Long getProductOriginNumId() {
+		return productOriginNumId;
 	}
 
-	public void setProductOrigiNumId(Long productOrigiNumId) {
-		this.productOrigiNumId = productOrigiNumId;
+	public void setProductOriginNumId(Long productOriginNumId) {
+		this.productOriginNumId = productOriginNumId;
 	}
 
 	public Double getConversionQty() {
