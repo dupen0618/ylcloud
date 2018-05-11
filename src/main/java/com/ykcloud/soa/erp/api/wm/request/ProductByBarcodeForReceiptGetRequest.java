@@ -13,7 +13,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
  * 
  * @Description 根据条码获取商品信息入参
  */
-public class ProductByBarcodeGetRequest extends AbstractUserSessionRequest {
+public class ProductByBarcodeForReceiptGetRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = -9168361855155604873L;
 
