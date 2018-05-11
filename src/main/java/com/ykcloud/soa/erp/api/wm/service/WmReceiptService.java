@@ -1,6 +1,9 @@
 package com.ykcloud.soa.erp.api.wm.service;
+import com.ykcloud.soa.erp.api.scm.request.InTransitDepositRequest;
+import com.ykcloud.soa.erp.api.scm.response.InTransitDepositResponse;
 import com.ykcloud.soa.erp.api.wm.request.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest;
 import com.ykcloud.soa.erp.api.wm.request.DirectReceiptUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.request.MessageForDepositInTransitAndRegenerateDirectWaySoSendReuqest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
@@ -17,6 +20,7 @@ import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.UpdateReceiptAccountFinishRequest;
 import com.ykcloud.soa.erp.api.wm.response.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse;
 import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
+import com.ykcloud.soa.erp.api.wm.response.MessageForDepositInTransitAndRegenerateDirectWaySoSendRespnse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
@@ -128,4 +132,8 @@ public interface WmReceiptService {
 
 	//退供应商引用负出库单和验收单核销
 	public CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse writeoffCiteQtyForAuditApprovalReturnOrderByBuyer(CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest request);
+	
+	//发送补货在途数量入账及短收重新产生直通分拨单消息
+	public MessageForDepositInTransitAndRegenerateDirectWaySoSendRespnse sendMessageForDepositInTransitAndRegenerateDirectWaySo(
+		MessageForDepositInTransitAndRegenerateDirectWaySoSendReuqest request);	
 }
