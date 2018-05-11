@@ -1,10 +1,9 @@
 package com.ykcloud.soa.erp.api.wm.service;
-import com.ykcloud.soa.erp.api.scm.request.InTransitDepositRequest;
-import com.ykcloud.soa.erp.api.scm.response.InTransitDepositResponse;
 import com.ykcloud.soa.erp.api.wm.request.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest;
 import com.ykcloud.soa.erp.api.wm.request.CountDtlForReturnCiteDtlGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.DirectReceiptUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.MessageForDepositInTransitAndRegenerateDirectWaySoSendReuqest;
+import com.ykcloud.soa.erp.api.wm.request.ProductByBarcodeForReceiptGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
@@ -23,6 +22,7 @@ import com.ykcloud.soa.erp.api.wm.response.CiteQtyForAuditApprovalReturnOrderByB
 import com.ykcloud.soa.erp.api.wm.response.CountDtlForReturnCiteDtlGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.MessageForDepositInTransitAndRegenerateDirectWaySoSendRespnse;
+import com.ykcloud.soa.erp.api.wm.response.ProductByBarcodeForReceiptGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
@@ -142,4 +142,13 @@ public interface WmReceiptService {
 	//查询引用明细表体
 	public CountDtlForReturnCiteDtlGetResponse getCountDtlForReturnCiteDtl(CountDtlForReturnCiteDtlGetRequest request);
 
+	/**
+	 * 
+	 * @description 验收入库根据条码获取商品信息
+	 * @author gaoyun.shen
+	 * @date: 2018年5月11日 下午2:39:20
+	 * @param 
+	 * @return
+	 */
+	public ProductByBarcodeForReceiptGetResponse getProductByBarcode(ProductByBarcodeForReceiptGetRequest  productByBarcodeGetRequest);
 }
