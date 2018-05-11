@@ -12,8 +12,8 @@ public class ProductChangeRequest extends AbstractRequest {
     @NotNull(message = "门店编号不能为空")
     private Long subUnitNumId;
     
-    @NotNull(message = "商品条码或编号不能为空")
-    private String barcode;
+    @NotNull(message = "商品编号不能为空")
+    private Long itemNumId;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -23,11 +23,11 @@ public class ProductChangeRequest extends AbstractRequest {
         this.subUnitNumId = subUnitNumId;
     }
 
-    public String getBarcode() {
-        return barcode;
+    public Long getItemNumId() {
+        return itemNumId;
     }
 
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
+    public void setItemNumId(Long itemNumId) {
+        this.itemNumId = itemNumId;
     }
 }

@@ -3,8 +3,9 @@ package com.ykcloud.soa.erp.api.wm.request;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WorkConfirmAssembleRequest extends AbstractRequest {
+public class WorkConfirmAssembleRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = 1L;
 	
 	@NotNull(message = "加工单号不能为空")

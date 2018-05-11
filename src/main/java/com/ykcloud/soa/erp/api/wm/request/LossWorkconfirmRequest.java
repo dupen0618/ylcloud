@@ -1,13 +1,14 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 
 /**
  * Created by yiako on 2018/3/28
  */
-public class LossWorkconfirmRequest extends AbstractRequest {
+public class LossWorkconfirmRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1L;
 

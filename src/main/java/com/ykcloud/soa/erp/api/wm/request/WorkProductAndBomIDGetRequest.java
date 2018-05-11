@@ -11,18 +11,19 @@ import javax.validation.constraints.NotNull;
 public class WorkProductAndBomIDGetRequest extends AbstractRequest {
     private static final long serialVersionUID = 1L;
 
-    @NotNull(message = "商品条码不能为空")
-    private String barcode;
+    @NotNull(message = "商品编码不能为空")
+    private Long ItemNumId;
     @NotNull(message = "业务类型不能为空")
     private long typeNumId;
     @NotNull(message = "门店编号不能为空")
     private Long subUnitNumId;
-    public String getBarcode() {
-        return barcode;
+
+    public Long getItemNumId() {
+        return ItemNumId;
     }
 
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
+    public void setItemNumId(Long itemNumId) {
+        ItemNumId = itemNumId;
     }
 
     public long getTypeNumId() {
