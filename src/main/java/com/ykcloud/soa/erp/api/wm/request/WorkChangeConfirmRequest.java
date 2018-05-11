@@ -3,8 +3,9 @@ package com.ykcloud.soa.erp.api.wm.request;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class WorkChangeConfirmRequest extends AbstractRequest {
+public class WorkChangeConfirmRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1L;
 	
