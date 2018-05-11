@@ -4,6 +4,7 @@ package com.ykcloud.soa.erp.api.scm.service;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderByBuyerAuditGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderDtlImportRequest;
+import com.ykcloud.soa.erp.api.scm.request.ExpirePoCancelRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoBySupplyConfirmRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoDtlRecQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.PoFinishRequest;
@@ -16,6 +17,7 @@ import com.ykcloud.soa.erp.api.scm.request.PoStatusNumIdForConfirmPoBySupplyUpda
 import com.ykcloud.soa.erp.api.scm.response.ApprovalDtlsForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderByBuyerAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderDtlImportResponse;
+import com.ykcloud.soa.erp.api.scm.response.ExpirePoCancelResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoBySupplyConfirmResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoDtlRecQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.PoFinishResponse;
@@ -27,6 +29,13 @@ import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderActualQtyUpdateResponse
 import com.ykcloud.soa.erp.api.scm.response.PoStatusNumIdForConfirmPoBySupplyUpdateResponse;
 
 public interface ScmPoService {
+	
+	/**
+	 * 采购超时作废
+	 * @author tz.x
+	 * @date 2018年5月11日上午9:46:09
+	 */
+	public ExpirePoCancelResponse cancelExpirePo(ExpirePoCancelRequest request);
 	
 	/**
 	 * 订货审批单excel批量导入
