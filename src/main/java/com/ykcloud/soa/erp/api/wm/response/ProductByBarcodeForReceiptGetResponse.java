@@ -10,7 +10,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * 
  * @Description 根据条码获取商品信息返回结果
  */
-public class ProductByBarcodeGetResponse extends MessagePack {
+public class ProductByBarcodeForReceiptGetResponse extends MessagePack {
 	private static final long serialVersionUID = 426826362514908939L;
 	private Long itemNumId;
 	private String itemName;
