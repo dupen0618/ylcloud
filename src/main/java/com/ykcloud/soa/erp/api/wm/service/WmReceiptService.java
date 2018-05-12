@@ -6,6 +6,7 @@ import com.ykcloud.soa.erp.api.wm.request.MessageForDepositInTransitAndRegenerat
 import com.ykcloud.soa.erp.api.wm.request.ProductByBarcodeForReceiptGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptForCancelExpirePoDeleteRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrForCancelExpirePoGetRequest;
@@ -26,6 +27,7 @@ import com.ykcloud.soa.erp.api.wm.response.MessageForDepositInTransitAndRegenera
 import com.ykcloud.soa.erp.api.wm.response.ProductByBarcodeForReceiptGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptForCancelExpirePoDeleteResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrForCancelExpirePoGetResponse;
@@ -41,6 +43,13 @@ import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse
 import com.ykcloud.soa.erp.api.wm.response.UpdateReceiptAccountFinishResponse;
 
 public interface WmReceiptService {
+	
+	/**
+	 * 删除超时作废的验收单
+	 * @author tz.x
+	 * @date 2018年5月12日上午9:27:57
+	 */
+	public ReceiptForCancelExpirePoDeleteResponse deleteReceiptForCancelExpirePo(ReceiptForCancelExpirePoDeleteRequest request);
 	
 	/**
 	 * 根据验收单号查询单据状态

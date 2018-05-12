@@ -14,6 +14,19 @@ public class ReceiptHdrForCancelExpirePoGetResponse extends MessagePack {
 	 * 单据状态
 	 */
 	private Long statusNumId;
+	
+	/**
+	 * 验收单号
+	 */
+	private String reservedNo;
+
+	public String getReservedNo() {
+		return reservedNo;
+	}
+
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
+	}
 
 	public Long getStatusNumId() {
 		return statusNumId;
