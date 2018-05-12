@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.scm.model.ImportReplenishApplyDtl;
 //补货申请单excel表格批量导入,入参
@@ -16,6 +16,7 @@ public class ReplenishApplyDtlImportRequest extends AbstractUserSessionRequest {
 		private Long subUnitNumId;   //门店编号
 		
 		@NotNull(message="日期不能为空")
+		@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 		private Date orderDate;
 		
 		@NotNull(message="申请单号不能为空")
