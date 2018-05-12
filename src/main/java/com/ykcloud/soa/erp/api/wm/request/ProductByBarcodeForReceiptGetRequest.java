@@ -3,6 +3,8 @@ package com.ykcloud.soa.erp.api.wm.request;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
@@ -13,7 +15,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
  * 
  * @Description 根据条码获取商品信息入参
  */
-public class ProductByBarcodeForReceiptGetRequest extends AbstractUserSessionRequest {
+public class ProductByBarcodeForReceiptGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = -9168361855155604873L;
 
