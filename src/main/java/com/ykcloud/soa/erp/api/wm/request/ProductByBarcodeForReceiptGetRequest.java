@@ -32,6 +32,7 @@ public class ProductByBarcodeForReceiptGetRequest extends AbstractUserSessionReq
 	@ApiField(description = "商品条码") 
 	@NotNull(message="商品条码不能为空!")
 	private String barcode;
+
 	
 
 
@@ -68,8 +69,4 @@ public class ProductByBarcodeForReceiptGetRequest extends AbstractUserSessionReq
 		this.barcode = barcode;
 	}
 
-
-
-	
-	
 }

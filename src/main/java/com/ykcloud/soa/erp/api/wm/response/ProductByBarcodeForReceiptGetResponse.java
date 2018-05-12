@@ -21,6 +21,7 @@ public class ProductByBarcodeForReceiptGetResponse extends MessagePack {
 	private Double receiptProductConfirmQty;// 订单商品已收数量
 	private Double receiptQty;// 订单应收数量
 	private Double receiptConfirmQty;// 订单已收数量
+	private String traySerlnoLable;//托盘标签
 
 	public Long getItemNumId() {
 		return itemNumId;
@@ -98,4 +99,13 @@ public class ProductByBarcodeForReceiptGetResponse extends MessagePack {
 		return serialVersionUID;
 	}
 
+	public String getTraySerlnoLable()
+	{
+		return traySerlnoLable;
+	}
+
+	public void setTraySerlnoLable(String traySerlnoLable)
+	{
+		this.traySerlnoLable = traySerlnoLable;
+	}
 }
