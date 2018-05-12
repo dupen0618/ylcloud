@@ -1,10 +1,15 @@
 package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest;
+import com.ykcloud.soa.erp.api.wm.request.CountDtlForReturnCiteDtlGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.DirectReceiptUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.request.MessageForDepositInTransitAndRegenerateDirectWaySoSendReuqest;
+import com.ykcloud.soa.erp.api.wm.request.ProductByBarcodeForReceiptGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptForCancelExpirePoDeleteRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrForCancelExpirePoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrFuzzyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptProduceDateUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
@@ -16,11 +21,16 @@ import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.UpdateReceiptAccountFinishRequest;
 import com.ykcloud.soa.erp.api.wm.response.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse;
+import com.ykcloud.soa.erp.api.wm.response.CountDtlForReturnCiteDtlGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
+import com.ykcloud.soa.erp.api.wm.response.MessageForDepositInTransitAndRegenerateDirectWaySoSendRespnse;
+import com.ykcloud.soa.erp.api.wm.response.ProductByBarcodeForReceiptGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptForCancelExpirePoDeleteResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrForCancelExpirePoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrFuzzyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptProduceDateUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
@@ -33,6 +43,21 @@ import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse
 import com.ykcloud.soa.erp.api.wm.response.UpdateReceiptAccountFinishResponse;
 
 public interface WmReceiptService {
+	
+	/**
+	 * 删除超时作废的验收单
+	 * @author tz.x
+	 * @date 2018年5月12日上午9:27:57
+	 */
+	public ReceiptForCancelExpirePoDeleteResponse deleteReceiptForCancelExpirePo(ReceiptForCancelExpirePoDeleteRequest request);
+	
+	/**
+	 * 根据验收单号查询单据状态
+	 * @author tz.x
+	 * @date 2018年5月11日下午4:54:03
+	 */
+	public ReceiptHdrForCancelExpirePoGetResponse getReceiptHdrForCancelExpirePo(ReceiptHdrForCancelExpirePoGetRequest request);
+	
 	// 查询商品最后收货日期
 	public ShopProductLastReceiveDateGetResponse getShopProductLastReceiveDate(
 			ShopProductLastReceiveDateGetRequest request);
@@ -46,8 +71,6 @@ public interface WmReceiptService {
 	 * 取指定采购单的供应商确认日期及验收入库汇总单状态
 	 * @author tz.x
 	 * @date 2018年3月26日下午2:03:24
-	 * @param 
-	 * @returnj
 	 */
 	public ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse getReceiptSupConfirmDateAndStatusNumIdByPoNumId(
 			ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest request);
@@ -57,8 +80,6 @@ public interface WmReceiptService {
 	 * 产生验收单
 	 * @author tz.x
 	 * @date 2018年3月27日上午11:47:52
-	 * @param 
-	 * @return
 	 */
 	public ReceiptGenerateResponse generateReceipt(ReceiptGenerateRequest request);
 
@@ -128,4 +149,21 @@ public interface WmReceiptService {
 
 	//退供应商引用负出库单和验收单核销
 	public CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse writeoffCiteQtyForAuditApprovalReturnOrderByBuyer(CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest request);
+	
+	//发送补货在途数量入账及短收重新产生直通分拨单消息
+	public MessageForDepositInTransitAndRegenerateDirectWaySoSendRespnse sendMessageForDepositInTransitAndRegenerateDirectWaySo(
+		MessageForDepositInTransitAndRegenerateDirectWaySoSendReuqest request);	
+
+	//查询引用明细表体
+	public CountDtlForReturnCiteDtlGetResponse getCountDtlForReturnCiteDtl(CountDtlForReturnCiteDtlGetRequest request);
+
+	/**
+	 * 
+	 * @description 验收入库根据条码获取商品信息
+	 * @author gaoyun.shen
+	 * @date: 2018年5月11日 下午2:39:20
+	 * @param 
+	 * @return
+	 */
+	public ProductByBarcodeForReceiptGetResponse getProductByBarcode(ProductByBarcodeForReceiptGetRequest  productByBarcodeGetRequest);
 }

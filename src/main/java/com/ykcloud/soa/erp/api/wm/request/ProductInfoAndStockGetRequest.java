@@ -11,19 +11,20 @@ public class ProductInfoAndStockGetRequest extends AbstractRequest {
 	private static final long serialVersionUID = 1L;
 
 
-	@NotNull(message="商品条码不能为空")
-	private String barcode;//条码
+	@NotNull(message="商品编号不能为空")
+	private Long itemNumId;
 
 	@NotNull(message = "逻辑仓不能为空")
 	private Long storageNumId;//逻辑仓号
 	@NotNull(message = "门店编号不能为空")
 	private Long subUnitNumId;
-	public String getBarcode() {
-		return barcode;
+
+	public Long getItemNumId() {
+		return itemNumId;
 	}
 
-	public void setBarcode(String barcode) {
-		this.barcode = barcode;
+	public void setItemNumId(Long itemNumId) {
+		this.itemNumId = itemNumId;
 	}
 
 	public Long getStorageNumId() {
