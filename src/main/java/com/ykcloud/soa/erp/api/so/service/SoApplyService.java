@@ -13,6 +13,7 @@ import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByOperationCenterAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByReceiverConfirmRequest;
+import com.ykcloud.soa.erp.api.so.request.ShopTransferDtlImportRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferRejectAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyActualQtyUpdateGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyByAuthorConfirmRequest;
@@ -30,6 +31,7 @@ import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByOperationCenterAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByReceiverConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.ShopTransferDtlImportResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferOrderActualQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferRejectAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.SoApplyActualQtyUpdateGetResponse;
@@ -44,6 +46,13 @@ import com.ykcloud.soa.erp.api.so.response.MaterialIssueBackAuditResponse;
  * @version <b>1.0.0</b>
  */
 public interface SoApplyService {
+	
+	/**
+	 * 店间调拨批量导入excel
+	 * @author tz.x
+	 * @date 2018年5月14日下午2:40:23
+	 */
+	public ShopTransferDtlImportResponse importShopTransferDtl(ShopTransferDtlImportRequest request);
 	
 	/**
 	 * 店间调拨回写实际发货数量
