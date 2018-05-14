@@ -20,10 +20,6 @@ public class ProductInfoForSoApplyTransferBetweenShopGetRequest extends Abstract
 
 	private static final long serialVersionUID = -4497459672458480987L;
 	
-	@ApiField(description = "1:item_num_id, 2:itemid, 3:barcode")
-	@NotNull(message = "商品序号类别不能为空！")
-	private Long itemNumberType;
-	
 	@NotNull(message = "调出门店编号不能为空！")
 	private Long subUnitNumId;
 	
@@ -39,6 +35,12 @@ public class ProductInfoForSoApplyTransferBetweenShopGetRequest extends Abstract
 	
 	@NotEmpty(message = "调商品编号或条码不能为空!")
 	private String barcode;
+	
+	/**
+	 * 默认1
+	 */
+	@ApiField(description = "1:item_num_id, 2:itemid, 3:barcode")
+	private Long itemNumberType;
 	
 	@NotNull(message = "单头指定存储方式不能为空!")
 	private Long storeType;
