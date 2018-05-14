@@ -1,6 +1,9 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
-import com.ykcloud.soa.erp.api.wm.model.ShipSellDailyInfo;
+import java.util.List;
+
+import com.ykcloud.soa.erp.api.wm.model.WmBlLossDtl;
+import com.ykcloud.soa.erp.api.wm.model.WmBlLossHdr;
 import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.*;
 import com.ykcloud.soa.erp.api.wm.response.LossWorkconfirmResponse;
@@ -64,4 +67,8 @@ public interface WmWorkService {
 	 * @author henry.wang
 	 */
 	SellDetermineInventoryByResponse bySellDetermineInventory(SellDetermineInventoryByRequest request);
+
+	public WmBlLossHdr getlossHdrByLossNumId(Long tenantNumId, Long subUnitNumId, Long dataSign, String lossNumId);
+
+	public List<WmBlLossDtl> getlossDtlByLossNumId(Long tenantNumId, Long subUnitNumId, Long dataSign, String lossNumId);
 }
