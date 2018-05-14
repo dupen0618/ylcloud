@@ -1,11 +1,15 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.request.CalcSaleGrossProfitRequest;
+import com.ykcloud.soa.erp.api.fi.request.DailyAndMonthCostAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.LossAmount1AndFinalCostUpdateRequest;
+import com.ykcloud.soa.erp.api.fi.request.VirtualDailyAndMonthCostGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.response.CalcSaleGrossProfitResponse;
+import com.ykcloud.soa.erp.api.fi.response.DailyAndMonthCostAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.LossAmount1AndFinalCostUpdaterResponse;
 import com.ykcloud.soa.erp.api.fi.request.AccountForSellDetermineInventoryByClassifyNumIdProcessRequest;
 import com.ykcloud.soa.erp.api.fi.request.AccountForStockCheckByClassifyNumIdProcessRequest;
+import com.ykcloud.soa.erp.api.fi.response.VirtualDailyAndMonthCostGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.request.CarryDownDailyFiRequest;
 import com.ykcloud.soa.erp.api.fi.response.AccountForSellDetermineInventoryByClassifyNumIdProcessResponse;
 import com.ykcloud.soa.erp.api.fi.response.AccountForStockCheckByClassifyNumIdProcessResponse;
@@ -60,4 +64,18 @@ public interface FiCostDailyAccountGaService {
 	 * @return
 	 */
 	CalcSaleGrossProfitResponse calcSaleGrossProfit(CalcSaleGrossProfitRequest reuqest);
+	/**
+	 * 调整日月进销存数量
+	 * @param request
+	 * @return
+	 */
+	DailyAndMonthCostAdjustResponse adjustDailyAndMonthCost(DailyAndMonthCostAdjustRequest request);
+    
+	/** 
+	* @Description: 新增日月进销存
+	* @Author: fred.zhao
+	* @Date: 2018/5/11 
+	*/ 
+    VirtualDailyAndMonthCostGenerateResponse addVirtualDailyAndMonthCost(VirtualDailyAndMonthCostGenerateRequest request);
+	
 }
