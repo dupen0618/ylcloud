@@ -25,7 +25,6 @@ public class ApprovalOrderGenerateRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 1L;
 
-	@NotNull
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date orderDate;// 日期，格式：yyyy-mm-dd
 
