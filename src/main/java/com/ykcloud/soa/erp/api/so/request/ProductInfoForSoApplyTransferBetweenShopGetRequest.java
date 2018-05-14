@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
@@ -18,6 +19,10 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 public class ProductInfoForSoApplyTransferBetweenShopGetRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = -4497459672458480987L;
+	
+	@ApiField(description = "1:item_num_id, 2:itemid, 3:barcode")
+	@NotNull(message = "商品序号类别不能为空！")
+	private Long itemNumberType;
 	
 	@NotNull(message = "调出门店编号不能为空！")
 	private Long subUnitNumId;
@@ -37,6 +42,14 @@ public class ProductInfoForSoApplyTransferBetweenShopGetRequest extends Abstract
 	
 	@NotNull(message = "单头指定存储方式不能为空!")
 	private Long storeType;
+
+	public Long getItemNumberType() {
+		return itemNumberType;
+	}
+
+	public void setItemNumberType(Long itemNumberType) {
+		this.itemNumberType = itemNumberType;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
