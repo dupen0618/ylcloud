@@ -38,6 +38,7 @@ public class BProduct implements Serializable {
 	private Double costTax; //税额
 	private Long productOriginNumId;//原产地
 	private String productOriginName;//原产地名称
+	private Long settlementType;//结算方式
 	public Long getItemNumId() {
 		return itemNumId;
 	}
@@ -259,5 +260,13 @@ public class BProduct implements Serializable {
 
 	public void setProductOriginName(String productOriginName) {
 		this.productOriginName = productOriginName;
+	}
+
+	public Long getSettlementType() {
+		return settlementType;
+	}
+
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
 	}
 }
