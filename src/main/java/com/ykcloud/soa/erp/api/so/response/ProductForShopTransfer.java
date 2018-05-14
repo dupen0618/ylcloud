@@ -13,6 +13,11 @@ public class ProductForShopTransfer implements Serializable {
 	private static final long serialVersionUID = -7437509378376568072L;
 	
 	/**
+	 * 采购途径
+	 */
+	private Long purchaseTypeNumId;
+	
+	/**
 	 * 税率
 	 */
 	private Double taxRate;
@@ -128,6 +133,14 @@ public class ProductForShopTransfer implements Serializable {
 	private Double stockQty;
 	
 	private String itemid;
+
+	public Long getPurchaseTypeNumId() {
+		return purchaseTypeNumId;
+	}
+
+	public void setPurchaseTypeNumId(Long purchaseTypeNumId) {
+		this.purchaseTypeNumId = purchaseTypeNumId;
+	}
 
 	public Double getTaxRate() {
 		return taxRate;
