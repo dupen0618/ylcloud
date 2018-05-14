@@ -40,16 +40,17 @@ public class ReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 	
 	@ApiField(description = "扫回标识")   //value{0 :正向,-1 :反向}
 	@NotNull(message="扫回标识不能为空!")
-	private Long canselSign;
+	private Long cancelSign;
 	
 
 
-	public Long getCanselSign() {
-		return canselSign;
+
+	public Long getCancelSign() {
+		return cancelSign;
 	}
 
-	public void setCanselSign(Long canselSign) {
-		this.canselSign = canselSign;
+	public void setCancelSign(Long cancelSign) {
+		this.cancelSign = cancelSign;
 	}
 
 	public String getReservedNo() {
