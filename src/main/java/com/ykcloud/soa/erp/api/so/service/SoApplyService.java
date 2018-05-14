@@ -17,6 +17,7 @@ import com.ykcloud.soa.erp.api.so.request.ShopTransferDtlImportRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferRejectAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyActualQtyUpdateGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoApplyByAuthorConfirmRequest;
+import com.ykcloud.soa.erp.api.so.request.SoApplyDtlImportRequest;
 import com.ykcloud.soa.erp.api.so.request.SoOriginReservedNoRequest;
 import com.ykcloud.soa.erp.api.so.request.MaterialIssueBackAuditRequest;
 import com.ykcloud.soa.erp.api.so.response.ActualQtyForReturnUpdateResponse;
@@ -36,6 +37,7 @@ import com.ykcloud.soa.erp.api.so.response.ShopTransferOrderActualQtyUpdateRespo
 import com.ykcloud.soa.erp.api.so.response.ShopTransferRejectAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.SoApplyActualQtyUpdateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoApplyByAuthorConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.SoApplyDtlImportResponse;
 import com.ykcloud.soa.erp.api.so.response.SoOriginReservedNoResponse;
 import com.ykcloud.soa.erp.api.so.response.MaterialIssueBackAuditResponse;
 
@@ -176,4 +178,7 @@ public interface SoApplyService {
 
     //退货申请主管批量审核
     public ReturnApplyBatchAuditResponse batchAuditReturnApply(ReturnApplyBatchAuditRequest request);
+
+    //店内调拨、行政领料、委外拆解领料商品EXCEL导入
+    public SoApplyDtlImportResponse importSoApplyDtl(SoApplyDtlImportRequest request);
 }

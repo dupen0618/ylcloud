@@ -29,6 +29,26 @@ public class ProductInfoForSoApplyGetRequest extends AbstractRequest {
 
 	@NotNull(message = "查询类型不能为空,必须为2:店内调拨商品查询 8:行政领料商品查询")
 	private Long typeNumId; // 类型 2.店内调拨商品查询 8,行政领料商品查询
+	
+	private Long storeType; //存储条件
+	
+	private Long divNumId;  //部类
+
+	public Long getDivNumId() {
+		return divNumId;
+	}
+
+	public void setDivNumId(Long divNumId) {
+		this.divNumId = divNumId;
+	}
+
+	public Long getStoreType() {
+		return storeType;
+	}
+
+	public void setStoreType(Long storeType) {
+		this.storeType = storeType;
+	}
 
 	public Long getTypeNumId() {
 		return typeNumId;
