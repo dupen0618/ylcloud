@@ -10,6 +10,7 @@ import com.ykcloud.soa.erp.api.so.request.ReturnApplyAfterGenerateReturnSoUpdate
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyBatchAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
+import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlImportRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByOperationCenterAuditRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopTransferByReceiverConfirmRequest;
@@ -29,6 +30,7 @@ import com.ykcloud.soa.erp.api.so.response.ReturnApplyAfterGenerateReturnSoUpdat
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyBatchAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
+import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlImportResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByOperationCenterAuditResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopTransferByReceiverConfirmResponse;
@@ -181,4 +183,7 @@ public interface SoApplyService {
 
     //店内调拨、行政领料、委外拆解领料商品EXCEL导入
     public SoApplyDtlImportResponse importSoApplyDtl(SoApplyDtlImportRequest request);
+
+    //退货申请单EXCEL商品批量导入
+    public ReturnApplyDtlImportResponse importReturnApplyDtl(ReturnApplyDtlImportRequest request);
 }

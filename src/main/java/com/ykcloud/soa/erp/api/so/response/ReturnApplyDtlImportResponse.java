@@ -10,4 +10,14 @@ public class ReturnApplyDtlImportResponse extends MessagePack {
 	
 	List<ImportReturnApplyDtlError> errors;
 
+	public List<ImportReturnApplyDtlError> getErrors() {
+		return errors;
+	}
+
+	public void setErrors(List<ImportReturnApplyDtlError> errors) {
+		this.errors = errors;
+	}
+	
+	
+
 }
