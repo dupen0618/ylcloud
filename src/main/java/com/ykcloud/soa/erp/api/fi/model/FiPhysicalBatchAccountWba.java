@@ -60,6 +60,7 @@ public class FiPhysicalBatchAccountWba implements Serializable {
     private Double costAmount;
 	private Double taxRate;
 	private Long departNumId;
+	private Long crossSubCompanySign;
 
 	public String getSeries() {
 		return series;
@@ -384,5 +385,13 @@ public class FiPhysicalBatchAccountWba implements Serializable {
 
     public Long getDepartNumId() {
         return departNumId;
+    }
+
+    public Long getCrossSubCompanySign() {
+        return crossSubCompanySign;
+    }
+
+    public void setCrossSubCompanySign(Long crossSubCompanySign) {
+        this.crossSubCompanySign = crossSubCompanySign;
     }
 }
