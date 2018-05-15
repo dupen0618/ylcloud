@@ -175,21 +175,21 @@ public interface WmShipService {
 		 * @date 2018/5/4 17:48
 		 * @description wm根据托盘标记获取托盘必需是封箱状态（status_num_id = 2）
 		 */
-		 WmBlShipContainerHrdResponse getContainerWithStatus(WmBlShipContainerHrdRequest request);
+		public WmBlShipContainerHrdResponse getContainerWithStatus(WmBlShipContainerHrdRequest request);
 
 		 /**
 		  * @author alfred
 		  * @date 2018/5/5 9:55
 		  * @description 扫描条形码获取对应商品托盘信息
 		  */
-		 WmBlContainerDtlResponse getContainerDtlByItem(WmBlContainerDtlRequest request);
+		public WmBlContainerDtlResponse getContainerDtlByItem(WmBlContainerDtlRequest request);
 
 		 /**
 		  * @author alfred
 		  * @date 2018/5/5 10:13
 		  * @description 更新托盘复核状态为复核完成
 		  */
-		 WmShipDtlScanStatusResponse updateContainerHdrStatus(WmShipDtlScanStatusRequest request);
+		public WmShipDtlScanStatusResponse updateContainerHdrStatus(WmShipDtlScanStatusRequest request);
 
 
 }
