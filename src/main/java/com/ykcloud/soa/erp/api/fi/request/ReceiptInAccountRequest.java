@@ -23,6 +23,8 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
 
 	Long balaFuncId;
 
+    private Long crossSubCompanySign;
+
     public String getTypeNumId() {
         return typeNumId;
     }
@@ -53,5 +55,13 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
 
     public void setBillTypeNumId(String billTypeNumId) {
         this.billTypeNumId = billTypeNumId;
+    }
+
+    public void setCrossSubCompanySign(Long crossSubCompanySign) {
+        this.crossSubCompanySign = crossSubCompanySign;
+    }
+
+    public Long getCrossSubCompanySign() {
+        return crossSubCompanySign;
     }
 }
