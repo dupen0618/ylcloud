@@ -11,7 +11,7 @@ public class WmBlContainerDtlRequest extends AbstractRequest
     @NotNull(message = "门店ID不能为空! ")
     private Long subUnitNumId;
 
-    @NotNull(message = "托盘标识符不能为空! ")
+    @NotNull(message = "托盘码不能为空! ")
     private String containerSerlno;
 
     @NotNull(message = "商品条码不能为空！")
