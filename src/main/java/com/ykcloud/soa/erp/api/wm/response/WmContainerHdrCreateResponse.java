@@ -9,7 +9,7 @@ public class WmContainerHdrCreateResponse extends MessagePack {
 	private String containerSerlno;
 	
 	//托盘标识
-	private String contianerLabserlno;
+	private String containerLabserlno;
 	
 
 	public String getContainerSerlno() {
@@ -20,13 +20,15 @@ public class WmContainerHdrCreateResponse extends MessagePack {
 		this.containerSerlno = containerSerlno;
 	}
 
-	public String getContianerLabserlno() {
-		return contianerLabserlno;
+	public String getContainerLabserlno() {
+		return containerLabserlno;
 	}
 
-	public void setContianerLabserlno(String contianerLabserlno) {
-		this.contianerLabserlno = contianerLabserlno;
+	public void setContainerLabserlno(String containerLabserlno) {
+		this.containerLabserlno = containerLabserlno;
 	}
+
+	
 	
 	
 	
