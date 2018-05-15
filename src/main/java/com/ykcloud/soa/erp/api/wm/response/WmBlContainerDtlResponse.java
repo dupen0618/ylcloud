@@ -18,7 +18,7 @@ public class WmBlContainerDtlResponse extends MessagePack
     //托盘实物标签
     private String containerSerlnoLabel;
     //托盘商品装箱数量
-    private Double containerProductPackingQt;
+    private Double containerProductPackingQty;
     //托盘装箱数量
     private Double containerPackingQty;
     //托盘商品复核数量
@@ -86,14 +86,14 @@ public class WmBlContainerDtlResponse extends MessagePack
         this.containerSerlnoLabel = containerSerlnoLabel;
     }
 
-    public Double getContainerProductPackingQt()
+    public Double getContainerProductPackingQty()
     {
-        return containerProductPackingQt;
+        return containerProductPackingQty;
     }
 
-    public void setContainerProductPackingQt(Double containerProductPackingQt)
+    public void setContainerProductPackingQty(Double containerProductPackingQty)
     {
-        this.containerProductPackingQt = containerProductPackingQt;
+        this.containerProductPackingQty = containerProductPackingQty;
     }
 
     public Double getContainerPackingQty()
