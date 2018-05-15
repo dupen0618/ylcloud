@@ -166,4 +166,13 @@ public interface WmReceiptService {
 	 * @return
 	 */
 	public ProductByBarcodeForReceiptGetResponse getProductByBarcode(ProductByBarcodeForReceiptGetRequest  productByBarcodeGetRequest);
+	/**
+	 * 
+	 * @description  使用顺序消息测试收货完成接口
+	 * @author gaoyun.shen
+	 * @date: 2018年5月14日 上午10:52:19
+	 * @param 
+	 * @return
+	 */
+	public ReceiptFinishRsponse finishReceiptWithOrderFlowMessage(ReceiptFinishRequest request);
 }
