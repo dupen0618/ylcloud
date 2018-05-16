@@ -97,5 +97,4 @@ public class ProductByBarcodeForReceiptGetResponse extends MessagePack {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
 }

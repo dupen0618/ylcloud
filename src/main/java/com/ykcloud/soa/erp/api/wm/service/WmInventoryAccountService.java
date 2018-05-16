@@ -19,6 +19,16 @@ public interface WmInventoryAccountService {
 	 */
 	public ReceiptInventoryAccountUpdateResponse updateReceiptInventoryAccount(ReceiptInventoryAccountUpdateRequest request);
 	
+	/**
+	 * 
+	 * @description 收货完成，处理可用库存和批次，采用顺序消息
+	 * @author gaoyun.shen
+	 * @date: 2018年5月14日 下午3:56:01
+	 * @param 
+	 * @return
+	 */
+	public ReceiptInventoryAccountUpdateResponse updateReceiptInventoryAccountWithOrderFlowMessage(ReceiptInventoryAccountUpdateRequest request);
+	
 	
 	/**
 	 *@Description: 仓库收货,业务帐处理   ;在验收单验收复核完成后,通过消息调用触发  不带TCC

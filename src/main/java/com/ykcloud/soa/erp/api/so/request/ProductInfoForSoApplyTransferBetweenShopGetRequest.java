@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
@@ -35,8 +36,22 @@ public class ProductInfoForSoApplyTransferBetweenShopGetRequest extends Abstract
 	@NotEmpty(message = "调商品编号或条码不能为空!")
 	private String barcode;
 	
+	/**
+	 * 默认1
+	 */
+	@ApiField(description = "1:item_num_id, 2:itemid, 3:barcode")
+	private Long itemNumberType;
+	
 	@NotNull(message = "单头指定存储方式不能为空!")
 	private Long storeType;
+
+	public Long getItemNumberType() {
+		return itemNumberType;
+	}
+
+	public void setItemNumberType(Long itemNumberType) {
+		this.itemNumberType = itemNumberType;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;

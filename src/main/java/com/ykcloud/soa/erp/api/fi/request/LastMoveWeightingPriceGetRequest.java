@@ -4,6 +4,8 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
+import java.util.Date;
+
 /**
  * @ClassName: LastMoveWeightingCostPriceGetRequest.java
  * @Description: 取最新移动加权成本request
@@ -21,6 +23,9 @@ public class LastMoveWeightingPriceGetRequest extends AbstractRequest {
 	@NotNull(message = "商品编号不能为空！")
 	private Long itemNumId;
 
+	@NotNull
+	private Date balanceDate;
+
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
@@ -37,4 +42,11 @@ public class LastMoveWeightingPriceGetRequest extends AbstractRequest {
 		this.itemNumId = itemNumId;
 	}
 
+	public Date getBalanceDate() {
+		return balanceDate;
+	}
+
+	public void setBalanceDate(Date balanceDate) {
+		this.balanceDate = balanceDate;
+	}
 }

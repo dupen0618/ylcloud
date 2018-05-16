@@ -89,6 +89,10 @@ public class EX_ARC_BALA_FUNC_DAILY_PHWBA {
 
     private Date CREATE_DTME;//创建时间(0:无变化 1：增加 2：扣减)
 
+    private Long CHECK_LOSS_QTY_sign;//盘亏数量
+
+    private Long CHECK_RISE_QTY_sign;//盘盈数量
+
     public Long getSERIES() {
         return SERIES;
     }
@@ -415,5 +419,21 @@ public class EX_ARC_BALA_FUNC_DAILY_PHWBA {
 
     public void setONLINE_SHIP_QTY_SIGN(Long ONLINE_SHIP_QTY_SIGN) {
         this.ONLINE_SHIP_QTY_SIGN = ONLINE_SHIP_QTY_SIGN;
+    }
+
+    public Long getCHECK_LOSS_QTY_sign() {
+        return CHECK_LOSS_QTY_sign;
+    }
+
+    public void setCHECK_LOSS_QTY_sign(Long CHECK_LOSS_QTY_sign) {
+        this.CHECK_LOSS_QTY_sign = CHECK_LOSS_QTY_sign;
+    }
+
+    public Long getCHECK_RISE_QTY_sign() {
+        return CHECK_RISE_QTY_sign;
+    }
+
+    public void setCHECK_RISE_QTY_sign(Long CHECK_RISE_QTY_sign) {
+        this.CHECK_RISE_QTY_sign = CHECK_RISE_QTY_sign;
     }
 }

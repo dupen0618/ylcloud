@@ -11,6 +11,7 @@ import com.ykcloud.soa.erp.api.wm.request.SupBlanceDtlByReceiptBatchDtlSeriesGet
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptForCancelExpirePoDeleteRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrForCancelExpirePoGetRequest;
@@ -38,6 +39,7 @@ import com.ykcloud.soa.erp.api.wm.response.SupBlanceDtlByReceiptBatchDtlSeriesGe
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptForCancelExpirePoDeleteResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrForCancelExpirePoGetResponse;
@@ -56,6 +58,13 @@ import com.ykcloud.soa.erp.api.wm.response.UpdateReceiptAccountFinishResponse;
 
 public interface WmReceiptService {
 	
+	/**
+	 * 删除超时作废的验收单
+	 * @author tz.x
+	 * @date 2018年5月12日上午9:27:57
+	 */
+	public ReceiptForCancelExpirePoDeleteResponse deleteReceiptForCancelExpirePo(ReceiptForCancelExpirePoDeleteRequest request);
+
 	/**
 	 * 根据验收单号查询单据状态
 	 * @author tz.x
@@ -171,19 +180,29 @@ public interface WmReceiptService {
 	 * @return
 	 */
 	public ProductByBarcodeForReceiptGetResponse getProductByBarcode(ProductByBarcodeForReceiptGetRequest  productByBarcodeGetRequest);
+	/**
+	 *
+	 * @description  使用顺序消息测试收货完成接口
+	 * @author gaoyun.shen
+	 * @date: 2018年5月14日 上午10:52:19
+	 * @param
+	 * @return
+	 */
+	public ReceiptFinishRsponse finishReceiptWithOrderFlowMessage(ReceiptFinishRequest request);
 
-	//验收入库获取可结算数据
-	public ReciptListForGenerateBalanceGetResponse getReciptListForGenerateBalance(ReciptListForGenerateBalanceGetRequest request);
+    //验收入库获取可结算数据
+    public ReciptListForGenerateBalanceGetResponse getReciptListForGenerateBalance(ReciptListForGenerateBalanceGetRequest request);
     //修改验收入库批次表体状态
-	public ReceiptBatchDtlStatusNumIdUpdateResponse updateReceiptBatchDtlStatusNumId(ReceiptBatchDtlStatusNumIdUpdateRequest request);
-	//修改验收入库表头状态
-	public ReceiptHdrStatusNumIdUpdateResponse updateReceiptHdrStatusNumId(ReceiptHdrStatusNumIdUpdateRequest request);
+    public ReceiptBatchDtlStatusNumIdUpdateResponse updateReceiptBatchDtlStatusNumId(ReceiptBatchDtlStatusNumIdUpdateRequest request);
+    //修改验收入库表头状态
+    public ReceiptHdrStatusNumIdUpdateResponse updateReceiptHdrStatusNumId(ReceiptHdrStatusNumIdUpdateRequest request);
     //根据验收入库批次行号
-	public SupBlanceDtlByReceiptBatchDtlSeriesGetResponse getSupBlanceDtlByReceiptBatchDtlSeries(SupBlanceDtlByReceiptBatchDtlSeriesGetRequest request);
-	//查询行号等信息
-	public ReceiptBatchDtlSeriesForRegenerateReceiptGetResponse getReceiptBatchDtlSeriesForRegenerateReceipt(ReceiptBatchDtlSeriesForRegenerateReceiptGetRequest request);
-	//查询没有结算的数量
-	public ReceiptBatchDtlNotBalanceCountGetResponse getReceiptBatchDtlNotBalanceCount(ReceiptBatchDtlNotBalanceCountGetRequest request);
-	//购销没有结算的供应商
-	public SupplyUnitNumIdForPurchaseSaleGetResponse getSupplyUnitNumIdForPurchaseSale(SupplyUnitNumIdForPurchaseSaleGetRequest request);
+    public SupBlanceDtlByReceiptBatchDtlSeriesGetResponse getSupBlanceDtlByReceiptBatchDtlSeries(SupBlanceDtlByReceiptBatchDtlSeriesGetRequest request);
+    //查询行号等信息
+    public ReceiptBatchDtlSeriesForRegenerateReceiptGetResponse getReceiptBatchDtlSeriesForRegenerateReceipt(ReceiptBatchDtlSeriesForRegenerateReceiptGetRequest request);
+    //查询没有结算的数量
+    public ReceiptBatchDtlNotBalanceCountGetResponse getReceiptBatchDtlNotBalanceCount(ReceiptBatchDtlNotBalanceCountGetRequest request);
+    //购销没有结算的供应商
+    public SupplyUnitNumIdForPurchaseSaleGetResponse getSupplyUnitNumIdForPurchaseSale(SupplyUnitNumIdForPurchaseSaleGetRequest request);
+
 }

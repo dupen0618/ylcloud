@@ -5,7 +5,6 @@ import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlAndApplyDtlForGenerateDist
 import com.ykcloud.soa.erp.api.scm.request.ApprovalDtlsForGenerateDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalHdrForGenerateDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderActualQtyUpdateRequest;
-import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnStorageAndProductForGenerateReturnSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalStatusNumIdAndSoNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.DistributionApprovalOrderByBuyerAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.DistributionProductInfoGetRequest;
@@ -21,7 +20,6 @@ import com.ykcloud.soa.erp.api.scm.response.DistributionApprovalOrderByBuyerAudi
 import com.ykcloud.soa.erp.api.scm.response.DistributionProductInfoGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.InventoryForDistributionApprovalLockResponse;
 import com.ykcloud.soa.erp.api.scm.response.QtyForDistributionApprovalOrderCheckResponse;
-
 
 
 public interface ScmDistributionService {

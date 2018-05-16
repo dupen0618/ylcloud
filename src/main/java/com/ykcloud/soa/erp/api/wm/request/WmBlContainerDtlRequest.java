@@ -11,8 +11,8 @@ public class WmBlContainerDtlRequest extends AbstractRequest
     @NotNull(message = "门店ID不能为空! ")
     private Long subUnitNumId;
 
-    @NotNull(message = "托盘标识符不能为空! ")
-    private String containererlno;
+    @NotNull(message = "托盘码不能为空! ")
+    private String containerSerlno;
 
     @NotNull(message = "商品条码不能为空！")
     private String barcode;
@@ -27,14 +27,19 @@ public class WmBlContainerDtlRequest extends AbstractRequest
         this.subUnitNumId = subUnitNumId;
     }
 
-    public String getContainererlno()
+    public static long getSerialVersionUID()
     {
-        return containererlno;
+        return serialVersionUID;
     }
 
-    public void setContainererlno(String containererlno)
+    public String getContainerSerlno()
     {
-        this.containererlno = containererlno;
+        return containerSerlno;
+    }
+
+    public void setContainerSerlno(String containerSerlno)
+    {
+        this.containerSerlno = containerSerlno;
     }
 
     public String getBarcode()
