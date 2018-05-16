@@ -10,11 +10,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  * @author Song
  * @Date 2018年4月17日 下午1:05:21
  */
-public class WmSellDaily  implements Serializable {
+public class SupBalanceDtl implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
-    private Long tenantNumId;
     /**
      * 行号
      */
@@ -29,6 +27,10 @@ public class WmSellDaily  implements Serializable {
      * 业务类型
      */
     private Long typeNumId;
+	/**
+	 * 业务类型名称
+	 */
+	private String typeName;
 
     /**
      * 业务日期
@@ -45,8 +47,13 @@ public class WmSellDaily  implements Serializable {
      * 商品中心（部门）
      */
     private Long divNumId;
+	/**
+	 * 商品中心（部门）名称
+	 */
+	private String divName;
 
-    /**
+
+	/**
      * 商品条码
      */
     private String barcode;
@@ -60,6 +67,10 @@ public class WmSellDaily  implements Serializable {
      * 产地
      */
     private Long productOriginNumId;
+	/**
+	 * 产地名称
+	 */
+	private String productOriginName;
 
     /**
      * 件装单位
@@ -117,25 +128,9 @@ public class WmSellDaily  implements Serializable {
     private Long carrySign;
 
     /**
-     * 生产或测试标识
-     */
-    private Long dataSign;
-
-    /**
      * 商品商家编码
      */
     private String itemid;
-    
-    /**
-     * 业务日期
-     */
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date orderDate;
-    
-    /**
-     * 结算金额
-     */
-    private Double totalAmount;
 
     /**
      *原价格
@@ -146,17 +141,25 @@ public class WmSellDaily  implements Serializable {
      *结算方式
      */
     private  Long  settlementType;
-    
-    private Long subUnitNumId;
-    
 
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
+	private Date orderDate;
+	/**
+	 * 门店
+	 */
+	private Long subUnitNumId;
+	/**
+	 * 门店名称
+	 */
+	private String unitName;
+	/**
+	 * 单据类型
+	 */
+	private Long reservedTypeNumId;
+	/**
+	 * 单据类型名字
+	 */
+	private String reservedTypeNumIdName;
 
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
-	}
 
 	public String getSeries() {
 		return series;
@@ -166,13 +169,6 @@ public class WmSellDaily  implements Serializable {
 		this.series = series;
 	}
 
-	public Long getTenantNumId() {
-		return tenantNumId;
-	}
-
-	public void setTenantNumId(Long tenantNumId) {
-		this.tenantNumId = tenantNumId;
-	}
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -326,36 +322,12 @@ public class WmSellDaily  implements Serializable {
 		this.carrySign = carrySign;
 	}
 
-	public Long getDataSign() {
-		return dataSign;
-	}
-
-	public void setDataSign(Long dataSign) {
-		this.dataSign = dataSign;
-	}
-
 	public String getItemid() {
 		return itemid;
 	}
 
 	public void setItemid(String itemid) {
 		this.itemid = itemid;
-	}
-
-	public Date getOrderDate() {
-		return orderDate;
-	}
-
-	public void setOrderDate(Date orderDate) {
-		this.orderDate = orderDate;
-	}
-
-	public Double getTotalAmount() {
-		return totalAmount;
-	}
-
-	public void setTotalAmount(Double totalAmount) {
-		this.totalAmount = totalAmount;
 	}
 
 	public Double getRetailPrice() {
@@ -374,4 +346,67 @@ public class WmSellDaily  implements Serializable {
 		this.settlementType = settlementType;
 	}
 
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public String getTypeName() {
+		return typeName;
+	}
+
+	public void setTypeName(String typeName) {
+		this.typeName = typeName;
+	}
+
+	public String getDivName() {
+		return divName;
+	}
+
+	public void setDivName(String divName) {
+		this.divName = divName;
+	}
+
+	public String getProductOriginName() {
+		return productOriginName;
+	}
+
+	public void setProductOriginName(String productOriginName) {
+		this.productOriginName = productOriginName;
+	}
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
+
+	public String getUnitName() {
+		return unitName;
+	}
+
+	public void setUnitName(String unitName) {
+		this.unitName = unitName;
+	}
+
+	public Long getReservedTypeNumId() {
+		return reservedTypeNumId;
+	}
+
+	public void setReservedTypeNumId(Long reservedTypeNumId) {
+		this.reservedTypeNumId = reservedTypeNumId;
+	}
+
+	public String getReservedTypeNumIdName() {
+		return reservedTypeNumIdName;
+	}
+
+	public void setReservedTypeNumIdName(String reservedTypeNumIdName) {
+		this.reservedTypeNumIdName = reservedTypeNumIdName;
+	}
 }

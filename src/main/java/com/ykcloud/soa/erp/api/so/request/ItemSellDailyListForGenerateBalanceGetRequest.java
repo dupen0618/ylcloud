@@ -1,13 +1,12 @@
-package com.ykcloud.soa.erp.api.wm.request;
-
-import java.util.Date;
-
-import javax.validation.constraints.NotNull;
+package com.ykcloud.soa.erp.api.so.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class ReceiptForFiGetRequest extends AbstractRequest {
+import javax.validation.constraints.NotNull;
+import java.util.Date;
+
+public class ItemSellDailyListForGenerateBalanceGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = -1455476110754112096L;
 
