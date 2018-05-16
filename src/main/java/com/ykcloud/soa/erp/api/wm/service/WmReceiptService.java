@@ -9,6 +9,7 @@ import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForCancelExpirePoDeleteRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrAfterGenerateSoUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrForCancelExpirePoGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrFuzzyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptProduceDateUpdateRequest;
@@ -30,6 +31,7 @@ import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForCancelExpirePoDeleteResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrAfterGenerateSoUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrForCancelExpirePoGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrFuzzyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptProduceDateUpdateResponse;
@@ -43,6 +45,13 @@ import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse
 import com.ykcloud.soa.erp.api.wm.response.UpdateReceiptAccountFinishResponse;
 
 public interface WmReceiptService {
+	
+	/**
+	 * 产生分拨单后回写验收单状态为2 供应商已确认
+	 * @author tz.x
+	 * @date 2018年5月16日上午10:14:01
+	 */
+	public ReceiptHdrAfterGenerateSoUpdateResponse updateReceiptHdrStatusAfterGenerateSo(ReceiptHdrAfterGenerateSoUpdateRequest request);
 	
 	/**
 	 * 删除超时作废的验收单
