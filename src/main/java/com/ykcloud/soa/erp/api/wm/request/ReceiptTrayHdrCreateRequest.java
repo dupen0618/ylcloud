@@ -17,21 +17,13 @@ public class ReceiptTrayHdrCreateRequest extends AbstractUserSessionRequest {
 	//托盘实物标签号
 	private String traySerlnoLabel;
 	
-	//忽略检查标识
-	private Long ignoreCheckSign;//忽略PC检查标识value {1 :忽略检查 ,0 or null :不忽略检查}
+	@NotNull(message = "RF标识不能为空！")
+	private Long isRf;//O是RF 1是PC
 	
 	//门店编号
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 
-	
-	public Long getIgnoreCheckSign() {
-		return ignoreCheckSign;
-	}
-
-	public void setIgnoreCheckSign(Long ignoreCheckSign) {
-		this.ignoreCheckSign = ignoreCheckSign;
-	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -56,4 +48,13 @@ public class ReceiptTrayHdrCreateRequest extends AbstractUserSessionRequest {
 	public void setTraySerlnoLabel(String traySerlnoLabel) {
 		this.traySerlnoLabel = traySerlnoLabel;
 	}
+
+	public Long getIsRf() {
+		return isRf;
+	}
+
+	public void setIsRf(Long isRf) {
+		this.isRf = isRf;
+	}
+	
 }
