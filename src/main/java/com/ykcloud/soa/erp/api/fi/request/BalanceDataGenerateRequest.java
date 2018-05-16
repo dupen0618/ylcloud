@@ -10,7 +10,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
  * @author Ali
  * @Date 2018年4月4日 下午1:47:35
  */
-public class SupplyByBalanceDataGetRequest extends AbstractUserSessionRequest {
+public class BalanceDataGenerateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 4627685577873375711L;
 

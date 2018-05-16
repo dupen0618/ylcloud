@@ -14,17 +14,6 @@ import com.ykcloud.soa.erp.api.wm.response.SellDailySeriesUpdateResponse;
  * @Date 2018年4月2日 下午4:33:39
  */
 public interface WmSellDailyService {
-	//根据结算方式，查询在指定日期内未结算的销售日报
-	public SellDailyGetResponse getSubBlanceDtlInfoBySellDaily(SellDailyGetRequest request);
-
-	//查询指定销售日报
-	public SellDailyGetResponse getSubBlanceDtlInfoBySeries(SellDailyBySeriesGetRequest request);
-
-	//查询指定销售日报的行号
-	public SellDailyGetResponse getSellDailyInfo(SeriesBySellDailyGetRequest request);
-
-	//修改销售日报结算状态
-	public SellDailySeriesUpdateResponse updateStatusNumId(SellDailyUpdateRequest request);
 
 	public DataFromTmlGenerateResponse generateDataFromTml(DataFromTmlGenerateRequest request);
 

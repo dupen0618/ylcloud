@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
  * @Author: ALi
  * @Date: 2018/4/19 18:24
  */
-public class VoucherAndAccSubjectRequest extends AbstractUserSessionRequest {
+public class AccSubjectBceGeneratRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = 4627685577873375711L;
 
     @NotNull(message = "凭证单号不能为空！")
@@ -22,6 +22,8 @@ public class VoucherAndAccSubjectRequest extends AbstractUserSessionRequest {
     private String reservedNo;
     @NotNull(message = "业务类型不能为空！")
     private Long billTypeNumId;
+    @NotNull(message = "门店不能为空！")
+    private Long subUnitNumId;
 
     public String getVoucherNumId() {
         return voucherNumId;
@@ -61,5 +63,13 @@ public class VoucherAndAccSubjectRequest extends AbstractUserSessionRequest {
 
     public void setBillTypeNumId(Long billTypeNumId) {
         this.billTypeNumId = billTypeNumId;
+    }
+
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
     }
 }

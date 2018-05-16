@@ -7,6 +7,6 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @Author: ALi
  * @Date: 2018/4/19 18:24
  */
-public class VoucherAndAccSubjectResponse extends MessagePack {
+public class AccSubjectBceGeneratResponse extends MessagePack {
     private static final long serialVersionUID = -3725506062937780824L;
 }

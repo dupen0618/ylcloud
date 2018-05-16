@@ -10,7 +10,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  * @author ALI
  * @Date 2018年4月4日 下午3:06:50
  */
-public class ReceiptDtilsForCanBalanceGetRequest extends AbstractRequest {
+public class NotBalanceGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = -5126554109130183317L;
 

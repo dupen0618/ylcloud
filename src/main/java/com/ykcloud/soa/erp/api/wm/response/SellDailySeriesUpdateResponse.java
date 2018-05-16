@@ -1,9 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.wm.model.WmSellDaily;
-
-import java.util.List;
 
 /**
  * @Description: 销售日报出库修改出参

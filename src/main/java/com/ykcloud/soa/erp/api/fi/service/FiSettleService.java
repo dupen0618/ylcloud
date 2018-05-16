@@ -2,25 +2,25 @@ package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDtlByDeductionGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceDtlByReceiptGenerateRequest;
+import com.ykcloud.soa.erp.api.fi.request.AppointBalanceDtlGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BillAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.DeductionDtlForBalanceDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.DeductionForCanBalanceGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.PaymentAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.ProductDtlForBalanceDeleteRequest;
-import com.ykcloud.soa.erp.api.fi.request.ReceiptDtilsForCanBalanceGetRequest;
-import com.ykcloud.soa.erp.api.fi.request.SupplyByBalanceDataGetRequest;
+import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDtlDeleteRequest;
+import com.ykcloud.soa.erp.api.fi.request.NotBalanceGetRequest;
+import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.SupplyByBalanceDeductionFlushRequest;
 import com.ykcloud.soa.erp.api.fi.response.BalanceAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDtlByDeductionGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceDtlByReceiptGenerateResponse;
+import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BillAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.DeductionDtlForBalanceDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.DeductionForCanBalanceGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.PaymentAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.ProductDtlForBalanceDeleteResponse;
-import com.ykcloud.soa.erp.api.fi.response.ReceiptDtilsForCanBalanceGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.SupplyByBalanceDataGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
+import com.ykcloud.soa.erp.api.fi.response.NotBalanceGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.SupplyByBalanceDeductionFlushResponse;
 
 /**
@@ -31,25 +31,25 @@ import com.ykcloud.soa.erp.api.fi.response.SupplyByBalanceDeductionFlushResponse
 public interface FiSettleService {
 
 	//取结算数据
-	public SupplyByBalanceDataGetResponse getBalanceData(SupplyByBalanceDataGetRequest request);
+	public BalanceDataGenerateResponse generateBalanceData(BalanceDataGenerateRequest request);
 	
 	//刷新扣款项
-	public SupplyByBalanceDeductionFlushResponse flushDeduction(SupplyByBalanceDeductionFlushRequest request);
+	public SupplyByBalanceDeductionFlushResponse flushBalanceDeduction(SupplyByBalanceDeductionFlushRequest request);
 	
-	//获取可结算验收入库明细
-	public ReceiptDtilsForCanBalanceGetResponse getReceiptDtilsForBalance(ReceiptDtilsForCanBalanceGetRequest request);
+	//获取没有结算的数据
+	public NotBalanceGetResponse getNotBalance(NotBalanceGetRequest request);
 	
 	//获取可结算扣款项明细
 	public DeductionForCanBalanceGetResponse getDeductionForBalance(DeductionForCanBalanceGetRequest request);
 	
 	//选择指定验收入库单明细项目生成结算明细
-	public BalanceDtlByReceiptGenerateResponse generateBalanceDtlByReceipt(BalanceDtlByReceiptGenerateRequest request);
+	public AppointBalanceDtlGenerateResponse generateAppointBalanceDtl(AppointBalanceDtlGenerateRequest request);
 	
 	//选择指定扣款项明细项目生成结算明细
 	public BalanceDtlByDeductionGenerateResponse generateBalanceDtlByDeduction(BalanceDtlByDeductionGenerateRequest request);
 	
 	//删除结算单商品明细中的指定项目
-	public ProductDtlForBalanceDeleteResponse deleteProductDtlForBalance(ProductDtlForBalanceDeleteRequest request);
+	public AppointForSupBalanceDtlDeleteResponse deleteAppointForSupBalanceDtl(AppointForSupBalanceDtlDeleteRequest request);
 	
 	//删除结算单扣款明细中的指定项目
 	public DeductionDtlForBalanceDeleteResponse deleteDeductionDtlForBalance(DeductionDtlForBalanceDeleteRequest request);

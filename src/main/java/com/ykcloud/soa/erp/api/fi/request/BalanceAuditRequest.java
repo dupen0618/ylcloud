@@ -15,6 +15,8 @@ public class BalanceAuditRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = -1766553622327456524L;
 	@NotNull(message = "结算单号不能为空！")
 	private List<String> balanceNo;
+	@NotNull(message = "门店编号不能为空！")
+	private Long subUnitNumId;
 
 	public List<String> getBalanceNo() {
 		return balanceNo;
@@ -22,5 +24,13 @@ public class BalanceAuditRequest extends AbstractUserSessionRequest {
 
 	public void setBalanceNo(List<String> balanceNo) {
 		this.balanceNo = balanceNo;
+	}
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
 	}
 }

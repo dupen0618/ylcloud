@@ -7,7 +7,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @author Song
  * @Date 2018年4月4日 下午5:14:12
  */
-public class ProductDtlForBalanceDeleteResponse extends MessagePack{
+public class AppointForSupBalanceDtlDeleteResponse extends MessagePack{
 
 	private static final long serialVersionUID = -3686092104024714370L;
 

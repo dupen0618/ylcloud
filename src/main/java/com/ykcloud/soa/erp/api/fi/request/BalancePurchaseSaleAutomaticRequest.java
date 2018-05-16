@@ -11,7 +11,7 @@ import java.util.Date;
  * @Author: ALi
  * @Date: 2018/4/23 15:09
  */
-public class AutomaticBalanceRequest extends AbstractUserSessionRequest {
+public class BalancePurchaseSaleAutomaticRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = -1766553622327456524L;
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     @NotNull(message = "结算日期不能为空！")

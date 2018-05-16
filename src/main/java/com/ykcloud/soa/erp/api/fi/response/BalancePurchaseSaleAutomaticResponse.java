@@ -7,6 +7,6 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @Author: ALi
  * @Date: 2018/4/23 15:25
  */
-public class AutomaticBalanceResponse extends MessagePack {
+public class BalancePurchaseSaleAutomaticResponse extends MessagePack {
     private static final long serialVersionUID = 1877305700555819324L;
 }
