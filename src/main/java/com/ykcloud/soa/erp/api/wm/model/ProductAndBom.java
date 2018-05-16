@@ -37,7 +37,7 @@ public class ProductAndBom implements Serializable {
     private Long typeNumId;// 商品类型 1:正常品 2:母商品 3:子商品 4:销售码 5:虚拟商品
     private Long freshType;// 生鲜属性 0=正常商品 1=普通生鲜 2=原材料 3=转化成品 4=分割成品 5=组合成品 6=加工成品 7=生鲜耗材
     private String bomNumId;
-
+    private String bomName;
     public Long getItemNumId() {
         return itemNumId;
     }
@@ -270,4 +270,11 @@ public class ProductAndBom implements Serializable {
         this.bomNumId = bomNumId;
     }
 
+    public String getBomName() {
+        return bomName;
+    }
+
+    public void setBomName(String bomName) {
+        this.bomName = bomName;
+    }
 }
