@@ -4,8 +4,6 @@ import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
-import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
  * 
@@ -34,10 +32,6 @@ public class ProductByBarcodeForReceiptGetRequest extends AbstractRequest {
 	@ApiField(description = "商品条码") 
 	@NotNull(message="商品条码不能为空!")
 	private String barcode;
-
-	
-
-
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -70,5 +64,6 @@ public class ProductByBarcodeForReceiptGetRequest extends AbstractRequest {
 	public void setBarcode(String barcode) {
 		this.barcode = barcode;
 	}
+
 
 }
