@@ -1,17 +1,18 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
-import com.ykcloud.soa.erp.api.wm.request.WmCostAdjustRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmCostByAdjustPriceAdjustRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmCostByScmChangeCostRequest;
-import com.ykcloud.soa.erp.api.wm.response.WmCostAdjustResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmCostByAdjustPriceAdjustResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmCostByScmChangeCostResponse;
+import com.ykcloud.soa.erp.api.wm.request.WmCostByCostPriceAdjustRequest;
+import com.ykcloud.soa.erp.api.wm.response.WmCostByCostPriceAdjustResponse;
 
 /**
  * 库存金额调整
  * @author tz.x
  * @date 2018年5月15日下午1:27:48
  */
+
 public interface WmCostAdjustService {
 	
 	/**
@@ -30,4 +31,11 @@ public interface WmCostAdjustService {
 
 
 	
+	
+	/**
+	 * @Description:固定价格调价(批次明细中价格等于CostPrice都需要调整)
+	 * @author Song
+	 * @Date 2018年5月16日 上午11:29:16
+	 */
+	public WmCostByCostPriceAdjustResponse adjustWmCostByCostPrice(WmCostByCostPriceAdjustRequest request);
 }
