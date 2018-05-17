@@ -5,8 +5,6 @@ import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.DataFromTmlGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.NegativeStockBatchAdjustmentResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailyCollectResponse;
-import com.ykcloud.soa.erp.api.wm.response.SellDailyGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.SellDailySeriesUpdateResponse;
 
 /**
  * @Description:零售销售出库日报明细

@@ -3,7 +3,6 @@ package com.ykcloud.soa.erp.api.fi.response;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.fi.model.FiBalance;
 import com.ykcloud.soa.erp.api.wm.model.SupBalanceDtl;
 
 /**

@@ -11,7 +11,6 @@ import javax.validation.constraints.NotNull;
  */
 public class AccSubjectBceGeneratRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = 4627685577873375711L;
-
     @NotNull(message = "凭证单号不能为空！")
     private String voucherNumId;
     @NotNull(message = "原始状态不能为空！")
