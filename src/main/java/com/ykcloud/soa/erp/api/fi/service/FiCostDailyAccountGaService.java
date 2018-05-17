@@ -1,18 +1,24 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.request.CalcSaleGrossProfitRequest;
+import com.ykcloud.soa.erp.api.fi.request.CostAmountAndTaxAmountAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.DailyAndMonthCostAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.LossAmount1AndFinalCostUpdateRequest;
 import com.ykcloud.soa.erp.api.fi.request.VirtualDailyAndMonthCostGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.response.CalcSaleGrossProfitResponse;
+import com.ykcloud.soa.erp.api.fi.response.CostAmountAndTaxAmountAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.DailyAndMonthCostAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.LossAmount1AndFinalCostUpdaterResponse;
 import com.ykcloud.soa.erp.api.fi.request.AccountForSellDetermineInventoryByClassifyNumIdProcessRequest;
 import com.ykcloud.soa.erp.api.fi.request.AccountForStockCheckByClassifyNumIdProcessRequest;
+import com.ykcloud.soa.erp.api.fi.request.BatchAmountAndTaxAmountAdjustRequest;
+import com.ykcloud.soa.erp.api.fi.request.AdjustWeightedAveragePriceRequest;
 import com.ykcloud.soa.erp.api.fi.response.VirtualDailyAndMonthCostGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.request.CarryDownDailyFiRequest;
 import com.ykcloud.soa.erp.api.fi.response.AccountForSellDetermineInventoryByClassifyNumIdProcessResponse;
 import com.ykcloud.soa.erp.api.fi.response.AccountForStockCheckByClassifyNumIdProcessResponse;
+import com.ykcloud.soa.erp.api.fi.response.BatchAmountAndTaxAmountAdjustResponse;
+import com.ykcloud.soa.erp.api.fi.response.AdjustWeightedAveragePriceResponse;
 import com.ykcloud.soa.erp.api.wm.response.CarryDownDailyFiResponse;
 
 /**
@@ -24,6 +30,27 @@ import com.ykcloud.soa.erp.api.wm.response.CarryDownDailyFiResponse;
   *
  */
 public interface FiCostDailyAccountGaService {
+	
+	/**
+	 * 调整商品成本日月进销存
+	 * @author tz.x
+	 * @date 2018年5月16日上午11:24:39
+	 */
+	public CostAmountAndTaxAmountAdjustResponse adjustCostAmountAndTaxAmount(CostAmountAndTaxAmountAdjustRequest request);
+	
+	/**
+	 * 调整加权平均价格
+	 * @author tz.x
+	 * @date 2018年5月16日下午5:02:48
+	 */
+	public AdjustWeightedAveragePriceResponse adjustWeightedAveragePriceResponse(AdjustWeightedAveragePriceRequest request);
+	
+	/**
+	 * 调整批次日进销存 调整金额，调整税金
+	 * @author tz.x
+	 * @date 2018年5月16日上午11:24:39
+	 */
+	public BatchAmountAndTaxAmountAdjustResponse adjustBatchAmountAndTaxAmount(BatchAmountAndTaxAmountAdjustRequest request);
 
 	//更新损耗金额和期末成本
 	public LossAmount1AndFinalCostUpdaterResponse updateLossAmount1AndFinalCost(LossAmount1AndFinalCostUpdateRequest request);
