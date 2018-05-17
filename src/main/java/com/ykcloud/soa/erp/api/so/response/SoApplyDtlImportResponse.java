@@ -8,15 +8,17 @@ import com.ykcloud.soa.erp.api.so.model.ImportSoApplyDtlError;
 public class SoApplyDtlImportResponse extends MessagePack {
 	private static final long serialVersionUID = 1L;
 	
-	private List<ImportSoApplyDtlError> errors; //出错列表
+	private List<ImportSoApplyDtlError> importErrors; //出错列表
 
-	public List<ImportSoApplyDtlError> getErrors() {
-		return errors;
+	public List<ImportSoApplyDtlError> getImportErrors() {
+		return importErrors;
 	}
 
-	public void setErrors(List<ImportSoApplyDtlError> errors) {
-		this.errors = errors;
+	public void setImportErrors(List<ImportSoApplyDtlError> importErrors) {
+		this.importErrors = importErrors;
 	}
+
+	
 	
 	
 	

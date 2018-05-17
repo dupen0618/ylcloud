@@ -47,7 +47,7 @@ public interface ScmReplenishService {
 	//主管批量审核
 	public ReplenishApplyBatchAuditResponse batchAuditReplenishApply(ReplenishApplyBatchAuditRequest request);
 
-	//补货申请单批量导入
+	//补货申请单Excel批量导入
 	public ReplenishApplyDtlImportResponse importReplenishApplyDtl(ReplenishApplyDtlImportRequest request);
 
 }
