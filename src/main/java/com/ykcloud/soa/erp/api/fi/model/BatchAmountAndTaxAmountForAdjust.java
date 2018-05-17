@@ -21,7 +21,7 @@ public class BatchAmountAndTaxAmountForAdjust implements Serializable {
 	private Double adjustAmount;
 	
 	/**
-	 * 整税金
+	 * 调整税金
 	 */
 	private Double adjustTaxAmount;
 	
