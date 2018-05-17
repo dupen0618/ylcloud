@@ -22,6 +22,19 @@ public class BillVoucherGenerateRequest extends AbstractUserSessionRequest {
 		
 		@NotNull(message="单据类型不能为空")
 		private Long billType;     //单据类别
+		
+		@NotNull(message="结算方式不能为空")
+		private Long settlementType;
+		
+		
+
+		public Long getSettlementType() {
+			return settlementType;
+		}
+
+		public void setSettlementType(Long settlementType) {
+			this.settlementType = settlementType;
+		}
 
 		public Long getSubUnitNumId() {
 			return subUnitNumId;
