@@ -34,7 +34,7 @@ public class ImportError implements Serializable {
 	/**
 	 * 出错信息
 	 */
-	private String error;
+	private String importError;
 
 	public Long getOrdSubUnitNumId() {
 		return ordSubUnitNumId;
@@ -68,12 +68,14 @@ public class ImportError implements Serializable {
 		this.barcode = barcode;
 	}
 
-	public String getError() {
-		return error;
+	public String getImportError() {
+		return importError;
 	}
 
-	public void setError(String error) {
-		this.error = error;
+	public void setImportError(String importError) {
+		this.importError = importError;
 	}
+
+	
 
 }
