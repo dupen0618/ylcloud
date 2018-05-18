@@ -59,7 +59,7 @@ public class ScmBlChangeCostAll implements Serializable
     
     private Long ITEM_NUM_ID;//商品主键
 
-    private BigDecimal ORD_COST;//原进价
+    private BigDecimal OLD_COST;//原进价
 
     private BigDecimal NEW_COST;//新进价
 
@@ -307,14 +307,14 @@ public class ScmBlChangeCostAll implements Serializable
         this.ITEM_NUM_ID = ITEM_NUM_ID;
     }
 
-    public BigDecimal getORD_COST()
+    public BigDecimal getOLD_COST()
     {
-        return ORD_COST;
+        return OLD_COST;
     }
 
-    public void setORD_COST(BigDecimal ORD_COST)
+    public void setOLD_COST(BigDecimal OLD_COST)
     {
-        this.ORD_COST = ORD_COST;
+        this.OLD_COST = OLD_COST;
     }
 
     public BigDecimal getNEW_COST()
