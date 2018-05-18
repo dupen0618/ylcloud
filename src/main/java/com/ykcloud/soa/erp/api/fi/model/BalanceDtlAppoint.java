@@ -13,15 +13,15 @@ import java.util.Date;
  */
 public class BalanceDtlAppoint implements Serializable {
     private static final long serialVersionUID = 1L;
-    @NotNull(message = "单据类型不能为空！")
-    private  Long  reservedTypeNumId;//单据类型
-    @NotNull(message = "单据编号不能为空！")
-    private String reservedNo;
     @NotNull(message = "行号不能为空！")
     private String series;
     @NotNull(message = "orderDate日期不能为空！")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date orderDate;
+    @NotNull(message = "单据编号不能为空！")
+    private String reservedNo;
+    @NotNull(message = "单据类型不能为空！")
+    private  Long  reservedTypeNumId;//单据类型
 
     public Long getReservedTypeNumId() {
         return reservedTypeNumId;

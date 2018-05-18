@@ -128,16 +128,6 @@ public class SupBalanceDtl implements Serializable {
      */
     private String itemid;
 
-    /**
-     *原价格
-     */
-    private  Double retailPrice;
-
-    /**
-     *结算方式
-     */
-    private  Long  settlementType;
-
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date orderDate;
 	/**
@@ -317,22 +307,6 @@ public class SupBalanceDtl implements Serializable {
 
 	public void setItemid(String itemid) {
 		this.itemid = itemid;
-	}
-
-	public Double getRetailPrice() {
-		return retailPrice;
-	}
-
-	public void setRetailPrice(Double retailPrice) {
-		this.retailPrice = retailPrice;
-	}
-
-	public Long getSettlementType() {
-		return settlementType;
-	}
-
-	public void setSettlementType(Long settlementType) {
-		this.settlementType = settlementType;
 	}
 
 	public Date getOrderDate() {

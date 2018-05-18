@@ -18,6 +18,16 @@ public class BalanceDataGenerateRequest extends AbstractUserSessionRequest {
 	private Long subUnitNumId;
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+	@NotNull(message = "结算日期不能为空！")
+	private Date balanceDate;
+
+	@NotNull(message = "供应商不能为空！")
+	private Long supplyUnitNumId;
+
+	@NotNull(message = "结算单号不能为空！")
+	private String balanceNo;
+
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private Date startDate;
 
@@ -27,16 +37,6 @@ public class BalanceDataGenerateRequest extends AbstractUserSessionRequest {
 
 	@NotNull(message = "结算方式不能为空！")
 	private Long settlementType;
-
-	@NotNull(message = "供应商不能为空！")
-	private Long supplyUnitNumId;
-
-	@NotNull(message = "结算单号不能为空！")
-	private String balanceNo;
-
-	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-	@NotNull(message = "结算日期不能为空！")
-	private Date balanceDate;
 
 	//结算周期
 	private Long  balaneCYC;

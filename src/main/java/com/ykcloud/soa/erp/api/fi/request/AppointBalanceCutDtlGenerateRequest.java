@@ -18,13 +18,13 @@ public class AppointBalanceCutDtlGenerateRequest extends AbstractUserSessionRequ
 
 	private static final long serialVersionUID = 8338043862824578275L;
 	private List<AppointBalanceCut> appointBalanceCuts;
+	@NotNull(message = "门店不能为空！")
+	private Long subUnitNumId;
 	@NotNull(message = "结算单号不能为空！")
 	private String balanceNo;
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "结算日期不能为空！")
 	private Date balanceDate;
-	@NotNull(message = "门店不能为空！")
-	private Long subUnitNumId;
 
 
 	public List<AppointBalanceCut> getAppointBalanceCuts() {

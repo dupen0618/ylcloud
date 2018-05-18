@@ -17,6 +17,9 @@ public class NotBalanceGetRequest extends AbstractRequest {
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 
+	@NotNull(message = "供应商不能为空！")
+	private Long supplyUnitNumId;
+
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private Date startDate;
@@ -27,9 +30,6 @@ public class NotBalanceGetRequest extends AbstractRequest {
 
 	@NotNull(message = "结算方式不能为空！")
 	private Long settlementType;
-
-	@NotNull(message = "供应商不能为空！")
-	private Long supplyUnitNumId;
 
 	//结算周期
 	private Long  balaneCYC;
