@@ -13,7 +13,7 @@ public class ScmBlChangeCostResponse extends MessagePack
 
     private static final long serialVersionUID = 1L;
 
-    private List<ScmBlChangeCostAll> scmBlChangeCostAllList;//进价调整主表（销售）
+    private List<ScmBlChangeCostAll> scmBlChangeCostAllList;
 
     public List<ScmBlChangeCostAll> getScmBlChangeCostAllList()
     {

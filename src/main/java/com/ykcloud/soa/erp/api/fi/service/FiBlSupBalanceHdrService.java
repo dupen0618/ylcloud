@@ -13,13 +13,6 @@ import com.ykcloud.soa.erp.api.fi.response.SupplyHdrStatusUpdateResponse;
  */
 public interface FiBlSupBalanceHdrService {
 
-	
-	//获得供应商表头行号
-	public SupplyHdrSeriesGetResponse getSupplyHdrSeries(SupplyHdrSeriesGetRequest request);
-	
-	//根据行号修改供应商状态
-	public SupplyHdrStatusUpdateResponse UpdateSupplyHdrStatus(SupplyHdrStatusUpdateRequest request);
-
 	//获取单头
 	FiBlSupBalanceHdr fetchOne(Long tenantNumId, Long dataSign, Long subUnitNumId, Long balaFuncId);
 }

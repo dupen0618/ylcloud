@@ -3,11 +3,13 @@ package com.ykcloud.soa.erp.api.fi.service;
 import com.ykcloud.soa.erp.api.fi.request.CalcSaleGrossProfitRequest;
 import com.ykcloud.soa.erp.api.fi.request.CostAmountAndTaxAmountAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.DailyAndMonthCostAdjustRequest;
+import com.ykcloud.soa.erp.api.fi.request.GoodsMoveWeightingCarryOverRequest;
 import com.ykcloud.soa.erp.api.fi.request.LossAmount1AndFinalCostUpdateRequest;
 import com.ykcloud.soa.erp.api.fi.request.VirtualDailyAndMonthCostGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.response.CalcSaleGrossProfitResponse;
 import com.ykcloud.soa.erp.api.fi.response.CostAmountAndTaxAmountAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.DailyAndMonthCostAdjustResponse;
+import com.ykcloud.soa.erp.api.fi.response.GoodsMoveWeightingCarryOverResponse;
 import com.ykcloud.soa.erp.api.fi.response.LossAmount1AndFinalCostUpdaterResponse;
 import com.ykcloud.soa.erp.api.fi.request.AccountForSellDetermineInventoryByClassifyNumIdProcessRequest;
 import com.ykcloud.soa.erp.api.fi.request.AccountForStockCheckByClassifyNumIdProcessRequest;
@@ -105,4 +107,10 @@ public interface FiCostDailyAccountGaService {
 	*/ 
     VirtualDailyAndMonthCostGenerateResponse addVirtualDailyAndMonthCost(VirtualDailyAndMonthCostGenerateRequest request);
 	
+    /**
+     * 商品移动加权权重表 结转
+     * @param request
+     * @return
+     */
+    GoodsMoveWeightingCarryOverResponse carryOverGoodsMoveWeighting(GoodsMoveWeightingCarryOverRequest request);
 }

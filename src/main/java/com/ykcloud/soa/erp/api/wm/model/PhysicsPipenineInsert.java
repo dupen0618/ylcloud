@@ -9,6 +9,8 @@ import java.util.Date;
 public class PhysicsPipenineInsert implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	private String series;
+
 	private Long tenantNumId;
 
 	private Long subUnitNumId;// 门店
@@ -82,6 +84,15 @@ public class PhysicsPipenineInsert implements Serializable {
 	private Long STORE_TYPE;
 
 	private String ITEMID;
+
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
 
 	public Long getTenantNumId() {
 		return tenantNumId;

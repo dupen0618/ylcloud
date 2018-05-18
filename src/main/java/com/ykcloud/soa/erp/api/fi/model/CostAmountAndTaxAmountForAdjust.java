@@ -13,6 +13,16 @@ public class CostAmountAndTaxAmountForAdjust implements Serializable {
 	private static final long serialVersionUID = -575132236301604824L;
 	
 	/**
+	 * 调整金额
+	 */
+	private Double adjustAmount;
+	
+	/**
+	 * 整税金
+	 */
+	private Double adjustTaxAmount;
+	
+	/**
 	 * 门店
 	 */
 	private Long subUnitNumId;
@@ -31,6 +41,23 @@ public class CostAmountAndTaxAmountForAdjust implements Serializable {
 	 * 批次发生日期
 	 */
 	private Date orderDate;
+
+
+	public Double getAdjustAmount() {
+		return adjustAmount;
+	}
+
+	public void setAdjustAmount(Double adjustAmount) {
+		this.adjustAmount = adjustAmount;
+	}
+
+	public Double getAdjustTaxAmount() {
+		return adjustTaxAmount;
+	}
+
+	public void setAdjustTaxAmount(Double adjustTaxAmount) {
+		this.adjustTaxAmount = adjustTaxAmount;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
