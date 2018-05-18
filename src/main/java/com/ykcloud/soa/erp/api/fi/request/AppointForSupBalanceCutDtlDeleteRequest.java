@@ -16,7 +16,6 @@ import java.util.Date;
 public class AppointForSupBalanceCutDtlDeleteRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 5602269731920270845L;
-
 	@NotNull(message = "行号不能为空！")
 	private String series;
 	@NotNull(message = "门店不能为空！")
@@ -24,6 +23,8 @@ public class AppointForSupBalanceCutDtlDeleteRequest extends AbstractUserSession
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "结算日期不能为空！")
 	private Date balanceDate;
+	@NotNull(message = "结算单号不能为空！")
+	private String balanceNo;
 
 	public String getSeries() {
 		return series;
@@ -47,5 +48,13 @@ public class AppointForSupBalanceCutDtlDeleteRequest extends AbstractUserSession
 
 	public void setBalanceDate(Date balanceDate) {
 		this.balanceDate = balanceDate;
+	}
+
+	public String getBalanceNo() {
+		return balanceNo;
+	}
+
+	public void setBalanceNo(String balanceNo) {
+		this.balanceNo = balanceNo;
 	}
 }

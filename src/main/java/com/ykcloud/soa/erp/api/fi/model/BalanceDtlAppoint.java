@@ -21,7 +21,7 @@ public class BalanceDtlAppoint implements Serializable {
     private String reservedNo;
     @NotNull(message = "行号不能为空！")
     private String series;
-    @NotNull(message = "订货日期不能为空！")
+    @NotNull(message = "orderDate日期不能为空！")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date orderDate;
 

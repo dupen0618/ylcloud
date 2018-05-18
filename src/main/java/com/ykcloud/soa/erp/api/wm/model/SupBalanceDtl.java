@@ -142,6 +142,7 @@ public class SupBalanceDtl implements Serializable {
      */
     private  Long  settlementType;
 
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date orderDate;
 	/**
 	 * 门店

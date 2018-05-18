@@ -1,5 +1,8 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,9 +13,15 @@ import java.util.Date;
  */
 public class AppointBalanceCut implements Serializable {
     private static final long serialVersionUID = 1L;
+    @NotNull(message = "orderDate日期不能为空！")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date orderDate; // 业务日期
+    @NotNull(message = "单据编号不能为空！")
     private String reservedNo;
+    @NotNull(message = "行号不能为空！")
     private String series; // 行号
+    @NotNull(message = "门店不能为空！")
+    private Long subUnitNumId;
 
     public Date getOrderDate() {
         return orderDate;
@@ -36,5 +45,13 @@ public class AppointBalanceCut implements Serializable {
 
     public void setSeries(String series) {
         this.series = series;
+    }
+
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
     }
 }

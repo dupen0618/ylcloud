@@ -44,7 +44,7 @@ public interface FiSettleService {
 	//获取可结算扣款项明细
 	public NotBalanceCutGetResponse getNotBalanceCut(NotBalanceCutGetRequest request);
 	
-	//选择指定验收入库单明细项目生成结算明细
+	//选择指定明细项目生成结算明细
 	public AppointBalanceDtlGenerateResponse generateAppointBalanceDtl(AppointBalanceDtlGenerateRequest request);
 	
 	//选择指定扣款项明细项目生成结算明细
