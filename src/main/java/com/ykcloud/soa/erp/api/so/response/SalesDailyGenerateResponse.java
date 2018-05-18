@@ -8,7 +8,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @date :2018/4/23 - 10:05
  * @version:v1.0
  */
-public class SdBlSoTmlItemSellDailyResponse extends MessagePack {
+public class SalesDailyGenerateResponse extends MessagePack {
 
 
 }

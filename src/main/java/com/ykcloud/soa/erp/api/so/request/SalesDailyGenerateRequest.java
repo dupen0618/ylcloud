@@ -12,7 +12,7 @@ import java.util.Date;
  * @date :2018/4/23 - 10:08
  * @version:v1.0
  */
-public class SdBlSoTmlItemSellDailyRequest extends AbstractUserSessionRequest {
+public class SalesDailyGenerateRequest extends AbstractUserSessionRequest {
 
     /**
      * 销售门店编号
