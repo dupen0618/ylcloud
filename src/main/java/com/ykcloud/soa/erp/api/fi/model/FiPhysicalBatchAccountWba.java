@@ -42,7 +42,6 @@ public class FiPhysicalBatchAccountWba implements Serializable {
     private Double reservedQty;
     private Double tradePrice;
     private Double batchPrice;
-    private Double reservedAmount;
     private Long balanceFunction;
     private Long createUserId;
     private Long lastUpdateUserId;
@@ -258,12 +257,6 @@ public class FiPhysicalBatchAccountWba implements Serializable {
 	}
 	public void setBatchPrice(Double batchPrice) {
 		this.batchPrice = batchPrice;
-	}
-	public Double getReservedAmount() {
-		return reservedAmount;
-	}
-	public void setReservedAmount(Double reservedAmount) {
-		this.reservedAmount = reservedAmount;
 	}
 	public Long getBalanceFunction() {
 		return balanceFunction;
