@@ -10,14 +10,13 @@ import java.util.Date;
 public class PaymentAuditRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = -7738726438426208797L;
-
-	@NotNull(message = "付款单号不能为空！")
-	private String reservedNo;
 	@NotNull(message = "门店不能为空！")
 	private Long subUnitNumId;
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "付款日期不能为空！")
 	private Date payDate;
+	@NotNull(message = "付款单号不能为空！")
+	private String reservedNo;
 	public String getReservedNo() {
 		return reservedNo;
 	}

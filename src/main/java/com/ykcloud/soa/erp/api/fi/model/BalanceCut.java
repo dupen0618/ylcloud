@@ -11,11 +11,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  * @Date 2018年4月4日 下午6:04:35
  */
 public class BalanceCut implements Serializable {
-
 	private static final long serialVersionUID = 1L;
 	private String series; // 行号
 	private Long subUnitNumId; // 门店 分库标识
-	private String unitName;//门店名称
+	private String subUnitName;//门店名称
 	private String reservedNo; // 单据编号 fi_bl_sup_cut_hdr
 	private Long typeNumId; // 业务类型 fi_bl_sup_cut_hdr
 	private String typeName; // 业务类型名字
@@ -29,9 +28,6 @@ public class BalanceCut implements Serializable {
 	private Double cutAmount; // 扣款金额
 	private Double taxRate; // 税率
 	private Double taxAmount; // 税金
-	private Long carrySign; // 结转标识
-	private Long dataSign;
-	private Long tenantNumId;	// 租户编号
 	public String getSeries() {
 		return series;
 	}
@@ -92,35 +88,12 @@ public class BalanceCut implements Serializable {
 	public void setTaxAmount(Double taxAmount) {
 		this.taxAmount = taxAmount;
 	}
-	public Long getCarrySign() {
-		return carrySign;
-	}
-	public void setCarrySign(Long carrySign) {
-		this.carrySign = carrySign;
+	public String getSubUnitName() {
+		return subUnitName;
 	}
 
-	public Long getDataSign() {
-		return dataSign;
-	}
-
-	public void setDataSign(Long dataSign) {
-		this.dataSign = dataSign;
-	}
-
-	public Long getTenantNumId() {
-		return tenantNumId;
-	}
-
-	public void setTenantNumId(Long tenantNumId) {
-		this.tenantNumId = tenantNumId;
-	}
-
-	public String getUnitName() {
-		return unitName;
-	}
-
-	public void setUnitName(String unitName) {
-		this.unitName = unitName;
+	public void setSubUnitName(String subUnitName) {
+		this.subUnitName = subUnitName;
 	}
 
 	public String getTypeName() {
