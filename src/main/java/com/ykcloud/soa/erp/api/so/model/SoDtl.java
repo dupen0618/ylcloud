@@ -102,6 +102,8 @@ public class SoDtl implements Serializable {
 		private Date createDtme;
 		
 		private Date lastUpdtme;
+		
+		private String approvalLine;
 
 		public String getSeries() {
 			return series;
@@ -465,7 +467,12 @@ public class SoDtl implements Serializable {
 			this.itemid = itemid;
 		}
 
-		
-		
-	
+		public String getApprovalLine() {
+			return approvalLine;
+		}
+
+		public void setApprovalLine(String approvalLine) {
+			this.approvalLine = approvalLine;
+		}
+
 }

@@ -19,6 +19,9 @@ public class WmCreateDistributionWithShipRequest extends AbstractUserSessionRequ
 	
 	@NotNull(message = "验收单号不能为空! ")
 	private String receiptReservedNo;
+	
+	@NotNull(message = "验收单行号不能为空! ")
+	private String receipteLine;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -43,7 +46,13 @@ public class WmCreateDistributionWithShipRequest extends AbstractUserSessionRequ
 	public void setReceiptReservedNo(String receiptReservedNo) {
 		this.receiptReservedNo = receiptReservedNo;
 	}
-	
-	
 
+	public String getReceipteLine() {
+		return receipteLine;
+	}
+
+	public void setReceipteLine(String receipteLine) {
+		this.receipteLine = receipteLine;
+	}
+	
 }
