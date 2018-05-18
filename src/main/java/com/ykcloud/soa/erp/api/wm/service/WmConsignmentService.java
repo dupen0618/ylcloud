@@ -18,7 +18,7 @@ import com.ykcloud.soa.erp.api.wm.response.SupplyUnitNumIdForSellOffGetResponse;
  * @Description: 损益单
  * @Date:
  */
-public interface WmSupBlanceDtlSellOffService {
+public interface WmConsignmentService {
     //获取代销可结算数据
     public ListForGenerateBalanceForSellOffGetResponse getListForGenerateBalanceForSellOff(ListForGenerateBalanceForSellOffGetRequest request);
     //修改代销批次表体状态
