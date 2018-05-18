@@ -3,21 +3,26 @@ package com.ykcloud.soa.erp.api.so.response;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.so.model.ImportReturnApplyDtlError;
+import com.ykcloud.soa.erp.api.so.model.ImportSoApplyDtlError;
 
 public class ReturnApplyDtlImportResponse extends MessagePack {
 	private static final long serialVersionUID = 1L;
 	
-	List<ImportReturnApplyDtlError> errors;
+	List<ImportSoApplyDtlError> importErrors;
 
-	public List<ImportReturnApplyDtlError> getErrors() {
-		return errors;
+	public List<ImportSoApplyDtlError> getImportErrors() {
+		return importErrors;
 	}
 
-	public void setErrors(List<ImportReturnApplyDtlError> errors) {
-		this.errors = errors;
+	public void setImportErrors(List<ImportSoApplyDtlError> importErrors) {
+		this.importErrors = importErrors;
 	}
+
 	
+	
+	
+
+
 	
 
 }

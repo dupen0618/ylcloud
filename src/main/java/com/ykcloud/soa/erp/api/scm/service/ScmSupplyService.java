@@ -37,4 +37,6 @@ public interface ScmSupplyService {
 	 */
 	public MessagePack uploadBaseInfoTask(UploadBaseInfoTaskRequest request);
 
+
+
 }
