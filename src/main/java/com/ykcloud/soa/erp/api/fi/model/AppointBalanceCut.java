@@ -20,8 +20,7 @@ public class AppointBalanceCut implements Serializable {
     private String reservedNo;
     @NotNull(message = "行号不能为空！")
     private String series; // 行号
-    @NotNull(message = "门店不能为空！")
-    private Long subUnitNumId;
+
 
     public Date getOrderDate() {
         return orderDate;
@@ -47,11 +46,4 @@ public class AppointBalanceCut implements Serializable {
         this.series = series;
     }
 
-    public Long getSubUnitNumId() {
-        return subUnitNumId;
-    }
-
-    public void setSubUnitNumId(Long subUnitNumId) {
-        this.subUnitNumId = subUnitNumId;
-    }
 }

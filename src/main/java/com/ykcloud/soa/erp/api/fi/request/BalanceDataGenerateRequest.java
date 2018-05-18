@@ -34,6 +34,10 @@ public class BalanceDataGenerateRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "结算单号不能为空！")
 	private String balanceNo;
 
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+	@NotNull(message = "结算日期不能为空！")
+	private Date balanceDate;
+
 	//结算周期
 	private Long  balaneCYC;
 
@@ -93,7 +97,11 @@ public class BalanceDataGenerateRequest extends AbstractUserSessionRequest {
 		this.endDate = endDate;
 	}
 
+	public Date getBalanceDate() {
+		return balanceDate;
+	}
 
-	
-
+	public void setBalanceDate(Date balanceDate) {
+		this.balanceDate = balanceDate;
+	}
 }

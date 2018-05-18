@@ -122,10 +122,6 @@ public class SupBalanceDtl implements Serializable {
      */
     private Double taxAmount;
 
-    /**
-     * 结转标识
-     */
-    private Long carrySign;
 
     /**
      * 商品商家编码
@@ -151,7 +147,7 @@ public class SupBalanceDtl implements Serializable {
 	/**
 	 * 门店名称
 	 */
-	private String unitName;
+	private String subUnitName;
 	/**
 	 * 单据类型
 	 */
@@ -315,14 +311,6 @@ public class SupBalanceDtl implements Serializable {
 		this.taxAmount = taxAmount;
 	}
 
-	public Long getCarrySign() {
-		return carrySign;
-	}
-
-	public void setCarrySign(Long carrySign) {
-		this.carrySign = carrySign;
-	}
-
 	public String getItemid() {
 		return itemid;
 	}
@@ -387,14 +375,6 @@ public class SupBalanceDtl implements Serializable {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public String getUnitName() {
-		return unitName;
-	}
-
-	public void setUnitName(String unitName) {
-		this.unitName = unitName;
-	}
-
 	public Long getReservedTypeNumId() {
 		return reservedTypeNumId;
 	}
@@ -409,5 +389,13 @@ public class SupBalanceDtl implements Serializable {
 
 	public void setReservedTypeNumIdName(String reservedTypeNumIdName) {
 		this.reservedTypeNumIdName = reservedTypeNumIdName;
+	}
+
+	public String getSubUnitName() {
+		return subUnitName;
+	}
+
+	public void setSubUnitName(String subUnitName) {
+		this.subUnitName = subUnitName;
 	}
 }
