@@ -22,6 +22,8 @@ public class SoAllotWithShipRequest extends AbstractUserSessionRequest {
 	
 	private String reservedNo;
 	
+	private String receiptLine;
+	
 	private Long cust_sub_unit_num_id;
 
 	public Long getSubUnitNumId() {
@@ -72,5 +74,14 @@ public class SoAllotWithShipRequest extends AbstractUserSessionRequest {
 		this.cust_sub_unit_num_id = cust_sub_unit_num_id;
 	}
 
+	public String getReceiptLine() {
+		return receiptLine;
+	}
+
+	public void setReceiptLine(String receiptLine) {
+		this.receiptLine = receiptLine;
+	}
+
+	
 
 }
