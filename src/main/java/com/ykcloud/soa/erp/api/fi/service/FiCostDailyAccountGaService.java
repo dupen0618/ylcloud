@@ -5,12 +5,14 @@ import com.ykcloud.soa.erp.api.fi.request.CostAmountAndTaxAmountAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.DailyAndMonthCostAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.GoodsMoveWeightingCarryOverRequest;
 import com.ykcloud.soa.erp.api.fi.request.LossAmount1AndFinalCostUpdateRequest;
+import com.ykcloud.soa.erp.api.fi.request.ReceiptOnLoadInBatchMonthAccountAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.VirtualDailyAndMonthCostGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.response.CalcSaleGrossProfitResponse;
 import com.ykcloud.soa.erp.api.fi.response.CostAmountAndTaxAmountAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.DailyAndMonthCostAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.GoodsMoveWeightingCarryOverResponse;
 import com.ykcloud.soa.erp.api.fi.response.LossAmount1AndFinalCostUpdaterResponse;
+import com.ykcloud.soa.erp.api.fi.response.ReceiptOnLoadInBatchMonthAccountAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.request.AccountForSellDetermineInventoryByClassifyNumIdProcessRequest;
 import com.ykcloud.soa.erp.api.fi.request.AccountForStockCheckByClassifyNumIdProcessRequest;
 import com.ykcloud.soa.erp.api.fi.request.BatchAmountAndTaxAmountAdjustRequest;
@@ -32,6 +34,13 @@ import com.ykcloud.soa.erp.api.wm.response.CarryDownDailyFiResponse;
   *
  */
 public interface FiCostDailyAccountGaService {
+	
+	/**
+	 * 更新供货方财务在途金额和税金
+	 * @author tz.x
+	 * @date 2018年5月18日下午2:53:08
+	 */
+	public ReceiptOnLoadInBatchMonthAccountAdjustResponse adjustReceiptOnLoadInBatchMonthAccount(ReceiptOnLoadInBatchMonthAccountAdjustRequest request);
 	
 	/**
 	 * 调整商品成本日月进销存
