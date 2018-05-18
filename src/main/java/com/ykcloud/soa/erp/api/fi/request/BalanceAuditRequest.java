@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.fi.request;
 
 import javax.validation.constraints.NotNull;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.ykcloud.soa.erp.api.fi.model.AuditBalanceHdr;
 
 import java.util.List;
 
@@ -13,14 +14,13 @@ import java.util.List;
  */
 public class BalanceAuditRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = -1766553622327456524L;
-	@NotNull(message = "结算单号不能为空！")
-	private List<String> balanceNo;
+	private List<AuditBalanceHdr> auditBalanceHdrs ;
 
-	public List<String> getBalanceNo() {
-		return balanceNo;
+	public List<AuditBalanceHdr> getAuditBalanceHdrs() {
+		return auditBalanceHdrs;
 	}
 
-	public void setBalanceNo(List<String> balanceNo) {
-		this.balanceNo = balanceNo;
+	public void setAuditBalanceHdrs(List<AuditBalanceHdr> auditBalanceHdrs) {
+		this.auditBalanceHdrs = auditBalanceHdrs;
 	}
 }

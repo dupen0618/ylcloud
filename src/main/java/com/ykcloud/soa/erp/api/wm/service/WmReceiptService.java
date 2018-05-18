@@ -1,9 +1,14 @@
 package com.ykcloud.soa.erp.api.wm.service;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptBatchDtlSeriesForRegenerateReceiptGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptBatchDtlNotBalanceCountGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReciptListForGenerateBalanceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest;
 import com.ykcloud.soa.erp.api.wm.request.CountDtlForReturnCiteDtlGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.DirectReceiptUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.MessageForDepositInTransitAndRegenerateDirectWaySoSendReuqest;
 import com.ykcloud.soa.erp.api.wm.request.ProductByBarcodeForReceiptGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.SupBlanceDtlByReceiptBatchDtlSeriesGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForCancelExpirePoDeleteRequest;
@@ -20,12 +25,19 @@ import com.ykcloud.soa.erp.api.wm.request.ReverseShipHdrFuzzyGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopHaveInventoryMaxBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptBatchDtlStatusNumIdUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.request.SupplyUnitNumIdForPurchaseSaleGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.UpdateReceiptAccountFinishRequest;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptBatchDtlSeriesForRegenerateReceiptGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptBatchDtlNotBalanceCountGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReciptListForGenerateBalanceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse;
 import com.ykcloud.soa.erp.api.wm.response.CountDtlForReturnCiteDtlGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.MessageForDepositInTransitAndRegenerateDirectWaySoSendRespnse;
 import com.ykcloud.soa.erp.api.wm.response.ProductByBarcodeForReceiptGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.SupBlanceDtlByReceiptBatchDtlSeriesGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForCancelExpirePoDeleteResponse;
@@ -42,6 +54,8 @@ import com.ykcloud.soa.erp.api.wm.response.ReverseShipHdrFuzzyGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopHaveInventoryMaxBatchPriceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopLastBatchPriceGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptBatchDtlStatusNumIdUpdateResponse;
+import com.ykcloud.soa.erp.api.wm.response.SupplyUnitNumIdForPurchaseSaleGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.UpdateReceiptAccountFinishResponse;
 
 public interface WmReceiptService {
@@ -59,7 +73,7 @@ public interface WmReceiptService {
 	 * @date 2018年5月12日上午9:27:57
 	 */
 	public ReceiptForCancelExpirePoDeleteResponse deleteReceiptForCancelExpirePo(ReceiptForCancelExpirePoDeleteRequest request);
-	
+
 	/**
 	 * 根据验收单号查询单据状态
 	 * @author tz.x
@@ -176,12 +190,28 @@ public interface WmReceiptService {
 	 */
 	public ProductByBarcodeForReceiptGetResponse getProductByBarcode(ProductByBarcodeForReceiptGetRequest  productByBarcodeGetRequest);
 	/**
-	 * 
+	 *
 	 * @description  使用顺序消息测试收货完成接口
 	 * @author gaoyun.shen
 	 * @date: 2018年5月14日 上午10:52:19
-	 * @param 
+	 * @param
 	 * @return
 	 */
 	public ReceiptFinishRsponse finishReceiptWithOrderFlowMessage(ReceiptFinishRequest request);
+
+    //验收入库获取可结算数据
+    public ReciptListForGenerateBalanceGetResponse getReciptListForGenerateBalance(ReciptListForGenerateBalanceGetRequest request);
+    //修改验收入库批次表体状态
+    public ReceiptBatchDtlStatusNumIdUpdateResponse updateReceiptBatchDtlStatusNumId(ReceiptBatchDtlStatusNumIdUpdateRequest request);
+    //修改验收入库表头状态
+    public ReceiptHdrStatusNumIdUpdateResponse updateReceiptHdrStatusNumId(ReceiptHdrStatusNumIdUpdateRequest request);
+    //根据验收入库批次行号
+    public SupBlanceDtlByReceiptBatchDtlSeriesGetResponse getSupBlanceDtlByReceiptBatchDtlSeries(SupBlanceDtlByReceiptBatchDtlSeriesGetRequest request);
+    //查询行号等信息
+    public ReceiptBatchDtlSeriesForRegenerateReceiptGetResponse getReceiptBatchDtlSeriesForRegenerateReceipt(ReceiptBatchDtlSeriesForRegenerateReceiptGetRequest request);
+    //查询没有结算的数量
+    public ReceiptBatchDtlNotBalanceCountGetResponse getReceiptBatchDtlNotBalanceCount(ReceiptBatchDtlNotBalanceCountGetRequest request);
+    //购销没有结算的供应商
+    public SupplyUnitNumIdForPurchaseSaleGetResponse getSupplyUnitNumIdForPurchaseSale(SupplyUnitNumIdForPurchaseSaleGetRequest request);
+
 }

@@ -1,7 +1,11 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
-import com.ykcloud.soa.erp.api.fi.request.AutomaticBalanceRequest;
-import com.ykcloud.soa.erp.api.fi.response.AutomaticBalanceResponse;
+import com.ykcloud.soa.erp.api.fi.request.BalanceJointSaleAutomaticRequest;
+import com.ykcloud.soa.erp.api.fi.request.BalancePurchaseSaleAutomaticRequest;
+import com.ykcloud.soa.erp.api.fi.request.BalanceSellOffAutomaticRequest;
+import com.ykcloud.soa.erp.api.fi.response.BalanceJointSaleAutomaticResponse;
+import com.ykcloud.soa.erp.api.fi.response.BalancePurchaseSaleAutomaticResponse;
+import com.ykcloud.soa.erp.api.fi.response.BalanceSellOffAutomaticResponse;
 
 /**
  * @Description: 自动结算
@@ -10,10 +14,10 @@ import com.ykcloud.soa.erp.api.fi.response.AutomaticBalanceResponse;
  */
 public interface FiAutomaticBalanceService {
     //购销
-    public AutomaticBalanceResponse automaticBalanceGX(AutomaticBalanceRequest request);
+    public BalancePurchaseSaleAutomaticResponse automaticBalancePurchaseSale(BalancePurchaseSaleAutomaticRequest request);
     //代销
-    public AutomaticBalanceResponse automaticBalanceDX(AutomaticBalanceRequest request);
+    public BalanceSellOffAutomaticResponse automaticBalanceSellOff(BalanceSellOffAutomaticRequest request);
     //联销
-    public AutomaticBalanceResponse automaticBalanceLX(AutomaticBalanceRequest request);
+    public BalanceJointSaleAutomaticResponse automaticBalanceJointSale(BalanceJointSaleAutomaticRequest request) ;
 
 }

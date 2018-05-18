@@ -19,6 +19,8 @@ public class AuditRequest extends AbstractUserSessionRequest {
     private String reservedNo;
     @NotNull(message = "业务类型不能为空！")
     private Long billTypeNumId;
+    @NotNull(message = "门店不能为空！")
+    private Long subUnitNumId;
 
     public Long getOldStatusNumId() {
         return oldStatusNumId;
@@ -50,5 +52,13 @@ public class AuditRequest extends AbstractUserSessionRequest {
 
     public void setBillTypeNumId(Long billTypeNumId) {
         this.billTypeNumId = billTypeNumId;
+    }
+
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
     }
 }
