@@ -11,7 +11,7 @@ public class ImportReplenishApplyDtlError implements Serializable {
 	
 	private String barcode;  //条形码
 	
-	private String error;  //错误信息
+	private String importError;  //错误信息
 
 	public Long getItemNumId() {
 		return itemNumId;
@@ -37,13 +37,15 @@ public class ImportReplenishApplyDtlError implements Serializable {
 		this.barcode = barcode;
 	}
 
-	public String getError() {
-		return error;
+	public String getImportError() {
+		return importError;
 	}
 
-	public void setError(String error) {
-		this.error = error;
+	public void setImportError(String importError) {
+		this.importError = importError;
 	}
+
+	
 	
 	
 
