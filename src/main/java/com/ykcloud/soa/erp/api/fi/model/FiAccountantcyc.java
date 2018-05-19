@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
-public class FiAccountantcyc {
+import java.io.Serializable;
+
+public class FiAccountantcyc implements Serializable {
     private long series;
     private long tenant_num_id;
     private long sub_unit_num_id;
