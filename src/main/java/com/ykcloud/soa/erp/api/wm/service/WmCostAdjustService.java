@@ -33,7 +33,7 @@ public interface WmCostAdjustService {
 	
 	
 	/**
-	 * @Description:固定价格调价(批次明细中价格等于CostPrice都需要调整)
+	 * @Description:固定价格调价(批次明细中价格等于CostPrice都需要调整)调整批次明细中指定价格的库存金额
 	 * @author Song
 	 * @Date 2018年5月16日 上午11:29:16
 	 */
