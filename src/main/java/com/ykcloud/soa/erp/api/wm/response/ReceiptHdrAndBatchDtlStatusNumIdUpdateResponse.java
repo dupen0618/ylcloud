@@ -7,6 +7,6 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @Description: 修改结算状态
  * @Date:
  */
-public class ReceiptHdrStatusNumIdUpdateResponse extends MessagePack {
+public class ReceiptHdrAndBatchDtlStatusNumIdUpdateResponse extends MessagePack {
     private static final long serialVersionUID = -3101956261800131597L;
 }

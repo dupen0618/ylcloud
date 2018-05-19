@@ -8,7 +8,7 @@ import com.ykcloud.soa.erp.api.wm.request.DirectReceiptUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.MessageForDepositInTransitAndRegenerateDirectWaySoSendReuqest;
 import com.ykcloud.soa.erp.api.wm.request.ProductByBarcodeForReceiptGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SupBlanceDtlByReceiptBatchDtlSeriesGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrStatusNumIdUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrAndBatchDtlStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptForCancelExpirePoDeleteRequest;
@@ -37,7 +37,7 @@ import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.MessageForDepositInTransitAndRegenerateDirectWaySoSendRespnse;
 import com.ykcloud.soa.erp.api.wm.response.ProductByBarcodeForReceiptGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.SupBlanceDtlByReceiptBatchDtlSeriesGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrStatusNumIdUpdateResponse;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrAndBatchDtlStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptForCancelExpirePoDeleteResponse;
@@ -204,13 +204,11 @@ public interface WmReceiptService {
     //修改验收入库批次表体状态
     public ReceiptBatchDtlStatusNumIdUpdateResponse updateReceiptBatchDtlStatusNumId(ReceiptBatchDtlStatusNumIdUpdateRequest request);
     //修改验收入库表头状态
-    public ReceiptHdrStatusNumIdUpdateResponse updateReceiptHdrStatusNumId(ReceiptHdrStatusNumIdUpdateRequest request);
-    //根据验收入库批次行号
+	public ReceiptHdrAndBatchDtlStatusNumIdUpdateResponse updateReceiptHdrAndBatchDtlStatusNumId(ReceiptHdrAndBatchDtlStatusNumIdUpdateRequest request);
+	//根据验收入库批次行号
     public SupBlanceDtlByReceiptBatchDtlSeriesGetResponse getSupBlanceDtlByReceiptBatchDtlSeries(SupBlanceDtlByReceiptBatchDtlSeriesGetRequest request);
     //查询行号等信息
     public ReceiptBatchDtlSeriesForRegenerateReceiptGetResponse getReceiptBatchDtlSeriesForRegenerateReceipt(ReceiptBatchDtlSeriesForRegenerateReceiptGetRequest request);
-    //查询没有结算的数量
-    public ReceiptBatchDtlNotBalanceCountGetResponse getReceiptBatchDtlNotBalanceCount(ReceiptBatchDtlNotBalanceCountGetRequest request);
     //购销没有结算的供应商
     public SupplyUnitNumIdForPurchaseSaleGetResponse getSupplyUnitNumIdForPurchaseSale(SupplyUnitNumIdForPurchaseSaleGetRequest request);
 
