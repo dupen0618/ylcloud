@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.fi.request;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 /**
  * @Description: TODO
@@ -23,6 +24,7 @@ public class AccSubjectBceGeneratRequest extends AbstractUserSessionRequest {
     private Long billTypeNumId;
     @NotNull(message = "门店不能为空！")
     private Long subUnitNumId;
+    private Date orderDate;
 
     public String getVoucherNumId() {
         return voucherNumId;
@@ -70,5 +72,13 @@ public class AccSubjectBceGeneratRequest extends AbstractUserSessionRequest {
 
     public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
 }
