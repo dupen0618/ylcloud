@@ -17,17 +17,17 @@ public class BatchAmountAndTaxAmountForFixedAdjustRequest extends AbstractUserSe
 	private static final long serialVersionUID = 4362052094214066876L;
 	
 	@NotEmpty(message = "批次日进销存明细不能为空！")
-	private Long subUnitNumID;
+	private Long subUnitNumId;
 
 	@NotEmpty(message = "批次日进销存明细不能为空！")
 	private List<BatchAmountAndTaxAmountForAdjust> AdjustAmountAndTaxAmountList;
 
-	public Long getSubUnitNumID() {
-		return subUnitNumID;
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
 	}
 
-	public void setSubUnitNumID(Long subUnitNumID) {
-		this.subUnitNumID = subUnitNumID;
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
 	}
 
 	public List<BatchAmountAndTaxAmountForAdjust> getAdjustAmountAndTaxAmountList() {
