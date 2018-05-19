@@ -1,7 +1,9 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
+import com.ykcloud.soa.erp.api.fi.request.DealingDetailForFixedGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.DealingDetailsGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.DealingsOutWorkRequest;
+import com.ykcloud.soa.erp.api.fi.response.DealingDetailForFixedGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.DealingDetailsGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.DealingsOutWorkResponse;
 
@@ -29,5 +31,13 @@ public interface FiSupplierDealingsService {
 	 * @time: 2018年5月14日
 	 */
 	public DealingsOutWorkResponse outWorkDealings(DealingsOutWorkRequest request);
+	
+	/**
+	 * 库存金额调整后生成供应商往来明细
+	 * @author Song
+	 * @date 2018年5月19日下午2:15:53
+	 */
+	public DealingDetailForFixedGenerateResponse generateDealingDetailForFixed(DealingDetailForFixedGenerateRequest request);
+
 	
 }
