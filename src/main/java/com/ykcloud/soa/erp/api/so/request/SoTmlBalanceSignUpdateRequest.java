@@ -1,12 +1,12 @@
 package com.ykcloud.soa.erp.api.so.request;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
-
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
+
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
  * @Author: fred.zhao
