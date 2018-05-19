@@ -1,10 +1,16 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
+import java.io.Serializable;
+
 /**
  * @author 殷剑
  *
  */
-public class AdjustPriceForApi {
+public class AdjustPriceForApi implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5974550740131014872L;
 	/**
 	 * 原价格
 	 */
