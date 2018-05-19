@@ -2,21 +2,19 @@ package com.ykcloud.soa.erp.api.so.service;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlNotBalanceCountGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlStatusNumIdUpdateRequest;
-import com.ykcloud.soa.erp.api.so.request.ItemSellDailyHdrStatusNumIdUpdateRequest;
+import com.ykcloud.soa.erp.api.so.request.ItemSellDailyHdrAndDtlStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyListForGenerateBalanceGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupBlanceDtlByItemSellDailyDtlSeriesGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupplyUnitNumIdForJointSaleGetRequest;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlNotBalanceCountGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlStatusNumIdUpdateResponse;
-import com.ykcloud.soa.erp.api.so.response.ItemSellDailyHdrStatusNumIdUpdateResponse;
+import com.ykcloud.soa.erp.api.so.response.ItemSellDailyHdrAndDtlStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyListForGenerateBalanceGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupBlanceDtlByItemSellDailyDtlSeriesGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyUnitNumIdForJointSaleGetResponse;
 import com.ykcloud.soa.erp.api.so.request.SalesDailyGenerateRequest;
 import com.ykcloud.soa.erp.api.so.response.SalesDailyGenerateResponse;
-
-import java.util.List;
 
 /**
  * @author:shenq
@@ -40,14 +38,12 @@ public interface SoTmlService {
     public ItemSellDailyListForGenerateBalanceGetResponse getItemSellDailyListForGenerateBalance(ItemSellDailyListForGenerateBalanceGetRequest request);
 
     public ItemSellDailyDtlStatusNumIdUpdateResponse updateItemSellDailyDtlStatusNumId(ItemSellDailyDtlStatusNumIdUpdateRequest request);
-    
-    public ItemSellDailyHdrStatusNumIdUpdateResponse updateItemSellDailyHdrStatusNumId(ItemSellDailyHdrStatusNumIdUpdateRequest request);
-    
+
+    public ItemSellDailyHdrAndDtlStatusNumIdUpdateResponse updateItemSellDailyHdrAndDtlStatusNumId(ItemSellDailyHdrAndDtlStatusNumIdUpdateRequest request);
+
     public SupBlanceDtlByItemSellDailyDtlSeriesGetResponse getSupBlanceDtlByItemSellDailyDtlSeries(SupBlanceDtlByItemSellDailyDtlSeriesGetRequest request);
     
     public ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetResponse getItemSellDailyDtlSeriesForRegenerateItemSellDaily(ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetRequest request);
-    
-    public ItemSellDailyDtlNotBalanceCountGetResponse getItemSellDailyDtlNotBalanceCount(ItemSellDailyDtlNotBalanceCountGetRequest request);
     
     public SupplyUnitNumIdForJointSaleGetResponse getSupplyUnitNumIdForJointSale(SupplyUnitNumIdForJointSaleGetRequest request);
     
