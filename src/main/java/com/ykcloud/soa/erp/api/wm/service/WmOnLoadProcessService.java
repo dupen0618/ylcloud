@@ -3,6 +3,8 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.WmOnLoadProcessRequest;
 import com.ykcloud.soa.erp.api.wm.response.WmOnLoadProcessResponse;
 
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * @Author Hewei
  * @Date 2018/5/17 11:13
