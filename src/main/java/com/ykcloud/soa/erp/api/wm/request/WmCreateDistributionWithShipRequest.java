@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import java.util.Map;
+
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
@@ -21,7 +23,8 @@ public class WmCreateDistributionWithShipRequest extends AbstractUserSessionRequ
 	private String receiptReservedNo;
 	
 	@NotNull(message = "验收单行号不能为空! ")
-	private String receipteLine;
+	private Map<Long, String> itemReceiptMap;
+	
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -47,12 +50,12 @@ public class WmCreateDistributionWithShipRequest extends AbstractUserSessionRequ
 		this.receiptReservedNo = receiptReservedNo;
 	}
 
-	public String getReceipteLine() {
-		return receipteLine;
+	public Map<Long, String> getItemReceiptMap() {
+		return itemReceiptMap;
 	}
 
-	public void setReceipteLine(String receipteLine) {
-		this.receipteLine = receipteLine;
+	public void setItemReceiptMap(Map<Long, String> itemReceiptMap) {
+		this.itemReceiptMap = itemReceiptMap;
 	}
 	
 }
