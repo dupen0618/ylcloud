@@ -9,15 +9,4 @@ public class WmCostByScmChangeCostResponse extends MessagePack
 {
     private static final long serialVersionUID = 1L;
 
-    private List<ScmBlChangeCostAll> scmBlChangeCostAllList;
-
-    public List<ScmBlChangeCostAll> getScmBlChangeCostAllList()
-    {
-        return scmBlChangeCostAllList;
-    }
-
-    public void setScmBlChangeCostAllList(List<ScmBlChangeCostAll> scmBlChangeCostAllList)
-    {
-        this.scmBlChangeCostAllList = scmBlChangeCostAllList;
-    }
 }

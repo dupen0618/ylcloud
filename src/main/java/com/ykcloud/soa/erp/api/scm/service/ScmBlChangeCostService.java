@@ -15,5 +15,5 @@ public interface ScmBlChangeCostService
       * @date 2018/5/14 21:30
       * @description 调整库存成本金额
       */
-     ScmBlChangeCostResponse adjustWmInventoryCost(ScmBlChangeCostRequest request);
+     public ScmBlChangeCostResponse adjustWmInventoryCost(ScmBlChangeCostRequest request);
 }
