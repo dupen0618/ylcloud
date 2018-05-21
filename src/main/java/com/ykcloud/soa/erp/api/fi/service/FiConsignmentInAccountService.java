@@ -1,9 +1,11 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
-import com.ykcloud.soa.erp.api.fi.response.ConsignmentProductAccountAdjustResponse;
-import com.ykcloud.soa.erp.api.fi.response.FiInAccountByReceiptResponse;
 import com.ykcloud.soa.erp.api.fi.request.ConsignmentProductAccountAdjustRequest;
+import com.ykcloud.soa.erp.api.fi.request.ConsignmentProductAccountForFixedAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.FiInAccountByReceiptRequest;
+import com.ykcloud.soa.erp.api.fi.response.ConsignmentProductAccountAdjustResponse;
+import com.ykcloud.soa.erp.api.fi.response.ConsignmentProductAccountForFixedAdjustResponse;
+import com.ykcloud.soa.erp.api.fi.response.FiInAccountByReceiptResponse;
 
 /**
  * @Author Hewei
@@ -19,4 +21,12 @@ public interface FiConsignmentInAccountService {
 	public ConsignmentProductAccountAdjustResponse adjustConsignmentProductAccount(ConsignmentProductAccountAdjustRequest request);
 	
     FiInAccountByReceiptResponse setConsignmentInAccount(FiInAccountByReceiptRequest request);
+    
+    /**
+	 * 代销商品款调整
+	 * @author Song
+	 * @date 2018年5月18日下午6:54:30
+	 */
+	public ConsignmentProductAccountForFixedAdjustResponse adjustConsignmentProductAccountForFixed(ConsignmentProductAccountForFixedAdjustRequest request);
+
 }
