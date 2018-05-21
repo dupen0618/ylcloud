@@ -23,8 +23,6 @@ public class ProtocolBackOffRateGetRequest extends AbstractRequest {
 	private Long itemNumId;
 	@NotNull(message = "业务日期不能为空！")
 	private Date operatDate;
-	@NotNull(message = "采购协议单号不能为空！")
-	private String reservedNo;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -66,11 +64,4 @@ public class ProtocolBackOffRateGetRequest extends AbstractRequest {
 		this.operatDate = operatDate;
 	}
 
-	public String getReservedNo() {
-		return reservedNo;
-	}
-
-	public void setReservedNo(String reservedNo) {
-		this.reservedNo = reservedNo;
-	}
 }

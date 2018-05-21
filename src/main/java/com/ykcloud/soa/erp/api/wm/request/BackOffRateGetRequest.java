@@ -11,7 +11,7 @@ import java.util.Date;
  * @Author: ALi
  * @Date: 2018/4/18 15:30
  */
-public class BackOffRateRequest extends AbstractRequest {
+public class BackOffRateGetRequest extends AbstractRequest {
     private static final long serialVersionUID = 1L;
     @NotNull(message = "供应商信息不能为空！")
     private Long supplyUnitNumId;
@@ -20,8 +20,6 @@ public class BackOffRateRequest extends AbstractRequest {
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     @NotNull(message = "业务日期不能为空！")
     private Date operatDate;
-    @NotNull(message = "采购协议单号不能为空！")
-    private String reservedNo;
     @NotNull(message = "原价格不能为空！")
     private Double retailPrice;
     @NotNull(message = "结算价格不能为空！")
@@ -53,14 +51,6 @@ public class BackOffRateRequest extends AbstractRequest {
 
     public void setOperatDate(Date operatDate) {
         this.operatDate = operatDate;
-    }
-
-    public String getReservedNo() {
-        return reservedNo;
-    }
-
-    public void setReservedNo(String reservedNo) {
-        this.reservedNo = reservedNo;
     }
 
     public Double getRetailPrice() {

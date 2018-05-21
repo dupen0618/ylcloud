@@ -1,7 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
-import com.ykcloud.soa.erp.api.wm.request.BackOffRateRequest;
-import com.ykcloud.soa.erp.api.wm.response.BackOffRateResponse;
+import com.ykcloud.soa.erp.api.wm.request.BackOffRateGetRequest;
+import com.ykcloud.soa.erp.api.wm.response.BackOffRateGetResponse;
 
 /**
  * @Description: 倒扣率
@@ -10,5 +10,5 @@ import com.ykcloud.soa.erp.api.wm.response.BackOffRateResponse;
  */
 public interface WmBackOffRateService {
     //查询倒扣率
-    public BackOffRateResponse getBackOffRate(BackOffRateRequest request);
+    public BackOffRateGetResponse getBackOffRate(BackOffRateGetRequest request);
 }
