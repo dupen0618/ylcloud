@@ -22,7 +22,7 @@ public class SoAllotWithShipRequest extends AbstractUserSessionRequest {
 	
 	private String reservedNo;
 	
-	private String receiptLine;
+	private Map<Long, String> itemReceiptMap;
 	
 	private Long cust_sub_unit_num_id;
 
@@ -74,14 +74,12 @@ public class SoAllotWithShipRequest extends AbstractUserSessionRequest {
 		this.cust_sub_unit_num_id = cust_sub_unit_num_id;
 	}
 
-	public String getReceiptLine() {
-		return receiptLine;
+	public Map<Long, String> getItemReceiptMap() {
+		return itemReceiptMap;
 	}
 
-	public void setReceiptLine(String receiptLine) {
-		this.receiptLine = receiptLine;
+	public void setItemReceiptMap(Map<Long, String> itemReceiptMap) {
+		this.itemReceiptMap = itemReceiptMap;
 	}
-
-	
 
 }
