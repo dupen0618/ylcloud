@@ -22,6 +22,7 @@ public class FiInAccountByReceiptRequest extends AbstractUserSessionRequest{
     Long balaFuncId;
 
     FiConsignmentProductAccountWba fiConsignmentProductAccountWba;
+    private Long crossSubCompanySign;
 
     public String getReservedNo() {
         return reservedNo;
@@ -61,5 +62,13 @@ public class FiInAccountByReceiptRequest extends AbstractUserSessionRequest{
 
     public void setFiConsignmentProductAccountWba(FiConsignmentProductAccountWba fiConsignmentProductAccountWba) {
         this.fiConsignmentProductAccountWba = fiConsignmentProductAccountWba;
+    }
+
+    public Long getCrossSubCompanySign() {
+        return crossSubCompanySign;
+    }
+
+    public void setCrossSubCompanySign(Long crossSubCompanySign) {
+        this.crossSubCompanySign = crossSubCompanySign;
     }
 }
