@@ -27,6 +27,7 @@ public class FiBlSupBalanceHdr implements Serializable  {
 	private Long createUserId;
 	private Long lastUpdateUserId;
 	private String cancelsign;
+	private Long CROSS_SUB_COMPANY_SIGN;
 
 	public String getBalanceNo() {
 		return balanceNo;
@@ -195,4 +196,12 @@ public class FiBlSupBalanceHdr implements Serializable  {
 	public void setCancelsign(String cancelsign) {
 		this.cancelsign = cancelsign;
 	}
+
+    public Long getCROSS_SUB_COMPANY_SIGN() {
+        return CROSS_SUB_COMPANY_SIGN;
+    }
+
+    public void setCROSS_SUB_COMPANY_SIGN(Long cross_sub_company_sign) {
+        this.CROSS_SUB_COMPANY_SIGN = cross_sub_company_sign;
+    }
 }

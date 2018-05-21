@@ -7,7 +7,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @Author: ALi
  * @Date: 2018/4/18 15:34
  */
-public class BackOffRateResponse  extends MessagePack {
+public class BackOffRateGetResponse extends MessagePack {
     private static final long serialVersionUID = 1L;
     private Double price;//单价
     private Double amount;//金额
