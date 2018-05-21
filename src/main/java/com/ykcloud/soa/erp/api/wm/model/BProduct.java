@@ -39,6 +39,7 @@ public class BProduct implements Serializable {
 	private Long productOriginNumId;//原产地
 	private String productOriginName;//原产地名称
 	private Long settlementType;//结算方式
+	private Long supplyUnitNumId;
 	public Long getItemNumId() {
 		return itemNumId;
 	}
@@ -268,5 +269,13 @@ public class BProduct implements Serializable {
 
 	public void setSettlementType(Long settlementType) {
 		this.settlementType = settlementType;
+	}
+
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
+
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
 	}
 }
