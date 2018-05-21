@@ -20,8 +20,8 @@ public class DiscountUnderCutSnapGetRequest extends AbstractRequest {
     private Long itemNumId;
     @NotNull(message = "业务日期不能为空！")
     private Date operatDate;
-    @NotNull(message = "采购协议单号不能为空！")
-    private String reservedNo;
+    @NotNull(message = "门店不能为空！")
+    private Long subUnitNumId;
 
     public Long getSupplyUnitNumId() {
         return supplyUnitNumId;
@@ -47,11 +47,11 @@ public class DiscountUnderCutSnapGetRequest extends AbstractRequest {
         this.operatDate = operatDate;
     }
 
-    public String getReservedNo() {
-        return reservedNo;
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
     }
 
-    public void setReservedNo(String reservedNo) {
-        this.reservedNo = reservedNo;
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
     }
 }
