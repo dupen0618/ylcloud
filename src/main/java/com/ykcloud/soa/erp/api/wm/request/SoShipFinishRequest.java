@@ -19,6 +19,9 @@ public class SoShipFinishRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "订单编号不能为空! ")
 	private String soNumId;
 	
+	@NotNull(message = "短播标识不能为空! ")
+	private Long cancel_sign;
+	
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -36,5 +39,11 @@ public class SoShipFinishRequest extends AbstractUserSessionRequest {
 		this.soNumId = soNumId;
 	}
 
+	public Long getCancel_sign() {
+		return cancel_sign;
+	}
 
+	public void setCancel_sign(Long cancel_sign) {
+		this.cancel_sign = cancel_sign;
+	}
 }
