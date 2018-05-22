@@ -11,6 +11,11 @@ public class AdjustPriceForApi implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 5974550740131014872L;
+	
+	/**
+	 * 交易价格
+	 */
+	Double price;
 	/**
 	 * 原价格
 	 */
@@ -31,6 +36,13 @@ public class AdjustPriceForApi implements Serializable {
 	 * 调整数量
 	 */
 	Double adjustQty;
+	
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
 	public Double getCostPrice() {
 		return costPrice;
 	}
