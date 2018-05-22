@@ -4,6 +4,8 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * @author:shenq
  * @description:代销获取COSTAMOUNT
@@ -16,31 +18,13 @@ public class SellDailyCollectRequest extends AbstractRequest {
     /**
      * 门店编号
      */
+    @NotNull(message = "门店编号不能为空！")
     private Long subUnitNumId;
-
-    /**
-     * 商品编号
-     */
-    private Long itemNumId;
-
-    /**
-     * 出货物理仓库
-     */
-    private Long physicalNumId;
-
-    /**
-     * 商品产地
-     */
-    private Long productOriginNumId;
-
-    /**
-     * 结算方式
-     */
-    private Long settlementType;
 
     /**
      * 销售日期
      */
+    @NotNull(message = "销售日期不能为空！")
     private Date orderDate;
 
     public Long getSubUnitNumId() {
@@ -49,38 +33,6 @@ public class SellDailyCollectRequest extends AbstractRequest {
 
     public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
-    }
-
-    public Long getItemNumId() {
-        return itemNumId;
-    }
-
-    public void setItemNumId(Long itemNumId) {
-        this.itemNumId = itemNumId;
-    }
-
-    public Long getPhysicalNumId() {
-        return physicalNumId;
-    }
-
-    public void setPhysicalNumId(Long physicalNumId) {
-        this.physicalNumId = physicalNumId;
-    }
-
-    public Long getProductOriginNumId() {
-        return productOriginNumId;
-    }
-
-    public void setProductOriginNumId(Long productOriginNumId) {
-        this.productOriginNumId = productOriginNumId;
-    }
-
-    public Long getSettlementType() {
-        return settlementType;
-    }
-
-    public void setSettlementType(Long settlementType) {
-        this.settlementType = settlementType;
     }
 
     public Date getOrderDate() {

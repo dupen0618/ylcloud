@@ -22,11 +22,6 @@ public class WmCollectShipSellDailyDtl implements Serializable {
     private Long physicalNumId;
 
     /**
-     * 产地编号
-     */
-    private Long productOriginNumId;
-
-    /**
      * 结算方式
      */
     private Long settmentType;
@@ -110,14 +105,6 @@ public class WmCollectShipSellDailyDtl implements Serializable {
 
     public void setPhysicalNumId(Long physicalNumId) {
         this.physicalNumId = physicalNumId;
-    }
-
-    public Long getProductOriginNumId() {
-        return productOriginNumId;
-    }
-
-    public void setProductOriginNumId(Long productOriginNumId) {
-        this.productOriginNumId = productOriginNumId;
     }
 
     public Long getSettmentType() {
