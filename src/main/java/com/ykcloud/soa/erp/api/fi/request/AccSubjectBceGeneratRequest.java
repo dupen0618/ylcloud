@@ -18,10 +18,6 @@ public class AccSubjectBceGeneratRequest extends AbstractUserSessionRequest {
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     @NotNull(message = "业务日期不能为空！")
     private Date opertDtm;
-    @NotNull(message = "原始状态不能为空！")
-    private Long oldStatusNumId;
-    @NotNull(message = "新状态不能为空！")
-    private Long newStatusNumId;
     @NotNull(message = "单据号不能为空！")
     private String reservedNo;
     @NotNull(message = "业务类型不能为空！")
@@ -37,22 +33,6 @@ public class AccSubjectBceGeneratRequest extends AbstractUserSessionRequest {
 
     public void setVoucherNumId(String voucherNumId) {
         this.voucherNumId = voucherNumId;
-    }
-
-    public Long getOldStatusNumId() {
-        return oldStatusNumId;
-    }
-
-    public void setOldStatusNumId(Long oldStatusNumId) {
-        this.oldStatusNumId = oldStatusNumId;
-    }
-
-    public Long getNewStatusNumId() {
-        return newStatusNumId;
-    }
-
-    public void setNewStatusNumId(Long newStatusNumId) {
-        this.newStatusNumId = newStatusNumId;
     }
 
     public String getReservedNo() {
