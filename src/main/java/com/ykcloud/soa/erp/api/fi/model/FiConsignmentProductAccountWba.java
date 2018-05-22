@@ -36,8 +36,8 @@ public class FiConsignmentProductAccountWba implements Serializable {
     private Long firstSupplyUnitNumId;
     private Double supPrice;
     private String supProduceDate;
-    private Long tradePrice;
-    private Long batchPrice;
+    private Double tradePrice;
+    private Double batchPrice;
     private Double reservedQty;
     private Double amount;
     private Double taxamount;
@@ -262,19 +262,19 @@ public class FiConsignmentProductAccountWba implements Serializable {
         this.supProduceDate = supProduceDate;
     }
 
-    public Long getTradePrice() {
+    public Double getTradePrice() {
         return tradePrice;
     }
 
-    public void setTradePrice(Long tradePrice) {
+    public void setTradePrice(Double tradePrice) {
         this.tradePrice = tradePrice;
     }
 
-    public Long getBatchPrice() {
+    public Double getBatchPrice() {
         return batchPrice;
     }
 
-    public void setBatchPrice(Long batchPrice) {
+    public void setBatchPrice(Double batchPrice) {
         this.batchPrice = batchPrice;
     }
 
