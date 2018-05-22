@@ -14,8 +14,10 @@ public class FiBatchAccountGaRequest extends AbstractRequest {
 	private static final long serialVersionUID = 992352310762556502L;
 	
     private String batchSeries;
-	
-	private Double adjustAmount;
+    
+    private Double adjustAmount;
+
+	Double adjustPrice; //调整后价格
 	
 	private Double adjustTaxAmount;
 
@@ -35,6 +37,14 @@ public class FiBatchAccountGaRequest extends AbstractRequest {
 		this.adjustAmount = adjustAmount;
 	}
 
+	public Double getAdjustPrice() {
+		return adjustPrice;
+	}
+
+	public void setAdjustPrice(Double adjustPrice) {
+		this.adjustPrice = adjustPrice;
+	}
+
 	public Double getAdjustTaxAmount() {
 		return adjustTaxAmount;
 	}
@@ -42,5 +52,5 @@ public class FiBatchAccountGaRequest extends AbstractRequest {
 	public void setAdjustTaxAmount(Double adjustTaxAmount) {
 		this.adjustTaxAmount = adjustTaxAmount;
 	}
-
+	
 }

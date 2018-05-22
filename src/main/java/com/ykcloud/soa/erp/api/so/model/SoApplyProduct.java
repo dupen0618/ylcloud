@@ -32,7 +32,14 @@ public class SoApplyProduct implements Serializable{
 	private String itemid;  //商家编号
 	private Double costTaxRate;//税率
 	private Long purchaseTypeNumId;//采购途径
+	private Long logisticsType;   //物流方式
 	
+	public Long getLogisticsType() {
+		return logisticsType;
+	}
+	public void setLogisticsType(Long logisticsType) {
+		this.logisticsType = logisticsType;
+	}
 	public Long getPurchaseTypeNumId() {
 		return purchaseTypeNumId;
 	}

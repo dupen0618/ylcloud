@@ -17,7 +17,7 @@ public class AdjustWeightedAveragePriceRequest extends AbstractUserSessionReques
 
 	private static final long serialVersionUID = -6098822101162842522L;
 	
-	@NotEmpty(message = "调整加权平均价格明细不能为空！")
+	//@NotEmpty(message = "调整加权平均价格明细不能为空！")
 	private List<WeightedAveragePriceForAdjust> adjustWeightedAveragePriceList;
 
 	public List<WeightedAveragePriceForAdjust> getAdjustWeightedAveragePriceList() {

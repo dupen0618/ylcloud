@@ -16,7 +16,17 @@ public class FiBatchMonthAccountGaResponse extends MessagePack {
 
 	private static final long serialVersionUID = 8626232377619754200L;
 	
+	private AdjustPriceForApi obj;
+	
 	private List<AdjustPriceForApi> list;
+
+	public AdjustPriceForApi getObj() {
+		return obj;
+	}
+
+	public void setObj(AdjustPriceForApi obj) {
+		this.obj = obj;
+	}
 
 	public List<AdjustPriceForApi> getList() {
 		return list;
@@ -25,5 +35,5 @@ public class FiBatchMonthAccountGaResponse extends MessagePack {
 	public void setList(List<AdjustPriceForApi> list) {
 		this.list = list;
 	}
-
+	
 }

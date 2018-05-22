@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
+import com.ykcloud.soa.erp.api.fi.request.FiMonthlySettlementRequest;
 import com.ykcloud.soa.erp.api.fi.request.ReceiptInAccountRequest;
+import com.ykcloud.soa.erp.api.fi.response.FiMonthlySettlementResponse;
 import com.ykcloud.soa.erp.api.fi.response.ReceiptInAccountResponse;
 
 /**
@@ -9,4 +11,8 @@ import com.ykcloud.soa.erp.api.fi.response.ReceiptInAccountResponse;
  */
 public interface FiBillInAccountService {
     ReceiptInAccountResponse setReceiptInAccountService(ReceiptInAccountRequest request);
+
+    FiMonthlySettlementResponse buildBatchMonthSalesMonthlySettlementRecord(FiMonthlySettlementRequest request);
+
+    FiMonthlySettlementResponse buildItemMonthSalesMonthlySettlementRecord(FiMonthlySettlementRequest request);
 }

@@ -13,6 +13,9 @@ import com.ykcloud.soa.erp.api.fi.response.FiBatchMonthAccountGaResponse;
  */
 public interface FiBatchMonthAccountGaService {
 	
+	//得到指定批次的ADJUST_QTY和batch_series
+	public FiBatchMonthAccountGaResponse getAdjustPriceObj(FiBatchAccountGaRequest request);
+		
 	//列出ADJUST_QTY和batch_series
 	public FiBatchMonthAccountGaResponse listAdjustQty(FiBatchAccountGaRequest request);
 	//更新批次日进销存中的ADJUST_AMOUNT

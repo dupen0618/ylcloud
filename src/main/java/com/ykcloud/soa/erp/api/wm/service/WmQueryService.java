@@ -8,7 +8,7 @@ import com.ykcloud.soa.erp.api.wm.response.BackOffRateGetResponse;
  * @Author: ALi
  * @Date: 2018/4/18 16:00
  */
-public interface WmBackOffRateService {
+public interface WmQueryService {
     //查询倒扣率
     public BackOffRateGetResponse getBackOffRate(BackOffRateGetRequest request);
 }

@@ -20,20 +20,10 @@ public class WmPhysicalDailyAccountGaRequest extends AbstractRequest  {
      * 结转日期
      */
     @NotNull(message = "销售日期不能为空")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     public Date orderDate;
     
-    /**
-     * 商品中心（部门）
-     */
-    @NotNull(message = "商品编号不能为空")
-    public Long divNumId;
-    
-    /**
-     * 商品编号
-     */
-    @NotNull(message = "商品中心（部门）不能为空")
-    public Long itemNumId;
+  
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -49,22 +39,6 @@ public class WmPhysicalDailyAccountGaRequest extends AbstractRequest  {
 
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
-	}
-
-	public Long getItemNumId() {
-		return itemNumId;
-	}
-
-	public void setItemNumId(Long itemNumId) {
-		this.itemNumId = itemNumId;
-	}
-
-	public Long getDivNumId() {
-		return divNumId;
-	}
-
-	public void setDivNumId(Long divNumId) {
-		this.divNumId = divNumId;
 	}
 	
 }

@@ -31,11 +31,11 @@ public class ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest extends Ab
 	@NotNull(message = "商品原产地编号不能为空！")
 	private Long productOriginNumId;
 
-	@NotNull(message = "价格不能为空！")
+	/*@NotNull(message = "价格不能为空！")
 	private Double price;
 
 	@NotNull(message = "税率不能为空！")
-	private Double taxRate;
+	private Double taxRate;*/
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -75,22 +75,6 @@ public class ApprovalDtlsForGenerateDirectWayDistributionSoGetRequest extends Ab
 
 	public void setProductOriginNumId(Long productOriginNumId) {
 		this.productOriginNumId = productOriginNumId;
-	}
-
-	public Double getPrice() {
-		return price;
-	}
-
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-
-	public Double getTaxRate() {
-		return taxRate;
-	}
-
-	public void setTaxRate(Double taxRate) {
-		this.taxRate = taxRate;
 	}
 
 	public String getPoNumId() {
