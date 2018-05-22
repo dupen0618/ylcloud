@@ -17,6 +17,9 @@ public class NotBalanceCutGetRequest extends AbstractRequest {
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 
+	@NotNull(message = "结算门店编号不能为空！")
+	private Long balanceSubUnitNumId;
+
 	@NotNull(message = "供应商编号不能为空！")
 	private Long unitNumId;
 
@@ -71,5 +74,11 @@ public class NotBalanceCutGetRequest extends AbstractRequest {
 		this.endDate = endDate;
 	}
 
+	public Long getBalanceSubUnitNumId() {
+		return balanceSubUnitNumId;
+	}
 
+	public void setBalanceSubUnitNumId(Long balanceSubUnitNumId) {
+		this.balanceSubUnitNumId = balanceSubUnitNumId;
+	}
 }
