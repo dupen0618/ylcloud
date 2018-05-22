@@ -14,6 +14,6 @@ public interface WmDailyCarryService {
     * @return WmPhysicalDailyAccountGaReponse    返回类型  
     * @throws
      */
-    public WmPhysicalDailyAccountGaReponse createWmPhysicalDailyAccountGaCarryDown(WmPhysicalDailyAccountGaRequest request);
+    public WmPhysicalDailyAccountGaReponse carryPhysicalDailyAccount(WmPhysicalDailyAccountGaRequest request);
 	
 }
