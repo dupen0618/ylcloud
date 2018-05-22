@@ -149,8 +149,8 @@ public interface SoApplyService {
     public ReturnApplyDtlImportResponse importReturnApplyDtl(ReturnApplyDtlImportRequest request);
 
     //根据申请单号，门店获取状态
-	public StatusNumIdByApplyNumIdGetResponse getStatusNumIdByApplyNumId(StatusNumIdByApplyNumIdGetRequest request);
+	public StatusNumIdForSoApplySubcontractSplitGetResponse getStatusNumIdByApplyNumId(StatusNumIdForSoApplySubcontractSplitGetRequest request);
 
 	//根据申请单号更新状态
-	public StatusNumIdByApplyNumIdUpdateResponse updateStatusNumIdByApplyNumId(StatusNumIdByApplyNumIdUpdateRequest request);
+	public StatusNumIdForSoApplySubcontractSplitUpdateResponse updateStatusNumIdByApplyNumId(StatusNumIdForSoApplySubcontractSplitUpdateRequest request);
 }

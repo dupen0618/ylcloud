@@ -4,7 +4,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 import javax.validation.constraints.NotNull;
 
-public class StatusNumIdByApplyNumIdGetRequest extends AbstractRequest {
+public class StatusNumIdForSoApplySubcontractSplitGetRequest extends AbstractRequest {
     private static final long serialVersionUID = -8781020251949209140L;
 
     @NotNull(message = "领料单号不能为空")
