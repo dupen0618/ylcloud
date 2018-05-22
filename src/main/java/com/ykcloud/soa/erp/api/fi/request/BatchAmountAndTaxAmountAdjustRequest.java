@@ -1,10 +1,6 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
 import java.util.List;
-
-
-import org.hibernate.validator.constraints.NotEmpty;
-
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.fi.model.BatchAmountAndTaxAmountForAdjust;
 
@@ -17,7 +13,6 @@ public class BatchAmountAndTaxAmountAdjustRequest extends AbstractUserSessionReq
 
 	private static final long serialVersionUID = -7688256958294439787L;
 	
-	@NotEmpty(message = "批次日进销存明细不能为空！")
 	private List<BatchAmountAndTaxAmountForAdjust> AdjustAmountAndTaxAmountList;
 
 	public List<BatchAmountAndTaxAmountForAdjust> getAdjustAmountAndTaxAmountList() {

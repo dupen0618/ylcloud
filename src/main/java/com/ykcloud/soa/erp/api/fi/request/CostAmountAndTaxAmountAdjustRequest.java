@@ -1,6 +1,9 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
 import java.util.List;
+
+import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
@@ -15,7 +18,7 @@ public class CostAmountAndTaxAmountAdjustRequest extends AbstractUserSessionRequ
 
 	private static final long serialVersionUID = 8621368692202250424L;
 	
-	@NotEmpty(message = "门店不能为空！")
+	@NotNull(message = "门店不能为空！")
 	private Long subUnitNumId;
 	
 	@NotEmpty(message = "商品成本金额调整明细不能为空！")
