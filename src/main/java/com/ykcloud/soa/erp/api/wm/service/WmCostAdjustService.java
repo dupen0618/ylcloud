@@ -3,9 +3,11 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.WmBlBatchDtlQuest;
 import com.ykcloud.soa.erp.api.wm.request.WmCostByAdjustPriceAdjustRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmCostByScmChangeCostRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmadjustCostRequest;
 import com.ykcloud.soa.erp.api.wm.response.WmBLBatchDTLAllotResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmCostByAdjustPriceAdjustResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmCostByScmChangeCostResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmadjustCostResponse;
 import com.ykcloud.soa.erp.api.wm.request.WmCostByCostPriceAdjustRequest;
 import com.ykcloud.soa.erp.api.wm.response.WmCostByCostPriceAdjustResponse;
 
@@ -16,6 +18,13 @@ import com.ykcloud.soa.erp.api.wm.response.WmCostByCostPriceAdjustResponse;
  */
 
 public interface WmCostAdjustService {
+	
+	/**
+	 * 库存金额调整路由接口
+	 * @author tz.x
+	 * @date 2018年5月22日下午5:31:15
+	 */
+	public WmadjustCostResponse adjustWmCost(WmadjustCostRequest request);
 	
 	/**
 	 * 调价(不指定批次，不管批次明细中现有价格)【全部调整成新进价】
