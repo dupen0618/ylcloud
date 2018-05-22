@@ -4,10 +4,6 @@ import java.util.Date;
 
 public class ShipSellDailyInfo {
 
-    private String reservedNo;// 日报出库单号
-    private Long tenantNumId;// 租户
-    private Long subUnitNumId;// 门店
-    private Date orderDate;// 销售日期
     private Long physicalNumId;// 出货物理仓库
     private Long storageNumId;// 出货逻辑仓
     private Long itemNumId;// 商品
@@ -20,40 +16,6 @@ public class ShipSellDailyInfo {
     private String conversionStyleDesc;// 件装规格
     private Double packageQty;// 件数
     private Double qty;// 数量
-    private Double costPrice;// 成本价
-    private Double workCost;// 成本金额
-
-    public String getReservedNo() {
-        return reservedNo;
-    }
-
-    public void setReservedNo(String reservedNo) {
-        this.reservedNo = reservedNo;
-    }
-
-    public Long getTenantNumId() {
-        return tenantNumId;
-    }
-
-    public void setTenantNumId(Long tenantNumId) {
-        this.tenantNumId = tenantNumId;
-    }
-
-    public Long getSubUnitNumId() {
-        return subUnitNumId;
-    }
-
-    public void setSubUnitNumId(Long subUnitNumId) {
-        this.subUnitNumId = subUnitNumId;
-    }
-
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
 
     public Long getPhysicalNumId() {
         return physicalNumId;
@@ -149,21 +111,5 @@ public class ShipSellDailyInfo {
 
     public void setQty(Double qty) {
         this.qty = qty;
-    }
-
-    public Double getCostPrice() {
-        return costPrice;
-    }
-
-    public void setCostPrice(Double costPrice) {
-        this.costPrice = costPrice;
-    }
-
-    public Double getWorkCost() {
-        return workCost;
-    }
-
-    public void setWorkCost(Double workCost) {
-        this.workCost = workCost;
     }
 }
