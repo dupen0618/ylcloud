@@ -51,7 +51,7 @@ public interface WmCostAdjustService {
 	public WmCostByCostPriceAdjustResponse adjustWmCostByCostPrice(WmCostByCostPriceAdjustRequest request);
 	
 	/**
-	 * @Description:根据进价调整标的要求调整Price字段中的价格
+	 * @Description:指定批次调价
 	 * @author 殷剑
 	 * @Date 2018/5/22
 	 */
