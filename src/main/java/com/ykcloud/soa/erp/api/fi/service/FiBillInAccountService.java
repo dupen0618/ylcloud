@@ -12,5 +12,7 @@ import com.ykcloud.soa.erp.api.fi.response.ReceiptInAccountResponse;
 public interface FiBillInAccountService {
     ReceiptInAccountResponse setReceiptInAccountService(ReceiptInAccountRequest request);
 
-    FiMonthlySettlementResponse buildMonthlySettlementRecord(FiMonthlySettlementRequest request);
+    FiMonthlySettlementResponse buildBatchMonthSalesMonthlySettlementRecord(FiMonthlySettlementRequest request);
+
+    FiMonthlySettlementResponse buildItemMonthSalesMonthlySettlementRecord(FiMonthlySettlementRequest request);
 }
