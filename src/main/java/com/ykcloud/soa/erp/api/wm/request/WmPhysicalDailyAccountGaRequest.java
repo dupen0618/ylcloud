@@ -20,7 +20,7 @@ public class WmPhysicalDailyAccountGaRequest extends AbstractRequest  {
      * 结转日期
      */
     @NotNull(message = "销售日期不能为空")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     public Date orderDate;
     
     /**
