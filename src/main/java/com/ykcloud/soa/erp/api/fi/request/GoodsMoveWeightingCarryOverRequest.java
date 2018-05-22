@@ -24,7 +24,7 @@ public class GoodsMoveWeightingCarryOverRequest extends AbstractUserSessionReque
 	private Long subUnitNumId;
 
 	@NotNull(message = "结算日期不能为空！")
-	private Date balanceDate;
+	private Date orderDate;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -34,12 +34,14 @@ public class GoodsMoveWeightingCarryOverRequest extends AbstractUserSessionReque
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Date getBalanceDate() {
-		return balanceDate;
+	public Date getOrderDate() {
+		return orderDate;
 	}
 
-	public void setBalanceDate(Date balanceDate) {
-		this.balanceDate = balanceDate;
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
 	}
+
+	
 
 }
