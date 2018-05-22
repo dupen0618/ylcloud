@@ -13,6 +13,11 @@ public class ProductForShopTransfer implements Serializable {
 	private static final long serialVersionUID = -7437509378376568072L;
 	
 	/**
+	 * 物流方式
+	 */
+	private Long logisticsType;
+	
+	/**
 	 * 采购途径
 	 */
 	private Long purchaseTypeNumId;
@@ -133,6 +138,14 @@ public class ProductForShopTransfer implements Serializable {
 	private Double stockQty;
 	
 	private String itemid;
+
+	public Long getLogisticsType() {
+		return logisticsType;
+	}
+
+	public void setLogisticsType(Long logisticsType) {
+		this.logisticsType = logisticsType;
+	}
 
 	public Long getPurchaseTypeNumId() {
 		return purchaseTypeNumId;
