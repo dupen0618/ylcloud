@@ -10,6 +10,6 @@ import com.ykcloud.soa.erp.api.fi.response.BillsCheckResponse;
  */
 public interface BillsCheckService {
 
-	public BillsCheckResponse checkBills(BillsCheckRequest request);
+	public BillsCheckResponse checkBillForDailyCarry(BillsCheckRequest request);
 	
 }
