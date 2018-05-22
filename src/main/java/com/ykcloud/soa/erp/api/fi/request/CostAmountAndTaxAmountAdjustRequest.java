@@ -18,10 +18,10 @@ public class CostAmountAndTaxAmountAdjustRequest extends AbstractUserSessionRequ
 
 	private static final long serialVersionUID = 8621368692202250424L;
 	
-	@NotNull(message = "门店不能为空！")
+	//@NotNull(message = "门店不能为空！")
 	private Long subUnitNumId;
 	
-	@NotEmpty(message = "商品成本金额调整明细不能为空！")
+	//@NotEmpty(message = "商品成本金额调整明细不能为空！")
 	private List<CostAmountAndTaxAmountForAdjust> fiCostDetails;
 
 	public Long getSubUnitNumId() {
