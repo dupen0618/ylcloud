@@ -19,7 +19,7 @@ public interface WmReceiptInAccountTSCService {
      * @Title: createWmPhysicalDailyAccountGaCarryDown
      * @Description: 物理仓库日进销存结转
      */
-    WmPhysicalDailyAccountGaReponse createWmPhysicalDailyAccountGaCarryDown(WmPhysicalDailyAccountGaRequest request);
+    //WmPhysicalDailyAccountGaReponse createWmPhysicalDailyAccountGaCarryDown(WmPhysicalDailyAccountGaRequest request);
 
     //物理仓月进销-月结
     WmMonthlySettlementResponse buildMonthlySettlementRecord(WmMonthlySettlementRequest request);
