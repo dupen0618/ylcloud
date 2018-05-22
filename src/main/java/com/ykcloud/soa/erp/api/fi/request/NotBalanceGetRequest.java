@@ -14,7 +14,7 @@ public class NotBalanceGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = -5126554109130183317L;
 
-	@NotNull(message = "门店编号不能为空！")
+	@NotNull(message = "结算门店编号不能为空！")
 	private Long subUnitNumId;
 
 	@NotNull(message = "供应商不能为空！")
