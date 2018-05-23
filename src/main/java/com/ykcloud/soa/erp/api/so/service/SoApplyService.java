@@ -1,47 +1,8 @@
 package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.scm.request.ShopTransferOrderActualQtyUpdateRequest;
-import com.ykcloud.soa.erp.api.so.request.ActualQtyForReturnUpdateRequest;
-import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyGetRequest;
-import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplySubcontractSplitGetRequest;
-import com.ykcloud.soa.erp.api.so.request.ProductInfoForSoApplyTransferBetweenShopGetRequest;
-import com.ykcloud.soa.erp.api.so.request.QtyForSoApplyCheckRequest;
-import com.ykcloud.soa.erp.api.so.request.ReturnApplyAfterGenerateReturnSoUpdateRequest;
-import com.ykcloud.soa.erp.api.so.request.ReturnApplyAuditRequest;
-import com.ykcloud.soa.erp.api.so.request.ReturnApplyBatchAuditRequest;
-import com.ykcloud.soa.erp.api.so.request.ReturnApplyByAuthorConfirmRequest;
-import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlImportRequest;
-import com.ykcloud.soa.erp.api.so.request.ShopTransferByAuthorConfirmRequest;
-import com.ykcloud.soa.erp.api.so.request.ShopTransferByOperationCenterAuditRequest;
-import com.ykcloud.soa.erp.api.so.request.ShopTransferByReceiverConfirmRequest;
-import com.ykcloud.soa.erp.api.so.request.ShopTransferDtlImportRequest;
-import com.ykcloud.soa.erp.api.so.request.ShopTransferRejectAuditRequest;
-import com.ykcloud.soa.erp.api.so.request.SoApplyActualQtyUpdateGetRequest;
-import com.ykcloud.soa.erp.api.so.request.SoApplyByAuthorConfirmRequest;
-import com.ykcloud.soa.erp.api.so.request.SoApplyDtlImportRequest;
-import com.ykcloud.soa.erp.api.so.request.SoOriginReservedNoRequest;
-import com.ykcloud.soa.erp.api.so.request.MaterialIssueBackAuditRequest;
-import com.ykcloud.soa.erp.api.so.response.ActualQtyForReturnUpdateResponse;
-import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyGetResponse;
-import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplySubcontractSplitGetResponse;
-import com.ykcloud.soa.erp.api.so.response.ProductInfoForSoApplyTransferBetweenShopGetResponse;
-import com.ykcloud.soa.erp.api.so.response.QtyForSoApplyCheckResponse;
-import com.ykcloud.soa.erp.api.so.response.ReturnApplyAfterGenerateReturnSoUpdateResponse;
-import com.ykcloud.soa.erp.api.so.response.ReturnApplyAuditResponse;
-import com.ykcloud.soa.erp.api.so.response.ReturnApplyBatchAuditResponse;
-import com.ykcloud.soa.erp.api.so.response.ReturnApplyByAuthorConfirmResponse;
-import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlImportResponse;
-import com.ykcloud.soa.erp.api.so.response.ShopTransferByAuthorConfirmResponse;
-import com.ykcloud.soa.erp.api.so.response.ShopTransferByOperationCenterAuditResponse;
-import com.ykcloud.soa.erp.api.so.response.ShopTransferByReceiverConfirmResponse;
-import com.ykcloud.soa.erp.api.so.response.ShopTransferDtlImportResponse;
-import com.ykcloud.soa.erp.api.so.response.ShopTransferOrderActualQtyUpdateResponse;
-import com.ykcloud.soa.erp.api.so.response.ShopTransferRejectAuditResponse;
-import com.ykcloud.soa.erp.api.so.response.SoApplyActualQtyUpdateGetResponse;
-import com.ykcloud.soa.erp.api.so.response.SoApplyByAuthorConfirmResponse;
-import com.ykcloud.soa.erp.api.so.response.SoApplyDtlImportResponse;
-import com.ykcloud.soa.erp.api.so.response.SoOriginReservedNoResponse;
-import com.ykcloud.soa.erp.api.so.response.MaterialIssueBackAuditResponse;
+import com.ykcloud.soa.erp.api.so.request.*;
+import com.ykcloud.soa.erp.api.so.response.*;
 
 /**
  * TODO（描述类的职责）
@@ -186,4 +147,10 @@ public interface SoApplyService {
 
     //退货申请单EXCEL商品批量导入
     public ReturnApplyDtlImportResponse importReturnApplyDtl(ReturnApplyDtlImportRequest request);
+
+    //根据申请单号，门店获取状态
+	public StatusNumIdForSoApplySubcontractSplitGetResponse getStatusNumIdByApplyNumId(StatusNumIdForSoApplySubcontractSplitGetRequest request);
+
+	//根据申请单号更新状态
+	public StatusNumIdForSoApplySubcontractSplitUpdateResponse updateStatusNumIdByApplyNumId(StatusNumIdForSoApplySubcontractSplitUpdateRequest request);
 }

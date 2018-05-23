@@ -2,7 +2,6 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import javax.validation.constraints.NotNull;
 
-import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
@@ -23,9 +22,6 @@ public class WmadjustCostRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 	
-	@ApiField(description = "指定批次号")
-	private String batchSeries;
-
 	public Long getTypeNumId() {
 		return typeNumId;
 	}
@@ -48,14 +44,6 @@ public class WmadjustCostRequest extends AbstractUserSessionRequest {
 
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
-	}
-
-	public String getBatchSeries() {
-		return batchSeries;
-	}
-
-	public void setBatchSeries(String batchSeries) {
-		this.batchSeries = batchSeries;
 	}
 
 }
