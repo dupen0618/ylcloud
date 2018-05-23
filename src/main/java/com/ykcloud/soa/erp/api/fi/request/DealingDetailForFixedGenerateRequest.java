@@ -18,22 +18,11 @@ public class DealingDetailForFixedGenerateRequest extends AbstractUserSessionReq
 
 	private static final long serialVersionUID = -8626173176652849783L;
 	
-	@NotNull(message="门店不能为空")
-	private Long subUnitNumId;
-	
 	private List<FiBlDealingsHdr> fiBlDealingsHdrs;
 	
 	private List<FiBlDealingsDtl> fiBlDealingsDtls;
 	
 	private List<FiBlDealingsItemDtl> fiBlDealingsItemDtls;
-
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
-	}
 
 	public List<FiBlDealingsHdr> getFiBlDealingsHdrs() {
 		return fiBlDealingsHdrs;
