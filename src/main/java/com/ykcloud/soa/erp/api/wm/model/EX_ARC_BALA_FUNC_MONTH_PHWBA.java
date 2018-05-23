@@ -82,6 +82,8 @@ public class EX_ARC_BALA_FUNC_MONTH_PHWBA {
 
     private Long CHECK_RISE_QTY_SIGN;//盘盈数量
 
+    private Long ONLOADPROCESS;//标记是否要处理在途
+
     public Long getSERIES() {
         return SERIES;
     }
@@ -392,5 +394,13 @@ public class EX_ARC_BALA_FUNC_MONTH_PHWBA {
 
     public void setCHECK_RISE_QTY_SIGN(Long CHECK_RISE_QTY_SIGN) {
         this.CHECK_RISE_QTY_SIGN = CHECK_RISE_QTY_SIGN;
+    }
+
+    public Long getONLOADPROCESS() {
+        return ONLOADPROCESS;
+    }
+
+    public void setONLOADPROCESS(Long ONLOADPROCESS) {
+        this.ONLOADPROCESS = ONLOADPROCESS;
     }
 }
