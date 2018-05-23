@@ -58,6 +58,9 @@ public interface WmWorkService {
 
 	//溢出转码入账
 	public WorkLossChangeConfirmResponse confirmWorkLossChange(WorkLossChangeConfirmRequest request);
+	
+	//加工预入单
+	public WorkVirtualConfirmResponse confirmVirtualWork(WorkVirtualConfirmRequest request);
 
 	/**
 	 * 以销定入商品日结处理
