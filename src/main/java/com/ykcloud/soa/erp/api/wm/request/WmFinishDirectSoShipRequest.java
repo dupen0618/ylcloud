@@ -16,6 +16,9 @@ public class WmFinishDirectSoShipRequest extends AbstractUserSessionRequest {
 	
 	@NotNull(message = "订单编号不能为空！")
 	private String soNumId;
+	
+	@NotNull(message = "是否可以短播标识符不能为空! ")
+	private Long confirmSign;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -32,7 +35,15 @@ public class WmFinishDirectSoShipRequest extends AbstractUserSessionRequest {
 	public void setSoNumId(String soNumId) {
 		this.soNumId = soNumId;
 	}
-	
-	
 
+	public Long getConfirmSign() {
+		return confirmSign;
+	}
+
+	public void setConfirmSign(Long confirmSign) {
+		this.confirmSign = confirmSign;
+	}
+
+	
+	
 }

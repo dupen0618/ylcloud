@@ -15,20 +15,9 @@ import com.ykcloud.soa.erp.api.fi.model.BatchAmountAndTaxAmountForAdjust;
 public class BatchAmountAndTaxAmountForFixedAdjustRequest extends AbstractUserSessionRequest{
 
 	private static final long serialVersionUID = 4362052094214066876L;
-	
-	@NotEmpty(message = "批次日进销存明细不能为空！")
-	private Long subUnitNumId;
 
 	@NotEmpty(message = "批次日进销存明细不能为空！")
 	private List<BatchAmountAndTaxAmountForAdjust> AdjustAmountAndTaxAmountList;
-
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
-	}
 
 	public List<BatchAmountAndTaxAmountForAdjust> getAdjustAmountAndTaxAmountList() {
 		return AdjustAmountAndTaxAmountList;

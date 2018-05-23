@@ -15,21 +15,10 @@ import com.ykcloud.soa.erp.api.fi.model.WeightedAveragePriceForAdjust;
 public class WeightedAveragePriceAdjustRequest extends AbstractUserSessionRequest{
 
 	private static final long serialVersionUID = 8132435317045717719L;
-	
-	@NotEmpty(message = "门店不能为空！")
-	private Long subUnitNumId;
-	
+
 	@NotEmpty(message = "调整加权平均价格明细不能为空！")
 	private List<WeightedAveragePriceForAdjust> adjustWeightedAveragePriceList;
 
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
-	}
-	
 	public List<WeightedAveragePriceForAdjust> getAdjustWeightedAveragePriceList() {
 		return adjustWeightedAveragePriceList;
 	}

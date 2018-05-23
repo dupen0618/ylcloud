@@ -13,11 +13,22 @@ import javax.validation.constraints.NotNull;
  */
 public class VirtualDailyAndMonthCostGenerateRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = -6820833950056653435L;
-
+    
+    @NotNull(message = "销售价格不能为空！")
+    private Double tradePrice;
+    
     @NotNull(message = "虚拟批次数据不能为空！")
     private VirtualWmBlBatchDtl wmBlBatchDtl;
 
-    public VirtualWmBlBatchDtl getWmBlBatchDtl() {
+    public Double getTradePrice() {
+		return tradePrice;
+	}
+
+	public void setTradePrice(Double tradePrice) {
+		this.tradePrice = tradePrice;
+	}
+
+	public VirtualWmBlBatchDtl getWmBlBatchDtl() {
         return wmBlBatchDtl;
     }
 
