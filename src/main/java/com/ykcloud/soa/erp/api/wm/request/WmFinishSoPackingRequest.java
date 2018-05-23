@@ -18,7 +18,7 @@ public class WmFinishSoPackingRequest extends AbstractUserSessionRequest {
 	private Long subUnitNumId;
 
 	@NotNull(message = "是否可以短播标识符不能为空! ")
-	private Long cancelSign;
+	private Long confirmSign;
 	
 
 	public String getWlbc() {
@@ -37,13 +37,14 @@ public class WmFinishSoPackingRequest extends AbstractUserSessionRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Long getCancelSign() {
-		return cancelSign;
+	public Long getConfirmSign() {
+		return confirmSign;
 	}
 
-	public void setCancelSign(Long cancelSign) {
-		this.cancelSign = cancelSign;
+	public void setConfirmSign(Long confirmSign) {
+		this.confirmSign = confirmSign;
 	}
 
+	
 
 }
