@@ -55,7 +55,8 @@ public interface WmCostAdjustService {
 	 * @author 殷剑
 	 * @Date 2018/5/22
 	 */
-    WmBLBatchDTLAllotResponse updateBatchPrice(WmBlBatchDtlQuest request);
+	WmCostByAdjustPriceAdjustResponse updateBatchPrice(WmCostByAdjustPriceAdjustRequest request);
+//    WmBLBatchDTLAllotResponse updateBatchPrice(WmBlBatchDtlQuest request);
     
     /**
      * @Description:只调低价格(不指定批次，只调整批次明细中价格比AdjustPrice高的)，【调低不调高】
