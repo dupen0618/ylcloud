@@ -27,9 +27,6 @@ public class SoTmlBalanceSignUpdateRequest extends AbstractUserSessionRequest{
     @NotNull(message = "销售日期不能为空！")
     private Date orderDate;
 
-    @NotNull(message = "销售小票单号不能为空！")
-    private List<String> tmlNumIds;
-
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -47,11 +44,5 @@ public class SoTmlBalanceSignUpdateRequest extends AbstractUserSessionRequest{
         this.orderDate = orderDate;
     }
 
-    public List<String> getTmlNumIds() {
-        return tmlNumIds;
-    }
-
-    public void setTmlNumIds(List<String> tmlNumIds) {
-        this.tmlNumIds = tmlNumIds;
-    }
+   
 }
