@@ -63,5 +63,5 @@ public interface WmCostAdjustService {
 	 * @author 殷剑
 	 * @Date 2018/5/22
      */
-    WmBLBatchDTLAllotResponse updateLowPrice(WmBlBatchDtlQuest request);
+	WmCostByAdjustPriceAdjustResponse updateLowPrice(WmCostByAdjustPriceAdjustRequest request);
 }
