@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
 * @ClassName: NegativeStockBatchAdjustmentRequest.java
@@ -14,7 +15,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 * @author: fred.zhao
 * @date: 2018年5月7日 下午3:12:29 
 */
-public class NegativeStockBatchAdjustmentRequest extends AbstractRequest {
+public class NegativeStockBatchAdjustmentRequest extends AbstractUserSessionRequest {
 
 	/**
 	 * 
