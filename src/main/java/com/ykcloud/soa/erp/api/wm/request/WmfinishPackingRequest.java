@@ -17,7 +17,7 @@ public class WmfinishPackingRequest extends AbstractUserSessionRequest {
 	private String soNumId;
 
 	@NotNull(message = "短装标识符不能为空不能为空! ")
-	private Long cancelSign;
+	private Long confirmSign;
 	
 
 	public Long getSubUnitNumId() {
@@ -36,13 +36,14 @@ public class WmfinishPackingRequest extends AbstractUserSessionRequest {
 		this.soNumId = soNumId;
 	}
 
-	public Long getCancelSign() {
-		return cancelSign;
+	public Long getConfirmSign() {
+		return confirmSign;
 	}
 
-	public void setCancelSign(Long cancelSign) {
-		this.cancelSign = cancelSign;
+	public void setConfirmSign(Long confirmSign) {
+		this.confirmSign = confirmSign;
 	}
 
+	
 
 }

@@ -17,7 +17,7 @@ public class WmFinishReserverSoShipRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "出库so不能为空！")
 	private String soNumId;
 	@NotNull(message = "短出标识不能为空！")
-	private Long cancelSign;
+	private Long confirmSign;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -35,14 +35,12 @@ public class WmFinishReserverSoShipRequest extends AbstractUserSessionRequest {
 		this.soNumId = soNumId;
 	}
 
-	public Long getCancelSign() {
-		return cancelSign;
+	public Long getConfirmSign() {
+		return confirmSign;
 	}
 
-	public void setCancelSign(Long cancelSign) {
-		this.cancelSign = cancelSign;
+	public void setConfirmSign(Long confirmSign) {
+		this.confirmSign = confirmSign;
 	}
-	
-	
 
 }
