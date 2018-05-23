@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 
 /**
@@ -10,6 +11,16 @@ import java.io.Serializable;
 public class FiBlDealingsHdr implements Serializable {
 
 	private static final long serialVersionUID = -3876586394618921453L;
+	
+	/**
+	 * 结算门店
+	 */
+	private Long balanceSubUnitNumId;
+	
+	/**
+	 * 结算日期
+	 */
+	private Date balanceDate;
 	
 	/**
 	 * 单据编号
@@ -55,6 +66,22 @@ public class FiBlDealingsHdr implements Serializable {
 	 * 0: 手工输入 1： 自动计算
 	 */
 	private Long soFromType;
+
+	public Long getBalanceSubUnitNumId() {
+		return balanceSubUnitNumId;
+	}
+
+	public void setBalanceSubUnitNumId(Long balanceSubUnitNumId) {
+		this.balanceSubUnitNumId = balanceSubUnitNumId;
+	}
+
+	public Date getBalanceDate() {
+		return balanceDate;
+	}
+
+	public void setBalanceDate(Date balanceDate) {
+		this.balanceDate = balanceDate;
+	}
 
 	public String getDealingsNumId() {
 		return dealingsNumId;
