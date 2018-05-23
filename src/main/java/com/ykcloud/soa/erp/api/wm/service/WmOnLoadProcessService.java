@@ -16,16 +16,4 @@ public interface WmOnLoadProcessService {
 
     //物理仓月进销存入库在途处理
     WmOnLoadProcessResponse PhysicalMonthReceiptOnLoadProcess(WmOnLoadProcessRequest request);
-
-    //商品成本月进销存出库在途处理
-    WmOnLoadProcessResponse CostMonthShipOnLoadProcess(WmOnLoadProcessRequest request);
-
-    //商品成本月进销存入库在途处理
-    WmOnLoadProcessResponse CostMonthReceiptOnLoadProcess(WmOnLoadProcessRequest request);
-
-    // 代销商品款出库在途处理
-    WmOnLoadProcessResponse ConsignmentShipOnLoadProcess(WmOnLoadProcessRequest request);
-
-    //代销商品款入库在途处理
-    WmOnLoadProcessResponse ConsignmentReceiptOnLoadProcess(WmOnLoadProcessRequest request);
 }
