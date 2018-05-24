@@ -18,6 +18,8 @@ public class WmCostByAdjustPriceAdjustRequest extends AbstractUserSessionRequest
 	
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
+	
+	private String series;
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -33,6 +35,14 @@ public class WmCostByAdjustPriceAdjustRequest extends AbstractUserSessionRequest
 
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
+	}
+	
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
 	}
 
 }

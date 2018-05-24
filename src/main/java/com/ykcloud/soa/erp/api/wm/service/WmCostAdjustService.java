@@ -51,16 +51,17 @@ public interface WmCostAdjustService {
 	public WmCostByCostPriceAdjustResponse adjustWmCostByCostPrice(WmCostByCostPriceAdjustRequest request);
 	
 	/**
-	 * @Description:根据进价调整标的要求调整Price字段中的价格
+	 * @Description:指定批次调价
 	 * @author 殷剑
 	 * @Date 2018/5/22
 	 */
-    WmBLBatchDTLAllotResponse updateBatchPrice(WmBlBatchDtlQuest request);
+	WmCostByAdjustPriceAdjustResponse updateBatchPrice(WmCostByAdjustPriceAdjustRequest request);
+//    WmBLBatchDTLAllotResponse updateBatchPrice(WmBlBatchDtlQuest request);
     
     /**
      * @Description:只调低价格(不指定批次，只调整批次明细中价格比AdjustPrice高的)，【调低不调高】
 	 * @author 殷剑
 	 * @Date 2018/5/22
      */
-    WmBLBatchDTLAllotResponse updateLowPrice(WmBlBatchDtlQuest request);
+	WmCostByAdjustPriceAdjustResponse updateLowPrice(WmCostByAdjustPriceAdjustRequest request);
 }

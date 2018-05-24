@@ -17,9 +17,22 @@ public class WmBlBatchDtlQuest extends AbstractRequest {
 	private static final long serialVersionUID = -1001265722329349228L;
 	
 	/**
+	 * id
+	 */
+	String series;
+	
+	/**
 	 * 批次id
 	 */
 	String batchSeries;
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
 
 	public String getBatchSeries() {
 		return batchSeries;
@@ -27,6 +40,7 @@ public class WmBlBatchDtlQuest extends AbstractRequest {
 
 	public void setBatchSeries(String batchSeries) {
 		this.batchSeries = batchSeries;
-	}	
+	}
+	
 	
 }

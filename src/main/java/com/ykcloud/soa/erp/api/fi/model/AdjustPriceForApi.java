@@ -24,6 +24,12 @@ public class AdjustPriceForApi implements Serializable {
 	 * 调整后价格
 	 */
 	Double adjustPrice;
+	
+	/**
+	 * id
+	 */
+	String series;
+	
 	/**
 	 * 批次id
 	 */
@@ -54,6 +60,12 @@ public class AdjustPriceForApi implements Serializable {
 	}
 	public void setAdjustPrice(Double adjustPrice) {
 		this.adjustPrice = adjustPrice;
+	}
+	public String getSeries() {
+		return series;
+	}
+	public void setSeries(String series) {
+		this.series = series;
 	}
 	public String getBatchSeries() {
 		return batchSeries;
