@@ -22,7 +22,8 @@ public class WmOnLoadProcessRequest extends AbstractUserSessionRequest {
 
     @NotNull(message = "单据类型不能为空！")
     Long typeNumId;
-    private Long balaFuncId;
+
+    private Long balanceFunctionId;
 
 
     public Long getSubUnitNumId() {
@@ -57,11 +58,11 @@ public class WmOnLoadProcessRequest extends AbstractUserSessionRequest {
         this.typeNumId = typeNumId;
     }
 
-    public Long getBalaFuncId() {
-        return balaFuncId;
+    public Long getBalanceFunctionId() {
+        return balanceFunctionId;
     }
 
-    public void setBalaFuncId(Long balaFuncId) {
-        this.balaFuncId = balaFuncId;
+    public void setBalanceFunctionId(Long balanceFunctionId) {
+        this.balanceFunctionId = balanceFunctionId;
     }
 }

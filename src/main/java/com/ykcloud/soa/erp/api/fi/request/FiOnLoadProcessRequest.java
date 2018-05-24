@@ -28,7 +28,7 @@ public class FiOnLoadProcessRequest extends AbstractUserSessionRequest {
     private Long pty2NumId;
     private Long pty3NumId;
     private Long departNumId;
-    private Long balaFuncId;
+    private Long balanceFunctionId;
     private Long crossSubCompanySign;
 
     public Long getSubUnitNumId() {
@@ -96,12 +96,12 @@ public class FiOnLoadProcessRequest extends AbstractUserSessionRequest {
         this.typeNumId = typeNumId;
     }
 
-    public Long getBalaFuncId() {
-        return balaFuncId;
+    public Long getBalanceFunctionId() {
+        return balanceFunctionId;
     }
 
-    public void setBalaFuncId(Long balaFuncId) {
-        this.balaFuncId = balaFuncId;
+    public void setBalanceFunctionId(Long balanceFunctionId) {
+        this.balanceFunctionId = balanceFunctionId;
     }
 
     public Long getCrossSubCompanySign() {
