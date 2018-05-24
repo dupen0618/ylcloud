@@ -13,12 +13,12 @@ public class CashReceiptRequest extends AbstractUserSessionRequest
     @NotNull(message = "门店号不能为空！")
     private Long subUnitNumId;
 
-    @NotNull(message = "付款日期不能为空！")
+    @NotNull(message = "收款日期不能为空！")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date payDate;
+    private Date receiveDate;
 
-    @NotNull(message = "单据编号不能为空!")
-    private String reservedNo;
+    @NotNull(message = "收款单号不能为空!")
+    private String receiveNo;
 
     public Long getSubUnitNumId()
     {
@@ -30,23 +30,19 @@ public class CashReceiptRequest extends AbstractUserSessionRequest
         this.subUnitNumId = subUnitNumId;
     }
 
-    public Date getPayDate()
-    {
-        return payDate;
+    public Date getReceiveDate() {
+        return receiveDate;
     }
 
-    public void setPayDate(Date payDate)
-    {
-        this.payDate = payDate;
+    public void setReceiveDate(Date receiveDate) {
+        this.receiveDate = receiveDate;
     }
 
-    public String getReservedNo()
-    {
-        return reservedNo;
+    public String getReceiveNo() {
+        return receiveNo;
     }
 
-    public void setReservedNo(String reservedNo)
-    {
-        this.reservedNo = reservedNo;
+    public void setReceiveNo(String receiveNo) {
+        this.receiveNo = receiveNo;
     }
 }
