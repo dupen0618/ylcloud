@@ -21,9 +21,8 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
     @NotEmpty(message = "待入账批次流水不能为空！")
     List<FiPhysicalBatchAccountWba> fiPhysicalBatchAccountWbaList;
 
-	Long balaFuncId;
-
     private Long crossSubCompanySign;
+    private Long balanceFunctionId;
 
     public String getTypeNumId() {
         return typeNumId;
@@ -41,14 +40,6 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
         this.fiPhysicalBatchAccountWbaList = fiPhysicalBatchAccountWbaList;
     }
 
-    public Long getBalaFuncId() {
-        return balaFuncId;
-    }
-
-    public void setBalaFuncId(Long balaFuncId) {
-        this.balaFuncId = balaFuncId;
-    }
-
     public String getBillTypeNumId() {
         return billTypeNumId;
     }
@@ -63,5 +54,13 @@ public class ReceiptInAccountRequest extends AbstractUserSessionRequest {
 
     public Long getCrossSubCompanySign() {
         return crossSubCompanySign;
+    }
+
+    public void setBalanceFunctionId(Long balanceFunctionId) {
+        this.balanceFunctionId = balanceFunctionId;
+    }
+
+    public Long getBalanceFunctionId() {
+        return balanceFunctionId;
     }
 }

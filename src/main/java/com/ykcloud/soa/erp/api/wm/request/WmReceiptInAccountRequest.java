@@ -23,7 +23,7 @@ public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
     @NotNull(message = "门店编号不能为空!")
     private Long subUnitNumId;
 
-    Long balaFuncId;
+    Long balanceFunctionId;
 
 
     public String getReservedNo() {
@@ -42,12 +42,12 @@ public class WmReceiptInAccountRequest extends AbstractUserSessionRequest {
         this.typeNumId = typeNumId;
     }
 
-    public Long getBalaFuncId() {
-        return balaFuncId;
+    public Long getBalanceFunctionId() {
+        return balanceFunctionId;
     }
 
-    public void setBalaFuncId(Long balaFuncId) {
-        this.balaFuncId = balaFuncId;
+    public void setBalanceFunctionId(Long balanceFunctionId) {
+        this.balanceFunctionId = balanceFunctionId;
     }
 
     public Long getSubUnitNumId() {
