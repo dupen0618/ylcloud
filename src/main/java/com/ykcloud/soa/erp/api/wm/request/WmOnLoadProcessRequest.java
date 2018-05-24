@@ -21,7 +21,7 @@ public class WmOnLoadProcessRequest extends AbstractUserSessionRequest {
     String billTypeNumId;
 
     @NotNull(message = "单据类型不能为空！")
-    String typeNumId;
+    Long typeNumId;
     private Long balaFuncId;
 
 
@@ -49,11 +49,11 @@ public class WmOnLoadProcessRequest extends AbstractUserSessionRequest {
         this.billTypeNumId = billTypeNumId;
     }
 
-    public String getTypeNumId() {
+    public Long getTypeNumId() {
         return typeNumId;
     }
 
-    public void setTypeNumId(String typeNumId) {
+    public void setTypeNumId(Long typeNumId) {
         this.typeNumId = typeNumId;
     }
 
