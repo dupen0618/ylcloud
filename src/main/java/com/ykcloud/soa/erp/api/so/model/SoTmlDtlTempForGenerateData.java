@@ -27,6 +27,10 @@ public class SoTmlDtlTempForGenerateData  {
      * 终端订单号
      */
     private Long tmlNumId;
+    /**
+     * 日期
+     */
+    private Date orderDate;
 
     /**
      * 门店编号
@@ -1243,4 +1247,14 @@ public class SoTmlDtlTempForGenerateData  {
     public void setItemId(String itemId) {
         this.itemId = itemId;
     }
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
+    
+    
 }
