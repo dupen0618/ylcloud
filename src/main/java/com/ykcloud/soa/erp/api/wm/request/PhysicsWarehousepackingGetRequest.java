@@ -29,7 +29,7 @@ public class PhysicsWarehousepackingGetRequest extends AbstractRequest {
 	@NotNull(message = "操作人不能为空!")
 	private Long userNumId;
 
-	private Long BalanceFunctionId;
+	private Long balanceFunctionId;
 
 
 
@@ -82,10 +82,10 @@ public class PhysicsWarehousepackingGetRequest extends AbstractRequest {
 	}
 
 	public Long getBalanceFunctionId() {
-		return BalanceFunctionId;
+		return balanceFunctionId;
 	}
 
 	public void setBalanceFunctionId(Long balanceFunctionId) {
-		BalanceFunctionId = balanceFunctionId;
+		this.balanceFunctionId = balanceFunctionId;
 	}
 }

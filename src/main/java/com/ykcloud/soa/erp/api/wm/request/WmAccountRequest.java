@@ -31,7 +31,7 @@ public class WmAccountRequest extends AbstractRequest {
     @NotNull(message = "业务类型编号不能为空！")
     String billTypeNumId;
     @NotNull(message = "单据类型不能为空！")
-    String typeNumId;
+    Long typeNumId;
     @NotNull(message = "入账类型不能为空！")
     String accountName;
 
@@ -125,11 +125,11 @@ public class WmAccountRequest extends AbstractRequest {
         this.billTypeNumId = billTypeNumId;
     }
 
-    public String getTypeNumId() {
+    public Long getTypeNumId() {
         return typeNumId;
     }
 
-    public void setTypeNumId(String typeNumId) {
+    public void setTypeNumId(Long typeNumId) {
         this.typeNumId = typeNumId;
     }
 
