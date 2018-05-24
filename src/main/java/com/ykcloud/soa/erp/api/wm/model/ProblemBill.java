@@ -7,23 +7,27 @@ public class ProblemBill implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private List<Long> billType;
-	private String reservedNo;
+	private List<Long> reservedNo;
+	private String billType;
 
-	public List<Long> getBillType() {
-		return billType;
-	}
-
-	public void setBillType(List<Long> billType) {
-		this.billType = billType;
-	}
-
-	public String getReservedNo() {
+	public List<Long> getReservedNo() {
 		return reservedNo;
 	}
 
-	public void setReservedNo(String reservedNo) {
+	public void setReservedNo(List<Long> reservedNo) {
 		this.reservedNo = reservedNo;
+	}
+
+	public String getBillType() {
+		return billType;
+	}
+
+	public void setBillType(String billType) {
+		this.billType = billType;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }
