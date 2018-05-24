@@ -74,4 +74,5 @@ public interface WmWorkService {
 	public WmBlLossHdr getlossHdrByLossNumId(Long tenantNumId, Long subUnitNumId, Long dataSign, String lossNumId);
 
 	public List<WmBlLossDtl> getlossDtlByLossNumId(Long tenantNumId, Long subUnitNumId, Long dataSign, String lossNumId);
+
 }
