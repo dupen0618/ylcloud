@@ -16,16 +16,20 @@ public class FiOnLoadProcessRequest extends AbstractUserSessionRequest {
 
     @NotNull(message = "门店编号不能为空！")
     private Long subUnitNumId;
-    @NotNull(message = "物理仓编号不能为空！")
-    private Long physicalNumId;
-    @NotNull(message = "商品编号编号不能为空！")
-    private Long itemNumId;
     @NotNull(message = "验收单号不能为空！")
     private String reservedNo;
+    @NotNull(message = "单据类型不能为空!")
+    private String billTypeNumId;
+    @NotNull(message = "业务类型不能为空!")
+    private String typeNumId;
+
+
     private Long pty1NumId;
     private Long pty2NumId;
     private Long pty3NumId;
     private Long departNumId;
+    private Long balaFuncId;
+    private Long crossSubCompanySign;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -33,22 +37,6 @@ public class FiOnLoadProcessRequest extends AbstractUserSessionRequest {
 
     public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
-    }
-
-    public Long getPhysicalNumId() {
-        return physicalNumId;
-    }
-
-    public void setPhysicalNumId(Long physicalNumId) {
-        this.physicalNumId = physicalNumId;
-    }
-
-    public Long getItemNumId() {
-        return itemNumId;
-    }
-
-    public void setItemNumId(Long itemNumId) {
-        this.itemNumId = itemNumId;
     }
 
     public String getReservedNo() {
@@ -90,6 +78,38 @@ public class FiOnLoadProcessRequest extends AbstractUserSessionRequest {
 
     public void setDepartNumId(Long departNumId) {
         this.departNumId = departNumId;
+    }
+
+    public String getBillTypeNumId() {
+        return billTypeNumId;
+    }
+
+    public void setBillTypeNumId(String billTypeNumId) {
+        this.billTypeNumId = billTypeNumId;
+    }
+
+    public String getTypeNumId() {
+        return typeNumId;
+    }
+
+    public void setTypeNumId(String typeNumId) {
+        this.typeNumId = typeNumId;
+    }
+
+    public Long getBalaFuncId() {
+        return balaFuncId;
+    }
+
+    public void setBalaFuncId(Long balaFuncId) {
+        this.balaFuncId = balaFuncId;
+    }
+
+    public Long getCrossSubCompanySign() {
+        return crossSubCompanySign;
+    }
+
+    public void setCrossSubCompanySign(Long crossSubCompanySign) {
+        this.crossSubCompanySign = crossSubCompanySign;
     }
 }
 
