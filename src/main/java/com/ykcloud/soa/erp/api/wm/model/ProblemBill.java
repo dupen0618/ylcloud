@@ -1,19 +1,20 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class ProblemBill implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
-	private Long billType;
+
+	private List<Long> billType;
 	private String reservedNo;
 
-	public Long getBillType() {
+	public List<Long> getBillType() {
 		return billType;
 	}
 
-	public void setBillType(Long billType) {
+	public void setBillType(List<Long> billType) {
 		this.billType = billType;
 	}
 

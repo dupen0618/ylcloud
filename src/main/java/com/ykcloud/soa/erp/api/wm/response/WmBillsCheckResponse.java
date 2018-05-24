@@ -1,21 +1,21 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
 import java.util.List;
-import java.util.Map;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
+import com.ykcloud.soa.erp.api.wm.model.ProblemBill;
 
 public class WmBillsCheckResponse extends MessagePack {
 	private static final long serialVersionUID = 1L;
 
-	private Map<String, List<Long>> reservedNoMap;
+	private List<ProblemBill> problemBills;
 
-	public Map<String, List<Long>> getReservedNoMap() {
-		return reservedNoMap;
+	public List<ProblemBill> getProblemBills() {
+		return problemBills;
 	}
 
-	public void setReservedNoMap(Map<String, List<Long>> reservedNoMap) {
-		this.reservedNoMap = reservedNoMap;
+	public void setProblemBills(List<ProblemBill> problemBills) {
+		this.problemBills = problemBills;
 	}
 
 }
