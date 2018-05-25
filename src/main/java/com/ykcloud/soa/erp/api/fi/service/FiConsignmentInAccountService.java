@@ -25,14 +25,6 @@ public interface FiConsignmentInAccountService {
 
     FiInAccountByReceiptResponse setConsignmentInAccount(FiInAccountByReceiptRequest request);
 
-    /**
-     * 代销商品款调整
-     *
-     * @author Song
-     * @date 2018年5月18日下午6:54:30
-     */
-    public ConsignmentProductAccountForFixedAdjustResponse adjustConsignmentProductAccountForFixed(ConsignmentProductAccountForFixedAdjustRequest request);
-
     FiMonthlySettlementResponse buildMonthlySettlementRecord(FiMonthlySettlementRequest request);
 
 }

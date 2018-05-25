@@ -28,11 +28,6 @@ public class FiBlDealingsHdr implements Serializable {
 	private String dealingsNumId;
 	
 	/**
-	 * 门店号
-	 */
-	private Long subUnitNumId;
-	
-	/**
 	 * 供应商
 	 */
 	private Long unitNumId;
@@ -89,14 +84,6 @@ public class FiBlDealingsHdr implements Serializable {
 
 	public void setDealingsNumId(String dealingsNumId) {
 		this.dealingsNumId = dealingsNumId;
-	}
-
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
 	}
 
 	public Long getUnitNumId() {

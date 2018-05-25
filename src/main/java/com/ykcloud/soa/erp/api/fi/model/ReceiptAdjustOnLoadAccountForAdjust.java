@@ -20,25 +20,12 @@ public class ReceiptAdjustOnLoadAccountForAdjust implements Serializable {
 	 */
 	private Double diffAmount;
 	
-	/**
-	 * 门店编号
-	 */
-    private Long subUnitNumId;
-
 	public String getSeries() {
 		return series;
 	}
 
 	public void setSeries(String series) {
 		this.series = series;
-	}
-
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
 	}
 
 	public Double getDiffAmount() {

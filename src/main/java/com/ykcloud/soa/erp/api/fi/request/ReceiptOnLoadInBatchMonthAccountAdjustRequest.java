@@ -2,6 +2,8 @@ package com.ykcloud.soa.erp.api.fi.request;
 
 import java.util.List;
 
+import javax.validation.constraints.NotNull;
+
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.fi.model.ReceiptAdjustOnLoadAccountForAdjust;
 
@@ -14,10 +16,21 @@ public class ReceiptOnLoadInBatchMonthAccountAdjustRequest extends AbstractUserS
 
 	private static final long serialVersionUID = -3746160038603174845L;
 	
+	@NotNull(message = "门店编号不能为空！")
+    private Long subUnitNumId;
+	
 	/**
 	 * 验收入库单调整批次月进销存在途明细
 	 */
 	private List<ReceiptAdjustOnLoadAccountForAdjust> receiptOnloadAdjustDetails;
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
+	}
 
 	public List<ReceiptAdjustOnLoadAccountForAdjust> getReceiptOnloadAdjustDetails() {
 		return receiptOnloadAdjustDetails;

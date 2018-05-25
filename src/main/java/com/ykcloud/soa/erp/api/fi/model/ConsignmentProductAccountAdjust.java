@@ -11,11 +11,6 @@ public class ConsignmentProductAccountAdjust implements Serializable {
 	private static final long serialVersionUID = 7386327234710466198L;
 	
 	/**
-	 * 门店
-	 */
-	private Long subUnitNumId;
-	
-	/**
 	 * 商品编号
 	 */
 	private Long itemNumId;
@@ -34,14 +29,6 @@ public class ConsignmentProductAccountAdjust implements Serializable {
 	 * 调整税金
 	 */
 	private Double adjustTaxAmount;
-
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
-	}
 
 	public Long getItemNumId() {
 		return itemNumId;

@@ -223,4 +223,12 @@ public interface WmReceiptService {
     //回写验收单的凭证单号
     public VoucherNumIdByReservedNoUpdateResponse updateVoucherNumIdByReservedNo(VoucherNumIdByReservedNoUpdateRequest request);
 
+	/**
+	 * 统计验收成本
+	 * @author henry.wang
+	 *
+	 * @param request
+	 * @return
+	 */
+	BusinessAmountForGenKxCountResponse countReceiptCost(BusinessAmountForGenKxCountRequest request);
 }

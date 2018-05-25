@@ -11,14 +11,9 @@ public class FiBlDealingsItemDtl implements Serializable {
 	private static final long serialVersionUID = -1879313120009266010L;
 	
 	/**
-	 * 门店号
-	 */
-	private Long subUnitNumId;
-	
-	/**
 	 * 结算方式编码1购销 2代销 3联销
 	 */
-	private Long payTypeId;
+	private Long settlementType;
 	
 	/**
 	 * 商品编号
@@ -75,20 +70,12 @@ public class FiBlDealingsItemDtl implements Serializable {
 	 */
 	private String dealingsNumId;
 
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
+	public Long getSettlementType() {
+		return settlementType;
 	}
 
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
-	}
-
-	public Long getPayTypeId() {
-		return payTypeId;
-	}
-
-	public void setPayTypeId(Long payTypeId) {
-		this.payTypeId = payTypeId;
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
 	}
 
 	public Long getItemNumId() {

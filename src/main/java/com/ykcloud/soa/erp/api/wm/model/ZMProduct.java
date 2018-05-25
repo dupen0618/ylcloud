@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class ZMProduct implements Serializable {
     private Long itemNumId;// 商品主键
     private String itemName;// 商品名称
+    private String itemid;
     private String simItemName;// 商品中文简称
     private String enItemName;// 商品英文名称
     private String enSmpItemName;// 商品英文简称
@@ -272,5 +273,13 @@ public class ZMProduct implements Serializable {
 
     public void setPhysicalNumId(Long physicalNumId) {
         this.physicalNumId = physicalNumId;
+    }
+
+    public String getItemid() {
+        return itemid;
+    }
+
+    public void setItemid(String itemid) {
+        this.itemid = itemid;
     }
 }

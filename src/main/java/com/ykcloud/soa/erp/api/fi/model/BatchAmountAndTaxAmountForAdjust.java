@@ -25,11 +25,6 @@ public class BatchAmountAndTaxAmountForAdjust implements Serializable {
 	 */
 	private Double adjustTaxAmount;
 	
-	/**
-	 * 门店编号
-	 */
-    private Long subUnitNumId;
-
 	public String getSeries() {
 		return series;
 	}
@@ -52,14 +47,6 @@ public class BatchAmountAndTaxAmountForAdjust implements Serializable {
 
 	public void setAdjustTaxAmount(Double adjustTaxAmount) {
 		this.adjustTaxAmount = adjustTaxAmount;
-	}
-
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
 	}
 
 }

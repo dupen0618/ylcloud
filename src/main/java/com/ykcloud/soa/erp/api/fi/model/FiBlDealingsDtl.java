@@ -13,11 +13,6 @@ public class FiBlDealingsDtl implements Serializable {
 	private static final long serialVersionUID = -166334049504370098L;
 	
 	/**
-	 * 门店号
-	 */
-	private Long subUnitNumId;
-	
-	/**
 	 * 结算日期
 	 */
 	private Date balanceDate;
@@ -25,7 +20,7 @@ public class FiBlDealingsDtl implements Serializable {
 	/**
 	 * 结算方式编码1购销 2代销 3联销
 	 */
-	private Long payTypeId;
+	private Long settlementType;
 	
 	/**
 	 * 小类编码
@@ -67,14 +62,6 @@ public class FiBlDealingsDtl implements Serializable {
 	 */
 	private String dealingsNumId;
 
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
-	}
-
 	public Date getBalanceDate() {
 		return balanceDate;
 	}
@@ -91,12 +78,12 @@ public class FiBlDealingsDtl implements Serializable {
 		this.dealingsNumId = dealingsNumId;
 	}
 
-	public Long getPayTypeId() {
-		return payTypeId;
+	public Long getSettlementType() {
+		return settlementType;
 	}
 
-	public void setPayTypeId(Long payTypeId) {
-		this.payTypeId = payTypeId;
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
 	}
 
 	public Long getPtyNum3() {

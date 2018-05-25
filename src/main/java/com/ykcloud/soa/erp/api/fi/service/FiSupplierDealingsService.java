@@ -31,13 +31,6 @@ public interface FiSupplierDealingsService {
 	 * @time: 2018年5月14日
 	 */
 	public DealingsOutWorkResponse outWorkDealings(DealingsOutWorkRequest request);
-	
-	/**
-	 * 库存金额调整后生成供应商往来明细
-	 * @author Song
-	 * @date 2018年5月19日下午2:15:53
-	 */
-	public DealingDetailForFixedGenerateResponse generateDealingDetailForFixed(DealingDetailForFixedGenerateRequest request);
 
 	
 }

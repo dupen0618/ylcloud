@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 
 import com.ykcloud.soa.erp.api.wm.request.*;
+import com.ykcloud.soa.erp.api.wm.response.BusinessAmountForGenKxCountResponse;
 import com.ykcloud.soa.erp.api.wm.response.DataFromTmlGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.NegativeStockBatchAdjustmentResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailyCollectResponse;
@@ -28,4 +29,21 @@ public interface WmSellDailyService {
 	
 	public NegativeStockBatchAdjustmentResponse adjustmentNegativeStockBatch(NegativeStockBatchAdjustmentRequest request);
 
+	/**
+	 * 统计销售收入
+	 * @author henry.wang
+	 *
+	 * @param request
+	 * @return
+	 */
+	BusinessAmountForGenKxCountResponse countSalesIncome(BusinessAmountForGenKxCountRequest request);
+
+	/**
+	 * 统计销售成本
+	 * @author henry.wang
+	 *
+	 * @param request
+	 * @return
+	 */
+	BusinessAmountForGenKxCountResponse countSalesCost(BusinessAmountForGenKxCountRequest request);
 }
