@@ -93,7 +93,7 @@ public interface FiCostDailyAccountGaService {
 	* @return CarryDownDailyFiResponse    返回类型  
 	* @throws
 	 */
-	CarryDownDailyFiResponse fiDailyCarryDown(CarryDownDailyFiRequest request);
+	CarryDownDailyFiResponse carryCostDailyAccount(CarryDownDailyFiRequest request);
 
 	/**
 	 * 以销定入商品日结财务成本处理（归集码拨出）
