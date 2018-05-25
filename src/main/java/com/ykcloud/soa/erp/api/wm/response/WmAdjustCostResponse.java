@@ -7,7 +7,7 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @author tz.x
  * @date 2018年5月22日下午5:27:01
  */
-public class WmadjustCostResponse extends MessagePack {
+public class WmAdjustCostResponse extends MessagePack {
 
 	private static final long serialVersionUID = -5372652164319297100L;
 

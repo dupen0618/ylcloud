@@ -1,9 +1,9 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.WmCostByScmChangeCostRequest;
-import com.ykcloud.soa.erp.api.wm.request.WmadjustCostRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmAdjustCostRequest;
 import com.ykcloud.soa.erp.api.wm.response.WmCostByScmChangeCostResponse;
-import com.ykcloud.soa.erp.api.wm.response.WmadjustCostResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmAdjustCostResponse;
 
 /**
  * 库存金额调整
@@ -18,7 +18,7 @@ public interface WmCostAdjustService {
 	 * @author tz.x
 	 * @date 2018年5月22日下午5:31:15
 	 */
-	public WmadjustCostResponse adjustWmCost(WmadjustCostRequest request);
+	public WmAdjustCostResponse adjustWmCost(WmAdjustCostRequest request);
 	
 	 /**
 	  * @author alfred  
