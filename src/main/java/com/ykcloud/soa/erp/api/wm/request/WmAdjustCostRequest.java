@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
@@ -9,7 +11,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
  * @author tz.x
  * @date 2018年5月22日下午5:27:40
  */
-public class WmadjustCostRequest extends AbstractUserSessionRequest {
+public class WmAdjustCostRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1363377019937473048L;
 	
@@ -22,6 +24,17 @@ public class WmadjustCostRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 	
+	@NotNull(message = "调整日期不能为空！")
+	private Date justDate;
+	
+	public Date getJustDate() {
+		return justDate;
+	}
+
+	public void setJustDate(Date justDate) {
+		this.justDate = justDate;
+	}
+
 	public Long getTypeNumId() {
 		return typeNumId;
 	}
