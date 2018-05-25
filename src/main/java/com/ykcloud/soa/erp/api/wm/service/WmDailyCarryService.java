@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.request.WmBillsCheckRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmPhysicalDailyAccountGaRequest;
+import com.ykcloud.soa.erp.api.wm.response.WmBillsCheckResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmPhysicalDailyAccountGaReponse;
 
 public interface WmDailyCarryService {
@@ -16,4 +18,7 @@ public interface WmDailyCarryService {
      */
     public WmPhysicalDailyAccountGaReponse carryPhysicalDailyAccount(WmPhysicalDailyAccountGaRequest request);
 	
+
+    public WmBillsCheckResponse checkBills(WmBillsCheckRequest request);
 }
+
