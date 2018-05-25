@@ -9,10 +9,10 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
  * @author Song
  * @Date 2018年4月4日 下午5:19:12
  */
-public class WmBillsCheckRequest extends AbstractRequest {
+public class BillsCheckRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 493084987885757157L;
-
+	
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 

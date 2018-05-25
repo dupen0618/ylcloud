@@ -6,7 +6,7 @@ import java.util.Map;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.wm.model.ProblemBill;
 
-public class WmBillsCheckResponse extends MessagePack {
+public class BillsCheckResponse extends MessagePack {
 	private static final long serialVersionUID = 1L;
 
 	private List<ProblemBill> problemBills;
