@@ -13,7 +13,7 @@ public class FiBlDealingsItemDtl implements Serializable {
 	/**
 	 * 结算方式编码1购销 2代销 3联销
 	 */
-	private Long payTypeId;
+	private Long settlementType;
 	
 	/**
 	 * 商品编号
@@ -70,12 +70,12 @@ public class FiBlDealingsItemDtl implements Serializable {
 	 */
 	private String dealingsNumId;
 
-	public Long getPayTypeId() {
-		return payTypeId;
+	public Long getSettlementType() {
+		return settlementType;
 	}
 
-	public void setPayTypeId(Long payTypeId) {
-		this.payTypeId = payTypeId;
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
 	}
 
 	public Long getItemNumId() {
