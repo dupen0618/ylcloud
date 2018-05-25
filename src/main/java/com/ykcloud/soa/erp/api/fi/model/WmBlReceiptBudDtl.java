@@ -27,10 +27,10 @@ public class WmBlReceiptBudDtl implements Serializable {
     private Long conversionUnitNumId;
     private String conversionStyleDesc;
     private Double packageQty;
-    private double qty;
+    private Double qty;
     private Double pmtQty;
     private Long pmtMaterial;
-    private double price;
+    private Double price;
     private Double totalAmount;
     private Double taxRate;
     private Double taxAmount;
@@ -214,11 +214,11 @@ public class WmBlReceiptBudDtl implements Serializable {
         this.packageQty = packageQty;
     }
 
-    public double getQty() {
+    public Double getQty() {
         return qty;
     }
 
-    public void setQty(double qty) {
+    public void setQty(Double qty) {
         this.qty = qty;
     }
 
@@ -238,11 +238,11 @@ public class WmBlReceiptBudDtl implements Serializable {
         this.pmtMaterial = pmtMaterial;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
