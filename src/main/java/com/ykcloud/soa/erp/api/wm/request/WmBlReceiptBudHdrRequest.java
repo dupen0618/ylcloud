@@ -13,10 +13,6 @@ public class WmBlReceiptBudHdrRequest extends AbstractUserSessionRequest {
 
     @NotNull(message = "门店编号不能为空！")
     private Long subUnitNumId;
-    @NotNull(message = "物理仓编号不能为空！")
-    private Long physicalNumId;
-    @NotNull(message = "商品编号编号不能为空！")
-    private Long itemNumId;
     @NotNull(message = "验收单号不能为空！")
     private String reservedNo;
 
@@ -26,22 +22,6 @@ public class WmBlReceiptBudHdrRequest extends AbstractUserSessionRequest {
 
     public void setSubUnitNumId(Long subUnitNumId) {
         this.subUnitNumId = subUnitNumId;
-    }
-
-    public Long getPhysicalNumId() {
-        return physicalNumId;
-    }
-
-    public void setPhysicalNumId(Long physicalNumId) {
-        this.physicalNumId = physicalNumId;
-    }
-
-    public Long getItemNumId() {
-        return itemNumId;
-    }
-
-    public void setItemNumId(Long itemNumId) {
-        this.itemNumId = itemNumId;
     }
 
     public String getReservedNo() {
