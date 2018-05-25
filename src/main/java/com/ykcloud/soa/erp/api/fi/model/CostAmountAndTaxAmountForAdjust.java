@@ -23,11 +23,6 @@ public class CostAmountAndTaxAmountForAdjust implements Serializable {
 	private Double adjustTaxAmount;
 	
 	/**
-	 * 门店
-	 */
-	private Long subUnitNumId;
-	
-	/**
 	 * 商品编号
 	 */
 	private Long itemNumId;
@@ -57,14 +52,6 @@ public class CostAmountAndTaxAmountForAdjust implements Serializable {
 
 	public void setAdjustTaxAmount(Double adjustTaxAmount) {
 		this.adjustTaxAmount = adjustTaxAmount;
-	}
-
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
 	}
 
 	public Long getItemNumId() {

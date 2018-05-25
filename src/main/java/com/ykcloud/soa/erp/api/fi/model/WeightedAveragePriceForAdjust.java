@@ -11,11 +11,6 @@ public class WeightedAveragePriceForAdjust implements Serializable {
 	private static final long serialVersionUID = 4986431171381360135L;
 
 	/**
-	 * 门店编号
-	 */
-	private Long subUnitNumId;
-	
-	/**
 	 * 商品编号
 	 */
 	private Long itemNumId;
@@ -36,14 +31,6 @@ public class WeightedAveragePriceForAdjust implements Serializable {
 
 	public void setAdjustAmount(Double adjustAmount) {
 		this.adjustAmount = adjustAmount;
-	}
-
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
 	}
 
 	public Long getItemNumId() {

@@ -13,11 +13,6 @@ public class FiBlDealingsDtl implements Serializable {
 	private static final long serialVersionUID = -166334049504370098L;
 	
 	/**
-	 * 门店号
-	 */
-	private Long subUnitNumId;
-	
-	/**
 	 * 结算日期
 	 */
 	private Date balanceDate;
@@ -66,14 +61,6 @@ public class FiBlDealingsDtl implements Serializable {
 	 * 单据编号
 	 */
 	private String dealingsNumId;
-
-	public Long getSubUnitNumId() {
-		return subUnitNumId;
-	}
-
-	public void setSubUnitNumId(Long subUnitNumId) {
-		this.subUnitNumId = subUnitNumId;
-	}
 
 	public Date getBalanceDate() {
 		return balanceDate;
