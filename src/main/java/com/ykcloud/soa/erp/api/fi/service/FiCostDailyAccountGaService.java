@@ -73,28 +73,6 @@ public interface FiCostDailyAccountGaService {
 	public LossAmount1AndFinalCostUpdaterResponse updateLossAmount1AndFinalCost(LossAmount1AndFinalCostUpdateRequest request);
 
 	/**
-	 * 固定调价：调整批次日进销存
-	 * @author Song
-	 * @date 2018年5月16日上午11:24:39
-	 */
-	public BatchAmountAndTaxAmountForFixedAdjustResponse adjustBatchAmountAndTaxAmountForFixed(BatchAmountAndTaxAmountForFixedAdjustRequest request);
-
-	/**
-	 * 固定调价：调整加权平均价格
-	 * @author Song
-	 * @date 2018年5月17日下午10:30:48
-	 */
-	public WeightedAveragePriceAdjustResponse adjustWeightedAveragePrice(WeightedAveragePriceAdjustRequest request);
-
-	/**
-	 * @Description:固定调价(Fixed)：调整商品成本日月进销存
-	 * @author Song
-	 * @Date 2018年5月17日 上午15:15:47
-	 */
-	public CostAmountAndTaxAmountForFixedAdjustResponse adjustCostAmountAndTaxAmountForFixed(CostAmountAndTaxAmountForFixedAdjustRequest request);
-
-	
-	/**
 	 * 生产盘点财务成本处理（归集码拨入）
 	 *
 	 * @param request
