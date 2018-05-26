@@ -12,17 +12,10 @@ public class BillAuditRequest extends AbstractUserSessionRequest  {
 	@NotNull(message = "门店不能为空！")
 	private Long subUnitNumId;
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-	@NotNull(message = "结算日期不能为空！")
-	private Date balanceDate;
-	@NotNull(message = "结算单号不能为空！")
-	private String balanceNo;
-
-	public String getBalanceNo() {
-		return balanceNo;
-	}
-	public void setBalanceNo(String balanceNo) {
-		this.balanceNo = balanceNo;
-	}
+	@NotNull(message = "发票日期不能为空！")
+	private Date billDate;
+	@NotNull(message = "发票单号不能为空！")
+	private String billNumId;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -32,11 +25,19 @@ public class BillAuditRequest extends AbstractUserSessionRequest  {
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Date getBalanceDate() {
-		return balanceDate;
+	public Date getBillDate() {
+		return billDate;
 	}
 
-	public void setBalanceDate(Date balanceDate) {
-		this.balanceDate = balanceDate;
+	public void setBillDate(Date billDate) {
+		this.billDate = billDate;
+	}
+
+	public String getBillNumId() {
+		return billNumId;
+	}
+
+	public void setBillNumId(String billNumId) {
+		this.billNumId = billNumId;
 	}
 }

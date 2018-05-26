@@ -2,9 +2,11 @@ package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.request.ApBalanceForFinanceAuditApprovalReturnOrderGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetRequest;
+import com.ykcloud.soa.erp.api.fi.request.DiscountUnderCutSnapGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.LastMoveWeightingPriceGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.ApBalanceForFinanceAuditApprovalReturnOrderGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.DiscountUnderCutSnapGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.LastMoveWeightingPriceGetResponse;
 import com.ykcloud.soa.erp.api.fi.request.ToDeductAmountGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.ApBalanceForFinanceAuditApprovalReturnOrderGetResponse;
@@ -45,4 +47,10 @@ public interface FiQueryService {
 	*/ 
 	public ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetResponse getConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrder
             (ConsignmentProductFinalAmountForFinanceAuditApprovalReturnOrderGetRequest request);
+
+	/*
+	* @Author:ALi
+	* @Description: 倒扣率
+	*/
+	public DiscountUnderCutSnapGetResponse getDiscountUnderCutSnap(DiscountUnderCutSnapGetRequest request);
 }
