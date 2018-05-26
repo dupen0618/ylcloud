@@ -89,7 +89,7 @@ public interface WmShipService {
 		 * @param 
 		 * @return
 		 */
-		public ReverseReceiptFinishResponse finishReverseShip(ReverseReceiptFinishRequest request);
+		public ReverseReceiptFinishResponse finishReverseShipReceipt(ReverseReceiptFinishRequest request);
 		/**
 		 * 
 		 * @author Dan
