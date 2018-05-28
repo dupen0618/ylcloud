@@ -99,11 +99,11 @@ public class FiCostDailyAccountGa{
 //    private Double SHOP_BACK_QTY;
 //    private Double SHOP_BACK_AMOUNT;
 //    private Double ONLINE_SELL_QTY;
-//    private Double ONLINE_SELL_AMONT;
+//    private Double ONLINE_SELL_AMOUNT;
 //    private Double ONLINE_BACK_QTY;
-//    private Double ONLINE_BACK_AMONT;
+//    private Double ONLINE_BACK_AMOUNT;
 //    private Double ONLINE_CANCEL_QTY;
-//    private Double ONLINE_CANCEL_AMONT;
+//    private Double ONLINE_CANCEL_AMOUNT;
 //    private Double IN_SELL_QTY;
 //    private Double IN_SELL_AMOUNT;
 //    private Double IN_SELL_TAX_AMOUNT;
