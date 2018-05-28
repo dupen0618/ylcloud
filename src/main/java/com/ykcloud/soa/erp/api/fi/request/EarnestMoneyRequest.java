@@ -9,29 +9,29 @@ import java.util.Date;
 public class EarnestMoneyRequest extends AbstractUserSessionRequest{
     private static final long serialVersionUID = 1L;
     @NotNull(message = "保证金单号不能为空！")
-    private String reservedno;
+    private String reservedNo;
 
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     @NotNull(message = "缴纳日期不能为空！")
-    private Date paymentdate;
+    private Date paymentDate;
 
     @NotNull(message = "门店不能为空！")
     private Long subUnitNumId;
 
-    public String getReservedno() {
-        return reservedno;
+    public String getReservedNo() {
+        return reservedNo;
     }
 
-    public void setReservedno(String reservedno) {
-        this.reservedno = reservedno;
+    public void setReservedNo(String reservedNo) {
+        this.reservedNo = reservedNo;
     }
 
-    public Date getPaymentdate() {
-        return paymentdate;
+    public Date getPaymentDate() {
+        return paymentDate;
     }
 
-    public void setPaymentdate(Date paymentdate) {
-        this.paymentdate = paymentdate;
+    public void setPaymentDate(Date paymentDate) {
+        this.paymentDate = paymentDate;
     }
 
     public Long getSubUnitNumId() {
