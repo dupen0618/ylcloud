@@ -91,7 +91,7 @@ public class FiCostDailyAccountGa{
 //    private Double TURN_PMT_TAX_AMOUNT2;
 //    private Double SELL_QTY;
 //    private Double SELL_AMOUNT;
-//    private Double SELL_TAX_AMONUT;
+//    private Double SELL_TAX_AMOUNT;
 //    private Double SELL_COST1;
 //    private Double SELL_COST2;
 //    private Double SHOP_SELL_QTY;
