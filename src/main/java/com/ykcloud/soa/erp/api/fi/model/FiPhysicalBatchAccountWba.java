@@ -60,6 +60,23 @@ public class FiPhysicalBatchAccountWba implements Serializable {
 	private Double taxRate;
 	private Long departNumId;
 
+
+	/************发出商品新增字段***************/
+	private Long unitNumId;
+	private Long custSubUnitNumId;
+	private Long custUnitNumId;
+	private Long accountMonth;
+	private Long currency;
+	private String billTypeNumName;
+	private Long balanceFunctionId;
+	private String balanceFunctionName;
+	private Long reservedNo;
+	private Double reservedAmount;
+	private Double reservedTaxAmount;
+	private String cancelsign;
+	/************发出商品新增字段***************/
+
+
 	public String getSeries() {
 		return series;
 	}
@@ -378,4 +395,100 @@ public class FiPhysicalBatchAccountWba implements Serializable {
     public Long getDepartNumId() {
         return departNumId;
     }
+
+	public Long getUnitNumId() {
+		return unitNumId;
+	}
+
+	public void setUnitNumId(Long unitNumId) {
+		this.unitNumId = unitNumId;
+	}
+
+	public Long getCustSubUnitNumId() {
+		return custSubUnitNumId;
+	}
+
+	public void setCustSubUnitNumId(Long custSubUnitNumId) {
+		this.custSubUnitNumId = custSubUnitNumId;
+	}
+
+	public Long getCustUnitNumId() {
+		return custUnitNumId;
+	}
+
+	public void setCustUnitNumId(Long custUnitNumId) {
+		this.custUnitNumId = custUnitNumId;
+	}
+
+	public Long getAccountMonth() {
+		return accountMonth;
+	}
+
+	public void setAccountMonth(Long accountMonth) {
+		this.accountMonth = accountMonth;
+	}
+
+	public Long getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(Long currency) {
+		this.currency = currency;
+	}
+
+	public String getBillTypeNumName() {
+		return billTypeNumName;
+	}
+
+	public void setBillTypeNumName(String billTypeNumName) {
+		this.billTypeNumName = billTypeNumName;
+	}
+
+	public Long getBalanceFunctionId() {
+		return balanceFunctionId;
+	}
+
+	public void setBalanceFunctionId(Long balanceFunctionId) {
+		this.balanceFunctionId = balanceFunctionId;
+	}
+
+	public String getBalanceFunctionName() {
+		return balanceFunctionName;
+	}
+
+	public void setBalanceFunctionName(String balanceFunctionName) {
+		this.balanceFunctionName = balanceFunctionName;
+	}
+
+	public Long getReservedNo() {
+		return reservedNo;
+	}
+
+	public void setReservedNo(Long reservedNo) {
+		this.reservedNo = reservedNo;
+	}
+
+	public Double getReservedAmount() {
+		return reservedAmount;
+	}
+
+	public void setReservedAmount(Double reservedAmount) {
+		this.reservedAmount = reservedAmount;
+	}
+
+	public Double getReservedTaxAmount() {
+		return reservedTaxAmount;
+	}
+
+	public void setReservedTaxAmount(Double reservedTaxAmount) {
+		this.reservedTaxAmount = reservedTaxAmount;
+	}
+
+	public String getCancelsign() {
+		return cancelsign;
+	}
+
+	public void setCancelsign(String cancelsign) {
+		this.cancelsign = cancelsign;
+	}
 }
