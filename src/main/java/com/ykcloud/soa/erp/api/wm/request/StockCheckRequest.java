@@ -42,7 +42,9 @@ public class StockCheckRequest extends AbstractUserSessionRequest {
     @Pattern(regexp = "(-)?[1]|[0]", message = "扫描标识只能为-1、0或1")
     private String inoutFlag;
 
-    private Double inQty = 1D;
+    @ApiField(description = "商品数量")
+    @NotNull(message = "商品数量不能为空！")
+    private Double inQty;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
