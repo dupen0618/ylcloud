@@ -76,8 +76,13 @@ public class SupBalanceDtl implements Serializable {
      * 件装单位
      */
     private Double conversionQty;
+	/**
+	 * 数量
+	 */
+	private Double qty;
 
-    /**
+
+	/**
      * 件装规格
      */
     private String conversionStyleDesc;
@@ -371,5 +376,13 @@ public class SupBalanceDtl implements Serializable {
 
 	public void setSubUnitName(String subUnitName) {
 		this.subUnitName = subUnitName;
+	}
+
+	public Double getQty() {
+		return qty;
+	}
+
+	public void setQty(Double qty) {
+		this.qty = qty;
 	}
 }
