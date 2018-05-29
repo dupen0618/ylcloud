@@ -11,16 +11,4 @@ import javax.validation.constraints.NotNull;
 public class ItemQtyStockCheckInputRequest extends StockCheckRequest {
 
     private static final long serialVersionUID = 1L;
-
-    @ApiField(description = "商品数量")
-    @NotNull(message = "商品数量不能为空！")
-    private Double inQty;
-
-    public Double getInQty() {
-        return inQty;
-    }
-
-    public void setInQty(Double inQty) {
-        this.inQty = inQty;
-    }
 }
