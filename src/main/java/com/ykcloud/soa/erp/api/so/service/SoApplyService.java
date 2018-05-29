@@ -153,4 +153,8 @@ public interface SoApplyService {
 
 	//根据申请单号更新状态
 	public StatusNumIdForSoApplySubcontractSplitUpdateResponse updateStatusNumIdByApplyNumId(StatusNumIdForSoApplySubcontractSplitUpdateRequest request);
+
+	//更新so领用单状态
+	public StatusNumIdBySoNumIdUpdateResponse updateStatusNumIdBySoNumId(StatusNumIdBySoNumIdUpdateRequest request);
+
 }
