@@ -1,0 +1,65 @@
+package com.ykcloud.soa.erp.api.fi.request;
+
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.ykcloud.soa.erp.api.fi.model.FiPhysicalBatchAccountWba;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.NotNull;
+import java.util.List;
+
+/**
+ * @Author Hewei
+ * @Date 2018/5/29 19:08
+ */
+public class FiAccEmitGoodsRequest extends AbstractUserSessionRequest {
+    private static final long serialVersionUID = -7736513409213734959L;
+    @NotNull(message = "单据类型不能为空！")
+    String typeNumId;
+    @NotNull(message = "业务类型编号不能为空！")
+    private String billTypeNumId;
+    @NotEmpty(message = "待入账批次流水不能为空！")
+    List<FiPhysicalBatchAccountWba> fiPhysicalBatchAccountWbaList;
+
+    private Long crossSubCompanySign;
+    private Long balanceFunctionId;
+
+    public String getTypeNumId() {
+        return typeNumId;
+    }
+
+    public void setTypeNumId(String typeNumId) {
+        this.typeNumId = typeNumId;
+    }
+
+    public String getBillTypeNumId() {
+        return billTypeNumId;
+    }
+
+    public void setBillTypeNumId(String billTypeNumId) {
+        this.billTypeNumId = billTypeNumId;
+    }
+
+    public List<FiPhysicalBatchAccountWba> getFiPhysicalBatchAccountWbaList() {
+        return fiPhysicalBatchAccountWbaList;
+    }
+
+    public void setFiPhysicalBatchAccountWbaList(List<FiPhysicalBatchAccountWba> fiPhysicalBatchAccountWbaList) {
+        this.fiPhysicalBatchAccountWbaList = fiPhysicalBatchAccountWbaList;
+    }
+
+    public Long getCrossSubCompanySign() {
+        return crossSubCompanySign;
+    }
+
+    public void setCrossSubCompanySign(Long crossSubCompanySign) {
+        this.crossSubCompanySign = crossSubCompanySign;
+    }
+
+    public Long getBalanceFunctionId() {
+        return balanceFunctionId;
+    }
+
+    public void setBalanceFunctionId(Long balanceFunctionId) {
+        this.balanceFunctionId = balanceFunctionId;
+    }
+}
