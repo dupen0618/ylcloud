@@ -8,7 +8,8 @@ import java.util.Date;
 public class FiAccountantcycRequest extends AbstractRequest {
     @NotNull(message = "供应商编号不能为空!")
     private Long subUnitNumId;
-    @NotNull(message = "入账日期不能为空")
+
+
     private Date recDate;
 
     public Long getSubUnitNumId() {
