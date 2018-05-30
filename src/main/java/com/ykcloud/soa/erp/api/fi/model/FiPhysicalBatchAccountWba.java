@@ -68,7 +68,6 @@ public class FiPhysicalBatchAccountWba implements Serializable {
 	private Long accountMonth;
 	private Long currency;
 	private String billTypeNumName;
-	private Long balanceFunctionId;
 	private String balanceFunctionName;
 	private Long reservedNo;
 	private Double reservedAmount;
@@ -442,14 +441,6 @@ public class FiPhysicalBatchAccountWba implements Serializable {
 
 	public void setBillTypeNumName(String billTypeNumName) {
 		this.billTypeNumName = billTypeNumName;
-	}
-
-	public Long getBalanceFunctionId() {
-		return balanceFunctionId;
-	}
-
-	public void setBalanceFunctionId(Long balanceFunctionId) {
-		this.balanceFunctionId = balanceFunctionId;
 	}
 
 	public String getBalanceFunctionName() {
