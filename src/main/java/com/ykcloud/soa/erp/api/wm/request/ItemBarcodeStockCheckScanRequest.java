@@ -10,11 +10,4 @@ import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 public class ItemBarcodeStockCheckScanRequest extends StockCheckRequest {
 
     private static final long serialVersionUID = 1L;
-
-    @ApiField(description = "商品数量")
-    private Double inQty = 1D;
-
-    public Double getInQty() {
-        return inQty;
-    }
 }
