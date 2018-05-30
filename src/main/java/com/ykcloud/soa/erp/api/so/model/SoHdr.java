@@ -15,7 +15,7 @@ public class SoHdr implements Serializable {
 
 	private Long tenantNumId;
 
-	private String subUnitNumId;
+	private Long subUnitNumId;
 
 	private Date orderDate;
 
@@ -113,11 +113,13 @@ public class SoHdr implements Serializable {
 		this.tenantNumId = tenantNumId;
 	}
 
-	public String getSubUnitNumId() {
+	
+
+	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
 
-	public void setSubUnitNumId(String subUnitNumId) {
+	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
 
