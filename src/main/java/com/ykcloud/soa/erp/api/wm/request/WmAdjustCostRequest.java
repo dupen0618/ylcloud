@@ -27,6 +27,17 @@ public class WmAdjustCostRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "调整日期不能为空！")
 	private Date justDate;
 	
+	@NotNull(message = "供应商不能为空！")
+	private Long supplyUnitNumId;
+	
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
+
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
+	}
+
 	public Date getJustDate() {
 		return justDate;
 	}
