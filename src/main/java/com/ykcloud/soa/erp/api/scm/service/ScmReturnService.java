@@ -8,6 +8,7 @@ import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnStorageAndProductForGenerateReturnSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.QtyForReturnOrderCheckRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalActualQtyUpdateRequest;
+import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalNumIdByApplyNumIdGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderActualQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderAfterGeneateReturnSoUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderDtlByCiteProductDeleteRequest;
@@ -20,6 +21,7 @@ import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnStorageAndProductForGe
 import com.ykcloud.soa.erp.api.scm.request.ReturnProductGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.QtyForReturnOrderCheckResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalActualQtyUpdateResponse;
+import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalNumIdByApplyNumIdGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderAfterGeneateReturnSoUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderDtlByCiteProductDeleteResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderDtlByCiteQtyGenerateResponse;
@@ -106,4 +108,7 @@ public interface ScmReturnService {
 
     //删除指定商品引用负出库单及验收单、退货审批单单身
     public ReturnApprovalOrderDtlByCiteProductDeleteResponse deleteReturnApprovalOrderDtlByCiteProduct(ReturnApprovalOrderDtlByCiteProductDeleteRequest request);
+
+  //根据退货申请单号查询退货审批单号
+  	public ReturnApprovalNumIdByApplyNumIdGetResponse getReturnApprovalNumIdByApplyNumId(ReturnApprovalNumIdByApplyNumIdGetRequest request);
 }

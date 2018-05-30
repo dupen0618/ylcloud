@@ -13,11 +13,13 @@ import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyBatchAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyDtlImportRequest;
+import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalNumIdByApplyNumIdGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyBatchAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyDtlImportResponse;
+import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalNumIdByApplyNumIdGetResponse;
 
 
 /**
