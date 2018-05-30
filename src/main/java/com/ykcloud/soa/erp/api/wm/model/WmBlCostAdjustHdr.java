@@ -43,6 +43,8 @@ public class WmBlCostAdjustHdr implements Serializable
 
     private Long IF_COSTADJUST;//是否产生供应商金额调整单(0：不产生，1：产生)
 
+    private Long SUPPLY_UNIT_NUM_ID;
+
     public String getSERIES()
     {
         return SERIES;
@@ -231,5 +233,13 @@ public class WmBlCostAdjustHdr implements Serializable
     public void setIF_COSTADJUST(Long IF_COSTADJUST)
     {
         this.IF_COSTADJUST = IF_COSTADJUST;
+    }
+
+    public Long getSUPPLY_UNIT_NUM_ID() {
+        return SUPPLY_UNIT_NUM_ID;
+    }
+
+    public void setSUPPLY_UNIT_NUM_ID(Long SUPPLY_UNIT_NUM_ID) {
+        this.SUPPLY_UNIT_NUM_ID = SUPPLY_UNIT_NUM_ID;
     }
 }
