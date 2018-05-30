@@ -26,7 +26,25 @@ public class BillVoucherGenerateRequest extends AbstractUserSessionRequest {
 		@NotNull(message="结算方式不能为空")
 		private Long settlementType;
 		
+		private Long typeNumId;    //类型
 		
+		private Long crossSubCompanySign;//是否跨子公司
+		
+		public Long getTypeNumId() {
+			return typeNumId;
+		}
+
+		public void setTypeNumId(Long typeNumId) {
+			this.typeNumId = typeNumId;
+		}
+
+		public Long getCrossSubCompanySign() {
+			return crossSubCompanySign;
+		}
+
+		public void setCrossSubCompanySign(Long crossSubCompanySign) {
+			this.crossSubCompanySign = crossSubCompanySign;
+		}
 
 		public Long getSettlementType() {
 			return settlementType;
