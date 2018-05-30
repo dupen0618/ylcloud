@@ -19,6 +19,9 @@ public class WmWlBcHdrGetRequest extends AbstractRequest {
 
 	@NotNull(message = "门店ID不能为空! ")
 	private Long subUnitNumId;
+	
+	@NotNull(message = "物理仓ID不能为空! ")
+	private Long physicalNumId;
 
 	private Date wlbcDate;
 
@@ -46,6 +49,12 @@ public class WmWlBcHdrGetRequest extends AbstractRequest {
 		this.wlbcDate = wlbcDate;
 	}
 
-	
+	public Long getPhysicalNumId() {
+		return physicalNumId;
+	}
+
+	public void setPhysicalNumId(Long physicalNumId) {
+		this.physicalNumId = physicalNumId;
+	}
 
 }
