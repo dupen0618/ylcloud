@@ -3,11 +3,12 @@ package com.ykcloud.soa.erp.api.scm.request;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class DailySettlementAdjustWmInventoryCostRequest extends AbstractSessionRequest
+public class DailySettlementAdjustWmInventoryCostRequest extends AbstractUserSessionRequest
 {
     private static final long serialVersionUID = 1L;
 
