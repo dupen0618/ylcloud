@@ -12,6 +12,7 @@ public class ProductPurchasePriceGetResponse extends MessagePack {
 	private Date tempBeginDay;// DM/临时调价起始日期
 	private Date tempEndDay;// DM/临时调价结束日期
 	private String promotionGrade;// 促销档期（503DM促销时返回）
+	private String promotionName; 
 
 	public Long getTypeNumId() {
 		return typeNumId;
@@ -61,4 +62,12 @@ public class ProductPurchasePriceGetResponse extends MessagePack {
 		this.promotionGrade = promotionGrade;
 	}
 
+	public String getPromotionName() {
+		return promotionName;
+	}
+
+	public void setPromotionName(String promotionName) {
+		this.promotionName = promotionName;
+	}
+	
 }
