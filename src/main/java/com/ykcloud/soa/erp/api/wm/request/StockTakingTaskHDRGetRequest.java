@@ -28,6 +28,10 @@ public class StockTakingTaskHDRGetRequest extends AbstractRequest {
     @NotNull(message = "盘点计划单号不能为空！")
     private String reservedNo;
 
+    @ApiField(description = "物理仓编号")
+    @NotNull(message = "物理仓编号不能为空！")
+    private Long physicalNumId;
+
     public Long getSubUnitNumId() {
         return subUnitNumId;
     }
@@ -50,5 +54,13 @@ public class StockTakingTaskHDRGetRequest extends AbstractRequest {
 
     public void setReservedNo(String reservedNo) {
         this.reservedNo = reservedNo;
+    }
+
+    public Long getPhysicalNumId() {
+        return physicalNumId;
+    }
+
+    public void setPhysicalNumId(Long physicalNumId) {
+        this.physicalNumId = physicalNumId;
     }
 }
