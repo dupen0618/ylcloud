@@ -24,7 +24,7 @@ public class FiPhysicalBatchAccountWba implements Serializable {
     private Long physicalNumId;
     private Date orderDate;
     private Long typeNumId;
-    private Long billTypeNumId;
+    private String billTypeNumId;
     private String triggerBillid;
     private String triggerBillLine;
     private String assistLine;
@@ -166,10 +166,10 @@ public class FiPhysicalBatchAccountWba implements Serializable {
 	public void setTypeNumId(Long typeNumId) {
 		this.typeNumId = typeNumId;
 	}
-	public Long getBillTypeNumId() {
+	public String getBillTypeNumId() {
 		return billTypeNumId;
 	}
-	public void setBillTypeNumId(Long billTypeNumId) {
+	public void setBillTypeNumId(String billTypeNumId) {
 		this.billTypeNumId = billTypeNumId;
 	}
 	public String getTriggerBillid() {
