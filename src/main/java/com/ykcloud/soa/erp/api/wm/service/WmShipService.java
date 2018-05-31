@@ -190,6 +190,14 @@ public interface WmShipService {
 		  * @description 更新托盘复核状态为复核完成
 		  */
 		public WmShipDtlScanStatusResponse updateContainerHdrStatus(WmShipDtlScanStatusRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年5月31日
+		 * @description调拨产生空转单
+		 */
+		public void createShipReserved(Long tenantNumId, Long dataSign, Long subUnitNumId, String reservedNo, Long userNumId ,Double flag);
 
 
 }
