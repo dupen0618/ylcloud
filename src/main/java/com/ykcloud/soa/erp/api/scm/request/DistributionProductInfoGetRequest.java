@@ -10,6 +10,8 @@ import java.util.Date;
 
 public class DistributionProductInfoGetRequest extends AbstractRequest {
 	private static final long serialVersionUID = 1L;
+	
+	private Long logisticsType = 3L;
 
 	@NotNull(message = "门店编号不能为空")
 	private Long subUnitNumId;
@@ -22,7 +24,6 @@ public class DistributionProductInfoGetRequest extends AbstractRequest {
 
 	private Long purchaseTypeNumId;// 国内国外
 
-
 	@Range(min = 1, max = 4)
 	@NotNull(message = "配送审批单类别不能为空！")
 	private Long typeNumId;// 4-赠品订单
@@ -33,6 +34,14 @@ public class DistributionProductInfoGetRequest extends AbstractRequest {
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "日期不能为空")
 	private Date orderDate;// 日期，格式：yyyy-mm-dd
+
+	public Long getLogisticsType() {
+		return logisticsType;
+	}
+
+	public void setLogisticsType(Long logisticsType) {
+		this.logisticsType = logisticsType;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
