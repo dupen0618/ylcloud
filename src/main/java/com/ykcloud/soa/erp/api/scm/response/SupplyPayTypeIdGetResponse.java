@@ -1,21 +1,21 @@
 package com.ykcloud.soa.erp.api.scm.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
+import com.ykcloud.soa.erp.api.scm.model.ScmBlContractForBalanceDay;
 
 /**
- * @Author:ALi
+ * @author ALi
  * @Description: 获得结算周期
- * @Date:
  */
 public class SupplyPayTypeIdGetResponse extends MessagePack {
     private static final long serialVersionUID = -1621207553036267818L;
-    private Long payTypeId;
+    private ScmBlContractForBalanceDay payTypeInfo;
 
-    public Long getPayTypeId() {
-        return payTypeId;
+    public ScmBlContractForBalanceDay getPayTypeInfo() {
+        return payTypeInfo;
     }
 
-    public void setPayTypeId(Long payTypeId) {
-        this.payTypeId = payTypeId;
+    public void setPayTypeInfo(ScmBlContractForBalanceDay payTypeInfo) {
+        this.payTypeInfo = payTypeInfo;
     }
 }
