@@ -30,6 +30,11 @@ public class FiOnLoadProcessRequest extends AbstractUserSessionRequest {
     private Long departNumId;
     private Long balanceFunctionId;
     private Long crossSubCompanySign;
+    private WmBlReceiptBudHdr wmBlReceiptBudHdr;
+    private List<WmBlReceiptBudBatchDtl> wmBlReceiptBudBatchDtlList;
+
+    private WmBlShipHdr wmBlShipHdr;
+    private List<WmBlShipBatchDtl> wmBlShipBatchDtlList;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -110,6 +115,38 @@ public class FiOnLoadProcessRequest extends AbstractUserSessionRequest {
 
     public void setCrossSubCompanySign(Long crossSubCompanySign) {
         this.crossSubCompanySign = crossSubCompanySign;
+    }
+
+    public void setWmBlReceiptBudHdr(WmBlReceiptBudHdr wmBlReceiptBudHdr) {
+        this.wmBlReceiptBudHdr = wmBlReceiptBudHdr;
+    }
+
+    public WmBlReceiptBudHdr getWmBlReceiptBudHdr() {
+        return wmBlReceiptBudHdr;
+    }
+
+    public void setWmBlReceiptBudBatchDtlList(List<WmBlReceiptBudBatchDtl> wmBlReceiptBudBatchDtlList) {
+        this.wmBlReceiptBudBatchDtlList = wmBlReceiptBudBatchDtlList;
+    }
+
+    public List<WmBlReceiptBudBatchDtl> getWmBlReceiptBudBatchDtlList() {
+        return wmBlReceiptBudBatchDtlList;
+    }
+
+    public void setWmBlShipHdr(WmBlShipHdr wmBlShipHdr) {
+        this.wmBlShipHdr = wmBlShipHdr;
+    }
+
+    public WmBlShipHdr getWmBlShipHdr() {
+        return wmBlShipHdr;
+    }
+
+    public void setWmBlShipBatchDtlList(List<WmBlShipBatchDtl> wmBlShipBatchDtlList) {
+        this.wmBlShipBatchDtlList = wmBlShipBatchDtlList;
+    }
+
+    public List<WmBlShipBatchDtl> getWmBlShipBatchDtlList() {
+        return wmBlShipBatchDtlList;
     }
 }
 
