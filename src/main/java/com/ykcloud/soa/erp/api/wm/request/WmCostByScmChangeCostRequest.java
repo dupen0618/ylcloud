@@ -1,12 +1,13 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.scm.model.ChangeCost;
 
 import java.util.Date;
 import java.util.List;
 
-public class WmCostByScmChangeCostRequest extends AbstractSessionRequest
+public class WmCostByScmChangeCostRequest extends AbstractUserSessionRequest
 {
     private static final long serialVersionUID = 1L;
 
