@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * @author Sealin
  */
-public class ScmBlContract implements Serializable {
+public class ScmBlContractForBalanceDay implements Serializable {
     private static final long serialVersionUID = -4927882135812873801L;
     private Long payTypeId;
     private Date beginDay;
