@@ -4,6 +4,7 @@ import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlSeriesForRegenerateIte
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyHdrAndDtlStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyListForGenerateBalanceGetRequest;
+import com.ykcloud.soa.erp.api.so.request.OtOtmlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupBlanceDtlByItemSellDailyDtlSeriesGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupplyUnitNumIdForJointSaleGetRequest;
 import com.ykcloud.soa.erp.api.so.request.TmlDailyGenerateRequest;
@@ -12,6 +13,7 @@ import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlSeriesForRegenerateIt
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyHdrAndDtlStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyListForGenerateBalanceGetResponse;
+import com.ykcloud.soa.erp.api.so.response.OtOTmlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupBlanceDtlByItemSellDailyDtlSeriesGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyUnitNumIdForJointSaleGetResponse;
 import com.ykcloud.soa.erp.api.so.response.TmlDailyGenerateResponse;
@@ -53,5 +55,8 @@ public interface SoTmlService {
 
     //生成小票
     public TmlDailyGenerateResponse generateTmlDaily(TmlDailyGenerateRequest request);
+    
+    //查询oto发货小票信息
+    public OtOTmlGetResponse getOtOTmlList(OtOtmlGetRequest request);
     
 }
