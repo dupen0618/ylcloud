@@ -21,4 +21,17 @@ public interface FiOnLoadProcessService {
 
     //代销商品款入库在途处理
     FiOnLoadProcessResponse ConsignmentReceiptOnLoadProcess(FiOnLoadProcessRequest request);
+
+    //发出商品出库在途处理
+    FiOnLoadProcessResponse  AccEmitGoodsOutBoundOnLoadProcess(FiOnLoadProcessRequest request);
+
+    //发出商品入库在途处理
+    FiOnLoadProcessResponse  AccEmitGoodsInBoundOnLoadProcess(FiOnLoadProcessRequest request);
+
+    //发出商品代销商品款出库在途处理
+    FiOnLoadProcessResponse  AccEmitGoodsConsignmentOutBoundOnLoadProcess(FiOnLoadProcessRequest request);
+
+    //发出商品代销商品款入库在途处理
+    FiOnLoadProcessResponse  AccEmitGoodsConsignmentInBoundOnLoadProcess(FiOnLoadProcessRequest request);
+
 }
