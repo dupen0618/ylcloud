@@ -2,7 +2,7 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.WmCostByScmChangeCostRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmAdjustCostRequest;
-import com.ykcloud.soa.erp.api.wm.response.WmCostByScmChangeCostResponse;
+import com.ykcloud.soa.erp.api.wm.response.AdjustCostByScmChangeCostResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmAdjustCostResponse;
 
 /**
@@ -25,6 +25,6 @@ public interface WmCostAdjustService {
 	  * @date 2018/5/16 10:35
 	  * @description 在scm中的ScmChangeCost审核时候调用此方法
 	  */
-	public WmCostByScmChangeCostResponse adjustWmCostByScmChangeCost(WmCostByScmChangeCostRequest request);
+	public AdjustCostByScmChangeCostResponse adjustWmCostByScmChangeCost(WmCostByScmChangeCostRequest request);
 	
 }

@@ -1,7 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 
 public class WmBlCostAdjustDtl implements Serializable
@@ -40,11 +39,11 @@ public class WmBlCostAdjustDtl implements Serializable
 
     private Double PACKAGE_QTY;//件数
 
-    private BigDecimal ADJUST_PRICE;//调整价 调整后
+    private Double ADJUST_PRICE;//调整价 调整后
 
     private Long LOC_NUM_ID;//库位
 
-    private BigDecimal COST_PRICE;//成本价 调整前
+    private Double COST_PRICE;//成本价 调整前
 
     private String BATCH_SERIES;//批次行号
 
@@ -52,7 +51,7 @@ public class WmBlCostAdjustDtl implements Serializable
 
     private Long BATCH_SUPPLY_UNIT_NUM_ID;//批次供应商
 
-    private BigDecimal BATCH_PO_PRICE;//批次采购价格
+    private Double BATCH_PO_PRICE;//批次采购价格
 
     private Long CREATE_USER_ID;//创建人
 
@@ -236,12 +235,12 @@ public class WmBlCostAdjustDtl implements Serializable
         this.PACKAGE_QTY = PACKAGE_QTY;
     }
 
-    public BigDecimal getADJUST_PRICE()
+    public Double getADJUST_PRICE()
     {
         return ADJUST_PRICE;
     }
 
-    public void setADJUST_PRICE(BigDecimal ADJUST_PRICE)
+    public void setADJUST_PRICE(Double ADJUST_PRICE)
     {
         this.ADJUST_PRICE = ADJUST_PRICE;
     }
@@ -256,12 +255,12 @@ public class WmBlCostAdjustDtl implements Serializable
         this.LOC_NUM_ID = LOC_NUM_ID;
     }
 
-    public BigDecimal getCOST_PRICE()
+    public Double getCOST_PRICE()
     {
         return COST_PRICE;
     }
 
-    public void setCOST_PRICE(BigDecimal COST_PRICE)
+    public void setCOST_PRICE(Double COST_PRICE)
     {
         this.COST_PRICE = COST_PRICE;
     }
@@ -296,12 +295,12 @@ public class WmBlCostAdjustDtl implements Serializable
         this.BATCH_SUPPLY_UNIT_NUM_ID = BATCH_SUPPLY_UNIT_NUM_ID;
     }
 
-    public BigDecimal getBATCH_PO_PRICE()
+    public Double getBATCH_PO_PRICE()
     {
         return BATCH_PO_PRICE;
     }
 
-    public void setBATCH_PO_PRICE(BigDecimal BATCH_PO_PRICE)
+    public void setBATCH_PO_PRICE(Double BATCH_PO_PRICE)
     {
         this.BATCH_PO_PRICE = BATCH_PO_PRICE;
     }
