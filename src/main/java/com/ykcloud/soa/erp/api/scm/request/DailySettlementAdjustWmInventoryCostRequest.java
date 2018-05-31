@@ -2,11 +2,12 @@ package com.ykcloud.soa.erp.api.scm.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class DailySettlementAdjustWmInventoryCostRequest extends AbstractRequest
+public class DailySettlementAdjustWmInventoryCostRequest extends AbstractSessionRequest
 {
     private static final long serialVersionUID = 1L;
 
@@ -15,7 +16,7 @@ public class DailySettlementAdjustWmInventoryCostRequest extends AbstractRequest
 
     @NotNull(message = "日期不能为空")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date date;
+    private Date orderDate;
 
     public Long getSubUnitNumId()
     {
@@ -27,13 +28,12 @@ public class DailySettlementAdjustWmInventoryCostRequest extends AbstractRequest
         this.subUnitNumId = subUnitNumId;
     }
 
-    public Date getDate()
-    {
-        return date;
+    public Date getOrderDate() {
+        return orderDate;
     }
 
-    public void setDate(Date date)
-    {
-        this.date = date;
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
+
 }

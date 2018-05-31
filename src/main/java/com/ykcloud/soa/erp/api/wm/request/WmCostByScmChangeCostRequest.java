@@ -1,24 +1,32 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-import com.ykcloud.soa.erp.api.scm.model.ScmBlChangeCostAll;
+import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.ykcloud.soa.erp.api.scm.model.ChangeCost;
 
-import javax.validation.constraints.NotNull;
+import java.util.Date;
 import java.util.List;
 
-public class WmCostByScmChangeCostRequest extends AbstractRequest
+public class WmCostByScmChangeCostRequest extends AbstractSessionRequest
 {
     private static final long serialVersionUID = 1L;
 
-    private List<ScmBlChangeCostAll> list ;
+    private List<ChangeCost> changeCostList ;
 
-    public List<ScmBlChangeCostAll> getList()
-    {
-        return list;
+    private Date orderDate;
+
+    public List<ChangeCost> getChangeCostList() {
+        return changeCostList;
     }
 
-    public void setList(List<ScmBlChangeCostAll> list)
-    {
-        this.list = list;
+    public void setChangeCostList(List<ChangeCost> changeCostList) {
+        this.changeCostList = changeCostList;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
 }
