@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
+import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
@@ -14,6 +15,9 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 public class WmAdjustCostRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 1363377019937473048L;
+	
+	@ApiField(description = "是否启用txc(0：是，1：否)")
+	private Long isWithOutTxc = 0L;
 	
 	@NotNull(message = "库存金额调整业务类型不能为空！")
 	private Long typeNumId;
@@ -30,6 +34,14 @@ public class WmAdjustCostRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "供应商不能为空！")
 	private Long supplyUnitNumId;
 	
+	public Long getIsWithOutTxc() {
+		return isWithOutTxc;
+	}
+
+	public void setIsWithOutTxc(Long isWithOutTxc) {
+		this.isWithOutTxc = isWithOutTxc;
+	}
+
 	public Long getSupplyUnitNumId() {
 		return supplyUnitNumId;
 	}
