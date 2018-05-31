@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.AffectRowsResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmAccEmitGoodsGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmBillInAccountResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmReceiptInAccountResponse;
 
@@ -66,5 +67,11 @@ public interface WmBillInAccountService {
 
    //财务库存损溢单处理-(批次库存日月进销存+商品成本)
    WmReceiptInAccountResponse setLoss(WmReceiptInAccountRequest request);
+
+   //商品出库
+    WmAccEmitGoodsGetResponse AccReceiptEmitGoods(WmAccEmitGoodsGetRequest request);
+
+    //商品出库
+    WmAccEmitGoodsGetResponse AccShipEmitGoods(WmAccEmitGoodsGetRequest request);
 
 }
