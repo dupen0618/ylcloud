@@ -88,7 +88,7 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     private String updatedata;//更新
 
-    private String barcodeTypeNumId;
+    private Long barcodeTypeNumId;
 
     private String invFromType;//库存来源：1店内现货，2无货后台共享
 
@@ -127,8 +127,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
     private Double conversionQty;//件装数
 
     private Long conversiongUnitNumId;//件装单位
-
-    private String conversionStyleDesc;//件装规格
 
     private Double packageQty;//件数
 
@@ -203,11 +201,18 @@ public class SoTmlDtlForGenerateData implements Serializable{
     
     private Date orderDate;
     
-    
+    private Double taxRate;
     
 
+    public Double getTaxRate() {
+		return taxRate;
+	}
 
-    public Date getOrderDate() {
+	public void setTaxRate(Double taxRate) {
+		this.taxRate = taxRate;
+	}
+
+	public Date getOrderDate() {
 		return orderDate;
 	}
 
@@ -335,15 +340,17 @@ public class SoTmlDtlForGenerateData implements Serializable{
         this.otherDiscount = otherDiscount;
     }
 
-    public String getBarcodeTypeNumId() {
-        return barcodeTypeNumId;
-    }
+   
 
-    public void setBarcodeTypeNumId(String barcodeTypeNumId) {
-        this.barcodeTypeNumId = barcodeTypeNumId;
-    }
+    public Long getBarcodeTypeNumId() {
+		return barcodeTypeNumId;
+	}
 
-    public Date getRecvDate() {
+	public void setBarcodeTypeNumId(Long barcodeTypeNumId) {
+		this.barcodeTypeNumId = barcodeTypeNumId;
+	}
+
+	public Date getRecvDate() {
         return recvDate;
     }
 
@@ -823,14 +830,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     public void setConversiongUnitNumId(Long conversiongUnitNumId) {
         this.conversiongUnitNumId = conversiongUnitNumId;
-    }
-
-    public String getConversionStyleDesc() {
-        return conversionStyleDesc;
-    }
-
-    public void setConversionStyleDesc(String conversionStyleDesc) {
-        this.conversionStyleDesc = conversionStyleDesc;
     }
 
     public Double getPackageQty() {
