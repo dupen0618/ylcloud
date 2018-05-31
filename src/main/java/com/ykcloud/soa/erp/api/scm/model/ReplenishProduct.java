@@ -138,6 +138,16 @@ public class ReplenishProduct implements Serializable {
 	private Long purchaseTypeNumId; // 采购途径 1:国内 2 国际
 	
 	private Long storageDeptNumId;  //仓库部门
+	
+	private String promotionName;
+
+	public String getPromotionName() {
+		return promotionName;
+	}
+
+	public void setPromotionName(String promotionName) {
+		this.promotionName = promotionName;
+	}
 
 	public Long getStorageDeptNumId() {
 		return storageDeptNumId;
