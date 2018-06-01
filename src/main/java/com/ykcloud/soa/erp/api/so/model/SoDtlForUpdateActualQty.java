@@ -11,6 +11,7 @@ public class SoDtlForUpdateActualQty implements Serializable {
 	
 	private static final long serialVersionUID = -1152449352464241922L;
 
+
 	/**
 	 * 审批单号
 	 */

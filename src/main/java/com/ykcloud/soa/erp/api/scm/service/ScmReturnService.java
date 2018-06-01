@@ -8,25 +8,27 @@ import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnOrderGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalReturnStorageAndProductForGenerateReturnSoGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.QtyForReturnOrderCheckRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalActualQtyUpdateRequest;
+import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalDtlImportRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalNumIdByApplyNumIdGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderActualQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderAfterGeneateReturnSoUpdateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderDtlByCiteProductDeleteRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalOrderDtlByCiteQtyGenerateRequest;
+import com.ykcloud.soa.erp.api.scm.request.ReturnProductGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByBuyerAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByFinanceAutoAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderByFinanceHandAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnOrderGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalReturnStorageAndProductForGenerateReturnSoGetResponse;
-import com.ykcloud.soa.erp.api.scm.request.ReturnProductGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.QtyForReturnOrderCheckResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalActualQtyUpdateResponse;
+import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalDtlImportResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalNumIdByApplyNumIdGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderActualQtyUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderAfterGeneateReturnSoUpdateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderDtlByCiteProductDeleteResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderDtlByCiteQtyGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnProductGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalOrderActualQtyUpdateResponse;
 
 /**
  * @author fred.zhao
@@ -111,4 +113,11 @@ public interface ScmReturnService {
 
   //根据退货申请单号查询退货审批单号
   	public ReturnApprovalNumIdByApplyNumIdGetResponse getReturnApprovalNumIdByApplyNumId(ReturnApprovalNumIdByApplyNumIdGetRequest request);
+  	
+  	/**
+  	 * @Description:退货审批单Excel批量导入
+  	 * @author Song
+  	 * @Date 2018年5月31日 下午8:03:09
+  	 */
+  	public ReturnApprovalDtlImportResponse importReturnApprovalDtl(ReturnApprovalDtlImportRequest request);
 }
