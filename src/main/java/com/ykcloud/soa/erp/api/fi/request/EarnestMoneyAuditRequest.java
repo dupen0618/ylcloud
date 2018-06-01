@@ -6,7 +6,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class EarnestMoneyRequest extends AbstractUserSessionRequest{
+public class EarnestMoneyAuditRequest extends AbstractUserSessionRequest{
     private static final long serialVersionUID = 1L;
     @NotNull(message = "保证金单号不能为空！")
     private String reservedNo;
