@@ -12,10 +12,10 @@ public class SoTmlForWmShip {
     private Long pmtSign;
 
     private Double retailPrice;
+    
+    private Double retailAmount;
 
     private Long gpItemNumId;//父子商品标识
-
-    private String itemid;
 
     private Double deductAmount;// 优惠金额
 
@@ -29,10 +29,38 @@ public class SoTmlForWmShip {
 
     private Double conversionRate;//转换率
     
-    private Double taxRate;
+    private Long groupItemNumId; //组合商品编号
+    
+    private Double qty;
+        
+    
     
 
-    public Long getChannelNumId() {
+    public Double getRetailAmount() {
+		return retailAmount;
+	}
+
+	public void setRetailAmount(Double retailAmount) {
+		this.retailAmount = retailAmount;
+	}
+
+	public Double getQty() {
+		return qty;
+	}
+
+	public void setQty(Double qty) {
+		this.qty = qty;
+	}
+
+	public Long getGroupItemNumId() {
+		return groupItemNumId;
+	}
+
+	public void setGroupItemNumId(Long groupItemNumId) {
+		this.groupItemNumId = groupItemNumId;
+	}
+
+	public Long getChannelNumId() {
 		return channelNumId;
 	}
 
@@ -40,13 +68,6 @@ public class SoTmlForWmShip {
 		this.channelNumId = channelNumId;
 	}
 
-	public Double getTaxRate() {
-		return taxRate;
-	}
-
-	public void setTaxRate(Double taxRate) {
-		this.taxRate = taxRate;
-	}
 
 	public Double getConversionRate() {
         return conversionRate;
@@ -94,14 +115,6 @@ public class SoTmlForWmShip {
 
     public void setResolveValue(Double resolveValue) {
         this.resolveValue = resolveValue;
-    }
-
-    public String getItemid() {
-        return itemid;
-    }
-
-    public void setItemid(String itemid) {
-        this.itemid = itemid;
     }
 
     public Long getGpItemNumId() {
