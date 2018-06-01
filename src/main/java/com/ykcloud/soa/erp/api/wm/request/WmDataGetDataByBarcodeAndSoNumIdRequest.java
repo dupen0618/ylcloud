@@ -21,6 +21,9 @@ public class WmDataGetDataByBarcodeAndSoNumIdRequest extends AbstractRequest {
 	@NotNull(message = "条码不能为空! ")
 	private String barcode;
 	
+	@NotNull(message = "物理仓ID不能为空! ")
+	private Long physicalNumId;
+	
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -52,6 +55,14 @@ public class WmDataGetDataByBarcodeAndSoNumIdRequest extends AbstractRequest {
 
 	public void setBarcode(String barcode) {
 		this.barcode = barcode;
+	}
+
+	public Long getPhysicalNumId() {
+		return physicalNumId;
+	}
+
+	public void setPhysicalNumId(Long physicalNumId) {
+		this.physicalNumId = physicalNumId;
 	}
 
 

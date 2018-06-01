@@ -19,6 +19,9 @@ public class WmShipGetRequest extends AbstractUserSessionRequest {
 	
 	private Long containerFlag;
 	
+	@NotNull(message = "物理仓ID不能为空! ")
+	private Long physicalNumId;
+	
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
@@ -50,7 +53,13 @@ public class WmShipGetRequest extends AbstractUserSessionRequest {
 	public void setContainerFlag(Long containerFlag) {
 		this.containerFlag = containerFlag;
 	}
-	
-	
+
+	public Long getPhysicalNumId() {
+		return physicalNumId;
+	}
+
+	public void setPhysicalNumId(Long physicalNumId) {
+		this.physicalNumId = physicalNumId;
+	}
 	
 }
