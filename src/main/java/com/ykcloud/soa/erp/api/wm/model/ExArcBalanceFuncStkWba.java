@@ -10,7 +10,7 @@ public class ExArcBalanceFuncStkWba {
 	private String series;
 	private Long tenant_num_id;
 	private String bill_type_num_name;
-	private Long bill_type_num_id;
+	private String bill_type_num_id;
 	private Long type_num_id;
 	private Long balance_function_id;
 	private String balance_function_name;
@@ -52,12 +52,15 @@ public class ExArcBalanceFuncStkWba {
 	public void setBill_type_num_name(String bill_type_num_name) {
 		this.bill_type_num_name = bill_type_num_name;
 	}
-	public Long getBill_type_num_id() {
+
+	public String getBill_type_num_id() {
 		return bill_type_num_id;
 	}
-	public void setBill_type_num_id(Long bill_type_num_id) {
+
+	public void setBill_type_num_id(String bill_type_num_id) {
 		this.bill_type_num_id = bill_type_num_id;
 	}
+
 	public Long getType_num_id() {
 		return type_num_id;
 	}
