@@ -1,12 +1,14 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @Author Hewei
  * @Date 2018/3/27 10:09
  */
-public class WmBlReceiptBudBatchDtl {
+public class WmBlReceiptBudBatchDtl implements Serializable {
+    private static final long serialVersionUID = -6332439506199822839L;
     private Long supplyUnitNumId;
     private Long costTypeTemp;
     private String reservedNo;

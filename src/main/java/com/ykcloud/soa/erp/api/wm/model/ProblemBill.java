@@ -9,6 +9,7 @@ public class ProblemBill implements Serializable {
 
 	private List<Long> reservedNo;
 	private String billType;
+	private String billName;
 
 	public List<Long> getReservedNo() {
 		return reservedNo;
@@ -28,6 +29,14 @@ public class ProblemBill implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public String getBillName() {
+		return billName;
+	}
+
+	public void setBillName(String billName) {
+		this.billName = billName;
 	}
 
 }

@@ -495,8 +495,33 @@ public class SoTmlDtlTempForGenerateData  {
      * 商品商家编码
      */
     private String itemId;
+    
+    /**
+     * 父商品编号
+     */
+    private Long gpItemNumId;
+    
+    private Double taxRate;
+    
+    
 
-    public Long getSeries() {
+    public Double getTaxRate() {
+		return taxRate;
+	}
+
+	public void setTaxRate(Double taxRate) {
+		this.taxRate = taxRate;
+	}
+
+	public Long getGpItemNumId() {
+		return gpItemNumId;
+	}
+
+	public void setGpItemNumId(Long gpItemNumId) {
+		this.gpItemNumId = gpItemNumId;
+	}
+
+	public Long getSeries() {
         return series;
     }
 

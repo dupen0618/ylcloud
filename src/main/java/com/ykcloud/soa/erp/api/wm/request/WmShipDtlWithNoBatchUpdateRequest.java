@@ -36,7 +36,9 @@ public class WmShipDtlWithNoBatchUpdateRequest extends AbstractUserSessionReques
 	// 扫入或扫回，0正向 -1反向
 	@NotNull(message = "扫入或是扫入标识不能为空不能为空! ")
 	private Long cancelSign;
-
+	
+	@NotNull(message = "物理仓ID不能为空! ")
+	private Long physicalNumId;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -94,5 +96,12 @@ public class WmShipDtlWithNoBatchUpdateRequest extends AbstractUserSessionReques
 		this.cancelSign = cancelSign;
 	}
 
+	public Long getPhysicalNumId() {
+		return physicalNumId;
+	}
+
+	public void setPhysicalNumId(Long physicalNumId) {
+		this.physicalNumId = physicalNumId;
+	}
 
 }

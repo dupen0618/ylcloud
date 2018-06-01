@@ -1,9 +1,5 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
-import java.util.List;
-
-import com.ykcloud.soa.erp.api.wm.model.WmBlLossDtl;
-import com.ykcloud.soa.erp.api.wm.model.WmBlLossHdr;
 import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.*;
 import com.ykcloud.soa.erp.api.wm.response.LossWorkconfirmResponse;
@@ -71,8 +67,28 @@ public interface WmWorkService {
 	 */
 	SellDetermineInventoryByResponse bySellDetermineInventory(SellDetermineInventoryByRequest request);
 
-	public WmBlLossHdr getlossHdrByLossNumId(Long tenantNumId, Long subUnitNumId, Long dataSign, String lossNumId);
+	/**
+	 * 
+	 * @Description:根据损溢单号获取损溢单表头
+	 * @param request
+	 * @return
+	 * @author: Andy
+	 * @time: 2018年6月1日
+	 */
+	public LossNumIdByGetLossHdrResponse getlossHdrByLossNumId(LossNumIdByGetLossHdrRequest request);
 
-	public List<WmBlLossDtl> getlossDtlByLossNumId(Long tenantNumId, Long subUnitNumId, Long dataSign, String lossNumId);
+	
+	/**
+	 * 
+	 * @Description:根据损溢单号获取损溢单表体
+	 * @param tenantNumId
+	 * @param subUnitNumId
+	 * @param dataSign
+	 * @param lossNumId
+	 * @return
+	 * @author: Andy
+	 * @time: 2018年6月1日
+	 */
+	public LossNumIdByGetLossDtlResponse getlossDtlByLossNumId(LossNumIdByGetLossDtlRequest request);
 
 }
