@@ -1,13 +1,16 @@
 package com.ykcloud.soa.erp.api.so.model;
 
+import java.io.Serializable;
+
 /**
  * 审批单明细
  * @author tz.x
- *
  * @date 2018年4月19日上午9:50:39
  */
-public class SoDtlForUpdateActualQty {
+public class SoDtlForUpdateActualQty implements Serializable {
 	
+	private static final long serialVersionUID = -1152449352464241922L;
+
 	/**
 	 * 审批单号
 	 */
