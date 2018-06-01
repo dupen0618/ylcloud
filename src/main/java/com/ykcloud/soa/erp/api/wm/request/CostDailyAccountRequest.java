@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class CarryDownDailyFiRequest extends AbstractRequest {
+public class CostDailyAccountRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = -8775140995059788800L;
 
