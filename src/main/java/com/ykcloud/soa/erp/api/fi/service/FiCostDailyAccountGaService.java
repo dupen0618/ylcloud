@@ -28,8 +28,8 @@ import com.ykcloud.soa.erp.api.fi.response.LossAmount1AndFinalCostUpdaterRespons
 import com.ykcloud.soa.erp.api.fi.response.ReceiptOnLoadInBatchMonthAccountAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.VirtualDailyAndMonthCostGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.WeightedAveragePriceAdjustResponse;
-import com.ykcloud.soa.erp.api.wm.request.CarryDownDailyFiRequest;
-import com.ykcloud.soa.erp.api.wm.response.CarryDownDailyFiResponse;
+import com.ykcloud.soa.erp.api.wm.request.CostDailyAccountRequest;
+import com.ykcloud.soa.erp.api.wm.response.CostDailyAccountResponse;
 
 /**
  * 
@@ -93,7 +93,7 @@ public interface FiCostDailyAccountGaService {
 	* @return CarryDownDailyFiResponse    返回类型  
 	* @throws
 	 */
-	CarryDownDailyFiResponse carryCostDailyAccount(CarryDownDailyFiRequest request);
+	CostDailyAccountResponse carryCostDailyAccount(CostDailyAccountRequest request);
 
 	/**
 	 * 以销定入商品日结财务成本处理（归集码拨出）
