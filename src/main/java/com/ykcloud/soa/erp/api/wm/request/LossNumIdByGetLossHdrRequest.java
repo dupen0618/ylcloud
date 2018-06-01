@@ -1,17 +1,21 @@
-package com.ykcloud.soa.erp.api.fi.request;
+package com.ykcloud.soa.erp.api.wm.request;
+
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 import javax.validation.constraints.NotNull;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+public class LossNumIdByGetLossHdrRequest extends AbstractRequest {
 
-public class OutWorkDealingsRequest extends AbstractUserSessionRequest{
-
-	private static final long serialVersionUID = 3110512252512818590L;
-
+	private static final long serialVersionUID = -2565804606566389460L;
+	/**
+	 * 门店编号
+	 */
 	@NotNull(message = "门店编号不能为空！")
 	private Long subUnitNumId;
 
+	/**
+	 * 损溢单号
+	 */
 	@NotNull(message = "损溢单号不能为空！")
 	private String lossNumId;
 
