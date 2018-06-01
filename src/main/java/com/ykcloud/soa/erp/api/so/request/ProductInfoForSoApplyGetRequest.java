@@ -33,6 +33,16 @@ public class ProductInfoForSoApplyGetRequest extends AbstractRequest {
 	private Long storeType; //存储条件
 	
 	private Long divNumId;  //部类
+	
+	private Long itemNumType;//商品标识
+
+	public Long getItemNumType() {
+		return itemNumType;
+	}
+
+	public void setItemNumType(Long itemNumType) {
+		this.itemNumType = itemNumType;
+	}
 
 	public Long getDivNumId() {
 		return divNumId;

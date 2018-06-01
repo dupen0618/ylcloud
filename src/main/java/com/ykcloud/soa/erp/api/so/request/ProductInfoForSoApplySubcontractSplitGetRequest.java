@@ -26,6 +26,16 @@ public class ProductInfoForSoApplySubcontractSplitGetRequest extends AbstractReq
 			
 			@NotNull(message="存储方式不能为空")
 			private Long storeType;   //存储方式限定 0-不限定
+			
+			private Long itemNumType;
+
+			public Long getItemNumType() {
+				return itemNumType;
+			}
+
+			public void setItemNumType(Long itemNumType) {
+				this.itemNumType = itemNumType;
+			}
 
 			public Long getSubUnitNumId() {
 				return subUnitNumId;
