@@ -15,7 +15,9 @@ public class WmQuerySoAndContainerRequest extends AbstractRequest {
 
 	@NotNull(message = "门店ID不能为空")
 	private Long subUnitNumId;
-
+	
+	@NotNull(message = "物理仓ID不能为空! ")
+	private Long physicalNumId;
 
 	public String getContainerSerlno() {
 		return containerSerlno;
@@ -25,7 +27,6 @@ public class WmQuerySoAndContainerRequest extends AbstractRequest {
 		this.containerSerlno = containerSerlno;
 	}
 
-
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
@@ -33,4 +34,13 @@ public class WmQuerySoAndContainerRequest extends AbstractRequest {
 	public void setSubUnitNumId(Long subUnitNumId) {
 		this.subUnitNumId = subUnitNumId;
 	}
+
+	public Long getPhysicalNumId() {
+		return physicalNumId;
+	}
+
+	public void setPhysicalNumId(Long physicalNumId) {
+		this.physicalNumId = physicalNumId;
+	}
+	
 }
