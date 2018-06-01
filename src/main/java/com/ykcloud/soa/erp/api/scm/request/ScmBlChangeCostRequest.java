@@ -2,11 +2,12 @@ package com.ykcloud.soa.erp.api.scm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class ScmBlChangeCostRequest extends AbstractSessionRequest
+public class ScmBlChangeCostRequest extends AbstractUserSessionRequest
 {
     private static final long serialVersionUID = 1L;
     @NotNull(message = "调价单号不能为空！")

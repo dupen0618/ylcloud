@@ -6,7 +6,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class CashReceiptRequest extends AbstractUserSessionRequest
+public class CashReceiptAuditRequest extends AbstractUserSessionRequest
 {
     private static final long serialVersionUID = 1L;
 
