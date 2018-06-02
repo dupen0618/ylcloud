@@ -1,43 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
-import com.ykcloud.soa.erp.api.fi.request.AppointBalanceDealingsDtlGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDealingsDtlDeleteRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointBalanceCutDtlGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointBalanceDtlGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceDealingsDeductionFlushRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceJointSaleAutomaticRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalancePurchaseSaleAutomaticRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceSellOffAutomaticRequest;
-import com.ykcloud.soa.erp.api.fi.request.BillAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceCutDtlDeleteRequest;
-import com.ykcloud.soa.erp.api.fi.request.NotBalanceCutGetRequest;
-import com.ykcloud.soa.erp.api.fi.request.NotBalanceDealingsGetRequest;
-import com.ykcloud.soa.erp.api.fi.request.PaymentAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDtlDeleteRequest;
-import com.ykcloud.soa.erp.api.fi.request.NotBalanceGetRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceCutDeductionFlushRequest;
-import com.ykcloud.soa.erp.api.fi.request.PrePaymentAuditRequest;
-import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDealingsDtlGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDealingsDtlDeleteResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointBalanceCutDtlGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDtlGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceDealingsDeductionFlushResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceJointSaleAutomaticResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalancePurchaseSaleAutomaticResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceSellOffAutomaticResponse;
-import com.ykcloud.soa.erp.api.fi.response.BillAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceCutDtlDeleteResponse;
-import com.ykcloud.soa.erp.api.fi.response.NotBalanceCutGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.NotBalanceDealingsGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.PaymentAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
-import com.ykcloud.soa.erp.api.fi.response.NotBalanceGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceCutDeductionFlushResponse;
-import com.ykcloud.soa.erp.api.fi.response.PrePaymentAuditResponse;
+import com.ykcloud.soa.erp.api.fi.request.*;
+import com.ykcloud.soa.erp.api.fi.response.*;
 
 /**
  * @Description:供应商结算相关服务
@@ -97,5 +61,18 @@ public interface FiSettleService {
 	//删除结算单往来明细中的指定项目
 	public AppointForSupBalanceDealingsDtlDeleteResponse deleteAppointForSupBalanceDealingsDtl(AppointForSupBalanceDealingsDtlDeleteRequest request);
 
+	 /**
+	  * @author alfred.liu
+	  * @date 2018/6/1 10:34
+	  * @description 现金收据审核
+	  */
+	public CashReceiptAuditResponse auditCashReceipt(CashReceiptAuditRequest request);
+
+	/**
+	 * @author alfred.liu
+	 * @date 2018/5/24 11:20
+	 * @description 保证金审核
+	 */
+	public EarnestMoneyAuditResponse auditEarnestMoney(EarnestMoneyAuditRequest request);
 
 }

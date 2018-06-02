@@ -32,6 +32,16 @@ public class ReturnProductGetRequest extends AbstractRequest {
 	private Long purchaseTypeNumId;// 国内国外
 
 	private Long divNumId;// 部类
+	
+	private Long itemNumType; //商品类型
+
+	public Long getItemNumType() {
+		return itemNumType;
+	}
+
+	public void setItemNumType(Long itemNumType) {
+		this.itemNumType = itemNumType;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
