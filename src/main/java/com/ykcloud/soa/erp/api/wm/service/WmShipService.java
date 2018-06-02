@@ -200,4 +200,19 @@ public interface WmShipService {
 		public void createShipReserved(Long tenantNumId, Long dataSign, Long subUnitNumId, String reservedNo, Long userNumId ,Double flag);
 
 
+	/**
+	 * @Description: 查询未结算或部分结算的跨子公司的购销商品出库单涉及到的客户id集合，用于生成购销客户结算单
+	 * @author: henry.wang
+	 * @date: 2018/6/1 13:47
+	 **/
+	CustInfosForGenerateCustBalanceBlFindResponse findCustInfosForGenerateCustBalanceBl(
+		CustInfosForGenerateCustBalanceBlFindRequest request);
+
+	/**
+	 * @Description: 查询出库单数据，用于生成购销客户结算单
+	 * @author: henry.wang
+	 * @date: 2018/6/1 13:52
+	 **/
+	ShipInfosForGenerateCustBalanceBlFindResponse findShipInfosForGenerateCustBalanceBl(
+		ShipInfosForGenerateCustBalanceBlFindRequest request);
 }
