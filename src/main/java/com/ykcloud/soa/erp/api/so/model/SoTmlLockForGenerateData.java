@@ -58,8 +58,18 @@ public class SoTmlLockForGenerateData implements Serializable {
     private Long subUnitNumId;
 
     private String itemid;
+    
+    private Double fAmount;
 
-    public String getSeries() {
+    public Double getfAmount() {
+		return fAmount;
+	}
+
+	public void setfAmount(Double fAmount) {
+		this.fAmount = fAmount;
+	}
+
+	public String getSeries() {
         return series;
     }
 
