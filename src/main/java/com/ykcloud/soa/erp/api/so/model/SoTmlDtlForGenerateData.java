@@ -53,7 +53,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     private Double locPtyNumId;//库位属性
 
-    private Double drpStseries;//DRP系统订单表体行号
 
     private String barcode;//条码
 
@@ -483,14 +482,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     public void setLocPtyNumId(Double locPtyNumId) {
         this.locPtyNumId = locPtyNumId;
-    }
-
-    public Double getDrpStseries() {
-        return drpStseries;
-    }
-
-    public void setDrpStseries(Double drpStseries) {
-        this.drpStseries = drpStseries;
     }
 
     public String getBarcode() {
