@@ -501,6 +501,9 @@ public class SoTmlDtlTempForGenerateData  {
      */
     private Long gpItemNumId;
     
+    /**
+     * 销售税率
+     */
     private Double taxRate;
     
     

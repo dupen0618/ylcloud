@@ -50,7 +50,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     private Double initShipQty;//本店发货量
 
-    private String storageArray;//指定锁库仓库
 
     private Double locPtyNumId;//库位属性
 
@@ -114,10 +113,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
 
     private Double backQty;//退货数量
 
-    private Double surplusValue;//剩余价值
-
-    private Double closeQty;//退货关闭数量
-
     private String itemName;//商品名称
 
     private String simItemName;//商品简称
@@ -133,18 +128,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
     private Double conversionRate;//子母转换比率
 
     private Double starndardDiscount;//标准折扣
-    
-    private Double depreciatePrice;//降价差价
-
-    private Double returnReasons;//退货原因
-
-    private Double scanQty;//门店发货复核数量
-
-    private Double mbeanAmount;//妈豆价值
-
-    private Double pointAmount;//积分价值
-
-    private Long pointQty;//积分数
 
     private Double shopCouponAmount;//门店优惠券
 
@@ -173,16 +156,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
     private Double deductAmount; //
 
     private Double custInvoicePrice;//
-
-    private Double fiTradePrice;
-
-    private Double mcPointAmount;//
-
-    private Double cashCouponAmount;//
-
-    private Double voucherAmount;//
-
-    private Long recvStorageNumId;//
 
 
     private Long sendStorageNumId;//
@@ -276,45 +249,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
         this.sendStorageNumId = sendStorageNumId;
     }
 
-    public Long getRecvStorageNumId() {
-        return recvStorageNumId;
-    }
-
-    public void setRecvStorageNumId(Long recvStorageNumId) {
-        this.recvStorageNumId = recvStorageNumId;
-    }
-
-    public Double getVoucherAmount() {
-        return voucherAmount;
-    }
-
-    public void setVoucherAmount(Double voucherAmount) {
-        this.voucherAmount = voucherAmount;
-    }
-
-    public Double getCashCouponAmount() {
-        return cashCouponAmount;
-    }
-
-    public void setCashCouponAmount(Double cashCouponAmount) {
-        this.cashCouponAmount = cashCouponAmount;
-    }
-
-    public Double getMcPointAmount() {
-        return mcPointAmount;
-    }
-
-    public void setMcPointAmount(Double mcPointAmount) {
-        this.mcPointAmount = mcPointAmount;
-    }
-
-    public Double getFiTradePrice() {
-        return fiTradePrice;
-    }
-
-    public void setFiTradePrice(Double fiTradePrice) {
-        this.fiTradePrice = fiTradePrice;
-    }
 
     public Double getCustInvoicePrice() {
         return custInvoicePrice;
@@ -542,13 +476,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
         this.initShipQty = initShipQty;
     }
 
-    public String getStorageArray() {
-        return storageArray;
-    }
-
-    public void setStorageArray(String storageArray) {
-        this.storageArray = storageArray;
-    }
 
     public Double getLocPtyNumId() {
         return locPtyNumId;
@@ -776,22 +703,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
         this.backQty = backQty;
     }
 
-    public Double getSurplusValue() {
-        return surplusValue;
-    }
-
-    public void setSurplusValue(Double surplusValue) {
-        this.surplusValue = surplusValue;
-    }
-
-    public Double getCloseQty() {
-        return closeQty;
-    }
-
-    public void setCloseQty(Double closeQty) {
-        this.closeQty = closeQty;
-    }
-
     public String getItemName() {
         return itemName;
     }
@@ -856,54 +767,6 @@ public class SoTmlDtlForGenerateData implements Serializable{
         this.starndardDiscount = starndardDiscount;
     }
 
-
-    public Double getDepreciatePrice() {
-        return depreciatePrice;
-    }
-
-    public void setDepreciatePrice(Double depreciatePrice) {
-        this.depreciatePrice = depreciatePrice;
-    }
-
-    public Double getReturnReasons() {
-        return returnReasons;
-    }
-
-    public void setReturnReasons(Double returnReasons) {
-        this.returnReasons = returnReasons;
-    }
-
-    public Double getScanQty() {
-        return scanQty;
-    }
-
-    public void setScanQty(Double scanQty) {
-        this.scanQty = scanQty;
-    }
-
-    public Double getMbeanAmount() {
-        return mbeanAmount;
-    }
-
-    public void setMbeanAmount(Double mbeanAmount) {
-        this.mbeanAmount = mbeanAmount;
-    }
-
-    public Double getPointAmount() {
-        return pointAmount;
-    }
-
-    public void setPointAmount(Double pointAmount) {
-        this.pointAmount = pointAmount;
-    }
-
-    public Long getPointQty() {
-        return pointQty;
-    }
-
-    public void setPointQty(Long pointQty) {
-        this.pointQty = pointQty;
-    }
 
     public Double getShopCouponAmount() {
         return shopCouponAmount;
