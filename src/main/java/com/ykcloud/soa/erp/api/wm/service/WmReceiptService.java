@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderDtlImportRequest;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderDtlImportResponse;
 import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.*;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptBatchDtlSeriesForRegenerateReceiptGetRequest;
@@ -231,4 +233,11 @@ public interface WmReceiptService {
 	 * @return
 	 */
 	BusinessAmountForGenKxCountResponse countReceiptCost(BusinessAmountForGenKxCountRequest request);
+	
+	/**
+	 * 订货审批单excel批量导入
+	 * @author 殷剑
+	 * @date 2018年5月9日下午2:19:53
+	 */
+	public ReceiptBudDtlImportResponse importReceiptForBeginning(ReceiptBudDtlImportRequest request);
 }
