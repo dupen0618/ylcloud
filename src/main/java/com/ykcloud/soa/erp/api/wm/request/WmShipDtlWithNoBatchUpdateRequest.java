@@ -37,7 +37,7 @@ public class WmShipDtlWithNoBatchUpdateRequest extends AbstractUserSessionReques
 	@NotNull(message = "扫入或是扫入标识不能为空不能为空! ")
 	private Long cancelSign;
 	
-	@NotNull(message = "物理仓ID不能为空! ")
+	//@NotNull(message = "物理仓ID不能为空! ")
 	private Long physicalNumId;
 
 	public Long getSubUnitNumId() {
