@@ -64,6 +64,9 @@ public interface SoQueryService {
   //根据订单号查询订单号头信息
   	public SoHdrGetResponse getSoHdrBySoNumId(SoHdrGetRequest request);
   	
+  	 //根据订单号查询订单号头信息
+  	public SoHdrGetResponse getSoHdrBySoNumIdFuzzy(SoHdrGetRequest request);
+  	
   	
   	
   	/**

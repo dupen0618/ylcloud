@@ -15,6 +15,9 @@ public class SoHdrGetRequest extends AbstractRequest {
 
 	@NotNull(message = "门店Id不能为空！")
 	private Long subUnitNumId;
+	
+	
+	private Long physicalNumId;
 
 
 	public String getSoNumId() {
@@ -33,5 +36,12 @@ public class SoHdrGetRequest extends AbstractRequest {
 		this.subUnitNumId = subUnitNumId;
 	}
 
+	public Long getPhysicalNumId() {
+		return physicalNumId;
+	}
+
+	public void setPhysicalNumId(Long physicalNumId) {
+		this.physicalNumId = physicalNumId;
+	}
 
 }
