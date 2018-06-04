@@ -23,7 +23,7 @@ public class ReceiptProduceDateUpdateRequest extends AbstractUserSessionRequest 
 	private String reservedNo;
 	
 	@ApiField(description = "门店编号")
-	@NotEmpty(message = "门店编号不能为空!")
+	@NotNull(message = "门店编号不能为空!")
 	private Long subUnitNumId;
 	
 	@ApiField(description = "托盘号")
@@ -35,7 +35,7 @@ public class ReceiptProduceDateUpdateRequest extends AbstractUserSessionRequest 
 	private Long itemNumId;
 	
 	@ApiField(description = "实际生产日期")
-	@NotEmpty(message = "时期生产日期不能为空!")
+	@NotNull(message = "时期生产日期不能为空!")
 	private String actualProductionDate;
 	
 	
