@@ -10,9 +10,7 @@ import javax.validation.constraints.NotNull;
  * @Date:
  */
 public class SupplyPayTypeIdGetRequest extends AbstractRequest {
-
-    private static final long serialVersionUID = 7988475632052221318L;
-
+    private static final long serialVersionUID = 2380969623708420861L;
     @NotNull(message = "门店编号不能为空！")
     private Long unitNumId;
     @NotNull(message = "供应商不能为空！")
