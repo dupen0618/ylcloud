@@ -1,10 +1,12 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayDetailListGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReceiptTrayHdrFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ReverseReceiptTrayHdrCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.TraySerlnoLableUpdateRequest;
+import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayDetailListGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ReceiptTrayHdrFinishResponse;
@@ -53,4 +55,6 @@ public interface WmReceiptTrayService {
 	 *@return response{code,message,traySerlno,traySerlnoLable}
 	 */
 	public ReverseReceiptTrayHdrCreateResponse createReverseReceiptTrayHdr(ReverseReceiptTrayHdrCreateRequest request);
+	
+	public ReceiptTrayDetailListGetResponse getReceiptTrayDetailList(ReceiptTrayDetailListGetRequest request);
 }
