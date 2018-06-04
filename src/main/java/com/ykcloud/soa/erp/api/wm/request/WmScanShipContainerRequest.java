@@ -26,7 +26,7 @@ public class WmScanShipContainerRequest extends AbstractUserSessionRequest {
 
 	// 0正向 -1反向
 	@NotNull(message = "正向，反向标识符不能为空")
-	private Long cancelSign;
+	private Long confirmSign;
 
 
 	public String getContainerLabserlno() {
@@ -53,14 +53,14 @@ public class WmScanShipContainerRequest extends AbstractUserSessionRequest {
 		this.reservedNo = reservedNo;
 	}
 
-	public Long getCancelSign() {
-		return cancelSign;
+
+	public Long getConfirmSign() {
+		return confirmSign;
 	}
 
-	public void setCancelSign(Long cancelSign) {
-		this.cancelSign = cancelSign;
+	public void setConfirmSign(Long confirmSign) {
+		this.confirmSign = confirmSign;
 	}
-
 
 	public String getContainerSerlno() {
 		return containerSerlno;

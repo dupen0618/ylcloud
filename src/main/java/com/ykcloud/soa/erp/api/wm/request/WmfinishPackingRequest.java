@@ -16,7 +16,7 @@ public class WmfinishPackingRequest extends AbstractUserSessionRequest {
 	@NotNull(message = "订单id不能为空! ")
 	private String soNumId;
 
-	@NotNull(message = "短装标识符不能为空不能为空! ")
+	@NotNull(message = "短装标识符不能为空! ")
 	private Long confirmSign;
 	
 
