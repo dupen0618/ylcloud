@@ -1,6 +1,7 @@
 
 package com.ykcloud.soa.erp.api.wm.request;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,7 +12,6 @@ import java.util.List;
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
-import com.ykcloud.soa.erp.api.fi.model.BillDtlForWriteBackStatus;
 import com.ykcloud.soa.erp.api.wm.model.ImportWmBlReceiptDtl;
 
 public class ReceiptBudDtlImportRequest extends AbstractUserSessionRequest {
@@ -28,6 +28,8 @@ public class ReceiptBudDtlImportRequest extends AbstractUserSessionRequest {
 	private String reservedNo;
 	
 	private Long itemNumId;
+	
+	private Date orderDate;
 	
 	List<ImportWmBlReceiptDtl> importWmBlReceiptDtls;
 
@@ -62,6 +64,13 @@ public class ReceiptBudDtlImportRequest extends AbstractUserSessionRequest {
 	public void setItemNumId(Long itemNumId) {
 		this.itemNumId = itemNumId;
 	}
-	
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
 }
 
