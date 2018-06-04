@@ -1,7 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.request.CustBalanceBlForPurchaseSellGenRequest;
-import com.ykcloud.soa.erp.api.fi.request.CustBalanceHdrGenerateRequest;
+import com.ykcloud.soa.erp.api.fi.request.CustBalanceGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.response.CustBalanceBlForPurchaseSellGenResponse;
 import com.ykcloud.soa.erp.api.fi.response.CustBalanceHdrGenerateResponse;
 
@@ -25,6 +25,6 @@ public interface FiCustBalanceService {
      * @param request
      * @return
      */
-    CustBalanceHdrGenerateResponse generateCustomerBalanceHeader(CustBalanceHdrGenerateRequest request);
+    CustBalanceHdrGenerateResponse generateCustomerBalance(CustBalanceGenerateRequest request);
 
 }
