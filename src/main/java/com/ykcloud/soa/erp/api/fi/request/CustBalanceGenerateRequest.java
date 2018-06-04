@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
@@ -9,13 +10,17 @@ import java.util.Date;
  * @author Sealin
  * Created on 2018-06-01
  */
-public class CustBalanceHdrGenerateRequest extends AbstractUserSessionRequest {
+public class CustBalanceGenerateRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = -3702466843514123983L;
 
     @NotNull(message = "门店必填")
     private Long subUnitNumId;
+    @NotNull(message = "供应商编号必填")
     private Long unitNumId;
+    @NotNull(message = "结算单号必填")
     private String balanceNo;
+    @NotNull(message = "结算日期必填")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date balanceDate;
 
     public Long getUnitNumId() {
