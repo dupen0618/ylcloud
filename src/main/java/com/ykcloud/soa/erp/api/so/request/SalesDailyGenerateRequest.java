@@ -15,6 +15,11 @@ import java.util.Date;
 public class SalesDailyGenerateRequest extends AbstractUserSessionRequest {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 8011001474311318170L;
+
+	/**
      * 销售门店编号
      */
     @NotNull(message = "门店编号不能为空")
