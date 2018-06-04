@@ -20,7 +20,8 @@ public class WmShipDtlScanStatusRequest extends AbstractUserSessionRequest
     @NotNull(message ="复核数量不能为空！" )
     private Double qty;
     //0是扫出，1是扫回
-    private Long cancelSign;
+    @NotNull(message ="扫入扫出标志不能为空！" )
+    private Long confirmSign;
 
     public Long getSubUnitNumId()
     {
@@ -62,13 +63,14 @@ public class WmShipDtlScanStatusRequest extends AbstractUserSessionRequest
         this.qty = qty;
     }
 
-    public Long getCancelSign()
-    {
-        return cancelSign;
-    }
+	public Long getConfirmSign() {
+		return confirmSign;
+	}
 
-    public void setCancelSign(Long cancelSign)
-    {
-        this.cancelSign = cancelSign;
-    }
+	public void setConfirmSign(Long confirmSign) {
+		this.confirmSign = confirmSign;
+	}
+
+    
+
 }
