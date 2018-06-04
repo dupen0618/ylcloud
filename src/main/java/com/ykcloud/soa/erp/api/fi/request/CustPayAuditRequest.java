@@ -10,10 +10,10 @@ public class CustPayAuditRequest extends AbstractUserSessionRequest {
     private static final long serialVersionUID = -3702466843514123983L;
     @NotNull(message = "门店不能为空！")
     private Long subUnitNumId;
-    @NotNull(message = "开票日期不能为空！")
+    @NotNull(message = "付款日期不能为空！")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date payDate;
-    @NotNull(message = "结算单号不能为空！")
+    @NotNull(message = "付款单号不能为空！")
     private String reservedNo;
 
     public static long getSerialVersionUID() {
