@@ -11,6 +11,8 @@ public class ScmBlContractForBalanceDay implements Serializable {
     private Long payTypeId;
     private Date beginDay;
     private Date endDay;
+    private Integer balanceDay;
+    private Long delayDay;
 
     public Long getPayTypeId() {
         return payTypeId;
@@ -34,5 +36,21 @@ public class ScmBlContractForBalanceDay implements Serializable {
 
     public void setEndDay(Date endDay) {
         this.endDay = endDay;
+    }
+
+    public Integer getBalanceDay() {
+        return balanceDay;
+    }
+
+    public void setBalanceDay(Integer balanceDay) {
+        this.balanceDay = balanceDay;
+    }
+
+    public Long getDelayDay() {
+        return delayDay;
+    }
+
+    public void setDelayDay(Long delayDay) {
+        this.delayDay = delayDay;
     }
 }

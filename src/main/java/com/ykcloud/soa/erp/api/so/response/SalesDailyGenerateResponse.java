@@ -10,5 +10,10 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  */
 public class SalesDailyGenerateResponse extends MessagePack {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1184160880046501289L;
+
 
 }

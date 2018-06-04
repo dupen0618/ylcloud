@@ -60,8 +60,19 @@ public class SoTmlLockForGenerateData implements Serializable {
     private String itemid;
     
     private Double fAmount;
+    
+    private Double tradePrice;
 
-    public Double getfAmount() {
+
+    public Double getTradePrice() {
+		return tradePrice;
+	}
+
+	public void setTradePrice(Double tradePrice) {
+		this.tradePrice = tradePrice;
+	}
+
+	public Double getfAmount() {
 		return fAmount;
 	}
 
