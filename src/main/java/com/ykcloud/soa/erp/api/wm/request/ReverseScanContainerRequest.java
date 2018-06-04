@@ -18,7 +18,7 @@ public class ReverseScanContainerRequest extends AbstractUserSessionRequest {
 	@NotNull(message="托盘实物标志不能为空!")
 	private String containerLabserlno;
 	@NotNull(message="扫描标志不能为空!0正向,-1反向!")
-	private Long cancelSign;
+	private Long confirmSign;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -44,14 +44,12 @@ public class ReverseScanContainerRequest extends AbstractUserSessionRequest {
 		this.containerLabserlno = containerLabserlno;
 	}
 
-	public Long getCancelSign() {
-		return cancelSign;
+	public Long getConfirmSign() {
+		return confirmSign;
 	}
 
-	public void setCancelSign(Long cancelSign) {
-		this.cancelSign = cancelSign;
+	public void setConfirmSign(Long confirmSign) {
+		this.confirmSign = confirmSign;
 	}
-	
-	
 
 }
