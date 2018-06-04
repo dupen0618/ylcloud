@@ -9,21 +9,20 @@ import com.ykcloud.soa.erp.api.wm.response.*;
  */
 public interface WmConsignmentInAccountService {
     //验收入库单
-    public InAccountByReceiptResponse setInAccountByReceipt(InAccountByReceiptRequest request);
+    InAccountByReceiptResponse setInAccountByReceipt(InAccountByReceiptRequest request);
     //出库单
-    public InAccountByShipResponse setInAccountByShip(InAccountByShipRequest request);
+    InAccountByShipResponse setInAccountByShip(InAccountByShipRequest request);
     //盘盈盘亏单
-    public InAccountByStockAdjustResponse setInAccountByStockAdjust(InAccountByStockAdjustRequest request);
+    InAccountByStockAdjustResponse setInAccountByStockAdjust(InAccountByStockAdjustRequest request);
     //移库单
-    public InAccountByDepartMoveResponse setInAccountByDepartMove(InAccountByDepartMoveRequest request);
+    InAccountByDepartMoveResponse setInAccountByDepartMove(InAccountByDepartMoveRequest request);
     //加工单-原料单
-    public InAccountByWorkRawResponse setInAccountByWorkRaw(InAccountByWorkRawRequest request);
+    InAccountByWorkRawResponse setInAccountByWorkRaw(InAccountByWorkRawRequest request);
     //加工单-成品单
-    public InAccountByWorkProResponse setInAccountByWorkPro(InAccountByWorkProRequest request);
+    InAccountByWorkProResponse setInAccountByWorkPro(InAccountByWorkProRequest request);
     //损溢单
-    public InAccountByLossResponse setInAccountByLoss(InAccountByLossRequest request);
+    InAccountByLossResponse setInAccountByLoss(InAccountByLossRequest request);
     //结算单
-    public InAccountByBalanceResponse setInAccountByBalance(InAccountByBalanceRequest request);
-
+    InAccountByBalanceResponse setInAccountByBalance(InAccountByBalanceRequest request);
 
 }

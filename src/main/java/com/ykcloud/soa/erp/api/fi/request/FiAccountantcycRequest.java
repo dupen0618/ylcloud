@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 public class FiAccountantcycRequest extends AbstractRequest {
-    @NotNull(message = "供应商编号不能为空!")
+    @NotNull(message = "门店编号不能为空!")
     private Long subUnitNumId;
 
 
