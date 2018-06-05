@@ -22,7 +22,18 @@ public class ReceiptTrayDetailListGetRequest extends AbstractRequest {
 	@NotNull(message = "验收单号不能为空!")
 	private String reservedNo;
 	
+	@ApiField(description = "托盘号")
+	private String traySerlno;
 	
+	
+	public String getTraySerlno() {
+		return traySerlno;
+	}
+
+	public void setTraySerlno(String traySerlno) {
+		this.traySerlno = traySerlno;
+	}
+
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
 	}
