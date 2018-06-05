@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
@@ -18,13 +20,25 @@ public class LossAmount1AndFinalCostUpdateRequest extends AbstractRequest {
 
 	@NotNull(message = "损耗金额不能为空！")
 	private Double losscost;
-	
+
 	@NotNull(message = "损耗类型不能为空！")
 	private String lossType;
 
+	@NotNull(message = "税额不能为空！")
+	private Double taxAmount;
+
+	@NotNull(message = "入账日期不能为空！")
+	private Date recDate;
+
 	public static interface lossTypeOption {
-		public String loss = "0";// 报损
-		public String overFlow = "1";// 报溢
+		/**
+		 * 报损类型
+		 */
+		public String LOSS = "0";
+		/**
+		 * 报溢类型
+		 */
+		public String OVERFLOW = "1";
 	}
 
 	public Double getLosscost() {
@@ -66,5 +80,21 @@ public class LossAmount1AndFinalCostUpdateRequest extends AbstractRequest {
 	public void setLossType(String lossType) {
 		this.lossType = lossType;
 	}
-	
+
+	public Double getTaxAmount() {
+		return taxAmount;
+	}
+
+	public void setTaxAmount(Double taxAmount) {
+		this.taxAmount = taxAmount;
+	}
+
+	public Date getRecDate() {
+		return recDate;
+	}
+
+	public void setRecDate(Date recDate) {
+		this.recDate = recDate;
+	}
+
 }
