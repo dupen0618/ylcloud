@@ -6,8 +6,9 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class TmlDailyGenerateRequest extends AbstractRequest {
+public class TmlDailyGenerateRequest extends AbstractUserSessionRequest {
 
 	/**
 	 * 小票

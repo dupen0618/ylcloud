@@ -8,13 +8,5 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  */
 public class WorkLossChangeConfirmResponse extends MessagePack {
     private static final long serialVersionUID = 1L;
-    private String lossNumId;
 
-    public String getLossNumId() {
-        return lossNumId;
-    }
-
-    public void setLossNumId(String lossNumId) {
-        this.lossNumId = lossNumId;
-    }
 }

@@ -28,7 +28,7 @@ public interface WmBillInAccountService {
     AffectRowsResponse materialProcessingFromGetByWorkNumId(UsableInventoryByReservedNoGetRequest request);
     //可用库存成品
     AffectRowsResponse finishedProductsProcessingFromGetByWorkNumId(UsableInventoryByReservedNoGetRequest request);
-    //可用库存损益单
+    //可用库存损溢单
     AffectRowsResponse profitAndLossGetByWorkNumId(UsableInventoryByReservedNoGetRequest request);
     //物理财务验收入库流水
     WmBillInAccountResponse getVerifyPhysicsByReservedNo(PhysicsWarehousepackingGetRequest request);

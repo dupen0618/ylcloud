@@ -13,6 +13,7 @@ public class BalanceHdrForCustBalance implements Serializable {
     private Date beginDate;
     private Date endDate;
     private Long unitNumId;
+    private Long settlementType;
 
 
     public Date getBeginDate() {
@@ -37,5 +38,13 @@ public class BalanceHdrForCustBalance implements Serializable {
 
     public void setUnitNumId(Long unitNumId) {
         this.unitNumId = unitNumId;
+    }
+
+    public Long getSettlementType() {
+        return settlementType;
+    }
+
+    public void setSettlementType(Long settlementType) {
+        this.settlementType = settlementType;
     }
 }

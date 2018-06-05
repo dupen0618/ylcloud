@@ -4,30 +4,24 @@ import com.ykcloud.soa.erp.api.fi.request.AccountForSellDetermineInventoryByClas
 import com.ykcloud.soa.erp.api.fi.request.AccountForStockCheckByClassifyNumIdProcessRequest;
 import com.ykcloud.soa.erp.api.fi.request.AdjustWeightedAveragePriceRequest;
 import com.ykcloud.soa.erp.api.fi.request.BatchAmountAndTaxAmountAdjustRequest;
-import com.ykcloud.soa.erp.api.fi.request.BatchAmountAndTaxAmountForFixedAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.CalcSaleGrossProfitRequest;
 import com.ykcloud.soa.erp.api.fi.request.CostAmountAndTaxAmountAdjustRequest;
-import com.ykcloud.soa.erp.api.fi.request.CostAmountAndTaxAmountForFixedAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.DailyAndMonthCostAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.GoodsMoveWeightingCarryOverRequest;
 import com.ykcloud.soa.erp.api.fi.request.LossAmount1AndFinalCostUpdateRequest;
 import com.ykcloud.soa.erp.api.fi.request.ReceiptOnLoadInBatchMonthAccountAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.request.VirtualDailyAndMonthCostGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.WeightedAveragePriceAdjustRequest;
 import com.ykcloud.soa.erp.api.fi.response.AccountForSellDetermineInventoryByClassifyNumIdProcessResponse;
 import com.ykcloud.soa.erp.api.fi.response.AccountForStockCheckByClassifyNumIdProcessResponse;
 import com.ykcloud.soa.erp.api.fi.response.AdjustWeightedAveragePriceResponse;
 import com.ykcloud.soa.erp.api.fi.response.BatchAmountAndTaxAmountAdjustResponse;
-import com.ykcloud.soa.erp.api.fi.response.BatchAmountAndTaxAmountForFixedAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.CalcSaleGrossProfitResponse;
 import com.ykcloud.soa.erp.api.fi.response.CostAmountAndTaxAmountAdjustResponse;
-import com.ykcloud.soa.erp.api.fi.response.CostAmountAndTaxAmountForFixedAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.DailyAndMonthCostAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.GoodsMoveWeightingCarryOverResponse;
 import com.ykcloud.soa.erp.api.fi.response.LossAmount1AndFinalCostUpdaterResponse;
 import com.ykcloud.soa.erp.api.fi.response.ReceiptOnLoadInBatchMonthAccountAdjustResponse;
 import com.ykcloud.soa.erp.api.fi.response.VirtualDailyAndMonthCostGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.WeightedAveragePriceAdjustResponse;
 import com.ykcloud.soa.erp.api.wm.request.CostDailyAccountRequest;
 import com.ykcloud.soa.erp.api.wm.response.CostDailyAccountResponse;
 
@@ -71,7 +65,7 @@ public interface FiCostDailyAccountGaService {
 
 	//更新损耗金额和期末成本
 	public LossAmount1AndFinalCostUpdaterResponse updateLossAmount1AndFinalCost(LossAmount1AndFinalCostUpdateRequest request);
-
+	
 	/**
 	 * 生产盘点财务成本处理（归集码拨入）
 	 *

@@ -2,66 +2,6 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.*;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptBatchDtlSeriesForRegenerateReceiptGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptBatchDtlNotBalanceCountGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReciptListForGenerateBalanceGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffRequest;
-import com.ykcloud.soa.erp.api.wm.request.CountDtlForReturnCiteDtlGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.DirectReceiptUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.MessageForDepositInTransitAndRegenerateDirectWaySoSendReuqest;
-import com.ykcloud.soa.erp.api.wm.request.ProductByBarcodeForReceiptGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.SupBlanceDtlByReceiptBatchDtlSeriesGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrAndBatchDtlStatusNumIdUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptDtlUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptFinishRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptForCancelExpirePoDeleteRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptForGenerateDirectWayDistributionSoGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptGenerateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrAfterGenerateSoUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrForCancelExpirePoGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptHdrFuzzyGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptProduceDateUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReturnCiteDtlByCiteProductDeleteRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReturnCiteDtlSaveRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReverseShipHdrFuzzyGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ShopHaveInventoryMaxBatchPriceGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ShopLastBatchPriceGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ShopProductLastReceiveDateGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.ReceiptBatchDtlStatusNumIdUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.SupplyUnitNumIdForPurchaseSaleGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.UpdateReceiptAccountFinishRequest;
-import com.ykcloud.soa.erp.api.wm.request.VoucherNumIdByReservedNoUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptBatchDtlSeriesForRegenerateReceiptGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptBatchDtlNotBalanceCountGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReciptListForGenerateBalanceGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.CiteQtyForAuditApprovalReturnOrderByBuyerWriteoffResponse;
-import com.ykcloud.soa.erp.api.wm.response.CountDtlForReturnCiteDtlGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.DirectReceiptUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.MessageForDepositInTransitAndRegenerateDirectWaySoSendRespnse;
-import com.ykcloud.soa.erp.api.wm.response.ProductByBarcodeForReceiptGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.SupBlanceDtlByReceiptBatchDtlSeriesGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrAndBatchDtlStatusNumIdUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptDtlUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptFinishRsponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptForCancelExpirePoDeleteResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptForGenerateDirectWayDistributionSoGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptGenerateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrAfterGenerateSoUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrForCancelExpirePoGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptHdrFuzzyGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptProduceDateUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptSupConfirmDateAndStatusNumIdByPoNumIdResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReturnCiteDtlByCiteProductDeleteResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReturnCiteDtlSaveResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReverseShipHdrFuzzyGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ShopHaveInventoryMaxBatchPriceGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ShopLastBatchPriceGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ShopProductLastReceiveDateGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.ReceiptBatchDtlStatusNumIdUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.SupplyUnitNumIdForPurchaseSaleGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.UpdateReceiptAccountFinishResponse;
-import com.ykcloud.soa.erp.api.wm.response.VoucherNumIdByReservedNoUpdateResponse;
 
 
 public interface WmReceiptService {
@@ -231,4 +171,11 @@ public interface WmReceiptService {
 	 * @return
 	 */
 	BusinessAmountForGenKxCountResponse countReceiptCost(BusinessAmountForGenKxCountRequest request);
+	
+	/**
+	 * excel期初库存数据批量导入
+	 * @author 殷剑
+	 * @date 2018年5月9日下午2:19:53
+	 */
+	public ReceiptBudDtlImportResponse importReceiptForBeginning(ReceiptBudDtlImportRequest request);
 }

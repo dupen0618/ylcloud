@@ -13,6 +13,8 @@ public class ShopHaveInventoryMaxBatchPriceGetRequest extends AbstractRequest {
 	
 	@NotNull(message = "商品编号不能为空")
 	private Long itemNumId; // 商品编号
+	
+	private Long supplyUnitNumId;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -30,4 +32,12 @@ public class ShopHaveInventoryMaxBatchPriceGetRequest extends AbstractRequest {
 		this.itemNumId = itemNumId;
 	}
 
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
+
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
+	}
+	
 }
