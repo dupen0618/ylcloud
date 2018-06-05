@@ -173,7 +173,7 @@ public interface WmReceiptService {
 	BusinessAmountForGenKxCountResponse countReceiptCost(BusinessAmountForGenKxCountRequest request);
 	
 	/**
-	 * excel期初数据批量导入
+	 * excel期初库存数据批量导入
 	 * @author 殷剑
 	 * @date 2018年5月9日下午2:19:53
 	 */
