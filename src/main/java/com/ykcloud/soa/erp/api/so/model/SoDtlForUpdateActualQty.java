@@ -41,6 +41,19 @@ public class SoDtlForUpdateActualQty implements Serializable {
 	 * 申请单号
 	 */
 	private String applyNumId;
+	
+	/**
+	 * 订货门店
+	 */
+	private Long ordSubUnitNumId;
+
+	public Long getOrdSubUnitNumId() {
+		return ordSubUnitNumId;
+	}
+
+	public void setOrdSubUnitNumId(Long ordSubUnitNumId) {
+		this.ordSubUnitNumId = ordSubUnitNumId;
+	}
 
 	public String getApplyNumId() {
 		return applyNumId;

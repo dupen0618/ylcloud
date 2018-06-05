@@ -12,6 +12,11 @@ public class ImportError implements Serializable {
 	private static final long serialVersionUID = 7757171713507109887L;
 	
 	/**
+	 * 外部供应商
+	 */
+	private Long unitId;
+	
+	/**
 	 * 补货门店
 	 */
 	private Long ordSubUnitNumId;
@@ -76,6 +81,11 @@ public class ImportError implements Serializable {
 		this.importError = importError;
 	}
 
-	
+	public Long getUnitId() {
+		return unitId;
+	}
 
+	public void setUnitId(Long unitId) {
+		this.unitId = unitId;
+	}
 }
