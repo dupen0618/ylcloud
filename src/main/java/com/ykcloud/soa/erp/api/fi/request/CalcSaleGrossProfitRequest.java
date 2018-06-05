@@ -14,6 +14,11 @@ import java.util.Date;
 public class CalcSaleGrossProfitRequest extends AbstractUserSessionRequest {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = -56994236529757929L;
+
+	/**
      * 销售日期
      */
     @NotNull(message = "销售日期不能为空")

@@ -9,14 +9,6 @@ import com.ykcloud.soa.erp.api.wm.model.ProblemBill;
 public class BillsForDailyCarryCheckResponse extends MessagePack {
 	private static final long serialVersionUID = 1L;
 
-	private List<ProblemBill> problemBills;
-
-	public List<ProblemBill> getProblemBills() {
-		return problemBills;
-	}
-
-	public void setProblemBills(List<ProblemBill> problemBills) {
-		this.problemBills = problemBills;
-	}
+	
 	
 }
