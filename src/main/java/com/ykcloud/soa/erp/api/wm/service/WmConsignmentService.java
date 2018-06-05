@@ -15,7 +15,7 @@ import com.ykcloud.soa.erp.api.wm.response.SupplyUnitNumIdForSellOffGetResponse;
 
 /**
  * @Author:ALi
- * @Description: 损益单
+ * @Description: 损溢单
  * @Date:
  */
 public interface WmConsignmentService {
