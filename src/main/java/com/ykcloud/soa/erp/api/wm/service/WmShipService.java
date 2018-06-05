@@ -215,4 +215,21 @@ public interface WmShipService {
 	 **/
 	ShipInfosForGenerateCustBalanceBlFindResponse findShipInfosForGenerateCustBalanceBl(
 		ShipInfosForGenerateCustBalanceBlFindRequest request);
+	
+	
+	/**
+	 * 
+	 * @author Dan
+	 * @date 2018年6月5日
+	 * @description获取托盘明细
+	 */
+	ContainerDtlGetByContainerSerlnoResponse getContainerDtlByContainerSerlno(ContainerDtlGetByContainerSerlnoRequest request);
+	
+	/**
+	 * 
+	 * @author Dan
+	 * @date 2018年6月5日
+	 * @description获取交接单明细
+	 */
+	ShipDtlGetByReservedResponse getShipDtlByReserved(ShipDtlGetByReservedRequest request);
 }
