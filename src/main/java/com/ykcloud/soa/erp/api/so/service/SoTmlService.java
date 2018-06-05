@@ -18,7 +18,9 @@ import com.ykcloud.soa.erp.api.so.response.SupBlanceDtlByItemSellDailyDtlSeriesG
 import com.ykcloud.soa.erp.api.so.response.SupplyUnitNumIdForJointSaleGetResponse;
 import com.ykcloud.soa.erp.api.so.response.TmlDailyGenerateResponse;
 import com.ykcloud.soa.erp.api.so.request.SalesDailyGenerateRequest;
+import com.ykcloud.soa.erp.api.so.request.SalesEndOfDayDtlGenerateRequest;
 import com.ykcloud.soa.erp.api.so.response.SalesDailyGenerateResponse;
+import com.ykcloud.soa.erp.api.so.response.SalesEndOfDayDtlGenerateResponse;
 
 /**
  * @author:shenq
@@ -27,6 +29,13 @@ import com.ykcloud.soa.erp.api.so.response.SalesDailyGenerateResponse;
  * @version:v1.0
  */
 public interface SoTmlService {
+	
+	/**
+	 * 生成销售日期
+	 * @author tz.x
+	 * @date 2018年6月5日下午12:01:36
+	 */
+	public SalesEndOfDayDtlGenerateResponse generateSalesEndOfDay(SalesEndOfDayDtlGenerateRequest request);
 
 
 
