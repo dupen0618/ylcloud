@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
+import java.util.Date;
+
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 public class LossNumIdByGetLossHdrResponse extends MessagePack {
@@ -12,6 +14,7 @@ public class LossNumIdByGetLossHdrResponse extends MessagePack {
 	private String LOSS_NUM_ID;// 损溢单号
 	private Long STATUS_NUM_ID;// 状态
 	private Long TYPE_NUM_ID;// 业务类型
+	private Date recDate;
 
 	public String getLOSS_NUM_ID() {
 		return LOSS_NUM_ID;
@@ -35,6 +38,14 @@ public class LossNumIdByGetLossHdrResponse extends MessagePack {
 
 	public void setTYPE_NUM_ID(Long tYPE_NUM_ID) {
 		TYPE_NUM_ID = tYPE_NUM_ID;
+	}
+
+	public Date getRecDate() {
+		return recDate;
+	}
+
+	public void setRecDate(Date recDate) {
+		this.recDate = recDate;
 	}
 
 }

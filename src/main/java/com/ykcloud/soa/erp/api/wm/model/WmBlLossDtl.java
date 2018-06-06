@@ -3,8 +3,11 @@ package com.ykcloud.soa.erp.api.wm.model;
 import java.io.Serializable;
 import java.util.Date;
 
-public class WmBlLossDtl  implements Serializable {
+public class WmBlLossDtl implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
+	
 	private String SERIES;// 行号
 	private String LOSS_NUM_ID;// 损溢单号
 	private String WORK_NUM_ID;// 加工单号
@@ -21,10 +24,10 @@ public class WmBlLossDtl  implements Serializable {
 	private String CONVERSION_STYLE_DESC;// 件装规格
 	private Double QTY;// 数量
 	private Long LOC_NUM_ID;// 库位
-	private Double COST_PRICE;//成本价
-	private Double COST_AMOUNT;//成本金额
-	private Double TAX_RATE;//税率
-	private Double TAX_AMOUNT;//税额
+	private Double COST_PRICE;// 成本价
+	private Double COST_AMOUNT;// 成本金额
+	private Double TAX_RATE;// 税率
+	private Double TAX_AMOUNT;// 税额
 	private Long CREATE_USER_ID;// 创建人
 	private Long LAST_UPDATE_USER_ID;// 更新人
 	private Date CREATE_DTME;// 创建时间
@@ -34,9 +37,10 @@ public class WmBlLossDtl  implements Serializable {
 	private String CANCELSIGN;//
 	private String ITEMID;// 商品商家编码
 	private String BATCH_SERIES;// 批次行号
-	private Double PACKAGE_QTY;//件数
+	private Double PACKAGE_QTY;// 件数
 	private Long SUPPLY_UNIT_NUM_ID;
-	private Long SETTLEMENT_TYPE;//结算方式
+	private Long SETTLEMENT_TYPE;// 结算方式
+	private Long ptyNum3;
 
 	public String getSERIES() {
 		return SERIES;
@@ -293,5 +297,13 @@ public class WmBlLossDtl  implements Serializable {
 	public void setSETTLEMENT_TYPE(Long sETTLEMENT_TYPE) {
 		SETTLEMENT_TYPE = sETTLEMENT_TYPE;
 	}
-	
+
+	public Long getPtyNum3() {
+		return ptyNum3;
+	}
+
+	public void setPtyNum3(Long ptyNum3) {
+		this.ptyNum3 = ptyNum3;
+	}
+
 }
