@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.ykcloud.soa.erp.api.wm.model;
 
 import java.io.Serializable;
@@ -15,18 +13,7 @@ import java.util.Date;
 public class ImportWmBlReceiptDtl implements Serializable {
 
 	private static final long serialVersionUID = -1594232303597743492L;
-	
-//	unit_name	String 供应商名称
-//	settlement_type	Long
-//	sub_unit_id	Long subUnitId
-//	sub_unit_name	String
-//	itemid	Long
-//	qty	Double
-//	price	Double
-//	tax_rate	Double
-//	produce_date	Date
-//	pmt_sign	Long
-	
+
 	/**
 	 * 供应商id
 	 */
@@ -82,7 +69,7 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	private Long settlementType;
 	
 	/**
-	 * 结算方式
+	 * 促销标识
 	 */
 	private Long pmtSign;
 	
