@@ -19,22 +19,11 @@ public class ReceiptBudDtlImportResponse extends MessagePack {
 	 * 
 	 */
 	private static final long serialVersionUID = -8412759222053439936L;
-	
-	//验收单
-	private String reservedNo;
-	
+
 	/**
 	 * 导入错误明细
 	 */
 	private List<ImportError> importErrors;
-
-	public String getReservedNo() {
-		return reservedNo;
-	}
-
-	public void setReservedNo(String reservedNo) {
-		this.reservedNo = reservedNo;
-	}
 
 	public List<ImportError> getImportErrors() {
 		return importErrors;

@@ -66,8 +66,6 @@ public interface ScmPoService {
 	 * 订单发货后回写审批单和申请单发货数量(供应商预约送货)
 	 * @author tz.x
 	 * @date 2018年4月19日上午9:32:42
-	 * @param 
-	 * @return
 	 */
 	public PoOrderActualQtyUpdateResponse updatePoOrderActualQty(PoOrderActualQtyUpdateRequest request);
 	
@@ -75,8 +73,6 @@ public interface ScmPoService {
 	 * 订单发货后回写审批单和申请单发货数量(直通)
 	 * @author tz.x
 	 * @date 2018年4月19日上午9:32:42
-	 * @param 
-	 * @return
 	 */
 	public ApprovalOrderActualQtyUpdateResponse updateDirectWayDistributionApprovalOrderActualQty(ApprovalOrderActualQtyUpdateRequest request);
 	
@@ -84,8 +80,6 @@ public interface ScmPoService {
 	 * 更新采购单状态为供应商已确认（直送供应商确认生成验收单后或直通供应商确认生成验证单及分拨单后）
 	 * @author tz.x
 	 * @date 2018年3月28日下午5:44:28
-	 * @param 
-	 * @return
 	 */
 	public PoStatusNumIdForConfirmPoBySupplyUpdateResponse updatePoStatusNumIdForDirectSendGenerateReceipt(
 			PoStatusNumIdForConfirmPoBySupplyUpdateRequest request);
@@ -94,8 +88,6 @@ public interface ScmPoService {
 	 * 为产生验收单获取采购单头、单身、供应商协同单身信息
 	 * @author tz.x
 	 * @date 2018年3月27日下午2:44:30
-	 * @param 
-	 * @return
 	 */
 	public PoForGenerateReceiptGetResponse getPoForGenerateReceipt(PoForGenerateReceiptGetRequest request);
 	
@@ -103,8 +95,6 @@ public interface ScmPoService {
 	 * 供应商预约送货服务接口
 	 * @author tz.x
 	 * @date 2018年3月24日上午11:50:44
-	 * @param 
-	 * @return
 	 */
 	public PoBySupplyConfirmResponse confirmPoBySupply(PoBySupplyConfirmRequest request);
 	
@@ -112,8 +102,6 @@ public interface ScmPoService {
 	 * 通过订货审批单生成采购单
 	 * @author tz.x
 	 * @date 2018年3月21日下午3:32:00
-	 * @param 
-	 * @return
 	 */
 	public PoGenerateResponse generatePo(PoGenerateRequest request);
 	
