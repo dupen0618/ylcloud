@@ -9,8 +9,6 @@ import java.util.List;
  *
  */
 
-import javax.validation.constraints.NotNull;
-
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.wm.model.ImportWmBlReceiptDtl;
 
@@ -21,67 +19,67 @@ public class ReceiptBudDtlImportRequest extends AbstractUserSessionRequest {
 	 */
 	private static final long serialVersionUID = 6471780752714094363L;
 	
-	private Long unit_id;	
-	private String unit_name;
-	private Long settlement_type;	
-	private Long sub_unit_id;
-	private String sub_unit_name;	
-	private Long itemid;
+	private Long unitId;	
+	private String unitName;
+	private Long settlementType;	
+	private Long subUnitId;
+	private String subUnitName;	
+	private Long itemId;
 	private Double qty;
 	private Double price;
-	private Double tax_rate;
-	private Date produce_date;	
-	private Long pmt_sign;
+	private Double taxRate;
+	private Date produceDate;	
+	private Long pmtSign;
 	
 	//导入数据
 	List<ImportWmBlReceiptDtl> importWmBlReceiptDtls;
 
-	public Long getUnit_id() {
-		return unit_id;
+	public Long getUnitId() {
+		return unitId;
 	}
 
-	public void setUnit_id(Long unit_id) {
-		this.unit_id = unit_id;
+	public void setUnitId(Long unitId) {
+		this.unitId = unitId;
 	}
 
-	public String getUnit_name() {
-		return unit_name;
+	public String getUnitName() {
+		return unitName;
 	}
 
-	public void setUnit_name(String unit_name) {
-		this.unit_name = unit_name;
+	public void setUnitName(String unitName) {
+		this.unitName = unitName;
 	}
 
-	public Long getSettlement_type() {
-		return settlement_type;
+	public Long getSettlementType() {
+		return settlementType;
 	}
 
-	public void setSettlement_type(Long settlement_type) {
-		this.settlement_type = settlement_type;
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
 	}
 
-	public Long getSub_unit_id() {
-		return sub_unit_id;
+	public Long getSubUnitId() {
+		return subUnitId;
 	}
 
-	public void setSub_unit_id(Long sub_unit_id) {
-		this.sub_unit_id = sub_unit_id;
+	public void setSubUnitId(Long subUnitId) {
+		this.subUnitId = subUnitId;
 	}
 
-	public String getSub_unit_name() {
-		return sub_unit_name;
+	public String getSubUnitName() {
+		return subUnitName;
 	}
 
-	public void setSub_unit_name(String sub_unit_name) {
-		this.sub_unit_name = sub_unit_name;
+	public void setSubUnitName(String subUnitName) {
+		this.subUnitName = subUnitName;
 	}
 
-	public Long getItemid() {
-		return itemid;
+	public Long getItemId() {
+		return itemId;
 	}
 
-	public void setItemid(Long itemid) {
-		this.itemid = itemid;
+	public void setItemId(Long itemId) {
+		this.itemId = itemId;
 	}
 
 	public Double getQty() {
@@ -100,28 +98,28 @@ public class ReceiptBudDtlImportRequest extends AbstractUserSessionRequest {
 		this.price = price;
 	}
 
-	public Double getTax_rate() {
-		return tax_rate;
+	public Double getTaxRate() {
+		return taxRate;
 	}
 
-	public void setTax_rate(Double tax_rate) {
-		this.tax_rate = tax_rate;
+	public void setTaxRate(Double taxRate) {
+		this.taxRate = taxRate;
 	}
 
-	public Date getProduce_date() {
-		return produce_date;
+	public Date getProduceDate() {
+		return produceDate;
 	}
 
-	public void setProduce_date(Date produce_date) {
-		this.produce_date = produce_date;
+	public void setProduceDate(Date produceDate) {
+		this.produceDate = produceDate;
 	}
 
-	public Long getPmt_sign() {
-		return pmt_sign;
+	public Long getPmtSign() {
+		return pmtSign;
 	}
 
-	public void setPmt_sign(Long pmt_sign) {
-		this.pmt_sign = pmt_sign;
+	public void setPmtSign(Long pmtSign) {
+		this.pmtSign = pmtSign;
 	}
 
 	public List<ImportWmBlReceiptDtl> getImportWmBlReceiptDtls() {
