@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
@@ -22,6 +23,7 @@ public class CalcSaleGrossProfitRequest extends AbstractUserSessionRequest {
      * 销售日期
      */
     @NotNull(message = "销售日期不能为空")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date orderDate;
 
     /**
