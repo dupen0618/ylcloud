@@ -82,7 +82,7 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	private Long settlementType;
 	
 	/**
-	 * 结算方式
+	 * 促销标识
 	 */
 	private Long pmtSign;
 	
