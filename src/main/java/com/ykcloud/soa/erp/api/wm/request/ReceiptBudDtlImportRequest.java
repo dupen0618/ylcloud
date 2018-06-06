@@ -24,7 +24,7 @@ public class ReceiptBudDtlImportRequest extends AbstractUserSessionRequest {
 	private Long settlementType;	
 	private Long subUnitId;
 	private String subUnitName;	
-	private Long itemId;
+	private String itemid;
 	private Double qty;
 	private Double price;
 	private Double taxRate;
@@ -73,13 +73,13 @@ public class ReceiptBudDtlImportRequest extends AbstractUserSessionRequest {
 	public void setSubUnitName(String subUnitName) {
 		this.subUnitName = subUnitName;
 	}
-
-	public Long getItemId() {
-		return itemId;
+	
+	public String getItemid() {
+		return itemid;
 	}
 
-	public void setItemId(Long itemId) {
-		this.itemId = itemId;
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
 	}
 
 	public Double getQty() {
