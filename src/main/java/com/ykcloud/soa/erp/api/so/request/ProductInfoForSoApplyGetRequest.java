@@ -101,8 +101,8 @@ public class ProductInfoForSoApplyGetRequest extends AbstractRequest {
 	}
 
 	public void checkRequect(String subSystem,AbstractExceptionType et) {
-		if (!typeNumId.equals(2L) && !typeNumId.equals(8L)) {
-			throw new ValidateClientException(subSystem, et, "查询类型必须为2或者8");
+		if (!typeNumId.equals(2L) && !typeNumId.equals(8L) && !typeNumId.equals(1L)) {
+			throw new ValidateClientException(subSystem, et, "查询类型必须为1,2或者8");
 		}
 	}
 
