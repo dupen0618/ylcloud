@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
@@ -14,6 +16,7 @@ public class StockadjustHdrGetResponse extends MessagePack {
 	private Long typeNumId;// 业务类型
 	private Long ifCostadjust;// 是否产生供应商金额调整单 1:需要产生 0:不需要产生
 	private String reservedNo;
+	private Date recDate;
 
 	public Long getTypeNumId() {
 		return typeNumId;
@@ -37,6 +40,14 @@ public class StockadjustHdrGetResponse extends MessagePack {
 
 	public void setReservedNo(String reservedNo) {
 		this.reservedNo = reservedNo;
+	}
+
+	public Date getRecDate() {
+		return recDate;
+	}
+
+	public void setRecDate(Date recDate) {
+		this.recDate = recDate;
 	}
 
 }
