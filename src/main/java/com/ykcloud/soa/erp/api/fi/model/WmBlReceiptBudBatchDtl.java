@@ -53,6 +53,9 @@ public class WmBlReceiptBudBatchDtl implements Serializable {
     private String batchSeries;
     private String firstBatchSeries;
     private String itemid;
+    private Double costPrice;
+    private Double costAmount;
+    private Double costTaxAmount;
 
     public Long getSupplyUnitNumId() {
         return supplyUnitNumId;
@@ -404,5 +407,29 @@ public class WmBlReceiptBudBatchDtl implements Serializable {
 
     public void setItemid(String itemid) {
         this.itemid = itemid;
+    }
+
+    public Double getCostPrice() {
+        return costPrice;
+    }
+
+    public void setCostPrice(Double costPrice) {
+        this.costPrice = costPrice;
+    }
+
+    public Double getCostAmount() {
+        return costAmount;
+    }
+
+    public void setCostAmount(Double costAmount) {
+        this.costAmount = costAmount;
+    }
+
+    public Double getCostTaxAmount() {
+        return costTaxAmount;
+    }
+
+    public void setCostTaxAmount(Double costTaxAmount) {
+        this.costTaxAmount = costTaxAmount;
     }
 }
