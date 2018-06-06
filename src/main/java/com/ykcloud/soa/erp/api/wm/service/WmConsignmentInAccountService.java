@@ -22,7 +22,7 @@ public interface WmConsignmentInAccountService {
     InAccountByWorkProResponse setInAccountByWorkPro(InAccountByWorkProRequest request);
     //损溢单
     InAccountByLossResponse setInAccountByLoss(InAccountByLossRequest request);
-    //结算单
+    //供应商结算单
     InAccountByBalanceResponse setInAccountByBalance(InAccountByBalanceRequest request);
 
 }

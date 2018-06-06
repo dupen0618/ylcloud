@@ -11,12 +11,12 @@ import java.util.Date;
  */
 public class SoTmlDtlTempForGenerateData  {
 
-    private static final long serialVersionUID = 1L;
+ 
 
     /**
      * 行号
      */
-    private Long series;
+    private String series;
 
     /**
      * 租户ID
@@ -489,7 +489,7 @@ public class SoTmlDtlTempForGenerateData  {
     /**
      * 子母换算比率
      */
-    private Long conversionRate;
+    private Double conversionRate;    
 
     /**
      * 商品商家编码
@@ -524,15 +524,16 @@ public class SoTmlDtlTempForGenerateData  {
 		this.gpItemNumId = gpItemNumId;
 	}
 
-	public Long getSeries() {
-        return series;
-    }
 
-    public void setSeries(Long series) {
-        this.series = series;
-    }
+    public String getSeries() {
+		return series;
+	}
 
-    public Long getTenantNumId() {
+	public void setSeries(String series) {
+		this.series = series;
+	}
+
+	public Long getTenantNumId() {
         return tenantNumId;
     }
 
@@ -1260,15 +1261,16 @@ public class SoTmlDtlTempForGenerateData  {
         this.packageQty = packageQty;
     }
 
-    public Long getConversionRate() {
-        return conversionRate;
-    }
 
-    public void setConversionRate(Long conversionRate) {
-        this.conversionRate = conversionRate;
-    }
+    public Double getConversionRate() {
+		return conversionRate;
+	}
 
-    public String getItemId() {
+	public void setConversionRate(Double conversionRate) {
+		this.conversionRate = conversionRate;
+	}
+
+	public String getItemId() {
         return itemId;
     }
 
