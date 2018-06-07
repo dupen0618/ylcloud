@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.ykcloud.soa.erp.api.wm.model;
 
 import java.io.Serializable;
@@ -15,18 +13,7 @@ import java.util.Date;
 public class ImportWmBlReceiptDtl implements Serializable {
 
 	private static final long serialVersionUID = -1594232303597743492L;
-	
-//	unit_name	String 供应商名称
-//	settlement_type	Long
-//	sub_unit_id	Long subUnitId
-//	sub_unit_name	String
-//	itemid	Long
-//	qty	Double
-//	price	Double
-//	tax_rate	Double
-//	produce_date	Date
-//	pmt_sign	Long
-	
+
 	/**
 	 * 供应商id
 	 */
@@ -46,20 +33,20 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	 */
 	private String subUnitName;
 	
-	/**
-	 * 商品编号
-	 */
-	private Long itemNumId;
+//	/**
+//	 * 商品编号
+//	 */
+//	private Long itemNumId;
 	
 	/**
 	 * 商品sku
 	 */
 	private String itemid;
 	
-	/**
-	 * 商品条码
-	 */
-	private String barcode;
+//	/**
+//	 * 商品条码
+//	 */
+//	private String barcode;
 	
 	/**
 	 * 数量
@@ -71,10 +58,10 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	 */
 	private Date produceDate;
 	
-	/**
-	 * 件数
-	 */
-	private Double packageQty;
+//	/**
+//	 * 件数
+//	 */
+//	private Double packageQty;
 	
 	/**
 	 * 结算方式
@@ -82,7 +69,7 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	private Long settlementType;
 	
 	/**
-	 * 结算方式
+	 * 促销标识
 	 */
 	private Long pmtSign;
 	
@@ -92,14 +79,17 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	private Double price;
 	
 	/**
-	 * 采购价格（含税)
+	 * 税率
 	 */
 	private Double taxRate;
-	
-	/**
-	 * 门店名称
-	 */
-	private String supplyUnitName;
+
+	public String getUnitId() {
+		return unitId;
+	}
+
+	public void setUnitId(String unitId) {
+		this.unitId = unitId;
+	}
 
 	public String getUnitName() {
 		return unitName;
@@ -125,28 +115,12 @@ public class ImportWmBlReceiptDtl implements Serializable {
 		this.subUnitName = subUnitName;
 	}
 
-	public Long getItemNumId() {
-		return itemNumId;
-	}
-
-	public void setItemNumId(Long itemNumId) {
-		this.itemNumId = itemNumId;
-	}
-
 	public String getItemid() {
 		return itemid;
 	}
 
 	public void setItemid(String itemid) {
 		this.itemid = itemid;
-	}
-
-	public String getBarcode() {
-		return barcode;
-	}
-
-	public void setBarcode(String barcode) {
-		this.barcode = barcode;
 	}
 
 	public Double getQty() {
@@ -163,14 +137,6 @@ public class ImportWmBlReceiptDtl implements Serializable {
 
 	public void setProduceDate(Date produceDate) {
 		this.produceDate = produceDate;
-	}
-
-	public Double getPackageQty() {
-		return packageQty;
-	}
-
-	public void setPackageQty(Double packageQty) {
-		this.packageQty = packageQty;
 	}
 
 	public Long getSettlementType() {
@@ -204,21 +170,11 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	public void setTaxRate(Double taxRate) {
 		this.taxRate = taxRate;
 	}
-
-	public String getSupplyUnitName() {
-		return supplyUnitName;
-	}
-
-	public void setSupplyUnitName(String supplyUnitName) {
-		this.supplyUnitName = supplyUnitName;
-	}
-
-	public String getUnitId() {
-		return unitId;
-	}
-
-	public void setUnitId(String unitId) {
-		this.unitId = unitId;
-	}
+	
+//	/**
+//	 * 门店名称
+//	 */
+//	private String supplyUnitName;
+	
 	
 }
