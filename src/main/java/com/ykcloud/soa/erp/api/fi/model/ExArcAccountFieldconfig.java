@@ -9,122 +9,121 @@ import java.util.Date;
  */
 public class ExArcAccountFieldconfig implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private String series;
-	private Long tenant_num_id;
-	private String AccountName;
-	private String ActFieldName;
-	private Double QtyOrAmount;
-	private Date create_dtme;
-	private Date last_updtme;
-	private Long create_user_id;
-	private Long last_update_user_id;
-	private String cancelsign;
-	private String insertdata;
-	private String updatedata;
-	private Long data_sign;
+	private String SERIES;
+	private Long TENANT_NUM_ID;
+	private String ACCOUNTNAME;
+	private String ACTFIELDNAME;
+	private Double QTYORAMOUNT;
+	private Date CREATE_DTME;
+	private Date LAST_UPDTME;
+	private Long CREATE_USER_ID;
+	private Long LAST_UPDATE_USER_ID;
+	private String CANCELSIGN;
+	private String INSERTDATA;
+	private String UPDATEDATA;
+	private Long DATA_SIGN;
 
-	public String getSeries() {
-		return series;
+	public String getSERIES() {
+		return SERIES;
 	}
 
-	public void setSeries(String series) {
-		this.series = series;
+	public void setSERIES(String SERIES) {
+		this.SERIES = SERIES;
 	}
 
-	public Long getTenant_num_id() {
-		return tenant_num_id;
+	public Long getTENANT_NUM_ID() {
+		return TENANT_NUM_ID;
 	}
 
-	public void setTenant_num_id(Long tenant_num_id) {
-		this.tenant_num_id = tenant_num_id;
+	public void setTENANT_NUM_ID(Long TENANT_NUM_ID) {
+		this.TENANT_NUM_ID = TENANT_NUM_ID;
 	}
 
-	public String getAccountName() {
-		return AccountName;
+	public String getACCOUNTNAME() {
+		return ACCOUNTNAME;
 	}
 
-	public void setAccountName(String accountName) {
-		AccountName = accountName;
+	public void setACCOUNTNAME(String ACCOUNTNAME) {
+		this.ACCOUNTNAME = ACCOUNTNAME;
 	}
 
-	public String getActFieldName() {
-		return ActFieldName;
+	public String getACTFIELDNAME() {
+		return ACTFIELDNAME;
 	}
 
-	public void setActFieldName(String actFieldName) {
-		ActFieldName = actFieldName;
+	public void setACTFIELDNAME(String ACTFIELDNAME) {
+		this.ACTFIELDNAME = ACTFIELDNAME;
 	}
 
-	public Double getQtyOrAmount() {
-		return QtyOrAmount;
+	public Double getQTYORAMOUNT() {
+		return QTYORAMOUNT;
 	}
 
-	public void setQtyOrAmount(Double qtyOrAmount) {
-		QtyOrAmount = qtyOrAmount;
+	public void setQTYORAMOUNT(Double QTYORAMOUNT) {
+		this.QTYORAMOUNT = QTYORAMOUNT;
 	}
 
-	public Date getCreate_dtme() {
-		return create_dtme;
+	public Date getCREATE_DTME() {
+		return CREATE_DTME;
 	}
 
-	public void setCreate_dtme(Date create_dtme) {
-		this.create_dtme = create_dtme;
+	public void setCREATE_DTME(Date CREATE_DTME) {
+		this.CREATE_DTME = CREATE_DTME;
 	}
 
-	public Date getLast_updtme() {
-		return last_updtme;
+	public Date getLAST_UPDTME() {
+		return LAST_UPDTME;
 	}
 
-	public void setLast_updtme(Date last_updtme) {
-		this.last_updtme = last_updtme;
+	public void setLAST_UPDTME(Date LAST_UPDTME) {
+		this.LAST_UPDTME = LAST_UPDTME;
 	}
 
-	public Long getCreate_user_id() {
-		return create_user_id;
+	public Long getCREATE_USER_ID() {
+		return CREATE_USER_ID;
 	}
 
-	public void setCreate_user_id(Long create_user_id) {
-		this.create_user_id = create_user_id;
+	public void setCREATE_USER_ID(Long CREATE_USER_ID) {
+		this.CREATE_USER_ID = CREATE_USER_ID;
 	}
 
-	public Long getLast_update_user_id() {
-		return last_update_user_id;
+	public Long getLAST_UPDATE_USER_ID() {
+		return LAST_UPDATE_USER_ID;
 	}
 
-	public void setLast_update_user_id(Long last_update_user_id) {
-		this.last_update_user_id = last_update_user_id;
+	public void setLAST_UPDATE_USER_ID(Long LAST_UPDATE_USER_ID) {
+		this.LAST_UPDATE_USER_ID = LAST_UPDATE_USER_ID;
 	}
 
-	public String getCancelsign() {
-		return cancelsign;
+	public String getCANCELSIGN() {
+		return CANCELSIGN;
 	}
 
-	public void setCancelsign(String cancelsign) {
-		this.cancelsign = cancelsign;
+	public void setCANCELSIGN(String CANCELSIGN) {
+		this.CANCELSIGN = CANCELSIGN;
 	}
 
-	public String getInsertdata() {
-		return insertdata;
+	public String getINSERTDATA() {
+		return INSERTDATA;
 	}
 
-	public void setInsertdata(String insertdata) {
-		this.insertdata = insertdata;
+	public void setINSERTDATA(String INSERTDATA) {
+		this.INSERTDATA = INSERTDATA;
 	}
 
-	public String getUpdatedata() {
-		return updatedata;
+	public String getUPDATEDATA() {
+		return UPDATEDATA;
 	}
 
-	public void setUpdatedata(String updatedata) {
-		this.updatedata = updatedata;
+	public void setUPDATEDATA(String UPDATEDATA) {
+		this.UPDATEDATA = UPDATEDATA;
 	}
 
-	public Long getData_sign() {
-		return data_sign;
+	public Long getDATA_SIGN() {
+		return DATA_SIGN;
 	}
 
-	public void setData_sign(Long data_sign) {
-		this.data_sign = data_sign;
+	public void setDATA_SIGN(Long DATA_SIGN) {
+		this.DATA_SIGN = DATA_SIGN;
 	}
-
 }
