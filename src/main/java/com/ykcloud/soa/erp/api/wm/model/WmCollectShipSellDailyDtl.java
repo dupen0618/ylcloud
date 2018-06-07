@@ -10,8 +10,9 @@ import java.io.Serializable;
  */
 public class WmCollectShipSellDailyDtl implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 
-    /**
+	/**
      * 商品编号
      */
     private Long itemNumId;
@@ -70,11 +71,6 @@ public class WmCollectShipSellDailyDtl implements Serializable {
      * 件数
      */
     private Double conversionQty;
-
-    /**
-     * 数量
-     */
-    private Double qty;
 
     /**
      * 销售数量
@@ -185,14 +181,6 @@ public class WmCollectShipSellDailyDtl implements Serializable {
 
     public void setConversionQty(Double conversionQty) {
         this.conversionQty = conversionQty;
-    }
-
-    public Double getQty() {
-        return qty;
-    }
-
-    public void setQty(Double qty) {
-        this.qty = qty;
     }
 
     public Double getSellQty() {
