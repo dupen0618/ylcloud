@@ -1,12 +1,10 @@
 package com.ykcloud.soa.erp.api.so.request;
 
-import java.util.Date;
-
 import javax.validation.constraints.NotNull;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class SoNumIdOneRequest extends AbstractRequest {
+public class SoHdrForGetWlbcProductByBarcodeGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = -7870514749928476218L;
 
