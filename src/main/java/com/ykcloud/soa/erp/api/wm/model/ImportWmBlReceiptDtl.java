@@ -43,10 +43,10 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	 */
 	private String itemid;
 	
-	/**
-	 * 商品条码
-	 */
-	private String barcode;
+//	/**
+//	 * 商品条码
+//	 */
+//	private String barcode;
 	
 	/**
 	 * 数量
@@ -58,10 +58,10 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	 */
 	private Date produceDate;
 	
-	/**
-	 * 件数
-	 */
-	private Double packageQty;
+//	/**
+//	 * 件数
+//	 */
+//	private Double packageQty;
 	
 	/**
 	 * 结算方式
@@ -79,14 +79,17 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	private Double price;
 	
 	/**
-	 * 采购价格（含税)
+	 * 税率
 	 */
 	private Double taxRate;
-	
-	/**
-	 * 门店名称
-	 */
-	private String supplyUnitName;
+
+	public String getUnitId() {
+		return unitId;
+	}
+
+	public void setUnitId(String unitId) {
+		this.unitId = unitId;
+	}
 
 	public String getUnitName() {
 		return unitName;
@@ -128,14 +131,6 @@ public class ImportWmBlReceiptDtl implements Serializable {
 		this.itemid = itemid;
 	}
 
-	public String getBarcode() {
-		return barcode;
-	}
-
-	public void setBarcode(String barcode) {
-		this.barcode = barcode;
-	}
-
 	public Double getQty() {
 		return qty;
 	}
@@ -150,14 +145,6 @@ public class ImportWmBlReceiptDtl implements Serializable {
 
 	public void setProduceDate(Date produceDate) {
 		this.produceDate = produceDate;
-	}
-
-	public Double getPackageQty() {
-		return packageQty;
-	}
-
-	public void setPackageQty(Double packageQty) {
-		this.packageQty = packageQty;
 	}
 
 	public Long getSettlementType() {
@@ -191,21 +178,11 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	public void setTaxRate(Double taxRate) {
 		this.taxRate = taxRate;
 	}
-
-	public String getSupplyUnitName() {
-		return supplyUnitName;
-	}
-
-	public void setSupplyUnitName(String supplyUnitName) {
-		this.supplyUnitName = supplyUnitName;
-	}
-
-	public String getUnitId() {
-		return unitId;
-	}
-
-	public void setUnitId(String unitId) {
-		this.unitId = unitId;
-	}
+	
+//	/**
+//	 * 门店名称
+//	 */
+//	private String supplyUnitName;
+	
 	
 }

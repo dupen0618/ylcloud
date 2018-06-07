@@ -14,7 +14,7 @@ public class ImportError implements Serializable {
 	/**
 	 * 外部供应商
 	 */
-	private Long unitId;
+	private String unitId;
 	
 	/**
 	 * 补货门店
@@ -81,11 +81,11 @@ public class ImportError implements Serializable {
 		this.importError = importError;
 	}
 
-	public Long getUnitId() {
+	public String getUnitId() {
 		return unitId;
 	}
 
-	public void setUnitId(Long unitId) {
+	public void setUnitId(String unitId) {
 		this.unitId = unitId;
 	}
 }
