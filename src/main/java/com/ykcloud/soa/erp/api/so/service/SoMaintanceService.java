@@ -87,7 +87,7 @@ public interface SoMaintanceService {
             (ApplyHdrStatusForGenerateApprovalReturnOrderUpdateRequest request);
 
 	//跟新订单出库类型
-	public SoConfirmTypeResponse updateSoConFirmType(SoConfirmTypeRequest request);
+	public SoConfirmTypeResponse updateSoConfirmType(SoConfirmTypeRequest request);
 	
 	//按wlbc更新订单状态
 	public SoStatusUpdateResponse updateSoStatusAndCancelQty(SoStatusUpdateRequest request);
