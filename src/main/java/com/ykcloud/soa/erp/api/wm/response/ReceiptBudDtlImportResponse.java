@@ -6,6 +6,7 @@ package com.ykcloud.soa.erp.api.wm.response;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
+import com.ykcloud.soa.erp.api.scm.model.ImportBeginError;
 import com.ykcloud.soa.erp.api.scm.model.ImportError;
 
 /**
@@ -23,13 +24,13 @@ public class ReceiptBudDtlImportResponse extends MessagePack {
 	/**
 	 * 导入错误明细
 	 */
-	private List<ImportError> importErrors;
+	private List<ImportBeginError> importErrors;
 
-	public List<ImportError> getImportErrors() {
+	public List<ImportBeginError> getImportErrors() {
 		return importErrors;
 	}
 
-	public void setImportErrors(List<ImportError> importErrors) {
+	public void setImportErrors(List<ImportBeginError> importErrors) {
 		this.importErrors = importErrors;
 	}
 
