@@ -20,7 +20,7 @@ public interface FiCustBalanceService {
      * @author: henry.wang
      * @date: 2018/5/31 16:52
      **/
-    CustBalanceBlForPurchaseSellGenResponse genCustBalanceBlForPurchaseSell(
+    CustBalanceBlForPurchaseSellGenResponse generateCustBalanceForPurchaseSell(
             CustBalanceBlForPurchaseSellGenRequest request);
 
     /**
