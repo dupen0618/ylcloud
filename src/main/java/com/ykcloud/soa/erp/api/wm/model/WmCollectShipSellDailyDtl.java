@@ -25,7 +25,7 @@ public class WmCollectShipSellDailyDtl implements Serializable {
     /**
      * 结算方式
      */
-    private Long settmentType;
+    private Long settlementType;
 
     /**
      * 销售金额
@@ -103,15 +103,15 @@ public class WmCollectShipSellDailyDtl implements Serializable {
         this.physicalNumId = physicalNumId;
     }
 
-    public Long getSettmentType() {
-        return settmentType;
-    }
+    public Long getSettlementType() {
+		return settlementType;
+	}
 
-    public void setSettmentType(Long settmentType) {
-        this.settmentType = settmentType;
-    }
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
+	}
 
-    public Double getSellAmount() {
+	public Double getSellAmount() {
         return sellAmount;
     }
 
