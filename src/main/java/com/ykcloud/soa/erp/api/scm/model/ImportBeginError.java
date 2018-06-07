@@ -40,20 +40,20 @@ public class ImportBeginError implements Serializable {
 	 */
 	private String barcode;
 	
-	//促销标识
-	private Long pmtSign;
-	
-	//税率
-	private Double taxRate;
-	
-	//生产日期
-	private Date produceDate;
-	
-	//结算方式
-	private Long settlementType;
-	
-	//数量
-	private Double qty;
+//	//促销标识
+//	private Long pmtSign;
+//	
+//	//税率
+//	private Double taxRate;
+//	
+//	//生产日期
+//	private Date produceDate;
+//	
+//	//结算方式
+//	private Long settlementType;
+//	
+//	//数量
+//	private Double qty;
 	
 	/**
 	 * 出错信息
@@ -109,45 +109,45 @@ public class ImportBeginError implements Serializable {
 		this.unitId = unitId;
 	}
 
-	public Long getPmtSign() {
-		return pmtSign;
-	}
-
-	public void setPmtSign(Long pmtSign) {
-		this.pmtSign = pmtSign;
-	}
-
-	public Double getTaxRate() {
-		return taxRate;
-	}
-
-	public void setTaxRate(Double taxRate) {
-		this.taxRate = taxRate;
-	}
-
-	public Date getProduceDate() {
-		return produceDate;
-	}
-
-	public void setProduceDate(Date produceDate) {
-		this.produceDate = produceDate;
-	}
-
-	public Long getSettlementType() {
-		return settlementType;
-	}
-
-	public void setSettlementType(Long settlementType) {
-		this.settlementType = settlementType;
-	}
-
-	public Double getQty() {
-		return qty;
-	}
-
-	public void setQty(Double qty) {
-		this.qty = qty;
-	}
+//	public Long getPmtSign() {
+//		return pmtSign;
+//	}
+//
+//	public void setPmtSign(Long pmtSign) {
+//		this.pmtSign = pmtSign;
+//	}
+//
+//	public Double getTaxRate() {
+//		return taxRate;
+//	}
+//
+//	public void setTaxRate(Double taxRate) {
+//		this.taxRate = taxRate;
+//	}
+//
+//	public Date getProduceDate() {
+//		return produceDate;
+//	}
+//
+//	public void setProduceDate(Date produceDate) {
+//		this.produceDate = produceDate;
+//	}
+//
+//	public Long getSettlementType() {
+//		return settlementType;
+//	}
+//
+//	public void setSettlementType(Long settlementType) {
+//		this.settlementType = settlementType;
+//	}
+//
+//	public Double getQty() {
+//		return qty;
+//	}
+//
+//	public void setQty(Double qty) {
+//		this.qty = qty;
+//	}
 	
 }
 

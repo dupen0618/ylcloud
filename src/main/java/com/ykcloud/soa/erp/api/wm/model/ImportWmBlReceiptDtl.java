@@ -33,10 +33,10 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	 */
 	private String subUnitName;
 	
-	/**
-	 * 商品编号
-	 */
-	private Long itemNumId;
+//	/**
+//	 * 商品编号
+//	 */
+//	private Long itemNumId;
 	
 	/**
 	 * 商品sku
@@ -113,14 +113,6 @@ public class ImportWmBlReceiptDtl implements Serializable {
 
 	public void setSubUnitName(String subUnitName) {
 		this.subUnitName = subUnitName;
-	}
-
-	public Long getItemNumId() {
-		return itemNumId;
-	}
-
-	public void setItemNumId(Long itemNumId) {
-		this.itemNumId = itemNumId;
 	}
 
 	public String getItemid() {
