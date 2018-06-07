@@ -19,7 +19,7 @@ public class TmlDailyGenerateRequest extends AbstractUserSessionRequest {
 	private Long subUnitNumId;   //门店
 	
 	@NotNull(message="日期不能为空")
-	@JsonFormat(pattern = "yyyy-MM-dd ", timezone = "GMT+8")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date orderDate;
 
 	public Long getSubUnitNumId() {
