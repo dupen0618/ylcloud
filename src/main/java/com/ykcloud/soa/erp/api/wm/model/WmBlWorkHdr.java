@@ -58,6 +58,7 @@ public class WmBlWorkHdr implements Serializable {
     private Long CROSS_SUB_COMPANY_SIGN;
     private Long DEPART_NUM_ID;
     private Long CLASSIFY_NUM_ID;
+    private Date recDate;
 
     public String getSERIES() {
         return SERIES;
@@ -425,5 +426,13 @@ public class WmBlWorkHdr implements Serializable {
 
     public void setCLASSIFY_NUM_ID(Long CLASSIFY_NUM_ID) {
         this.CLASSIFY_NUM_ID = CLASSIFY_NUM_ID;
+    }
+
+    public Date getRecDate() {
+        return recDate;
+    }
+
+    public void setRecDate(Date recDate) {
+        this.recDate = recDate;
     }
 }
