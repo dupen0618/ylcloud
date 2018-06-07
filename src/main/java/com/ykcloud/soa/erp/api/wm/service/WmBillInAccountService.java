@@ -65,6 +65,4 @@ public interface WmBillInAccountService {
    //财务库存损溢单处理-(批次库存日月进销存+商品成本)
    WmReceiptInAccountResponse setLoss(WmReceiptInAccountRequest request);
 
-    //客户结算单
-   InAccountByBalanceResponse setInAccountByCustBalance(WmReceiptInAccountRequest request);
 }
