@@ -24,6 +24,7 @@ import com.ykcloud.soa.erp.api.wm.request.StockCheckSecondFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRCreateRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingConHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.StockadjustBatchDtlsForCheckConsignmentProductAccountFindRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadjustDtlGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadjustHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.UnConfirmStockAdjustGetRequest;
@@ -50,6 +51,7 @@ import com.ykcloud.soa.erp.api.wm.response.StockCheckSecondFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingConHDRGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockTakingTaskHDRGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.StockadjustBatchDtlsForCheckConsignmentProductAccountFindResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadjustDtlGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadjustHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.UnConfirmStockAdjustGetResponse;
@@ -300,4 +302,12 @@ public interface WmStockCheckService {
 	 * @time: 2018年6月1日
 	 */
 	public StockadjustDtlGetResponse getStockadjustDtlByReservedNo(StockadjustDtlGetRequest request);
+
+	/**
+	 * @Description: 查询盈亏单带批次代销商品明细，用于核销代销商品款
+	 * @author: henry.wang
+	 * @date: 2018/6/6 20:34
+	 **/
+    StockadjustBatchDtlsForCheckConsignmentProductAccountFindResponse findStockadjustBatchDtlsForCheckConsignmentProductAccount(
+        StockadjustBatchDtlsForCheckConsignmentProductAccountFindRequest request);
 }
