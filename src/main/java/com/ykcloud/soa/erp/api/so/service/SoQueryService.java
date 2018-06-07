@@ -14,10 +14,10 @@ import com.ykcloud.soa.erp.api.so.request.ShopProductDailySellQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoBySoNumIdAndItemNumIdGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlsForInTransitDepositGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SoHdrForGetWlbcProductByBarcodeGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrListGetBySoNumIdsRequest;
 import com.ykcloud.soa.erp.api.so.request.SoHdrListGetByWlbcRequest;
-import com.ykcloud.soa.erp.api.so.request.SoNumIdOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SoNumIdsByReceiptNoForInTransitDepositGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoSettlementTypeGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusOfWlbcRequest;
@@ -33,10 +33,10 @@ import com.ykcloud.soa.erp.api.so.response.ShopProductDailySellQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoBySoNumIdAndItemNumIdGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlsForInTransitDepositGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SoHdrForGetWlbcProductByBarcodeGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrListGetBySoNumIdsResponse;
 import com.ykcloud.soa.erp.api.so.response.SoHdrListGetByWlbcResponse;
-import com.ykcloud.soa.erp.api.so.response.SoNumIdOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SoNumIdsByReceiptNoForInTransitDepositGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoSettlementTypeGetResonse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusOfWlbcResponse;
@@ -57,7 +57,7 @@ public interface SoQueryService {
     
     
   //通过WLbc号与商品ID获取so_dtl随机一条，一半这边用limit
-  	public SoNumIdOneResponse getSoNumIdOne(SoNumIdOneRequest request);
+  	public SoHdrForGetWlbcProductByBarcodeGetResponse getSoHdrForGetWlbcProductByBarcode(SoHdrForGetWlbcProductByBarcodeGetRequest request);
   	
   //通过soNumId,itemNumId获取该订单明细的需求数量已经已播数量(可以不传itemNumId)
   	public SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdReponse getSoDtlQtyAndPackingQtyBySoNumIdAndItemId(SoDtlQtyAndPackingQtyGetBySoNumIdAndItemIdRequest request);

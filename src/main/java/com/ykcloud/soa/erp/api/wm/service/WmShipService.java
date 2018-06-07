@@ -7,7 +7,7 @@ import com.ykcloud.soa.erp.api.wm.response.*;
 public interface WmShipService {
 
 		//后六位模糊查询波次号,只查出status=2的号
-		public WmWlBcHdrGetResponse getWlbc(WmWlBcHdrGetRequest request);
+		public WmWlBcHdrGetResponse getWlbcHdr(WmWlBcHdrGetRequest request);
 		
 		//扫描商品条码
 		public WmDataByBarcodeGetResponse getWlbcProductByBarcode(WmDataByBarcodeGetRequest request);

@@ -14,7 +14,7 @@ public class WmWlBcHdrGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = 5406829904473382550L;
 
-	@Length(min = 6, max = 6, message = "请出入后六位！")
+	@NotNull(message = "物流波次号不能为空! ")
 	private String wlbc;
 
 	@NotNull(message = "门店ID不能为空! ")
