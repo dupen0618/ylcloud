@@ -32,22 +32,12 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	 * 门店名称
 	 */
 	private String subUnitName;
-	
-//	/**
-//	 * 商品编号
-//	 */
-//	private Long itemNumId;
-	
+
 	/**
 	 * 商品sku
 	 */
 	private String itemid;
-	
-//	/**
-//	 * 商品条码
-//	 */
-//	private String barcode;
-	
+
 	/**
 	 * 数量
 	 */
@@ -57,12 +47,7 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	 * 建立批次日期
 	 */
 	private Date produceDate;
-	
-//	/**
-//	 * 件数
-//	 */
-//	private Double packageQty;
-	
+
 	/**
 	 * 结算方式
 	 */
@@ -170,11 +155,5 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	public void setTaxRate(Double taxRate) {
 		this.taxRate = taxRate;
 	}
-	
-//	/**
-//	 * 门店名称
-//	 */
-//	private String supplyUnitName;
-	
-	
+
 }
