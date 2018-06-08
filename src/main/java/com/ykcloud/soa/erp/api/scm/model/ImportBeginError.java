@@ -23,7 +23,7 @@ public class ImportBeginError implements Serializable {
 	/**
 	 * 门店
 	 */
-	private Long subUnitId;
+	private String subUnitId;
 	
 	/**
 	 * 商品编号
@@ -61,11 +61,11 @@ public class ImportBeginError implements Serializable {
 	private String importError;
 	
 	
-	public Long getSubUnitId() {
+	public String getSubUnitId() {
 		return subUnitId;
 	}
 
-	public void setSubUnitId(Long subUnitId) {
+	public void setSubUnitId(String subUnitId) {
 		this.subUnitId = subUnitId;
 	}
 

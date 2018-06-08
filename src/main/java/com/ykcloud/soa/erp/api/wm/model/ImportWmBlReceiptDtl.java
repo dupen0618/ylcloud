@@ -26,7 +26,7 @@ public class ImportWmBlReceiptDtl implements Serializable {
 	/**
 	 * 补货门店
 	 */
-	private Long subUnitId;
+	private String subUnitId;
 	
 	/**
 	 * 门店名称
@@ -84,11 +84,11 @@ public class ImportWmBlReceiptDtl implements Serializable {
 		this.unitName = unitName;
 	}
 
-	public Long getSubUnitId() {
+	public String getSubUnitId() {
 		return subUnitId;
 	}
 
-	public void setSubUnitId(Long subUnitId) {
+	public void setSubUnitId(String subUnitId) {
 		this.subUnitId = subUnitId;
 	}
 
