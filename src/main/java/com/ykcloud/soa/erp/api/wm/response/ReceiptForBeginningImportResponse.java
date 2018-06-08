@@ -3,7 +3,7 @@ package com.ykcloud.soa.erp.api.wm.response;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.scm.model.ImportError;
+import com.ykcloud.soa.erp.api.wm.model.ImportBeginningError;
 
 /**
  * 期初库存导入
@@ -17,13 +17,13 @@ public class ReceiptForBeginningImportResponse extends MessagePack {
 	/**
 	 * 导入错误明细
 	 */
-	private List<ImportError> importErrors;
+	private List<ImportBeginningError> importErrors;
 
-	public List<ImportError> getImportErrors() {
+	public List<ImportBeginningError> getImportErrors() {
 		return importErrors;
 	}
 
-	public void setImportErrors(List<ImportError> importErrors) {
+	public void setImportErrors(List<ImportBeginningError> importErrors) {
 		this.importErrors = importErrors;
 	}
 
