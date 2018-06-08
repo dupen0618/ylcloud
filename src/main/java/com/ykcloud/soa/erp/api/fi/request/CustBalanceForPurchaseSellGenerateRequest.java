@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
  * @author: henry.wang
  * @date: 2018/5/31 17:03
  **/
-public class CustBalanceBlForPurchaseSellGenRequest extends AbstractUserSessionRequest {
+public class CustBalanceForPurchaseSellGenerateRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = -5126554109130183317L;
 

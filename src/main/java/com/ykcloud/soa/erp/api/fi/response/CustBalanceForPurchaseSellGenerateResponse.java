@@ -9,7 +9,7 @@ import java.util.List;
  * @author: henry.wang
  * @date: 2018/5/31 17:03
  **/
-public class CustBalanceBlForPurchaseSellGenResponse extends MessagePack {
+public class CustBalanceForPurchaseSellGenerateResponse extends MessagePack {
 
 	private static final long serialVersionUID = -3725506062937780824L;
 }

@@ -1,10 +1,10 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
-import com.ykcloud.soa.erp.api.fi.request.CustBalanceBlForPurchaseSellGenRequest;
+import com.ykcloud.soa.erp.api.fi.request.CustBalanceForPurchaseSellGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.CustBalanceGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.InvoiceAuditRequest;
 
-import com.ykcloud.soa.erp.api.fi.response.CustBalanceBlForPurchaseSellGenResponse;
+import com.ykcloud.soa.erp.api.fi.response.CustBalanceForPurchaseSellGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.CustBalanceHdrGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.InvoiceAuditResponse;
 
@@ -20,8 +20,8 @@ public interface FiCustBalanceService {
      * @author: henry.wang
      * @date: 2018/5/31 16:52
      **/
-    CustBalanceBlForPurchaseSellGenResponse generateCustBalanceForPurchaseSell(
-            CustBalanceBlForPurchaseSellGenRequest request);
+    CustBalanceForPurchaseSellGenerateResponse generateCustBalanceForPurchaseSell(
+            CustBalanceForPurchaseSellGenerateRequest request);
 
     /**
      * 生成客户结算单 - 代销
