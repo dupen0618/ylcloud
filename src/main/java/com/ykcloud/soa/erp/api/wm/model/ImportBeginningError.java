@@ -1,11 +1,15 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
+import java.io.Serializable;
+
 /**
  * 期初库存导入错误明细
  * @author tz.x
  * @date 2018年6月8日下午1:40:02
  */
-public class ImportBeginningError {
+public class ImportBeginningError implements Serializable {
+
+	private static final long serialVersionUID = 4306731004830198521L;
 
 	/**
 	 * 外部供应商
