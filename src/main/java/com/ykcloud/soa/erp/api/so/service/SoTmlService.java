@@ -8,6 +8,7 @@ import com.ykcloud.soa.erp.api.so.request.OtOtmlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupBlanceDtlByItemSellDailyDtlSeriesGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupplyUnitNumIdForJointSaleGetRequest;
 import com.ykcloud.soa.erp.api.so.request.TmlDailyGenerateRequest;
+import com.ykcloud.soa.erp.api.so.request.TmlProductAmountAndPayAmountCompareRequest;
 import com.ykcloud.soa.erp.api.so.request.VoucherNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlNotBalanceCountGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetResponse;
@@ -18,6 +19,7 @@ import com.ykcloud.soa.erp.api.so.response.OtOTmlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupBlanceDtlByItemSellDailyDtlSeriesGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyUnitNumIdForJointSaleGetResponse;
 import com.ykcloud.soa.erp.api.so.response.TmlDailyGenerateResponse;
+import com.ykcloud.soa.erp.api.so.response.TmlProductAmountAndPayAmountCompareRequestCompareResponse;
 import com.ykcloud.soa.erp.api.so.response.VoucherNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.so.request.SalesDailyGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.SalesEndOfDayDtlGenerateRequest;
@@ -73,4 +75,6 @@ public interface SoTmlService {
     //回写凭证单号
     public VoucherNumIdUpdateResponse updateVoucherNumId(VoucherNumIdUpdateRequest request);
     
+    //比较价格
+    public TmlProductAmountAndPayAmountCompareRequestCompareResponse compareTmlProductAmountAndPayAmount(TmlProductAmountAndPayAmountCompareRequest request);
 }
