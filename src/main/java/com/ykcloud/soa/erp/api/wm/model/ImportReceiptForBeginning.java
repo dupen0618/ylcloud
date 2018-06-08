@@ -45,7 +45,7 @@ public class ImportReceiptForBeginning implements Serializable {
 	/**
 	 * 建立批次日期
 	 */
-	private Date produceDate;
+	private String produceDate;
 	
 	/**
 	 * 结算方式
@@ -115,11 +115,11 @@ public class ImportReceiptForBeginning implements Serializable {
 		this.qty = qty;
 	}
 
-	public Date getProduceDate() {
+	public String getProduceDate() {
 		return produceDate;
 	}
 
-	public void setProduceDate(Date produceDate) {
+	public void setProduceDate(String produceDate) {
 		this.produceDate = produceDate;
 	}
 
