@@ -7,6 +7,13 @@ import com.ykcloud.soa.erp.api.wm.response.*;
 public interface WmReceiptService {
 	
 	/**
+	 * 期初库存导入
+	 * @author tz.x
+	 * @date 2018年6月7日下午5:17:17
+	 */
+	public ReceiptForBeginningImportResponse importReceiptForBeginning(ReceiptForBeginningImportRequest request);
+	
+	/**
 	 * 产生分拨单后回写验收单状态为2 供应商已确认
 	 * @author tz.x
 	 * @date 2018年5月16日上午10:14:01

@@ -3,7 +3,7 @@ package com.ykcloud.soa.erp.api.scm.model;
 import java.io.Serializable;
 
 /**
- * 订货审批单导入错误明细
+ * 导入错误明细
  * @author tz.x
  * @date 2018年5月9日下午2:17:28
  */
