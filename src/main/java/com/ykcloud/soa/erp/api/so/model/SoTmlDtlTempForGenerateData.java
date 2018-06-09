@@ -505,8 +505,33 @@ public class SoTmlDtlTempForGenerateData  {
      * 销售税率
      */
     private Double taxRate;
-    
-    
+
+    /**
+     * 促销类型
+     */
+    private Long priceType;
+
+    /**
+     * 促销数量
+     */
+    private Double dmQty;
+
+
+    public Double getDmQty() {
+        return dmQty;
+    }
+
+    public void setDmQty(Double dmQty) {
+        this.dmQty = dmQty;
+    }
+
+    public Long getPriceType() {
+        return priceType;
+    }
+
+    public void setPriceType(Long priceType) {
+        this.priceType = priceType;
+    }
 
     public Double getTaxRate() {
 		return taxRate;
