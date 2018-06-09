@@ -87,6 +87,33 @@ public class WmCollectShipSellDailyDtl implements Serializable {
      */
     private Double finalQty;
 
+    /**
+     * 成本税率
+     */
+    private Double costTaxRate;
+
+    /**
+     * 税率
+     */
+    private Double taxRate;
+
+
+    public Double getTaxRate() {
+        return taxRate;
+    }
+
+    public void setTaxRate(Double taxRate) {
+        this.taxRate = taxRate;
+    }
+
+    public Double getCostTaxRate() {
+        return costTaxRate;
+    }
+
+    public void setCostTaxRate(Double costTaxRate) {
+        this.costTaxRate = costTaxRate;
+    }
+
     public Long getItemNumId() {
         return itemNumId;
     }
