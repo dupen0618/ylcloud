@@ -20,6 +20,17 @@ public class ReverseShipHdrFuzzyGetRequest extends AbstractUserSessionRequest {
 	@ApiField(description = "负出库单号")
 	@NotNull(message = "负出库单号不能为空!")
 	private String reservedNo;
+	
+	@NotNull(message="物理仓不能为空!")
+	private Long physicalNumId;
+
+	public Long getPhysicalNumId() {
+		return physicalNumId;
+	}
+
+	public void setPhysicalNumId(Long physicalNumId) {
+		this.physicalNumId = physicalNumId;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
