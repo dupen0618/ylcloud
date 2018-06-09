@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author tz.x
@@ -9,6 +10,11 @@ import java.io.Serializable;
 public class WeightedAveragePriceForAdjust implements Serializable {
 	
 	private static final long serialVersionUID = 4986431171381360135L;
+	
+	/**
+	 * 调整日期
+	 */
+	private Date justDate;
 
 	/**
 	 * 商品编号
@@ -24,6 +30,27 @@ public class WeightedAveragePriceForAdjust implements Serializable {
 	 * 调整金额
 	 */
 	private Double adjustAmount;
+	
+	/**
+	 * 税率
+	 */
+	private Double taxRate;
+
+	public Date getJustDate() {
+		return justDate;
+	}
+
+	public void setJustDate(Date justDate) {
+		this.justDate = justDate;
+	}
+
+	public Double getTaxRate() {
+		return taxRate;
+	}
+
+	public void setTaxRate(Double taxRate) {
+		this.taxRate = taxRate;
+	}
 
 	public Double getAdjustAmount() {
 		return adjustAmount;
