@@ -34,7 +34,7 @@ public class ReverseReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 	private Double qty;
 	
 	@ApiField(description = "更新正常品/赠品标识")
-	private Long PlmSign=2L;
+	private Long plmSign=2L;
 	
 	@ApiField(description = "门店编号")
 	@NotNull(message="门店编号不能为空!")
@@ -42,17 +42,18 @@ public class ReverseReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 	
 	@ApiField(description = "扫回标识")   //value{0 :正向,-1 :反向}
 	@NotNull(message="扫回标识不能为空!")
-	private Long canselSign;
+	private Long cancelSign;
 	
 
 
-	public Long getCanselSign() {
-		return canselSign;
+	public Long getCancelSign() {
+		return cancelSign;
 	}
 
-	public void setCanselSign(Long canselSign) {
-		this.canselSign = canselSign;
+	public void setCancelSign(Long cancelSign) {
+		this.cancelSign = cancelSign;
 	}
+
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -96,12 +97,13 @@ public class ReverseReceiptDtlUpdateRequest extends AbstractUserSessionRequest {
 	}
 
 	public Long getPlmSign() {
-		return PlmSign;
+		return plmSign;
 	}
 
 	public void setPlmSign(Long plmSign) {
-		PlmSign = plmSign;
+		this.plmSign = plmSign;
 	}
+
 
 
 	

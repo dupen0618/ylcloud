@@ -22,7 +22,7 @@ public class ReverseReceiptTrayHdrCreateRequest extends AbstractUserSessionReque
 	private String reservedNo;
 	
 	@ApiField(description = "托盘实物标签")
-	private String traySerlnoLable;
+	private String traySerlnoLabel;
 	
 	@ApiField(description = "忽略PC收货检查标识:RF收货时传0,或null;PC收货时传1")
 	private Long ignoreCheckSign;
@@ -43,12 +43,13 @@ public class ReverseReceiptTrayHdrCreateRequest extends AbstractUserSessionReque
 		this.reservedNo = reservedNo;
 	}
 
-	public String getTraySerlnoLable() {
-		return traySerlnoLable;
+
+	public String getTraySerlnoLabel() {
+		return traySerlnoLabel;
 	}
 
-	public void setTraySerlnoLable(String traySerlnoLable) {
-		this.traySerlnoLable = traySerlnoLable;
+	public void setTraySerlnoLabel(String traySerlnoLabel) {
+		this.traySerlnoLabel = traySerlnoLabel;
 	}
 
 	public Long getIgnoreCheckSign() {

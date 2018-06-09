@@ -57,4 +57,5 @@ public interface WmReceiptTrayService {
 	public ReverseReceiptTrayHdrCreateResponse createReverseReceiptTrayHdr(ReverseReceiptTrayHdrCreateRequest request);
 	
 	public ReceiptTrayDetailListGetResponse getReceiptTrayDetailList(ReceiptTrayDetailListGetRequest request);
+	public ReceiptTrayGetResponse getReverseReceiptTray(ReceiptTrayGetRequest request) ;
 }
