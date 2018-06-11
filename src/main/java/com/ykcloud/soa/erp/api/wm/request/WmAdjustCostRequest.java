@@ -2,6 +2,8 @@ package com.ykcloud.soa.erp.api.wm.request;
 
 import java.util.Date;
 import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 /**
@@ -23,6 +25,7 @@ public class WmAdjustCostRequest extends AbstractUserSessionRequest {
 	private Long subUnitNumId;
 	
 	@NotNull(message = "调整日期不能为空！")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date justDate;
 	
 	@NotNull(message = "供应商不能为空！")
