@@ -232,4 +232,11 @@ public interface WmShipService {
 	 * @description获取交接单明细
 	 */
 	ShipDtlGetByReservedResponse getShipDtlByReserved(ShipDtlGetByReservedRequest request);
+
+	/**
+	 * @Description: 生成购销客户结算单后，回写出库单状态=7
+	 * @author: henry.wang
+	 * @date: 2018/6/12 10:03
+	 **/
+	StatusForGenerateCustBalanceUpdateResponse updateStatusForGenerateCustBalance(StatusForGenerateCustBalanceUpdateRequest request);
 }

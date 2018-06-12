@@ -1,10 +1,12 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
+import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderDemandCompensateRequest;
 import com.ykcloud.soa.erp.api.scm.request.ApprovalOrderGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.AutoReplenishApplyGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.CouponApprovalOrderGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.DmsForAutoReplenishCalcateRequest;
 import com.ykcloud.soa.erp.api.scm.request.HandReplenishProductGetRequest;
+import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderDemandCompensateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.AutoReplenishApplyGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.DmsForAutoReplenishCalcateResponse;
@@ -52,4 +54,6 @@ public interface ScmReplenishService {
 	//补货申请单Excel批量导入
 	public ReplenishApplyDtlImportResponse importReplenishApplyDtl(ReplenishApplyDtlImportRequest request);
 
+	//补偿生成审批单明细
+	public ApprovalOrderDemandCompensateResponse compensateApprovalOrderDemand(ApprovalOrderDemandCompensateRequest request);
 }
