@@ -1,15 +1,14 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
 import javax.validation.constraints.NotNull;
-
-import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 /**
  * 获取销售日期
  * @author tz.x
  * @date 2018年6月13日下午5:34:42
  */
-public class SalesDateGetRequest extends AbstractUserSessionRequest {
+public class SalesDateGetRequest extends AbstractRequest {
 	
 private static final long serialVersionUID = 1956518105073686826L;
 	
