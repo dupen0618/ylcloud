@@ -15,7 +15,6 @@ import com.ykcloud.soa.erp.api.so.model.ApplyDetail;
 /**
  * 产生退货so回写退审批单后再回写退货申请单so_num_id及订单数量 入参
  * @author tz.x
- *
  * @date 2018年4月12日上午10:42:44
  */
 public class ReturnApplyAfterGenerateReturnSoUpdateRequest extends AbstractUserSessionRequest {
@@ -31,7 +30,7 @@ public class ReturnApplyAfterGenerateReturnSoUpdateRequest extends AbstractUserS
 	@ApiField(description = "订单日期")
 	private Date orderDate;
 
-	@NotEmpty(message = "退货申请单号不能为空！")
+	@NotNull(message = "退货申请单号不能为空！")
 	@ApiField(description = "退货申请单号")
 	private String applyNumId;
 	
