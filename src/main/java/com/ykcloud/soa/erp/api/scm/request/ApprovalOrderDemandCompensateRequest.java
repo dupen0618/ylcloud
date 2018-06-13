@@ -5,7 +5,6 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 //生成审批单明细补偿
 public class ApprovalOrderDemandCompensateRequest extends AbstractUserSessionRequest {
