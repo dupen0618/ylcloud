@@ -2,9 +2,11 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.BackOffRateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.BillInAccountDateGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.SalesDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SupPriceBySeriesGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.BackOffRateGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.BillInAccountDateGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.SalesDateGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.SupPriceBySeriesGetResponse;
 
 /**
@@ -13,6 +15,13 @@ import com.ykcloud.soa.erp.api.wm.response.SupPriceBySeriesGetResponse;
  * @Date: 2018/4/18 16:00
  */
 public interface WmQueryService {
+	
+	/**
+	 * 获取入账日期（提供获取移动加权价服务）
+	 * @author tz.x
+	 * @date 2018年6月11日下午7:18:25
+	 */
+	public SalesDateGetResponse getSalesDate(SalesDateGetRequest request);
 	
 	/**
 	 * 获取入账日期（包装）
