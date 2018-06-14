@@ -38,6 +38,7 @@ public class ProductInfo implements Serializable {
     private Long supplyUnitNumId;    //供应商
     private Long classifyNumId;//部门归集码
     private Double finalQty;//期末数量
+    private Long settlementType;//结算方式
 
     private Double totalByCon;  //按盘存单箱号统计已盘点商品数量
     private Double totalByConItem;  //按盘存单箱号和商品统计已盘点数量
@@ -288,6 +289,14 @@ public class ProductInfo implements Serializable {
 
     public void setFinalQty(Double finalQty) {
         this.finalQty = finalQty;
+    }
+
+    public Long getSettlementType() {
+        return settlementType;
+    }
+
+    public void setSettlementType(Long settlementType) {
+        this.settlementType = settlementType;
     }
 
     public boolean equals(Object obj) {
