@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.wm.response;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 /**
@@ -16,6 +17,7 @@ public class BillInAccountDateGetResponse extends MessagePack {
 	/**
 	 * 销售日期
 	 */
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date salesDate;
 
 	public Date getSalesDate() {
