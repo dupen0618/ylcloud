@@ -25,6 +25,7 @@ public class FiReceiptInAccountRequest extends AbstractUserSessionRequest {
 
     Long balanceFunctionId;
 
+    private Long crossSubCompanySign;
 
     public String getReservedNo() {
         return reservedNo;
@@ -64,5 +65,13 @@ public class FiReceiptInAccountRequest extends AbstractUserSessionRequest {
 
     public void setBillTypeNumId(String billTypeNumId) {
         this.billTypeNumId = billTypeNumId;
+    }
+
+    public Long getCrossSubCompanySign() {
+        return crossSubCompanySign;
+    }
+
+    public void setCrossSubCompanySign(Long crossSubCompanySign) {
+        this.crossSubCompanySign = crossSubCompanySign;
     }
 }

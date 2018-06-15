@@ -18,7 +18,8 @@ public class FiInAccountByReceiptRequest extends AbstractUserSessionRequest{
     String typeNumId;
     @NotNull(message="门店编号不能为空")
     Long subUnitNumId;
-
+    @NotNull(message = "")
+    private String billTypeNumId;
     Long balaFuncId;
 
     FiConsignmentProductAccountWba fiConsignmentProductAccountWba;
@@ -70,5 +71,13 @@ public class FiInAccountByReceiptRequest extends AbstractUserSessionRequest{
 
     public void setCrossSubCompanySign(Long crossSubCompanySign) {
         this.crossSubCompanySign = crossSubCompanySign;
+    }
+
+    public String getBillTypeNumId() {
+        return billTypeNumId;
+    }
+
+    public void setBillTypeNumId(String billTypeNumId) {
+        this.billTypeNumId = billTypeNumId;
     }
 }
