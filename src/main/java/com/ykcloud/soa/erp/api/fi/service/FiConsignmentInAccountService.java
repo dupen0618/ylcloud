@@ -23,7 +23,7 @@ public interface FiConsignmentInAccountService {
      */
     public ConsignmentProductAccountAdjustResponse adjustConsignmentProductAccount(ConsignmentProductAccountAdjustRequest request);
 
-    FiInAccountByReceiptResponse setConsignmentInAccount(FiInAccountByReceiptRequest request);
+    FiInAccountByReceiptResponse getConsignmentInAccount(FiInAccountByReceiptRequest request);
 
     FiMonthlySettlementResponse buildMonthlySettlementRecord(FiMonthlySettlementRequest request);
 

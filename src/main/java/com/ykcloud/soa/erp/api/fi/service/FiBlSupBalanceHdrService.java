@@ -14,5 +14,5 @@ import com.ykcloud.soa.erp.api.fi.response.SupplyHdrStatusUpdateResponse;
 public interface FiBlSupBalanceHdrService {
 
 	//获取单头
-	FiBlSupBalanceHdr fetchOne(Long tenantNumId, Long dataSign, Long subUnitNumId, Long balaFuncId);
+	FiBlSupBalanceHdr fetchOne(Long tenantNumId, Long dataSign, Long subUnitNumId, String balanceNo);
 }
