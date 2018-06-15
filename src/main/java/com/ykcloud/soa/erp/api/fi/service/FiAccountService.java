@@ -10,5 +10,5 @@ public interface FiAccountService {
     InAccountByBalanceResponse getInAccountByCustBalance(FiReceiptInAccountRequest request);
 
     //供应商结算单
-    InAccountByBalanceResponse getInAccountByBalance(InAccountByBalanceRequest request);
+    InAccountByBalanceResponse getInAccountByBalance(FiReceiptInAccountRequest request);
 }

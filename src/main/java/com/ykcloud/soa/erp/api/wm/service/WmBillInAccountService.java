@@ -65,6 +65,4 @@ public interface WmBillInAccountService {
    //财务库存损溢单处理-(批次库存日月进销存+商品成本)
    WmReceiptInAccountResponse setLoss(WmReceiptInAccountRequest request);
 
-    //类型初始化验收入库单记发出代销商品款
-    WmReceiptInAccountResponse getInitializeReservedNo(WmReceiptInAccountRequest request);
 }
