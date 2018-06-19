@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -38,6 +40,13 @@ public class ShipInfoForGenerateCustBalanceBl implements Serializable {
 	private Double batchPoPrice;//批次采购价格
 	private Date recDate;//入账日期
 	private String itemid;//商品商家编码
+
+	private String firstBatchSeries;
+
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+	private Date firstRecDate;
+
+	private Long firstSupplyUnitNumId;
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -245,5 +254,29 @@ public class ShipInfoForGenerateCustBalanceBl implements Serializable {
 
 	public void setItemid(String itemid) {
 		this.itemid = itemid;
+	}
+
+	public String getFirstBatchSeries() {
+		return firstBatchSeries;
+	}
+
+	public void setFirstBatchSeries(String firstBatchSeries) {
+		this.firstBatchSeries = firstBatchSeries;
+	}
+
+	public Date getFirstRecDate() {
+		return firstRecDate;
+	}
+
+	public void setFirstRecDate(Date firstRecDate) {
+		this.firstRecDate = firstRecDate;
+	}
+
+	public Long getFirstSupplyUnitNumId() {
+		return firstSupplyUnitNumId;
+	}
+
+	public void setFirstSupplyUnitNumId(Long firstSupplyUnitNumId) {
+		this.firstSupplyUnitNumId = firstSupplyUnitNumId;
 	}
 }
