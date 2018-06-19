@@ -152,6 +152,12 @@ public class SupBalanceDtl implements Serializable {
 	 */
 	private String reservedTypeNumIdName;
 
+	private String firstBatchSeries;
+
+	private Date firstRecDate;
+
+	private Long firstSupplyUnitNumId;
+
 
 	public String getSeries() {
 		return series;
@@ -384,5 +390,29 @@ public class SupBalanceDtl implements Serializable {
 
 	public void setQty(Double qty) {
 		this.qty = qty;
+	}
+
+	public String getFirstBatchSeries() {
+		return firstBatchSeries;
+	}
+
+	public void setFirstBatchSeries(String firstBatchSeries) {
+		this.firstBatchSeries = firstBatchSeries;
+	}
+
+	public Date getFirstRecDate() {
+		return firstRecDate;
+	}
+
+	public void setFirstRecDate(Date firstRecDate) {
+		this.firstRecDate = firstRecDate;
+	}
+
+	public Long getFirstSupplyUnitNumId() {
+		return firstSupplyUnitNumId;
+	}
+
+	public void setFirstSupplyUnitNumId(Long firstSupplyUnitNumId) {
+		this.firstSupplyUnitNumId = firstSupplyUnitNumId;
 	}
 }

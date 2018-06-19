@@ -33,7 +33,7 @@ public interface FiSettleService {
 	
 	//删除结算单扣款明细中的指定项目
 	public AppointForSupBalanceCutDtlDeleteResponse deleteAppointForSupBalanceCutDtl(AppointForSupBalanceCutDtlDeleteRequest request);
-	
+
 	//结算单审核
 	public BalanceAuditResponse auditBalance(BalanceAuditRequest request);
 	
