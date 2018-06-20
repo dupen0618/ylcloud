@@ -16,12 +16,6 @@ public interface FiOnLoadProcessService {
     //商品成本月进销存入库在途处理
     FiOnLoadProcessResponse CostMonthReceiptOnLoadProcess(FiOnLoadProcessRequest request);
 
-    // 代销商品款出库在途处理
-    FiOnLoadProcessResponse ConsignmentShipOnLoadProcess(FiOnLoadProcessRequest request);
-
-    //代销商品款入库在途处理
-    FiOnLoadProcessResponse ConsignmentReceiptOnLoadProcess(FiOnLoadProcessRequest request);
-
     //发出商品出库在途处理
     FiOnLoadProcessResponse  AccEmitGoodsOutBoundOnLoadProcess(FiOnLoadProcessRequest request);
 
