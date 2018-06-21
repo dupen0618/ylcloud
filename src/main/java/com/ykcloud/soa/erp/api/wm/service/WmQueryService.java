@@ -1,13 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
-import com.ykcloud.soa.erp.api.wm.request.BackOffRateGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.BillInAccountDateGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.SalesDateGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.SupPriceBySeriesGetRequest;
-import com.ykcloud.soa.erp.api.wm.response.BackOffRateGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.BillInAccountDateGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.SalesDateGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.SupPriceBySeriesGetResponse;
+import com.ykcloud.soa.erp.api.wm.request.*;
+import com.ykcloud.soa.erp.api.wm.response.*;
 
 /**
  * @Description: 倒扣率
@@ -35,4 +29,11 @@ public interface WmQueryService {
 
     //根据批次行号获得采购价格
     public SupPriceBySeriesGetResponse getSupPriceBySeries(SupPriceBySeriesGetRequest request);
+
+     /**
+      * @author alfred.liu
+      * @date 2018/6/20 20:18
+      * @description 根据首次入库批次行号获取税额
+      */
+    TaxRateByFirstBatchSeriesGetResponse getTaxRateByFirstBatchSeries(TaxRateByFirstBatchSeriesGetRequest request);
 }
