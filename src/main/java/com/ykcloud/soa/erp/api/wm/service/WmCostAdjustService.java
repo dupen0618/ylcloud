@@ -28,10 +28,10 @@ public interface WmCostAdjustService {
 	public AdjustCostByScmChangeCostResponse adjustWmCostByScmChangeCost(WmCostByScmChangeCostRequest request);
 
     /**
-     * 发出商品在途调整
+     * 发出代销商品在途金额调整
      * @param request *
      * @return *
      * @author Sealin
      */
-    WmAdjustCostResponse adjustWmEmitCost(WmAdjustCostRequest request);
+    WmAdjustCostResponse adjustConsignmentEmitOnloadCost(WmAdjustCostRequest request);
 }
