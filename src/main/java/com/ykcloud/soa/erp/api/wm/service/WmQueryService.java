@@ -4,10 +4,12 @@ import com.ykcloud.soa.erp.api.wm.request.BackOffRateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.BillInAccountDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SalesDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SupPriceBySeriesGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.TaxRateByFirstBatchSeriesGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.BackOffRateGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.BillInAccountDateGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.SalesDateGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.SupPriceBySeriesGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.TaxRateByFirstBatchSeriesGetResponse;
 
 /**
  * @Description: 倒扣率
