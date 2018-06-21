@@ -26,5 +26,12 @@ public interface WmCostAdjustService {
 	  * @description 在scm中的ScmChangeCost审核时候调用此方法
 	  */
 	public AdjustCostByScmChangeCostResponse adjustWmCostByScmChangeCost(WmCostByScmChangeCostRequest request);
-	
+
+    /**
+     * 发出商品在途调整
+     * @param request *
+     * @return *
+     * @author Sealin
+     */
+    WmAdjustCostResponse adjustWmEmitCost(WmAdjustCostRequest request);
 }

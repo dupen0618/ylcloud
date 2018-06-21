@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
+import com.ykcloud.soa.erp.api.wm.model.WmBlCostAdjustDtl;
+import com.ykcloud.soa.erp.api.wm.model.WmBlCostAdjustHdr;
 import com.ykcloud.soa.erp.api.wm.request.BackOffRateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.BillInAccountDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SalesDateGetRequest;
@@ -35,4 +37,5 @@ public interface WmQueryService {
 
     //根据批次行号获得采购价格
     public SupPriceBySeriesGetResponse getSupPriceBySeries(SupPriceBySeriesGetRequest request);
+
 }

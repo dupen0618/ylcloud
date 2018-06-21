@@ -1,9 +1,9 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
-import java.util.List;
-
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.fi.model.ReceiptAdjustOnLoadAccountForAdjust;
+
+import java.util.List;
 
 /**
  * 更新供货方财务在途金额和税金

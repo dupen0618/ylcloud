@@ -41,7 +41,15 @@ public interface FiCostDailyAccountGaService {
 	 * @date 2018年5月18日下午2:53:08
 	 */
 	public ReceiptOnLoadInBatchMonthAccountAdjustResponse adjustReceiptOnLoadInBatchMonthAccount(ReceiptOnLoadInBatchMonthAccountAdjustRequest request);
-	
+
+	/**
+	 * 更新发出代销商品发出金额和在途金额
+	 *
+	 * @author Sealin
+	 */
+	ReceiptOnLoadInBatchMonthAccountAdjustResponse adjustEmitAmountAndOnloadAmount(
+			ReceiptOnLoadInBatchMonthAccountAdjustRequest request);
+
 	/**
 	 * 调整商品成本日月进销存
 	 * @author tz.x
