@@ -5,6 +5,8 @@ import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.BusinessAmountForGenKxCountResponse;
 import com.ykcloud.soa.erp.api.wm.response.DataFromTmlGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.response.NegativeStockBatchAdjustmentResponse;
+import com.ykcloud.soa.erp.api.wm.response.PoorInvertedExtrusionShipSellDailyCreateResponse;
+import com.ykcloud.soa.erp.api.wm.response.PoorInvertedExtrusionShipSellDailyHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailyCollectResponse;
 
 /**
@@ -46,4 +48,15 @@ public interface WmSellDailyService {
 	 * @return
 	 */
 	BusinessAmountForGenKxCountResponse countSalesCost(BusinessAmountForGenKxCountRequest request);
+
+
+    /**
+     * 生成倒挤差类型的出库日报
+     */
+    PoorInvertedExtrusionShipSellDailyCreateResponse createPoorInvertedExtrusionShipSellDaily(PoorInvertedExtrusionShipSellDailyCreateRequest request);
+    
+    /**
+     * 倒挤差类型的出库单头汇总
+     */
+    PoorInvertedExtrusionShipSellDailyHdrCreateResponse createPoorInvertedExtrusionShipSellDailyHdr(PoorInvertedExtrusionShipSellDailyHdrCreateRequest request);
 }
