@@ -6,9 +6,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 /*
-* @Author:ALi
-* @Description: 供应商往来
-*/
+ * @Author:ALi
+ * @Description: 供应商往来
+ */
 public class BalanceDealings implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String series; // 行号
@@ -27,8 +27,9 @@ public class BalanceDealings implements Serializable {
 	private Double new_cost_amount;
 	private Double new_Tax_amount;
 	private Double new_Tax_rate;
-
 	private Double taxAmount; // 税金
+	private Long FIRST_SUPPLY_UNIT_NUM_ID;//首次供应商
+	private  Long TYPE_NUM_ID;
 	public String getSeries() {
 		return series;
 	}
@@ -135,5 +136,21 @@ public class BalanceDealings implements Serializable {
 
 	public void setPty_num_3_name(String pty_num_3_name) {
 		this.pty_num_3_name = pty_num_3_name;
+	}
+
+	public Long getFIRST_SUPPLY_UNIT_NUM_ID() {
+		return FIRST_SUPPLY_UNIT_NUM_ID;
+	}
+
+	public void setFIRST_SUPPLY_UNIT_NUM_ID(Long FIRST_SUPPLY_UNIT_NUM_ID) {
+		this.FIRST_SUPPLY_UNIT_NUM_ID = FIRST_SUPPLY_UNIT_NUM_ID;
+	}
+
+	public Long getTYPE_NUM_ID() {
+		return TYPE_NUM_ID;
+	}
+
+	public void setTYPE_NUM_ID(Long TYPE_NUM_ID) {
+		this.TYPE_NUM_ID = TYPE_NUM_ID;
 	}
 }

@@ -12,41 +12,41 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  */
 public class SupBalanceDtl implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    /**
-     * 行号
-     */
-    private String series;
+	private static final long serialVersionUID = 1L;
+	/**
+	 * 行号
+	 */
+	private String series;
 
-    /**
-     * 单据编号
-     */
-    private String reservedNo;
+	/**
+	 * 单据编号
+	 */
+	private String reservedNo;
 
-    /**
-     * 业务类型
-     */
-    private Long typeNumId;
+	/**
+	 * 业务类型
+	 */
+	private Long typeNumId;
 	/**
 	 * 业务类型名称
 	 */
 	private String typeName;
 
-    /**
-     * 业务日期
-     */
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date operatDate;
+	/**
+	 * 业务日期
+	 */
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+	private Date operatDate;
 
-    /**
-     * 商品
-     */
-    private Long itemNumId;
+	/**
+	 * 商品
+	 */
+	private Long itemNumId;
 
-    /**
-     * 商品中心（部门）
-     */
-    private Long divNumId;
+	/**
+	 * 商品中心（部门）
+	 */
+	private Long divNumId;
 	/**
 	 * 商品中心（部门）名称
 	 */
@@ -54,28 +54,28 @@ public class SupBalanceDtl implements Serializable {
 
 
 	/**
-     * 商品条码
-     */
-    private String barcode;
+	 * 商品条码
+	 */
+	private String barcode;
 
-    /**
-     * 商品品名
-     */
-    private String itemName;
+	/**
+	 * 商品品名
+	 */
+	private String itemName;
 
-    /**
-     * 产地
-     */
-    private Long productOriginNumId;
+	/**
+	 * 产地
+	 */
+	private Long productOriginNumId;
 	/**
 	 * 产地名称
 	 */
 	private String productOriginName;
 
-    /**
-     * 件装单位
-     */
-    private Double conversionQty;
+	/**
+	 * 件装单位
+	 */
+	private Double conversionQty;
 	/**
 	 * 数量
 	 */
@@ -83,55 +83,55 @@ public class SupBalanceDtl implements Serializable {
 
 
 	/**
-     * 件装规格
-     */
-    private String conversionStyleDesc;
+	 * 件装规格
+	 */
+	private String conversionStyleDesc;
 
-    /**
-     * 结算价格
-     */
-    private Double price;
+	/**
+	 * 结算价格
+	 */
+	private Double price;
 
-    /**
-     * 结算金额
-     */
-    private Double amount;
+	/**
+	 * 结算金额
+	 */
+	private Double amount;
 
-    /**
-     * 批次行号
-     */
-    private String batchSeries;
+	/**
+	 * 批次行号
+	 */
+	private String batchSeries;
 
-    /**
-     * 批次促销档期
-     */
-    private Long batchPromotionGrade;
+	/**
+	 * 批次促销档期
+	 */
+	private Long batchPromotionGrade;
 
-    /**
-     * 批次供应商
-     */
-    private Long batchSupplyUnitNumId;
+	/**
+	 * 批次供应商
+	 */
+	private Long batchSupplyUnitNumId;
 
-    /**
-     * 批次采购价格
-     */
-    private Double batchPoPrice;
+	/**
+	 * 批次采购价格
+	 */
+	private Double batchPoPrice;
 
-    /**
-     * 税率
-     */
-    private Double taxRate;
+	/**
+	 * 税率
+	 */
+	private Double taxRate;
 
-    /**
-     * 税金
-     */
-    private Double taxAmount;
+	/**
+	 * 税金
+	 */
+	private Double taxAmount;
 
 
-    /**
-     * 商品商家编码
-     */
-    private String itemid;
+	/**
+	 * 商品商家编码
+	 */
+	private String itemid;
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date orderDate;
@@ -157,6 +157,8 @@ public class SupBalanceDtl implements Serializable {
 	private Date firstRecDate;
 
 	private Long firstSupplyUnitNumId;
+
+	private Double supPrice;
 
 
 	public String getSeries() {
@@ -414,5 +416,13 @@ public class SupBalanceDtl implements Serializable {
 
 	public void setFirstSupplyUnitNumId(Long firstSupplyUnitNumId) {
 		this.firstSupplyUnitNumId = firstSupplyUnitNumId;
+	}
+
+	public Double getSupPrice() {
+		return supPrice;
+	}
+
+	public void setSupPrice(Double supPrice) {
+		this.supPrice = supPrice;
 	}
 }

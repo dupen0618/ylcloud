@@ -11,7 +11,7 @@ import java.util.Date;
  * @date: 2018/6/1 10:34
  **/
 public class ShipInfoForGenerateCustBalanceBl implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
 
 	private String reservedNo;//出库单号
@@ -43,11 +43,11 @@ public class ShipInfoForGenerateCustBalanceBl implements Serializable {
 
 	private String firstBatchSeries;
 
-	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date firstRecDate;
 
 	private Long firstSupplyUnitNumId;
 
+	private Double supPrice;
 	public String getReservedNo() {
 		return reservedNo;
 	}
@@ -278,5 +278,13 @@ public class ShipInfoForGenerateCustBalanceBl implements Serializable {
 
 	public void setFirstSupplyUnitNumId(Long firstSupplyUnitNumId) {
 		this.firstSupplyUnitNumId = firstSupplyUnitNumId;
+	}
+
+	public Double getSupPrice() {
+		return supPrice;
+	}
+
+	public void setSupPrice(Double supPrice) {
+		this.supPrice = supPrice;
 	}
 }
