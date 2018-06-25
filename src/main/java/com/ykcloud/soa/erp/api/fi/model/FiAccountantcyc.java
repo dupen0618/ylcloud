@@ -3,7 +3,7 @@ package com.ykcloud.soa.erp.api.fi.model;
 import java.io.Serializable;
 
 public class FiAccountantcyc implements Serializable {
-    private long series;
+    private String series;
     private long tenant_num_id;
     private long sub_unit_num_id;
     private long accountantcycid;
@@ -20,11 +20,11 @@ public class FiAccountantcyc implements Serializable {
     private long data_sign;
     private long currentaccount_sign;
 
-    public long getSeries() {
+    public String getSeries() {
         return series;
     }
 
-    public void setSeries(long series) {
+    public void setSeries(String series) {
         this.series = series;
     }
 
