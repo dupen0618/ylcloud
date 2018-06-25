@@ -1,8 +1,10 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
 import com.ykcloud.soa.erp.api.scm.request.DailySettlementAdjustWmInventoryCostRequest;
+import com.ykcloud.soa.erp.api.scm.request.PmCostGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ScmBlChangeCostRequest;
 import com.ykcloud.soa.erp.api.scm.response.DailySettlementAdjustWmInventoryCostResponse;
+import com.ykcloud.soa.erp.api.scm.response.PmCostGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ScmBlChangeCostResponse;
 
  /**
@@ -26,5 +28,13 @@ public interface ScmBlChangeCostService
       * @description 日结调用
       */
      public DailySettlementAdjustWmInventoryCostResponse adjustWmInventoryCostForDailyCarry (DailySettlementAdjustWmInventoryCostRequest request);
+     
+     /**
+      * 获取价格调整数据
+      * @Description:   
+      * @author zhaokang 
+      * @date 2018年6月22日
+      */
+     public PmCostGetResponse getPmtCost(PmCostGetRequest request);
 
 }
