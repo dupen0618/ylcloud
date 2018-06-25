@@ -4,6 +4,7 @@ import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlSeriesForRegenerateIte
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyHdrAndDtlStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyListForGenerateBalanceGetRequest;
+import com.ykcloud.soa.erp.api.so.request.LastSalePriceGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OtOtmlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupBlanceDtlByItemSellDailyDtlSeriesGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupplyUnitNumIdForJointSaleGetRequest;
@@ -15,6 +16,7 @@ import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlSeriesForRegenerateIt
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyHdrAndDtlStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyListForGenerateBalanceGetResponse;
+import com.ykcloud.soa.erp.api.so.response.LastSalePriceGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OtOTmlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupBlanceDtlByItemSellDailyDtlSeriesGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyUnitNumIdForJointSaleGetResponse;
@@ -77,4 +79,14 @@ public interface SoTmlService {
     
     //比较价格
     public TmlProductAmountAndPayAmountCompareRequestCompareResponse compareTmlProductAmountAndPayAmount(TmlProductAmountAndPayAmountCompareRequest request);
+
+    /***
+     * 计算商品最后一次售价（计算七天內最底价,若七天内无销售计算最近一次售价）
+     * @param request
+     * @author pengh
+     * @return
+     */
+    public LastSalePriceGetResponse getLastSalePrice(LastSalePriceGetRequest request);
+  
+
 }
