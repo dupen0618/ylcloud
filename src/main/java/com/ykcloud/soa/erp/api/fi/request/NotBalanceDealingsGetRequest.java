@@ -29,7 +29,7 @@ public class NotBalanceDealingsGetRequest extends AbstractRequest {
 	@NotNull(message = "截止日期不能为空！")
 	private Date endDate;
 
-	//@NotNull(message = "结算方式不能为空！")
+	@NotNull(message = "结算方式不能为空！")
 	private Long settlementType;
 
 
@@ -37,12 +37,6 @@ public class NotBalanceDealingsGetRequest extends AbstractRequest {
 	 * @NotNull(message = "经营方式不能为空！") private Long settlementType;
 	 * 
 	 * @NotNull(message = "结算周期不能为空！") private Date balanceDate;
-	 */
-
-	/*
-	 * @NotNull(message = "操作人ID不能为空！") private Long createUserId;
-	 * 
-	 * @NotNull(message = "结算单号不能为空！") private Long balanceNo;
 	 */
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
