@@ -71,7 +71,7 @@ public class LossAmount1AndFinalCostUpdateRequest extends AbstractRequest {
 	private String triggerBillLine;
 
 	// 业务单据具体类型
-	private Long balanceFunctionId;
+	private Long typeNumId;
 
 	public static interface lossTypeOption {
 		/**
@@ -268,12 +268,12 @@ public class LossAmount1AndFinalCostUpdateRequest extends AbstractRequest {
 		this.triggerBillLine = triggerBillLine;
 	}
 
-	public Long getBalanceFunctionId() {
-		return balanceFunctionId;
+	public Long getTypeNumId() {
+		return typeNumId;
 	}
 
-	public void setBalanceFunctionId(Long balanceFunctionId) {
-		this.balanceFunctionId = balanceFunctionId;
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
 	}
 
 }
