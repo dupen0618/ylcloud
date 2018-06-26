@@ -12,6 +12,21 @@ public class WeightedAveragePriceForAdjust implements Serializable {
 	private static final long serialVersionUID = 4986431171381360135L;
 	
 	/**
+	 * 单据号
+	 */
+	private String reservedNo;
+	
+	/**
+	 * 行号
+	 */
+	private String series;
+	
+	/**
+	 * 业务类型
+	 */
+	private Long typeNumId;
+	
+	/**
 	 * 调整日期
 	 */
 	private Date justDate;
@@ -35,6 +50,30 @@ public class WeightedAveragePriceForAdjust implements Serializable {
 	 * 税率
 	 */
 	private Double taxRate;
+
+	public String getReservedNo() {
+		return reservedNo;
+	}
+
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
+	}
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
+
+	public Long getTypeNumId() {
+		return typeNumId;
+	}
+
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
+	}
 
 	public Date getJustDate() {
 		return justDate;
