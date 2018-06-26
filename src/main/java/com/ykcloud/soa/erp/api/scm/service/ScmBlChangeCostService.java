@@ -35,6 +35,6 @@ public interface ScmBlChangeCostService
       * @author zhaokang 
       * @date 2018年6月22日
       */
-     public PmCostGetResponse getPmtCost(PmCostGetRequest request);
+     public PmCostGetResponse getPmCost(PmCostGetRequest request);
 
 }
