@@ -47,10 +47,12 @@ public class SupBalanceBillDtl implements Serializable {
 	//倒扣率
    private Double	backoffRate;
 
-   //数量
+    //数量
 	private Double qty;
-	//金额
+	//金额含税
 	private Double amount;
+	//金额不含税(含税减去税额)
+	private Double amountNotRate;
 	//税率
 	private Double taxRate;
 	//税额
@@ -160,5 +162,13 @@ public class SupBalanceBillDtl implements Serializable {
 
 	public void setSellAmount(Double sellAmount) {
 		this.sellAmount = sellAmount;
+	}
+
+	public Double getAmountNotRate() {
+		return amountNotRate;
+	}
+
+	public void setAmountNotRate(Double amountNotRate) {
+		this.amountNotRate = amountNotRate;
 	}
 }
