@@ -2,7 +2,7 @@ package com.ykcloud.soa.erp.api.scm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
-public class SuppliersContractReviewedRequest extends AbstractRequest {
+public class AuditSupplyRequest extends AbstractRequest {
 
 	/**
 	 * 
