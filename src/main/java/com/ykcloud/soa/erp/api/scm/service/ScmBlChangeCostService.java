@@ -1,8 +1,12 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
+import com.ykcloud.soa.erp.api.scm.request.ChangePriceAuditRequest;
+import com.ykcloud.soa.erp.api.scm.request.ChangeVipPriceAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.DailySettlementAdjustWmInventoryCostRequest;
 import com.ykcloud.soa.erp.api.scm.request.PmCostGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ScmBlChangeCostRequest;
+import com.ykcloud.soa.erp.api.scm.response.ChangePriceAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.ChangeVipPriceAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.DailySettlementAdjustWmInventoryCostResponse;
 import com.ykcloud.soa.erp.api.scm.response.PmCostGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ScmBlChangeCostResponse;
@@ -36,5 +40,22 @@ public interface ScmBlChangeCostService
       * @date 2018年6月22日
       */
      public PmCostGetResponse getPmtCost(PmCostGetRequest request);
+     
+     /**
+      * 售价（临时/永久）调整审核
+      * @author penghui
+      * @return
+      */
+     public ChangePriceAuditResponse auditChangePrice(ChangePriceAuditRequest request);
+     
+     /**
+      * 会员售价调整审核
+      * @param request
+      * @return
+      */
+     public ChangeVipPriceAuditResponse auditChangeVipPrice(ChangeVipPriceAuditRequest request);
+     
+     
+     
 
 }
