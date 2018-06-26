@@ -52,9 +52,17 @@ public class FiConsignmentProductAccountWba implements Serializable {
     private Long createUserId;
     private Long lastUpdateUserId;
     private String cancelsign;
+    private String itemid;
 
+    public String getItemid() {
+		return itemid;
+	}
 
-    public Long getItemNumId() {
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
+
+	public Long getItemNumId() {
         return itemNumId;
     }
 
