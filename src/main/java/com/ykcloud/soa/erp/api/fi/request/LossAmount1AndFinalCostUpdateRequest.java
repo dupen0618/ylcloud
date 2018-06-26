@@ -64,6 +64,15 @@ public class LossAmount1AndFinalCostUpdateRequest extends AbstractRequest {
 	@NotNull(message = "结算方式不能为空！")
 	private Long SETTLEMENT_TYPE;
 
+	// 业务单据号
+	private String triggerBillid;
+
+	// 业务单据行号
+	private String triggerBillLine;
+
+	// 业务单据具体类型
+	private Long typeNumId;
+
 	public static interface lossTypeOption {
 		/**
 		 * 报损类型
@@ -241,6 +250,30 @@ public class LossAmount1AndFinalCostUpdateRequest extends AbstractRequest {
 
 	public void setCANCELSIGN(String cANCELSIGN) {
 		CANCELSIGN = cANCELSIGN;
+	}
+
+	public String getTriggerBillid() {
+		return triggerBillid;
+	}
+
+	public void setTriggerBillid(String triggerBillid) {
+		this.triggerBillid = triggerBillid;
+	}
+
+	public String getTriggerBillLine() {
+		return triggerBillLine;
+	}
+
+	public void setTriggerBillLine(String triggerBillLine) {
+		this.triggerBillLine = triggerBillLine;
+	}
+
+	public Long getTypeNumId() {
+		return typeNumId;
+	}
+
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
 	}
 
 }
