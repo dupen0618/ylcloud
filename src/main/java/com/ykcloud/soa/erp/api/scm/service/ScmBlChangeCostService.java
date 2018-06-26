@@ -56,6 +56,4 @@ public interface ScmBlChangeCostService
      public ChangeVipPriceAuditResponse auditChangeVipPrice(ChangeVipPriceAuditRequest request);
      
      
-     
-
 }
