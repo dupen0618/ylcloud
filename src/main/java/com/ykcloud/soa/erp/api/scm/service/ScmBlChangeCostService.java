@@ -3,10 +3,12 @@ package com.ykcloud.soa.erp.api.scm.service;
 import com.ykcloud.soa.erp.api.scm.request.ChangeCostAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.DailySettlementAdjustWmInventoryCostRequest;
 import com.ykcloud.soa.erp.api.scm.request.PmCostGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.SalesCostAdjustedRequest;
 import com.ykcloud.soa.erp.api.scm.request.ScmBlChangeCostRequest;
 import com.ykcloud.soa.erp.api.scm.response.ChangeCostAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.DailySettlementAdjustWmInventoryCostResponse;
 import com.ykcloud.soa.erp.api.scm.response.PmCostGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.SalesCostAdjustedResponse;
 import com.ykcloud.soa.erp.api.scm.response.ScmBlChangeCostResponse;
 
 /**
@@ -44,14 +46,13 @@ public interface ScmBlChangeCostService {
 	 */
 	public ScmBlChangeCostResponse adjustWmInventoryCost(ScmBlChangeCostRequest request);
 
+	 /**
+     * 进价调整生成至销售成本调整
+     * @Description:   
+     * @author zhaokang 
+     * @date 2018年6月26日
+     */
+    public SalesCostAdjustedResponse adjustSalesCost(SalesCostAdjustedRequest request);
 
-	/**
-	 * 获取价格调整数据
-	 * 
-	 * @Description:
-	 * @author zhaokang
-	 * @date 2018年6月22日
-	 */
-	public PmCostGetResponse getPmtCost(PmCostGetRequest request);
 
 }

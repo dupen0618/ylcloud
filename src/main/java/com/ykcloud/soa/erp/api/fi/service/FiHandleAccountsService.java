@@ -12,4 +12,7 @@ public interface FiHandleAccountsService {
 	
 	//销售补差
 	SalesOfSupplementaryGenerateResponse generateSalesOfSupplementary(SalesOfSupplementaryGenerateRequest request);
+	
+	
+	
 }
