@@ -2,10 +2,12 @@ package com.ykcloud.soa.erp.api.fi.service;
 
 import com.ykcloud.soa.erp.api.fi.request.AppointBalanceDtlGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDtlDeleteRequest;
+import com.ykcloud.soa.erp.api.fi.request.BalanceDataBatchGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceBillGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
+import com.ykcloud.soa.erp.api.fi.response.BalanceDataBatchGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotBalanceBillGetResponse;
 
@@ -23,5 +25,7 @@ public interface FiSupBalanceBillService {
     public AppointBalanceDtlGenerateResponse generateAppointBalanceDtl(AppointBalanceDtlGenerateRequest request);
     //删除结算单商品明细中的指定项目
     public AppointForSupBalanceDtlDeleteResponse deleteAppointForSupBalanceDtl(AppointForSupBalanceDtlDeleteRequest request);
+    //批量生成结算
+    public BalanceDataBatchGenerateResponse batchGenerateBalanceData(BalanceDataBatchGenerateRequest request);
 
 }
