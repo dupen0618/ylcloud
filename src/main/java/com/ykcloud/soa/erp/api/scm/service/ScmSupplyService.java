@@ -33,5 +33,5 @@ public interface ScmSupplyService {
 
 	AuditSupplyResponse auditSupply(AuditSupplyRequest request);
 
-	ScmBlContractResponse importScmBlContract(ScmBlContractRequest request);
+	ScmBlContractResponse importSupplyContract(ScmBlContractRequest request);
 }
