@@ -1,11 +1,10 @@
 package com.ykcloud.soa.erp.api.fi.service;
-
-import com.ykcloud.soa.erp.api.fi.request.AppointBalanceDtlGenerateRequest;
+import com.ykcloud.soa.erp.api.fi.request.AppointBalanceBillDtlGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDtlDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataBatchGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceBillGetRequest;
-import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDtlGenerateResponse;
+import com.ykcloud.soa.erp.api.fi.response.AppointBalanceBillDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataBatchGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
@@ -19,27 +18,36 @@ import com.ykcloud.soa.erp.api.fi.response.NotBalanceBillGetResponse;
 public interface FiSupBalanceBillService {
     /**
      * 取结算数据
+     * @param
+     * @return
      */
-    BalanceDataGenerateResponse generateBalanceData(BalanceDataGenerateRequest request);
+    public BalanceDataGenerateResponse generateBalanceData(BalanceDataGenerateRequest request);
 
     /**
      * 获取没有结算的数据
+     * @param request
+     * @return
      */
-    NotBalanceBillGetResponse getNotBalanceBill(NotBalanceBillGetRequest request);
+    public NotBalanceBillGetResponse getNotBalanceBill(NotBalanceBillGetRequest request);
 
     /**
      * 选择指定明细项目生成结算明细
+     * @param request
+     * @return
      */
-    AppointBalanceDtlGenerateResponse generateAppointBalanceDtl(AppointBalanceDtlGenerateRequest request);
-
+    public AppointBalanceBillDtlGenerateResponse generateAppointBalanceBillDtl(AppointBalanceBillDtlGenerateRequest request) ;
     /**
      * 删除结算单商品明细中的指定项目
+     * @param request
+     * @return
      */
-    AppointForSupBalanceDtlDeleteResponse deleteAppointForSupBalanceDtl(AppointForSupBalanceDtlDeleteRequest request);
+    public AppointForSupBalanceDtlDeleteResponse deleteAppointForSupBalanceDtl(AppointForSupBalanceDtlDeleteRequest request);
 
     /**
      * 批量生成结算
+     * @param request
+     * @return
      */
-    BalanceDataBatchGenerateResponse batchGenerateBalanceData(BalanceDataBatchGenerateRequest request);
+    public BalanceDataBatchGenerateResponse batchGenerateBalanceData(BalanceDataBatchGenerateRequest request);
 
 }
