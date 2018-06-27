@@ -1,17 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.service;
 
-import com.ykcloud.soa.erp.api.wm.request.BatchDtlStatusNumIdForSellOffUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.DtlOrHdrStatusNumIdForDeleteOrAuditSellOffBalanceUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.ListForGenerateBalanceForSellOffGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.SellOffBatchDtlStatusforDeleteSellOffSupBalanceDtlUpdateRequest;
-import com.ykcloud.soa.erp.api.wm.request.SupBlanceDtlBySellOffBatchDtlSeriesGetRequest;
-import com.ykcloud.soa.erp.api.wm.request.SupplyUnitNumIdForSellOffGetRequest;
-import com.ykcloud.soa.erp.api.wm.response.BatchDtlStatusNumIdForSellOffUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.DtlOrHdrStatusNumIdForDeleteOrAuditSellOffBalanceUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ListForGenerateBalanceForSellOffGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.SellOffBatchDtlStatusforDeleteSellOffSupBalanceDtlUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.response.SupBlanceDtlBySellOffBatchDtlSeriesGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.SupplyUnitNumIdForSellOffGetResponse;
+import com.ykcloud.soa.erp.api.wm.request.*;
+import com.ykcloud.soa.erp.api.wm.response.*;
 
 /**
  * @Author:ALi
@@ -31,4 +21,10 @@ public interface WmConsignmentService {
     public SupBlanceDtlBySellOffBatchDtlSeriesGetResponse getSupBlanceDtlBySellOffBatchDtlSeries(SupBlanceDtlBySellOffBatchDtlSeriesGetRequest request);
    /* //获得代销行号等信息并且修改
     public SellOffBatchDtlStatusforDeleteSellOffSupBalanceDtlUpdateResponse updateSellOffBatchDtlStatusforDeleteSellOffSupBalanceDtl(SellOffBatchDtlStatusforDeleteSellOffSupBalanceDtlUpdateRequest request) ;*/
+    /**
+     * @author alfred.liu
+     * @date 2018/6/27 11:54
+     * @description 获取代销汇总单据信息
+     */
+   public ConsignmentCollectBalanceGainResponse GainConsignmentCollectBalance(ConsignmentCollectBalanceGainRequest request);
 }
