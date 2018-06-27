@@ -4,6 +4,7 @@ import com.ykcloud.soa.erp.api.wm.request.AccountForProduceStockProcessRequest;
 import com.ykcloud.soa.erp.api.wm.request.ContainerFinishRequest;
 import com.ykcloud.soa.erp.api.wm.request.ContainerProductDetailGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ContainerRefreshRequest;
+import com.ykcloud.soa.erp.api.wm.request.FirstSupplyUnitNumIdGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemQtyStockCheckInputRequest;
@@ -32,6 +33,7 @@ import com.ykcloud.soa.erp.api.wm.response.AccountForProduceStockProcessResponse
 import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerProductDetailGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerRefreshResponse;
+import com.ykcloud.soa.erp.api.wm.response.FirstSupplyUnitNumIdGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeScanResponse;
 import com.ykcloud.soa.erp.api.wm.response.LossNumIdByGetLossDtlResponse;
 import com.ykcloud.soa.erp.api.wm.response.LossNumIdByGetLossHdrResponse;
@@ -310,4 +312,14 @@ public interface WmStockCheckService {
 	 **/
     StockadjustBatchDtlsForCheckConsignmentProductAccountFindResponse findStockadjustBatchDtlsForCheckConsignmentProductAccount(
         StockadjustBatchDtlsForCheckConsignmentProductAccountFindRequest request);
+    
+    /**
+     * 
+     * @Description:根据单号获取批次表首次供应商
+     * @param request
+     * @return
+     * @author: Andy
+     * @time: 2018年6月27日
+     */
+    public FirstSupplyUnitNumIdGetResponse getFirstSupplyUnitNumIdByReservedNo(FirstSupplyUnitNumIdGetRequest request);
 }
