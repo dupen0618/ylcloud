@@ -95,7 +95,7 @@ public interface SoTmlService {
       * @date 2018/6/27 14:55
       * @description 获取联销汇总日报信息
       */
-    public InterlockCollectSelldailyGainResponse GainInterlockCollectSelldaily(InterlockCollectSelldailyRequest request);
+    public InterlockCollectSelldailyGainResponse gainInterlockCollectSelldaily(InterlockCollectSelldailyRequest request);
 
      /**
       * @author alfred.liu
