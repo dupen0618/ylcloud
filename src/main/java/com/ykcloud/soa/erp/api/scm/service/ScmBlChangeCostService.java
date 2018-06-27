@@ -2,6 +2,16 @@ package com.ykcloud.soa.erp.api.scm.service;
 
 import com.ykcloud.soa.erp.api.scm.request.*;
 import com.ykcloud.soa.erp.api.scm.response.*;
+import com.ykcloud.soa.erp.api.scm.request.ChangeCostAuditRequest;
+import com.ykcloud.soa.erp.api.scm.request.DailySettlementAdjustWmInventoryCostRequest;
+import com.ykcloud.soa.erp.api.scm.request.PmCostGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.LatelyCostForDayCarryRefreshRequest;
+import com.ykcloud.soa.erp.api.scm.request.ScmBlChangeCostRequest;
+import com.ykcloud.soa.erp.api.scm.response.ChangeCostAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.DailySettlementAdjustWmInventoryCostResponse;
+import com.ykcloud.soa.erp.api.scm.response.PmCostGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.LatelyCostForDayCarryRefreshResponse;
+import com.ykcloud.soa.erp.api.scm.response.ScmBlChangeCostResponse;
 
 /**
  * @author alfred
@@ -9,6 +19,13 @@ import com.ykcloud.soa.erp.api.scm.response.*;
  * @description
  */
 public interface ScmBlChangeCostService {
+	
+	/**
+	 * 日结刷新进价
+	 * @author tz.x
+	 * @date 2018年6月27日上午8:51:20
+	 */
+	public LatelyCostForDayCarryRefreshResponse refreshLatelyCostForDayCarry(LatelyCostForDayCarryRefreshRequest request);
 
 	/**
 	 * 进价调整审核

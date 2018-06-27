@@ -26,9 +26,6 @@ public class BalanceDataBatchGenerateRequest extends AbstractUserSessionRequest 
 	@NotNull(message = "供应商不能为空！")
 	private List<Long> supplyUnitNumId;
 
-	@NotNull(message = "结算单号不能为空！")
-	private String balanceNo;
-
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private Date startDate;
@@ -74,15 +71,6 @@ public class BalanceDataBatchGenerateRequest extends AbstractUserSessionRequest 
 	public void setSupplyUnitNumId(List<Long> supplyUnitNumId) {
 		this.supplyUnitNumId = supplyUnitNumId;
 	}
-
-	public String getBalanceNo() {
-		return balanceNo;
-	}
-
-	public void setBalanceNo(String balanceNo) {
-		this.balanceNo = balanceNo;
-	}
-
 	public Date getStartDate() {
 		return startDate;
 	}
