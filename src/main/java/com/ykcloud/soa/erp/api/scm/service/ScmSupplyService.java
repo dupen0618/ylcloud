@@ -1,15 +1,8 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.scm.request.DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetRequest;
-import com.ykcloud.soa.erp.api.scm.request.DirectWayReplenishweeklyDayFlagGetRequest;
-import com.ykcloud.soa.erp.api.scm.request.ProtocolBackOffRateGetRequest;
-import com.ykcloud.soa.erp.api.scm.request.SupplyPayTypeIdGetRequest;
-import com.ykcloud.soa.erp.api.scm.request.UploadBaseInfoTaskRequest;
-import com.ykcloud.soa.erp.api.scm.response.DirectDeliveryReplenishweeklyDayFlagAndEffectiveDayGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.DirectWayReplenishweeklyDayFlagGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.ProtocolBackOffRateGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.SupplyPayTypeIdGetResponse;
+import com.ykcloud.soa.erp.api.scm.request.*;
+import com.ykcloud.soa.erp.api.scm.response.*;
 
 public interface ScmSupplyService {
   
@@ -38,5 +31,7 @@ public interface ScmSupplyService {
 	public MessagePack uploadBaseInfoTask(UploadBaseInfoTaskRequest request);
 
 
+	SupplyContractAuditResponse auditSupplyContract(SupplyContractAuditRequest request);
 
+	ScmBlContractResponse importSupplyContract(ScmBlContractRequest request);
 }

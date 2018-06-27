@@ -3,12 +3,15 @@ package com.ykcloud.soa.erp.api.scm.service;
 import com.ykcloud.soa.erp.api.scm.request.GiftQtyByGiftRelationGetRequest;
 
 import com.ykcloud.soa.erp.api.scm.request.ProductPurchasePriceGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.ProtocolAuditRequest;
 import com.ykcloud.soa.erp.api.scm.response.ProductForReplenishCheckResponse;
 import com.ykcloud.soa.erp.api.scm.response.GiftQtyByGiftRelationGetResponse;
 import com.ykcloud.soa.erp.api.scm.request.ProductForReplenishCheckRequest;
 import com.ykcloud.soa.erp.api.scm.response.ProductFdcSignBySupplyNumIdAndPty3NumIdGetResponse;
 import com.ykcloud.soa.erp.api.scm.request.ProductFdcSignBySupplyNumIdAndPty3NumIdGetRequest;
 import com.ykcloud.soa.erp.api.scm.response.ProductPurchasePriceGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.ProtocolAuditResponse;
+
 
 
 public interface ScmProductService {
@@ -26,6 +29,7 @@ public interface ScmProductService {
 	//获取商品采购价
 	public ProductPurchasePriceGetResponse getProductPurchasePrice(ProductPurchasePriceGetRequest request);
 	
-	//获得每日门店、
+	//采购单号审核
+    public ProtocolAuditResponse auditProtocol(ProtocolAuditRequest request);
 
 }
