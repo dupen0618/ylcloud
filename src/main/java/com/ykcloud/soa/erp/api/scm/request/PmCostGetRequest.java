@@ -11,11 +11,11 @@ public class PmCostGetRequest extends AbstractRequest {
 
 	private static final long serialVersionUID = -5108252557745524903L;
 
-	@NotNull(message = "商品编号不能为空!")
+	/*@NotNull(message = "商品编号不能为空!")
 	private Long itemNumId;
 
 	@NotNull(message = "供应商不能为空!")
-	private Long supplyUnitNumId;
+	private Long supplyUnitNumId;*/
 
 	@NotNull(message = "销售日期不能为空！")
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
@@ -24,23 +24,6 @@ public class PmCostGetRequest extends AbstractRequest {
 	@NotNull(message = "销售们店不能为空！")
 	private Long subUnitNumId;
 	
-	
-
-	public Long getItemNumId() {
-		return itemNumId;
-	}
-
-	public void setItemNumId(Long itemNumId) {
-		this.itemNumId = itemNumId;
-	}
-
-	public Long getSupplyUnitNumId() {
-		return supplyUnitNumId;
-	}
-
-	public void setSupplyUnitNumId(Long supplyUnitNumId) {
-		this.supplyUnitNumId = supplyUnitNumId;
-	}
 
 	public Date getOrderDate() {
 		return orderDate;

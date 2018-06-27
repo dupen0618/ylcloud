@@ -41,7 +41,7 @@ public interface WmConsignmentService {
      * @date 2018/6/27 11:54
      * @description 获取代销汇总单据信息
      */
-   public ConsignmentCollectBalanceGainResponse GainConsignmentCollectBalance(ConsignmentCollectBalanceGainRequest request);
+   public ConsignmentCollectBalanceGainResponse gainConsignmentCollectBalance(ConsignmentCollectBalanceGainRequest request);
 
     /**
      * @author alfred.liu
