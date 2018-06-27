@@ -27,6 +27,8 @@ import com.ykcloud.soa.erp.api.so.request.SalesDailyGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.SalesEndOfDayDtlGenerateRequest;
 import com.ykcloud.soa.erp.api.so.response.SalesDailyGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.SalesEndOfDayDtlGenerateResponse;
+import com.ykcloud.soa.erp.api.wm.request.InterlockCollectSelldailyRequest;
+import com.ykcloud.soa.erp.api.wm.response.InterlockCollectSelldailyGainResponse;
 
 /**
  * @author:shenq
@@ -87,6 +89,12 @@ public interface SoTmlService {
      * @return
      */
     public LastSalePriceGetResponse getLastSalePrice(LastSalePriceGetRequest request);
+     /**
+      * @author alfred.liu
+      * @date 2018/6/27 14:55
+      * @description 获取联销汇总小票信息
+      */
+    public InterlockCollectSelldailyGainResponse GainInterlockCollectSelldaily(InterlockCollectSelldailyRequest request);
   
 
 }

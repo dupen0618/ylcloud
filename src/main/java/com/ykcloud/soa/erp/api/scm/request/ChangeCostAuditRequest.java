@@ -13,7 +13,7 @@ public class ChangeCostAuditRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 4670986431124069622L;
 	
-	@NotBlank(message = "供应商单据不能为空！")
+	@NotBlank(message = "单据号不能为空！")
 	private String reservedNo;
 
 	public String getReservedNo() {

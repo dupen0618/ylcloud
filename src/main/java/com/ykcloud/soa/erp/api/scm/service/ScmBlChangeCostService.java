@@ -1,15 +1,21 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
-import com.ykcloud.soa.erp.api.scm.request.*;
-import com.ykcloud.soa.erp.api.scm.response.*;
+import com.ykcloud.soa.erp.api.scm.request.ChangePriceAuditRequest;
+import com.ykcloud.soa.erp.api.scm.request.ChangeVipPriceAuditRequest;
+import com.ykcloud.soa.erp.api.scm.request.DMAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ChangeCostAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.DailySettlementAdjustWmInventoryCostRequest;
 import com.ykcloud.soa.erp.api.scm.request.PmCostGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.SalesCostAdjustedRequest;
 import com.ykcloud.soa.erp.api.scm.request.LatelyCostForDayCarryRefreshRequest;
 import com.ykcloud.soa.erp.api.scm.request.ScmBlChangeCostRequest;
+import com.ykcloud.soa.erp.api.scm.response.ChangePriceAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.ChangeVipPriceAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.DMAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ChangeCostAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.DailySettlementAdjustWmInventoryCostResponse;
 import com.ykcloud.soa.erp.api.scm.response.PmCostGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.SalesCostAdjustedResponse;
 import com.ykcloud.soa.erp.api.scm.response.LatelyCostForDayCarryRefreshResponse;
 import com.ykcloud.soa.erp.api.scm.response.ScmBlChangeCostResponse;
 
@@ -42,11 +48,21 @@ public interface ScmBlChangeCostService {
      public DailySettlementAdjustWmInventoryCostResponse adjustWmInventoryCostForDailyCarry (DailySettlementAdjustWmInventoryCostRequest request);
      
      /**
-      * 获取价格调整数据
-      * @Description:   
-      * @author zhaokang 
-      * @date 2018年6月22日
+      * 售价（临时/永久）调整审核
+      * @author penghui
+      * @return
       */
+     public ChangePriceAuditResponse auditChangePrice(ChangePriceAuditRequest request);
+     
+     /**
+      * 会员售价调整审核
+      * @param request
+      * @return
+      */
+     public ChangeVipPriceAuditResponse auditChangeVipPrice(ChangeVipPriceAuditRequest request);
+     
+     
+
      public PmCostGetResponse getPmCost(PmCostGetRequest request);
 	/**
 	 * @author alfred
