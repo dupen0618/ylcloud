@@ -17,15 +17,29 @@ import com.ykcloud.soa.erp.api.fi.response.NotBalanceBillGetResponse;
  * @Date:
  */
 public interface FiSupBalanceBillService {
-    //取结算数据
-    public BalanceDataGenerateResponse generateBalanceData(BalanceDataGenerateRequest request);
-    //获取没有结算的数据
-    public NotBalanceBillGetResponse getNotBalanceBill(NotBalanceBillGetRequest request);
-    //选择指定明细项目生成结算明细
-    public AppointBalanceDtlGenerateResponse generateAppointBalanceDtl(AppointBalanceDtlGenerateRequest request);
-    //删除结算单商品明细中的指定项目
-    public AppointForSupBalanceDtlDeleteResponse deleteAppointForSupBalanceDtl(AppointForSupBalanceDtlDeleteRequest request);
-    //批量生成结算
-    public BalanceDataBatchGenerateResponse batchGenerateBalanceData(BalanceDataBatchGenerateRequest request);
+    /**
+     * 取结算数据
+     */
+    BalanceDataGenerateResponse generateBalanceData(BalanceDataGenerateRequest request);
+
+    /**
+     * 获取没有结算的数据
+     */
+    NotBalanceBillGetResponse getNotBalanceBill(NotBalanceBillGetRequest request);
+
+    /**
+     * 选择指定明细项目生成结算明细
+     */
+    AppointBalanceDtlGenerateResponse generateAppointBalanceDtl(AppointBalanceDtlGenerateRequest request);
+
+    /**
+     * 删除结算单商品明细中的指定项目
+     */
+    AppointForSupBalanceDtlDeleteResponse deleteAppointForSupBalanceDtl(AppointForSupBalanceDtlDeleteRequest request);
+
+    /**
+     * 批量生成结算
+     */
+    BalanceDataBatchGenerateResponse batchGenerateBalanceData(BalanceDataBatchGenerateRequest request);
 
 }
