@@ -69,7 +69,7 @@ public interface SoTmlService {
     
     public SupplyUnitNumIdForJointSaleGetResponse getSupplyUnitNumIdForJointSale(SupplyUnitNumIdForJointSaleGetRequest request);
     
-    public SalesDailyGenerateResponse getItemSellDaily(SalesDailyGenerateRequest request);
+    //public SalesDailyGenerateResponse getItemSellDaily(SalesDailyGenerateRequest request);
 
     //生成小票
     public TmlDailyGenerateResponse generateTmlDaily(TmlDailyGenerateRequest request);
