@@ -11,8 +11,18 @@ public class BackOffRateGetResponse extends MessagePack {
     private static final long serialVersionUID = 1L;
     private Double price;//单价
     private Double amount;//金额
+    private Double backOffRate;
+    
 
-    public Double getPrice() {
+    public Double getBackOffRate() {
+		return backOffRate;
+	}
+
+	public void setBackOffRate(Double backOffRate) {
+		this.backOffRate = backOffRate;
+	}
+
+	public Double getPrice() {
         return price;
     }
 
