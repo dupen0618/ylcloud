@@ -1,15 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
-import com.ykcloud.soa.erp.api.scm.request.ChangeCostAuditRequest;
-import com.ykcloud.soa.erp.api.scm.request.DailySettlementAdjustWmInventoryCostRequest;
-import com.ykcloud.soa.erp.api.scm.request.PmCostGetRequest;
-import com.ykcloud.soa.erp.api.scm.request.SalesCostAdjustedRequest;
-import com.ykcloud.soa.erp.api.scm.request.ScmBlChangeCostRequest;
-import com.ykcloud.soa.erp.api.scm.response.ChangeCostAuditResponse;
-import com.ykcloud.soa.erp.api.scm.response.DailySettlementAdjustWmInventoryCostResponse;
-import com.ykcloud.soa.erp.api.scm.response.PmCostGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.SalesCostAdjustedResponse;
-import com.ykcloud.soa.erp.api.scm.response.ScmBlChangeCostResponse;
+import com.ykcloud.soa.erp.api.scm.request.*;
+import com.ykcloud.soa.erp.api.scm.response.*;
 
 /**
  * @author alfred
@@ -55,4 +47,5 @@ public interface ScmBlChangeCostService {
     public SalesCostAdjustedResponse adjustSalesCost(SalesCostAdjustedRequest request);
 
 
+    DMAuditResponse auditDm(DMAuditRequest request);
 }
