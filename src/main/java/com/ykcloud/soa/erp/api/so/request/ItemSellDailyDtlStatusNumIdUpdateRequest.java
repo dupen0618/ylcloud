@@ -32,4 +32,5 @@ public class ItemSellDailyDtlStatusNumIdUpdateRequest extends AbstractUserSessio
     public void setStatusNumId(Long statusNumId) {
         this.statusNumId = statusNumId;
     }
+
 }

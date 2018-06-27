@@ -13,7 +13,6 @@ public class BillDtlForWriteBackStatus implements Serializable {
     private static final long serialVersionUID = 1L;
     @NotNull(message = "行号不能为空！")
     private String series; // 行号
-    @NotNull(message = "业务日期不能为空！")
     private Date orderDate; // 业务日期
     @NotNull(message = "单据编号不能为空！")
     private String reservedNo; // 单据编号
