@@ -1,32 +1,33 @@
 package com.ykcloud.soa.erp.api.so.service;
-import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlNotBalanceCountGetRequest;
+
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyHdrAndDtlStatusNumIdUpdateRequest;
+import com.ykcloud.soa.erp.api.so.request.ItemSellDailyListForAppointGenerateBalanceGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyListForGenerateBalanceGetRequest;
 import com.ykcloud.soa.erp.api.so.request.LastSalePriceGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OtOtmlGetRequest;
+import com.ykcloud.soa.erp.api.so.request.SalesDailyGenerateRequest;
+import com.ykcloud.soa.erp.api.so.request.SalesEndOfDayDtlGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.SupBlanceDtlByItemSellDailyDtlSeriesGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SupplyUnitNumIdForJointSaleGetRequest;
 import com.ykcloud.soa.erp.api.so.request.TmlDailyGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.TmlProductAmountAndPayAmountCompareRequest;
 import com.ykcloud.soa.erp.api.so.request.VoucherNumIdUpdateRequest;
-import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlNotBalanceCountGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyHdrAndDtlStatusNumIdUpdateResponse;
+import com.ykcloud.soa.erp.api.so.response.ItemSellDailyListForAppointGenerateBalanceGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyListForGenerateBalanceGetResponse;
 import com.ykcloud.soa.erp.api.so.response.LastSalePriceGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OtOTmlGetResponse;
+import com.ykcloud.soa.erp.api.so.response.SalesDailyGenerateResponse;
+import com.ykcloud.soa.erp.api.so.response.SalesEndOfDayDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.SupBlanceDtlByItemSellDailyDtlSeriesGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SupplyUnitNumIdForJointSaleGetResponse;
 import com.ykcloud.soa.erp.api.so.response.TmlDailyGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.TmlProductAmountAndPayAmountCompareRequestCompareResponse;
 import com.ykcloud.soa.erp.api.so.response.VoucherNumIdUpdateResponse;
-import com.ykcloud.soa.erp.api.so.request.SalesDailyGenerateRequest;
-import com.ykcloud.soa.erp.api.so.request.SalesEndOfDayDtlGenerateRequest;
-import com.ykcloud.soa.erp.api.so.response.SalesDailyGenerateResponse;
-import com.ykcloud.soa.erp.api.so.response.SalesEndOfDayDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.wm.request.InterlockCollectSelldailyRequest;
 import com.ykcloud.soa.erp.api.wm.response.InterlockCollectSelldailyGainResponse;
 
@@ -92,9 +93,15 @@ public interface SoTmlService {
      /**
       * @author alfred.liu
       * @date 2018/6/27 14:55
-      * @description 获取联销汇总小票信息
+      * @description 获取联销汇总日报信息
       */
     public InterlockCollectSelldailyGainResponse GainInterlockCollectSelldaily(InterlockCollectSelldailyRequest request);
-  
 
+     /**
+      * @author alfred.liu
+      * @date 2018/6/27 16:42
+      * @description 获取指定联销日报信息
+      */
+    public ItemSellDailyListForAppointGenerateBalanceGetResponse getItemSellDailyListForAppointGenerateBalance(
+            ItemSellDailyListForAppointGenerateBalanceGetRequest request);
 }
