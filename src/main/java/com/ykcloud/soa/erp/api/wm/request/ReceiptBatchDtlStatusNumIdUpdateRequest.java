@@ -12,10 +12,12 @@ import java.util.List;
  * @Date:
  */
 public class ReceiptBatchDtlStatusNumIdUpdateRequest extends AbstractUserSessionRequest {
-    private static final long serialVersionUID = -3101956261800131597L;
-    List<BillDtlForWriteBackStatus> billDtlForWriteBackStatusList;
+    private static final long serialVersionUID = -2685044443394375760L;
+    private List<BillDtlForWriteBackStatus> billDtlForWriteBackStatusList;
     @NotNull(message = "结算状态不能为空! ")
-    Long statusNumId;
+    private Long statusNumId;
+    @NotNull(message = "结算版本不能为空,为0时到明细,为1时到汇总")
+    private Long balanceVersion = 0L;
 
     public List<BillDtlForWriteBackStatus> getBillDtlForWriteBackStatusList() {
         return billDtlForWriteBackStatusList;
@@ -31,5 +33,24 @@ public class ReceiptBatchDtlStatusNumIdUpdateRequest extends AbstractUserSession
 
     public void setStatusNumId(Long statusNumId) {
         this.statusNumId = statusNumId;
+    }
+
+    /**
+     * 获取 balanceVersion
+     *
+     * @author Sealin
+     */
+    public Long getBalanceVersion() {
+        return balanceVersion;
+    }
+
+    /**
+     * 设置 balanceVersion
+     *
+     * @author Sealin
+     * @param balanceVersion
+     */
+    public void setBalanceVersion(Long balanceVersion) {
+        this.balanceVersion = balanceVersion;
     }
 }
