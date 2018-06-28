@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.wm.request;
+package com.ykcloud.soa.erp.api.so.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
@@ -6,7 +6,7 @@ import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class InterlockCollectSelldailyRequest extends AbstractRequest {
+public class InterlockCollectSelldailyGainRequest extends AbstractRequest {
     private static final long serialVersionUID = 1L;
     @NotNull(message = "门店编号不能为空！")
     private Long subUnitNumId;

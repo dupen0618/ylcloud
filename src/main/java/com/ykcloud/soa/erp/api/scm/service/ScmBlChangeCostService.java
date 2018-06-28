@@ -6,6 +6,7 @@ import com.ykcloud.soa.erp.api.scm.request.DMAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ChangeCostAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.DailySettlementAdjustWmInventoryCostRequest;
 import com.ykcloud.soa.erp.api.scm.request.PmCostGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.PriceCatAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.SalesCostAdjustedRequest;
 import com.ykcloud.soa.erp.api.scm.request.LatelyCostForDayCarryRefreshRequest;
 import com.ykcloud.soa.erp.api.scm.request.ScmBlChangeCostRequest;
@@ -15,6 +16,7 @@ import com.ykcloud.soa.erp.api.scm.response.DMAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ChangeCostAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.DailySettlementAdjustWmInventoryCostResponse;
 import com.ykcloud.soa.erp.api.scm.response.PmCostGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.PriceCatAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.SalesCostAdjustedResponse;
 import com.ykcloud.soa.erp.api.scm.response.LatelyCostForDayCarryRefreshResponse;
 import com.ykcloud.soa.erp.api.scm.response.ScmBlChangeCostResponse;
@@ -81,4 +83,11 @@ public interface ScmBlChangeCostService {
 
 
     DMAuditResponse auditDm(DMAuditRequest request);
+    
+    /**
+     * 削价单审核
+     * @author penghui
+     * @return
+     */
+    public PriceCatAuditResponse auditPriceCut(PriceCatAuditRequest request);
 }

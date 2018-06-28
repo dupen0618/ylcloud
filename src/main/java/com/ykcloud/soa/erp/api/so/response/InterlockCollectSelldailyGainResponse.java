@@ -1,4 +1,4 @@
-package com.ykcloud.soa.erp.api.wm.response;
+package com.ykcloud.soa.erp.api.so.response;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.wm.model.SupBalanceBillDtl;
