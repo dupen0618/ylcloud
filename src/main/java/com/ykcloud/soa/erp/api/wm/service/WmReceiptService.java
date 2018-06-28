@@ -178,5 +178,19 @@ public interface WmReceiptService {
 	 * @return
 	 */
 	BusinessAmountForGenKxCountResponse countReceiptCost(BusinessAmountForGenKxCountRequest request);
-	
+
+	 /**
+	  * @author alfred.liu
+	  * @date 2018/6/27 10:29
+	  * @description 获取验收入库单汇总
+	  */
+	public CollectReceiptGainResponse gainCollectReceipt(CollectReceiptGainRequest request);
+
+	 /**
+	  * @author alfred.liu
+	  * @date 2018/6/27 15:43
+	  * @description 获取用户指定验收单据
+	  */
+	public ReciptListForAppointGenerateBalanceGetResponse getReciptListForAppointGenerateBalance(
+			RecipteListForAppointGenerateBalanceGetRequest request);
 }

@@ -10,6 +10,12 @@ public class SellDailyBatchDtlCollectRequest extends AbstractRequest {
 
 
 	private static final long serialVersionUID = 6766313063455799657L;
+	
+	@NotNull(message = "商品编号不能为空!")
+	private Long itemNumId;
+
+	@NotNull(message = "供应商不能为空!")
+	private Long supplyUnitNumId;
 
 	/**
      * 门店编号
@@ -22,6 +28,23 @@ public class SellDailyBatchDtlCollectRequest extends AbstractRequest {
      */
     @NotNull(message = "销售日期不能为空！")
     private Date orderDate;
+    
+
+	public Long getItemNumId() {
+		return itemNumId;
+	}
+
+	public void setItemNumId(Long itemNumId) {
+		this.itemNumId = itemNumId;
+	}
+
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
+
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;

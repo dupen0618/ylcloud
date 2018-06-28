@@ -10,17 +10,15 @@ public class SalesCostAdjustedRequest extends AbstractUserSessionRequest{
 	private static final long serialVersionUID = 8785519726060670704L;
 	
 	@NotNull(message="价格调整单号不能为空!")
-	private Long reservedNo;
+	private String reservedNo;
 
-	public Long getReservedNo() {
+	public String getReservedNo() {
 		return reservedNo;
 	}
 
-	public void setReservedNo(Long reservedNo) {
+	public void setReservedNo(String reservedNo) {
 		this.reservedNo = reservedNo;
 	}
-	
-	
 	
 
 }

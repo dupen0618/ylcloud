@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.fi.service;
 import com.ykcloud.soa.erp.api.fi.request.*;
 import com.ykcloud.soa.erp.api.fi.response.*;
 
+
 /**
  * @Description:供应商结算相关服务
  * @author Song
@@ -81,5 +82,6 @@ public interface FiSettleService {
 	  * @description 作废结算单
 	  */
 	  BalanceCancellationResponse cancellationBalance(BalanceCancellationRequest request);
+
 
 }

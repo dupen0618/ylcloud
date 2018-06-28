@@ -31,7 +31,7 @@ public interface ScmSupplyService {
 	public MessagePack uploadBaseInfoTask(UploadBaseInfoTaskRequest request);
 
 
-	SupplyContractAuditResponse auditSupply(SupplyContractAuditRequest request);
+	SupplyContractAuditResponse auditSupplyContract(SupplyContractAuditRequest request);
 
 	ScmBlContractResponse importSupplyContract(ScmBlContractRequest request);
 }
