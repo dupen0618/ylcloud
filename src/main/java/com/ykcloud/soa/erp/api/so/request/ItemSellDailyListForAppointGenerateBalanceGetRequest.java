@@ -22,6 +22,9 @@ public class ItemSellDailyListForAppointGenerateBalanceGetRequest extends Abstra
     @NotNull(message = "经营方式不能为空！")
     private Long settlementType;
 
+    @NotNull(message = "到扣率不能为空!")
+    private Double backoffRate;
+
     public Long getSubUnitNumId() {
         return subUnitNumId;
     }
@@ -60,5 +63,13 @@ public class ItemSellDailyListForAppointGenerateBalanceGetRequest extends Abstra
 
     public void setSettlementType(Long settlementType) {
         this.settlementType = settlementType;
+    }
+
+    public Double getBackoffRate() {
+        return backoffRate;
+    }
+
+    public void setBackoffRate(Double backoffRate) {
+        this.backoffRate = backoffRate;
     }
 }
