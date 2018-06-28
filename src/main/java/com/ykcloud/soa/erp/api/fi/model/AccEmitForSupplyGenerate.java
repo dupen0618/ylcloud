@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Sealin Created on 2018-06-23
  */
 public class AccEmitForSupplyGenerate implements Serializable {
-    private static final long serialVersionUID = 3370225022402231257L;
+    private static final long serialVersionUID = 6086424926039883394L;
     /**
      * 商品ID
      */
@@ -42,6 +42,21 @@ public class AccEmitForSupplyGenerate implements Serializable {
      * 业务类型
      */
     private Long settlementType;
+
+    /**
+     * 物理仓
+     */
+    private Long physicalNumId;
+
+    /**
+     * 产地
+     */
+    private Long productOriginId;
+    private String batchSeries;
+    private Double packageQty;
+    private Double oldPrice;
+    private Long batchPromotionGrade;
+    private Double batchPoPrice;
 
     /**
      * 获取 itemNumId
@@ -185,5 +200,132 @@ public class AccEmitForSupplyGenerate implements Serializable {
      */
     public void setSettlementType(Long settlementType) {
         this.settlementType = settlementType;
+    }
+
+    /**
+     * 获取 physicalNumId
+     *
+     * @author Sealin
+     */
+    public Long getPhysicalNumId() {
+        return physicalNumId;
+    }
+
+    /**
+     * 设置 physicalNumId
+     *
+     * @author Sealin
+     */
+    public void setPhysicalNumId(Long physicalNumId) {
+        this.physicalNumId = physicalNumId;
+    }
+
+    /**
+     * 获取 productOriginId
+     *
+     * @author Sealin
+     */
+    public Long getProductOriginId() {
+        return productOriginId;
+    }
+
+    /**
+     * 设置 productOriginId
+     *
+     * @author Sealin
+     */
+    public void setProductOriginId(Long productOriginId) {
+        this.productOriginId = productOriginId;
+    }
+
+    /**
+     * 获取 batchSeries
+     *
+     * @author Sealin
+     */
+    public String getBatchSeries() {
+        return batchSeries;
+    }
+
+    /**
+     * 设置 batchSeries
+     *
+     * @author Sealin
+     */
+    public void setBatchSeries(String batchSeries) {
+        this.batchSeries = batchSeries;
+    }
+
+    /**
+     * 获取 packageQty
+     *
+     * @author Sealin
+     */
+    public Double getPackageQty() {
+        return packageQty;
+    }
+
+    /**
+     * 设置 packageQty
+     *
+     * @author Sealin
+     */
+    public void setPackageQty(Double packageQty) {
+        this.packageQty = packageQty;
+    }
+
+    /**
+     * 获取 oldPrice
+     *
+     * @author Sealin
+     */
+    public Double getOldPrice() {
+        return oldPrice;
+    }
+
+    /**
+     * 设置 oldPrice
+     *
+     * @author Sealin
+     */
+    public void setOldPrice(Double oldPrice) {
+        this.oldPrice = oldPrice;
+    }
+
+    /**
+     * 获取 batchPromotionGrade
+     *
+     * @author Sealin
+     */
+    public Long getBatchPromotionGrade() {
+        return batchPromotionGrade;
+    }
+
+    /**
+     * 设置 batchPromotionGrade
+     *
+     * @author Sealin
+     */
+    public void setBatchPromotionGrade(Long batchPromotionGrade) {
+        this.batchPromotionGrade = batchPromotionGrade;
+    }
+
+    /**
+     * 获取 batchPoPrice
+     *
+     * @author Sealin
+     */
+    public Double getBatchPoPrice() {
+        return batchPoPrice;
+    }
+
+    /**
+     * 设置 batchPoPrice
+     *
+     * @author Sealin
+     * @param batchPoPrice
+     */
+    public void setBatchPoPrice(Double batchPoPrice) {
+        this.batchPoPrice = batchPoPrice;
     }
 }
