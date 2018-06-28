@@ -23,6 +23,8 @@ public class AppointForSupBalanceDtlDeleteRequest extends AbstractUserSessionReq
 	private Date balanceDate;
 	@NotNull(message = "结算单号不能为空！")
 	private String balanceNo;
+	private Long reservedTypeNumId;
+
 	public String getSeries() {
 		return series;
 	}
@@ -53,5 +55,13 @@ public class AppointForSupBalanceDtlDeleteRequest extends AbstractUserSessionReq
 
 	public void setBalanceNo(String balanceNo) {
 		this.balanceNo = balanceNo;
+	}
+
+	public Long getReservedTypeNumId() {
+		return reservedTypeNumId;
+	}
+
+	public void setReservedTypeNumId(Long reservedTypeNumId) {
+		this.reservedTypeNumId = reservedTypeNumId;
 	}
 }
