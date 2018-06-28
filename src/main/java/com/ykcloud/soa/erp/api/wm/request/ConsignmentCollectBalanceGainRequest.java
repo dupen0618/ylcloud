@@ -26,6 +26,8 @@ public class ConsignmentCollectBalanceGainRequest extends AbstractRequest{
     @NotNull(message = "经营方式不能为空！")
     private Long settlementType;
 
+    private String statusNumName;
+
     public Long getSubUnitNumId() {
         return subUnitNumId;
     }
@@ -64,5 +66,13 @@ public class ConsignmentCollectBalanceGainRequest extends AbstractRequest{
 
     public void setSettlementType(Long settlementType) {
         this.settlementType = settlementType;
+    }
+
+    public String getStatusNumName() {
+        return statusNumName;
+    }
+
+    public void setStatusNumName(String statusNumName) {
+        this.statusNumName = statusNumName;
     }
 }
