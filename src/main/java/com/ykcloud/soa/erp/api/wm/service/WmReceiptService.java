@@ -193,4 +193,11 @@ public interface WmReceiptService {
 	  */
 	public ReciptListForAppointGenerateBalanceGetResponse getReciptListForAppointGenerateBalance(
 			RecipteListForAppointGenerateBalanceGetRequest request);
+
+	 /**
+	  * @author alfred.liu
+	  * @date 2018/6/28 10:29
+	  * @description 获取指定未结算入库验收单汇总
+	  */
+	public CollectReceiptGainAppointResponse gainAppointCollectReceipt(CollectReceiptGainAppointRequest request);
 }
