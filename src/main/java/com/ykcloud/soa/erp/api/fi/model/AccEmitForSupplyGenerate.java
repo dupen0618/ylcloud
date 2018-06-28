@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Sealin Created on 2018-06-23
  */
 public class AccEmitForSupplyGenerate implements Serializable {
-    private static final long serialVersionUID = -4922534322862716028L;
+    private static final long serialVersionUID = 3370225022402231257L;
     /**
      * 商品ID
      */
@@ -23,11 +23,11 @@ public class AccEmitForSupplyGenerate implements Serializable {
      */
     private Double adjustTaxAmount;
     /**
-     * 期末金额
+     * 调整后的单价
      */
-    private Double finalAmount;
+    private Double adjustPrice;
     /**
-     * 期末税金
+     * 调整后的税金总额(算好传过来避免再查询一次批次税率)
      */
     private Double finalTaxAmount;
     /**
@@ -37,7 +37,11 @@ public class AccEmitForSupplyGenerate implements Serializable {
     /**
      * 数量
      */
-    private Double QTY;
+    private Double Qty;
+    /**
+     * 业务类型
+     */
+    private Long settlementType;
 
     /**
      * 获取 itemNumId
@@ -94,21 +98,21 @@ public class AccEmitForSupplyGenerate implements Serializable {
     }
 
     /**
-     * 获取 finalAmount
+     * 获取 adjustPrice
      *
      * @author Sealin
      */
-    public Double getFinalAmount() {
-        return finalAmount;
+    public Double getAdjustPrice() {
+        return adjustPrice;
     }
 
     /**
-     * 设置 finalAmount
+     * 设置 adjustPrice
      *
      * @author Sealin
      */
-    public void setFinalAmount(Double finalAmount) {
-        this.finalAmount = finalAmount;
+    public void setAdjustPrice(Double adjustPrice) {
+        this.adjustPrice = adjustPrice;
     }
 
     /**
@@ -152,8 +156,8 @@ public class AccEmitForSupplyGenerate implements Serializable {
      *
      * @author Sealin
      */
-    public Double getQTY() {
-        return QTY;
+    public Double getQty() {
+        return Qty;
     }
 
     /**
@@ -161,7 +165,25 @@ public class AccEmitForSupplyGenerate implements Serializable {
      *
      * @author Sealin
      */
-    public void setQTY(Double QTY) {
-        this.QTY = QTY;
+    public void setQty(Double Qty) {
+        this.Qty = Qty;
+    }
+
+    /**
+     * 获取 settlementType
+     *
+     * @author Sealin
+     */
+    public Long getSettlementType() {
+        return settlementType;
+    }
+
+    /**
+     * 设置 settlementType
+     *
+     * @author Sealin
+     */
+    public void setSettlementType(Long settlementType) {
+        this.settlementType = settlementType;
     }
 }
