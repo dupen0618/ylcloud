@@ -9,13 +9,13 @@ public class SupplyContractAuditRequest extends AbstractUserSessionRequest {
 	 */
 	private static final long serialVersionUID = -8054081068925132144L;
 	
-	private Long batchNo;
+	private String batchNo;
 
-	public Long getBatchNo() {
+	public String getBatchNo() {
 		return batchNo;
 	}
 
-	public void setBatchNo(Long batchNo) {
+	public void setBatchNo(String batchNo) {
 		this.batchNo = batchNo;
 	} 
 
