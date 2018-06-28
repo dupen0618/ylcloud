@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.so.service;
 
+import com.ykcloud.soa.erp.api.so.request.InterlockCollectSelldailyGainAppointRequest;
+import com.ykcloud.soa.erp.api.so.request.InterlockCollectSelldailyGainRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyHdrAndDtlStatusNumIdUpdateRequest;
@@ -14,6 +16,8 @@ import com.ykcloud.soa.erp.api.so.request.SupplyUnitNumIdForJointSaleGetRequest;
 import com.ykcloud.soa.erp.api.so.request.TmlDailyGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.TmlProductAmountAndPayAmountCompareRequest;
 import com.ykcloud.soa.erp.api.so.request.VoucherNumIdUpdateRequest;
+import com.ykcloud.soa.erp.api.so.response.InterlockCollectSelldailyGainAppointResponse;
+import com.ykcloud.soa.erp.api.so.response.InterlockCollectSelldailyGainResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyHdrAndDtlStatusNumIdUpdateResponse;
@@ -28,8 +32,6 @@ import com.ykcloud.soa.erp.api.so.response.SupplyUnitNumIdForJointSaleGetRespons
 import com.ykcloud.soa.erp.api.so.response.TmlDailyGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.TmlProductAmountAndPayAmountCompareRequestCompareResponse;
 import com.ykcloud.soa.erp.api.so.response.VoucherNumIdUpdateResponse;
-import com.ykcloud.soa.erp.api.wm.request.InterlockCollectSelldailyRequest;
-import com.ykcloud.soa.erp.api.wm.response.InterlockCollectSelldailyGainResponse;
 
 /**
  * @author:shenq
@@ -95,7 +97,7 @@ public interface SoTmlService {
       * @date 2018/6/27 14:55
       * @description 获取联销汇总日报信息
       */
-    public InterlockCollectSelldailyGainResponse gainInterlockCollectSelldaily(InterlockCollectSelldailyRequest request);
+    public InterlockCollectSelldailyGainResponse gainInterlockCollectSelldaily(InterlockCollectSelldailyGainRequest request);
 
      /**
       * @author alfred.liu
@@ -104,4 +106,11 @@ public interface SoTmlService {
       */
     public ItemSellDailyListForAppointGenerateBalanceGetResponse getItemSellDailyListForAppointGenerateBalance(
             ItemSellDailyListForAppointGenerateBalanceGetRequest request);
+
+     /**
+      * @author alfred.liu
+      * @date 2018/6/28 11:11
+      * @description 获取指定联销未结算日报信息汇总
+      */
+    public InterlockCollectSelldailyGainAppointResponse gainAppointInterlockCollectSelldaily(InterlockCollectSelldailyGainAppointRequest request);
 }

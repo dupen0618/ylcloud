@@ -1,14 +1,10 @@
-package com.ykcloud.soa.erp.api.fi.model;
+package com.ykcloud.soa.erp.api.so.request;
+
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 
-/**
- * @Author:ALi
- * @Description: TODO
- * @Date:
- */
-public class SupBalanceBillAppoint implements Serializable {
+public class InterlockCollectSelldailyGainAppointRequest extends AbstractRequest {
     private static final long serialVersionUID = 1L;
     @NotNull(message = "发生门店不能为空！")
     private Long balanceSubUnitNumId;
@@ -20,10 +16,9 @@ public class SupBalanceBillAppoint implements Serializable {
     private Long settlementType;
     @NotNull(message = "单据编号不能为空！")
     private String reservedNo;
-    @NotNull(message = "单据类型不能为空！")
-    private  Long  reservedTypeNumId;
+
     @NotNull(message = "到扣率不能为空！")
-    private  Double backoffRate;
+    private Double backoffRate;
 
     public Long getBalanceSubUnitNumId() {
         return balanceSubUnitNumId;
@@ -63,14 +58,6 @@ public class SupBalanceBillAppoint implements Serializable {
 
     public void setReservedNo(String reservedNo) {
         this.reservedNo = reservedNo;
-    }
-
-    public Long getReservedTypeNumId() {
-        return reservedTypeNumId;
-    }
-
-    public void setReservedTypeNumId(Long reservedTypeNumId) {
-        this.reservedTypeNumId = reservedTypeNumId;
     }
 
     public Double getBackoffRate() {
