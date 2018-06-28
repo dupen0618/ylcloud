@@ -6,10 +6,6 @@ public class WmShipSellDailyBatchDtl implements Serializable{
 
 	private static final long serialVersionUID = -8590650336485965470L;
 	
-	private Long itemNumId;
-	
-	private Long firstSupplyUnitNumId;
-	
 	private Double price;//含税成本价格
 	
 	private Double qty;
@@ -82,22 +78,6 @@ public class WmShipSellDailyBatchDtl implements Serializable{
 
 	public void setQty(Double qty) {
 		this.qty = qty;
-	}
-
-	public Long getItemNumId() {
-		return itemNumId;
-	}
-
-	public void setItemNumId(Long itemNumId) {
-		this.itemNumId = itemNumId;
-	}
-
-	public Long getFirstSupplyUnitNumId() {
-		return firstSupplyUnitNumId;
-	}
-
-	public void setFirstSupplyUnitNumId(Long firstSupplyUnitNumId) {
-		this.firstSupplyUnitNumId = firstSupplyUnitNumId;
 	}
 
 	public Double getPrice() {

@@ -1,21 +1,21 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class SupplyContractAuditRequest extends AbstractRequest {
+public class SupplyContractAuditRequest extends AbstractUserSessionRequest {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -8054081068925132144L;
 	
-	private Long batchNo;
+	private String batchNo;
 
-	public Long getBatchNo() {
+	public String getBatchNo() {
 		return batchNo;
 	}
 
-	public void setBatchNo(Long batchNo) {
+	public void setBatchNo(String batchNo) {
 		this.batchNo = batchNo;
 	} 
 

@@ -16,5 +16,5 @@ public interface FiAccEmitGoodsWbaService {
      *
      * @author Sealin
      */
-    FiAccEmitGoodsResponse generateSupplyEmitCostAdjust(FiAccEmitGenerateSupplyRequest request);
+    FiAccEmitGoodsResponse generateSupplyEmitGoodsAdjust(FiAccEmitGenerateSupplyRequest request);
 }

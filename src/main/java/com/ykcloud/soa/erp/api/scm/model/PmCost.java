@@ -11,6 +11,27 @@ public class PmCost implements Serializable{
 	private Double oldCost;
 	
 	private Double priceDiff;
+	
+	private Long supplyUnitNumId;
+	
+	private Long itemNumId;
+	
+
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
+
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
+	}
+
+	public Long getItemNumId() {
+		return itemNumId;
+	}
+
+	public void setItemNumId(Long itemNumId) {
+		this.itemNumId = itemNumId;
+	}
 
 	public Long getTypeNumId() {
 		return typeNumId;
