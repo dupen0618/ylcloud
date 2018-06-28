@@ -63,22 +63,22 @@ public class ProductShop {
 	private Long settlementType;// 默认供应商经营类型
 
 	@NotNull(message = "库存管理类型不能为空!")
-	private Integer stockType;// 库存管理类型
+	private Long stockType;// 库存管理类型
 
 	@NotNull(message = "所属仓库部门不能为空!")
 	private Long storageDeptNumId;// 所属仓库部门
 
 	@NotNull(message = "部门编号不能为空!")
-	private Integer departNumId;// 部门编号
+	private Long departNumId;// 部门编号
 
 	@NotNull(message = "Bom编码不能为空!")
 	private Long bomNumId;// Bom编码
 
 	@NotNull(message = "是否可以改价不能为空!")
-	private Integer modifyPrice;// 是否可以改价
+	private Long modifyPrice;// 是否可以改价
 
 	@NotNull(message = "商品状态ID不能为空!")
-	private Integer itemStatusId;// 商品状态ID
+	private Long itemStatusId;// 商品状态ID
 
 	private Integer itemGrade;// 商品等级
 
@@ -258,11 +258,11 @@ public class ProductShop {
 		this.settlementType = settlementType;
 	}
 
-	public Integer getStockType() {
+	public Long getStockType() {
 		return stockType;
 	}
 
-	public void setStockType(Integer stockType) {
+	public void setStockType(Long stockType) {
 		this.stockType = stockType;
 	}
 
@@ -274,11 +274,11 @@ public class ProductShop {
 		this.storageDeptNumId = storageDeptNumId;
 	}
 
-	public Integer getDepartNumId() {
+	public Long getDepartNumId() {
 		return departNumId;
 	}
 
-	public void setDepartNumId(Integer departNumId) {
+	public void setDepartNumId(Long departNumId) {
 		this.departNumId = departNumId;
 	}
 
@@ -290,19 +290,19 @@ public class ProductShop {
 		this.bomNumId = bomNumId;
 	}
 
-	public Integer getModifyPrice() {
+	public Long getModifyPrice() {
 		return modifyPrice;
 	}
 
-	public void setModifyPrice(Integer modifyPrice) {
+	public void setModifyPrice(Long modifyPrice) {
 		this.modifyPrice = modifyPrice;
 	}
 
-	public Integer getItemStatusId() {
+	public Long getItemStatusId() {
 		return itemStatusId;
 	}
 
-	public void setItemStatusId(Integer itemStatusId) {
+	public void setItemStatusId(Long itemStatusId) {
 		this.itemStatusId = itemStatusId;
 	}
 

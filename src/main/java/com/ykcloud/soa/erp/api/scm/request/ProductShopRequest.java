@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.scm.model.ProductShop;
 /**
@@ -17,7 +19,7 @@ import com.ykcloud.soa.erp.api.scm.model.ProductShop;
 public class ProductShopRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = -4720941859255876894L;
 	
-	@NotNull(message = "门店商品销售属性导入数据不能为空!")
+	@NotEmpty(message = "门店商品销售属性导入数据不能为空!")
 	List<ProductShop> productShops;
 
 	public List<ProductShop> getProductShop() {
