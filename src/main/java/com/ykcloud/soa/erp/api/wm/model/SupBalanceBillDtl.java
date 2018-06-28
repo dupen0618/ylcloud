@@ -44,6 +44,11 @@ public class SupBalanceBillDtl implements Serializable {
 	 */
 	private Long settlementType;
 
+	/**
+	 * 结算方式名称
+	 */
+	private String settlementTypeName;
+
 	//倒扣率
    private Double	backoffRate;
 
@@ -59,6 +64,8 @@ public class SupBalanceBillDtl implements Serializable {
 	private Double taxAmount;
 	//销售金额
 	private Double sellAmount;
+
+
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -170,5 +177,13 @@ public class SupBalanceBillDtl implements Serializable {
 
 	public void setAmountNotRate(Double amountNotRate) {
 		this.amountNotRate = amountNotRate;
+	}
+
+	public String getSettlementTypeName() {
+		return settlementTypeName;
+	}
+
+	public void setSettlementTypeName(String settlementTypeName) {
+		this.settlementTypeName = settlementTypeName;
 	}
 }
