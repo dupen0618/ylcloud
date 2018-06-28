@@ -18,6 +18,16 @@ public class ConsignmentCollectBalanceGainAppointRequest extends AbstractRequest
     @NotNull(message = "单据编号不能为空！")
     private String reservedNo;
 
+    private String statusNumName;
+
+    public String getStatusNumName() {
+        return statusNumName;
+    }
+
+    public void setStatusNumName(String statusNumName) {
+        this.statusNumName = statusNumName;
+    }
+
     public Long getBalanceSubUnitNumId() {
         return balanceSubUnitNumId;
     }
