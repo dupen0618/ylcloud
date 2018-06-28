@@ -1,8 +1,8 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class SupplyContractAuditRequest extends AbstractRequest {
+public class SupplyContractAuditRequest extends AbstractUserSessionRequest {
 
 	/**
 	 * 
