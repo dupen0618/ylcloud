@@ -49,6 +49,42 @@ public interface WmSellDailyService {
 	 */
 	BusinessAmountForGenKxCountResponse countSalesCost(BusinessAmountForGenKxCountRequest request);
 
+	/**
+	 * 统计直送销售收入
+	 * @author henry.wang
+	 *
+	 * @param request
+	 * @return
+	 */
+	BusinessAmountForGenKxCountResponse countSalesIncomeDirectSend(BusinessAmountForGenKxCountRequest request);
+
+	/**
+	 * 统计直送销售成本
+	 * @author henry.wang
+	 *
+	 * @param request
+	 * @return
+	 */
+	BusinessAmountForGenKxCountResponse countSalesCostDirectSend(BusinessAmountForGenKxCountRequest request);
+
+	/**
+	 * 统计直通和配送销售收入
+	 * @author henry.wang
+	 *
+	 * @param request
+	 * @return
+	 */
+	BusinessAmountForGenKxCountResponse countSalesIncomeDirectWayAndDistribution(BusinessAmountForGenKxCountRequest request);
+
+	/**
+	 * 统计直通和配送销售成本
+	 * @author henry.wang
+	 *
+	 * @param request
+	 * @return
+	 */
+	BusinessAmountForGenKxCountResponse countSalesCostDirectWayAndDistribution(BusinessAmountForGenKxCountRequest request);
+
 
     /**
      * 生成倒挤差类型的出库日报
