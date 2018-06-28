@@ -158,7 +158,7 @@ public interface WmShipService {
 		 * 
 		 * @author Dan
 		 * @date 2018年4月27日
-		 * @description 反配一键出库
+		 * @description 反配so出库
 		 */
 		public WmFinishReserverSoShipRespose finishReserverSoShip(WmFinishReserverSoShipRequest request);
 		
