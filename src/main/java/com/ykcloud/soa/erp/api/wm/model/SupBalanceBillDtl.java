@@ -64,6 +64,10 @@ public class SupBalanceBillDtl implements Serializable {
 	private Double taxAmount;
 	//销售金额
 	private Double sellAmount;
+	//业务类型
+	private Long typeNumId;
+	//供应商
+	private Long supplyUnitNumId;
 
 
 
@@ -185,5 +189,21 @@ public class SupBalanceBillDtl implements Serializable {
 
 	public void setSettlementTypeName(String settlementTypeName) {
 		this.settlementTypeName = settlementTypeName;
+	}
+
+	public Long getTypeNumId() {
+		return typeNumId;
+	}
+
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
+	}
+
+	public Long getSupplyUnitNumId() {
+		return supplyUnitNumId;
+	}
+
+	public void setSupplyUnitNumId(Long supplyUnitNumId) {
+		this.supplyUnitNumId = supplyUnitNumId;
 	}
 }
