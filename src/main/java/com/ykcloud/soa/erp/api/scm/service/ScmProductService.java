@@ -1,21 +1,8 @@
 package com.ykcloud.soa.erp.api.scm.service;
 
-import com.ykcloud.soa.erp.api.scm.request.GiftQtyByGiftRelationGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.*;
 
-import com.ykcloud.soa.erp.api.scm.request.ProductPurchasePriceGetRequest;
-import com.ykcloud.soa.erp.api.scm.request.ProductShopRequest;
-import com.ykcloud.soa.erp.api.scm.request.ProtocolAuditRequest;
-import com.ykcloud.soa.erp.api.scm.request.ProtocolImportRequest;
-import com.ykcloud.soa.erp.api.scm.response.ProductForReplenishCheckResponse;
-import com.ykcloud.soa.erp.api.scm.response.GiftQtyByGiftRelationGetResponse;
-import com.ykcloud.soa.erp.api.scm.request.ProductForReplenishCheckRequest;
-import com.ykcloud.soa.erp.api.scm.response.ProductFdcSignBySupplyNumIdAndPty3NumIdGetResponse;
-import com.ykcloud.soa.erp.api.scm.request.ProductFdcSignBySupplyNumIdAndPty3NumIdGetRequest;
-import com.ykcloud.soa.erp.api.scm.response.ProductPurchasePriceGetResponse;
-import com.ykcloud.soa.erp.api.scm.response.ProductShopResponse;
-import com.ykcloud.soa.erp.api.scm.response.ProtocolAuditResponse;
-import com.ykcloud.soa.erp.api.scm.response.ProtocolImportResponse;
-
+import com.ykcloud.soa.erp.api.scm.response.*;
 
 
 public interface ScmProductService {
@@ -48,4 +35,7 @@ public interface ScmProductService {
 
     //导入
     public  ProtocolImportResponse importProtocol(ProtocolImportRequest request);
+
+    //copy采购协议
+	public ProtocolShopCopyResponse copyProtocolShop(ProtocolShopCopyRequest request);
 }
