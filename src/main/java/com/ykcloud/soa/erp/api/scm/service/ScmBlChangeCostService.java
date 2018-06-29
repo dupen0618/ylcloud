@@ -45,7 +45,7 @@ public interface ScmBlChangeCostService {
      /**
       * @author alfred
       * @date 2018/5/22 12:08
-      * @description 日结调用
+      * @description 日结调用进价调整
       */
      public DailySettlementAdjustWmInventoryCostResponse adjustWmInventoryCostForDailyCarry (DailySettlementAdjustWmInventoryCostRequest request);
      
