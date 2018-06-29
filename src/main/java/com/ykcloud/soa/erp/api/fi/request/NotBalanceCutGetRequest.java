@@ -30,7 +30,7 @@ public class NotBalanceCutGetRequest extends AbstractRequest {
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "截止日期不能为空！")
 	private Date endDate;
-
+	private Long settlementType;
 	/*
 	 * @NotNull(message = "经营方式不能为空！") private Long settlementType;
 	 * 
@@ -80,5 +80,13 @@ public class NotBalanceCutGetRequest extends AbstractRequest {
 
 	public void setBalanceSubUnitNumId(Long balanceSubUnitNumId) {
 		this.balanceSubUnitNumId = balanceSubUnitNumId;
+	}
+
+	public Long getSettlementType() {
+		return settlementType;
+	}
+
+	public void setSettlementType(Long settlementType) {
+		this.settlementType = settlementType;
 	}
 }
