@@ -20,6 +20,16 @@ public class AppointBalanceDealings implements Serializable {
     private Date orderDate; // 业务日期
     @NotNull(message = "单据编号不能为空！")
     private String reservedNo;
+    private Long subUnitNumId;//单据门店
+
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
+    }
+
     public Date getOrderDate() {
         return orderDate;
     }
