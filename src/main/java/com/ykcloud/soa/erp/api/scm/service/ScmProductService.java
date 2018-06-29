@@ -5,6 +5,7 @@ import com.ykcloud.soa.erp.api.scm.request.GiftQtyByGiftRelationGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ProductPurchasePriceGetRequest;
 import com.ykcloud.soa.erp.api.scm.request.ProductShopRequest;
 import com.ykcloud.soa.erp.api.scm.request.ProtocolAuditRequest;
+import com.ykcloud.soa.erp.api.scm.request.ProtocolImportRequest;
 import com.ykcloud.soa.erp.api.scm.response.ProductForReplenishCheckResponse;
 import com.ykcloud.soa.erp.api.scm.response.GiftQtyByGiftRelationGetResponse;
 import com.ykcloud.soa.erp.api.scm.request.ProductForReplenishCheckRequest;
@@ -13,6 +14,7 @@ import com.ykcloud.soa.erp.api.scm.request.ProductFdcSignBySupplyNumIdAndPty3Num
 import com.ykcloud.soa.erp.api.scm.response.ProductPurchasePriceGetResponse;
 import com.ykcloud.soa.erp.api.scm.response.ProductShopResponse;
 import com.ykcloud.soa.erp.api.scm.response.ProtocolAuditResponse;
+import com.ykcloud.soa.erp.api.scm.response.ProtocolImportResponse;
 
 
 
@@ -44,4 +46,6 @@ public interface ScmProductService {
 	//采购单号审核
     public ProtocolAuditResponse auditProtocol(ProtocolAuditRequest request);
 
+    //导入
+    public  ProtocolImportResponse importProtocol(ProtocolImportRequest request);
 }

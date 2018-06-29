@@ -28,6 +28,7 @@ public class BalanceCut implements Serializable {
 	private Double cutAmount; // 扣款金额
 	private Double taxRate; // 税率
 	private Double taxAmount; // 税金
+	private Long cutSign;
 	public String getSeries() {
 		return series;
 	}
@@ -118,5 +119,13 @@ public class BalanceCut implements Serializable {
 
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
+	}
+
+	public Long getCutSign() {
+		return cutSign;
+	}
+
+	public void setCutSign(Long cutSign) {
+		this.cutSign = cutSign;
 	}
 }

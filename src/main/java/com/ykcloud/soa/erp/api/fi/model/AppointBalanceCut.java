@@ -20,6 +20,8 @@ public class AppointBalanceCut implements Serializable {
     private Date orderDate; // 业务日期
     @NotNull(message = "单据编号不能为空！")
     private String reservedNo;
+    private Long subUnitNumId;
+    private Long settlementType;
     public Date getOrderDate() {
         return orderDate;
     }
@@ -44,4 +46,19 @@ public class AppointBalanceCut implements Serializable {
         this.series = series;
     }
 
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
+    }
+
+    public Long getSettlementType() {
+        return settlementType;
+    }
+
+    public void setSettlementType(Long settlementType) {
+        this.settlementType = settlementType;
+    }
 }
