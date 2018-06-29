@@ -20,4 +20,5 @@ public interface FiBillInAccountService {
     FiMonthlySettlementResponse buildSendProductSalesMonthlySettlementRecord(FiMonthlySettlementRequest request);
     //发出商品代销商品款，月结
     FiMonthlySettlementResponse buildSendProductConsignmentSalesMonthlySettlementRecord(FiMonthlySettlementRequest request);
+    
 }
