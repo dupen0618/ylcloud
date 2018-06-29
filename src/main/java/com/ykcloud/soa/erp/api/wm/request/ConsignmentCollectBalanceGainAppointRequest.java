@@ -20,6 +20,8 @@ public class ConsignmentCollectBalanceGainAppointRequest extends AbstractRequest
 
     private String statusNumName;
 
+    private Long reservedTypeNumId;
+
     public String getStatusNumName() {
         return statusNumName;
     }
@@ -66,5 +68,13 @@ public class ConsignmentCollectBalanceGainAppointRequest extends AbstractRequest
 
     public void setReservedNo(String reservedNo) {
         this.reservedNo = reservedNo;
+    }
+
+    public Long getReservedTypeNumId() {
+        return reservedTypeNumId;
+    }
+
+    public void setReservedTypeNumId(Long reservedTypeNumId) {
+        this.reservedTypeNumId = reservedTypeNumId;
     }
 }
