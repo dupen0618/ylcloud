@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Sealin Created on 2018-06-23
  */
 public class AccEmitForSupplyGenerate implements Serializable {
-    private static final long serialVersionUID = 6086424926039883394L;
+    private static final long serialVersionUID = -8549031029692622712L;
     /**
      * 商品ID
      */
@@ -52,11 +52,15 @@ public class AccEmitForSupplyGenerate implements Serializable {
      * 产地
      */
     private Long productOriginId;
+    /**
+     * 批次表中的series
+     */
     private String batchSeries;
     private Double packageQty;
     private Double oldPrice;
     private Long batchPromotionGrade;
     private Double batchPoPrice;
+    private Long firstSupplyUnitNumId;
 
     /**
      * 获取 itemNumId
@@ -327,5 +331,23 @@ public class AccEmitForSupplyGenerate implements Serializable {
      */
     public void setBatchPoPrice(Double batchPoPrice) {
         this.batchPoPrice = batchPoPrice;
+    }
+
+    /**
+     * 获取 firstSupplyUnitNumId
+     *
+     * @author Sealin
+     */
+    public Long getFirstSupplyUnitNumId() {
+        return firstSupplyUnitNumId;
+    }
+
+    /**
+     * 设置 firstSupplyUnitNumId
+     *
+     * @author Sealin
+     */
+    public void setFirstSupplyUnitNumId(Long firstSupplyUnitNumId) {
+        this.firstSupplyUnitNumId = firstSupplyUnitNumId;
     }
 }
