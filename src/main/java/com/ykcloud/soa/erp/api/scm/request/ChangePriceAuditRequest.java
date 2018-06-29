@@ -1,6 +1,5 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
-import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotBlank;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
@@ -17,9 +16,6 @@ public class ChangePriceAuditRequest extends AbstractUserSessionRequest {
   @NotBlank(message = "商品单据不能为空！")
   private String reservedNo;
 
-  @NotNull(message = "调整类型不能为空！")
-  private Long typeNumId;
-
   public String getReservedNo() {
     return reservedNo;
   }
@@ -28,13 +24,6 @@ public class ChangePriceAuditRequest extends AbstractUserSessionRequest {
     this.reservedNo = reservedNo;
   }
 
-  public Long getTypeNumId() {
-    return typeNumId;
-  }
-
-  public void setTypeNumId(Long typeNumId) {
-    this.typeNumId = typeNumId;
-  }
 
 
 }
