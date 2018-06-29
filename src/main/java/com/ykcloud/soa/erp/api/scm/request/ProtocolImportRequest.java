@@ -3,9 +3,10 @@ package com.ykcloud.soa.erp.api.scm.request;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.scm.model.ImportProtocol;
 import com.ykcloud.soa.erp.api.scm.model.ProtocolShop;
-public class ProtocolImportRequest extends AbstractRequest {
+public class ProtocolImportRequest extends AbstractUserSessionRequest {
 	
 private static final long serialVersionUID = 1L;
 	
