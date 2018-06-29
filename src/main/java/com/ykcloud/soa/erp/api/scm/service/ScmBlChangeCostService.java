@@ -82,7 +82,7 @@ public interface ScmBlChangeCostService {
     public SalesCostAdjustedResponse adjustSalesCost(SalesCostAdjustedRequest request);
 
 
-    DMAuditResponse auditDm(DMAuditRequest request);
+    DMAuditResponse auditDM(DMAuditRequest request);
     
     /**
      * 削价单审核
