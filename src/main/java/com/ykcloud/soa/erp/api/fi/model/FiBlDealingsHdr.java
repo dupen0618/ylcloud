@@ -9,9 +9,7 @@ import java.util.Date;
  * @date 2018年5月17日上午10:50:50
  */
 public class FiBlDealingsHdr implements Serializable {
-
-	private static final long serialVersionUID = -3876586394618921453L;
-	
+	private static final long serialVersionUID = -8435977914882719784L;
 	/**
 	 * 结算门店
 	 */
@@ -61,6 +59,14 @@ public class FiBlDealingsHdr implements Serializable {
 	 * 0: 手工输入 1： 自动计算
 	 */
 	private Long soFromType;
+	/**
+	 * 业务类型
+	 */
+	private Long typeNumId;
+	/**
+	 * 首次供应商ID
+	 */
+	private Long firstSupplyUnitNumId;
 
 	public Long getBalanceSubUnitNumId() {
 		return balanceSubUnitNumId;
@@ -142,4 +148,39 @@ public class FiBlDealingsHdr implements Serializable {
 		this.soFromType = soFromType;
 	}
 
+	/**
+	 * 获取 typeNumId
+	 *
+	 * @author Sealin
+	 */
+	public Long getTypeNumId() {
+		return typeNumId;
+	}
+
+	/**
+	 * 设置 typeNumId
+	 *
+	 * @author Sealin
+	 */
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
+	}
+
+	/**
+	 * 获取 firstSupplyUnitNumId
+	 *
+	 * @author Sealin
+	 */
+	public Long getFirstSupplyUnitNumId() {
+		return firstSupplyUnitNumId;
+	}
+
+	/**
+	 * 设置 firstSupplyUnitNumId
+	 *
+	 * @author Sealin
+	 */
+	public void setFirstSupplyUnitNumId(Long firstSupplyUnitNumId) {
+		this.firstSupplyUnitNumId = firstSupplyUnitNumId;
+	}
 }
