@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 public class FiAccountantcycRequest extends AbstractRequest {
+
+    private static final long serialVersionUID = -7736513409213734959L;
     @NotNull(message = "门店编号不能为空!")
     private Long subUnitNumId;
 
