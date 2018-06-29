@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.request;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
@@ -16,7 +17,8 @@ public class WmMonthlySettlementRequest extends AbstractUserSessionRequest {
     private Long subUnitNumId;
 
     @NotNull(message = "日结日期不能为空！")
-    private Date dailySettlement;
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    private Date orderDate;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -26,11 +28,13 @@ public class WmMonthlySettlementRequest extends AbstractUserSessionRequest {
         this.subUnitNumId = subUnitNumId;
     }
 
-    public Date getDailySettlement() {
-        return dailySettlement;
-    }
+	public Date getOrderDate() {
+		return orderDate;
+	}
 
-    public void setDailySettlement(Date dailySettlement) {
-        this.dailySettlement = dailySettlement;
-    }
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
+	}
+
+    
 }
