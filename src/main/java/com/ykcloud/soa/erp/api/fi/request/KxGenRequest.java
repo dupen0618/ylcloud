@@ -23,7 +23,7 @@ public class KxGenRequest extends AbstractUserSessionRequest{
 	@ApiField(description = "日结日期")
 	@NotNull(message = "日结日期不能为空！")
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-	private Date sellDate;
+	private Date orderDate;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -33,11 +33,11 @@ public class KxGenRequest extends AbstractUserSessionRequest{
 		this.subUnitNumId = subUnitNumId;
 	}
 
-	public Date getSellDate() {
-		return sellDate;
+	public Date getOrderDate() {
+		return orderDate;
 	}
 
-	public void setSellDate(Date sellDate) {
-		this.sellDate = sellDate;
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
 	}
 }
