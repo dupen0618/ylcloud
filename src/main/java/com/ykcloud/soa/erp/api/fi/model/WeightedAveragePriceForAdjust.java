@@ -50,6 +50,10 @@ public class WeightedAveragePriceForAdjust implements Serializable {
 	 * 税率
 	 */
 	private Double taxRate;
+	/**
+	 * 数量
+	 */
+	private Double qty;
 
 	public String getReservedNo() {
 		return reservedNo;
@@ -115,4 +119,21 @@ public class WeightedAveragePriceForAdjust implements Serializable {
 		this.physicalNumId = physicalNumId;
 	}
 
+	/**
+	 * 获取 qty
+	 *
+	 * @author Sealin
+	 */
+	public Double getQty() {
+		return qty;
+	}
+
+	/**
+	 * 设置 qty
+	 *
+	 * @author Sealin
+	 */
+	public void setQty(Double qty) {
+		this.qty = qty;
+	}
 }
