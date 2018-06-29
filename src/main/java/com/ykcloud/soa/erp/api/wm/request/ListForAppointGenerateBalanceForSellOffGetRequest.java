@@ -23,6 +23,8 @@ public class ListForAppointGenerateBalanceForSellOffGetRequest extends AbstractR
     private Long settlementType;
 
     private String statusNumName;
+    @NotNull(message = "单据类型不能为空！")
+    private Long reservedTypeNumId;//单据类型
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -70,5 +72,13 @@ public class ListForAppointGenerateBalanceForSellOffGetRequest extends AbstractR
 
     public void setStatusNumName(String statusNumName) {
         this.statusNumName = statusNumName;
+    }
+
+    public Long getReservedTypeNumId() {
+        return reservedTypeNumId;
+    }
+
+    public void setReservedTypeNumId(Long reservedTypeNumId) {
+        this.reservedTypeNumId = reservedTypeNumId;
     }
 }
