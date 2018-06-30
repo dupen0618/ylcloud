@@ -9,27 +9,19 @@ import java.util.Date;
  * @author Sealin Created on 2018-06-23
  */
 public class AccEmitForSupplyGenerate implements Serializable {
-    private static final long serialVersionUID = -8549031029692622712L;
+    private static final long serialVersionUID = 8093399978337539932L;
     /**
      * 商品ID
      */
     private Long itemNumId;
     /**
-     * 调整金额
-     */
-    private Double adjustAmount;
-    /**
-     * 调整税金
-     */
-    private Double adjustTaxAmount;
-    /**
-     * 调整后的单价
+     * 调整后的金额
      */
     private Double adjustPrice;
     /**
-     * 调整后的税金总额(算好传过来避免再查询一次批次税率)
+     * 税率
      */
-    private Double finalTaxAmount;
+    private Double taxRate;
     /**
      * 订单日期
      */
@@ -81,42 +73,6 @@ public class AccEmitForSupplyGenerate implements Serializable {
     }
 
     /**
-     * 获取 adjustAmount
-     *
-     * @author Sealin
-     */
-    public Double getAdjustAmount() {
-        return adjustAmount;
-    }
-
-    /**
-     * 设置 adjustAmount
-     *
-     * @author Sealin
-     */
-    public void setAdjustAmount(Double adjustAmount) {
-        this.adjustAmount = adjustAmount;
-    }
-
-    /**
-     * 获取 adjustTaxAmount
-     *
-     * @author Sealin
-     */
-    public Double getAdjustTaxAmount() {
-        return adjustTaxAmount;
-    }
-
-    /**
-     * 设置 adjustTaxAmount
-     *
-     * @author Sealin
-     */
-    public void setAdjustTaxAmount(Double adjustTaxAmount) {
-        this.adjustTaxAmount = adjustTaxAmount;
-    }
-
-    /**
      * 获取 adjustPrice
      *
      * @author Sealin
@@ -135,21 +91,21 @@ public class AccEmitForSupplyGenerate implements Serializable {
     }
 
     /**
-     * 获取 finalTaxAmount
+     * 获取 taxRate
      *
      * @author Sealin
      */
-    public Double getFinalTaxAmount() {
-        return finalTaxAmount;
+    public Double getTaxRate() {
+        return taxRate;
     }
 
     /**
-     * 设置 finalTaxAmount
+     * 设置 taxRate
      *
      * @author Sealin
      */
-    public void setFinalTaxAmount(Double finalTaxAmount) {
-        this.finalTaxAmount = finalTaxAmount;
+    public void setTaxRate(Double taxRate) {
+        this.taxRate = taxRate;
     }
 
     /**
@@ -171,7 +127,7 @@ public class AccEmitForSupplyGenerate implements Serializable {
     }
 
     /**
-     * 获取 QTY
+     * 获取 Qty
      *
      * @author Sealin
      */
@@ -180,12 +136,12 @@ public class AccEmitForSupplyGenerate implements Serializable {
     }
 
     /**
-     * 设置 QTY
+     * 设置 Qty
      *
      * @author Sealin
      */
-    public void setQty(Double Qty) {
-        this.Qty = Qty;
+    public void setQty(Double qty) {
+        Qty = qty;
     }
 
     /**
@@ -327,7 +283,6 @@ public class AccEmitForSupplyGenerate implements Serializable {
      * 设置 batchPoPrice
      *
      * @author Sealin
-     * @param batchPoPrice
      */
     public void setBatchPoPrice(Double batchPoPrice) {
         this.batchPoPrice = batchPoPrice;
