@@ -103,6 +103,8 @@ public class ImportProtocol implements Serializable {
 	
 	private Double maxStorageTemperature; //最高存储温度
 	
+	private Long storeType;    //存储类型
+	
 	private Double relativeHumidity;   //相对湿度
 	
 	private String ingredient;//原料成分
@@ -152,13 +154,13 @@ public class ImportProtocol implements Serializable {
 	@NotEmpty(message="所属仓库部门不能为空!")
 	private Long storageDeptNumId;//所属仓库部门
 	
-	private Long homeMade;   //现场自制
+	private String homeMade;   //现场自制
 	
 	private Long styleNumId; //款式编号
 	
 	private String styleName; //款式名称
 	
-	private Long sellPriceRate; //销售价格因子
+	private Double sellPriceRate; //销售价格因子
 	
 	@NotEmpty(message="商品类型不能为空!")
 	private Long typeNumId; //商品类型
@@ -184,6 +186,34 @@ public class ImportProtocol implements Serializable {
 	private String mix;  //配料
 	
 	private Long isSsPb; //
+	
+    private Long pty16NumId;
+    
+    private Long pty17NumId;
+
+	public Long getStoreType() {
+		return storeType;
+	}
+
+	public void setStoreType(Long storeType) {
+		this.storeType = storeType;
+	}
+
+	public Long getPty16NumId() {
+		return pty16NumId;
+	}
+
+	public void setPty16NumId(Long pty16NumId) {
+		this.pty16NumId = pty16NumId;
+	}
+
+	public Long getPty17NumId() {
+		return pty17NumId;
+	}
+
+	public void setPty17NumId(Long pty17NumId) {
+		this.pty17NumId = pty17NumId;
+	}
 
 	public String getSupplyUnitId() {
 		return supplyUnitId;
@@ -633,11 +663,11 @@ public class ImportProtocol implements Serializable {
 		this.storageDeptNumId = storageDeptNumId;
 	}
 
-	public Long getHomeMade() {
+	public String getHomeMade() {
 		return homeMade;
 	}
 
-	public void setHomeMade(Long homeMade) {
+	public void setHomeMade(String homeMade) {
 		this.homeMade = homeMade;
 	}
 
@@ -657,11 +687,11 @@ public class ImportProtocol implements Serializable {
 		this.styleName = styleName;
 	}
 
-	public Long getSellPriceRate() {
+	public Double getSellPriceRate() {
 		return sellPriceRate;
 	}
 
-	public void setSellPriceRate(Long sellPriceRate) {
+	public void setSellPriceRate(Double sellPriceRate) {
 		this.sellPriceRate = sellPriceRate;
 	}
 
