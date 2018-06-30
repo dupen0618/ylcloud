@@ -70,6 +70,8 @@ public class SupBalanceBillDtl implements Serializable {
 	private String typeName;
 	//供应商
 	private Long supplyUnitNumId;
+	//供应商名称
+	private String unitName;
 
 
 
@@ -215,5 +217,13 @@ public class SupBalanceBillDtl implements Serializable {
 
 	public void setTypeName(String typeName) {
 		this.typeName = typeName;
+	}
+
+	public String getUnitName() {
+		return unitName;
+	}
+
+	public void setUnitName(String unitName) {
+		this.unitName = unitName;
 	}
 }
