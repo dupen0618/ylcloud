@@ -6,52 +6,128 @@ import com.ykcloud.soa.erp.api.wm.response.*;
 
 public interface WmShipService {
 
-		//后六位模糊查询波次号,只查出status=2的号
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 后六位模糊查询波次号,只查出status=2的号
+		 */
 		public WmWlBcHdrGetResponse getWlbcHdr(WmWlBcHdrGetRequest request);
 		
-		//扫描商品条码
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 扫描商品条码
+		 */
 		public WmDataByBarcodeGetResponse getWlbcProductByBarcode(WmDataByBarcodeGetRequest request);
 		
-		//创建出库托盘
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 创建出库托盘
+		 */
 		public WmContainerHdrCreateResponse createShipContainer(WmContainerHdrCreateRequest request);
 		
-		//查询出库装箱单(soNumId,containerSerlno)
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 查询出库装箱单(soNumId,containerSerlno)
+		 */
 		public WmQuerySoAndContainerResponse getShipContainer(WmQuerySoAndContainerRequest request);
 		
-		//播种动作更新订单数据
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 播种动作更新订单数据
+		 */
 		public WmShipDtlWithNoBatchUpdateResponse  updateShipPacking(WmShipDtlWithNoBatchUpdateRequest request);
 		
 		//public void updateShipContainerDtlWithNoBatch(Long tenantNumId, Long dataSign, Long subUnitNumId, Date orderDate, Double bzNum, SoHdr soHdr, SoDtl soDtl,Long containerSerlno);
 		
 		//public void updateShipContainerLab(Long tenantNumId,Long dataSign,Long subUnitNumId,Date orderDate,Double bzNum,Long containerSerlno,Long solineId,Long cancelSign);
 		
-		//装箱完成
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 装箱完成
+		 */
 		public WmFinishShipContainerHdrResponse finishShipContainer(WmFinishShipContainerHdrRequest request);
 		
-		//播种完成
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 播种完成
+		 */
 		public WmFinishSoPackingResponse finishWlbcPacking(WmFinishSoPackingRequest requst);
 		
-		//模糊查询订单号，如果该订单没有波次号，那么自动生成该波次
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 模糊查询订单号，如果该订单没有波次号，那么自动生成该波次
+		 */
 		public WmSoHdrGetResponse getShipSo(WmSoHdrGetRequest request);
 		
-		//装箱复核扫描条码获取订单信息
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 装箱复核扫描条码获取订单信息
+		 */
 		public WmDataGetDataByBarcodeAndSoNumIdResponse getShipSoProductByBarcode(WmDataGetDataByBarcodeAndSoNumIdRequest request);
 		
-		//订单装箱完成
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 订单装箱完成
+		 */
 		public WmfinishPackingResponse finishSoPacking(WmfinishPackingRequest request);
 		
-		//创建波次单头
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 创建波次单头
+		 */
 		public WmWlbcHdrCreateResponse createWlbc(WmWlbcHdrCreateRequest request);
 		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 创建波次单头没有事务
+		 */
 		public WmWlbcHdrCreateResponse createWlbcWithNoTransaction(WmWlbcHdrCreateRequest request);
 		
-		//获取交接单号,并扫入该装箱
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 获取交接单号,并扫入该装箱
+		 */
 		public WmShipGetResponse createShipByContainer(WmShipGetRequest request);
 		
-		//扫装箱单
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 扫装箱单
+		 */
 		public WmScanShipContainerHdrResponse scanShipContainer(WmScanShipContainerRequest request);
 		
-		//出库完成
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 出库完成
+		 */
 		public WmShipFinishResponse finishShip(WmShipFinishRequest request);
         
 		/** 
@@ -61,16 +137,76 @@ public interface WmShipService {
 		*/ 
 		public ShipForMaterialIssueBackGenerateResponse generateShipForMaterialIssueBack(ShipForMaterialIssueBackGenerateRequest request);
 
-		//发送库存处理消息TCC,服务
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 发送库存处理消息TCC,服务
+		 */
 		public ShipBusinessAccountProcessResponse processShipBusinessAccount(ShipBusinessAccountProcessRequest request);
 		
-		//发送财务处理消息TCC
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 发送财务处理消息TCC
+		 */
 		public ShipFiAccountProcessResponse processShipFiAccount(ShipFiAccountProcessRequest request);
 		
-		//so一键出库
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description so订单出库
+		 */
 		public SoShipFinishResponse finishSoShip(SoShipFinishRequest request);
 		
-		//产生验收单
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description so订单出库顺序消息
+		 */
+		public SoShipFinishResponse finishSoShipExt(SoShipFinishRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 出库可用帐
+		 */
+		public AffectRowsResponse shipStkAccount(WmProcessAccountRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 出库物理仓库存处理
+		 */
+		public AffectRowsResponse shipPhysicalAccount(WmProcessAccountRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 出库财务帐处理
+		 */
+		public AffectRowsResponse shipFinanceAccount(WmProcessAccountRequest request);
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 出库完成
+		 */
+		public SoFinishResponse soFinish(SoFinishRequest request);
+		
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 产生验收单
+		 */
 		public ReceiptBudCreateResponse createReceiptBud(ReceiptBudCreateRequest request);
 		/**
 		 * 
