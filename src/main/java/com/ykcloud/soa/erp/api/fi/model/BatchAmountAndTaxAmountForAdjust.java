@@ -7,9 +7,7 @@ import java.io.Serializable;
  * @date 2018年5月16日下午12:01:29
  */
 public class BatchAmountAndTaxAmountForAdjust implements Serializable {
-
-	private static final long serialVersionUID = 7985515599920330035L;
-	
+	private static final long serialVersionUID = -8323805671029978682L;
 	/**
 	 * 批次行号
 	 */
@@ -24,7 +22,7 @@ public class BatchAmountAndTaxAmountForAdjust implements Serializable {
 	 * 调整税金
 	 */
 	private Double adjustTaxAmount;
-	
+
 	public String getSeries() {
 		return series;
 	}
@@ -48,5 +46,4 @@ public class BatchAmountAndTaxAmountForAdjust implements Serializable {
 	public void setAdjustTaxAmount(Double adjustTaxAmount) {
 		this.adjustTaxAmount = adjustTaxAmount;
 	}
-
 }

@@ -76,6 +76,8 @@ public class SoHdr implements Serializable {
 	private Long confirmType;
 
 	private Long sowNumId;
+	
+	private Long usageType;
 
 	public String getSeries() {
 		return series;
@@ -359,6 +361,11 @@ public class SoHdr implements Serializable {
 		this.storeType = storeType;
 	}
 
+	public Long getUsageType() {
+		return usageType;
+	}
 
-	
+	public void setUsageType(Long usageType) {
+		this.usageType = usageType;
+	}
 }
