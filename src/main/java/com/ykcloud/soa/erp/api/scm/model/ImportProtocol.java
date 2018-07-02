@@ -87,7 +87,7 @@ public class ImportProtocol implements Serializable {
 	private Double baseCost;//基本报价
 	
 	@NotEmpty(message="基本销售计量单位不能为空!")
-	private Long basicUnitNumId;//基本销售计量单位
+	private String basicUnitNumId;//基本销售计量单位
 	
 	private Double conversionRate;//字母转换率
 	
@@ -431,11 +431,11 @@ public class ImportProtocol implements Serializable {
 		this.baseCost = baseCost;
 	}
 
-	public Long getBasicUnitNumId() {
+	public String getBasicUnitNumId() {
 		return basicUnitNumId;
 	}
 
-	public void setBasicUnitNumId(Long basicUnitNumId) {
+	public void setBasicUnitNumId(String basicUnitNumId) {
 		this.basicUnitNumId = basicUnitNumId;
 	}
 
