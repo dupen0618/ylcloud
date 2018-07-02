@@ -10,12 +10,12 @@ import java.io.Serializable;
 public class ImportError implements Serializable {
 
 	private static final long serialVersionUID = 7757171713507109887L;
-	
+
 	/**
 	 * 外部供应商
 	 */
 	private String unitId;
-	
+
 	/**
 	 * 补货门店
 	 */
