@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @date 2018-07-02
  */
 public class AdjustForGenerateResult implements Serializable {
-    private static final long serialVersionUID = -5474908960622949300L;
+    private static final long serialVersionUID = -6248954203881891987L;
     private Long physicalNumId;
     private Long itemNumId;
     private Long divNumId;
