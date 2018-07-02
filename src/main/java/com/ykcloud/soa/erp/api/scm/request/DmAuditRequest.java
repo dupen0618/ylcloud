@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
  * @author bi.cai
  * @date 2018年01月11日 下午10:46:39
  */
-public class DMAuditRequest extends AbstractUserSessionRequest {
+public class DmAuditRequest extends AbstractUserSessionRequest {
 
 	private static final long serialVersionUID = 7988475632052221318L;
 
