@@ -9,7 +9,8 @@ import java.io.Serializable;
  * @date 2018-07-02
  */
 public class AdjustForGenerateResult implements Serializable {
-    private static final long serialVersionUID = -6248954203881891987L;
+    private static final long serialVersionUID = 8739184183098740331L;
+    private String reservedNo;
     private Long physicalNumId;
     private Long itemNumId;
     private Long divNumId;
@@ -32,6 +33,7 @@ public class AdjustForGenerateResult implements Serializable {
     private Long supplyUnitNumId;
     private String remark;
     private Long typeNumId;
+    private Long statusNumId;
 
     public Long getPhysicalNumId() {
         return physicalNumId;
@@ -207,5 +209,21 @@ public class AdjustForGenerateResult implements Serializable {
 
     public void setTypeNumId(Long typeNumId) {
         this.typeNumId = typeNumId;
+    }
+
+    public String getReservedNo() {
+        return reservedNo;
+    }
+
+    public void setReservedNo(String reservedNo) {
+        this.reservedNo = reservedNo;
+    }
+
+    public Long getStatusNumId() {
+        return statusNumId;
+    }
+
+    public void setStatusNumId(Long statusNumId) {
+        this.statusNumId = statusNumId;
     }
 }
