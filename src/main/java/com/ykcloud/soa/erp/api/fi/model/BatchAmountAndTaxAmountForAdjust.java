@@ -1,15 +1,14 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author tz.x
  * @date 2018年5月16日下午12:01:29
  */
 public class BatchAmountAndTaxAmountForAdjust implements Serializable {
-
-	private static final long serialVersionUID = 7985515599920330035L;
-	
+	private static final long serialVersionUID = 2114240900168900583L;
 	/**
 	 * 批次行号
 	 */
@@ -24,6 +23,7 @@ public class BatchAmountAndTaxAmountForAdjust implements Serializable {
 	 * 调整税金
 	 */
 	private Double adjustTaxAmount;
+	private Date adjustDate;
 	
 	public String getSeries() {
 		return series;
@@ -49,4 +49,11 @@ public class BatchAmountAndTaxAmountForAdjust implements Serializable {
 		this.adjustTaxAmount = adjustTaxAmount;
 	}
 
+	public Date getAdjustDate() {
+		return adjustDate;
+	}
+
+	public void setAdjustDate(Date adjustDate) {
+		this.adjustDate = adjustDate;
+	}
 }
