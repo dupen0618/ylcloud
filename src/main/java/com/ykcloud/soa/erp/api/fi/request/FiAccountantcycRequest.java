@@ -15,7 +15,7 @@ public class FiAccountantcycRequest extends AbstractRequest {
 	@NotNull(message = "门店编号不能为空!")
     private Long subUnitNumId;
 
-
+    @NotNull(message = "日期不能为空！")
     private Date recDate;
 
     public Long getSubUnitNumId() {

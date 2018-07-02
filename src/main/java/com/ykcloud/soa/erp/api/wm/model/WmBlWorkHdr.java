@@ -59,6 +59,8 @@ public class WmBlWorkHdr implements Serializable {
     private Long DEPART_NUM_ID;
     private Long CLASSIFY_NUM_ID;
     private Date recDate;
+    private Double workTaxRate;
+    private Double workTaxAmount;
 
     public String getSERIES() {
         return SERIES;
@@ -434,5 +436,21 @@ public class WmBlWorkHdr implements Serializable {
 
     public void setRecDate(Date recDate) {
         this.recDate = recDate;
+    }
+
+    public Double getWorkTaxRate() {
+        return workTaxRate;
+    }
+
+    public void setWorkTaxRate(Double workTaxRate) {
+        this.workTaxRate = workTaxRate;
+    }
+
+    public Double getWorkTaxAmount() {
+        return workTaxAmount;
+    }
+
+    public void setWorkTaxAmount(Double workTaxAmount) {
+        this.workTaxAmount = workTaxAmount;
     }
 }
