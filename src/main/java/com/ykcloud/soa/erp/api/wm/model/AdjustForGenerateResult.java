@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @date 2018-07-02
  */
 public class AdjustForGenerateResult implements Serializable {
-    private static final long serialVersionUID = 8739184183098740331L;
+    private static final long serialVersionUID = 910113907262096552L;
     private String reservedNo;
     private Long physicalNumId;
     private Long itemNumId;
@@ -23,6 +23,7 @@ public class AdjustForGenerateResult implements Serializable {
     private String conversionStyleDesc;
     private Double packageQty;
     private Double adjustPrice;
+    private Double costPrice;
     private String batchSeries;
     private Long batchPromotionGrade;
     private Long batchSupplyUnitNumId;
@@ -225,5 +226,13 @@ public class AdjustForGenerateResult implements Serializable {
 
     public void setStatusNumId(Long statusNumId) {
         this.statusNumId = statusNumId;
+    }
+
+    public Double getCostPrice() {
+        return costPrice;
+    }
+
+    public void setCostPrice(Double costPrice) {
+        this.costPrice = costPrice;
     }
 }
