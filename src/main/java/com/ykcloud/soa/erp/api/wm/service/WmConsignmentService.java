@@ -4,6 +4,7 @@ package com.ykcloud.soa.erp.api.wm.service;
 import com.ykcloud.soa.erp.api.wm.request.BatchDtlStatusNumIdForSellOffUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ConsignmentCollectBalanceGainAppointRequest;
 import com.ykcloud.soa.erp.api.wm.request.ConsignmentCollectBalanceGainRequest;
+import com.ykcloud.soa.erp.api.wm.request.ConsignmentPossibleSupBalanceGainRequest;
 import com.ykcloud.soa.erp.api.wm.request.DtlOrHdrStatusNumIdForDeleteOrAuditSellOffBalanceUpdateRequest;
 import com.ykcloud.soa.erp.api.wm.request.ListForAppointGenerateBalanceForSellOffGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ListForGenerateBalanceForSellOffGetRequest;
@@ -13,6 +14,7 @@ import com.ykcloud.soa.erp.api.wm.request.SupplyUnitNumIdForSellOffGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.BatchDtlStatusNumIdForSellOffUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ConsignmentCollectBalanceGainAppointResponse;
 import com.ykcloud.soa.erp.api.wm.response.ConsignmentCollectBalanceGainResponse;
+import com.ykcloud.soa.erp.api.wm.response.ConsignmentPossibleSupBalanceGainResponse;
 import com.ykcloud.soa.erp.api.wm.response.DtlOrHdrStatusNumIdForDeleteOrAuditSellOffBalanceUpdateResponse;
 import com.ykcloud.soa.erp.api.wm.response.ListForAppointGenerateBalanceForSellOffGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ListForGenerateBalanceForSellOffGetResponse;
@@ -66,4 +68,10 @@ public interface WmConsignmentService {
      */
    public ConsignmentCollectBalanceGainAppointResponse gainAppointConsignmentCollectBalance(ConsignmentCollectBalanceGainAppointRequest request);
 
+    /**
+     * @author alfred.liu
+     * @date 2018/7/3 19:27
+     * @description 获取代销需要结算单据的供应商
+     */
+   public ConsignmentPossibleSupBalanceGainResponse gainConsignmentPossibleSupBalance(ConsignmentPossibleSupBalanceGainRequest request);
 }

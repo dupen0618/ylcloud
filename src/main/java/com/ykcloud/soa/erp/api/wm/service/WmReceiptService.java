@@ -200,4 +200,10 @@ public interface WmReceiptService {
 	  * @description 获取指定未结算入库验收单汇总
 	  */
 	public CollectReceiptGainAppointResponse gainAppointCollectReceipt(CollectReceiptGainAppointRequest request);
+	 /**
+	  * @author alfred.liu
+	  * @date 2018/7/3 19:13
+	  * @description 获取可能需要结算的入库验收单的供应商
+	  */
+	public PossibleSupBalanceReceiptResponse gainPossibleSupBalanceReceipt(PossibleSupBalanceReceiptRequest request);
 }

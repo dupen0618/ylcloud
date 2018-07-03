@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.so.service;
 
 import com.ykcloud.soa.erp.api.so.request.InterlockCollectSelldailyGainAppointRequest;
 import com.ykcloud.soa.erp.api.so.request.InterlockCollectSelldailyGainRequest;
+import com.ykcloud.soa.erp.api.so.request.InterlockPossibleSupBalanceSelldailyGainRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyDtlStatusNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSellDailyHdrAndDtlStatusNumIdUpdateRequest;
@@ -18,6 +19,7 @@ import com.ykcloud.soa.erp.api.so.request.TmlProductAmountAndPayAmountCompareReq
 import com.ykcloud.soa.erp.api.so.request.VoucherNumIdUpdateRequest;
 import com.ykcloud.soa.erp.api.so.response.InterlockCollectSelldailyGainAppointResponse;
 import com.ykcloud.soa.erp.api.so.response.InterlockCollectSelldailyGainResponse;
+import com.ykcloud.soa.erp.api.so.response.InterlockPossibleSupBalanceSelldailyGainResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlSeriesForRegenerateItemSellDailyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyDtlStatusNumIdUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSellDailyHdrAndDtlStatusNumIdUpdateResponse;
@@ -113,4 +115,11 @@ public interface SoTmlService {
       * @description 获取指定联销未结算日报信息汇总
       */
     public InterlockCollectSelldailyGainAppointResponse gainAppointInterlockCollectSelldaily(InterlockCollectSelldailyGainAppointRequest request);
+
+     /**
+      * @author alfred.liu
+      * @date 2018/7/3 19:49
+      * @description 获取销售日报需要结算的供应商
+      */
+    public InterlockPossibleSupBalanceSelldailyGainResponse gainInterlockPossibleSupBalanceSelldaily(InterlockPossibleSupBalanceSelldailyGainRequest request);
 }
