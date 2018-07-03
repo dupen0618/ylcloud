@@ -3,7 +3,7 @@
  */
 package com.ykcloud.soa.erp.api.wm.service;
 
-import com.ykcloud.soa.erp.api.wm.request.WmBlBatchDtlBySeriesRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmBatchDtlByItemRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmBlBatchDtlRequest;
 import com.ykcloud.soa.erp.api.wm.response.WmBlBatchDtlResponse;
 
@@ -22,5 +22,5 @@ public interface WmBlBatchDtlService {
 
     WmBlBatchDtlResponse fetchWmBlBatchDtlProperty(WmBlBatchDtlRequest request);
 
-    WmBlBatchDtlResponse getBatchCostInfoBySeries(WmBlBatchDtlBySeriesRequest request);
+    WmBlBatchDtlResponse getBatchCostInfoByItemAndPhysical(WmBatchDtlByItemRequest request);
 }
