@@ -8,6 +8,7 @@ import com.ykcloud.soa.erp.api.wm.response.NegativeStockBatchAdjustmentResponse;
 import com.ykcloud.soa.erp.api.wm.response.PoorInvertedExtrusionShipSellDailyCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.PoorInvertedExtrusionShipSellDailyHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailyCollectResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmSellDailyBatchForFinanceGetResponse;
 
 /**
  * @Description:零售销售出库日报明细
@@ -95,4 +96,9 @@ public interface WmSellDailyService {
      * 倒挤差类型的出库单头汇总
      */
     PoorInvertedExtrusionShipSellDailyHdrCreateResponse createPoorInvertedExtrusionShipSellDailyHdr(PoorInvertedExtrusionShipSellDailyHdrCreateRequest request);
+    
+    /**
+     * 查询出库日报批次
+     */
+    WmSellDailyBatchForFinanceGetResponse getWmSellDailyBatchForFinance(WmSellDailyBatchForFinanceGetRequest request);
 }
