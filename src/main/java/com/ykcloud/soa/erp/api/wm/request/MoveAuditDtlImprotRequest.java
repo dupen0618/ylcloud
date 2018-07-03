@@ -12,9 +12,9 @@ public class MoveAuditDtlImprotRequest extends AbstractUserSessionRequest {
     @NotNull(message = "移库单号不能为空")
     private String moveNumId;
 
-//    @NotNull(message = "移库日期不能为空！")
-//    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-//    private Date moveDate;
+    @NotNull(message = "移库日期不能为空！")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    private Date moveDate;
 
     @NotNull(message = "门店编号不能为空")
     private Long subUnitNumId;
@@ -45,11 +45,11 @@ public class MoveAuditDtlImprotRequest extends AbstractUserSessionRequest {
         this.importMoveDtls = importMoveDtls;
     }
 
-//    public Date getMoveDate() {
-//        return moveDate;
-//    }
-//
-//    public void setMoveDate(Date moveDate) {
-//        this.moveDate = moveDate;
-//    }
+    public Date getMoveDate() {
+        return moveDate;
+    }
+
+    public void setMoveDate(Date moveDate) {
+        this.moveDate = moveDate;
+    }
 }
