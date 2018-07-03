@@ -136,6 +136,15 @@ public interface WmShipService {
 		* @Date: 2018/4/12  
 		*/ 
 		public ShipForMaterialIssueBackGenerateResponse generateShipForMaterialIssueBack(ShipForMaterialIssueBackGenerateRequest request);
+		
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description so订单出库
+		 */
+		public SoShipFinishResponse finishSoShip(SoShipFinishRequest request);
 
 		/**
 		 * 
@@ -153,13 +162,7 @@ public interface WmShipService {
 		 */
 		public ShipFiAccountProcessResponse processShipFiAccount(ShipFiAccountProcessRequest request);
 		
-		/**
-		 * 
-		 * @author Dan
-		 * @date 2018年7月2日
-		 * @description so订单出库
-		 */
-		public SoShipFinishResponse finishSoShip(SoShipFinishRequest request);
+		
 		
 		/**
 		 * 
@@ -173,7 +176,7 @@ public interface WmShipService {
 		 * 
 		 * @author Dan
 		 * @date 2018年7月2日
-		 * @description 出库可用帐
+		 * @description 出库可用帐顺序消息
 		 */
 		public AffectRowsResponse shipStkAccount(WmProcessAccountRequest request);
 		
@@ -181,7 +184,7 @@ public interface WmShipService {
 		 * 
 		 * @author Dan
 		 * @date 2018年7月2日
-		 * @description 出库物理仓库存处理
+		 * @description 出库物理仓库存处理顺序消息
 		 */
 		public AffectRowsResponse shipPhysicalAccount(WmProcessAccountRequest request);
 		
@@ -189,14 +192,14 @@ public interface WmShipService {
 		 * 
 		 * @author Dan
 		 * @date 2018年7月2日
-		 * @description 出库财务帐处理
+		 * @description 出库财务帐处理顺序消息
 		 */
 		public AffectRowsResponse shipFinanceAccount(WmProcessAccountRequest request);
 		/**
 		 * 
 		 * @author Dan
 		 * @date 2018年7月2日
-		 * @description 出库完成
+		 * @description 出库完成顺序消息
 		 */
 		public SoFinishResponse soFinish(SoFinishRequest request);
 		
@@ -241,6 +244,49 @@ public interface WmShipService {
 		 * @description 装箱单关联验收单(将验收单号关联到containerHdr中的出库单号)
 		 */
 		public ReverseScanContainerResponse scanContainerForReverse(ReverseScanContainerRequest request);
+		
+		
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月20日
+		 * @description 反配出库确认顺序消息
+		 */
+		public ReverseShipFinishResponse finishReverseShipExt(ReverseShipFinishRequest request);
+		
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 入库可用帐顺序消息
+		 */
+		public AffectRowsResponse receiptStkAccount(WmProcessAccountRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 入库物理仓库存处理顺序消息
+		 */
+		public AffectRowsResponse receiptPhysicalAccount(WmProcessAccountRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 入库财务帐处理顺序消息
+		 */
+		public AffectRowsResponse receiptFinanceAccount(WmProcessAccountRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月3日
+		 * @description 反配出库出库完成顺序消息
+		 */
+		public ReverseReceiptFlowMessageResopnse reverseReceiptFlowMessage(ReverseReceiptFlowMessageRequest request);
 		
 		/**
 		 * 
