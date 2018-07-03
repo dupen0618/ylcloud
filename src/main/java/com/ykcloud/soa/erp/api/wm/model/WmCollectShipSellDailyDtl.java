@@ -96,9 +96,23 @@ public class WmCollectShipSellDailyDtl implements Serializable {
      * 税率
      */
     private Double taxRate;
+    
+    /**
+     * 产地
+     */
+    private Long productOriginNumId;
+    
 
 
-    public Double getTaxRate() {
+    public Long getProductOriginNumId() {
+		return productOriginNumId;
+	}
+
+	public void setProductOriginNumId(Long productOriginNumId) {
+		this.productOriginNumId = productOriginNumId;
+	}
+
+	public Double getTaxRate() {
         return taxRate;
     }
 
