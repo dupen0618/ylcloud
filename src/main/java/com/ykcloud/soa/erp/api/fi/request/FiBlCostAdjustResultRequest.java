@@ -12,7 +12,7 @@ import java.util.Date;
  * Created on 2018-06-20
  */
 public class FiBlCostAdjustResultRequest extends AbstractUserSessionRequest {
-    private static final long serialVersionUID = -6020133431531325456L;
+    private static final long serialVersionUID = -8243309008307639537L;
     /**
      * 门店
      */
@@ -29,13 +29,9 @@ public class FiBlCostAdjustResultRequest extends AbstractUserSessionRequest {
     @NotNull(message = "调整日期不可为空")
     private Date justDate;
     /**
-     * 业务类型: <hr />
-     * 1: 代销商品款调整 <hr />
-     * 2: 商品成本调整 <hr />
-     * 3: 发出代销商品调整 <hr />
-     * 4: 发出商品调整 <hr />
-     * 5: 批次进销存调整
+     * 业务类型: <hr /> 1: 代销商品款调整 <hr /> 2: 商品成本调整 <hr /> 3: 发出代销商品调整 <hr /> 4: 发出商品调整 <hr /> 5: 批次进销存调整
      */
+    private Long typeNumId;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -59,5 +55,13 @@ public class FiBlCostAdjustResultRequest extends AbstractUserSessionRequest {
 
     public void setJustDate(Date justDate) {
         this.justDate = justDate;
+    }
+
+    public Long getTypeNumId() {
+        return typeNumId;
+    }
+
+    public void setTypeNumId(Long typeNumId) {
+        this.typeNumId = typeNumId;
     }
 }
