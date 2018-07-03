@@ -16,6 +16,8 @@ public class SupplyPayTypeIdGetRequest extends AbstractRequest {
     @NotNull(message = "供应商不能为空！")
     private Long supplyUnitNumId;
 
+    private String version;//版本
+
     public Long getUnitNumId() {
         return unitNumId;
     }
@@ -30,5 +32,13 @@ public class SupplyPayTypeIdGetRequest extends AbstractRequest {
 
     public void setSupplyUnitNumId(Long supplyUnitNumId) {
         this.supplyUnitNumId = supplyUnitNumId;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
     }
 }
