@@ -2,14 +2,6 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.*;
 import com.ykcloud.soa.erp.api.wm.response.*;
-import com.ykcloud.soa.erp.api.wm.response.LossWorkconfirmResponse;
-import com.ykcloud.soa.erp.api.wm.response.OpenWorkConfirmResponse;
-import com.ykcloud.soa.erp.api.wm.response.OutOpenWorkConfirmResponse;
-import com.ykcloud.soa.erp.api.wm.response.ProductInfoAndStockGetResponse;
-import com.ykcloud.soa.erp.api.wm.response.WorkChangeConfirmResponse;
-import com.ykcloud.soa.erp.api.wm.response.WorkConfirmAssembleResponse;
-import com.ykcloud.soa.erp.api.wm.response.WorkLossCreateResponse;
-import com.ykcloud.soa.erp.api.wm.response.ProductChangeGetResponse;
 
 public interface WmWorkService {
 	//获取商品信息+商品库存信息
@@ -90,5 +82,29 @@ public interface WmWorkService {
 	 * @time: 2018年6月1日
 	 */
 	public LossNumIdByGetLossDtlResponse getlossDtlByLossNumId(LossNumIdByGetLossDtlRequest request);
+	
+	/**
+	 * 
+	 * @author Andy
+	 * @date 2018年7月2日
+	 * @description 损溢可用帐
+	 */
+	public AffectRowsResponse lossStkAccount(WmProcessAccountRequest request);
+	
+	/**
+	 * 
+	 * @author Andy
+	 * @date 2018年7月2日
+	 * @description 损溢物理仓库存处理
+	 */
+	public AffectRowsResponse lossPhysicalAccount(WmProcessAccountRequest request);
+	
+	/**
+	 * 
+	 * @author Andy
+	 * @date 2018年7月2日
+	 * @description 出库财务帐处理
+	 */
+	public AffectRowsResponse lossFinanceAccount(WmProcessAccountRequest request);
 
 }
