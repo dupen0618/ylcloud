@@ -73,6 +73,8 @@ public class LossAmount1AndFinalCostUpdateRequest extends AbstractRequest {
 	// 业务单据具体类型
 	private Long typeNumId;
 
+	private Long isIndependentAccounting;
+
 	public static interface lossTypeOption {
 		/**
 		 * 报损类型
@@ -82,6 +84,14 @@ public class LossAmount1AndFinalCostUpdateRequest extends AbstractRequest {
 		 * 报溢类型
 		 */
 		public String OVERFLOW = "1";
+	}
+
+	public Long getIsIndependentAccounting() {
+		return isIndependentAccounting;
+	}
+
+	public void setIsIndependentAccounting(Long isIndependentAccounting) {
+		this.isIndependentAccounting = isIndependentAccounting;
 	}
 
 	public Double getLosscost() {

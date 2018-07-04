@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.fi.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.ykcloud.soa.erp.api.fi.model.BatchInsertBalance;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -23,30 +24,14 @@ public class BalanceDataBatchGenerateRequest extends AbstractUserSessionRequest 
 	@NotNull(message = "结算日期不能为空！")
 	private Date balanceDate;
 
-	@NotNull(message = "供应商不能为空！")
-	private List<Long> supplyUnitNumId;
-
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@NotNull(message = "开始日期不能为空！")
 	private Date startDate;
 
-	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-	@NotNull(message = "截止日期不能为空！")
-	private Date endDate;
-
 	@NotNull(message = "结算方式不能为空！")
 	private Long settlementType;
 
-	//结算周期
-	private Long  balaneCYC;
-
-	public Long getBalaneCYC() {
-		return balaneCYC;
-	}
-
-	public void setBalaneCYC(Long balaneCYC) {
-		this.balaneCYC = balaneCYC;
-	}
+	List<BatchInsertBalance>  batchInsertBalanceList;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -64,13 +49,6 @@ public class BalanceDataBatchGenerateRequest extends AbstractUserSessionRequest 
 		this.settlementType = settlementType;
 	}
 
-	public List<Long> getSupplyUnitNumId() {
-		return supplyUnitNumId;
-	}
-
-	public void setSupplyUnitNumId(List<Long> supplyUnitNumId) {
-		this.supplyUnitNumId = supplyUnitNumId;
-	}
 	public Date getStartDate() {
 		return startDate;
 	}
@@ -79,13 +57,6 @@ public class BalanceDataBatchGenerateRequest extends AbstractUserSessionRequest 
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
-		return endDate;
-	}
-
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
-	}
 
 	public Date getBalanceDate() {
 		return balanceDate;
@@ -93,5 +64,13 @@ public class BalanceDataBatchGenerateRequest extends AbstractUserSessionRequest 
 
 	public void setBalanceDate(Date balanceDate) {
 		this.balanceDate = balanceDate;
+	}
+
+	public List<BatchInsertBalance> getBatchInsertBalanceList() {
+		return batchInsertBalanceList;
+	}
+
+	public void setBatchInsertBalanceList(List<BatchInsertBalance> batchInsertBalanceList) {
+		this.batchInsertBalanceList = batchInsertBalanceList;
 	}
 }
