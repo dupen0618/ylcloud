@@ -306,6 +306,12 @@ public class ProductInfo implements Serializable {
         return this.getItemNumId().equals(((ProductInfo) obj).getItemNumId());
     }
 
+    @Override
+    public int hashCode() {
+        int hashCode = (int)(itemNumId ^ (itemNumId >>> 32));
+        return hashCode;
+    }
+
     public Double getTotalByCon() {
         return totalByCon;
     }
