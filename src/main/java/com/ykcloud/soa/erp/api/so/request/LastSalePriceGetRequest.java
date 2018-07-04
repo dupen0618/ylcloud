@@ -23,7 +23,7 @@ public class LastSalePriceGetRequest extends AbstractRequest {
 
     @NotNull(message = "结算日期不能为空")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date carryDate;
+    private Date orderDate;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -33,12 +33,14 @@ public class LastSalePriceGetRequest extends AbstractRequest {
         this.subUnitNumId = subUnitNumId;
     }
 
-    public Date getCarryDate() {
-        return carryDate;
+    public Date getOrderDate() {
+        return orderDate;
     }
 
-    public void setCarryDate(Date carryDate) {
-        this.carryDate = carryDate;
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
+
+    
     
 }

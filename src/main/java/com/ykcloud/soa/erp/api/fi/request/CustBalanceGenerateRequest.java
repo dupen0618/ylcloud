@@ -11,8 +11,7 @@ import java.util.Date;
  * Created on 2018-06-01
  */
 public class CustBalanceGenerateRequest extends AbstractUserSessionRequest {
-    private static final long serialVersionUID = -3702466843514123983L;
-
+    private static final long serialVersionUID = 1783076551127999999L;
     @NotNull(message = "门店必填")
     private Long subUnitNumId;
     @NotNull(message = "供应商编号必填")
@@ -22,6 +21,11 @@ public class CustBalanceGenerateRequest extends AbstractUserSessionRequest {
     @NotNull(message = "结算日期必填")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date balanceDate;
+    /**
+     * 跨子公司标识
+     */
+    @NotNull(message = "跨子公司标识必填")
+    private Long crossSubCompanySign;
 
     public Long getUnitNumId() {
         return unitNumId;
@@ -53,5 +57,13 @@ public class CustBalanceGenerateRequest extends AbstractUserSessionRequest {
 
     public void setBalanceDate(Date balanceDate) {
         this.balanceDate = balanceDate;
+    }
+
+    public Long getCrossSubCompanySign() {
+        return crossSubCompanySign;
+    }
+
+    public void setCrossSubCompanySign(Long crossSubCompanySign) {
+        this.crossSubCompanySign = crossSubCompanySign;
     }
 }

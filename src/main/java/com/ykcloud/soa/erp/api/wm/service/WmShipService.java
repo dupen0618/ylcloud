@@ -129,6 +129,14 @@ public interface WmShipService {
 		 * @description 出库完成
 		 */
 		public WmShipFinishResponse finishShip(WmShipFinishRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年7月2日
+		 * @description 出库完成
+		 */
+		public WmShipFinishResponse finishShipOrderMessage(WmShipFinishRequest request);
         
 		/** 
 		* @Description: 行政领料退回，生成负的出库单
@@ -170,7 +178,7 @@ public interface WmShipService {
 		 * @date 2018年7月2日
 		 * @description so订单出库顺序消息
 		 */
-		public SoShipFinishResponse finishSoShipExt(SoShipFinishRequest request);
+		public SoShipFinishResponse finishSoShipOrderMessage(SoShipFinishRequest request);
 		
 		/**
 		 * 
@@ -253,7 +261,7 @@ public interface WmShipService {
 		 * @date 2018年4月20日
 		 * @description 反配出库确认顺序消息
 		 */
-		public ReverseShipFinishResponse finishReverseShipExt(ReverseShipFinishRequest request);
+		public ReverseShipFinishResponse finishReverseShipOrderMessage(ReverseShipFinishRequest request);
 		
 		
 		/**
@@ -343,6 +351,14 @@ public interface WmShipService {
 		 * @description 反配so出库
 		 */
 		public WmFinishReserverSoShipRespose finishReserverSoShip(WmFinishReserverSoShipRequest request);
+		
+		/**
+		 * 
+		 * @author Dan
+		 * @date 2018年4月27日
+		 * @description 反配so出库顺序消息
+		 */
+		public WmFinishReserverSoShipRespose finishReserverSoShipOrderMessage(WmFinishReserverSoShipRequest request);
 		
 		/**
 		 * 
