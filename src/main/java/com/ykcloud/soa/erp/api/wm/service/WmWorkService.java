@@ -106,5 +106,14 @@ public interface WmWorkService {
 	 * @description 出库财务帐处理
 	 */
 	public AffectRowsResponse lossFinanceAccount(WmProcessAccountRequest request);
+	/**
+	 * 
+	 * @Description:
+	 * @param updateLossMoneyRequest
+	 * @return
+	 * @author: Andy
+	 * @time: 2018年7月4日
+	 */
+	public UpdateLossMoneyResponse updateLossMoney(UpdateLossMoneyRequest updateLossMoneyRequest);
 
 }
