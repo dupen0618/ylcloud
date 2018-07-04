@@ -21,13 +21,6 @@ public interface FiConsignmentInAccountService {
      */
     public ConsignmentProductAccountAdjustResponse adjustConsignmentProductAccount(ConsignmentProductAccountAdjustRequest request);
 
-    /**
-     * 代销商品款上的在途处理
-     *
-     * @author Sealin
-     */
-    ConsignmentProductAccountAdjustResponse adjustConsignmentOnloadAmount(ConsignmentProductAccountAdjustRequest request);
-
     FiInAccountByReceiptResponse getConsignmentInAccount(FiInAccountByReceiptRequest request);
 
     FiMonthlySettlementResponse buildMonthlySettlementRecord(FiMonthlySettlementRequest request);

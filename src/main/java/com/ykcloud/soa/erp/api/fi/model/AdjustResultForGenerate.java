@@ -12,7 +12,7 @@ public class AdjustResultForGenerate implements Serializable {
     private static final long serialVersionUID = -4986848627033571152L;
     private String barcode;
     private Double batchPoPrice;
-    private String batchPromotionGrade;
+    private Long batchPromotionGrade;
     private Long batchSupplyUnitNumId;
     private Long carrySign;
     private Long classifyNumId;
@@ -51,11 +51,11 @@ public class AdjustResultForGenerate implements Serializable {
         this.batchPoPrice = batchPoPrice;
     }
 
-    public String getBatchPromotionGrade() {
+    public Long getBatchPromotionGrade() {
         return batchPromotionGrade;
     }
 
-    public void setBatchPromotionGrade(String batchPromotionGrade) {
+    public void setBatchPromotionGrade(Long batchPromotionGrade) {
         this.batchPromotionGrade = batchPromotionGrade;
     }
 
