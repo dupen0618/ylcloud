@@ -15,94 +15,62 @@ public class FiAccEmitGaForSupplyGenerate implements Serializable {
     private Double emitTaxAmount;
     private Double finalAmount;
     private Double finalTaxAmount;
+    private Double returnAmount;
+    private Double returnTaxAmount;
 
-    /**
-     * 获取 series
-     *
-     * @author Sealin
-     */
     public String getSeries() {
         return series;
     }
 
-    /**
-     * 设置 series
-     *
-     * @author Sealin
-     */
     public void setSeries(String series) {
         this.series = series;
     }
 
-    /**
-     * 获取 emitAmount
-     *
-     * @author Sealin
-     */
     public Double getEmitAmount() {
         return emitAmount;
     }
 
-    /**
-     * 设置 emitAmount
-     *
-     * @author Sealin
-     */
     public void setEmitAmount(Double emitAmount) {
         this.emitAmount = emitAmount;
     }
 
-    /**
-     * 获取 emitTaxAmount
-     *
-     * @author Sealin
-     */
     public Double getEmitTaxAmount() {
         return emitTaxAmount;
     }
 
-    /**
-     * 设置 emitTaxAmount
-     *
-     * @author Sealin
-     */
     public void setEmitTaxAmount(Double emitTaxAmount) {
         this.emitTaxAmount = emitTaxAmount;
     }
 
-    /**
-     * 获取 finalAmount
-     *
-     * @author Sealin
-     */
     public Double getFinalAmount() {
         return finalAmount;
     }
 
-    /**
-     * 设置 finalAmount
-     *
-     * @author Sealin
-     */
     public void setFinalAmount(Double finalAmount) {
         this.finalAmount = finalAmount;
     }
 
-    /**
-     * 获取 finalTaxAmount
-     *
-     * @author Sealin
-     */
     public Double getFinalTaxAmount() {
         return finalTaxAmount;
     }
 
-    /**
-     * 设置 finalTaxAmount
-     *
-     * @author Sealin
-     */
     public void setFinalTaxAmount(Double finalTaxAmount) {
         this.finalTaxAmount = finalTaxAmount;
+    }
+
+    public Double getReturnAmount() {
+        return returnAmount;
+    }
+
+    public void setReturnAmount(Double returnAmount) {
+        this.returnAmount = returnAmount;
+    }
+
+    public Double getReturnTaxAmount() {
+        return returnTaxAmount;
+    }
+
+    public void setReturnTaxAmount(Double returnTaxAmount) {
+        this.returnTaxAmount = returnTaxAmount;
     }
 }
