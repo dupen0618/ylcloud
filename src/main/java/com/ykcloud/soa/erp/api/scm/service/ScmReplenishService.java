@@ -6,11 +6,13 @@ import com.ykcloud.soa.erp.api.scm.request.AutoReplenishApplyGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.CouponApprovalOrderGenerateRequest;
 import com.ykcloud.soa.erp.api.scm.request.DmsForAutoReplenishCalcateRequest;
 import com.ykcloud.soa.erp.api.scm.request.HandReplenishProductGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.ProductFastEntryRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderDemandCompensateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.AutoReplenishApplyGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.DmsForAutoReplenishCalcateResponse;
 import com.ykcloud.soa.erp.api.scm.response.HandReplenishProductGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.ProductFastEntryResponse;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyBatchAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyByAuthorConfirmRequest;
@@ -56,4 +58,7 @@ public interface ScmReplenishService {
 
 	//补偿生成审批单明细
 	public ApprovalOrderDemandCompensateResponse compensateApprovalOrderDemand(ApprovalOrderDemandCompensateRequest request);
+
+	//快速录入
+	public ProductFastEntryResponse fastEntryProduct(ProductFastEntryRequest request);
 }
