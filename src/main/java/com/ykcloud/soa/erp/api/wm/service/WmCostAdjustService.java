@@ -30,16 +30,6 @@ public interface WmCostAdjustService {
 	public AdjustCostByScmChangeCostResponse adjustWmCostByScmChangeCost(WmCostByScmChangeCostRequest request);
 
 	/**
-	 * 发出代销商品在途金额调整
-	 *
-	 * @param request *
-	 * @return *
-	 *
-	 * @author Sealin
-	 */
-    WmAdjustCostResponse adjustConsignmentEmitOnloadCost(WmAdjustCostRequest request);
-
-	/**
 	 * 根据调整单号获取调整记录
 	 *
 	 * @param request
