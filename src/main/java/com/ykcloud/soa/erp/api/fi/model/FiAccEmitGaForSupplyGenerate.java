@@ -9,14 +9,10 @@ import java.io.Serializable;
  * @date 2018-06-27
  */
 public class FiAccEmitGaForSupplyGenerate implements Serializable {
-    private static final long serialVersionUID = 6011778196382284751L;
+    private static final long serialVersionUID = -79304606761490004L;
     private String series;
-    private Double emitAmount;
-    private Double emitTaxAmount;
-    private Double finalAmount;
-    private Double finalTaxAmount;
-    private Double returnAmount;
-    private Double returnTaxAmount;
+    private Double adjustAmount;
+    private Double adjustTaxAmount;
 
     public String getSeries() {
         return series;
@@ -26,51 +22,19 @@ public class FiAccEmitGaForSupplyGenerate implements Serializable {
         this.series = series;
     }
 
-    public Double getEmitAmount() {
-        return emitAmount;
+    public Double getAdjustAmount() {
+        return adjustAmount;
     }
 
-    public void setEmitAmount(Double emitAmount) {
-        this.emitAmount = emitAmount;
+    public void setAdjustAmount(Double adjustAmount) {
+        this.adjustAmount = adjustAmount;
     }
 
-    public Double getEmitTaxAmount() {
-        return emitTaxAmount;
+    public Double getAdjustTaxAmount() {
+        return adjustTaxAmount;
     }
 
-    public void setEmitTaxAmount(Double emitTaxAmount) {
-        this.emitTaxAmount = emitTaxAmount;
-    }
-
-    public Double getFinalAmount() {
-        return finalAmount;
-    }
-
-    public void setFinalAmount(Double finalAmount) {
-        this.finalAmount = finalAmount;
-    }
-
-    public Double getFinalTaxAmount() {
-        return finalTaxAmount;
-    }
-
-    public void setFinalTaxAmount(Double finalTaxAmount) {
-        this.finalTaxAmount = finalTaxAmount;
-    }
-
-    public Double getReturnAmount() {
-        return returnAmount;
-    }
-
-    public void setReturnAmount(Double returnAmount) {
-        this.returnAmount = returnAmount;
-    }
-
-    public Double getReturnTaxAmount() {
-        return returnTaxAmount;
-    }
-
-    public void setReturnTaxAmount(Double returnTaxAmount) {
-        this.returnTaxAmount = returnTaxAmount;
+    public void setAdjustTaxAmount(Double adjustTaxAmount) {
+        this.adjustTaxAmount = adjustTaxAmount;
     }
 }
