@@ -7,6 +7,7 @@ public class SupBalanceAval implements Serializable{
     private Long supplyUnitNumId;//供应商
     private Long divNumId;//部类
     private Date minOrderDate;//最小日期
+    private Long subUnitNumId;//门店编号
 
     public Long getSupplyUnitNumId() {
         return supplyUnitNumId;
@@ -30,5 +31,13 @@ public class SupBalanceAval implements Serializable{
 
     public void setMinOrderDate(Date minOrderDate) {
         this.minOrderDate = minOrderDate;
+    }
+
+    public Long getSubUnitNumId() {
+        return subUnitNumId;
+    }
+
+    public void setSubUnitNumId(Long subUnitNumId) {
+        this.subUnitNumId = subUnitNumId;
     }
 }
