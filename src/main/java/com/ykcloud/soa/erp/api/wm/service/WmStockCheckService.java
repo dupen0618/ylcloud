@@ -28,6 +28,7 @@ import com.ykcloud.soa.erp.api.wm.request.StockTakingTaskHDRGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadjustBatchDtlsForCheckConsignmentProductAccountFindRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadjustDtlGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadjustHdrGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.TaskProListRefreshRequest;
 import com.ykcloud.soa.erp.api.wm.request.UnConfirmStockAdjustGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.AccountForProduceStockProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
@@ -56,6 +57,7 @@ import com.ykcloud.soa.erp.api.wm.response.StockTakingTaskHDRGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadjustBatchDtlsForCheckConsignmentProductAccountFindResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadjustDtlGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadjustHdrGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.TaskProListRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.UnConfirmStockAdjustGetResponse;
 
 /**
@@ -267,6 +269,13 @@ public interface WmStockCheckService {
      * @return
      */
     MyCheckContainerGetResponse getMyCheckContainer(MyCheckContainerGetRequest request);
+
+    /**
+     * @Description: 刷新商品清单
+     * @author: henry.wang
+     * @date: 2018/7/3 20:11
+     **/
+    TaskProListRefreshResponse refreshTaskProList(TaskProListRefreshRequest request);
 
     /**
      * 库存汇总调整生成盈亏单

@@ -11,9 +11,9 @@ public class InvoiceAuditRequest extends AbstractUserSessionRequest{
     private Long subUnitNumId;
     @NotNull(message = "开票日期不能为空！")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date balanceDate;
+    private Date billDate;
     @NotNull(message = "结算单号不能为空！")
-    private String balanceNo;
+    private String billNumId;
 
     public Long getSubUnitNumId() {
         return subUnitNumId;
@@ -23,19 +23,19 @@ public class InvoiceAuditRequest extends AbstractUserSessionRequest{
         this.subUnitNumId = subUnitNumId;
     }
 
-    public Date getBalanceDate() {
-        return balanceDate;
+    public Date getBillDate() {
+        return billDate;
     }
 
-    public void setBalanceDate(Date balanceDate) {
-        this.balanceDate = balanceDate;
+    public void setBillDate(Date billDate) {
+        this.billDate = billDate;
     }
 
-    public String getBalanceNo() {
-        return balanceNo;
+    public String getBillNumId() {
+        return billNumId;
     }
 
-    public void setBalanceNo(String balanceNo) {
-        this.balanceNo = balanceNo;
+    public void setBillNumId(String billNumId) {
+        this.billNumId = billNumId;
     }
 }
