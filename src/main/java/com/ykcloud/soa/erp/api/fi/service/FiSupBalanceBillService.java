@@ -5,12 +5,14 @@ import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceAvalUnitListBatchGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataBatchGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
+import com.ykcloud.soa.erp.api.fi.request.BalanceEndDateGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceBillGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceBillDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceAvalUnitListBatchGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataBatchGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
+import com.ykcloud.soa.erp.api.fi.response.BalanceEndDateGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotBalanceBillGetResponse;
 
 /**
@@ -60,4 +62,8 @@ public interface FiSupBalanceBillService {
      */
     public BalanceAvalUnitListBatchGenerateResponse batchGenerateBalanceAvalUnitList(BalanceAvalUnitListBatchGenerateRequest request);
 
+    /**
+     * 获得结算的结束时间
+     */
+    public BalanceEndDateGetResponse getBalanceEndDate(BalanceEndDateGetRequest request);
 }
