@@ -1,9 +1,10 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
-import java.util.Date;
-import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+
+import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 /**
  * @Description:供应商结算生成结算单
@@ -42,6 +43,8 @@ public class BalanceDataGenerateRequest extends AbstractUserSessionRequest {
 	private Long  balaneCYC;
 
 	private String version;
+
+	private Long notContract;
 
 	public Long getBalaneCYC() {
 		return balaneCYC;
@@ -113,5 +116,13 @@ public class BalanceDataGenerateRequest extends AbstractUserSessionRequest {
 
 	public void setVersion(String version) {
 		this.version = version;
+	}
+
+	public Long getNotContract() {
+		return notContract;
+	}
+
+	public void setNotContract(Long notContract) {
+		this.notContract = notContract;
 	}
 }
