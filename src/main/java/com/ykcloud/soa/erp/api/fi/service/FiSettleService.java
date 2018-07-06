@@ -76,12 +76,12 @@ public interface FiSettleService {
 	 */
 	public EarnestMoneyAuditResponse auditEarnestMoney(EarnestMoneyAuditRequest request);
 
-	 /**
-	  * @author alfred.liu
-	  * @date 2018/6/26 14:41
-	  * @description 作废结算单
-	  */
-	  BalanceCancellationResponse cancellationBalance(BalanceCancellationRequest request);
+	/**
+	 * @author alfred.liu
+	 * @date 2018/6/26 14:41
+	 * @description 作废结算单
+	 */
+	BalanceCancellationResponse cancellationBalance(BalanceCancellationRequest request);
 
 
 }
