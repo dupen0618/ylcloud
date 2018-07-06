@@ -7,6 +7,8 @@ import com.ykcloud.soa.erp.api.fi.request.BalanceDataBatchGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceEndDateGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceBillGetRequest;
+import com.ykcloud.soa.erp.api.fi.request.NotContractBalanceJointSaleAutomaticRequest;
+import com.ykcloud.soa.erp.api.fi.request.NotContractBalancePurchaseSaleAutomaticRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotContractDateAutomateRequest;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceBillDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
@@ -15,6 +17,8 @@ import com.ykcloud.soa.erp.api.fi.response.BalanceDataBatchGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceEndDateGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotBalanceBillGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.NotContractBalanceJointSaleAutomaticResponse;
+import com.ykcloud.soa.erp.api.fi.response.NotContractBalancePurchaseSaleAutomaticResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotContractDateAutomateResponse;
 
 /**
@@ -69,11 +73,17 @@ public interface FiSupBalanceBillService {
      */
     public BalanceEndDateGetResponse getBalanceEndDate(BalanceEndDateGetRequest request);
 
+    //购销
+    public NotContractBalancePurchaseSaleAutomaticResponse automateNotContractBalancePurchaseSale(NotContractBalancePurchaseSaleAutomaticRequest request);
+
     /**
      * @author alfred.liu
      * @date 2018/7/5 22:32
      * @description 自动生成供应商结算单（总部，不取合同日期）
      */
     public NotContractDateAutomateResponse automateNotContractDate (NotContractDateAutomateRequest request);
+
+    //联销
+    public NotContractBalanceJointSaleAutomaticResponse automateNotContractBalanceJointSale(NotContractBalanceJointSaleAutomaticRequest request) ;
 
 }
