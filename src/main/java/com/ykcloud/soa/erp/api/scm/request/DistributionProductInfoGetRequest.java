@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.Range;
 
 import java.util.Date;
@@ -28,7 +29,8 @@ public class DistributionProductInfoGetRequest extends AbstractRequest {
 	@NotNull(message = "配送审批单类别不能为空！")
 	private Long typeNumId;// 4-赠品订单
 
-	@NotNull(message = "门店编号不能为空！")
+	@NotBlank(message = "商品条码不能为空！")
+	@NotNull(message = "商品条码不能为空！")
 	private String barcode;// 商品编号、商品条码二选一
 
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
