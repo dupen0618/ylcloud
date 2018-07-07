@@ -18,8 +18,42 @@ public class WmSellDailyBatchForFinanceGetRequest extends AbstractRequest{
 	private Long subUnitNumId;
 	
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-	@NotNull(message = "日结日期不能为空！")
+	@NotNull(message = "日结日期不能为空!")
 	private Date orderDate;
+	
+	@NotNull(message = "分页开始位置不能为空!")
+	private Long from ;
+	
+	@NotNull(message = "分页条数不能为空!")
+	private Long limit;
+	
+	@NotNull(message = "统计标识不能为空!")
+	private Long isCount;//是否是统计查询0不是,1是
+	
+
+	public Long getIsCount() {
+		return isCount;
+	}
+
+	public void setIsCount(Long isCount) {
+		this.isCount = isCount;
+	}
+
+	public Long getFrom() {
+		return from;
+	}
+
+	public void setFrom(Long from) {
+		this.from = from;
+	}
+
+	public Long getLimit() {
+		return limit;
+	}
+
+	public void setLimit(Long limit) {
+		this.limit = limit;
+	}
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;

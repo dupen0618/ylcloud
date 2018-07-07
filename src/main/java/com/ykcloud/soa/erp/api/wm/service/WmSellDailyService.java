@@ -98,7 +98,7 @@ public interface WmSellDailyService {
     PoorInvertedExtrusionShipSellDailyHdrCreateResponse createPoorInvertedExtrusionShipSellDailyHdr(PoorInvertedExtrusionShipSellDailyHdrCreateRequest request);
     
     /**
-     * 查询出库日报批次
+     * 查询出库日报批次扣减财务账
      */
     WmSellDailyBatchForFinanceGetResponse getWmSellDailyBatchForFinance(WmSellDailyBatchForFinanceGetRequest request);
 }

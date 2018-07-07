@@ -1,17 +1,25 @@
 package com.ykcloud.soa.erp.api.fi.service;
+
 import com.ykcloud.soa.erp.api.fi.request.AppointBalanceBillDtlGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDtlDeleteRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceAvalUnitListBatchGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataBatchGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
+import com.ykcloud.soa.erp.api.fi.request.BalanceEndDateGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceBillGetRequest;
+import com.ykcloud.soa.erp.api.fi.request.NotContractBalanceJointSaleAutomaticRequest;
+import com.ykcloud.soa.erp.api.fi.request.NotContractBalancePurchaseSaleAutomaticRequest;
+import com.ykcloud.soa.erp.api.fi.request.NotContractDateAutomateRequest;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceBillDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceAvalUnitListBatchGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataBatchGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
+import com.ykcloud.soa.erp.api.fi.response.BalanceEndDateGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotBalanceBillGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.NotContractBalanceJointSaleAutomaticResponse;
+import com.ykcloud.soa.erp.api.fi.response.NotContractBalancePurchaseSaleAutomaticResponse;
+import com.ykcloud.soa.erp.api.fi.response.NotContractDateAutomateResponse;
 
 /**
  * @Author:ALi
@@ -59,5 +67,23 @@ public interface FiSupBalanceBillService {
      * @return
      */
     public BalanceAvalUnitListBatchGenerateResponse batchGenerateBalanceAvalUnitList(BalanceAvalUnitListBatchGenerateRequest request);
+
+    /**
+     * 获得结算的结束时间
+     */
+    public BalanceEndDateGetResponse getBalanceEndDate(BalanceEndDateGetRequest request);
+
+    //购销
+    public NotContractBalancePurchaseSaleAutomaticResponse automateNotContractBalancePurchaseSale(NotContractBalancePurchaseSaleAutomaticRequest request);
+
+    /**
+     * @author alfred.liu
+     * @date 2018/7/5 22:32
+     * @description 自动生成供应商结算单（总部，不取合同日期）
+     */
+    public NotContractDateAutomateResponse automateNotContractDate (NotContractDateAutomateRequest request);
+
+    //联销
+    public NotContractBalanceJointSaleAutomaticResponse automateNotContractBalanceJointSale(NotContractBalanceJointSaleAutomaticRequest request) ;
 
 }

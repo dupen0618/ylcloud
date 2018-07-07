@@ -32,9 +32,36 @@ public class SoTmlForWmShip {
     private Long groupItemNumId; //组合商品编号
     
     private Double qty;
-        
-    
-    
+
+    private Long priceType;
+
+    private Long basicUnitNumId;
+
+    private String unitsName;
+
+    public Long getPriceType() {
+        return priceType;
+    }
+
+    public void setPriceType(Long priceType) {
+        this.priceType = priceType;
+    }
+
+    public Long getBasicUnitNumId() {
+        return basicUnitNumId;
+    }
+
+    public void setBasicUnitNumId(Long basicUnitNumId) {
+        this.basicUnitNumId = basicUnitNumId;
+    }
+
+    public String getUnitsName() {
+        return unitsName;
+    }
+
+    public void setUnitsName(String unitsName) {
+        this.unitsName = unitsName;
+    }
 
     public Double getRetailAmount() {
 		return retailAmount;
