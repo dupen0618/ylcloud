@@ -1,10 +1,13 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
-public class ProductFastEntryRequest extends AbstractRequest {
+public class ProductFastEntryRequest extends AbstractUserSessionRequest {
 
 	/**
 	 * 快速录入
@@ -16,6 +19,10 @@ public class ProductFastEntryRequest extends AbstractRequest {
 	
 	@NotNull(message="申请编号不能为空")
 	private String applyNumId;  //申请编号
+	
+	@NotNull(message="日期不能为空")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+	private Date orderDate;     //日期
 	
 	private Long supplyUnitNumId; //供应商编号
 	
@@ -91,6 +98,14 @@ public class ProductFastEntryRequest extends AbstractRequest {
 
 	public void setPty3NumId(Long pty3NumId) {
 		this.pty3NumId = pty3NumId;
+	}
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
 	}
     
     

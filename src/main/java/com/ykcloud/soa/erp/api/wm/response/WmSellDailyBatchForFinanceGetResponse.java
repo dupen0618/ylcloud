@@ -14,6 +14,16 @@ public class WmSellDailyBatchForFinanceGetResponse extends MessagePack{
 	
 	private List<WmShipSellDailyBatchDtlForFinance> batchList;
 	
+	private Long countNum;
+
+
+	public Long getCountNum() {
+		return countNum;
+	}
+
+	public void setCountNum(Long countNum) {
+		this.countNum = countNum;
+	}
 
 	public List<WmShipSellDailyBatchDtlForFinance> getBatchList() {
 		return batchList;

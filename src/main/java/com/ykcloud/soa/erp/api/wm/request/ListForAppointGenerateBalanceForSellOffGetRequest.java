@@ -26,6 +26,9 @@ public class ListForAppointGenerateBalanceForSellOffGetRequest extends AbstractR
     @NotNull(message = "单据类型不能为空！")
     private Long reservedTypeNumId;//单据类型
 
+    private String balanceFlag;
+
+
     public Long getSubUnitNumId() {
         return subUnitNumId;
     }
@@ -80,5 +83,13 @@ public class ListForAppointGenerateBalanceForSellOffGetRequest extends AbstractR
 
     public void setReservedTypeNumId(Long reservedTypeNumId) {
         this.reservedTypeNumId = reservedTypeNumId;
+    }
+
+    public String getBalanceFlag() {
+        return balanceFlag;
+    }
+
+    public void setBalanceFlag(String balanceFlag) {
+        this.balanceFlag = balanceFlag;
     }
 }

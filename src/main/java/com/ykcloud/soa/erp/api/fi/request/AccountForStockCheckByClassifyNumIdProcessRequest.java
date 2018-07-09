@@ -42,6 +42,18 @@ public class AccountForStockCheckByClassifyNumIdProcessRequest extends AbstractU
     @Pattern(regexp = "[1-2]", message = "全盘或部分盘标识只能为1或2")
     private String fullOrPart;
 
+    @ApiField(description = "业务单据号")
+    @NotNull(message = "业务单据号不能为空！")
+    private String triggerBillid;
+
+    @ApiField(description = "业务单据行号")
+    @NotNull(message = "业务单据行号不能为空！")
+    private String triggerBillLine;
+
+    @ApiField(description = "业务单据具体类型")
+    @NotNull(message = "业务单据具体类型不能为空！")
+    private Long typeNumId;
+
     public Long getSubUnitNumId() {
         return subUnitNumId;
     }
@@ -88,5 +100,29 @@ public class AccountForStockCheckByClassifyNumIdProcessRequest extends AbstractU
 
     public void setFullOrPart(String fullOrPart) {
         this.fullOrPart = fullOrPart;
+    }
+
+    public String getTriggerBillid() {
+        return triggerBillid;
+    }
+
+    public void setTriggerBillid(String triggerBillid) {
+        this.triggerBillid = triggerBillid;
+    }
+
+    public String getTriggerBillLine() {
+        return triggerBillLine;
+    }
+
+    public void setTriggerBillLine(String triggerBillLine) {
+        this.triggerBillLine = triggerBillLine;
+    }
+
+    public Long getTypeNumId() {
+        return typeNumId;
+    }
+
+    public void setTypeNumId(Long typeNumId) {
+        this.typeNumId = typeNumId;
     }
 }
