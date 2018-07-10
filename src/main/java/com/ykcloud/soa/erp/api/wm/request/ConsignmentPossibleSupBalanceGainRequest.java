@@ -27,6 +27,8 @@ public class ConsignmentPossibleSupBalanceGainRequest extends AbstractRequest {
 
     private String statusNumName;
 
+    private String balanceFlag;
+
     public Long getSubUnitNumId() {
         return subUnitNumId;
     }
@@ -73,5 +75,13 @@ public class ConsignmentPossibleSupBalanceGainRequest extends AbstractRequest {
 
     public void setStatusNumName(String statusNumName) {
         this.statusNumName = statusNumName;
+    }
+
+    public String getBalanceFlag() {
+        return balanceFlag;
+    }
+
+    public void setBalanceFlag(String balanceFlag) {
+        this.balanceFlag = balanceFlag;
     }
 }
