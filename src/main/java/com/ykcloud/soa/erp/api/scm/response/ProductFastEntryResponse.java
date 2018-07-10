@@ -3,7 +3,7 @@ package com.ykcloud.soa.erp.api.scm.response;
 import java.util.List;
 
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
-import com.ykcloud.soa.erp.api.scm.model.FastEntryError;
+import com.ykcloud.soa.erp.api.scm.model.ReplenishProduct;
 
 public class ProductFastEntryResponse extends MessagePack {
 
@@ -12,15 +12,16 @@ public class ProductFastEntryResponse extends MessagePack {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private List<FastEntryError> errors;
+	private List<ReplenishProduct> replenishProducts;
 
-	public List<FastEntryError> getErrors() {
-		return errors;
+	public List<ReplenishProduct> getReplenishProducts() {
+		return replenishProducts;
 	}
 
-	public void setErrors(List<FastEntryError> errors) {
-		this.errors = errors;
+	public void setReplenishProducts(List<ReplenishProduct> replenishProducts) {
+		this.replenishProducts = replenishProducts;
 	}
+
 	
 	
 
