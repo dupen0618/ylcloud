@@ -116,4 +116,5 @@ public interface WmWorkService {
 	 */
 	public UpdateLossMoneyResponse updateLossMoney(UpdateLossMoneyRequest updateLossMoneyRequest);
 
+	public ProductAndCostGetResponse getProductAndCost(ProductAndCostGetRequest request);
 }
