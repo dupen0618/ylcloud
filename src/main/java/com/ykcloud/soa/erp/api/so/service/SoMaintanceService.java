@@ -7,6 +7,7 @@ import com.ykcloud.soa.erp.api.so.request.DirectWayAllocateDtlCancelConfirmReque
 import com.ykcloud.soa.erp.api.so.request.DirectWayAllocateDtlConfirmRequest;
 import com.ykcloud.soa.erp.api.so.request.DirectWayDistributionSoGenerateRequest;
 import com.ykcloud.soa.erp.api.so.request.DistributionSoGenerateRequest;
+import com.ykcloud.soa.erp.api.so.request.PackingOrderItemInventoryUpRequest;
 import com.ykcloud.soa.erp.api.so.request.SoAllotWithShipRequest;
 import com.ykcloud.soa.erp.api.so.request.SoConfirmTypeRequest;
 import com.ykcloud.soa.erp.api.so.request.SoDtlForUpdateActualQtyGetRequest;
@@ -15,8 +16,8 @@ import com.ykcloud.soa.erp.api.so.request.SoShipQtyUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoStatusUpdateSoOneRequest;
 import com.ykcloud.soa.erp.api.so.request.SoUpdateLockToPackingRequest;
-import com.ykcloud.soa.erp.api.so.request.SoTmlBalanceSignUpdateRequest;
 import com.ykcloud.soa.erp.api.so.request.SoWlbcAndSoBingingRequest;
+import com.ykcloud.soa.erp.api.so.request.UpdateSoStatusRequest;
 import com.ykcloud.soa.erp.api.so.response.ApplyHdrStatusForGenerateApprovalReturnOrderUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.ApprovalReturnSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.CheckSoShipQtyAndPackingQtyResponse;
@@ -24,6 +25,7 @@ import com.ykcloud.soa.erp.api.so.response.DirectWayAllocateDtlCancelConfirmResp
 import com.ykcloud.soa.erp.api.so.response.DirectWayAllocateDtlConfirmResponse;
 import com.ykcloud.soa.erp.api.so.response.DirectWayDistributionSoGenerateResponse;
 import com.ykcloud.soa.erp.api.so.response.DistributionSoGenerateResponse;
+import com.ykcloud.soa.erp.api.so.response.PackingOrderItemInventoryUpResponse;
 import com.ykcloud.soa.erp.api.so.response.SoAllotWithShipResponse;
 import com.ykcloud.soa.erp.api.so.response.SoConfirmTypeResponse;
 import com.ykcloud.soa.erp.api.so.response.SoDtlForUpdateActualQtyGetResponse;
@@ -33,8 +35,7 @@ import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateResponse;
 import com.ykcloud.soa.erp.api.so.response.SoStatusUpdateSoOneResponse;
 import com.ykcloud.soa.erp.api.so.response.SoUpdateLockToPackingResponse;
 import com.ykcloud.soa.erp.api.so.response.SoWlbcAndSoBingingResponse;
-import com.ykcloud.soa.erp.api.so.request.*;
-import com.ykcloud.soa.erp.api.so.response.*;
+import com.ykcloud.soa.erp.api.so.response.UpdateSoStatusResponse;
 
 public interface SoMaintanceService {
 	
@@ -107,7 +108,6 @@ public interface SoMaintanceService {
 	//订单预出
 	public PackingOrderItemInventoryUpResponse upPackingOrderItemInventory(PackingOrderItemInventoryUpRequest request);
 
-	public SoTmlBalanceSignUpdateResponse updateTmlBalanceSign(SoTmlBalanceSignUpdateRequest request);
 
 	 /**
 	  * @author alfred
