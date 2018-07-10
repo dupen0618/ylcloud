@@ -22,10 +22,10 @@ public class WmSellDailyBatchForFinanceGetRequest extends AbstractRequest{
 	private Date orderDate;
 	
 	@NotNull(message = "分页开始位置不能为空!")
-	private Long from ;
+	private Integer from ;
 	
 	@NotNull(message = "分页条数不能为空!")
-	private Long limit;
+	private Integer limit;
 	
 	@NotNull(message = "统计标识不能为空!")
 	private Long isCount;//是否是统计查询0不是,1是
@@ -38,20 +38,20 @@ public class WmSellDailyBatchForFinanceGetRequest extends AbstractRequest{
 	public void setIsCount(Long isCount) {
 		this.isCount = isCount;
 	}
-
-	public Long getFrom() {
+	
+	public Integer getFrom() {
 		return from;
 	}
 
-	public void setFrom(Long from) {
+	public void setFrom(Integer from) {
 		this.from = from;
 	}
 
-	public Long getLimit() {
+	public Integer getLimit() {
 		return limit;
 	}
 
-	public void setLimit(Long limit) {
+	public void setLimit(Integer limit) {
 		this.limit = limit;
 	}
 
