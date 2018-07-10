@@ -35,6 +35,8 @@ public class ProductFastEntryRequest extends AbstractUserSessionRequest {
     private Long pty2NumId;      //中类
     
     private Long pty3NumId;      //小类
+    
+    private Long isSsPb;
 
 	public Long getSubUnitNumId() {
 		return subUnitNumId;
@@ -106,6 +108,14 @@ public class ProductFastEntryRequest extends AbstractUserSessionRequest {
 
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
+	}
+
+	public Long getIsSsPb() {
+		return isSsPb;
+	}
+
+	public void setIsSsPb(Long isSsPb) {
+		this.isSsPb = isSsPb;
 	}
     
     

@@ -8,6 +8,13 @@ import com.ykcloud.soa.erp.api.scm.response.*;
 public interface ScmProductService {
 	
 	/**
+	 * 进价调整单导入
+	 * @author tz.x
+	 * @date 2018年7月9日下午1:22:12
+	 */
+	public ChangeCostImportResponse importChangeCost(ChangeCostImportRequest request);
+	
+	/**
 	 * 
 	 * @description
 	 * @author gaoyun.shen
@@ -44,4 +51,8 @@ public interface ScmProductService {
 	
 	//临时、久永售价excel导入
 	public ChangePriceImportResponse importChangePrice(ChangePriceImportRequest request);
+
+	//自动补货参数导入
+	public ReplenishProductShopImportResponse importReplenishProductShop(ReplenishProductShopImportRequest request);
+
 }
