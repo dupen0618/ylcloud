@@ -8,6 +8,13 @@ import com.ykcloud.soa.erp.api.scm.response.*;
 public interface ScmProductService {
 	
 	/**
+	 * 进价调整单导入
+	 * @author tz.x
+	 * @date 2018年7月9日下午1:22:12
+	 */
+	public ChangeCostImportResponse importChangeCost(ChangeCostImportRequest request);
+	
+	/**
 	 * 
 	 * @description
 	 * @author gaoyun.shen
