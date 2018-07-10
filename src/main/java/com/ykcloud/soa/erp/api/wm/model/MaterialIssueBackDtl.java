@@ -11,6 +11,11 @@ public class MaterialIssueBackDtl implements Serializable{
 
 
     private static final long serialVersionUID = -2305750048515780399L;
+    
+    /**
+     * 实收数量
+     */
+    private Double factQty;
 
     private String series;//序号
 
@@ -22,7 +27,15 @@ public class MaterialIssueBackDtl implements Serializable{
 
     private Double pmtQty;//赠品数量
 
-    public String getSeries() {
+    public Double getFactQty() {
+		return factQty;
+	}
+
+	public void setFactQty(Double factQty) {
+		this.factQty = factQty;
+	}
+
+	public String getSeries() {
         return series;
     }
 
