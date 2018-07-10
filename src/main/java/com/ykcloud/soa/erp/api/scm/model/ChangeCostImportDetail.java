@@ -17,9 +17,6 @@ import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 public class ChangeCostImportDetail implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-
-	@NotBlank(message  = "调价单号不能为空!")
-	private String reservedNo;
 	
 	@NotBlank(message  = "调价业务单号不能为空!")
 	private String reservedId;
@@ -39,21 +36,42 @@ public class ChangeCostImportDetail implements Serializable {
 	@ApiField(description = "截止日期")
 	private Date endDay;
 	
+	@ApiField(description = "适用销售起始日期")
+	private Date salesBeginDay;
+	
+	@ApiField(description = "适用销售截至日期")
+	private Date salesEndDay;
+	
+	@ApiField(description = "调整销售成本标识")
+	private Long upSellFlag;
+	
+	@NotNull(message = "单据状态不能为空!")
+	private Long statusNumId;
+	
+	@NotNull(message = "商品部类不能为空!")
+	private Long divID;
+	
+	@ApiField(description = "调整库存成本标识")
+	private Long upCostFlag;
+	
+	@ApiField(description = "是否同时修改最新进货价")
+	private Long latelyCostFlag;
+	
 	@NotBlank(message = "商品商家编码不能为空!")
 	private String itemid;
 	
-	@NotNull(message = "新售价不能为空!")
-	private Double price;
+	@NotNull(message = "原进价不能为空!")
+	private Double ordCost;
 	
-	@NotBlank(message = "门店编码不能为空!")
-	private String subUnitId;
-
-	public String getReservedNo() {
-		return reservedNo;
+	@NotNull(message = "供应商不能为空!")
+	private String supplyUnitId;
+	
+	public String getSupplyUnitId() {
+		return supplyUnitId;
 	}
 
-	public void setReservedNo(String reservedNo) {
-		this.reservedNo = reservedNo;
+	public void setSupplyUnitId(String supplyUnitId) {
+		this.supplyUnitId = supplyUnitId;
 	}
 
 	public String getReservedId() {
@@ -112,20 +130,68 @@ public class ChangeCostImportDetail implements Serializable {
 		this.itemid = itemid;
 	}
 
-	public Double getPrice() {
-		return price;
+	public Date getSalesBeginDay() {
+		return salesBeginDay;
 	}
 
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setSalesBeginDay(Date salesBeginDay) {
+		this.salesBeginDay = salesBeginDay;
 	}
 
-	public String getSubUnitId() {
-		return subUnitId;
+	public Date getSalesEndDay() {
+		return salesEndDay;
 	}
 
-	public void setSubUnitId(String subUnitId) {
-		this.subUnitId = subUnitId;
+	public void setSalesEndDay(Date salesEndDay) {
+		this.salesEndDay = salesEndDay;
+	}
+
+	public Long getUpSellFlag() {
+		return upSellFlag;
+	}
+
+	public void setUpSellFlag(Long upSellFlag) {
+		this.upSellFlag = upSellFlag;
+	}
+
+	public Long getStatusNumId() {
+		return statusNumId;
+	}
+
+	public void setStatusNumId(Long statusNumId) {
+		this.statusNumId = statusNumId;
+	}
+
+	public Long getDivID() {
+		return divID;
+	}
+
+	public void setDivID(Long divID) {
+		this.divID = divID;
+	}
+
+	public Long getUpCostFlag() {
+		return upCostFlag;
+	}
+
+	public void setUpCostFlag(Long upCostFlag) {
+		this.upCostFlag = upCostFlag;
+	}
+
+	public Long getLatelyCostFlag() {
+		return latelyCostFlag;
+	}
+
+	public void setLatelyCostFlag(Long latelyCostFlag) {
+		this.latelyCostFlag = latelyCostFlag;
+	}
+
+	public Double getOrdCost() {
+		return ordCost;
+	}
+
+	public void setOrdCost(Double ordCost) {
+		this.ordCost = ordCost;
 	}
 
 }
