@@ -19,7 +19,7 @@ public class ImportProtocol implements Serializable {
 	@NotEmpty(message="供应商编号不能为空!")
 	private String supplyUnitId;  //供应商
 	
-	@NotEmpty(message="签订日期不能为空!")
+	//@NotEmpty(message="签订日期不能为空!")  原来不可为空,ld可为空
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date makeDate; //签订日期
 	
@@ -34,6 +34,7 @@ public class ImportProtocol implements Serializable {
 	@NotEmpty(message="商品商家编码不能为空!")
 	private String itemid; //商品商家编码
 	
+	//原可以为空,现在不可为空
 	private String itemName;//中文全称
 	
 	private String enItemName; //英文全称
