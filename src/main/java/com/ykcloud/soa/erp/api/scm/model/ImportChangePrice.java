@@ -17,7 +17,6 @@ public class ImportChangePrice implements Serializable {
 	@NotEmpty(message ="单据号不能为空！")
 	private String reservedId;  
 	
-	@NotEmpty(message ="调价主题不能为空！")
 	private String remark;
 	
 	@NotNull(message ="调整类型不能为空！")
