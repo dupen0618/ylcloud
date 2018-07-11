@@ -18,12 +18,14 @@ import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyBatchAuditRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyByAuthorConfirmRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReplenishApplyDtlImportRequest;
 import com.ykcloud.soa.erp.api.scm.request.ReturnApprovalNumIdByApplyNumIdGetRequest;
+import com.ykcloud.soa.erp.api.scm.request.UnaduitApplyDeleteRequest;
 import com.ykcloud.soa.erp.api.scm.response.ApprovalOrderGenerateResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyBatchAuditResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyByAuthorConfirmResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReplenishApplyDtlImportResponse;
 import com.ykcloud.soa.erp.api.scm.response.ReturnApprovalNumIdByApplyNumIdGetResponse;
+import com.ykcloud.soa.erp.api.scm.response.UnaduitApplyDeleteResponse;
 
 
 /**
@@ -61,4 +63,8 @@ public interface ScmReplenishService {
 
 	//快速录入
 	public ProductFastEntryResponse fastEntryProduct(ProductFastEntryRequest request);
+
+	//删除未审核的补货申请单
+	public UnaduitApplyDeleteResponse deleteUnaduitApply(UnaduitApplyDeleteRequest request);
+	
 }
