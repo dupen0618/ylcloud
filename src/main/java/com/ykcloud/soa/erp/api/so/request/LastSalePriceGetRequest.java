@@ -1,9 +1,10 @@
 package com.ykcloud.soa.erp.api.so.request;
 
-import java.util.Date;
-import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
+
+import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 /**
  * 计算商品最后售价接口入参
