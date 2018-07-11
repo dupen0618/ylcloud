@@ -13,6 +13,11 @@ public class ImportReceiptForBeginning implements Serializable {
 	private static final long serialVersionUID = 830953621236548125L;
 	
 	/**
+	 * 批次号
+	 */
+	private String batchid;
+	
+	/**
 	 * 供应商id
 	 */
 	private String unitId;
@@ -66,6 +71,14 @@ public class ImportReceiptForBeginning implements Serializable {
 	 * 税率
 	 */
 	private Double taxRate;
+
+	public String getBatchid() {
+		return batchid;
+	}
+
+	public void setBatchid(String batchid) {
+		this.batchid = batchid;
+	}
 
 	public String getUnitId() {
 		return unitId;
