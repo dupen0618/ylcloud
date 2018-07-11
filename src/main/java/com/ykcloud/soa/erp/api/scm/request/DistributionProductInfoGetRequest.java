@@ -12,7 +12,8 @@ import java.util.Date;
 public class DistributionProductInfoGetRequest extends AbstractRequest {
 	private static final long serialVersionUID = 1L;
 	
-	protected Long logisticsType = 3L;
+	@NotNull(message = "物流方式不能为空！")
+	private Long logisticsType;
 
 	@NotNull(message = "门店编号不能为空")
 	private Long subUnitNumId;

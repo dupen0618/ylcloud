@@ -63,9 +63,20 @@ public class ChangeCostImportDetail implements Serializable {
 	@NotNull(message = "原进价不能为空!")
 	private Double ordCost;
 	
+	@NotNull(message = "新进价不能为空!")
+	private Double newCost;
+	
 	@NotNull(message = "供应商不能为空!")
 	private String supplyUnitId;
 	
+	public Double getNewCost() {
+		return newCost;
+	}
+
+	public void setNewCost(Double newCost) {
+		this.newCost = newCost;
+	}
+
 	public String getSupplyUnitId() {
 		return supplyUnitId;
 	}
