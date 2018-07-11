@@ -5,9 +5,19 @@ import com.ykcloud.soa.erp.api.sync.request.ChangePriceVipSynRequest;
 import com.ykcloud.soa.erp.api.sync.request.ProtocolSyncRequest;
 import com.ykcloud.soa.erp.api.sync.response.ChangePriceSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.ChangeVipPriceSynResponse;
+import com.ykcloud.soa.erp.api.sync.request.ChangeCostSyncRequest;
+import com.ykcloud.soa.erp.api.sync.request.ProtocolSyncRequest;
+import com.ykcloud.soa.erp.api.sync.response.ChangeCostSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.ProtocolSyncResponse;
 
 public interface SyncProductService {
+	
+	/**
+	 * 同步进价调整
+	 * @author tz.x
+	 * @date 2018年7月10日下午1:57:57
+	 */
+	public ChangeCostSyncResponse syncChangeCost(ChangeCostSyncRequest request);
 
 	// 同步采购协议
 	public ProtocolSyncResponse syncProtocol(ProtocolSyncRequest request);
