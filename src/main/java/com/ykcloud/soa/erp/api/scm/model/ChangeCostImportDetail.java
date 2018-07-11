@@ -18,16 +18,16 @@ public class ChangeCostImportDetail implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@NotBlank(message  = "调价业务单号不能为空!")
+	@NotBlank(message  = "调价业务单号不能为空！")
 	private String reservedId;
 	
-	@NotNull(message = "调整类型不能为空!")
+	@NotNull(message = "调整类型不能为空！")
 	private Long typeNumId;
 	
 	@ApiField(description = "备注")
 	private String remark;
 	
-	@NotNull(message = "签订日期不能为空!")
+	@NotNull(message = "签订日期不能为空！")
 	private Date makeDate;
 	
 	@ApiField(description = "起始日期")
@@ -42,31 +42,31 @@ public class ChangeCostImportDetail implements Serializable {
 	@ApiField(description = "适用销售截至日期")
 	private Date salesEndDay;
 	
-	@ApiField(description = "调整销售成本标识")
+	@NotNull(message = "调整销售成本标识不能为空！")
 	private Long upSellFlag;
 	
-	@NotNull(message = "单据状态不能为空!")
+	@NotNull(message = "单据状态不能为空！")
 	private Long statusNumId;
 	
-	@NotNull(message = "商品部类不能为空!")
+	@NotNull(message = "商品部类不能为空！")
 	private Long divID;
 	
-	@ApiField(description = "调整库存成本标识")
+	@NotNull(message = "调整库存成本标识不能为空！")
 	private Long upCostFlag;
 	
-	@ApiField(description = "是否同时修改最新进货价")
+	@NotNull(message = "是否同时修改最新进货价标识不能为空！")
 	private Long latelyCostFlag;
 	
-	@NotBlank(message = "商品商家编码不能为空!")
+	@NotBlank(message = "商品商家编码不能为空！")
 	private String itemid;
 	
-	@NotNull(message = "原进价不能为空!")
+	@NotNull(message = "原进价不能为空！")
 	private Double ordCost;
 	
-	@NotNull(message = "新进价不能为空!")
+	@NotNull(message = "新进价不能为空！")
 	private Double newCost;
 	
-	@NotNull(message = "供应商不能为空!")
+	@NotNull(message = "供应商不能为空！")
 	private String supplyUnitId;
 	
 	public Double getNewCost() {

@@ -17,14 +17,9 @@ public class ChangeCostImportErrors implements Serializable {
 	private String reservedNo;
 	
 	/**
-	 * 调整类型
-	 */
-	private Long typeNumId;
-	
-	/**
 	 * 门店编码
 	 */
-	private Long subUnitId;
+	private String subUnitId;
 	
 	/**
 	 * 错误明细
@@ -47,19 +42,11 @@ public class ChangeCostImportErrors implements Serializable {
 		this.reservedNo = reservedNo;
 	}
 
-	public Long getTypeNumId() {
-		return typeNumId;
-	}
-
-	public void setTypeNumId(Long typeNumId) {
-		this.typeNumId = typeNumId;
-	}
-
-	public Long getSubUnitId() {
+	public String getSubUnitId() {
 		return subUnitId;
 	}
 
-	public void setSubUnitId(Long subUnitId) {
+	public void setSubUnitId(String subUnitId) {
 		this.subUnitId = subUnitId;
 	}
 
