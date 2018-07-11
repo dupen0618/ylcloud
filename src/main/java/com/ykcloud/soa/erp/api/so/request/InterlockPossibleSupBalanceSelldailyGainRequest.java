@@ -24,6 +24,16 @@ public class InterlockPossibleSupBalanceSelldailyGainRequest extends AbstractReq
 
     private Long divNumId;
 
+    private String balanceFlag;
+
+    public String getBalanceFlag() {
+        return balanceFlag;
+    }
+
+    public void setBalanceFlag(String balanceFlag) {
+        this.balanceFlag = balanceFlag;
+    }
+
     public Long getSubUnitNumId() {
         return subUnitNumId;
     }

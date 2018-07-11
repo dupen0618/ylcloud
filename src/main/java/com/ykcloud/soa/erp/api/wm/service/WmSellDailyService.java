@@ -8,6 +8,8 @@ import com.ykcloud.soa.erp.api.wm.response.NegativeStockBatchAdjustmentResponse;
 import com.ykcloud.soa.erp.api.wm.response.PoorInvertedExtrusionShipSellDailyCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.PoorInvertedExtrusionShipSellDailyHdrCreateResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailyCollectResponse;
+import com.ykcloud.soa.erp.api.wm.response.SuccessLogChangeResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmBatchForDailyAccountAdjustResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmSellDailyBatchForFinanceGetResponse;
 
 /**
@@ -101,4 +103,14 @@ public interface WmSellDailyService {
      * 查询出库日报批次扣减财务账
      */
     WmSellDailyBatchForFinanceGetResponse getWmSellDailyBatchForFinance(WmSellDailyBatchForFinanceGetRequest request);
+    
+    /**
+     * 为出库日报调整物流批次(顺序消息接口)
+     */
+    WmBatchForDailyAccountAdjustResponse adjustWmBatchForDailyAccount(WmBatchForDailyAccountAdjustRequest request);
+    
+    /**
+     * 修改成功日志表的状态
+     */
+    SuccessLogChangeResponse changeSuccessLog(SuccessLogChangeRequest request);
 }

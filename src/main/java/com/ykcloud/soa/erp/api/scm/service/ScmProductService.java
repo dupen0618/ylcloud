@@ -46,6 +46,13 @@ public interface ScmProductService {
     //copy采购协议
 	public ProtocolShopCopyResponse copyProtocolShop(ProtocolShopCopyRequest request);
 	
+	//会员售价excel导入
+	public VipPriceImportResponse importVipPrice(VipPriceImportRequest request);
+	
+	//临时、久永售价excel导入
+	public ChangePriceImportResponse importChangePrice(ChangePriceImportRequest request);
+
 	//自动补货参数导入
 	public ReplenishProductShopImportResponse importReplenishProductShop(ReplenishProductShopImportRequest request);
+
 }
