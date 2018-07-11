@@ -1,9 +1,11 @@
 package com.ykcloud.soa.erp.api.sync.service;
 
 
-import com.ykcloud.soa.erp.api.sync.response.SyncSubUnitImportResponse;
+import com.ykcloud.soa.erp.api.sync.request.SubUnitSyncRequest;
+import com.ykcloud.soa.erp.api.sync.response.SubUnitSyncResponse;
 
 public interface SyncShopService {
 
-	SyncSubUnitImportResponse syncSubUnit();
+	SubUnitSyncResponse syncSubUnit(SubUnitSyncRequest request);
+
 }
