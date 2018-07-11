@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
-public class ProductAndCost {
+import java.io.Serializable;
+
+public class ProductAndCost implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private Long itemNumId;// 商品主键
@@ -40,7 +42,7 @@ public class ProductAndCost {
     private Long pickingPlanNumId;//领料方案
     private Long classifyNumId;//商品归集码
     private Long checkPlanNumId;//盘点计划
-    private Double batchCostPrice;//批次最高价
+    private Double costPrice;//批次最高价
     private Double salePrice;//销售价格
 
     public Long getItemNumId() {
@@ -339,12 +341,12 @@ public class ProductAndCost {
         this.checkPlanNumId = checkPlanNumId;
     }
 
-    public Double getBatchCostPrice() {
-        return batchCostPrice;
+    public Double getCostPrice() {
+        return costPrice;
     }
 
-    public void setBatchCostPrice(Double batchCostPrice) {
-        this.batchCostPrice = batchCostPrice;
+    public void setCostPrice(Double costPrice) {
+        this.costPrice = costPrice;
     }
 
     public Double getSalePrice() {

@@ -20,6 +20,16 @@ public class InterlockCollectSelldailyGainAppointRequest extends AbstractRequest
     @NotNull(message = "到扣率不能为空！")
     private Double backoffRate;
 
+    private String balanceFlag;
+
+    public String getBalanceFlag() {
+        return balanceFlag;
+    }
+
+    public void setBalanceFlag(String balanceFlag) {
+        this.balanceFlag = balanceFlag;
+    }
+
     public Long getBalanceSubUnitNumId() {
         return balanceSubUnitNumId;
     }
