@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author tz.x
@@ -166,5 +167,22 @@ public class FiBlDealingsItemDtl implements Serializable {
 		this.dealingsNumId = dealingsNumId;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (!(o instanceof FiBlDealingsItemDtl)) {
+			return false;
+		}
+		FiBlDealingsItemDtl that = (FiBlDealingsItemDtl) o;
+		return Objects.equals(settlementType, that.settlementType) && Objects.equals(itemNumId, that.itemNumId)
+				&& Objects.equals(dealingsNumId, that.dealingsNumId);
+	}
 
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(settlementType, itemNumId, dealingsNumId);
+	}
 }

@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * 
@@ -142,4 +143,25 @@ public class FiBlDealingsDtl implements Serializable {
 		this.newTaxRate = newTaxRate;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (!(o instanceof FiBlDealingsDtl)) {
+			return false;
+		}
+		FiBlDealingsDtl that = (FiBlDealingsDtl) o;
+		return Objects.equals(balanceDate, that.balanceDate) && Objects.equals(settlementType, that.settlementType)
+				&& Objects.equals(ptyNum3, that.ptyNum3) && Objects.equals(oldCostAmount, that.oldCostAmount)
+				&& Objects.equals(oldTaxAmount, that.oldTaxAmount) && Objects.equals(oldTaxRate, that.oldTaxRate)
+				&& Objects.equals(newCostAmount, that.newCostAmount) && Objects.equals(newTaxAmount, that.newTaxAmount)
+				&& Objects.equals(newTaxRate, that.newTaxRate) && Objects.equals(dealingsNumId, that.dealingsNumId);
+	}
+
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(balanceDate, settlementType, ptyNum3, dealingsNumId);
+	}
 }

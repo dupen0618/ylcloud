@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author tz.x
@@ -45,5 +46,23 @@ public class BatchAmountAndTaxAmountForAdjust implements Serializable {
 
 	public void setAdjustTaxAmount(Double adjustTaxAmount) {
 		this.adjustTaxAmount = adjustTaxAmount;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (!(o instanceof BatchAmountAndTaxAmountForAdjust)) {
+			return false;
+		}
+		BatchAmountAndTaxAmountForAdjust that = (BatchAmountAndTaxAmountForAdjust) o;
+		return Objects.equals(series, that.series);
+	}
+
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(series);
 	}
 }
