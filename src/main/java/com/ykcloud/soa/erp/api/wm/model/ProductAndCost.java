@@ -1,6 +1,8 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
-public class ProductAndCost {
+import java.io.Serializable;
+
+public class ProductAndCost implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private Long itemNumId;// 商品主键
