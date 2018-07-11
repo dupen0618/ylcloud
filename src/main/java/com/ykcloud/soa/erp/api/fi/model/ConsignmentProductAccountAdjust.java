@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author tz.x
@@ -61,6 +62,22 @@ public class ConsignmentProductAccountAdjust implements Serializable {
 	public void setAdjustTaxAmount(Double adjustTaxAmount) {
 		this.adjustTaxAmount = adjustTaxAmount;
 	}
-	
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (!(o instanceof ConsignmentProductAccountAdjust)) {
+			return false;
+		}
+		ConsignmentProductAccountAdjust that = (ConsignmentProductAccountAdjust) o;
+		return Objects.equals(itemNumId, that.itemNumId) && Objects.equals(supplyUnitNumId, that.supplyUnitNumId);
+	}
+
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(itemNumId, supplyUnitNumId);
+	}
 }

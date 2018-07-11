@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * 商品成本金额调整明细
@@ -78,4 +79,22 @@ public class CostAmountAndTaxAmountForAdjust implements Serializable {
 		this.orderDate = orderDate;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (!(o instanceof CostAmountAndTaxAmountForAdjust)) {
+			return false;
+		}
+		CostAmountAndTaxAmountForAdjust that = (CostAmountAndTaxAmountForAdjust) o;
+		return Objects.equals(itemNumId, that.itemNumId) && Objects.equals(physicalNumId, that.physicalNumId)
+				&& Objects.equals(orderDate, that.orderDate);
+	}
+
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(itemNumId, physicalNumId, orderDate);
+	}
 }

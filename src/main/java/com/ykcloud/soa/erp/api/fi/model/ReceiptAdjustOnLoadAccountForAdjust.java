@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author tz.x
@@ -75,4 +76,22 @@ public class ReceiptAdjustOnLoadAccountForAdjust implements Serializable {
 		this.diffAmount = diffAmount;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (!(o instanceof ReceiptAdjustOnLoadAccountForAdjust)) {
+			return false;
+		}
+		ReceiptAdjustOnLoadAccountForAdjust that = (ReceiptAdjustOnLoadAccountForAdjust) o;
+		return Objects.equals(subUnitNumId, that.subUnitNumId) && Objects.equals(custSubUnitNumId, that.custSubUnitNumId)
+				&& Objects.equals(supplyUnitNumId, that.supplyUnitNumId) && Objects.equals(itemNumId, that.itemNumId);
+	}
+
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(subUnitNumId, custSubUnitNumId, supplyUnitNumId, itemNumId);
+	}
 }
