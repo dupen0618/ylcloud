@@ -1,16 +1,14 @@
 package com.ykcloud.soa.erp.api.sync.service;
 
+import com.ykcloud.soa.erp.api.sync.request.BasicProductSyncRequest;
+import com.ykcloud.soa.erp.api.sync.request.ChangeCostSyncRequest;
 import com.ykcloud.soa.erp.api.sync.request.ChangePriceSynRequest;
 import com.ykcloud.soa.erp.api.sync.request.ChangePriceVipSynRequest;
 import com.ykcloud.soa.erp.api.sync.request.ProtocolSyncRequest;
+import com.ykcloud.soa.erp.api.sync.response.BasicProductSyncResponse;
+import com.ykcloud.soa.erp.api.sync.response.ChangeCostSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.ChangePriceSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.ChangeVipPriceSynResponse;
-import com.ykcloud.soa.erp.api.sync.request.ChangeCostSyncRequest;
-import com.ykcloud.soa.erp.api.sync.request.ProtocolSyncRequest;
-import com.ykcloud.soa.erp.api.sync.response.ChangeCostSyncResponse;
-import com.ykcloud.soa.erp.api.sync.request.BasicProductSyncRequest;
-import com.ykcloud.soa.erp.api.sync.request.ProtocolSyncRequest;
-import com.ykcloud.soa.erp.api.sync.response.BasicProductSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.ProtocolSyncResponse;
 
 public interface SyncProductService {
