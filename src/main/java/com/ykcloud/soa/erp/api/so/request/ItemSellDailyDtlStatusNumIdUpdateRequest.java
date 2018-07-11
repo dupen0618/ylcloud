@@ -17,6 +17,16 @@ public class ItemSellDailyDtlStatusNumIdUpdateRequest extends AbstractUserSessio
     @NotNull(message = "结算状态不能为空! ")
     Long statusNumId;
 
+    public String statusNumFlag;
+
+    public String getStatusNumFlag() {
+        return statusNumFlag;
+    }
+
+    public void setStatusNumFlag(String statusNumFlag) {
+        this.statusNumFlag = statusNumFlag;
+    }
+
     public List<BillDtlForWriteBackStatus> getBillDtlForWriteBackStatusList() {
         return billDtlForWriteBackStatusList;
     }

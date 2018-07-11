@@ -23,6 +23,15 @@ public class ItemSellDailyHdrAndDtlStatusNumIdUpdateRequest extends AbstractUser
     @NotNull(message = "结算状态不能为空！")//表体结算状态
     private Long statusNumId;
     private Long hdrStatusNumId;//表头结算状态
+    private String statusFlag;//判断取status OR headStatus
+
+    public String getStatusFlag() {
+        return statusFlag;
+    }
+
+    public void setStatusFlag(String statusFlag) {
+        this.statusFlag = statusFlag;
+    }
 
     public String getReservedNo() {
         return reservedNo;
