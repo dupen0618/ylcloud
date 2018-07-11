@@ -2,6 +2,7 @@ package com.ykcloud.soa.erp.api.fi.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author tz.x
@@ -135,5 +136,24 @@ public class WeightedAveragePriceForAdjust implements Serializable {
 	 */
 	public void setQty(Double qty) {
 		this.qty = qty;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (!(o instanceof WeightedAveragePriceForAdjust)) {
+			return false;
+		}
+		WeightedAveragePriceForAdjust that = (WeightedAveragePriceForAdjust) o;
+		return Objects.equals(justDate, that.justDate) && Objects.equals(itemNumId, that.itemNumId) && Objects.equals(
+				physicalNumId, that.physicalNumId);
+	}
+
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(justDate, itemNumId, physicalNumId);
 	}
 }
