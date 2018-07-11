@@ -29,8 +29,6 @@ public class ApprovalOrderGenerateRequest extends AbstractRequest {
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date orderDate;// 日期，格式：yyyy-mm-dd
 
-
-	@NotNull
 	private Long onlyFdc;// 1:只集生鲜商品(16:00集生鲜商品用,0:不限定 1：限定生鲜)
 
 	public Date getOrderDate() {
