@@ -15,8 +15,20 @@ import java.util.List;
  */
 public class ScmBlContractRequest extends AbstractUserSessionRequest {
 
+    private static final long serialVersionUID = 4532031481794036021L;
     @NotNull(message = "合同数据不能为空!")
     private List<ScmBlContract> scmBlContractList;
+
+    private Integer skipExistSign;
+    private Integer checkSign;
+
+    public Integer getSkipExistSign() {
+        return skipExistSign;
+    }
+
+    public void setSkipExistSign(Integer skipExistSign) {
+        this.skipExistSign = skipExistSign;
+    }
 
     public List<ScmBlContract> getScmBlContractList() {
         return scmBlContractList;
@@ -24,5 +36,13 @@ public class ScmBlContractRequest extends AbstractUserSessionRequest {
 
     public void setScmBlContractList(List<ScmBlContract> scmBlContractList) {
         this.scmBlContractList = scmBlContractList;
+    }
+
+    public Integer getCheckSign() {
+        return checkSign;
+    }
+
+    public void setCheckSign(Integer checkSign) {
+        this.checkSign = checkSign;
     }
 }

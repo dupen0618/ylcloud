@@ -6,5 +6,5 @@ import com.gb.soa.omp.ccommon.api.response.MessagePack;
  * @Author Hewei
  * @Date 2018/7/10 9:42
  */
-public class SupplyUnitModifySyncResponse extends MessagePack {
+public class SupplyUnitSyncResponse extends MessagePack {
 }
