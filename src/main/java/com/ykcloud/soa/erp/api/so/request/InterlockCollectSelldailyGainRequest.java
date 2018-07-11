@@ -25,6 +25,16 @@ public class InterlockCollectSelldailyGainRequest extends AbstractRequest {
     @NotNull(message = "经营方式不能为空！")
     private Long settlementType;
 
+    private String balanceFlag;
+
+    public String getBalanceFlag() {
+        return balanceFlag;
+    }
+
+    public void setBalanceFlag(String balanceFlag) {
+        this.balanceFlag = balanceFlag;
+    }
+
     public Long getSubUnitNumId() {
         return subUnitNumId;
     }
