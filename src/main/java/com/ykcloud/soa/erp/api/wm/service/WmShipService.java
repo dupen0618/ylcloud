@@ -239,6 +239,25 @@ public interface WmShipService {
 		public ReverseReceiptFinishResponse finishReverseShipReceipt(ReverseReceiptFinishRequest request);
 		/**
 		 * 
+		 * @description 反配、行政领料退库收货完成
+		 * @author gaoyun.shen
+		 * @date: 2018年4月19日 下午5:50:18
+		 * @param 
+		 * @return
+		 */
+		public ReverseReceiptFinishResponse finishReverseShipReceiptWithOrderFlowMessage(ReverseReceiptFinishRequest request);
+		
+		/**
+		 * 
+		 * @description
+		 * @author gaoyun.shen
+		 * @date: 2018年7月11日 下午9:58:35
+		 * @param 
+		 * @return  财务入账成功后，更新负出库单状态为2
+		 */
+		public ReverseReceiptFinishResponse finishReverseShipReceiptAfterFinance(ReverseReceiptFinishRequest request);
+		/**
+		 * 
 		 * @author Dan
 		 * @date 2018年4月20日
 		 * @description 出库反配产生验收单(通过反配托盘)
