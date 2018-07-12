@@ -16,7 +16,7 @@ public class ImportProtocol implements Serializable {
 	@NotEmpty(message="采购业务单号不能为空!")
 	private String reservedId;  //采购业务单号  1,2都不能为空
 	
-	private String supplyCortId; //采购途径   2不可为空
+	private String supplyCortId; //供应商核算   2不可为空
 	
 	@NotEmpty(message="供应商编号不能为空!")   
 	private String supplyUnitId;  //供应商  12都不能为空
@@ -66,7 +66,7 @@ public class ImportProtocol implements Serializable {
 	private String productOriginId; //原产地
 	
 	@NotEmpty(message="商品品牌不能为空!")
-	private String brandId;      //商品品牌
+	private String brandSimNo;      //商品品牌
 	
 	private Double grossProfitRate;  //毛利率
 	
@@ -360,12 +360,14 @@ public class ImportProtocol implements Serializable {
 		this.productOriginId = productOriginId;
 	}
 
-	public String getBrandId() {
-		return brandId;
+	
+
+	public String getBrandSimNo() {
+		return brandSimNo;
 	}
 
-	public void setBrandId(String brandId) {
-		this.brandId = brandId;
+	public void setBrandSimNo(String brandSimNo) {
+		this.brandSimNo = brandSimNo;
 	}
 
 	public Double getGrossProfitRate() {
