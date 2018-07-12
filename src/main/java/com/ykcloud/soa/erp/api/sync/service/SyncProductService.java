@@ -7,6 +7,7 @@ import com.ykcloud.soa.erp.api.sync.request.ChangePriceVipSynRequest;
 import com.ykcloud.soa.erp.api.sync.request.DmSynRequest;
 import com.ykcloud.soa.erp.api.sync.request.PriceCutSynRequest;
 import com.ykcloud.soa.erp.api.sync.request.ProtocolSyncRequest;
+import com.ykcloud.soa.erp.api.sync.request.StockSyncRequest;
 import com.ykcloud.soa.erp.api.sync.response.BasicProductSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.ChangeCostSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.ChangePriceSynResponse;
@@ -14,8 +15,16 @@ import com.ykcloud.soa.erp.api.sync.response.ChangeVipPriceSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.DmSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.PriceCutSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.ProtocolSyncResponse;
+import com.ykcloud.soa.erp.api.sync.response.StockSyncResponse;
 
 public interface SyncProductService {
+	
+	/**
+	 * 期初库存同步
+	 * @author tz.x
+	 * @date 2018年7月11日下午2:13:55
+	 */
+	public StockSyncResponse syncStock(StockSyncRequest request);
 	
 	/**
 	 * 同步进价调整

@@ -1,5 +1,7 @@
 package com.ykcloud.soa.erp.api.wm.response;
 
+import java.util.Date;
+
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 
 /**
@@ -21,6 +23,16 @@ public class ProductByBarcodeForReceiptGetResponse extends MessagePack {
 	private Double receiptProductConfirmQty;// 订单商品已收数量
 	private Double receiptQty;// 订单应收数量
 	private Double receiptConfirmQty;// 订单已收数量
+	private Date supConfirmDate;// 供应商确认生产日期
+	
+
+	public Date getSupConfirmDate() {
+		return supConfirmDate;
+	}
+
+	public void setSupConfirmDate(Date supConfirmDate) {
+		this.supConfirmDate = supConfirmDate;
+	}
 
 	public Long getItemNumId() {
 		return itemNumId;

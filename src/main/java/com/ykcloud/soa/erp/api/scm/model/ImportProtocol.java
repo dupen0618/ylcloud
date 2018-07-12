@@ -13,13 +13,15 @@ public class ImportProtocol implements Serializable {
 	 * 导入采购协议
 	 */
 	private static final long serialVersionUID = 1L;
-	@NotEmpty(message="采购单号不能为空!")
-	private String reservedNo;  //采购单号
+	@NotEmpty(message="采购业务单号不能为空!")
+	private String reservedId;  //采购业务单号  1,2都不能为空
 	
-	@NotEmpty(message="供应商编号不能为空!")
-	private String supplyUnitId;  //供应商
+	private String supplyCortId; //供应商核算   2不可为空
 	
-	//@NotEmpty(message="签订日期不能为空!")  原来不可为空,ld可为空
+	@NotEmpty(message="供应商编号不能为空!")   
+	private String supplyUnitId;  //供应商  12都不能为空
+	
+	//@NotEmpty(message="签订日期不能为空!")  原来不可为空,ld可为空1不为空 2可为空
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date makeDate; //签订日期
 	
@@ -31,26 +33,28 @@ public class ImportProtocol implements Serializable {
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date endDay;   //结束日期
 	
+	private String makeEmpeId; //业务员    
+	
 	@NotEmpty(message="商品商家编码不能为空!")
 	private String itemid; //商品商家编码
 	
 	//原可以为空,现在不可为空
-	private String itemName;//中文全称
+	private String itemName;//中文全称    2不可为空
 	
-	private String enItemName; //英文全称
+	private String enItemName; //英文全称  
 	
-	private String simItemName; //中文简称
+	private String simItemName; //中文简称 
 	
-	private String enSmpItemName;//英文简称
+	private String enSmpItemName;//英文简称  
 	
-	private Double retailPrice;  //售价
+	private Double retailPrice;  //售价   2不可为空
 	
-	private Double referencePrice;//参考价格
+	private Double referencePrice;//参考价格  
 	
-	private String styleDesc;//销售规格
+	private String styleDesc;//销售规格   2不能为空
 	
 	@NotEmpty(message="小类不能为空!")
-	private Long pty3NumId;//小类
+	private String pty3SimNo;//小类       
 	
 	@NotEmpty(message="条码类型不能为空!")
 	private Long barcodeTypeNumId;//条码类型
@@ -59,23 +63,23 @@ public class ImportProtocol implements Serializable {
 	private String barcode1;    //商品条码
 	
 	@NotEmpty(message="原产地不能为空!")
-	private Long productOriginNumId; //原产地
+	private String productOriginId; //原产地
 	
 	@NotEmpty(message="商品品牌不能为空!")
-	private Long brandId;      //商品品牌
+	private String brandSimNo;      //商品品牌
 	
 	private Double grossProfitRate;  //毛利率
 	
 	private Double weight;//重量
 	
 	@NotEmpty(message="重量单位不能为空!")
-	private Long weightUnitNumId; //重量单位
+	private String weightUnitId; //重量单位
 	
-	private Double cost;//进价
+	private Double cost;//进价          2不能为空
 	
-	private Double costTaxRate;//进价税率
+	private Double costTaxRate;//进价税率  2不能为空
 	
-	private Double saleTaxRate; //销项税率
+	private Double saleTaxRate; //销项税率     2不能为空
 	
 	@NotEmpty(message="库存管理类型不能为空!")
 	private Long stockType;//库存管理类型
@@ -87,12 +91,20 @@ public class ImportProtocol implements Serializable {
 	
 	private Double baseCost;//基本报价
 	
+	private String barcode2;  //条码2
+	
 	@NotEmpty(message="基本销售计量单位不能为空!")
-	private String basicUnitNumId;//基本销售计量单位
+	private String basicUnitId;//基本销售计量单位
 	
 	private Double conversionRate;//字母转换率
 	
+	private Date enableDate;//启用日期
+	
 	private String packagingMaterials;//包装材料
+	
+	private String salesPackaging;   //销售材料
+	
+	private Long storageRequirements; //存储条件
 	
 	private String edibleMethod;//适用方法
 	
@@ -110,13 +122,13 @@ public class ImportProtocol implements Serializable {
 	
 	private String ingredient;//原料成分
 	
-	private String seasonMonthFlag;//适用年月
+	private String seasonMonthFlag;//适用年月    2,不能为空
 	
 	private Long tryDays; //试销期
 	
 	private Double trySaleQty; //试销数量
 	
-	private Long checkProductionDaysSign; //收货是否检查生产日期
+	private Long checkProductionDaysSign; //收货是否检查生产日期  2不能为空
 	
 	private Long receiptProductionDays; //可收货生产天数
 	
@@ -124,7 +136,7 @@ public class ImportProtocol implements Serializable {
 	
 	private String ingredientOrigin;//原产地名称
 	
-	private Long isHolidayGift;   //是否节日礼品
+	private Long isHolidayGift;   //是否节日礼品  2要不能为空
 	
 	private Date giftBeginDay;//节日开码日期
 	
@@ -132,7 +144,7 @@ public class ImportProtocol implements Serializable {
 	
 	private Long isOnlineSales;//是否线上销售
 	
-	private Long purchaseTypeNumId; //采购途径
+	private Long purchaseTypeNumId; //采购途径   2不能为空
 	
 	@NotEmpty(message="加工类型不能为空!")
 	private Long isProcessing;  //加工类型
@@ -161,7 +173,7 @@ public class ImportProtocol implements Serializable {
 	
 	private String styleName; //款式名称
 	
-	private Double sellPriceRate; //销售价格因子
+	private Double sellPriceRate; //销售价格因子  2,不能为空
 	
 	@NotEmpty(message="商品类型不能为空!")
 	private Long typeNumId; //商品类型
@@ -191,36 +203,32 @@ public class ImportProtocol implements Serializable {
     private Long pty16NumId;
     
     private Long pty17NumId;
+    
+    private Date bbdate; //保本期
+    
+    private Date bldate; //保利
 
-	public Long getStoreType() {
-		return storeType;
+	public String getReservedId() {
+		return reservedId;
 	}
 
-	public void setStoreType(Long storeType) {
-		this.storeType = storeType;
+	public void setReservedId(String reservedId) {
+		this.reservedId = reservedId;
 	}
 
-	public Long getPty16NumId() {
-		return pty16NumId;
+	public String getSupplyCortId() {
+		return supplyCortId;
 	}
 
-	public void setPty16NumId(Long pty16NumId) {
-		this.pty16NumId = pty16NumId;
-	}
-
-	public Long getPty17NumId() {
-		return pty17NumId;
-	}
-
-	public void setPty17NumId(Long pty17NumId) {
-		this.pty17NumId = pty17NumId;
+	public void setSupplyCortId(String supplyCortId) {
+		this.supplyCortId = supplyCortId;
 	}
 
 	public String getSupplyUnitId() {
 		return supplyUnitId;
 	}
 
-	public void setSupplyUnitNumId(String supplyUnitId) {
+	public void setSupplyUnitId(String supplyUnitId) {
 		this.supplyUnitId = supplyUnitId;
 	}
 
@@ -246,6 +254,14 @@ public class ImportProtocol implements Serializable {
 
 	public void setEndDay(Date endDay) {
 		this.endDay = endDay;
+	}
+
+	public String getMakeEmpeId() {
+		return makeEmpeId;
+	}
+
+	public void setMakeEmpeId(String makeEmpeId) {
+		this.makeEmpeId = makeEmpeId;
 	}
 
 	public String getItemid() {
@@ -312,12 +328,12 @@ public class ImportProtocol implements Serializable {
 		this.styleDesc = styleDesc;
 	}
 
-	public Long getPty3NumId() {
-		return pty3NumId;
+	public String getPty3SimNo() {
+		return pty3SimNo;
 	}
 
-	public void setPty3NumId(Long pty3NumId) {
-		this.pty3NumId = pty3NumId;
+	public void setPty3SimNo(String pty3SimNo) {
+		this.pty3SimNo = pty3SimNo;
 	}
 
 	public Long getBarcodeTypeNumId() {
@@ -336,20 +352,22 @@ public class ImportProtocol implements Serializable {
 		this.barcode1 = barcode1;
 	}
 
-	public Long getProductOriginNumId() {
-		return productOriginNumId;
+	public String getProductOriginId() {
+		return productOriginId;
 	}
 
-	public void setProductOriginNumId(Long productOriginNumId) {
-		this.productOriginNumId = productOriginNumId;
+	public void setProductOriginId(String productOriginId) {
+		this.productOriginId = productOriginId;
 	}
 
-	public Long getBrandId() {
-		return brandId;
+	
+
+	public String getBrandSimNo() {
+		return brandSimNo;
 	}
 
-	public void setBrandId(Long brandId) {
-		this.brandId = brandId;
+	public void setBrandSimNo(String brandSimNo) {
+		this.brandSimNo = brandSimNo;
 	}
 
 	public Double getGrossProfitRate() {
@@ -368,12 +386,12 @@ public class ImportProtocol implements Serializable {
 		this.weight = weight;
 	}
 
-	public Long getWeightUnitNumId() {
-		return weightUnitNumId;
+	public String getWeightUnitId() {
+		return weightUnitId;
 	}
 
-	public void setWeightUnitNumId(Long weightUnitNumId) {
-		this.weightUnitNumId = weightUnitNumId;
+	public void setWeightUnitId(String weightUnitId) {
+		this.weightUnitId = weightUnitId;
 	}
 
 	public Double getCost() {
@@ -432,12 +450,20 @@ public class ImportProtocol implements Serializable {
 		this.baseCost = baseCost;
 	}
 
-	public String getBasicUnitNumId() {
-		return basicUnitNumId;
+	public String getBarcode2() {
+		return barcode2;
 	}
 
-	public void setBasicUnitNumId(String basicUnitNumId) {
-		this.basicUnitNumId = basicUnitNumId;
+	public void setBarcode2(String barcode2) {
+		this.barcode2 = barcode2;
+	}
+
+	public String getBasicUnitId() {
+		return basicUnitId;
+	}
+
+	public void setBasicUnitId(String basicUnitId) {
+		this.basicUnitId = basicUnitId;
 	}
 
 	public Double getConversionRate() {
@@ -448,12 +474,36 @@ public class ImportProtocol implements Serializable {
 		this.conversionRate = conversionRate;
 	}
 
+	public Date getEnableDate() {
+		return enableDate;
+	}
+
+	public void setEnableDate(Date enableDate) {
+		this.enableDate = enableDate;
+	}
+
 	public String getPackagingMaterials() {
 		return packagingMaterials;
 	}
 
 	public void setPackagingMaterials(String packagingMaterials) {
 		this.packagingMaterials = packagingMaterials;
+	}
+
+	public String getSalesPackaging() {
+		return salesPackaging;
+	}
+
+	public void setSalesPackaging(String salesPackaging) {
+		this.salesPackaging = salesPackaging;
+	}
+
+	public Long getStorageRequirements() {
+		return storageRequirements;
+	}
+
+	public void setStorageRequirements(Long storageRequirements) {
+		this.storageRequirements = storageRequirements;
 	}
 
 	public String getEdibleMethod() {
@@ -494,6 +544,14 @@ public class ImportProtocol implements Serializable {
 
 	public void setMaxStorageTemperature(Double maxStorageTemperature) {
 		this.maxStorageTemperature = maxStorageTemperature;
+	}
+
+	public Long getStoreType() {
+		return storeType;
+	}
+
+	public void setStoreType(Long storeType) {
+		this.storeType = storeType;
 	}
 
 	public Double getRelativeHumidity() {
@@ -720,8 +778,6 @@ public class ImportProtocol implements Serializable {
 		this.gpItemNumId = gpItemNumId;
 	}
 
-	
-
 	public String getColorSimNo() {
 		return colorSimNo;
 	}
@@ -729,7 +785,6 @@ public class ImportProtocol implements Serializable {
 	public void setColorSimNo(String colorSimNo) {
 		this.colorSimNo = colorSimNo;
 	}
-
 
 	public String getSizeSimNo() {
 		return sizeSimNo;
@@ -779,17 +834,42 @@ public class ImportProtocol implements Serializable {
 		this.isSsPb = isSsPb;
 	}
 
-	public String getReservedNo() {
-		return reservedNo;
+	public Long getPty16NumId() {
+		return pty16NumId;
 	}
 
-	public void setReservedNo(String reservedNo) {
-		this.reservedNo = reservedNo;
+	public void setPty16NumId(Long pty16NumId) {
+		this.pty16NumId = pty16NumId;
 	}
 
-	public void setSupplyUnitId(String supplyUnitId) {
-		this.supplyUnitId = supplyUnitId;
+	public Long getPty17NumId() {
+		return pty17NumId;
 	}
+
+	public void setPty17NumId(Long pty17NumId) {
+		this.pty17NumId = pty17NumId;
+	}
+
+	public Date getBbdate() {
+		return bbdate;
+	}
+
+	public void setBbdate(Date bbdate) {
+		this.bbdate = bbdate;
+	}
+
+	public Date getBldate() {
+		return bldate;
+	}
+
+	public void setBldate(Date bldate) {
+		this.bldate = bldate;
+	}
+    
+    
+
+   
+
 	
 
 }

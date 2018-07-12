@@ -12,6 +12,11 @@ public class ChangeCostImportErrors implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	/**
+	 * 商品商家编码
+	 */
+	private String itemid;
+	
+	/**
 	 * 调价单号
 	 */
 	private String reservedNo;
@@ -25,6 +30,14 @@ public class ChangeCostImportErrors implements Serializable {
 	 * 错误明细
 	 */
 	private String errorMsg;
+
+	public String getItemid() {
+		return itemid;
+	}
+
+	public void setItemid(String itemid) {
+		this.itemid = itemid;
+	}
 
 	public String getErrorMsg() {
 		return errorMsg;

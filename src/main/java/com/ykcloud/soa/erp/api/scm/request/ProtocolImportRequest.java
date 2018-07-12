@@ -13,6 +13,12 @@ private static final long serialVersionUID = 1L;
 	private List<ImportProtocol> importProtocols;
 	
 	private List<ProtocolShop> protocolShops;
+	
+	// 导入模式：1、严格模式 2、宽松模式
+	private Integer mode;
+
+	// 参数 1-存在跳过 0-存在抛错,基础数据同步不用Txc
+	private Integer skipExistSign;
 
 	public List<ImportProtocol> getImportProtocols() {
 		return importProtocols;
@@ -29,6 +35,23 @@ private static final long serialVersionUID = 1L;
 	public void setProtocolShops(List<ProtocolShop> protocolShops) {
 		this.protocolShops = protocolShops;
 	}
+
+	public Integer getMode() {
+		return mode;
+	}
+
+	public void setMode(Integer mode) {
+		this.mode = mode;
+	}
+
+	public Integer getSkipExistSign() {
+		return skipExistSign;
+	}
+
+	public void setSkipExistSign(Integer skipExistSign) {
+		this.skipExistSign = skipExistSign;
+	}
+	
 	
 
 }

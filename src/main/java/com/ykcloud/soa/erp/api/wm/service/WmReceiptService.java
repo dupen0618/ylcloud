@@ -107,6 +107,15 @@ public interface WmReceiptService {
 	 * @return response{code,message}
 	 */	
 	public UpdateReceiptAccountFinishResponse finishUpdateReceiptAccount(UpdateReceiptAccountFinishRequest request);
+	/**
+	 * 
+	 * @description
+	 * @author gaoyun.shen
+	 * @date: 2018年7月11日 下午5:24:36
+	 * @param 
+	 * @return 顺序消息收货完成操作
+	 */
+	public UpdateReceiptAccountFinishResponse finishUpdateReceiptAccountWithOrderFlowMessage(UpdateReceiptAccountFinishRequest request);
 	
 	/**
 	 *@Description: 6位模糊查询负出库单 
