@@ -1,19 +1,17 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import com.ykcloud.soa.erp.api.scm.model.ScmBlContract;
 
 import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
-import java.util.Date;
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * @Author Hewei
  * @Date 2018/6/22 13:48
  */
-public class ScmBlContractRequest extends AbstractUserSessionRequest {
+public class ScmBlContractRequest extends AbstractRequest {
 
     private static final long serialVersionUID = 4532031481794036021L;
     @NotNull(message = "合同数据不能为空!")
