@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -17,7 +18,7 @@ public class ChangeCostShopImportDetail implements Serializable {
 	private String reservedId;
 	
 	@NotBlank(message = "门店不能为空！")
-	private String subUnitId;
+	private List<String> subUnitIds;
 
 	public String getReservedId() {
 		return reservedId;
@@ -27,12 +28,13 @@ public class ChangeCostShopImportDetail implements Serializable {
 		this.reservedId = reservedId;
 	}
 
-	public String getSubUnitId() {
-		return subUnitId;
+	public List<String> getSubUnitIds() {
+		return subUnitIds;
 	}
 
-	public void setSubUnitId(String subUnitId) {
-		this.subUnitId = subUnitId;
+	public void setSubUnitIds(List<String> subUnitIds) {
+		this.subUnitIds = subUnitIds;
 	}
+
 
 }
