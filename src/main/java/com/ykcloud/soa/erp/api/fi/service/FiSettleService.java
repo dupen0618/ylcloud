@@ -14,6 +14,7 @@ import com.ykcloud.soa.erp.api.fi.request.BalanceDealingsDeductionFlushRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceJointSaleAutomaticRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalancePurchaseSaleAutomaticRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceSellOffAutomaticRequest;
+import com.ykcloud.soa.erp.api.fi.request.BatchBillAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.BillAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.CashReceiptAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.EarnestMoneyAuditRequest;
@@ -36,6 +37,7 @@ import com.ykcloud.soa.erp.api.fi.response.BalanceDealingsDeductionFlushResponse
 import com.ykcloud.soa.erp.api.fi.response.BalanceJointSaleAutomaticResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalancePurchaseSaleAutomaticResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceSellOffAutomaticResponse;
+import com.ykcloud.soa.erp.api.fi.response.BatchBillAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.BillAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.CashReceiptAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.EarnestMoneyAuditResponse;
@@ -170,6 +172,13 @@ public interface FiSettleService {
      * @description 作废结算单
      */
     BalanceCancellationResponse cancellationBalance(BalanceCancellationRequest request);
+
+
+
+    /**
+     * 多次到票审核
+     */
+    BatchBillAuditResponse auditBatchBill(BatchBillAuditRequest request);
 
 
 }
