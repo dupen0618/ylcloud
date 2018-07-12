@@ -27,4 +27,12 @@ public class ScmBlContractError implements Serializable {
     public void setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "keyID=" + keyID +
+                ", errorMsg='" + errorMsg + '\'' +
+                '}';
+    }
 }
