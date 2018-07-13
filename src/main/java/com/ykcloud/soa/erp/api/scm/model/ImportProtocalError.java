@@ -9,16 +9,18 @@ public class ImportProtocalError implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private String reservedNo;  //供应商编码
+	private String reservedId;  //供应商编码
 	
 	private String message;  //错误信息
 
-	public String getReservedNo() {
-		return reservedNo;
+	
+
+	public String getReservedId() {
+		return reservedId;
 	}
 
-	public void setReservedNo(String reservedNo) {
-		this.reservedNo = reservedNo;
+	public void setReservedId(String reservedId) {
+		this.reservedId = reservedId;
 	}
 
 	public String getMessage() {
