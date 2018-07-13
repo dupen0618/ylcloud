@@ -1,10 +1,9 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
-import com.ykcloud.soa.erp.api.scm.model.ScmBlContract;
+import com.ykcloud.soa.erp.api.scm.model.ImportSupplyContract;
 
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -15,7 +14,7 @@ public class ScmBlContractRequest extends AbstractRequest {
 
     private static final long serialVersionUID = 4532031481794036021L;
     @NotNull(message = "合同数据不能为空!")
-    private List<ScmBlContract> scmBlContractList;
+    private List<ImportSupplyContract> importSupplyContractList;
 
     private Integer skipExistSign;
     private Integer checkSign;
@@ -28,12 +27,12 @@ public class ScmBlContractRequest extends AbstractRequest {
         this.skipExistSign = skipExistSign;
     }
 
-    public List<ScmBlContract> getScmBlContractList() {
-        return scmBlContractList;
+    public List<ImportSupplyContract> getImportSupplyContractList() {
+        return importSupplyContractList;
     }
 
-    public void setScmBlContractList(List<ScmBlContract> scmBlContractList) {
-        this.scmBlContractList = scmBlContractList;
+    public void setImportSupplyContractList(List<ImportSupplyContract> importSupplyContractList) {
+        this.importSupplyContractList = importSupplyContractList;
     }
 
     public Integer getCheckSign() {

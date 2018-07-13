@@ -3,7 +3,7 @@ package com.ykcloud.soa.erp.api.scm.model;
 import java.io.Serializable;
 import java.util.Date;
 
-public class ScmBlContract implements Serializable {
+public class ImportSupplyContract implements Serializable {
     private static final long serialVersionUID = 6187264091846583256L;
     private String reservedId;
     private Long typeNumId;
