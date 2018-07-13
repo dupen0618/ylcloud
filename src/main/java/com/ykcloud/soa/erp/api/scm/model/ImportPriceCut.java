@@ -22,7 +22,7 @@ public class ImportPriceCut implements Serializable {
 	private String remark2;
 	
 	@NotNull(message ="新售价不能为空！")
-	private String newPrice;
+	private Double newPrice;
 	
 	@NotNull(message ="商品简码不能为空！")
     private String itemid;
@@ -69,11 +69,11 @@ public class ImportPriceCut implements Serializable {
         this.remark2 = remark2;
     }
 
-    public String getNewPrice() {
+    public Double getNewPrice() {
         return newPrice;
     }
 
-    public void setNewPrice(String newPrice) {
+    public void setNewPrice(Double newPrice) {
         this.newPrice = newPrice;
     }
 
