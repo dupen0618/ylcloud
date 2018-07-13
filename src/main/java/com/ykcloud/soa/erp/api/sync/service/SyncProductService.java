@@ -4,12 +4,16 @@ import com.ykcloud.soa.erp.api.sync.request.BasicProductSyncRequest;
 import com.ykcloud.soa.erp.api.sync.request.ChangeCostSyncRequest;
 import com.ykcloud.soa.erp.api.sync.request.ChangePriceSynRequest;
 import com.ykcloud.soa.erp.api.sync.request.ChangePriceVipSynRequest;
+import com.ykcloud.soa.erp.api.sync.request.DmSynRequest;
+import com.ykcloud.soa.erp.api.sync.request.PriceCutSynRequest;
 import com.ykcloud.soa.erp.api.sync.request.ProtocolSyncRequest;
 import com.ykcloud.soa.erp.api.sync.request.StockSyncRequest;
 import com.ykcloud.soa.erp.api.sync.response.BasicProductSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.ChangeCostSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.ChangePriceSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.ChangeVipPriceSynResponse;
+import com.ykcloud.soa.erp.api.sync.response.DmSynResponse;
+import com.ykcloud.soa.erp.api.sync.response.PriceCutSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.ProtocolSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.StockSyncResponse;
 
@@ -50,5 +54,20 @@ public interface SyncProductService {
 
 	// 同步商品
 	public BasicProductSyncResponse syncBasicProduct(BasicProductSyncRequest request);
-
+	
+	/**
+	 * 削价数据同步
+	 * @param request
+	 * @author pengh
+	 * @return
+	 */
+	public PriceCutSynResponse synPriceCut(PriceCutSynRequest request);
+	
+	/**
+     * DM促销数据同步
+     * @param request
+     * @author pengh
+     * @return
+     */
+    public DmSynResponse synDm(DmSynRequest request);
 }

@@ -55,4 +55,9 @@ public interface ScmProductService {
 	//自动补货参数导入
 	public ReplenishProductShopImportResponse importReplenishProductShop(ReplenishProductShopImportRequest request);
 
+	//削价导入
+	public PriceCutImportResponse importPriceCut(PriceCutImportRequest request);
+	
+	//DM促销导入
+	public DmImportResponse importDm(DmImportRequest request);
 }
