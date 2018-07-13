@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.sync.service;
 
+
 import com.ykcloud.soa.erp.api.sync.request.BasicProductSyncRequest;
 import com.ykcloud.soa.erp.api.sync.request.ChangeCostSyncRequest;
 import com.ykcloud.soa.erp.api.sync.request.ChangePriceSynRequest;
@@ -16,6 +17,10 @@ import com.ykcloud.soa.erp.api.sync.response.DmSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.PriceCutSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.ProtocolSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.StockSyncResponse;
+
+import com.ykcloud.soa.erp.api.sync.request.*;
+import com.ykcloud.soa.erp.api.sync.response.*;
+
 
 public interface SyncProductService {
 	
@@ -54,6 +59,7 @@ public interface SyncProductService {
 
 	// 同步商品
 	public BasicProductSyncResponse syncBasicProduct(BasicProductSyncRequest request);
+
 	
 	/**
 	 * 削价数据同步
@@ -70,4 +76,8 @@ public interface SyncProductService {
      * @return
      */
     public DmSynResponse synDm(DmSynRequest request);
+
+
+	public ShopCostSynResponse synShopCost(ShopCostSynRequest request);
+
 }
