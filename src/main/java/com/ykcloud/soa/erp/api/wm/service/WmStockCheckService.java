@@ -242,7 +242,7 @@ public interface WmStockCheckService {
         StockAdjustAccountRequest request);
 
     /**
-     * 普通盘点入账消息处理
+     * 普通盘点入账消息处理（TXC）
      *
      * @author henry.wang
      * @param request
@@ -252,13 +252,33 @@ public interface WmStockCheckService {
         StockAdjustAccountProcessRequest request);
 
     /**
-     * 生产盘点入账消息处理
+     * 生产盘点入账消息处理（TXC）
      *
      * @author henry.wang
      * @param request
      * @return
      */
     AccountForProduceStockProcessResponse processAccountForProduceStock(
+        AccountForProduceStockProcessRequest request);
+
+    /**
+     * 普通盘点入账消息处理（顺序消息）
+     *
+     * @author henry.wang
+     * @param request
+     * @return
+     */
+    StockAdjustAccountProcessResponse processStockAdjustAccountWithMq(
+        StockAdjustAccountProcessRequest request);
+
+    /**
+     * 生产盘点入账消息处理（顺序消息）
+     *
+     * @author henry.wang
+     * @param request
+     * @return
+     */
+    AccountForProduceStockProcessResponse processAccountForProduceStockWithMq(
         AccountForProduceStockProcessRequest request);
 
     /**
