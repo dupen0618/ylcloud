@@ -73,7 +73,7 @@ public class ImportProtocol implements Serializable {
 	private Double weight;//重量
 	
 	@NotEmpty(message="重量单位不能为空!")
-	private String weightUnitId; //重量单位
+	private Long weightUnitNumId; //重量单位
 	
 	private Double cost;//进价          2不能为空
 	
@@ -204,9 +204,19 @@ public class ImportProtocol implements Serializable {
     
     private Long pty17NumId;
     
-    private Date bbdate; //保本期
+    private Long bbdate; //保本期
     
-    private Date bldate; //保利
+    private Long bldate; //保利
+    
+    private String productPicture;
+
+	public String getProductPicture() {
+		return productPicture;
+	}
+
+	public void setProductPicture(String productPicture) {
+		this.productPicture = productPicture;
+	}
 
 	public String getReservedId() {
 		return reservedId;
@@ -386,12 +396,14 @@ public class ImportProtocol implements Serializable {
 		this.weight = weight;
 	}
 
-	public String getWeightUnitId() {
-		return weightUnitId;
+	
+
+	public Long getWeightUnitNumId() {
+		return weightUnitNumId;
 	}
 
-	public void setWeightUnitId(String weightUnitId) {
-		this.weightUnitId = weightUnitId;
+	public void setWeightUnitNumId(Long weightUnitNumId) {
+		this.weightUnitNumId = weightUnitNumId;
 	}
 
 	public Double getCost() {
@@ -850,22 +862,23 @@ public class ImportProtocol implements Serializable {
 		this.pty17NumId = pty17NumId;
 	}
 
-	public Date getBbdate() {
+	public Long getBbdate() {
 		return bbdate;
 	}
 
-	public void setBbdate(Date bbdate) {
+	public void setBbdate(Long bbdate) {
 		this.bbdate = bbdate;
 	}
 
-	public Date getBldate() {
+	public Long getBldate() {
 		return bldate;
 	}
 
-	public void setBldate(Date bldate) {
+	public void setBldate(Long bldate) {
 		this.bldate = bldate;
 	}
-    
+
+	
     
 
    
