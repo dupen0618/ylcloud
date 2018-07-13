@@ -8,9 +8,7 @@ import java.util.Objects;
  * @date 2018年5月17日下午4:34:00
  */
 public class ConsignmentProductAccountAdjust implements Serializable {
-
-	private static final long serialVersionUID = 7386327234710466198L;
-	
+	private static final long serialVersionUID = 5188948257751734721L;
 	/**
 	 * 商品编号
 	 */
@@ -30,6 +28,10 @@ public class ConsignmentProductAccountAdjust implements Serializable {
 	 * 调整税金
 	 */
 	private Double adjustTaxAmount;
+	/**
+	 * 业务类型
+	 */
+	private Long typeNumId;
 
 	public Long getItemNumId() {
 		return itemNumId;
@@ -61,6 +63,14 @@ public class ConsignmentProductAccountAdjust implements Serializable {
 
 	public void setAdjustTaxAmount(Double adjustTaxAmount) {
 		this.adjustTaxAmount = adjustTaxAmount;
+	}
+
+	public Long getTypeNumId() {
+		return typeNumId;
+	}
+
+	public void setTypeNumId(Long typeNumId) {
+		this.typeNumId = typeNumId;
 	}
 
 	@Override
