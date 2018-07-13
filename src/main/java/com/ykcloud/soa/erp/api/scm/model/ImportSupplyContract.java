@@ -19,7 +19,7 @@ public class ImportSupplyContract implements Serializable {
     private String organizationCode;
     private Long bankPrvNumId;
     private Long bankCityNumId;
-    private Long billingBank;
+    private String billingBank;
     private String billingBankAccount;
     private Long earnestMoney;
     private String legalPerson;
@@ -175,11 +175,11 @@ public class ImportSupplyContract implements Serializable {
         this.bankCityNumId = bankCityNumId;
     }
 
-    public Long getBillingBank() {
+    public String getBillingBank() {
         return billingBank;
     }
 
-    public void setBillingBank(Long billingBank) {
+    public void setBillingBank(String billingBank) {
         this.billingBank = billingBank;
     }
 
