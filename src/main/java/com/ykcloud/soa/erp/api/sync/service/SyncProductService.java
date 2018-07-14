@@ -41,6 +41,9 @@ public interface SyncProductService {
 	// 同步采购协议
 	public ProtocolSyncResponse syncProtocol(ProtocolSyncRequest request);
 	
+	// 同步门店商品补货属性
+	public ReplenishSyncResponse syncReplenish(ReplenishSyncRequest request);
+	
 	/**
 	 * 临时、永久调价数据同步
 	 * @author pengh
