@@ -11,7 +11,7 @@ import java.util.Date;
  * @author Sealin
  * @date 2018-07-14
  */
-public class BalanceAuditRollbackRequest extends AbstractSessionRequest {
+public class RollbackAuditionRequest extends AbstractSessionRequest {
     private static final long serialVersionUID = 2608813271235725941L;
     /**
      * 门店编号
