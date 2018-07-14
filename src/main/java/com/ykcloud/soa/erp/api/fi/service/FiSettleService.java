@@ -7,6 +7,7 @@ import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceCutDtlDeleteReques
 import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDealingsDtlDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDtlDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRequest;
+import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRollbackRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceCancellationRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceCutDeductionFlushRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
@@ -30,6 +31,7 @@ import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceCutDtlDeleteRespo
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDealingsDtlDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceAuditResponse;
+import com.ykcloud.soa.erp.api.fi.response.BalanceAuditRollbackResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceCancellationResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceCutDeductionFlushResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
@@ -180,5 +182,10 @@ public interface FiSettleService {
      */
     BatchBillAuditResponse auditBatchBill(BatchBillAuditRequest request);
 
-
+    /**
+     * 反审核, 回写数据
+     *
+     * @author Sealin
+     */
+    BalanceAuditRollbackResponse auditRollback(BalanceAuditRollbackRequest request);
 }
