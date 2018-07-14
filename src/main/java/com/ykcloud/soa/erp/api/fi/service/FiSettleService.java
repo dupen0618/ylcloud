@@ -1,53 +1,7 @@
 package com.ykcloud.soa.erp.api.fi.service;
 
-import com.ykcloud.soa.erp.api.fi.request.AppointBalanceCutDtlGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointBalanceDealingsDtlGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointBalanceDtlGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceCutDtlDeleteRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDealingsDtlDeleteRequest;
-import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDtlDeleteRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRollbackRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceCancellationRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceCutDeductionFlushRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceDealingsDeductionFlushRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceJointSaleAutomaticRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalancePurchaseSaleAutomaticRequest;
-import com.ykcloud.soa.erp.api.fi.request.BalanceSellOffAutomaticRequest;
-import com.ykcloud.soa.erp.api.fi.request.BatchBillAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.BillAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.CashReceiptAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.EarnestMoneyAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.NotBalanceCutGetRequest;
-import com.ykcloud.soa.erp.api.fi.request.NotBalanceDealingsGetRequest;
-import com.ykcloud.soa.erp.api.fi.request.NotBalanceGetRequest;
-import com.ykcloud.soa.erp.api.fi.request.PaymentAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.PrePaymentAuditRequest;
-import com.ykcloud.soa.erp.api.fi.response.AppointBalanceCutDtlGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDealingsDtlGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDtlGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceCutDtlDeleteResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDealingsDtlDeleteResponse;
-import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceAuditRollbackResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceCancellationResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceCutDeductionFlushResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceDealingsDeductionFlushResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceJointSaleAutomaticResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalancePurchaseSaleAutomaticResponse;
-import com.ykcloud.soa.erp.api.fi.response.BalanceSellOffAutomaticResponse;
-import com.ykcloud.soa.erp.api.fi.response.BatchBillAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.BillAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.CashReceiptAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.EarnestMoneyAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.NotBalanceCutGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.NotBalanceDealingsGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.NotBalanceGetResponse;
-import com.ykcloud.soa.erp.api.fi.response.PaymentAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.PrePaymentAuditResponse;
+import com.ykcloud.soa.erp.api.fi.request.*;
+import com.ykcloud.soa.erp.api.fi.response.*;
 
 
 /**
@@ -171,7 +125,7 @@ public interface FiSettleService {
     /**
      * @author alfred.liu
      * @date 2018/6/26 14:41
-     * @description 删除/作废结算单
+     * @description 作废结算单
      */
     BalanceCancellationResponse cancellationBalance(BalanceCancellationRequest request);
 
@@ -183,9 +137,15 @@ public interface FiSettleService {
     BatchBillAuditResponse auditBatchBill(BatchBillAuditRequest request);
 
     /**
-     * 反审核, 回写数据
      *
-     * @author Sealin
+     * @Description: 根据税率汇总，返回 SUM（商品明细+往来-扣项）和税率
+     *
+     * @auther: sheen.lee
+     * @date: 15:01 2018/7/14
+     * @param: [request]
+     * @return: com.ykcloud.soa.erp.api.fi.response.TotalAmountGroupByTaxRateGetResponse
+     *
      */
-    BalanceAuditRollbackResponse auditRollback(BalanceAuditRollbackRequest request);
+    TotalAmountGroupByTaxRateGetResponse getTotalAmountGroupByTaxRate(TotalAmountGroupByTaxRateGetRequest request);
+
 }
