@@ -7,6 +7,7 @@ import com.ykcloud.soa.erp.api.fi.request.BalanceAvalUnitListBatchGenerateReques
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataBatchGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceEndDateGetRequest;
+import com.ykcloud.soa.erp.api.fi.request.BillAmountCheckRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceBillGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotContractBalanceJointSaleAutomaticRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotContractBalancePurchaseSaleAutomaticRequest;
@@ -18,6 +19,7 @@ import com.ykcloud.soa.erp.api.fi.response.BalanceAvalUnitListBatchGenerateRespo
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataBatchGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceEndDateGetResponse;
+import com.ykcloud.soa.erp.api.fi.response.BillAmountCheckResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotBalanceBillGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotContractBalanceJointSaleAutomaticResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotContractBalancePurchaseSaleAutomaticResponse;
@@ -95,5 +97,12 @@ public interface FiSupBalanceBillService {
      * @return
      */
     public AllSupBalanceDtlDeleteResponse deleteAllSupBalanceBillDtl(AllSupBalanceBillDtlDeleteRequest request);
+
+     /**
+      * @author alfred.liu
+      * @date 2018/7/14 14:54
+      * @description 校验开票金额不能大于结算单中的金额
+      */
+    public BillAmountCheckResponse checkBillAmount(BillAmountCheckRequest request);
 
 }
