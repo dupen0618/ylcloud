@@ -42,6 +42,9 @@ public interface WmWorkService {
 	
 	//损溢单入账
 	public LossWorkconfirmResponse confirmqueWorkLoss(LossWorkconfirmRequest request);
+	
+	//损溢单入账,走顺序消息
+	public LossWorkconfirmResponse confirmqueWorkLossOrderMessage(LossWorkconfirmRequest request);
 
 
 	//溢出转码入账
