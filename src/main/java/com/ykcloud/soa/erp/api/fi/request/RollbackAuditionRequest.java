@@ -1,6 +1,6 @@
 package com.ykcloud.soa.erp.api.fi.request;
 
-import com.gb.soa.omp.ccommon.api.request.AbstractSessionRequest;
+import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -11,8 +11,8 @@ import java.util.Date;
  * @author Sealin
  * @date 2018-07-14
  */
-public class RollbackAuditionRequest extends AbstractSessionRequest {
-    private static final long serialVersionUID = 2608813271235725941L;
+public class RollbackAuditionRequest extends AbstractUserSessionRequest {
+    private static final long serialVersionUID = -8773113611212322035L;
     /**
      * 门店编号
      */
