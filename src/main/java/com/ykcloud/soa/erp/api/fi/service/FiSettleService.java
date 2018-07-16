@@ -7,6 +7,8 @@ import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceCutDtlDeleteReques
 import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDealingsDtlDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDtlDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRequest;
+import com.ykcloud.soa.erp.api.fi.request.GenerateBatchPayBillRequest;
+import com.ykcloud.soa.erp.api.fi.request.RollbackAuditionRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceCancellationRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceCutDeductionFlushRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
@@ -33,6 +35,8 @@ import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceCutDtlDeleteRespo
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDealingsDtlDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceAuditResponse;
+import com.ykcloud.soa.erp.api.fi.response.GenerateBatchPayBillResponse;
+import com.ykcloud.soa.erp.api.fi.response.RollbackAuditionResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceCancellationResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceCutDeductionFlushResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
@@ -63,7 +67,7 @@ import com.ykcloud.soa.erp.api.fi.response.TotalAmountGroupByTaxRateGetResponse;
 public interface FiSettleService {
 
     /**
-     * 取结算数据
+     * 取结算数据--
      */
     BalanceDataGenerateResponse generateBalanceData(BalanceDataGenerateRequest request);
 
@@ -73,7 +77,7 @@ public interface FiSettleService {
     BalanceCutDeductionFlushResponse flushBalanceCutDeduction(BalanceCutDeductionFlushRequest request);
 
     /**
-     * 获取没有结算的数据
+     * 获取没有结算的数据--
      */
     NotBalanceGetResponse getNotBalance(NotBalanceGetRequest request);
 
@@ -83,7 +87,7 @@ public interface FiSettleService {
     NotBalanceCutGetResponse getNotBalanceCut(NotBalanceCutGetRequest request);
 
     /**
-     * 选择指定明细项目生成结算明细
+     * 选择指定明细项目生成结算明细--
      */
     AppointBalanceDtlGenerateResponse generateAppointBalanceDtl(AppointBalanceDtlGenerateRequest request);
 
@@ -93,7 +97,7 @@ public interface FiSettleService {
     AppointBalanceCutDtlGenerateResponse generateAppointBalanceCutDtl(AppointBalanceCutDtlGenerateRequest request);
 
     /**
-     * 删除结算单商品明细中的指定项目
+     * 删除结算单商品明细中的指定项目--
      */
     AppointForSupBalanceDtlDeleteResponse deleteAppointForSupBalanceDtl(AppointForSupBalanceDtlDeleteRequest request);
 
@@ -211,4 +215,11 @@ public interface FiSettleService {
       */
     public EarnestMoneyGetResponse getEarnestMoney(EarnestMoneyGetRequest request);
 
+
+    /**
+     * 根据结算单号批量生成付款单号
+     *
+     * @author Sealin
+     */
+    GenerateBatchPayBillResponse generateBatchPayBill(GenerateBatchPayBillRequest request);
 }
