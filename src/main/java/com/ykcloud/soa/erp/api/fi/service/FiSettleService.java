@@ -7,7 +7,6 @@ import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceCutDtlDeleteReques
 import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDealingsDtlDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.AppointForSupBalanceDtlDeleteRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceAuditRequest;
-import com.ykcloud.soa.erp.api.fi.request.RollbackAuditionRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceCancellationRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceCutDeductionFlushRequest;
 import com.ykcloud.soa.erp.api.fi.request.BalanceDataGenerateRequest;
@@ -19,11 +18,13 @@ import com.ykcloud.soa.erp.api.fi.request.BatchBillAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.BillAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.CashReceiptAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.EarnestMoneyAuditRequest;
+import com.ykcloud.soa.erp.api.fi.request.EarnestMoneyGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceCutGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceDealingsGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.PaymentAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.PrePaymentAuditRequest;
+import com.ykcloud.soa.erp.api.fi.request.RollbackAuditionRequest;
 import com.ykcloud.soa.erp.api.fi.request.TotalAmountGroupByTaxRateGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceCutDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDealingsDtlGenerateResponse;
@@ -32,7 +33,6 @@ import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceCutDtlDeleteRespo
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDealingsDtlDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointForSupBalanceDtlDeleteResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceAuditResponse;
-import com.ykcloud.soa.erp.api.fi.response.RollbackAuditionResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceCancellationResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceCutDeductionFlushResponse;
 import com.ykcloud.soa.erp.api.fi.response.BalanceDataGenerateResponse;
@@ -44,11 +44,13 @@ import com.ykcloud.soa.erp.api.fi.response.BatchBillAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.BillAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.CashReceiptAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.EarnestMoneyAuditResponse;
+import com.ykcloud.soa.erp.api.fi.response.EarnestMoneyGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotBalanceCutGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotBalanceDealingsGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotBalanceGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.PaymentAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.PrePaymentAuditResponse;
+import com.ykcloud.soa.erp.api.fi.response.RollbackAuditionResponse;
 import com.ykcloud.soa.erp.api.fi.response.TotalAmountGroupByTaxRateGetResponse;
 
 
@@ -202,4 +204,11 @@ public interface FiSettleService {
      *
      */
     TotalAmountGroupByTaxRateGetResponse getTotalAmountGroupByTaxRate(TotalAmountGroupByTaxRateGetRequest request);
+     /**
+      * @author alfred.liu
+      * @date 2018/7/14 16:20
+      * @description 获取已交保证金和合同中的应交保证金
+      */
+    public EarnestMoneyGetResponse getEarnestMoney(EarnestMoneyGetRequest request);
+
 }
