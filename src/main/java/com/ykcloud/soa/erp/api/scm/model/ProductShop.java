@@ -35,7 +35,6 @@ public class ProductShop {
 
 	private Date endDayForever;// 永久调价截止日期
 
-	@NotNull(message = "临时调价单类型不能为空!")
 	private Long typeTemp;// 临时调价单类型(503：DM促销,:502：临时调售价)
 
 	private String reservedIdTemp;// 临时调价单号
@@ -71,16 +70,14 @@ public class ProductShop {
 	@NotNull(message = "部门编号不能为空!")
 	private Long departNumId;// 部门编号
 
-	@NotNull(message = "Bom编码不能为空!")
 	private Long bomNumId;// Bom编码
 
-	@NotNull(message = "是否可以改价不能为空!")
 	private Long modifyPrice;// 是否可以改价
 
 	@NotNull(message = "商品状态ID不能为空!")
 	private Long itemStatusId;// 商品状态ID
 
-	private Integer itemGrade;// 商品等级
+	private Long itemGrade;// 商品等级
 
 	@NotNull(message = "默认供应商编码不能为空!")
 	private Long supplyUnitId;// 默认供应商编码
@@ -306,11 +303,11 @@ public class ProductShop {
 		this.itemStatusId = itemStatusId;
 	}
 
-	public Integer getItemGrade() {
+	public Long getItemGrade() {
 		return itemGrade;
 	}
 
-	public void setItemGrade(Integer itemGrade) {
+	public void setItemGrade(Long itemGrade) {
 		this.itemGrade = itemGrade;
 	}
 
