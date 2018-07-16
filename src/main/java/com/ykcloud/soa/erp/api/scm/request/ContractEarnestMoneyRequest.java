@@ -6,17 +6,16 @@ import javax.validation.constraints.NotNull;
 
 public class ContractEarnestMoneyRequest extends AbstractRequest {
     private static final long serialVersionUID = -5567561237996119331L;
-    @NotNull(message = "采购方不能为空！")
-    private Long unitNumId;
-    @NotNull(message = "供应商不能为空！")
-    private Long supplyUnitNumId;
+
+    private Long UnitNumId;//采购方
+    private Long supplyUnitNumId;//供应商编码
 
     public Long getUnitNumId() {
-        return unitNumId;
+        return UnitNumId;
     }
 
     public void setUnitNumId(Long unitNumId) {
-        this.unitNumId = unitNumId;
+        UnitNumId = unitNumId;
     }
 
     public Long getSupplyUnitNumId() {

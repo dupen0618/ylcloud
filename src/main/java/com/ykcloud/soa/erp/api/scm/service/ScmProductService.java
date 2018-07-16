@@ -60,10 +60,11 @@ public interface ScmProductService {
 	
 	//DM促销导入
 	public DmImportResponse importDm(DmImportRequest request);
-	/**
-	 * @author alfred.liu
-	 * @date 2018/7/14 16:47
-	 * @description 获取合同中应交保证金
-	 */
-	public ContractEarnestMoneyResponse getContractEarnestMoney(ContractEarnestMoneyRequest request);
+
+	 /**
+	  * @author alfred.liu
+	  * @date 2018/7/14 16:47
+	  * @description 获取合同中应交保证金
+	  */
+	 public ContractEarnestMoneyResponse getContractEarnestMoney(ContractEarnestMoneyRequest request);
 }
