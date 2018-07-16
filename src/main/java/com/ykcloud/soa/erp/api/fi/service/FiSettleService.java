@@ -24,6 +24,7 @@ import com.ykcloud.soa.erp.api.fi.request.NotBalanceDealingsGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.NotBalanceGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.PaymentAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.PrePaymentAuditRequest;
+import com.ykcloud.soa.erp.api.fi.request.TotalAmountGroupByTaxRateGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceCutDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDealingsDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDtlGenerateResponse;
@@ -48,6 +49,7 @@ import com.ykcloud.soa.erp.api.fi.response.NotBalanceDealingsGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.NotBalanceGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.PaymentAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.PrePaymentAuditResponse;
+import com.ykcloud.soa.erp.api.fi.response.TotalAmountGroupByTaxRateGetResponse;
 
 
 /**
@@ -188,4 +190,16 @@ public interface FiSettleService {
      * @author Sealin
      */
     RollbackAuditionResponse rollbackAudition(RollbackAuditionRequest request);
+
+    /**
+     *
+     * @Description: 根据税率汇总，返回 SUM（商品明细+往来-扣项）和税率
+     *
+     * @auther: sheen.lee
+     * @date: 15:01 2018/7/14
+     * @param: [request]
+     * @return: com.ykcloud.soa.erp.api.fi.response.TotalAmountGroupByTaxRateGetResponse
+     *
+     */
+    TotalAmountGroupByTaxRateGetResponse getTotalAmountGroupByTaxRate(TotalAmountGroupByTaxRateGetRequest request);
 }
