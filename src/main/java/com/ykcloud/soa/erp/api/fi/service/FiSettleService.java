@@ -26,6 +26,7 @@ import com.ykcloud.soa.erp.api.fi.request.NotBalanceGetRequest;
 import com.ykcloud.soa.erp.api.fi.request.PaymentAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.PrePaymentAuditRequest;
 import com.ykcloud.soa.erp.api.fi.request.RollbackAuditionRequest;
+import com.ykcloud.soa.erp.api.fi.request.SupBillInfoInsertRequest;
 import com.ykcloud.soa.erp.api.fi.request.TotalAmountGroupByTaxRateGetRequest;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceCutDtlGenerateResponse;
 import com.ykcloud.soa.erp.api.fi.response.AppointBalanceDealingsDtlGenerateResponse;
@@ -53,6 +54,7 @@ import com.ykcloud.soa.erp.api.fi.response.NotBalanceGetResponse;
 import com.ykcloud.soa.erp.api.fi.response.PaymentAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.PrePaymentAuditResponse;
 import com.ykcloud.soa.erp.api.fi.response.RollbackAuditionResponse;
+import com.ykcloud.soa.erp.api.fi.response.SupBillInfoInsertResponse;
 import com.ykcloud.soa.erp.api.fi.response.TotalAmountGroupByTaxRateGetResponse;
 
 
@@ -220,4 +222,17 @@ public interface FiSettleService {
      * @author Sealin
      */
     GenerateBatchPayBillResponse generateBatchPayBill(GenerateBatchPayBillRequest request);
+
+
+    /**
+     *
+     * @Description: 批量新增新增发票
+     *
+     * @auther: sheen.lee
+     * @date: 19:56 2018/7/16
+     * @param: [request]
+     * @return: com.ykcloud.soa.erp.api.fi.response.SupBillInfoInsertResponse
+     *
+     */
+    SupBillInfoInsertResponse insertSupBillInfo(SupBillInfoInsertRequest request);
 }
