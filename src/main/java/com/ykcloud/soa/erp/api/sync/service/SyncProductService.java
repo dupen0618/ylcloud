@@ -81,7 +81,7 @@ public interface SyncProductService {
     public DmSynResponse synDm(DmSynRequest request);
 
 
-	public ShopCostSynResponse synShopCost(ShopCostSynRequest request);
+	public ShopCostSynResponse synProductShopCost(ShopCostSynRequest request);
 
 	public ProductShopSynResponse synProductShop(ProductShopSynRequest request);
 }
