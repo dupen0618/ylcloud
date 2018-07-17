@@ -11,12 +11,32 @@ public class WmBlStocktakingTaskDtlImportRequest extends AbstractUserSessionRequ
 
 	private List<ImportWmBlStocktakingTaskDtl> importWmBlStocktakingTaskDtl;
 
+	private String reservedNo;
+
+	private Long subUnitNumId;
+
 	public List<ImportWmBlStocktakingTaskDtl> getImportWmBlStocktakingTaskDtl() {
 		return importWmBlStocktakingTaskDtl;
 	}
 
 	public void setImportWmBlStocktakingTaskDtl(List<ImportWmBlStocktakingTaskDtl> importWmBlStocktakingTaskDtl) {
 		this.importWmBlStocktakingTaskDtl = importWmBlStocktakingTaskDtl;
+	}
+
+	public String getReservedNo() {
+		return reservedNo;
+	}
+
+	public void setReservedNo(String reservedNo) {
+		this.reservedNo = reservedNo;
+	}
+
+	public Long getSubUnitNumId() {
+		return subUnitNumId;
+	}
+
+	public void setSubUnitNumId(Long subUnitNumId) {
+		this.subUnitNumId = subUnitNumId;
 	}
 
 }
