@@ -42,7 +42,7 @@ public interface SyncProductService {
 	public ProtocolSyncResponse syncProtocol(ProtocolSyncRequest request);
 	
 	// 同步门店商品补货属性
-	public ReplenishSyncResponse syncReplenishProductShop(ReplenishSyncRequest request);
+	public ReplenishProductShopSyncResponse syncReplenishProductShop(ReplenishProductShopSyncRequest request);
 	
 	/**
 	 * 临时、永久调价数据同步
