@@ -8,8 +8,6 @@ import com.ykcloud.soa.erp.api.wm.request.FirstSupplyUnitNumIdGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemBarcodeStockCheckScanRequest;
 import com.ykcloud.soa.erp.api.wm.request.ItemQtyStockCheckInputRequest;
-import com.ykcloud.soa.erp.api.wm.request.LossNumIdByGetLossDtlRequest;
-import com.ykcloud.soa.erp.api.wm.request.LossNumIdByGetLossHdrRequest;
 import com.ykcloud.soa.erp.api.wm.request.MyCheckContainerGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.OmitCheckProductListQueryRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockAdjustAccountProcessRequest;
@@ -30,14 +28,13 @@ import com.ykcloud.soa.erp.api.wm.request.StockadjustDtlGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadjustHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.TaskProListRefreshRequest;
 import com.ykcloud.soa.erp.api.wm.request.UnConfirmStockAdjustGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmBlStocktakingTaskDtlImportRequest;
 import com.ykcloud.soa.erp.api.wm.response.AccountForProduceStockProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerProductDetailGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.FirstSupplyUnitNumIdGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.ItemBarcodeScanResponse;
-import com.ykcloud.soa.erp.api.wm.response.LossNumIdByGetLossDtlResponse;
-import com.ykcloud.soa.erp.api.wm.response.LossNumIdByGetLossHdrResponse;
 import com.ykcloud.soa.erp.api.wm.response.MyCheckContainerGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.OmitCheckProductListQueryResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockAdjustAccountProcessResponse;
@@ -59,6 +56,7 @@ import com.ykcloud.soa.erp.api.wm.response.StockadjustDtlGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadjustHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.TaskProListRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.UnConfirmStockAdjustGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmBlStocktakingTaskDtlImportResponse;
 
 /**
  * @Description: 盘点服务
@@ -333,6 +331,16 @@ public interface WmStockCheckService {
 	 * @time: 2018年6月1日
 	 */
 	public StockadjustDtlGetResponse getStockadjustDtlByReservedNo(StockadjustDtlGetRequest request);
+	
+	/**
+	 * 
+	 * @Description:导入盘点计划单表体
+	 * @param request
+	 * @return
+	 * @author: Andy
+	 * @time: 2018年7月17日
+	 */
+	public WmBlStocktakingTaskDtlImportResponse importWmBlStocktakingTaskDtl(WmBlStocktakingTaskDtlImportRequest request);
 
 	/**
 	 * @Description: 查询盈亏单带批次代销商品明细，用于核销代销商品款
