@@ -9,8 +9,6 @@ public class ImportWmBlStocktakingTaskDtl implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private String reservedNo;
-
 	private Long divNumId;
 
 	private Long ptyNum1;
@@ -28,14 +26,6 @@ public class ImportWmBlStocktakingTaskDtl implements Serializable {
 	private String barcode;
 
 	private String itemName;
-
-	public String getReservedNo() {
-		return reservedNo;
-	}
-
-	public void setReservedNo(String reservedNo) {
-		this.reservedNo = reservedNo;
-	}
 
 	public Long getDivNumId() {
 		return divNumId;
