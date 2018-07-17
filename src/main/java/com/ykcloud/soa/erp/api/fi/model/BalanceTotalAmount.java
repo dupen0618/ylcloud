@@ -17,7 +17,7 @@ public class BalanceTotalAmount implements Serializable {
 
     private Double totalAmount;//汇总金额
 
-    private Double taxRate;//税率
+    private Double billInRate ;//税率
 
     public Double getTotalAmount() {
         return totalAmount;
@@ -27,11 +27,11 @@ public class BalanceTotalAmount implements Serializable {
         this.totalAmount = totalAmount;
     }
 
-    public Double getTaxRate() {
-        return taxRate;
+    public Double getBillInRate() {
+        return billInRate;
     }
 
-    public void setTaxRate(Double taxRate) {
-        this.taxRate = taxRate;
+    public void setBillInRate(Double billInRate) {
+        this.billInRate = billInRate;
     }
 }
