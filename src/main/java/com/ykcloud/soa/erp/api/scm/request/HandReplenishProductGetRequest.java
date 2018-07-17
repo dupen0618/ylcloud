@@ -1,6 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.gb.soa.omp.ccommon.api.annotation.ApiField;
 import com.gb.soa.omp.ccommon.api.request.AbstractRequest;
 import org.hibernate.validator.constraints.Range;
 
@@ -12,6 +13,12 @@ import java.util.Date;
  */
 public class HandReplenishProductGetRequest extends AbstractRequest {
 	private static final long serialVersionUID = 1L;
+	
+	@ApiField(description = "仓库分组编号")
+	private Long storageGroupNumId;
+	
+	@ApiField(description = "订单来源")
+	private Long soFromType;
 
 	@NotNull(message = "门店编号不能为空")
 	private Long subUnitNumId;
@@ -49,7 +56,23 @@ public class HandReplenishProductGetRequest extends AbstractRequest {
 	@Range(min = 0, max = 1)
 	private Long openQtyCacheSign; // 否，默认为1 在途数量是否用缓存表的数据，1：先查询缓存表，不存在先查询并写到缓存表，供下次使用，0：不用缓存表，查询后写到缓存表，供下次使用
 
+	public Long getStorageGroupNumId() {
+		return storageGroupNumId;
+	}
+
+	public void setStorageGroupNumId(Long storageGroupNumId) {
+		this.storageGroupNumId = storageGroupNumId;
+	}
+
 	private String action;// 补货：repment 自动补货 auto_repment
+
+	public Long getSoFromType() {
+		return soFromType;
+	}
+
+	public void setSoFromType(Long soFromType) {
+		this.soFromType = soFromType;
+	}
 
 	public static long getSerialVersionUID() {
 		return serialVersionUID;
