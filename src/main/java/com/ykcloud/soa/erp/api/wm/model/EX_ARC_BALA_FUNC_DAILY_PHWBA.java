@@ -88,12 +88,31 @@ public class EX_ARC_BALA_FUNC_DAILY_PHWBA {
     private Long ACCOUNTTYPE;//账务处理类型 1增加模型，2 扣减模型
 
     private Date CREATE_DTME;//创建时间(0:无变化 1：增加 2：扣减)
+    
+    private Long ADJUST_QTY_SIGN;
+    private Long REFUND_QTY_SIGN;
 
     private Long CHECK_LOSS_QTY_SIGN;//盘亏数量
 
     private Long CHECK_RISE_QTY_SIGN;//盘盈数量
 
-    public Long getSERIES() {
+    public Long getADJUST_QTY_SIGN() {
+		return ADJUST_QTY_SIGN;
+	}
+
+	public void setADJUST_QTY_SIGN(Long aDJUST_QTY_SIGN) {
+		ADJUST_QTY_SIGN = aDJUST_QTY_SIGN;
+	}
+
+	public Long getREFUND_QTY_SIGN() {
+		return REFUND_QTY_SIGN;
+	}
+
+	public void setREFUND_QTY_SIGN(Long rEFUND_QTY_SIGN) {
+		REFUND_QTY_SIGN = rEFUND_QTY_SIGN;
+	}
+
+	public Long getSERIES() {
         return SERIES;
     }
 
