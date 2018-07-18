@@ -80,16 +80,17 @@ public interface SyncWddService {
 	 * 
 	 * @author Dan
 	 * @date 2018年7月16日
-	 * @description 超量促销同步
+	 * @description 第N件促销
 	 */
-	public ExcessPromotionSyncResponse syncExcessPromotion(ExcessPromotionSyncRequest request);
+	public NthPromotionSyncResponse syncNthPromotion(NthPromotionSyncRequest request);
 	
 	/**
 	 * 
 	 * @author Dan
 	 * @date 2018年7月16日
-	 * @description 第N件促销
+	 * @description 超量促销同步
 	 */
-	public NthPromotionSyncResponse syncNthPromotion(NthPromotionSyncRequest request);
+	public ExcessPromotionSyncResponse syncExcessPromotion(ExcessPromotionSyncRequest request);
+	
 	
 }
