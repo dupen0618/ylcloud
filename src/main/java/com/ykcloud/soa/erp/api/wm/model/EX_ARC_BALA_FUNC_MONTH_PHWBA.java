@@ -83,8 +83,27 @@ public class EX_ARC_BALA_FUNC_MONTH_PHWBA {
     private Long CHECK_RISE_QTY_SIGN;//盘盈数量
 
     private Long ONLOADPROCESS;//标记是否要处理在途
+    
+    private Long ADJUST_QTY_SIGN;
+    private Long REFUND_QTY_SIGN;
 
-    public Long getSERIES() {
+    public Long getADJUST_QTY_SIGN() {
+		return ADJUST_QTY_SIGN;
+	}
+
+	public void setADJUST_QTY_SIGN(Long aDJUST_QTY_SIGN) {
+		ADJUST_QTY_SIGN = aDJUST_QTY_SIGN;
+	}
+
+	public Long getREFUND_QTY_SIGN() {
+		return REFUND_QTY_SIGN;
+	}
+
+	public void setREFUND_QTY_SIGN(Long rEFUND_QTY_SIGN) {
+		REFUND_QTY_SIGN = rEFUND_QTY_SIGN;
+	}
+
+	public Long getSERIES() {
         return SERIES;
     }
 
