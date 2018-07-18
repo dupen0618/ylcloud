@@ -10,6 +10,8 @@ public class SubUnitSyncRequest extends AbstractUserSessionRequest {
     private Long superCortNumId;
     @NotNull(message = "上级门店不能为空!")
     private Long superSubUnitNumId;
+    @NotNull(message = "是否生成仓库不能为空!")
+    private Integer storageOnOff;
 
     private static final long serialVersionUID = 2577972665723578844L;
 
@@ -27,5 +29,13 @@ public class SubUnitSyncRequest extends AbstractUserSessionRequest {
 
     public void setSuperSubUnitNumId(Long superSubUnitNumId) {
         this.superSubUnitNumId = superSubUnitNumId;
+    }
+
+    public Integer getStorageOnOff() {
+        return storageOnOff;
+    }
+
+    public void setStorageOnOff(Integer storageOnOff) {
+        this.storageOnOff = storageOnOff;
     }
 }
