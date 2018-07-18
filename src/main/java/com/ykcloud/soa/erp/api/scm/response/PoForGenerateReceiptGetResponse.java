@@ -9,13 +9,16 @@ import com.ykcloud.soa.erp.api.scm.model.PoSupDtlForGenerateReceipt;
 /**
  * 为产生验收单获取采购单头、单身、供应商协同单身信息出参
  * @author tz.x
- *
  * @date 2018年3月27日下午2:13:51
- * @see
  */
 public class PoForGenerateReceiptGetResponse extends MessagePack {
 	
 	private static final long serialVersionUID = 8560296643393530581L;
+	
+	/**
+	 * 备注
+	 */
+	private String remark;
 	
 	/**
 	 * 采购途径 1国内 2国际
@@ -71,6 +74,14 @@ public class PoForGenerateReceiptGetResponse extends MessagePack {
 	 * 供应商协同明细列表
 	 */
 	private List<PoSupDtlForGenerateReceipt> poSupDtls;
+
+	public String getRemark() {
+		return remark;
+	}
+
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
 
 	public Long getPurchaseTypeNumId() {
 		return purchaseTypeNumId;
