@@ -28,6 +28,7 @@ import com.ykcloud.soa.erp.api.wm.request.StockadjustDtlGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.StockadjustHdrGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.TaskProListRefreshRequest;
 import com.ykcloud.soa.erp.api.wm.request.UnConfirmStockAdjustGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.WmBlStocktakingDtlImportRequest;
 import com.ykcloud.soa.erp.api.wm.request.WmBlStocktakingTaskDtlImportRequest;
 import com.ykcloud.soa.erp.api.wm.response.AccountForProduceStockProcessResponse;
 import com.ykcloud.soa.erp.api.wm.response.ContainerFinishResponse;
@@ -56,6 +57,7 @@ import com.ykcloud.soa.erp.api.wm.response.StockadjustDtlGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.StockadjustHdrGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.TaskProListRefreshResponse;
 import com.ykcloud.soa.erp.api.wm.response.UnConfirmStockAdjustGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.WmBlStocktakingDtlImportResponse;
 import com.ykcloud.soa.erp.api.wm.response.WmBlStocktakingTaskDtlImportResponse;
 
 /**
@@ -341,6 +343,16 @@ public interface WmStockCheckService {
 	 * @time: 2018年7月17日
 	 */
 	public WmBlStocktakingTaskDtlImportResponse importWmBlStocktakingTaskDtl(WmBlStocktakingTaskDtlImportRequest request);
+	
+	/**
+	 * 
+	 * @Description:导入盘存表
+	 * @param request
+	 * @return
+	 * @author: Andy
+	 * @time: 2018年7月17日
+	 */
+	public WmBlStocktakingDtlImportResponse importWmBlStocktakingDtl(WmBlStocktakingDtlImportRequest request);
 
 	/**
 	 * @Description: 查询盈亏单带批次代销商品明细，用于核销代销商品款
