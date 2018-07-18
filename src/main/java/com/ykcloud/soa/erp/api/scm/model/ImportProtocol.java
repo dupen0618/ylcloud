@@ -209,6 +209,16 @@ public class ImportProtocol implements Serializable {
     private Long bldate; //保利
     
     private String productPicture;
+    
+    private String fm;
+
+	public String getFm() {
+		return fm;
+	}
+
+	public void setFm(String fm) {
+		this.fm = fm;
+	}
 
 	public String getProductPicture() {
 		return productPicture;
