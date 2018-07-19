@@ -3,6 +3,7 @@ package com.ykcloud.soa.erp.api.wm.request;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
 import com.ykcloud.soa.erp.api.wm.model.ImportWmBlStocktakingDtl;
 
@@ -16,6 +17,7 @@ public class WmBlStocktakingDtlImportRequest extends AbstractUserSessionRequest 
 
 	private String reservedNo;
 
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	private Date inventoryDate;
 
 	public List<ImportWmBlStocktakingDtl> getImportWmBlStocktakingDtl() {
