@@ -9,6 +9,7 @@ import com.ykcloud.soa.erp.api.so.request.DemandSaleStatisticGetRequest;
 import com.ykcloud.soa.erp.api.so.request.GroupSdApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ItemSaleInfoByItemNumIdAndOrderDateGetRequest;
 import com.ykcloud.soa.erp.api.so.request.OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetRequest;
+import com.ykcloud.soa.erp.api.so.request.ProductFullDetailAndSaleStatisticGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ReturnApplyDtlGetRequest;
 import com.ykcloud.soa.erp.api.so.request.ShopProductDailySellQtyGetRequest;
 import com.ykcloud.soa.erp.api.so.request.SoBySoNumIdAndItemNumIdGetRequest;
@@ -28,6 +29,7 @@ import com.ykcloud.soa.erp.api.so.response.DemandSaleStatisticGetResponse;
 import com.ykcloud.soa.erp.api.so.response.GroupSdApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ItemSaleInfoByItemNumIdAndOrderDateGetResponse;
 import com.ykcloud.soa.erp.api.so.response.OrdSubUnitNumIdsBySoNumIdForInTransitDepositGetResponse;
+import com.ykcloud.soa.erp.api.so.response.ProductFullDetailAndSaleStatisticGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ReturnApplyDtlGetResponse;
 import com.ykcloud.soa.erp.api.so.response.ShopProductDailySellQtyGetResponse;
 import com.ykcloud.soa.erp.api.so.response.SoBySoNumIdAndItemNumIdGetResponse;
@@ -131,4 +133,13 @@ public interface SoQueryService {
     public SoHdrListGetByWlbcResponse getSoHdrListByWlbc(SoHdrListGetByWlbcRequest request);
     //根据soNumId数组获取SoHdrList
     public SoHdrListGetBySoNumIdsResponse getSoHdrListBySoNumIds(SoHdrListGetBySoNumIdsRequest request);
+    /**
+     * 
+     * @description
+     * @author gaoyun.shen
+     * @date: 2018年7月19日 下午12:06:27
+     * @param 
+     * @return RF获取商品信息
+     */
+    public ProductFullDetailAndSaleStatisticGetResponse getProductFullDetailAndSaleStatistic(ProductFullDetailAndSaleStatisticGetRequest request);
 }
