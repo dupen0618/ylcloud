@@ -3,15 +3,17 @@ package com.ykcloud.soa.erp.api.fi.response;
 import com.gb.soa.omp.ccommon.api.response.MessagePack;
 import com.ykcloud.soa.erp.api.fi.model.EarnestMoney;
 
+import java.util.List;
+
 public class EarnestMoneyGetResponse extends MessagePack{
     private static final long serialVersionUID = 1L;
-    private EarnestMoney earnestMoney;
+    private List<EarnestMoney> earnestMoneyList;
 
-    public EarnestMoney getEarnestMoney() {
-        return earnestMoney;
+    public List<EarnestMoney> getEarnestMoneyList() {
+        return earnestMoneyList;
     }
 
-    public void setEarnestMoney(EarnestMoney earnestMoney) {
-        this.earnestMoney = earnestMoney;
+    public void setEarnestMoneyList(List<EarnestMoney> earnestMoneyList) {
+        this.earnestMoneyList = earnestMoneyList;
     }
 }
