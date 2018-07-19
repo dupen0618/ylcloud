@@ -11,7 +11,7 @@ import java.util.List;
  * @author Sealin Created on 2018-06-23
  */
 public class FiAccEmitGenerateSupplyRequest extends AbstractUserSessionRequest {
-    private static final long serialVersionUID = 4773851543542020975L;
+    private static final long serialVersionUID = -4234234063320202708L;
     /**
      * 门店
      */
@@ -20,6 +20,7 @@ public class FiAccEmitGenerateSupplyRequest extends AbstractUserSessionRequest {
      * 供应商门店
      */
     private Long supplyUnitNumId;
+    private Long typeNumId;
     private List<AccEmitForSupplyGenerate> adjusts;
 
     /**
@@ -74,5 +75,13 @@ public class FiAccEmitGenerateSupplyRequest extends AbstractUserSessionRequest {
      */
     public void setAdjusts(List<AccEmitForSupplyGenerate> adjusts) {
         this.adjusts = adjusts;
+    }
+
+    public Long getTypeNumId() {
+        return typeNumId;
+    }
+
+    public void setTypeNumId(Long typeNumId) {
+        this.typeNumId = typeNumId;
     }
 }
