@@ -2,12 +2,14 @@ package com.ykcloud.soa.erp.api.wm.service;
 
 import com.ykcloud.soa.erp.api.wm.request.BackOffRateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.BillInAccountDateGetRequest;
+import com.ykcloud.soa.erp.api.wm.request.PhysicalQtyByItemNumIdRequest;
 import com.ykcloud.soa.erp.api.wm.request.SalesDateGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.SellDailyBatchDtlCollectRequest;
 import com.ykcloud.soa.erp.api.wm.request.SupPriceBySeriesGetRequest;
 import com.ykcloud.soa.erp.api.wm.request.TaxRateByFirstBatchSeriesGetRequest;
 import com.ykcloud.soa.erp.api.wm.response.BackOffRateGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.BillInAccountDateGetResponse;
+import com.ykcloud.soa.erp.api.wm.response.PhysicalQtyByItemNumIdResponse;
 import com.ykcloud.soa.erp.api.wm.response.SalesDateGetResponse;
 import com.ykcloud.soa.erp.api.wm.response.SellDailyBatchDtlCollectResponse;
 import com.ykcloud.soa.erp.api.wm.response.SupPriceBySeriesGetResponse;
@@ -48,4 +50,7 @@ public interface WmQueryService {
     TaxRateByFirstBatchSeriesGetResponse getTaxRateByFirstBatchSeries(TaxRateByFirstBatchSeriesGetRequest request);
 
     SellDailyBatchDtlCollectResponse collectSellDailyBatchDtl(SellDailyBatchDtlCollectRequest request);
+    
+    //RF商品查询，获取商品库存和在途
+    PhysicalQtyByItemNumIdResponse getPhysicalQtyByItemNumId(PhysicalQtyByItemNumIdRequest request);
 }
