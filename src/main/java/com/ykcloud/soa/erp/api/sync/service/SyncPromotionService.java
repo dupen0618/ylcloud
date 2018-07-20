@@ -1,15 +1,7 @@
 package com.ykcloud.soa.erp.api.sync.service;
 
-import com.ykcloud.soa.erp.api.sync.request.CombinePromotionSysRequest;
-import com.ykcloud.soa.erp.api.sync.request.ExcessPromotionSyncRequest;
-import com.ykcloud.soa.erp.api.sync.request.NthPromotionSyncRequest;
-import com.ykcloud.soa.erp.api.sync.request.PackPromotionSysRequest;
-import com.ykcloud.soa.erp.api.sync.request.VipPromotionSyncRequest;
-import com.ykcloud.soa.erp.api.sync.response.CombinePromotionSysResponse;
-import com.ykcloud.soa.erp.api.sync.response.ExcessPromotionSyncResponse;
-import com.ykcloud.soa.erp.api.sync.response.NthPromotionSyncResponse;
-import com.ykcloud.soa.erp.api.sync.response.PackPromotionSysResponse;
-import com.ykcloud.soa.erp.api.sync.response.VipPromotionSyncResponse;
+import com.ykcloud.soa.erp.api.sync.request.*;
+import com.ykcloud.soa.erp.api.sync.response.*;
 
 /**
  * 促销数据同步关相服务
@@ -44,6 +36,11 @@ public interface SyncPromotionService {
 	 * @description 等级会员
 	 */
 	public VipPromotionSyncResponse syncVipPromotion(VipPromotionSyncRequest request);
-	
 
+
+	/**
+	 * 促销商品
+	 */
+
+	public PromotionGiftSyncResponse syncPromotionGift(PromotionGiftSyncRequest request);
 }
