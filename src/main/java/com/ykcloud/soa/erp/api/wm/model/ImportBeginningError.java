@@ -10,6 +10,11 @@ import java.io.Serializable;
 public class ImportBeginningError implements Serializable {
 
 	private static final long serialVersionUID = 4306731004830198521L;
+	
+	/**
+	 * 行号
+	 */
+	private String series;
 
 	/**
 	 * 外部供应商
@@ -40,6 +45,14 @@ public class ImportBeginningError implements Serializable {
 	 * 出错信息
 	 */
 	private String importError;
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
 
 	public String getSubUnitId() {
 		return subUnitId;
