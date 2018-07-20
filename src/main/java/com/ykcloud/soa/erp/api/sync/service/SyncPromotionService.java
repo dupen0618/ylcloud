@@ -37,6 +37,12 @@ public interface SyncPromotionService {
 	 */
 	public VipPromotionSyncResponse syncVipPromotion(VipPromotionSyncRequest request);
 
+	/**
+	 * @description 满额立减
+	 */
+	  public FulfillDecreasePromotionSynResponse synFullReduction(
+	      FulfillDecreasePromotionSynRequest request);
+
 
 	/**
 	 * 促销商品
