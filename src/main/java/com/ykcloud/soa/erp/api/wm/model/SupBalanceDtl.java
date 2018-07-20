@@ -159,6 +159,8 @@ public class SupBalanceDtl implements Serializable {
 	private Long firstSupplyUnitNumId;
 
 	private Double supPrice;
+	//退供应商价格-批次最高价
+	private Double returnPriceTotal;
 
 
 	public String getSeries() {
@@ -424,5 +426,13 @@ public class SupBalanceDtl implements Serializable {
 
 	public void setSupPrice(Double supPrice) {
 		this.supPrice = supPrice;
+	}
+
+	public Double getReturnPriceTotal() {
+		return returnPriceTotal;
+	}
+
+	public void setReturnPriceTotal(Double returnPriceTotal) {
+		this.returnPriceTotal = returnPriceTotal;
 	}
 }

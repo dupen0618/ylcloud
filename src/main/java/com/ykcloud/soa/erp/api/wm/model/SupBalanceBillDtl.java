@@ -72,7 +72,8 @@ public class SupBalanceBillDtl implements Serializable {
 	private Long supplyUnitNumId;
 	//供应商名称
 	private String unitName;
-
+    //退供应商价格-批次最高价
+	private Double returnPriceTotal;
 
 
 	public String getReservedNo() {
@@ -225,5 +226,13 @@ public class SupBalanceBillDtl implements Serializable {
 
 	public void setUnitName(String unitName) {
 		this.unitName = unitName;
+	}
+
+	public Double getReturnPriceTotal() {
+		return returnPriceTotal;
+	}
+
+	public void setReturnPriceTotal(Double returnPriceTotal) {
+		this.returnPriceTotal = returnPriceTotal;
 	}
 }
