@@ -1,4 +1,7 @@
 package com.ykcloud.soa.erp.api.scm.model;
+
+import java.io.Serializable;
+
 /**
  * 
  * @author gaoyun.shen
@@ -7,7 +10,9 @@ package com.ykcloud.soa.erp.api.scm.model;
  * 
  * @Description
  */
-public class ProductShopImportError {
+public class ProductShopImportError implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	private String itemid;// 商品商家编码
 	private String subUnitId;// 适用机构
 	private String importError;// 导入错误信息
