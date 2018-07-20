@@ -1,7 +1,6 @@
 package com.ykcloud.soa.erp.api.wm.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 期初库存导入明细
@@ -11,6 +10,11 @@ import java.util.Date;
 public class ImportReceiptForBeginning implements Serializable {
 
 	private static final long serialVersionUID = 830953621236548125L;
+	
+	/**
+	 * 行号
+	 */
+	private String series;
 	
 	/**
 	 * 批次号
@@ -71,6 +75,14 @@ public class ImportReceiptForBeginning implements Serializable {
 	 * 税率
 	 */
 	private Double taxRate;
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
 
 	public String getBatchid() {
 		return batchid;
