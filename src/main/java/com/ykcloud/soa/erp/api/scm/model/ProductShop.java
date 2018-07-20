@@ -1,5 +1,6 @@
 package com.ykcloud.soa.erp.api.scm.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.validation.constraints.NotNull;
@@ -12,7 +13,9 @@ import javax.validation.constraints.NotNull;
  * 
  * @Description 门店商品销售属性 excel导入 实体
  */
-public class ProductShop {
+public class ProductShop implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@NotNull(message = "商品商家编码不能为空!")
 	private String itemid;// 商品商家编码
 
