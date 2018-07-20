@@ -49,4 +49,14 @@ public interface SyncPromotionService {
 	 */
 
 	public PromotionGiftSyncResponse syncPromotionGift(PromotionGiftSyncRequest request);
+
+    /**
+     * 全量促销
+     */
+    public AllPromotionSyncResponse syncAllPromotion(AllPromotionSyncRequest allPromotionRequest);
+
+    /**
+     * 时点促销
+     */
+    public TimePointPromotionSyncResponse syncTimePointPromotion(TimePointPromotionSyncRequest request);
 }
