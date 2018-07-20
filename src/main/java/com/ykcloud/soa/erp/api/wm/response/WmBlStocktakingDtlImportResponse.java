@@ -9,14 +9,14 @@ public class WmBlStocktakingDtlImportResponse extends MessagePack {
 
 	private static final long serialVersionUID = 1L;
 
-	private List<ImportWmBlStocktakingDtlError> importError;
+	private List<ImportWmBlStocktakingDtlError> importErrors;
 
-	public List<ImportWmBlStocktakingDtlError> getImportError() {
-		return importError;
+	public List<ImportWmBlStocktakingDtlError> getImportErrors() {
+		return importErrors;
 	}
 
-	public void setImportError(List<ImportWmBlStocktakingDtlError> importError) {
-		this.importError = importError;
+	public void setImportErrors(List<ImportWmBlStocktakingDtlError> importErrors) {
+		this.importErrors = importErrors;
 	}
 
 }
