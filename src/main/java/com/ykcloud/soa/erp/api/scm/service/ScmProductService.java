@@ -22,7 +22,7 @@ public interface ScmProductService {
 	 * @param 
 	 * @return  门店商品销售属性 excel导入
 	 */
-	public ProductShopResponse importProductShop(ProductShopRequest request);
+	public ProductShopImportResponse importProductShop(ProductShopImportRequest request);
 
 	//获取供应商品赠品数量
 	public GiftQtyByGiftRelationGetResponse getGiftQtyByGiftRelation(GiftQtyByGiftRelationGetRequest request);

@@ -16,7 +16,7 @@ import com.ykcloud.soa.erp.api.scm.model.ProductShop;
  * 
  * @Description 门店商品销售属性 excel导入  入参
  */
-public class ProductShopRequest extends AbstractUserSessionRequest {
+public class ProductShopImportRequest extends AbstractUserSessionRequest {
 	private static final long serialVersionUID = -4720941859255876894L;
 	
 	@NotEmpty(message = "门店商品销售属性导入数据不能为空!")
