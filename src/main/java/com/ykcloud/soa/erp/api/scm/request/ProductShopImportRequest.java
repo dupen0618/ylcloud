@@ -2,8 +2,6 @@ package com.ykcloud.soa.erp.api.scm.request;
 
 import java.util.List;
 
-import javax.validation.constraints.NotNull;
-
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.gb.soa.omp.ccommon.api.request.AbstractUserSessionRequest;
@@ -21,6 +19,9 @@ public class ProductShopImportRequest extends AbstractUserSessionRequest {
 	
 	@NotEmpty(message = "门店商品销售属性导入数据不能为空!")
 	List<ProductShop> productShops;
+	
+	// 导入模式：1、严格模式 2、宽松模式
+	private Integer mode;
 
 	public List<ProductShop> getProductShop() {
 		return productShops;
@@ -29,6 +30,15 @@ public class ProductShopImportRequest extends AbstractUserSessionRequest {
 	public void setProductShop(List<ProductShop> productShop) {
 		this.productShops = productShop;
 	}
+
+	public Integer getMode() {
+		return mode;
+	}
+
+	public void setMode(Integer mode) {
+		this.mode = mode;
+	}
+	
 	
 	
 

@@ -31,7 +31,7 @@ public class ProductShop implements Serializable {
 	private Double lastPrice;// 最后一次销售价格
 
 	private String reservedIdForever;// 永久调价单号
-	
+
 	private String reservedNoForever;// 永久调价单号
 
 	private Date beginDayForever;// 永久调价起始日期
@@ -51,13 +51,13 @@ public class ProductShop implements Serializable {
 	private Double vipPrice;// 会员价
 
 	private String reservedIdVip;// 会员调价单号
-	
+
 	private String reservedNoVip;// 会员调价单号
 
 	private Date beginDayVip;// 会员调价起始日期
 
 	private Date endDayVip;// 会员调价截止日期
-	
+
 	@NotNull(message = "商品适用季节不能为空!")
 	private String seasonMonthFlag;// 商品适用季节'123456789abc',表示全年销售,1200000000bc 标识 11至次年2月销售
 
@@ -83,8 +83,7 @@ public class ProductShop implements Serializable {
 	private Long itemGrade;// 商品等级
 
 	@NotNull(message = "默认供应商编码不能为空!")
-	private Long supplyUnitId;// 默认供应商编码
-	
+	private String supplyUnitId;// 默认供应商编码
 
 	public String getReservedNoForever() {
 		return reservedNoForever;
@@ -94,7 +93,6 @@ public class ProductShop implements Serializable {
 		this.reservedNoForever = reservedNoForever;
 	}
 
-
 	public String getItemid() {
 		return itemid;
 	}
@@ -102,7 +100,6 @@ public class ProductShop implements Serializable {
 	public void setItemid(String itemid) {
 		this.itemid = itemid;
 	}
-
 
 	public String getSubUnitId() {
 		return subUnitId;
@@ -168,7 +165,6 @@ public class ProductShop implements Serializable {
 		this.typeTemp = typeTemp;
 	}
 
-
 	public Date getBeginDayTemp() {
 		return beginDayTemp;
 	}
@@ -192,7 +188,6 @@ public class ProductShop implements Serializable {
 	public void setVipPrice(Double vipPrice) {
 		this.vipPrice = vipPrice;
 	}
-
 
 	public String getReservedIdTemp() {
 		return reservedIdTemp;
@@ -314,11 +309,11 @@ public class ProductShop implements Serializable {
 		this.itemGrade = itemGrade;
 	}
 
-	public Long getSupplyUnitId() {
+	public String getSupplyUnitId() {
 		return supplyUnitId;
 	}
 
-	public void setSupplyUnitId(Long supplyUnitId) {
+	public void setSupplyUnitId(String supplyUnitId) {
 		this.supplyUnitId = supplyUnitId;
 	}
 
