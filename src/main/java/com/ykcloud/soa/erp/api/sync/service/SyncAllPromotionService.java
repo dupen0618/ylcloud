@@ -14,5 +14,6 @@ import com.ykcloud.soa.erp.api.sync.response.AllPromotionSyncResponse;
  */
 public interface SyncAllPromotionService {
 
-    public AllPromotionSyncResponse syncAllPromotion(AllPromotionSyncRequest allPromotionRequest);
+    public AllPromotionSyncResponse
+    syncAllPromotion(AllPromotionSyncRequest allPromotionRequest);
 }
