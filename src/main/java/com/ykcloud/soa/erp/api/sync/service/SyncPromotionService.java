@@ -2,11 +2,13 @@ package com.ykcloud.soa.erp.api.sync.service;
 
 import com.ykcloud.soa.erp.api.sync.request.CombinePromotionSysRequest;
 import com.ykcloud.soa.erp.api.sync.request.ExcessPromotionSyncRequest;
+import com.ykcloud.soa.erp.api.sync.request.FulfillDecreasePromotionSynRequest;
 import com.ykcloud.soa.erp.api.sync.request.NthPromotionSyncRequest;
 import com.ykcloud.soa.erp.api.sync.request.PackPromotionSysRequest;
 import com.ykcloud.soa.erp.api.sync.request.VipPromotionSyncRequest;
 import com.ykcloud.soa.erp.api.sync.response.CombinePromotionSysResponse;
 import com.ykcloud.soa.erp.api.sync.response.ExcessPromotionSyncResponse;
+import com.ykcloud.soa.erp.api.sync.response.FulfillDecreasePromotionSynResponse;
 import com.ykcloud.soa.erp.api.sync.response.NthPromotionSyncResponse;
 import com.ykcloud.soa.erp.api.sync.response.PackPromotionSysResponse;
 import com.ykcloud.soa.erp.api.sync.response.VipPromotionSyncResponse;
@@ -44,6 +46,12 @@ public interface SyncPromotionService {
 	 * @description 等级会员
 	 */
 	public VipPromotionSyncResponse syncVipPromotion(VipPromotionSyncRequest request);
+	
+	/**
+	 * @description 满额立减
+	 */
+	  public FulfillDecreasePromotionSynResponse synFullReduction(
+	      FulfillDecreasePromotionSynRequest request);
 	
 
 }
